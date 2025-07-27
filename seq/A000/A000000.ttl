@@ -1,0 +1,7 @@
+@prefix seq: <http://www.seqweb.org/> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+oeis:A000000 a seq:Sequence ;
+    rdfs:label "A000000"@en ;
+    rdfs:comment "Test sequence; not actually present in the OEIS!"@en . 
