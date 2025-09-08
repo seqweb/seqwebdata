@@ -1,7 +1,20 @@
+@prefix : <http://www.seqweb.org/> .
 @prefix seq: <http://www.seqweb.org/> .
 @prefix oeis: <http://www.oeis.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
 
-oeis:A000000 a seq:Sequence ;
+oeis:A000000 a :Sequence ;
     rdfs:label "A000000"@en ;
-    rdfs:comment "Test sequence; not actually present in the OEIS!"@en . 
+    rdfs:comment "Test sequence; not actually present in the OEIS!"@en ;
+    :hasTextList (  # sequence can have any number of these lists, in any order
+        :text1      # ordering of blocks within the list is implied
+        :text2      # blocks must be individually named
+    ) .
+
+:text1 a :Text ;
+    cnt:chars "foo" .
+
+:text2 a :Text ;
+    cnt:chars "bar" .
+

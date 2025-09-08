@@ -1,9 +1,33 @@
+@prefix : <http://www.seqweb.org/> .
 @prefix seq: <http://www.seqweb.org/> .
 @prefix oeis: <http://www.oeis.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
 
-seq:Sequence a owl:Class ;
+:Text a rdfs:Class ;
+    rdfs:subClassOf cnt:ContentAsText ,
+        [ a owl:Restriction ;
+          owl:onProperty cnt:characterEncoding ;
+          owl:hasValue "utf-8"
+        ] ;
+    rdfs:label "Text block with assumed UTF-8 encoding"@en ;
+    rdfs:comment "DRYer synonym for cnt:ContentAsText where encoding is assumed UTF-8."@en .
+
+
+:Sequence a owl:Class ;
     rdfs:label "Sequence"@en ;
     rdfs:comment "An OEIS and mathematical integer sequence modeled in the SeqWeb knowledge graph."@en . 
+
+:hasTextList a owl:ObjectProperty ;
+    rdfs:domain :Sequence ;
+    rdfs:range rdf:List ;
+    # owl:inverseOf :isTextListOf ;
+    rdfs:comment "Links a Sequence to an ordered list of :Text blocks."@en .
+
+# :isTextListOf a owl:ObjectProperty ;
+#     rdfs:domain rdf:List ;
+#     rdfs:range :Sequence ;
+#     owl:inverseOf :hasTextList ;
+#     rdfs:comment "Links an ordered list of :Text blocks to the Sequence they belong to."@en .
