@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.709694Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 921}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383061 a seq:Sequence ;
+    rdfs:label "A383061"@en ;
+    seq:hasTextList ( seq:A383061_I_1_20250430T110846 seq:A383061_N_1_20250430T110846 seq:A383061_C_1_20250430T110846 seq:A383061_H_1_20250430T110846 seq:A383061_t_1_20250430T110846 seq:A383061_o_1_20250430T110846 seq:A383061_Y_1_20250430T110846 seq:A383061_K_1_20250430T110846 seq:A383061_O_1_20250430T110846 seq:A383061_A_1_20250430T110846 seq:A383061_V_1_20250430T110846 ) .
+
+seq:A383061_A_1_20250430T110846 a seq:Text ;
+    cnt:chars "_Paolo Xausa_, Apr 18 2025"@en .
+
+seq:A383061_C_1_20250430T110846 a seq:Text ;
+    cnt:chars "Conjecture: these are the numbers missing from A383059."@en .
+
+seq:A383061_H_1_20250430T110846 a seq:Text ;
+    cnt:chars "Paolo Xausa, <a href=\"/A383061/b383061.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383061_I_1_20250430T110846 a seq:Text ;
+    cnt:chars "#12 Apr 30 2025 11:08:46"@en .
+
+seq:A383061_K_1_20250430T110846 a seq:Text ;
+    cnt:chars "nonn,base,easy,changed"@en .
+
+seq:A383061_N_1_20250430T110846 a seq:Text ;
+    cnt:chars "Positive integers that contain an odd digit d immediately preceded by a digit >= d."@en .
+
+seq:A383061_O_1_20250430T110846 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383061_V_1_20250430T110846 a seq:Text ;
+    cnt:chars "11,21,31,33,41,43,51,53,55,61,63,65,71,73,75,77,81,83,85,87,91,93,95,97,99,110,111,112,113,114,115,116,117,118,119,121,131,133,141,143,151,153,155,161,163,165,171,173,175,177,181,183,185,187,191,193,195,197,199"@en .
+
+seq:A383061_Y_1_20250430T110846 a seq:Text ;
+    cnt:chars """Cf. A383059, A383062 (complement).
+Cf. A347298, A382464, A382623, A382937, A383245, A383247, A383249, A383500."""@en .
+
+seq:A383061_o_1_20250430T110846 a seq:Text ;
+    cnt:chars """(Python)
+def ok(n):
+    s = str(n)
+    return any(s[i] <= s[i-1] for i in range(1, len(s)) if s[i] in "13579")
+print([k for k in range(200) if ok(k)]) # _Michael S. Branicky_, Apr 19 2025"""@en .
+
+seq:A383061_t_1_20250430T110846 a seq:Text ;
+    cnt:chars """A383061Q[k_] := MemberQ[Partition[IntegerDigits[k], 2, 1], {i_, j_?OddQ} /; i >= j];
+Select[Range[200], A383061Q]"""@en .
+

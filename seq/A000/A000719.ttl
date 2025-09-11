@@ -1,0 +1,72 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.199728Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 3081}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000719 a seq:Sequence ;
+    rdfs:label "A000719"@en ;
+    seq:hasTextList ( seq:A000719_I_1_20250216T083221 seq:A000719_N_1_20250216T083221 seq:A000719_C_1_20250216T083221 seq:A000719_D_1_20250216T083221 seq:A000719_H_1_20250216T083221 seq:A000719_t_1_20250216T083221 seq:A000719_o_1_20250216T083221 seq:A000719_Y_1_20250216T083221 seq:A000719_K_1_20250216T083221 seq:A000719_O_1_20250216T083221 seq:A000719_A_1_20250216T083221 seq:A000719_E_1_20250216T083221 seq:A000719_V_1_20250216T083221 ) .
+
+seq:A000719_A_1_20250216T083221 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000719_C_1_20250216T083221 a seq:Text ;
+    cnt:chars "a(n) is also the number of simple unlabeled graphs on n+1 nodes with diameter 2 and connectivity 1. - _Geoffrey Critzer_, Oct 23 2016"@en .
+
+seq:A000719_D_1_20250216T083221 a seq:Text ;
+    cnt:chars """R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford, 1998.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000719_E_1_20250216T083221 a seq:Text ;
+    cnt:chars """More terms from _Christian G. Bower_
+Further terms from _Vladeta Jovovic_, Apr 14 2000"""@en .
+
+seq:A000719_H_1_20250216T083221 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000719/b000719.txt">Table of n, a(n) for n = 0..87</a> (first 31 terms from David Wasserman)
+R. K. Guy, <a href="/A005347/a005347.pdf">The Second Strong Law of Small Numbers</a>, Math. Mag, 63 (1990), no. 1, 3-20. [Annotated scanned copy]
+F. Harary, <a href="http://dx.doi.org/10.1090/S0002-9947-1955-0068198-2">The number of linear, directed, rooted, and connected graphs</a>, Trans. Amer. Math. Soc. 78 (1955), 445-463.
+M. L. Stein and P. R. Stein, <a href="http://dx.doi.org/10.2172/4180737">Enumeration of Linear Graphs and Connected Linear Graphs up to p = 18 Points</a>. Report LA-3775, Los Alamos Scientific Laboratory of the University of California, Los Alamos, NM, Oct 1967
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/DisconnectedGraph.html">Disconnected Graph.</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/k-ConnectedGraph.html">k-Connected Graph.</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/k-Edge-ConnectedGraph.html">k-Edge-Connected Graph.</a>"""@en .
+
+seq:A000719_I_1_20250216T083221 a seq:Text ;
+    cnt:chars "M1452 N0574 #54 Feb 16 2025 08:32:21"@en .
+
+seq:A000719_K_1_20250216T083221 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000719_N_1_20250216T083221 a seq:Text ;
+    cnt:chars "Number of disconnected graphs with n nodes."@en .
+
+seq:A000719_O_1_20250216T083221 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000719_V_1_20250216T083221 a seq:Text ;
+    cnt:chars "0,0,1,2,5,13,44,191,1229,13588,288597,12297299,1031342116,166123498733,50668194387427,29104827043066808,31455591302381718651,64032471448906164191208,245999896712611657677614268,1787823725136869060356731751124"@en .
+
+seq:A000719_Y_1_20250216T083221 a seq:Text ;
+    cnt:chars "Equals (A000088) minus (A001349)."@en .
+
+seq:A000719_o_1_20250216T083221 a seq:Text ;
+    cnt:chars """(Python)
+from functools import lru_cache
+from itertools import combinations
+from fractions import Fraction
+from math import prod, gcd, factorial
+from sympy import mobius, divisors
+from sympy.utilities.iterables import partitions
+def A000719(n):
+    if n == 0: return 0
+    @lru_cache(maxsize=None)
+    def b(n): return int(sum(Fraction(1<<sum(p[r]*p[s]*gcd(r,s) for r,s in combinations(p.keys(),2))+sum((q>>1)*r+(q*r*(r-1)>>1) for q, r in p.items()),prod(q**r*factorial(r) for q, r in p.items())) for p in partitions(n)))
+    @lru_cache(maxsize=None)
+    def c(n): return n*b(n)-sum(c(k)*b(n-k) for k in range(1,n))
+    return b(n)-sum(mobius(n//d)*c(d) for d in divisors(n,generator=True))//n # _Chai Wah Wu_, Jul 03 2024"""@en .
+
+seq:A000719_t_1_20250216T083221 a seq:Text ;
+    cnt:chars "<< \"Combinatorica`\"; max = 18; A000088 = Table[ NumberOfGraphs[n], {n, 0, max}]; f[x_] = 1 - Product[ 1/(1 - x^k)^b[k], {k, 1, max}]; b[0] = b[1] = b[2] = 1; coes = CoefficientList[ Series[ f[x], {x, 0, max}], x]; sol = First[ Solve[ Thread[ Rest[ coes + A000088 ] == 0]]]; a[n_] := a[n] = A000088[[n+1]] - b[n] /. sol; a[0] = a[1] = 0; Table[a[n], {n, 0, max}] (* _Jean-François Alcover_, Nov 24 2011 *)"@en .
+

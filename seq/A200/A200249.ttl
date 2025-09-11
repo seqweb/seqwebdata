@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.953062Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1222}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200249 a seq:Sequence ;
+    rdfs:label "A200249"@en ;
+    seq:hasTextList ( seq:A200249_I_1_20180520T135436 seq:A200249_N_1_20180520T135436 seq:A200249_C_1_20180520T135436 seq:A200249_H_1_20180520T135436 seq:A200249_F_1_20180520T135436 seq:A200249_e_1_20180520T135436 seq:A200249_Y_1_20180520T135436 seq:A200249_K_1_20180520T135436 seq:A200249_O_1_20180520T135436 seq:A200249_A_1_20180520T135436 seq:A200249_V_1_20180520T135436 ) .
+
+seq:A200249_A_1_20180520T135436 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 15 2011"@en .
+
+seq:A200249_C_1_20180520T135436 a seq:Text ;
+    cnt:chars "Column 5 of A200251."@en .
+
+seq:A200249_F_1_20180520T135436 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 3*a(n-1) +2*a(n-2).
+Conjectures from _Colin Barker_, May 20 2018: (Start)
+G.f.: 3*x*(2 + x) / (1 - 3*x - 2*x^2).
+a(n) = (3*2^(-2-n)*((3-sqrt(17))^n*(-5+sqrt(17)) + (3+sqrt(17))^n*(5+sqrt(17)))) / sqrt(17).
+(End)"""@en .
+
+seq:A200249_H_1_20180520T135436 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200249/b200249.txt\">Table of n, a(n) for n = 1..136</a>"@en .
+
+seq:A200249_I_1_20180520T135436 a seq:Text ;
+    cnt:chars "#10 May 20 2018 13:54:36"@en .
+
+seq:A200249_K_1_20180520T135436 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200249_N_1_20180520T135436 a seq:Text ;
+    cnt:chars "Number of 0..5 arrays x(0..n-1) of n elements with each no smaller than the sum of its previous elements modulo 6."@en .
+
+seq:A200249_O_1_20180520T135436 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200249_V_1_20180520T135436 a seq:Text ;
+    cnt:chars "6,21,75,267,951,3387,12063,42963,153015,544971,1940943,6912771,24620199,87686139,312298815,1112268723,3961403799,14108748843,50249054127,178964660067,637392088455,2270105585499,8085100933407,28795513971219"@en .
+
+seq:A200249_Y_1_20180520T135436 a seq:Text ;
+    cnt:chars "Cf. A200251."@en .
+
+seq:A200249_e_1_20180520T135436 a seq:Text ;
+    cnt:chars """Some solutions for n=6:
+..2....2....3....2....0....0....3....3....2....3....3....3....1....0....1....3
+..5....4....5....5....1....3....3....4....5....4....4....4....1....0....1....3
+..2....3....5....1....5....5....2....5....4....5....2....3....2....5....2....0
+..5....3....1....2....2....4....4....5....5....1....5....5....4....5....5....2
+..5....2....5....5....3....4....5....5....4....3....5....4....2....5....4....4
+..3....4....5....4....5....5....5....5....5....4....2....4....4....3....5....5"""@en .
+

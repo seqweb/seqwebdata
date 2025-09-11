@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.790642Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1256}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200662 a seq:Sequence ;
+    rdfs:label "A200662"@en ;
+    seq:hasTextList ( seq:A200662_I_1_20120331T123640 seq:A200662_N_1_20120331T123640 seq:A200662_C_1_20120331T123640 seq:A200662_H_1_20120331T123640 seq:A200662_F_1_20120331T123640 seq:A200662_e_1_20120331T123640 seq:A200662_K_1_20120331T123640 seq:A200662_O_1_20120331T123640 seq:A200662_A_1_20120331T123640 seq:A200662_V_1_20120331T123640 ) .
+
+seq:A200662_A_1_20120331T123640 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 20 2011"@en .
+
+seq:A200662_C_1_20120331T123640 a seq:Text ;
+    cnt:chars "Column 2 of A200668"@en .
+
+seq:A200662_F_1_20120331T123640 a seq:Text ;
+    cnt:chars "Empirical: a(n) = 3*a(n-1) -3*a(n-2) +4*a(n-3) -6*a(n-4) +7*a(n-5) -9*a(n-6) +8*a(n-7) -6*a(n-8) +5*a(n-9) -4*a(n-10) +5*a(n-11) -5*a(n-12) +2*a(n-14) -3*a(n-15) +2*a(n-16) +a(n-17) -2*a(n-18) +5*a(n-19) -3*a(n-20) +a(n-21) -a(n-22) -a(n-24) +a(n-25) -a(n-26) +a(n-27)"@en .
+
+seq:A200662_H_1_20120331T123640 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200662/b200662.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200662_I_1_20120331T123640 a seq:Text ;
+    cnt:chars "#5 Mar 31 2012 12:36:40"@en .
+
+seq:A200662_K_1_20120331T123640 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200662_N_1_20120331T123640 a seq:Text ;
+    cnt:chars "Number of 0..2 arrays x(0..n-1) of n elements with each no smaller than the sum of its three previous neighbors modulo 3"@en .
+
+seq:A200662_O_1_20120331T123640 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200662_V_1_20120331T123640 a seq:Text ;
+    cnt:chars "3,6,12,24,46,89,176,350,697,1391,2780,5555,11098,22170,44288,88472,176729,353032,705224,1408771,2814203,5621746,11230193,22433834,44814616,89523251,178834811,357246713,713648606,1425609609,2847847987,5688961529"@en .
+
+seq:A200662_e_1_20120331T123640 a seq:Text ;
+    cnt:chars """Some solutions for n=6
+..0....2....0....0....1....0....0....2....0....1....1....0....1....1....1....1
+..1....2....0....0....1....0....1....2....1....2....1....0....2....1....2....2
+..2....2....2....1....2....0....2....2....1....1....2....2....0....2....0....0
+..0....2....2....2....1....2....0....0....2....1....2....2....2....1....1....2
+..1....2....2....0....1....2....1....1....2....2....2....1....1....1....0....1
+..2....0....1....2....2....2....1....0....2....2....0....2....0....1....2....2"""@en .
+

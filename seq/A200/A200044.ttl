@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.854431Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1066}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200044 a seq:Sequence ;
+    rdfs:label "A200044"@en ;
+    seq:hasTextList ( seq:A200044_I_1_20161020T094550 seq:A200044_N_1_20161020T094550 seq:A200044_H_1_20161020T094550 seq:A200044_e_1_20161020T094550 seq:A200044_p_1_20161020T094550 seq:A200044_t_1_20161020T094550 seq:A200044_K_1_20161020T094550 seq:A200044_O_1_20161020T094550 seq:A200044_A_1_20161020T094550 seq:A200044_V_1_20161020T094550 ) .
+
+seq:A200044_A_1_20161020T094550 a seq:Text ;
+    cnt:chars "_Rodolfo Kurchan_, Nov 12 2011"@en .
+
+seq:A200044_H_1_20161020T094550 a seq:Text ;
+    cnt:chars "Ivan Neretin, <a href=\"/A200044/b200044.txt\">Table of n, a(n) for n = 1..9119</a>"@en .
+
+seq:A200044_I_1_20161020T094550 a seq:Text ;
+    cnt:chars "#18 Oct 20 2016 09:45:50"@en .
+
+seq:A200044_K_1_20161020T094550 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200044_N_1_20161020T094550 a seq:Text ;
+    cnt:chars "Starting with a(1)=1, a(n) = n*a(n-1) if n>= a(n-1), otherwise a(n) = a(n-1)-n."@en .
+
+seq:A200044_O_1_20161020T094550 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200044_V_1_20161020T094550 a seq:Text ;
+    cnt:chars "1,2,6,2,10,4,28,20,11,1,11,132,119,105,90,74,57,39,20,400,379,357,334,310,285,259,232,204,175,145,114,82,49,15,525,489,452,414,375,335,294,252,209,165,120,74,27,1296,1247,1197,1146,1094"@en .
+
+seq:A200044_e_1_20161020T094550 a seq:Text ;
+    cnt:chars "Start with 1, then as 2 is bigger than 1, 1 * 2 = 2. As n=3 is bigger than 2, 2 * 3 = 6. As n=4 is smaller than 6, 6 - 4 = 2, then 2 * 5 = 10, then 10 - 6 = 4, then 4 * 7 = 28, etc"@en .
+
+seq:A200044_p_1_20161020T094550 a seq:Text ;
+    cnt:chars """A200044 := proc(n)
+    option remember;
+    if n = 1 then
+        1;
+    elif n >= procname(n-1) then
+        n*procname(n-1) ;
+    else
+        procname(n-1)-n ;
+    end if;
+end proc:
+seq(A200044(n),n=1..80) ; # _R. J. Mathar_, Jan 28 2012"""@en .
+
+seq:A200044_t_1_20161020T094550 a seq:Text ;
+    cnt:chars """a = {1}; Do[AppendTo[a, If[a[[-1]] <= n, a[[-1]]*n, a[[-1]] - n]], {n, 2, 52}]; a (* _Ivan Neretin_, May 20 2015 *)
+nxt[{n_,a_}]:={n+1,If[n+1>=a,a(n+1),a-n-1]}; NestList[nxt,{1,1},60][[All,2]] (* _Harvey P. Dale_, Oct 20 2016 *)"""@en .
+

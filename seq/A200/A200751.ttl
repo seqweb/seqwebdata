@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.014304Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1212}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200751 a seq:Sequence ;
+    rdfs:label "A200751"@en ;
+    seq:hasTextList ( seq:A200751_I_1_20230909T123522 seq:A200751_N_1_20230909T123522 seq:A200751_H_1_20230909T123522 seq:A200751_F_1_20230909T123522 seq:A200751_e_1_20230909T123522 seq:A200751_t_1_20230909T123522 seq:A200751_o_1_20230909T123522 seq:A200751_Y_1_20230909T123522 seq:A200751_K_1_20230909T123522 seq:A200751_O_1_20230909T123522 seq:A200751_A_1_20230909T123522 seq:A200751_V_1_20230909T123522 ) .
+
+seq:A200751_A_1_20230909T123522 a seq:Text ;
+    cnt:chars "_Michael Somos_, Nov 21 2011"@en .
+
+seq:A200751_F_1_20230909T123522 a seq:Text ;
+    cnt:chars """Let F(a, x) = (1 - a) * (1 - a*x)^2 * (1 - a*x^2)^4 * ... where |x|<1/2. Then F(a, x) = (1 - a) * F(a*x, x)^2 and g.f. A(x) = F(x, x).
+Euler transform of [ -1, -2, -4, -8, -16, ... ].
+G.f.: (1 - x) * (1 - x^2)^2 * (1 - x^3)^4 * ...
+Convolution inverse of A034691.
+a(0) = 1; a(n) = -(1/n) * Sum_{k=1..n} A083413(k) * a(n-k). - _Seiichi Manyama_, Jul 17 2023
+a(n) = Sum_{k=0..2n} (-1)^k*A360634(2n,k). - _Alois P. Heinz_, Sep 09 2023"""@en .
+
+seq:A200751_H_1_20230909T123522 a seq:Text ;
+    cnt:chars "Seiichi Manyama, <a href=\"/A200751/b200751.txt\">Table of n, a(n) for n = 0..1000</a>"@en .
+
+seq:A200751_I_1_20230909T123522 a seq:Text ;
+    cnt:chars "#21 Sep 09 2023 12:35:22"@en .
+
+seq:A200751_K_1_20230909T123522 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A200751_N_1_20230909T123522 a seq:Text ;
+    cnt:chars "Expansion of Product_{k>0} (1 - x^k)^(2^(k-1)) in powers of x."@en .
+
+seq:A200751_O_1_20230909T123522 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200751_V_1_20230909T123522 a seq:Text ;
+    cnt:chars "1,-1,-2,-2,-3,-1,-2,6,12,36,74,162,301,599,1090,1986,3479,5993,9852,15644,23094,30690,31868,9068,-82372,-345308,-1010956,-2577868,-6098822,-13751218,-29962588,-63604140,-132205949,-269982371,-542866266,-1076420666"@en .
+
+seq:A200751_Y_1_20230909T123522 a seq:Text ;
+    cnt:chars "Cf. A034691, A083413, A360634."@en .
+
+seq:A200751_e_1_20230909T123522 a seq:Text ;
+    cnt:chars "1 - x - 2*x^2 - 2*x^3 - 3*x^4 - x^5 - 2*x^6 + 6*x^7 + 12*x^8 + 36*x^9 + ..."@en .
+
+seq:A200751_o_1_20230909T123522 a seq:Text ;
+    cnt:chars "(PARI) {a(n) = local(A); if( n<0, 0, A = x * O(x^n); polcoeff( prod( k=1, n, (1 - x^k + A) ^ 2^(k - 1)), n))}"@en .
+
+seq:A200751_t_1_20230909T123522 a seq:Text ;
+    cnt:chars """a[n_] := SeriesCoefficient[Series[Product[(1 - x^k)^2^(k - 1),
+{k, n}], {x, 0, n}], n]; Table[a[n], {n, 0, 35}] (* _T. D. Noe_, Nov 23 2011 *)"""@en .
+

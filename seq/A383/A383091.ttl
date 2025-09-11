@@ -1,0 +1,77 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.776133Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2261}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383091 a seq:Sequence ;
+    rdfs:label "A383091"@en ;
+    seq:hasTextList ( seq:A383091_I_1_20250419T193449 seq:A383091_N_1_20250419T193449 seq:A383091_C_1_20250419T193449 seq:A383091_F_1_20250419T193449 seq:A383091_e_1_20250419T193449 seq:A383091_t_1_20250419T193449 seq:A383091_Y_1_20250419T193449 seq:A383091_K_1_20250419T193449 seq:A383091_O_1_20250419T193449 seq:A383091_A_1_20250419T193449 seq:A383091_V_1_20250419T193449 ) .
+
+seq:A383091_A_1_20250419T193449 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 18 2025"@en .
+
+seq:A383091_C_1_20250419T193449 a seq:Text ;
+    cnt:chars """First differs from A359178 (complement A362606) in having 1, 240 and lacking 180.
+First differs from A130091 (complement A130092) in having 240 and lacking 360.
+First differs from A351294 (complement A351295) in having 240 and lacking 216.
+Includes all primes A000040 and prime powers A000961.
+A prime index of n is a number m such that prime(m) divides n. The multiset of prime indices of n is row n of A112798, sum A056239."""@en .
+
+seq:A383091_F_1_20250419T193449 a seq:Text ;
+    cnt:chars "Equals A382879 \\/ A383112, counted by A382915 + A383094."@en .
+
+seq:A383091_I_1_20250419T193449 a seq:Text ;
+    cnt:chars "#11 Apr 19 2025 19:34:49"@en .
+
+seq:A383091_K_1_20250419T193449 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383091_N_1_20250419T193449 a seq:Text ;
+    cnt:chars "Numbers whose prime indices have at most one permutation with all equal run-lengths."@en .
+
+seq:A383091_O_1_20250419T193449 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383091_V_1_20250419T193449 a seq:Text ;
+    cnt:chars "1,2,3,4,5,7,8,9,11,12,13,16,17,18,19,20,23,24,25,27,28,29,31,32,37,40,41,43,44,45,47,48,49,50,52,53,54,56,59,61,63,64,67,68,71,72,73,75,76,79,80,81,83,88,89,92,96,97,98,99,101,103,104,107,108,109"@en .
+
+seq:A383091_Y_1_20250419T193449 a seq:Text ;
+    cnt:chars """These are positions of zeros and ones in A382857, just zeros A382879, just ones A383112.
+The complement for run-sums instead of lengths is A383015, counted by A383097.
+The complement is A383089, counted by A383090.
+Partitions of this type are counted by A383092, just zero A382915, just one A383094.
+For run-sums instead of lengths we have A383099 \\/ A383100, counted by A383095 + A383096.
+A047966 counts partitions with equal run-lengths, compositions A329738.
+A056239 adds up prime indices, row sums of A112798.
+A098859 counts partitions with distinct run-lengths, ranks A130091.
+A329739 counts compositions with distinct run-lengths, ranks A351596, complement A351291.
+Cf. A000720, A000961, A001221, A001222, A048767, A351294, A353744, A353833, A381435, A382771, A382877, A383113."""@en .
+
+seq:A383091_e_1_20250419T193449 a seq:Text ;
+    cnt:chars """The prime indices of 144 are {1,1,1,1,2,2}, with just one permutation with all equal run-lengths (1,1,2,2,1,1), so 144 is in the sequence.
+The prime indices of 240 are {1,1,1,1,2,3}, which have no permutation with all equal run-lengths, so 240 is in the sequence.
+The terms together with their prime indices begin:
+   1: {}
+   2: {1}
+   3: {2}
+   4: {1,1}
+   5: {3}
+   7: {4}
+   8: {1,1,1}
+   9: {2,2}
+  11: {5}
+  12: {1,1,2}
+  13: {6}
+  16: {1,1,1,1}
+  17: {7}
+  18: {1,2,2}
+  19: {8}
+  20: {1,1,3}
+  23: {9}
+  24: {1,1,1,2}"""@en .
+
+seq:A383091_t_1_20250419T193449 a seq:Text ;
+    cnt:chars "Select[Range[100], Length[Select[Permutations[PrimePi/@Join @@ ConstantArray@@@FactorInteger[#]], SameQ@@Length/@Split[#]&]]<=1&]"@en .
+

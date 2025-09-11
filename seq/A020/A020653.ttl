@@ -1,0 +1,81 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.950886Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2705}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A020653 a seq:Sequence ;
+    rdfs:label "A020653"@en ;
+    seq:hasTextList ( seq:A020653_I_1_20240514T091352 seq:A020653_N_1_20240514T091352 seq:A020653_C_1_20240514T091352 seq:A020653_D_1_20240514T091352 seq:A020653_H_1_20240514T091352 seq:A020653_e_1_20240514T091352 seq:A020653_p_1_20240514T091352 seq:A020653_t_1_20240514T091352 seq:A020653_o_1_20240514T091352 seq:A020653_Y_1_20240514T091352 seq:A020653_K_1_20240514T091352 seq:A020653_O_1_20240514T091352 seq:A020653_A_1_20240514T091352 seq:A020653_E_1_20240514T091352 seq:A020653_V_1_20240514T091352 ) .
+
+seq:A020653_A_1_20240514T091352 a seq:Text ;
+    cnt:chars "_David W. Wilson_"@en .
+
+seq:A020653_C_1_20240514T091352 a seq:Text ;
+    cnt:chars "This bijection lists the fractions p/q (in lowest terms) by increasing p+q, then by increasing p (see the example). The variant A038569 corresponds to the bijection where each fraction p/q with p < q is followed by its reciprocal q/p. - _M. F. Hasler_, Oct 25 2021"@en .
+
+seq:A020653_D_1_20240514T091352 a seq:Text ;
+    cnt:chars """Richard Courant and Herbert Robbins. What Is Mathematics?, Oxford, 1941, pp. 79-80.
+H. Lauwerier, Fractals, Princeton Univ. Press, p. 23."""@en .
+
+seq:A020653_E_1_20240514T091352 a seq:Text ;
+    cnt:chars "Definition clarified by _N. J. A. Sloane_, Nov 25 2021"@en .
+
+seq:A020653_H_1_20240514T091352 a seq:Text ;
+    cnt:chars """David Wasserman, <a href="/A020653/b020653.txt">Table of n, a(n) for n = 1..100000</a>
+<a href="/index/Cor#core">Index entries for "core" sequences</a>
+<a href="/index/Ra#rational">Index entries for sequences related to enumerating the rationals</a>"""@en .
+
+seq:A020653_I_1_20240514T091352 a seq:Text ;
+    cnt:chars "#53 May 14 2024 09:13:52"@en .
+
+seq:A020653_K_1_20240514T091352 a seq:Text ;
+    cnt:chars "nonn,frac,core,nice"@en .
+
+seq:A020653_N_1_20240514T091352 a seq:Text ;
+    cnt:chars "Denominators in a certain bijection from positive integers to positive rationals."@en .
+
+seq:A020653_O_1_20240514T091352 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A020653_V_1_20240514T091352 a seq:Text ;
+    cnt:chars "1,2,1,3,1,4,3,2,1,5,1,6,5,4,3,2,1,7,5,3,1,8,7,5,4,2,1,9,7,3,1,10,9,8,7,6,5,4,3,2,1,11,7,5,1,12,11,10,9,8,7,6,5,4,3,2,1,13,11,9,5,3,1,14,13,11,8,7,4,2,1,15,13,11,9,7,5,3,1,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,17"@en .
+
+seq:A020653_Y_1_20240514T091352 a seq:Text ;
+    cnt:chars "Cf. A020652, A038566, A038569."@en .
+
+seq:A020653_e_1_20240514T091352 a seq:Text ;
+    cnt:chars """From _M. F. Hasler_, Nov 25 2021: (Start)
+This sequence gives the denominators of the positive fractions p/q (in lowest terms) when they are listed by increasing p+q, then by increasing p:
+1/1; 1/2, 2/1; 1/3, 3/1; 1/4, 2/3, 3/2, 4/1; 1/5, 5/1; 1/6, 2/5, 3/4, 4/3, 5/2, 6/1; ...
+(End)"""@en .
+
+seq:A020653_o_1_20240514T091352 a seq:Text ;
+    cnt:chars """(Haskell)
+a020653 n = a020653_list !! (n-1)
+a020653_list = concat $ map reverse $ tail a038566_tabf
+-- _Reinhard Zumkeller_, Oct 30 2012
+(Python)
+from sympy import totient, gcd
+def a(n):
+    s=0
+    k=2
+    while s<n:
+        s+=totient(k)
+        k+=1
+    s-=totient(k - 1)
+    j=1
+    while s<n:
+        if gcd(j, k - 1)==1: s+=1
+        j+=1
+    return k - j # _Indranil Ghosh_, May 23 2017, translated from Ulrich Schimke's MAPLE code
+(PARI) a(n) = my(s=0, k=1, j=1); while(s<n, s+=eulerphi(k++)); s-=eulerphi(k); while(s<n, if(1==gcd(j, k), s++); j++); k+1-j; \\\\ _Ruud H.G. van Tol_, May 14 2024"""@en .
+
+seq:A020653_p_1_20240514T091352 a seq:Text ;
+    cnt:chars "with (numtheory): A020653 := proc (n) local sum, j, k; sum := 0: k := 2: while (sum < n) do: sum := sum + phi(k): k := k + 1: od: sum := sum - phi(k-1): j := 1; while sum < n do: if gcd(j,k-1) = 1 then sum := sum + 1: fi: j := j+1: od: RETURN (k-j): end: # Ulrich Schimke (ulrschimke(AT)aol.com), Nov 06 2001"@en .
+
+seq:A020653_t_1_20240514T091352 a seq:Text ;
+    cnt:chars """a[n_] := Module[{s=0, k=2}, While [s < n, s = s + EulerPhi[k]; k = k+1]; s = s - EulerPhi[k-1]; j=1; While[s < n , If[GCD[j, k-1] == 1 , s = s+1]; j = j+1]; k-j]; Table[a[n], {n, 1, 96}] (* _Jean-François Alcover_, Dec 06 2012, after Ulrich Schimke's Maple program *)
+Flatten[Map[Denominator[#/Reverse[#]]&,Table[Flatten[Position[GCD[Map[Mod[#,n]&,Range[n-1]],n],1]],{n,100}]]] (* _Peter J. C. Moses_, Apr 17 2013 *)"""@en .
+

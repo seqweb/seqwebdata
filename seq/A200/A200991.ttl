@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.479686Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1147}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200991 a seq:Sequence ;
+    rdfs:label "A200991"@en ;
+    seq:hasTextList ( seq:A200991_I_1_20250216T083316 seq:A200991_N_1_20250216T083316 seq:A200991_C_1_20250216T083316 seq:A200991_D_1_20250216T083316 seq:A200991_H_1_20250216T083316 seq:A200991_F_1_20250216T083316 seq:A200991_e_1_20250216T083316 seq:A200991_t_1_20250216T083316 seq:A200991_o_1_20250216T083316 seq:A200991_Y_1_20250216T083316 seq:A200991_K_1_20250216T083316 seq:A200991_O_1_20250216T083316 seq:A200991_A_1_20250216T083316 seq:A200991_V_1_20250216T083316 ) .
+
+seq:A200991_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_Alonso del Arte_, Dec 06 2011"@en .
+
+seq:A200991_C_1_20250216T083316 a seq:Text ;
+    cnt:chars """This is the third Lagrange number, corresponding to the third Markov number (5). With multiples of the golden ration and sqrt(2) excluded from consideration, the Hurwitz irrational number theorem uses this Lagrange number to obtain very good rational approximations for irrational numbers.
+Continued fraction is 2 followed by 1, 36, 3, 148, 3, 36, 1, 4 repeated."""@en .
+
+seq:A200991_D_1_20250216T083316 a seq:Text ;
+    cnt:chars "J. H. Conway and R. K. Guy,  The Book of Numbers,  New York: Springer-Verlag, 1996, p. 187"@en .
+
+seq:A200991_F_1_20250216T083316 a seq:Text ;
+    cnt:chars "With m = 5 being a Markov number (A002559), L = sqrt(9 - 4/m^2)."@en .
+
+seq:A200991_H_1_20250216T083316 a seq:Text ;
+    cnt:chars "Eric Weisstein's World of Mathematics, <a href=\"https://mathworld.wolfram.com/LagrangeNumber.html\">Lagrange Number</a>."@en .
+
+seq:A200991_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#42 Feb 16 2025 08:33:16"@en .
+
+seq:A200991_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200991_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "Decimal expansion of square root of 221/25"@en .
+
+seq:A200991_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200991_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "2,9,7,3,2,1,3,7,4,9,4,6,3,7,0,1,1,0,4,5,2,2,4,0,1,6,4,2,7,8,6,2,7,9,3,3,0,2,8,9,7,9,7,1,0,2,7,4,4,1,7,2,3,1,2,1,1,2,6,1,8,9,6,2,0,5,0,3,6,7,4,6,2,9,5,6,2,3,3,5,3,1,7,2,3,1,6,7,2,9,2,0,5,4,7,9"@en .
+
+seq:A200991_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A002163 (the first Lagrange number), A010466 (the second Lagrange number)."@en .
+
+seq:A200991_e_1_20250216T083316 a seq:Text ;
+    cnt:chars "2.9732137494637011045224016..."@en .
+
+seq:A200991_o_1_20250216T083316 a seq:Text ;
+    cnt:chars "(PARI) sqrt(221)/5 \\\\ _Charles R Greathouse IV_, Dec 06 2011"@en .
+
+seq:A200991_t_1_20250216T083316 a seq:Text ;
+    cnt:chars "RealDigits[Sqrt[221/25], 10, 100][[1]]"@en .
+

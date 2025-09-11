@@ -1,0 +1,60 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.914683Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1197}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200073 a seq:Sequence ;
+    rdfs:label "A200073"@en ;
+    seq:hasTextList ( seq:A200073_I_1_20250105T195139 seq:A200073_N_1_20250105T195139 seq:A200073_C_1_20250105T195139 seq:A200073_H_1_20250105T195139 seq:A200073_F_1_20250105T195139 seq:A200073_e_1_20250105T195139 seq:A200073_p_1_20250105T195139 seq:A200073_t_1_20250105T195139 seq:A200073_Y_1_20250105T195139 seq:A200073_K_1_20250105T195139 seq:A200073_O_1_20250105T195139 seq:A200073_A_1_20250105T195139 seq:A200073_V_1_20250105T195139 ) .
+
+seq:A200073_A_1_20250105T195139 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 13 2011"@en .
+
+seq:A200073_C_1_20250105T195139 a seq:Text ;
+    cnt:chars "Alternating row sums seem to be 1. - _F. Chapoton_, Nov 09 2021"@en .
+
+seq:A200073_F_1_20250105T195139 a seq:Text ;
+    cnt:chars "T(n,k) = Sum_{j=0..n} (2n+1)*binomial(2n+1-j,j)*binomial(j,k)/(2n+1-j)."@en .
+
+seq:A200073_H_1_20250105T195139 a seq:Text ;
+    cnt:chars "Y. Sun, <a href=\"https://web.archive.org/web/2024*/https://www.fq.math.ca/Papers1/43-4/paper43-4-10b.pdf\">Numerical Triangles and Several Classical Sequences</a>, Fib. Quart. 43, no. 4, (2005) 359-370, Table 3.4."@en .
+
+seq:A200073_I_1_20250105T195139 a seq:Text ;
+    cnt:chars "#32 Jan 05 2025 19:51:39"@en .
+
+seq:A200073_K_1_20250105T195139 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200073_N_1_20250105T195139 a seq:Text ;
+    cnt:chars "Coefficients of a generalized Jaco-Lucas polynomial (odd indices) read by rows."@en .
+
+seq:A200073_O_1_20250105T195139 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200073_V_1_20250105T195139 a seq:Text ;
+    cnt:chars "1,4,3,11,15,5,29,56,35,7,76,189,171,66,9,199,605,715,407,110,11,521,1872,2730,2054,832,169,13,1364,5655,9810,9180,4965,1533,245,15,3571,16779,33745,37774,25585,10642,2618,340,17,9349,49096,112309,146357,119168,62453,20862,4218,456,19"@en .
+
+seq:A200073_Y_1_20250105T195139 a seq:Text ;
+    cnt:chars "Cf. A002878 (first column), A005408 (diagonal)."@en .
+
+seq:A200073_e_1_20250105T195139 a seq:Text ;
+    cnt:chars """Triangle begins:
+1,
+4, 3,
+11, 15, 5,
+29, 56, 35, 7,
+76, 189, 171, 66, 9,
+..."""@en .
+
+seq:A200073_p_1_20250105T195139 a seq:Text ;
+    cnt:chars """A200073 := proc(n,k)
+    (2*n+1)*add( binomial(2*n+1-j,j)*binomial(j,k)/(2*n+1-j),j=0..n) ;
+end proc:
+seq(seq(A200073(n,k),k=0..n),n=0..13) ; # _R. J. Mathar_, Nov 13 2011"""@en .
+
+seq:A200073_t_1_20250105T195139 a seq:Text ;
+    cnt:chars """T[n_, k_] := Sum[(2n+1) Binomial[2n+1-j, j] Binomial[j, k]/(2n+1-j), {j, 0, n}];
+Table[T[n, k], {n, 0, 9}, {k, 0, n}] // Flatten (* _Jean-François Alcover_, Apr 02 2020 *)"""@en .
+

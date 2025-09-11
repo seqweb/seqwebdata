@@ -1,0 +1,66 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.506029Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1773}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000419 a seq:Sequence ;
+    rdfs:label "A000419"@en ;
+    seq:hasTextList ( seq:A000419_I_1_20250216T083221 seq:A000419_N_1_20250216T083221 seq:A000419_C_1_20250216T083221 seq:A000419_D_1_20250216T083221 seq:A000419_H_1_20250216T083221 seq:A000419_F_1_20250216T083221 seq:A000419_t_1_20250216T083221 seq:A000419_o_1_20250216T083221 seq:A000419_Y_1_20250216T083221 seq:A000419_K_1_20250216T083221 seq:A000419_O_1_20250216T083221 seq:A000419_A_1_20250216T083221 seq:A000419_E_1_20250216T083221 seq:A000419_V_1_20250216T083221 ) .
+
+seq:A000419_A_1_20250216T083221 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_ and _J. H. Conway_"@en .
+
+seq:A000419_C_1_20250216T083221 a seq:Text ;
+    cnt:chars "A002828(a(n)) = 3; A025427(a(n)) > 0. - _Reinhard Zumkeller_, Feb 26 2015"@en .
+
+seq:A000419_D_1_20250216T083221 a seq:Text ;
+    cnt:chars "G. H. Hardy and E. M. Wright, An Introduction to the Theory of Numbers. 3rd ed., Oxford Univ. Press, 1954, p. 311."@en .
+
+seq:A000419_E_1_20250216T083221 a seq:Text ;
+    cnt:chars "More terms from Arlin Anderson (starship1(AT)gmail.com)"@en .
+
+seq:A000419_F_1_20250216T083221 a seq:Text ;
+    cnt:chars "Legendre: a nonnegative integer is a sum of three (or fewer) squares iff it is not of the form 4^k m with m == 7 (mod 8)."@en .
+
+seq:A000419_H_1_20250216T083221 a seq:Text ;
+    cnt:chars """Ray Chandler, <a href="/A000419/b000419.txt">Table of n, a(n) for n = 1..10000</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/SquareNumber.html">Square Number.</a>
+<a href="/index/Su#ssq">Index entries for sequences related to sums of squares</a>"""@en .
+
+seq:A000419_I_1_20250216T083221 a seq:Text ;
+    cnt:chars "#33 Feb 16 2025 08:32:21"@en .
+
+seq:A000419_K_1_20250216T083221 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000419_N_1_20250216T083221 a seq:Text ;
+    cnt:chars "Numbers that are the sum of 3 but no fewer nonzero squares."@en .
+
+seq:A000419_O_1_20250216T083221 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000419_V_1_20250216T083221 a seq:Text ;
+    cnt:chars "3,6,11,12,14,19,21,22,24,27,30,33,35,38,42,43,44,46,48,51,54,56,57,59,62,66,67,69,70,75,76,77,78,83,84,86,88,91,93,94,96,99,102,105,107,108,110,114,115,118,120,123,126,129,131,132,133,134,138,139,140,141,142"@en .
+
+seq:A000419_Y_1_20250216T083221 a seq:Text ;
+    cnt:chars "Cf. A000378, A000408, A000415, A002828, A004215, A025427."@en .
+
+seq:A000419_o_1_20250216T083221 a seq:Text ;
+    cnt:chars """(Haskell)
+a000419 n = a000419_list !! (n-1)
+a000419_list = filter ((== 3) . a002828) [1..]
+-- _Reinhard Zumkeller_, Feb 26 2015
+(PARI) is(n)=my(f=factor(n)); for(i=1, #f[, 1], if(f[i, 2]%2 && f[i, 1]%4==3, return( n/4^valuation(n,4)%8 !=7 ))); 0 \\\\ _Charles R Greathouse IV_, Feb 07 2017
+(Python)
+def aupto(lim):
+  squares = [k*k for k in range(1, int(lim**.5)+2) if k*k <= lim]
+  sum2sqs = set(a+b for i, a in enumerate(squares) for b in squares[i:])
+  sum3sqs = set(a+b for a in sum2sqs for b in squares)
+  return sorted(set(range(lim+1)) & (sum3sqs - sum2sqs - set(squares)))
+print(aupto(142)) # _Michael S. Branicky_, Mar 06 2021"""@en .
+
+seq:A000419_t_1_20250216T083221 a seq:Text ;
+    cnt:chars "Select[Range[150],SquaresR[3,#]>0&&SquaresR[2,#]==0&] (* _Harvey P. Dale_, Nov 01 2011 *)"@en .
+

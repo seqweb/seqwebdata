@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.753092Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1594}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000528 a seq:Sequence ;
+    rdfs:label "A000528"@en ;
+    seq:hasTextList ( seq:A000528_I_1_20220312T214050 seq:A000528_N_1_20220312T214050 seq:A000528_C_1_20220312T214050 seq:A000528_D_1_20220312T214050 seq:A000528_H_1_20220312T214050 seq:A000528_Y_1_20220312T214050 seq:A000528_K_1_20220312T214050 seq:A000528_O_1_20220312T214050 seq:A000528_A_1_20220312T214050 seq:A000528_E_1_20220312T214050 seq:A000528_V_1_20220312T214050 ) .
+
+seq:A000528_A_1_20220312T214050 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000528_C_1_20220312T214050 a seq:Text ;
+    cnt:chars """Here "type" means an equivalence class of Latin squares under the operations of row permutation, column permutation, symbol permutation and transpose. In the 1-factorizations formulation, these operations are labeling of left side, labeling of right side, permuting the order in which the factors are listed and swapping the left and right sides, respectively. - _Brendan McKay_
+There are 6108088657705958932053657 isomorphism classes of one-factorizations of K_{11,11}. - Petteri Kaski (petteri.kaski(AT)cs.helsinki.fi), Sep 18 2009"""@en .
+
+seq:A000528_D_1_20220312T214050 a seq:Text ;
+    cnt:chars """CRC Handbook of Combinatorial Designs, 1996, p. 660.
+Denes and Keedwell, Latin Squares and Applications, Academic Press 1974."""@en .
+
+seq:A000528_E_1_20220312T214050 a seq:Text ;
+    cnt:chars """More terms from _Richard Bean_, Feb 17 2004
+a(11) from Petteri Kaski (petteri.kaski(AT)cs.helsinki.fi), Sep 18 2009"""@en .
+
+seq:A000528_H_1_20220312T214050 a seq:Text ;
+    cnt:chars """A. Hulpke, Petteri Kaski and Patric R. J. Östergård, <a href="http://dx.doi.org/10.1090/S0025-5718-2010-02420-2">The number of Latin squares of order 11</a>, Math. Comp. 80 (2011) 1197-1219
+B. D. McKay, A. Meynert and W. Myrvold, <a href="http://users.cecs.anu.edu.au/~bdm/papers/ls_final.pdf">Small Latin Squares, Quasigroups and Loops</a>, J. Combin. Designs, to appear (2005).
+<a href="/index/La#Latin">Index entries for sequences related to Latin squares and rectangles</a>"""@en .
+
+seq:A000528_I_1_20220312T214050 a seq:Text ;
+    cnt:chars "#30 Mar 12 2022 21:40:50"@en .
+
+seq:A000528_K_1_20220312T214050 a seq:Text ;
+    cnt:chars "hard,nonn,nice,more"@en .
+
+seq:A000528_N_1_20220312T214050 a seq:Text ;
+    cnt:chars "Number of types of Latin squares of order n. Equivalently, number of nonisomorphic 1-factorizations of K_{n,n}."@en .
+
+seq:A000528_O_1_20220312T214050 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000528_V_1_20220312T214050 a seq:Text ;
+    cnt:chars "1,1,1,2,2,17,324,842227,57810418543,104452188344901572,6108088657705958932053657"@en .
+
+seq:A000528_Y_1_20220312T214050 a seq:Text ;
+    cnt:chars """See A040082 for another version.
+Cf. A002860, A003090, A000315, A040082, A000479."""@en .
+

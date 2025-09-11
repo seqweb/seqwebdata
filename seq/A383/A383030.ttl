@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.643053Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 826}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383030 a seq:Sequence ;
+    rdfs:label "A383030"@en ;
+    seq:hasTextList ( seq:A383030_I_1_20250413T163232 seq:A383030_N_1_20250413T163232 seq:A383030_C_1_20250413T163232 seq:A383030_H_1_20250413T163232 seq:A383030_F_1_20250413T163232 seq:A383030_t_1_20250413T163232 seq:A383030_o_1_20250413T163232 seq:A383030_Y_1_20250413T163232 seq:A383030_K_1_20250413T163232 seq:A383030_O_1_20250413T163232 seq:A383030_A_1_20250413T163232 seq:A383030_V_1_20250413T163232 ) .
+
+seq:A383030_A_1_20250413T163232 a seq:Text ;
+    cnt:chars "_Amiram Eldar_, Apr 13 2025"@en .
+
+seq:A383030_C_1_20250413T163232 a seq:Text ;
+    cnt:chars "The asymptotic density of this sequence is 2/5."@en .
+
+seq:A383030_F_1_20250413T163232 a seq:Text ;
+    cnt:chars "A383029(a(n)) > 0."@en .
+
+seq:A383030_H_1_20250413T163232 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A383030/b383030.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383030_I_1_20250413T163232 a seq:Text ;
+    cnt:chars "#7 Apr 13 2025 16:32:32"@en .
+
+seq:A383030_K_1_20250413T163232 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383030_N_1_20250413T163232 a seq:Text ;
+    cnt:chars "Indices of the even terms in the sequence of exponentially odd numbers."@en .
+
+seq:A383030_O_1_20250413T163232 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383030_V_1_20250413T163232 a seq:Text ;
+    cnt:chars "2,5,7,8,11,16,18,19,22,24,26,29,31,33,35,39,41,43,46,48,51,54,56,58,61,63,67,69,72,74,76,79,82,84,86,87,91,93,96,98,100,103,106,109,110,113,115,119,121,122,124,126,129,131,133,136,139,144,147,149,152"@en .
+
+seq:A383030_Y_1_20250413T163232 a seq:Text ;
+    cnt:chars "Cf. A268335, A376218, A383029, A383031."@en .
+
+seq:A383030_o_1_20250413T163232 a seq:Text ;
+    cnt:chars """(PARI) isexpodd(n) = {my(f = factor(n)); for(i=1, #f~, if(!(f[i, 2] % 2), return (0))); 1;}
+list(lim) = {my(c = 0); for(k = 1, lim, if(isexpodd(k), c++; if(!(k % 2), print1(c, ", "))));}"""@en .
+
+seq:A383030_t_1_20250413T163232 a seq:Text ;
+    cnt:chars "expOddQ[n_] := AllTrue[FactorInteger[n][[;; , 2]], OddQ]; Position[Select[Range[350], expOddQ], _?EvenQ] // Flatten"@en .
+

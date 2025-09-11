@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.207471Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1568}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200376 a seq:Sequence ;
+    rdfs:label "A200376"@en ;
+    seq:hasTextList ( seq:A200376_I_1_20241122T072521 seq:A200376_N_1_20241122T072521 seq:A200376_F_1_20241122T072521 seq:A200376_e_1_20241122T072521 seq:A200376_t_1_20241122T072521 seq:A200376_o_1_20241122T072521 seq:A200376_Y_1_20241122T072521 seq:A200376_K_1_20241122T072521 seq:A200376_O_1_20241122T072521 seq:A200376_A_1_20241122T072521 seq:A200376_V_1_20241122T072521 ) .
+
+seq:A200376_A_1_20241122T072521 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 16 2011"@en .
+
+seq:A200376_F_1_20241122T072521 a seq:Text ;
+    cnt:chars """D-finite with recurrence: n*a(n) +(n-1)*a(n-1) +(24-17*n)*a(n-2) +(41-17*n)*a(n-3) +72*(n-3)*a(n-4) +72*(n-4)*a(n-5)=0. - _R. J. Mathar_, Nov 17 2011
+G.f. satisfies: A(x) = sqrt(1 + 2*x*A(x) + 9*x^2*A(x)^2). - _Paul D. Hanna_, Nov 18 2014
+Let G(x) = g.f. of A200375, then g.f. A(x) satisfies:
+(1) A(x) = x/Series_Reversion(x*G(x)),
+(2) A(x) = G(x/A(x)) and G(x) = A(x*G(x)),
+where A200375(n) = A000108(n)*A001045(n), the product of Catalan and Jacobsthal numbers.
+a(n) ~ 3^(n-1). - _Vaclav Kotesovec_, Jun 29 2013"""@en .
+
+seq:A200376_I_1_20241122T072521 a seq:Text ;
+    cnt:chars "#32 Nov 22 2024 07:25:21"@en .
+
+seq:A200376_K_1_20241122T072521 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200376_N_1_20241122T072521 a seq:Text ;
+    cnt:chars "G.f.: 1/sqrt(1-10*x^2 + x^4/(1-8*x^2)) + x/(1-9*x^2)."@en .
+
+seq:A200376_O_1_20241122T072521 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200376_V_1_20241122T072521 a seq:Text ;
+    cnt:chars "1,1,5,9,37,81,301,729,2549,6561,22045,59049,193029,531441,1703469,4782969,15111573,43046721,134539837,387420489,1200901157,3486784401,10739313997,31381059609,96172251061,282429536481,862142190941,2541865828329,7734936371269,22876792454961,69439155241581"@en .
+
+seq:A200376_Y_1_20241122T072521 a seq:Text ;
+    cnt:chars "Cf. A200375, A098615, A098617."@en .
+
+seq:A200376_e_1_20241122T072521 a seq:Text ;
+    cnt:chars """G.f.: A(x) = 1 + x + 5*x^2 + 9*x^3 + 37*x^4 + 81*x^5 + 301*x^6 + 729*x^7 +...
+The g.f. of A200375(n) = A000108(n)*A001045(n) begins:
+G(x) = 1 + x + 2*3*x^2 + 5*5*x^3 + 14*11*x^4 + 42*21*x^5 + 132*43*x^6 +...
+where A(x) = G(x/A(x)) and G(x) = A(x*G(x))."""@en .
+
+seq:A200376_o_1_20241122T072521 a seq:Text ;
+    cnt:chars """(PARI) {a(n)=polcoeff(1/sqrt(1-10*x^2 + x^4/(1-8*x^2 +x*O(x^n))) + x/(1-9*x^2 +x*O(x^n)),n)}
+for(n=0,30,print1(a(n),", "))
+(PARI) {a(n)=local(G=sum(m=0,n,binomial(2*m, m)/(m+1)*polcoeff(1/(1-x-2*x^2+x*O(x^m)), m)*x^m)+x*O(x^n)); polcoeff(x/serreverse(x*G),n)}
+for(n=0,30,print1(a(n),", "))"""@en .
+
+seq:A200376_t_1_20241122T072521 a seq:Text ;
+    cnt:chars "CoefficientList[Series[1/Sqrt[1-10x^2+x^4/(1-8x^2)]+x/(1-9x^2),{x,0,30}], x] (* _Harvey P. Dale_, Nov 19 2011 *)"@en .
+

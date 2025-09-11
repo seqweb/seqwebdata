@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.992134Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 924}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200741 a seq:Sequence ;
+    rdfs:label "A200741"@en ;
+    seq:hasTextList ( seq:A200741_I_1_20131204T065059 seq:A200741_N_1_20131204T065059 seq:A200741_C_1_20131204T065059 seq:A200741_H_1_20131204T065059 seq:A200741_t_1_20131204T065059 seq:A200741_o_1_20131204T065059 seq:A200741_K_1_20131204T065059 seq:A200741_O_1_20131204T065059 seq:A200741_A_1_20131204T065059 seq:A200741_V_1_20131204T065059 ) .
+
+seq:A200741_A_1_20131204T065059 a seq:Text ;
+    cnt:chars "_Reinhard Zumkeller_, Nov 21 2011"@en .
+
+seq:A200741_C_1_20131204T065059 a seq:Text ;
+    cnt:chars """A100440(n) = number of terms in row n;
+T(1,1) = 3; right edge: T(n,A100440(n)) = A033428(n);
+T(n,k) = T(n+1,k) for k <= A200742(n);
+distinct terms per row of table in A200737."""@en .
+
+seq:A200741_H_1_20131204T065059 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller, <a href=\"/A200741/b200741.txt\">Rows n=1..25 of triangle, flattened</a>"@en .
+
+seq:A200741_I_1_20131204T065059 a seq:Text ;
+    cnt:chars "#15 Dec 04 2013 06:50:59"@en .
+
+seq:A200741_K_1_20131204T065059 a seq:Text ;
+    cnt:chars "nonn,tabf"@en .
+
+seq:A200741_N_1_20131204T065059 a seq:Text ;
+    cnt:chars "Table of distinct numbers of the form v*w + w*u + u*v with 1 <= u <= v <= w <= n."@en .
+
+seq:A200741_O_1_20131204T065059 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200741_V_1_20131204T065059 a seq:Text ;
+    cnt:chars "3,3,5,8,12,3,5,7,8,11,12,15,16,21,27,3,5,7,8,9,11,12,14,15,16,19,20,21,24,26,27,32,33,40,48,3,5,7,8,9,11,12,14,15,16,17,19,20,21,23,24,26,27,29,31,32,33,35,38,39,40,45,47,48,55,56,65,75,3,5"@en .
+
+seq:A200741_o_1_20131204T065059 a seq:Text ;
+    cnt:chars """(Haskell)
+import Data.List (nub)
+a200741 n k = a200741_tabl !! (n-1) !! (k-1)
+a200741_row = nub . a200737_row
+a200741_tabl = map a200741_row [1..]"""@en .
+
+seq:A200741_t_1_20131204T065059 a seq:Text ;
+    cnt:chars "row[n_] := Table[v*w + w*u + u*v, {u, 1, n}, {v, u, n}, {w, v, n}] // Flatten // Union; Table[row[n], {n, 1, 6}] // Flatten (* _Jean-François Alcover_, Dec 04 2013 *)"@en .
+

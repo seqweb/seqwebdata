@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.486036Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2459}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200994 a seq:Sequence ;
+    rdfs:label "A200994"@en ;
+    seq:hasTextList ( seq:A200994_I_1_20220908T084600 seq:A200994_N_1_20220908T084600 seq:A200994_C_1_20220908T084600 seq:A200994_H_1_20220908T084600 seq:A200994_F_1_20220908T084600 seq:A200994_e_1_20220908T084600 seq:A200994_t_1_20220908T084600 seq:A200994_o_1_20220908T084600 seq:A200994_Y_1_20220908T084600 seq:A200994_K_1_20220908T084600 seq:A200994_O_1_20220908T084600 seq:A200994_A_1_20220908T084600 seq:A200994_V_1_20220908T084600 ) .
+
+seq:A200994_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Charlie Marion_, Feb 15 2012"@en .
+
+seq:A200994_C_1_20220908T084600 a seq:Text ;
+    cnt:chars "For n > 1, a(n) =  98*a(n-1) - a(n-2) + 15.  In general, for m>0, let b(n) be those triangular numbers such that for some triangular number c(n), (m+1)*b(n) = m*c(n).  Then b(0) = 0, b(1) = A014105(m) and for n > 1,  b(n) = 2*A069129(m+1)*b(n-1) - b(n-2) + A014105(m).  Further, c(0) = 0, c(1) = A000384(m+1) and for n>1, c(n) = 2*A069129(m+1)*c(n-1) - c(n-2) + A000384(m+1)."@en .
+
+seq:A200994_F_1_20220908T084600 a seq:Text ;
+    cnt:chars """From _Colin Barker_, Mar 02 2016: (Start)
+a(n) = 99*a(n-1) - 99*a(n-2) + a(n-3) for n>2.
+G.f.: 15*x / ((1-x)*(1-98*x+x^2)). (End)
+a(n) = (-10+(5-2*sqrt(6))*(49+20*sqrt(6))^(-n)+(5+2*sqrt(6))*(49+20*sqrt(6))^n)/64. - _Colin Barker_, Mar 03 2016"""@en .
+
+seq:A200994_H_1_20220908T084600 a seq:Text ;
+    cnt:chars """Colin Barker, <a href="/A200994/b200994.txt">Table of n, a(n) for n = 0..500</a>
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (I).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_1.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (II).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_2.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (III).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_3.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (IV).
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (99,-99,1)."""@en .
+
+seq:A200994_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#27 Sep 08 2022 08:46:00"@en .
+
+seq:A200994_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200994_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Triangular numbers, T(m), that are three-halves of another triangular number; T(m) such that 2*T(m) = 3*T(k) for some k."@en .
+
+seq:A200994_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200994_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "0,15,1485,145530,14260470,1397380545,136929032955,13417647849060,1314792560174940,128836253249295075,12624638025870742425,1237085690282083462590,121221773009618308591410,11878496669252312158495605,1163971451813716973223977895"@en .
+
+seq:A200994_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars """Cf. A001652, A029549, A053141, A075528, A200993-A201008.
+See also A352181, A352182."""@en .
+
+seq:A200994_e_1_20220908T084600 a seq:Text ;
+    cnt:chars """2*0 = 3*0.
+2*15 = 3*10.
+2*1485 = 3*990.
+2*145530 = 3*97020."""@en .
+
+seq:A200994_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(PARI) concat(0, Vec(15*x/((1-x)*(1-98*x+x^2)) + O(x^20))) \\\\ _Colin Barker_, Mar 02 2016
+(Magma) m:=25; R<x>:=PowerSeriesRing(Integers(), m); [0] cat Coefficients(R!(15*x/((1-x)*(1-98*x+x^2)))); // _G. C. Greubel_, Jul 15 2018"""@en .
+
+seq:A200994_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "LinearRecurrence[{99, -99, 1}, {0, 15, 1485}, 20] (* _T. D. Noe_, Feb 15 2012 *)"@en .
+

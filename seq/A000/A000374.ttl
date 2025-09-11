@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.398055Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2505}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000374 a seq:Sequence ;
+    rdfs:label "A000374"@en ;
+    seq:hasTextList ( seq:A000374_I_1_20250425T030611 seq:A000374_N_1_20250425T030611 seq:A000374_C_1_20250425T030611 seq:A000374_D_1_20250425T030611 seq:A000374_H_1_20250425T030611 seq:A000374_F_1_20250425T030611 seq:A000374_e_1_20250425T030611 seq:A000374_t_1_20250425T030611 seq:A000374_o_1_20250425T030611 seq:A000374_Y_1_20250425T030611 seq:A000374_K_1_20250425T030611 seq:A000374_O_1_20250425T030611 seq:A000374_A_1_20250425T030611 seq:A000374_V_1_20250425T030611 ) .
+
+seq:A000374_A_1_20250425T030611 a seq:Text ;
+    cnt:chars "_Shel Kaphan_"@en .
+
+seq:A000374_C_1_20250425T030611 a seq:Text ;
+    cnt:chars "Number of cycles of the function f(x) = 2x mod n. Number of irreducible factors in the factorization of the polynomial x^n-1 over GF(2). - _T. D. Noe_, Apr 16 2003"@en .
+
+seq:A000374_D_1_20250425T030611 a seq:Text ;
+    cnt:chars "R. Lidl and H. Niederreiter, Finite Fields, Addison-Wesley, 1983, p. 65."@en .
+
+seq:A000374_F_1_20250425T030611 a seq:Text ;
+    cnt:chars """a(n) = Sum_{d|m} phi(d)/ord(2, d), where m is n with all factors of 2 removed. - _T. D. Noe_, Apr 19 2003
+a(n) = (1/ord(2,m))*Sum_{j = 0..ord(2,m)-1} gcd(2^j - 1, m), where m is n with all factors of 2 removed. - _Nihar Prakash Gargava_, Nov 12 2018"""@en .
+
+seq:A000374_H_1_20250425T030611 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000374/b000374.txt">Table of n, a(n) for n = 1..10000</a>
+Jean-Paul Allouche, Manon Stipulanti, and Jia-Yan Yao, <a href="https://arxiv.org/abs/2504.17564">Doubling modulo odd integers, generalizations, and unexpected occurrences</a>, arXiv:2504.17564 [math.NT], 2025.
+Jarkko Peltomäki and Aleksi Saarela, <a href="https://doi.org/10.1016/j.jcta.2020.105340">Standard words and solutions of the word equation X_1^2 ... X_n^2 = (X_1 ... X_n)^2</a>, Journal of Combinatorial Theory, Series A (2021) Vol. 178, 105340. See also <a href="https://arxiv.org/abs/2004.14657">arXiv:2004.14657</a> [cs.FL], 2020."""@en .
+
+seq:A000374_I_1_20250425T030611 a seq:Text ;
+    cnt:chars "#46 Apr 25 2025 03:06:11"@en .
+
+seq:A000374_K_1_20250425T030611 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A000374_N_1_20250425T030611 a seq:Text ;
+    cnt:chars "Number of cycles (mod n) under doubling map."@en .
+
+seq:A000374_O_1_20250425T030611 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000374_V_1_20250425T030611 a seq:Text ;
+    cnt:chars "1,1,2,1,2,2,3,1,3,2,2,2,2,3,5,1,3,3,2,2,6,2,3,2,3,2,4,3,2,5,7,1,5,3,6,3,2,2,5,2,3,6,4,2,8,3,3,2,5,3,8,2,2,4,5,3,5,2,2,5,2,7,13,1,7,5,2,3,6,6,3,3,9,2,8,2,6,5,3,2,5,3,2,6,12,4,5,2,9,8,10,3,14,3,5,2,3,5,8,3"@en .
+
+seq:A000374_Y_1_20250425T030611 a seq:Text ;
+    cnt:chars """Cf. A000005, A023135-A023142.
+Cf. A081844 (number of irreducible factors of x^(2n+1) - 1 over GF(2)).
+Cf. A037226 (number of primitive irreducible factors of x^(2n+1) - 1 over integers mod 2)."""@en .
+
+seq:A000374_e_1_20250425T030611 a seq:Text ;
+    cnt:chars "a(14) = 3 because (1) the function 2x mod 14 has the three cycles (0),(2,4,8),(6,12,10) and (2) the factorization of x^14-1 over integers mod 2 is (1+x)^2 (1+x+x^3)^2 (1+x^2+x^3)^2, which has three unique factors. Note that the length of the cycles is the same as the degree of the factors."@en .
+
+seq:A000374_o_1_20250425T030611 a seq:Text ;
+    cnt:chars """(PARI) a(n)={sumdiv(n >> valuation(n,2), d, eulerphi(d)/znorder(Mod(2,d)));}
+vector(100,n,a(n)) \\\\ _Andrew Howroyd_, Nov 12 2018
+(Python)
+from sympy import totient, n_order, divisors
+def A000374(n): return sum(totient(d)//n_order(2,d) for d in divisors(n>>(~n & n-1).bit_length(),generator=True) if d>1)+1 # _Chai Wah Wu_, Apr 09 2024"""@en .
+
+seq:A000374_t_1_20250425T030611 a seq:Text ;
+    cnt:chars """Table[Length[FactorList[x^n - 1, Modulus -> 2]] - 1, {n, 100}]
+CountFactors[p_, n_] := Module[{sum=0, m=n, d, f, i}, While[Mod[m, p]==0, m/=p]; d=Divisors[m]; Do[f=d[[i]]; sum+=EulerPhi[f]/MultiplicativeOrder[p, f], {i, Length[d]}]; sum]; Table[CountFactors[2, n], {n, 100}]"""@en .
+

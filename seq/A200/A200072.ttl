@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.912717Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 746}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200072 a seq:Sequence ;
+    rdfs:label "A200072"@en ;
+    seq:hasTextList ( seq:A200072_I_1_20230514T094028 seq:A200072_N_1_20230514T094028 seq:A200072_H_1_20230514T094028 seq:A200072_e_1_20230514T094028 seq:A200072_t_1_20230514T094028 seq:A200072_Y_1_20230514T094028 seq:A200072_K_1_20230514T094028 seq:A200072_O_1_20230514T094028 seq:A200072_A_1_20230514T094028 seq:A200072_V_1_20230514T094028 ) .
+
+seq:A200072_A_1_20230514T094028 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 13 2011"@en .
+
+seq:A200072_H_1_20230514T094028 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A200072/b200072.txt\">Table of n, a(n) for n = 1..500</a>"@en .
+
+seq:A200072_I_1_20230514T094028 a seq:Text ;
+    cnt:chars "#20 May 14 2023 09:40:28"@en .
+
+seq:A200072_K_1_20230514T094028 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200072_N_1_20230514T094028 a seq:Text ;
+    cnt:chars "Numbers k such that the sum of the prime distinct divisors of k^2+1 equals 2 times the largest prime divisor of k^2+1."@en .
+
+seq:A200072_O_1_20230514T094028 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200072_V_1_20230514T094028 a seq:Text ;
+    cnt:chars "1123,1143,6235,8457,11565,21917,22857,33285,41319,58195,119571,124723,128363,173922,178703,188115,243939,280158,308859,309709,409485,430581,565571,703845,961237,1153362,1170291,1327998,1409794,1536651,1586195,1649395,1665868"@en .
+
+seq:A200072_Y_1_20230514T094028 a seq:Text ;
+    cnt:chars "Cf. A002522, A014442, A193462, A200071."@en .
+
+seq:A200072_e_1_20230514T094028 a seq:Text ;
+    cnt:chars "1123 is in the sequence because the distinct prime divisors of 1123^2 + 1 are 2, 5, 13, 89, 109 and the sum 2 + 5 + 13 + 89 + 109 = 218 = 2*109."@en .
+
+seq:A200072_t_1_20230514T094028 a seq:Text ;
+    cnt:chars "Select[Range[1700000],Plus@@(pl=First/@FactorInteger[#^2+1])==2*pl[[-1]]&]"@en .
+

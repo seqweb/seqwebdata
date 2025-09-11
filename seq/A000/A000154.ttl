@@ -1,0 +1,32 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.554031Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 31, "entities": 8, "chars": 409}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000154 a seq:Sequence ;
+    rdfs:label "A000154"@en ;
+    seq:hasTextList ( seq:A000154_I_1_20171023T180048 seq:A000154_N_1_20171023T180048 seq:A000154_D_1_20171023T180048 seq:A000154_H_1_20171023T180048 seq:A000154_K_1_20171023T180048 seq:A000154_O_1_20171023T180048 seq:A000154_V_1_20171023T180048 ) .
+
+seq:A000154_D_1_20171023T180048 a seq:Text ;
+    cnt:chars "N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."@en .
+
+seq:A000154_H_1_20171023T180048 a seq:Text ;
+    cnt:chars "D. S. Kluk & N. J. A. Sloane, <a href=\"/A002050/a002050_3.pdf\">Correspondence, 1979</a>"@en .
+
+seq:A000154_I_1_20171023T180048 a seq:Text ;
+    cnt:chars "M1798 #16 Oct 23 2017 18:00:48"@en .
+
+seq:A000154_K_1_20171023T180048 a seq:Text ;
+    cnt:chars "dead"@en .
+
+seq:A000154_N_1_20171023T180048 a seq:Text ;
+    cnt:chars "Erroneous version of A003713."@en .
+
+seq:A000154_O_1_20171023T180048 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000154_V_1_20171023T180048 a seq:Text ;
+    cnt:chars "1,1,2,7,35,228,1834,17382,195866,2487832,35499576,562356672,9794156448,186025364016,3826961710272,84775065603888,2011929826983504"@en .
+

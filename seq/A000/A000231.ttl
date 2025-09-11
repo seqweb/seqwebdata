@@ -1,0 +1,65 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.742025Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 1898}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000231 a seq:Sequence ;
+    rdfs:label "A000231"@en ;
+    seq:hasTextList ( seq:A000231_I_1_20230127T121320 seq:A000231_N_1_20230127T121320 seq:A000231_C_1_20230127T121320 seq:A000231_D_1_20230127T121320 seq:A000231_H_1_20230127T121320 seq:A000231_F_1_20230127T121320 seq:A000231_p_1_20230127T121320 seq:A000231_t_1_20230127T121320 seq:A000231_o_1_20230127T121320 seq:A000231_Y_1_20230127T121320 seq:A000231_K_1_20230127T121320 seq:A000231_O_1_20230127T121320 seq:A000231_A_1_20230127T121320 seq:A000231_E_1_20230127T121320 seq:A000231_V_1_20230127T121320 ) .
+
+seq:A000231_A_1_20230127T121320 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000231_C_1_20230127T121320 a seq:Text ;
+    cnt:chars "The next term has 152 digits. - _Harvey P. Dale_, Jun 21 2011"@en .
+
+seq:A000231_D_1_20230127T121320 a seq:Text ;
+    cnt:chars """M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 143.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (Includes this sequence, correctly, although in the Preface on page viii 4336 is mis-typed as 4436)."""@en .
+
+seq:A000231_E_1_20230127T121320 a seq:Text ;
+    cnt:chars """More terms from _Vladeta Jovovic_, Apr 20 2000
+a(0)=2 prepended by _Alois P. Heinz_, Jan 27 2023"""@en .
+
+seq:A000231_F_1_20230127T121320 a seq:Text ;
+    cnt:chars "a(n) = (2^(2^n)+(2^n-1)*2^(2^(n-1)))/2^n."@en .
+
+seq:A000231_H_1_20230127T121320 a seq:Text ;
+    cnt:chars """Michael De Vlieger, <a href="/A000231/b000231.txt">Table of n, a(n) for n = 0..11</a>
+R. L. Ashenhurst, <a href="https://doi.org/10.1145/609784.609825">The application of counting techniques</a>, Proc. ACM Nat. Mtg., Pittsburg, 1952, 293-305.
+Steven R. Finch, <a href="https://doi.org/10.1017/9781316997741">Mathematical Constants II</a>, Encyclopedia of Mathematics and Its Applications, Cambridge University Press, Cambridge, 2018.
+M. A. Harrison, <a href="https://www.jstor.org/stable/2946322">The number of transitivity sets of Boolean functions</a>, J. Soc. Indust. Appl. Math., 11 (1963), 806-828.
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000231_I_1_20230127T121320 a seq:Text ;
+    cnt:chars "M2702 N1083 #42 Jan 27 2023 12:13:20"@en .
+
+seq:A000231_K_1_20230127T121320 a seq:Text ;
+    cnt:chars "easy,nonn,nice"@en .
+
+seq:A000231_N_1_20230127T121320 a seq:Text ;
+    cnt:chars "Number of inequivalent Boolean functions of n variables under action of complementing group."@en .
+
+seq:A000231_O_1_20230127T121320 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000231_V_1_20230127T121320 a seq:Text ;
+    cnt:chars "2,3,7,46,4336,134281216,288230380379570176,2658455991569831764110243006194384896,452312848583266388373324160190187140390789016525312000869601987902398529536"@en .
+
+seq:A000231_Y_1_20230127T121320 a seq:Text ;
+    cnt:chars """Cf. A051502.
+Row sums of A054724."""@en .
+
+seq:A000231_o_1_20230127T121320 a seq:Text ;
+    cnt:chars "(PARI) a(n)=(2^(2^n-n)+(2^n-1)*2^(2^(n-1)-n)) \\\\ _Charles R Greathouse IV_, Jul 29 2016"@en .
+
+seq:A000231_p_1_20230127T121320 a seq:Text ;
+    cnt:chars """a:= n-> (2^(2^n)+(2^n-1)*2^(2^(n-1)))/2^n:
+seq(a(n), n=0..8);  # _Alois P. Heinz_, Jan 27 2023"""@en .
+
+seq:A000231_t_1_20230127T121320 a seq:Text ;
+    cnt:chars "Table[(2^(2^n)+(2^n-1)*2^(2^(n-1)))/2^n,{n,10}] (* _Harvey P. Dale_, Jun 21 2011 *)"@en .
+

@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.795544Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2087}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000970 a seq:Sequence ;
+    rdfs:label "A000970"@en ;
+    seq:hasTextList ( seq:A000970_I_1_20220228T142318 seq:A000970_N_1_20220228T142318 seq:A000970_D_1_20220228T142318 seq:A000970_H_1_20220228T142318 seq:A000970_F_1_20220228T142318 seq:A000970_p_1_20220228T142318 seq:A000970_t_1_20220228T142318 seq:A000970_o_1_20220228T142318 seq:A000970_Y_1_20220228T142318 seq:A000970_K_1_20220228T142318 seq:A000970_O_1_20220228T142318 seq:A000970_A_1_20220228T142318 seq:A000970_E_1_20220228T142318 seq:A000970_V_1_20220228T142318 ) .
+
+seq:A000970_A_1_20220228T142318 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000970_D_1_20220228T142318 a seq:Text ;
+    cnt:chars """N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence)."""@en .
+
+seq:A000970_E_1_20220228T142318 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Sep 25 2011"@en .
+
+seq:A000970_F_1_20220228T142318 a seq:Text ;
+    cnt:chars """G.f.: x^5(3x^5 + 2x^4 + 4x^3 + 3x^2 + 3x + 1)/((1-x^5)(1-x)^4).
+a(n) = A258708(n,n-5) = A258708(2*n-7,2). - _Reinhard Zumkeller_, Jun 23 2015"""@en .
+
+seq:A000970_H_1_20220228T142318 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000970/b000970.txt">Table of n, a(n) for n = 5..1000</a>
+R. P. Loh, A. G. Shannon, A. F. Horadam, <a href="/A000969/a000969.pdf">Divisibility Criteria and Sequence Generators Associated with Fermat Coefficients</a>, Preprint, 1980.
+P. A. Piza, <a href="http://www.jstor.org/stable/3029103">Fermat coefficients</a>, Math. Mag., 27 (1954), 141-146.
+Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992
+<a href="/index/Rec#order_09">Index entries for linear recurrences with constant coefficients</a>, signature (4,-6,4,-1,1,-4,6,-4,1)."""@en .
+
+seq:A000970_I_1_20220228T142318 a seq:Text ;
+    cnt:chars "M4386 N1846 #61 Feb 28 2022 14:23:18"@en .
+
+seq:A000970_K_1_20220228T142318 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000970_N_1_20220228T142318 a seq:Text ;
+    cnt:chars "Fermat coefficients."@en .
+
+seq:A000970_O_1_20220228T142318 a seq:Text ;
+    cnt:chars "5,2"@en .
+
+seq:A000970_V_1_20220228T142318 a seq:Text ;
+    cnt:chars "1,7,25,66,143,273,476,775,1197,1771,2530,3510,4750,6293,8184,10472,13209,16450,20254,24682,29799,35673,42375,49980,58565,68211,79002,91025,104371,119133,135408,153296,172900,194327,217686,243090,270655"@en .
+
+seq:A000970_Y_1_20220228T142318 a seq:Text ;
+    cnt:chars "Cf. A258708."@en .
+
+seq:A000970_o_1_20220228T142318 a seq:Text ;
+    cnt:chars """(PARI) Vec((3*x^5+2*x^4+4*x^3+3*x^2+3*x+1)/(1-x^5)/(1-x)^4+O(x^99)) \\\\ _Charles R Greathouse IV_, Mar 28 2012
+(Haskell)
+a000970 n = a258708 n (n - 5)  -- _Reinhard Zumkeller_, Jun 23 2015"""@en .
+
+seq:A000970_p_1_20220228T142318 a seq:Text ;
+    cnt:chars "A000970:=-(2*z**4+3*z**5+3*z**2+4*z**3+3*z+1)/(z**4+z**3+z**2+z+1)/(z-1)**5; # _Simon Plouffe_ in his 1992 dissertation"@en .
+
+seq:A000970_t_1_20220228T142318 a seq:Text ;
+    cnt:chars """CoefficientList[Series[(3x^5+2x^4+4x^3+3x^2+3x+1)/((1-x^5)(1-x)^4),{x,0,50}],x] (* _Vincenzo Librandi_, Mar 28 2012 *)
+LinearRecurrence[{4,-6,4,-1,1,-4,6,-4,1},{1,7,25,66,143,273,476,775,1197},40] (* _Harvey P. Dale_, Sep 06 2017 *)"""@en .
+

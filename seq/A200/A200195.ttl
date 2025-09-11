@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.837328Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1372}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200195 a seq:Sequence ;
+    rdfs:label "A200195"@en ;
+    seq:hasTextList ( seq:A200195_I_1_20180520T113257 seq:A200195_N_1_20180520T113257 seq:A200195_C_1_20180520T113257 seq:A200195_H_1_20180520T113257 seq:A200195_F_1_20180520T113257 seq:A200195_e_1_20180520T113257 seq:A200195_Y_1_20180520T113257 seq:A200195_K_1_20180520T113257 seq:A200195_O_1_20180520T113257 seq:A200195_A_1_20180520T113257 seq:A200195_V_1_20180520T113257 ) .
+
+seq:A200195_A_1_20180520T113257 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 14 2011"@en .
+
+seq:A200195_C_1_20180520T113257 a seq:Text ;
+    cnt:chars "Row 6 of A200192."@en .
+
+seq:A200195_F_1_20180520T113257 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 3*a(n-1) -2*a(n-2) -a(n-3) +2*a(n-5) -a(n-6) -a(n-7) +2*a(n-8) -a(n-10) -2*a(n-11) +3*a(n-12) -a(n-13).
+Empirical g.f.: 2*x*(1 + 24*x + 162*x^2 + 452*x^3 + 782*x^4 + 999*x^5 + 1045*x^6 + 910*x^7 + 622*x^8 + 292*x^9 + 74*x^10 + 5*x^11) / ((1 - x)^6*(1 + x)*(1 + x + x^2)*(1 + x + x^2 + x^3 + x^4)). - _Colin Barker_, May 20 2018"""@en .
+
+seq:A200195_H_1_20180520T113257 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200195/b200195.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200195_I_1_20180520T113257 a seq:Text ;
+    cnt:chars "#9 May 20 2018 11:32:57"@en .
+
+seq:A200195_K_1_20180520T113257 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200195_N_1_20180520T113257 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..5) of 6 elements with zero sum, adjacent elements differing by more than one, and elements alternately increasing and decreasing."@en .
+
+seq:A200195_O_1_20180520T113257 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200195_V_1_20180520T113257 a seq:Text ;
+    cnt:chars "2,54,482,2240,7266,18838,41938,83600,153278,263198,428718,668684,1005790,1466934,2083578,2892104,3934174,5257082,6914122,8964936,11475878,14520370,18179258,22541172,27702886,33769670,40855654,49084180"@en .
+
+seq:A200195_Y_1_20180520T113257 a seq:Text ;
+    cnt:chars "Cf. A200192."@en .
+
+seq:A200195_e_1_20180520T113257 a seq:Text ;
+    cnt:chars """Some solutions for n=5:
+..1...-5...-5....3...-4....0....0...-2...-3....2....4....3...-4...-4...-1....0
+.-5....0....4...-2....3...-5...-3....1...-1...-1...-4...-3....4....5...-3....4
+..0...-5...-3....3...-1....4....5...-5...-4....4....4....3...-3...-5....5...-3
+.-4....5....5...-4....4...-3...-3....5....4...-4...-4...-3....0....3...-5...-1
+..5....1...-2....1...-5....3....3...-1...-1....3....1....5...-2...-2....5...-4
+..3....4....1...-1....3....1...-2....2....5...-4...-1...-5....5....3...-1....4"""@en .
+

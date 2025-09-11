@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.793060Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 500}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200172 a seq:Sequence ;
+    rdfs:label "A200172"@en ;
+    seq:hasTextList ( seq:A200172_I_1_20250117T145611 seq:A200172_N_1_20250117T145611 seq:A200172_o_1_20250117T145611 seq:A200172_Y_1_20250117T145611 seq:A200172_K_1_20250117T145611 seq:A200172_O_1_20250117T145611 seq:A200172_A_1_20250117T145611 seq:A200172_V_1_20250117T145611 ) .
+
+seq:A200172_A_1_20250117T145611 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 13 2011"@en .
+
+seq:A200172_I_1_20250117T145611 a seq:Text ;
+    cnt:chars "#8 Jan 17 2025 14:56:11"@en .
+
+seq:A200172_K_1_20250117T145611 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A200172_N_1_20250117T145611 a seq:Text ;
+    cnt:chars "Column 3 of triangle A200171."@en .
+
+seq:A200172_O_1_20250117T145611 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200172_V_1_20250117T145611 a seq:Text ;
+    cnt:chars "1,11,-54,302,-1483,7009,-32030,143210,-629848,2735812,-11767534,50220042,-212952283,898198877,-3771484798,15775723922,-65770848988,273420862112,-1133802617998,4691140763402,-19371432850768,79850555673176,-328627887379774,1350540667070002,-5543004766417298"@en .
+
+seq:A200172_Y_1_20250117T145611 a seq:Text ;
+    cnt:chars "Cf. A200171, A200173, A200140."@en .
+
+seq:A200172_o_1_20250117T145611 a seq:Text ;
+    cnt:chars "(PARI) {a(n)=local(A=1+x); for(i=1, (n+2)^2+n+6, A=(1+x*A)*(1+x^(n+2)/(A+x*O(x^((n+2)^2+3))))); polcoeff(A, (n+2)^2+n+4)}"@en .
+

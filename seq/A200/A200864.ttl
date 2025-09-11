@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.236862Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1184}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200864 a seq:Sequence ;
+    rdfs:label "A200864"@en ;
+    seq:hasTextList ( seq:A200864_I_1_20240329T054345 seq:A200864_N_1_20240329T054345 seq:A200864_H_1_20240329T054345 seq:A200864_F_1_20240329T054345 seq:A200864_t_1_20240329T054345 seq:A200864_o_1_20240329T054345 seq:A200864_Y_1_20240329T054345 seq:A200864_K_1_20240329T054345 seq:A200864_O_1_20240329T054345 seq:A200864_A_1_20240329T054345 seq:A200864_V_1_20240329T054345 ) .
+
+seq:A200864_A_1_20240329T054345 a seq:Text ;
+    cnt:chars "_Bruno Berselli_, Nov 23 2011"@en .
+
+seq:A200864_F_1_20240329T054345 a seq:Text ;
+    cnt:chars """G.f.: 1/((1+x)*(1-3*x)*(1-5*x)).
+a(n) = (50*5^n-27*3^n+(-1)^n)/24.
+a(n) = 2*a(n-1)+3*a(n-2)+5^n for n>1, a(0)=1, a(1)=7.
+a(n) = 7*a(n-1)-7*a(n-2)-15*a(n-3) for n>2, a(0)=1, a(1)=7, a(2)=42.
+a(n+1)+a(n) = A005059(n+2).
+a(n+2)-a(n) = A081625(n+2)."""@en .
+
+seq:A200864_H_1_20240329T054345 a seq:Text ;
+    cnt:chars """Bruno Berselli, <a href="/A200864/b200864.txt">Table of n, a(n) for n = 0..1000</a>.
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (7,-7,-15)."""@en .
+
+seq:A200864_I_1_20240329T054345 a seq:Text ;
+    cnt:chars "#29 Mar 29 2024 05:43:45"@en .
+
+seq:A200864_K_1_20240329T054345 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200864_N_1_20240329T054345 a seq:Text ;
+    cnt:chars "Expansion of 1/((1+x)*(1-3*x)*(1-5*x))."@en .
+
+seq:A200864_O_1_20240329T054345 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200864_V_1_20240329T054345 a seq:Text ;
+    cnt:chars "1,7,42,230,1211,6237,31732,160300,806421,4046867,20278622,101525970,508028431,2541337897,12710276712,63562145240,317843011241,1589311911327,7946850122002,39735122306110,198678226618851,993398978359157,4967018427590492,24835162745336580"@en .
+
+seq:A200864_Y_1_20240329T054345 a seq:Text ;
+    cnt:chars "Cf. A016209, A200859."@en .
+
+seq:A200864_o_1_20240329T054345 a seq:Text ;
+    cnt:chars """(PARI) Vec(1/((1+x)*(1-3*x)*(1-5*x))+O(x^24))
+(Magma) m:=24; R<x>:=PowerSeriesRing(Integers(), m); Coefficients(R!(1/((1+x)*(1-3*x)*(1-5*x))));
+(Maxima) makelist(coeff(taylor(1/((1+x)*(1-3*x)*(1-5*x)), x, 0, n), x, n), n, 0, 23);"""@en .
+
+seq:A200864_t_1_20240329T054345 a seq:Text ;
+    cnt:chars """CoefficientList[Series[1/((1+x)(1-3x)(1-5x)), {x, 0, 24}], x]
+LinearRecurrence[{7,-7,-15},{1,7,42},30] (* _Harvey P. Dale_, May 26 2015 *)"""@en .
+

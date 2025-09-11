@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.265511Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1798}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200404 a seq:Sequence ;
+    rdfs:label "A200404"@en ;
+    seq:hasTextList ( seq:A200404_I_1_20250222T034738 seq:A200404_N_1_20250222T034738 seq:A200404_H_1_20250222T034738 seq:A200404_F_1_20250222T034738 seq:A200404_t_1_20250222T034738 seq:A200404_K_1_20250222T034738 seq:A200404_O_1_20250222T034738 seq:A200404_A_1_20250222T034738 seq:A200404_E_1_20250222T034738 seq:A200404_V_1_20250222T034738 ) .
+
+seq:A200404_A_1_20250222T034738 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 17 2011"@en .
+
+seq:A200404_E_1_20250222T034738 a seq:Text ;
+    cnt:chars """a(11)-a(15) from _Lars Blomberg_, Apr 16 2018
+a(16)-a(22) from _Vaclav Kotesovec_, Oct 17 2019"""@en .
+
+seq:A200404_F_1_20250222T034738 a seq:Text ;
+    cnt:chars "a(n) ~ c * d^n * n! * n^alfa, where d = 1/A240885 = 1/(sqrt(2) * InverseErf(sqrt(2/Pi))), alfa = 0.96094544076267076286993824810734... and c = 0.5103992709959036090170192609... - _Vaclav Kotesovec_, Oct 17 2019"@en .
+
+seq:A200404_H_1_20250222T034738 a seq:Text ;
+    cnt:chars """Vaclav Kotesovec, <a href="/A200404/b200404.txt">Table of n, a(n) for n = 1..465</a>
+Juan S. Auli, <a href="https://search.proquest.com/openview/3f0cef1fbdb016d61e16412e4b855969/1">Pattern Avoidance in Inversion Sequences</a>, Ph. D. thesis, Dartmouth College, ProQuest Dissertations Publishing (2020), 27964164.
+Juan S. Auli and Sergi Elizalde, <a href="https://arxiv.org/abs/1904.02694">Consecutive Patterns in Inversion Sequences</a>, arXiv:1904.02694 [math.CO], 2019. See Table 1.
+Andrew M. Baxter and Lara K. Pudwell, <a href="http://arxiv.org/abs/1108.2642">Enumeration schemes for vincular patterns</a>, arXiv preprint arXiv:1108.2642 [math.CO], 2011-2012.
+Yan Wang, Qi Fang, Shishuo Fu, Sergey Kitaev, and Haijun Li, <a href="https://arxiv.org/abs/2502.10128">Consecutive and quasi-consecutive patterns: des-Wilf classifications and generating functions</a>, arXiv:2502.10128 [math.CO], 2025. See p. 9."""@en .
+
+seq:A200404_I_1_20250222T034738 a seq:Text ;
+    cnt:chars "#39 Feb 22 2025 03:47:38"@en .
+
+seq:A200404_K_1_20250222T034738 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200404_N_1_20250222T034738 a seq:Text ;
+    cnt:chars "Number of permutations of [n] avoiding the pattern 143-2."@en .
+
+seq:A200404_O_1_20250222T034738 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200404_V_1_20250222T034738 a seq:Text ;
+    cnt:chars "1,2,6,23,107,582,3622,25369,197523,1692535,15829557,160463512,1752529064,20516018396,256273980368,3402364791737,47841014687039,710242228143271,11101522062378069,182234745428876525,3134424458578405569,56371116965252450338"@en .
+
+seq:A200404_t_1_20250222T034738 a seq:Text ;
+    cnt:chars "i120[1] = 1; i120[2] = 2; i120[n_] := i120[n] = Sum[s120[n, k], {k, 0, n - 1}]; s120[n_, k_] := s120[n, k] = i120[n - 1] - Sum[(n - 2 - j)*s120[n - 2, j], {j, k + 1, n - 2}]; Table[i120[m], {m, 1, 25}] (* _Vaclav Kotesovec_, Oct 17 2019 *)"@en .
+

@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.129512Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 733}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200336 a seq:Sequence ;
+    rdfs:label "A200336"@en ;
+    seq:hasTextList ( seq:A200336_I_1_20140718T155026 seq:A200336_N_1_20140718T155026 seq:A200336_H_1_20140718T155026 seq:A200336_e_1_20140718T155026 seq:A200336_t_1_20140718T155026 seq:A200336_o_1_20140718T155026 seq:A200336_K_1_20140718T155026 seq:A200336_O_1_20140718T155026 seq:A200336_A_1_20140718T155026 seq:A200336_V_1_20140718T155026 ) .
+
+seq:A200336_A_1_20140718T155026 a seq:Text ;
+    cnt:chars "_R. J. Mathar_, Nov 16 2011"@en .
+
+seq:A200336_H_1_20140718T155026 a seq:Text ;
+    cnt:chars """R. Morris, <a href="http://dx.doi.org/10.1090/S0025-5718-1979-0521291-X">The dilogarithm function of a real argument</a>, Math. Comp. 33 (1979) 778-787.
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Dilogarithm">Spence's function</a>"""@en .
+
+seq:A200336_I_1_20140718T155026 a seq:Text ;
+    cnt:chars "#10 Jul 18 2014 15:50:26"@en .
+
+seq:A200336_K_1_20140718T155026 a seq:Text ;
+    cnt:chars "cons,nonn"@en .
+
+seq:A200336_N_1_20140718T155026 a seq:Text ;
+    cnt:chars "Decimal expansion of the nontrivial zero of the dilogarithm on the real line."@en .
+
+seq:A200336_O_1_20140718T155026 a seq:Text ;
+    cnt:chars "2,2"@en .
+
+seq:A200336_V_1_20140718T155026 a seq:Text ;
+    cnt:chars "1,2,5,9,5,1,7,0,3,6,9,8,4,5,0,1,6,1,2,8,6,3,9,8,9,6,4,9,4,8,6,4,6,0,7,0,9,5,6,5,4,2,9,0,5,1,0,7,7"@en .
+
+seq:A200336_e_1_20140718T155026 a seq:Text ;
+    cnt:chars "12.595170369845016128639896494864..."@en .
+
+seq:A200336_o_1_20140718T155026 a seq:Text ;
+    cnt:chars "(PARI) solve(x=12,13,real(polylog(2,x))) \\\\ _Charles R Greathouse IV_, Jul 18 2014"@en .
+
+seq:A200336_t_1_20140718T155026 a seq:Text ;
+    cnt:chars "x /. FindRoot[ PolyLog[2, x] // Re, {x, 13}, WorkingPrecision -> 50] // RealDigits // First (* _Jean-François Alcover_, Feb 05 2013 *)"@en .
+

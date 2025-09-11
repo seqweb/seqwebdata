@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.104750Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1079}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200795 a seq:Sequence ;
+    rdfs:label "A200795"@en ;
+    seq:hasTextList ( seq:A200795_I_1_20180302T141400 seq:A200795_N_1_20180302T141400 seq:A200795_C_1_20180302T141400 seq:A200795_H_1_20180302T141400 seq:A200795_F_1_20180302T141400 seq:A200795_e_1_20180302T141400 seq:A200795_Y_1_20180302T141400 seq:A200795_K_1_20180302T141400 seq:A200795_O_1_20180302T141400 seq:A200795_A_1_20180302T141400 seq:A200795_V_1_20180302T141400 ) .
+
+seq:A200795_A_1_20180302T141400 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 22 2011"@en .
+
+seq:A200795_C_1_20180302T141400 a seq:Text ;
+    cnt:chars "Column 2 of A200801."@en .
+
+seq:A200795_F_1_20180302T141400 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 18*a(n-1) - 35*a(n-2) - 48*a(n-3) - 11*a(n-4) + 90*a(n-5) + 36*a(n-6) - 12*a(n-7) - 36*a(n-8) for n>10.
+Empirical g.f.: x*(1 - x)*(2 - 19*x - 41*x^2 - 10*x^3 + 58*x^4 + 58*x^5 - 28*x^7 - 12*x^8) / ((1 - 3*x - x^2 + 2*x^4)*(1 - 15*x - 9*x^2 + 6*x^3 + 18*x^4)). - _Colin Barker_, Mar 02 2018"""@en .
+
+seq:A200795_H_1_20180302T141400 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200795/b200795.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200795_I_1_20180302T141400 a seq:Text ;
+    cnt:chars "#8 Mar 02 2018 14:14:00"@en .
+
+seq:A200795_K_1_20180302T141400 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200795_N_1_20180302T141400 a seq:Text ;
+    cnt:chars "Number of n X 2 0..3 arrays with values 0..3 introduced in row major order and each element equal to no more than two horizontal and vertical neighbors."@en .
+
+seq:A200795_O_1_20180302T141400 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200795_V_1_20180302T141400 a seq:Text ;
+    cnt:chars "2,15,178,2614,40148,622645,9676364,150442627,2339207390,36372631268,565564863676,8794081340271,136740955582530,2126212947243743,33060918081784912,514070948321926226,7993393871925768124"@en .
+
+seq:A200795_Y_1_20180302T141400 a seq:Text ;
+    cnt:chars "Cf. A200801."@en .
+
+seq:A200795_e_1_20180302T141400 a seq:Text ;
+    cnt:chars """Some solutions for n=3:
+..0..1....0..1....0..0....0..1....0..1....0..1....0..1....0..1....0..1....0..1
+..2..1....1..2....1..0....1..1....2..3....1..1....2..0....2..1....2..0....2..3
+..3..2....3..2....0..0....1..0....1..1....1..2....3..3....3..1....0..0....1..0"""@en .
+

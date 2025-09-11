@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.334587Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 581}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200915 a seq:Sequence ;
+    rdfs:label "A200915"@en ;
+    seq:hasTextList ( seq:A200915_I_1_20220908T084600 seq:A200915_N_1_20220908T084600 seq:A200915_H_1_20220908T084600 seq:A200915_t_1_20220908T084600 seq:A200915_o_1_20220908T084600 seq:A200915_K_1_20220908T084600 seq:A200915_O_1_20220908T084600 seq:A200915_A_1_20220908T084600 seq:A200915_V_1_20220908T084600 ) .
+
+seq:A200915_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Vincenzo Librandi_, Nov 24 2011"@en .
+
+seq:A200915_H_1_20220908T084600 a seq:Text ;
+    cnt:chars "Vincenzo Librandi, <a href=\"/A200915/b200915.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200915_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#12 Sep 08 2022 08:46:00"@en .
+
+seq:A200915_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200915_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Primes of the form 7n^3-1."@en .
+
+seq:A200915_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200915_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "1511,3583,19207,40823,123031,188999,774143,1229311,1511999,2012471,3583999,4148927,4452391,6588343,7874047,10370807,14002631,14680063,34390999,40823999,45043991,82966463,89690327,114709447,150394663"@en .
+
+seq:A200915_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(Magma) [a: n in [1..400] | IsPrime(a) where a is 7*n^3-1]
+(PARI) for(n=1,1e3,if(isprime(t=7*n^3-1),print1(t", "))) \\\\ _Charles R Greathouse IV_, Nov 24 2011"""@en .
+
+seq:A200915_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "Select[Table[7n^3-1,{n,1,3500}],PrimeQ]"@en .
+

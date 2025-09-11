@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.581021Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 283}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383001 a seq:Sequence ;
+    rdfs:label "A383001"@en ;
+    seq:hasTextList ( seq:A383001_I_1_20250502T121202 seq:A383001_N_1_20250502T121202 seq:A383001_C_1_20250502T121202 seq:A383001_F_1_20250502T121202 seq:A383001_Y_1_20250502T121202 seq:A383001_K_1_20250502T121202 seq:A383001_O_1_20250502T121202 seq:A383001_A_1_20250502T121202 seq:A383001_V_1_20250502T121202 ) .
+
+seq:A383001_A_1_20250502T121202 a seq:Text ;
+    cnt:chars "_Pontus von Brömssen_, Apr 12 2025"@en .
+
+seq:A383001_C_1_20250502T121202 a seq:Text ;
+    cnt:chars "Indices of records in A230697."@en .
+
+seq:A383001_F_1_20250502T121202 a seq:Text ;
+    cnt:chars "A230697(a(n)) = n."@en .
+
+seq:A383001_I_1_20250502T121202 a seq:Text ;
+    cnt:chars "#12 May 02 2025 12:12:02"@en .
+
+seq:A383001_K_1_20250502T121202 a seq:Text ;
+    cnt:chars "nonn,nice,hard,more,changed"@en .
+
+seq:A383001_N_1_20250502T121202 a seq:Text ;
+    cnt:chars "Smallest number with shortest addition-multiplication chain of length n."@en .
+
+seq:A383001_O_1_20250502T121202 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A383001_V_1_20250502T121202 a seq:Text ;
+    cnt:chars "1,2,3,5,7,13,23,59,211,619,4282,25819"@en .
+
+seq:A383001_Y_1_20250502T121202 a seq:Text ;
+    cnt:chars "Cf. A003064, A230697, A383002."@en .
+

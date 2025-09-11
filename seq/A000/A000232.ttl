@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.744281Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2095}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000232 a seq:Sequence ;
+    rdfs:label "A000232"@en ;
+    seq:hasTextList ( seq:A000232_I_1_20250216T083220 seq:A000232_N_1_20250216T083220 seq:A000232_C_1_20250216T083220 seq:A000232_D_1_20250216T083220 seq:A000232_H_1_20250216T083220 seq:A000232_F_1_20250216T083220 seq:A000232_p_1_20250216T083220 seq:A000232_t_1_20250216T083220 seq:A000232_Y_1_20250216T083220 seq:A000232_K_1_20250216T083220 seq:A000232_O_1_20250216T083220 seq:A000232_A_1_20250216T083220 seq:A000232_E_1_20250216T083220 seq:A000232_V_1_20250216T083220 ) .
+
+seq:A000232_A_1_20250216T083220 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000232_C_1_20250216T083220 a seq:Text ;
+    cnt:chars "Related to Gilbreath conjecture."@en .
+
+seq:A000232_D_1_20250216T083220 a seq:Text ;
+    cnt:chars """W. Sierpiński, A Selection of Problems in the Theory of Numbers. Macmillan, NY, 1964, p. 35.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000232_E_1_20250216T083220 a seq:Text ;
+    cnt:chars """Edited by _Robert G. Wilson v_, Aug 18 2002
+More terms from _Jean-François Alcover_, Feb 06 2016"""@en .
+
+seq:A000232_F_1_20250216T083220 a seq:Text ;
+    cnt:chars "a(n) = A036277(n) - 1. - _T. D. Noe_, Feb 03 2007"@en .
+
+seq:A000232_H_1_20250216T083220 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000232/b000232.txt">Table of n, a(n) for n=1..274</a>
+Chris Caldwell, <a href="https://t5k.org/glossary/page.php?sort=GilbreathsConjecture">Gilbreath's conjecture</a>
+Albert N. Debono, <a href="http://web.archive.org/web/20060215084642/http://www.eng.um.edu.mt/~andebo/numbers/numcom11.htm">NUMBERS AND COMPUTERS (11)</a>
+R. B. Killgrove and K. E. Ralston, <a href="http://dx.doi.org/10.1090/S0025-5718-59-99262-2">On a conjecture concerning the primes</a>, Math. Comp., 13 (1959), 121-122.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/GilbreathsConjecture.html">Gilbreath's Conjecture</a>
+<a href="/index/Pri#gaps">Index entries for primes, gaps between</a>"""@en .
+
+seq:A000232_I_1_20250216T083220 a seq:Text ;
+    cnt:chars "M2718 N1089 #36 Feb 16 2025 08:32:20"@en .
+
+seq:A000232_K_1_20250216T083220 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000232_N_1_20250216T083220 a seq:Text ;
+    cnt:chars "Construct a triangle as in A036262. Sequence is one less than the position of the first number larger than 2 in the n-th row (n-th difference)."@en .
+
+seq:A000232_O_1_20250216T083220 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000232_V_1_20250216T083220 a seq:Text ;
+    cnt:chars "3,8,14,14,25,24,23,22,25,59,98,97,98,97,174,176,176,176,176,291,290,289,740,874,873,872,873,872,871,870,869,868,867,866,2180,2179,2178,2177,2771,2770,2769,2768,2767,2766,2765,2764,2763,2763,2763,2763,3366,4208,4207"@en .
+
+seq:A000232_Y_1_20250216T083220 a seq:Text ;
+    cnt:chars "Cf. A001549."@en .
+
+seq:A000232_p_1_20250216T083220 a seq:Text ;
+    cnt:chars """A000232 := proc(n)
+    local k;
+    for k from 1 do
+        if A036262(n,k) > 2 then
+            return k-1 ;
+        end if;
+    end do:
+end proc:
+seq(A000232(n),n=1..40) ; # _R. J. Mathar_, May 10 2023"""@en .
+
+seq:A000232_t_1_20250216T083220 a seq:Text ;
+    cnt:chars "max = 10^4; triangle = NestList[Abs[Differences[#]] &, Prime[Range[max]], max]; a[n_] := (p = Position[triangle[[n + 1]], k_ /; k > 2, 1, 1]; If[p == {}, Nothing, p[[1, 1]] - 1]); Table[a[n], {n, 1, Sqrt[max]}] (* _Jean-François Alcover_, Feb 06 2016 *)"@en .
+

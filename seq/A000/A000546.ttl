@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.795441Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1016}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000546 a seq:Sequence ;
+    rdfs:label "A000546"@en ;
+    seq:hasTextList ( seq:A000546_I_1_20120620T142041 seq:A000546_N_1_20120620T142041 seq:A000546_C_1_20120620T142041 seq:A000546_H_1_20120620T142041 seq:A000546_t_1_20120620T142041 seq:A000546_Y_1_20120620T142041 seq:A000546_K_1_20120620T142041 seq:A000546_O_1_20120620T142041 seq:A000546_A_1_20120620T142041 seq:A000546_V_1_20120620T142041 ) .
+
+seq:A000546_A_1_20120620T142041 a seq:Text ;
+    cnt:chars "Peter L. Stone [ PetStone(AT)aol.com ]"@en .
+
+seq:A000546_C_1_20120620T142041 a seq:Text ;
+    cnt:chars "Sequence is precise in the sense that n+1 consecutive numbers starting at a(n) do not take the same number of steps."@en .
+
+seq:A000546_H_1_20120620T142041 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000546/b000546.txt">Table of n, a(n) for n = 1..100</a>
+<a href="/index/3#3x1">Index entries for sequences related to 3x+1 (or Collatz) problem</a>"""@en .
+
+seq:A000546_I_1_20120620T142041 a seq:Text ;
+    cnt:chars "#14 Jun 20 2012 14:20:41"@en .
+
+seq:A000546_K_1_20120620T142041 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000546_N_1_20120620T142041 a seq:Text ;
+    cnt:chars "First occurrence of n consecutive numbers that take same number of steps to reach 1 in 3x+1 problem."@en .
+
+seq:A000546_O_1_20120620T142041 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000546_V_1_20120620T142041 a seq:Text ;
+    cnt:chars "1,12,28,314,98,386,943,1494,1680,4722,6576,11696,3982,2987,17548,36208,7083,59692,159116,79592,57857,212160,352258,221185,57346,294913,252548,530052,331778,524289,1088129,913319,2065786,1541308,1032875,1264924,8151894"@en .
+
+seq:A000546_Y_1_20120620T142041 a seq:Text ;
+    cnt:chars "Cf. A000547."@en .
+
+seq:A000546_t_1_20120620T142041 a seq:Text ;
+    cnt:chars "Collatz[n_] := Length[NestWhileList[If[EvenQ[#], #/2, 3 # + 1] &, n, # > 1 &]] - 1; nn = 10; t = Table[0, {nn}]; t[[1]] = 1; rep = 1; last = 0; n = 1; While[Times @@ t == 0, n++;  r = Collatz[n]; If[r == last, rep++, If[0 < rep <= nn && t[[rep]] == 0, t[[rep]] = n - rep]; last = r; rep = 1]]; t (* _T. D. Noe_, Jun 20 2012 *)"@en .
+

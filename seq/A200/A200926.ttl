@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.353969Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 336}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200926 a seq:Sequence ;
+    rdfs:label "A200926"@en ;
+    seq:hasTextList ( seq:A200926_I_1_20181030T103102 seq:A200926_N_1_20181030T103102 seq:A200926_C_1_20181030T103102 seq:A200926_e_1_20181030T103102 seq:A200926_Y_1_20181030T103102 seq:A200926_K_1_20181030T103102 seq:A200926_O_1_20181030T103102 seq:A200926_A_1_20181030T103102 seq:A200926_V_1_20181030T103102 ) .
+
+seq:A200926_A_1_20181030T103102 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 24 2011"@en .
+
+seq:A200926_C_1_20181030T103102 a seq:Text ;
+    cnt:chars "Positions of records are in A200948."@en .
+
+seq:A200926_I_1_20181030T103102 a seq:Text ;
+    cnt:chars "#8 Oct 30 2018 10:31:02"@en .
+
+seq:A200926_K_1_20181030T103102 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200926_N_1_20181030T103102 a seq:Text ;
+    cnt:chars "Records in A085099."@en .
+
+seq:A200926_O_1_20181030T103102 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200926_V_1_20181030T103102 a seq:Text ;
+    cnt:chars "1,2,6,7,9,12,24,27,45,69,93,114,129,132,159,210,225,270,294,357,402,414,420,432,474,585,630,651,744,855,1008,1011,1170"@en .
+
+seq:A200926_Y_1_20181030T103102 a seq:Text ;
+    cnt:chars "Cf. A085099, A200948."@en .
+
+seq:A200926_e_1_20181030T103102 a seq:Text ;
+    cnt:chars "n=5: 5+(1..5)^2=(6,9,13,21,30) all composite and 5+6^2=41 is prime hence a(5)=6."@en .
+

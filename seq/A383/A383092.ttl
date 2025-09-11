@@ -1,0 +1,70 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.778094Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2394}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383092 a seq:Sequence ;
+    rdfs:label "A383092"@en ;
+    seq:hasTextList ( seq:A383092_I_1_20250426T112754 seq:A383092_N_1_20250426T112754 seq:A383092_F_1_20250426T112754 seq:A383092_e_1_20250426T112754 seq:A383092_t_1_20250426T112754 seq:A383092_Y_1_20250426T112754 seq:A383092_K_1_20250426T112754 seq:A383092_O_1_20250426T112754 seq:A383092_A_1_20250426T112754 seq:A383092_E_1_20250426T112754 seq:A383092_V_1_20250426T112754 ) .
+
+seq:A383092_A_1_20250426T112754 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 19 2025"@en .
+
+seq:A383092_E_1_20250426T112754 a seq:Text ;
+    cnt:chars "More terms from _Bert Dobbelaere_, Apr 26 2025"@en .
+
+seq:A383092_F_1_20250426T112754 a seq:Text ;
+    cnt:chars "a(n) = A382915(n) + A383094(n)."@en .
+
+seq:A383092_I_1_20250426T112754 a seq:Text ;
+    cnt:chars "#12 Apr 26 2025 11:27:54"@en .
+
+seq:A383092_K_1_20250426T112754 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A383092_N_1_20250426T112754 a seq:Text ;
+    cnt:chars "Number of integer partitions of n having at most one permutation with all equal run-lengths."@en .
+
+seq:A383092_O_1_20250426T112754 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383092_V_1_20250426T112754 a seq:Text ;
+    cnt:chars "1,1,2,2,4,5,7,10,13,16,22,28,34,46,58,69,90,114,141,178,216,271,338,418,506,630,769,941,1140,1399,1675,2051,2454,2975,3561,4289,5094,6137,7274,8692,10269,12249,14414,17128,20110,23767,27872,32849,38346,45094,52552,61533"@en .
+
+seq:A383092_Y_1_20250426T112754 a seq:Text ;
+    cnt:chars """For no choices we have A382915, ranks A382879.
+For at least one choice we have A383013, for run-sums A383098, ranks A383110.
+The complement is A383090, ranks A383089.
+Partitions of this type are ranked by A383091 = positions of terms <= 1 in A382857.
+For a unique choice we have A383094, ranks A383112.
+For run-sums instead of lengths we have A383095 + A383096, ranks A383099 \\/ A383100.
+The complement for run-sums is A383097, ranks A383015, positions of terms > 1 in A382877.
+Cf. A047966, A072774, A098859, A100471, A100881, A100882, A100883, A304442.
+A000041 counts integer partitions, strict A000009.
+A008284 counts partitions by length, strict A008289.
+A239455 counts Look-and-Say partitions, ranks A351294, conjugate A381432.
+A329738 counts compositions with equal run-lengths, ranks A353744.
+A329739 counts compositions with distinct run-lengths, ranks A351596, complement A351291.
+A351293 counts non-Look-and-Say partitions, ranks A351295, conjugate A381433.
+Cf. A006171, A047993, A362608, A381871, A382076, A382771, A383111."""@en .
+
+seq:A383092_e_1_20250426T112754 a seq:Text ;
+    cnt:chars """The partition (222211) has 1 permutation with all equal run-lengths: (221122), so is counted under a(10).
+The partition (33211111) has no permutation with all equal run-lengths, so is counted under a(13).
+The a(1) = 1 through a(7) = 10 partitions:
+  (1)  (2)   (3)    (4)     (5)      (6)       (7)
+       (11)  (111)  (22)    (221)    (33)      (322)
+                    (211)   (311)    (222)     (331)
+                    (1111)  (2111)   (411)     (511)
+                            (11111)  (3111)    (2221)
+                                     (21111)   (4111)
+                                     (111111)  (22111)
+                                               (31111)
+                                               (211111)
+                                               (1111111)"""@en .
+
+seq:A383092_t_1_20250426T112754 a seq:Text ;
+    cnt:chars "Table[Length[Select[IntegerPartitions[n],Length[Select[Permutations[#],SameQ@@Length/@Split[#]&]]<=1&]],{n,0,15}]"@en .
+

@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.775483Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 592}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200657 a seq:Sequence ;
+    rdfs:label "A200657"@en ;
+    seq:hasTextList ( seq:A200657_I_1_20120331T102218 seq:A200657_N_1_20120331T102218 seq:A200657_C_1_20120331T102218 seq:A200657_Y_1_20120331T102218 seq:A200657_K_1_20120331T102218 seq:A200657_O_1_20120331T102218 seq:A200657_A_1_20120331T102218 seq:A200657_V_1_20120331T102218 ) .
+
+seq:A200657_A_1_20120331T102218 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 20 2011"@en .
+
+seq:A200657_C_1_20120331T102218 a seq:Text ;
+    cnt:chars """For x values see A200656.
+For d values see A200658.
+Definition: Secondary terms occured when existed such integer k that A200656 is divisible by k^2 and A200657 is divisible by k^3 and A200658 is divisible by k^6.
+Terms free of such k are primary terms.
+Secondary terms are: a(6)=a(2)*2^3, a(7)=a(3)*2^3.
+A200217 is subset of this sequence."""@en .
+
+seq:A200657_I_1_20120331T102218 a seq:Text ;
+    cnt:chars "#15 Mar 31 2012 10:22:18"@en .
+
+seq:A200657_K_1_20120331T102218 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200657_N_1_20120331T102218 a seq:Text ;
+    cnt:chars "Successive values y such that Mordell elliptic curve x^3 - y^2 = d has a quadratic extension over rationals."@en .
+
+seq:A200657_O_1_20120331T102218 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200657_V_1_20120331T102218 a seq:Text ;
+    cnt:chars "85580,154396,240004,476425,767125,1235168,1920032,2555956,5518439"@en .
+
+seq:A200657_Y_1_20120331T102218 a seq:Text ;
+    cnt:chars "Cf. A200217."@en .
+

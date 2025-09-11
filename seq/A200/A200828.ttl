@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.168819Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 525}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200828 a seq:Sequence ;
+    rdfs:label "A200828"@en ;
+    seq:hasTextList ( seq:A200828_I_1_20120331T123641 seq:A200828_N_1_20120331T123641 seq:A200828_C_1_20120331T123641 seq:A200828_e_1_20120331T123641 seq:A200828_K_1_20120331T123641 seq:A200828_O_1_20120331T123641 seq:A200828_A_1_20120331T123641 seq:A200828_V_1_20120331T123641 ) .
+
+seq:A200828_A_1_20120331T123641 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 23 2011"@en .
+
+seq:A200828_C_1_20120331T123641 a seq:Text ;
+    cnt:chars "Column 5 of A200831"@en .
+
+seq:A200828_I_1_20120331T123641 a seq:Text ;
+    cnt:chars "#6 Mar 31 2012 12:36:41"@en .
+
+seq:A200828_K_1_20120331T123641 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200828_N_1_20120331T123641 a seq:Text ;
+    cnt:chars "Number of nX5 0..5 arrays with every row and column running average nondecreasing rightwards and downwards"@en .
+
+seq:A200828_O_1_20120331T123641 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200828_V_1_20120331T123641 a seq:Text ;
+    cnt:chars "679,96511,11757774,1307781737,136335515996,13551445405790,1303531416951055,122329194886388656,11265061632847653047"@en .
+
+seq:A200828_e_1_20120331T123641 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..0..0..0..0..2....0..0..0..3..2....0..0..0..2..3....0..0..0..1..4
+..0..0..0..2..4....0..0..0..4..3....0..0..0..4..4....0..0..0..2..5
+..0..2..4..5..5....0..1..3..5..3....0..0..5..3..4....0..2..3..2..5"""@en .
+

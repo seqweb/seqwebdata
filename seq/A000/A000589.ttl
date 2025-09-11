@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.894798Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2406}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000589 a seq:Sequence ;
+    rdfs:label "A000589"@en ;
+    seq:hasTextList ( seq:A000589_I_1_20220926T061915 seq:A000589_N_1_20220926T061915 seq:A000589_C_1_20220926T061915 seq:A000589_D_1_20220926T061915 seq:A000589_H_1_20220926T061915 seq:A000589_F_1_20220926T061915 seq:A000589_t_1_20220926T061915 seq:A000589_Y_1_20220926T061915 seq:A000589_K_1_20220926T061915 seq:A000589_O_1_20220926T061915 seq:A000589_A_1_20220926T061915 seq:A000589_V_1_20220926T061915 ) .
+
+seq:A000589_A_1_20220926T061915 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000589_C_1_20220926T061915 a seq:Text ;
+    cnt:chars """Number of lattice paths from (0,0) to (n,n) with steps E=(1,0) and N=(0,1) which touch but do not cross the line x-y=5. - _Herbert Kociemba_, May 24 2004
+Number of standard tableaux of shape (n+5,n-5). - _Emeric Deutsch_, May 30 2004"""@en .
+
+seq:A000589_D_1_20220926T061915 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000589_F_1_20220926T061915 a seq:Text ;
+    cnt:chars """Expansion of x^5*C^11, where C = (1-(1-4*x)^(1/2))/(2*x) is the g.f. for the Catalan numbers, A000108. - _Philippe Deléham_, Feb 03 2004
+Let A be the Toeplitz matrix of order n defined by: A[i,i-1]=-1, A[i,j]=Catalan(j-i), (i<=j), and A[i,j]=0, otherwise. Then, for n>=10, a(n-5)=(-1)^(n-10)*coeff(charpoly(A,x),x^10). - _Milan Janjic_, Jul 08 2010
+a(n) = A214292(2*n-1,n-6) for n > 5. - _Reinhard Zumkeller_, Jul 12 2012
+-(n+6)*(n-5)*a(n) + 2*n*(2*n-1)*a(n-1) = 0. - _R. J. Mathar_, Jun 20 2013
+From _Amiram Eldar_, Sep 26 2022: (Start)
+Sum_{n>=5} 1/a(n) = 5993/1540 - 152*Pi/(99*sqrt(3)).
+Sum_{n>=5} (-1)^(n+1)/a(n) = 210624*log(phi)/(275*sqrt(5)) - 1262077/7700, where phi is the golden ratio (A001622). (End)"""@en .
+
+seq:A000589_H_1_20220926T061915 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000589/b000589.txt">Table of n, a(n) for n = 5..200</a>
+Richard K. Guy, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL3/GUY/catwalks.html">Catwalks, sandsteps and Pascal pyramids</a>, J. Integer Sequences, Vol. 3 (2000), Article 00.1.6.
+Athanasios Papoulis, <a href="http://www.jstor.org/stable/43636019">A new method of inversion of the Laplace transform</a>, Quart. Applied Math. 14 (1956), 405ff.
+Athanasios Papoulis, <a href="/A000108/a000108_8.pdf">A new method of inversion of the Laplace transform</a>, Quart. Appl. Math 14 (1957), 405-414. [Annotated scan of selected pages]
+John Riordan, <a href="https://doi.org/10.1090/S0025-5718-1975-0366686-9">The distribution of crossings of chords joining pairs of 2n points on a circle</a>, Math. Comp., 29 (1975), 215-222."""@en .
+
+seq:A000589_I_1_20220926T061915 a seq:Text ;
+    cnt:chars "M4797 N2048 #56 Sep 26 2022 06:19:15"@en .
+
+seq:A000589_K_1_20220926T061915 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000589_N_1_20220926T061915 a seq:Text ;
+    cnt:chars "a(n) = 11*binomial(2n,n-5)/(n+6)."@en .
+
+seq:A000589_O_1_20220926T061915 a seq:Text ;
+    cnt:chars "5,2"@en .
+
+seq:A000589_V_1_20220926T061915 a seq:Text ;
+    cnt:chars "1,11,77,440,2244,10659,48279,211508,904475,3798795,15737865,64512240,262256280,1059111900,4254603804,17018415216,67837293986,269638992062,1069258071970,4232010895376,16723268860760,65997186039785,260170725132045,1024713341952300"@en .
+
+seq:A000589_Y_1_20220926T061915 a seq:Text ;
+    cnt:chars "Cf. A000108, A001622, A214292."@en .
+
+seq:A000589_t_1_20220926T061915 a seq:Text ;
+    cnt:chars "a[n_] := 11*Binomial[2*n, n-5]/(n+6); Array[a, 25, 5] (* _Amiram Eldar_, Sep 26 2022 *)"@en .
+

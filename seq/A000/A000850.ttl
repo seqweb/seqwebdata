@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.529850Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 769}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000850 a seq:Sequence ;
+    rdfs:label "A000850"@en ;
+    seq:hasTextList ( seq:A000850_I_1_20211219T094903 seq:A000850_N_1_20211219T094903 seq:A000850_D_1_20211219T094903 seq:A000850_H_1_20211219T094903 seq:A000850_K_1_20211219T094903 seq:A000850_O_1_20211219T094903 seq:A000850_A_1_20211219T094903 seq:A000850_E_1_20211219T094903 seq:A000850_V_1_20211219T094903 ) .
+
+seq:A000850_A_1_20211219T094903 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000850_D_1_20211219T094903 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000850_E_1_20211219T094903 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 19 2012"@en .
+
+seq:A000850_H_1_20211219T094903 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000850_I_1_20211219T094903 a seq:Text ;
+    cnt:chars "M3427 N1390 #19 Dec 19 2021 09:49:03"@en .
+
+seq:A000850_K_1_20211219T094903 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000850_N_1_20211219T094903 a seq:Text ;
+    cnt:chars "Number of n-input 2-output switching networks under action of AG(n,2) on the inputs and complementing group C(2,2) on the outputs."@en .
+
+seq:A000850_O_1_20211219T094903 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000850_V_1_20211219T094903 a seq:Text ;
+    cnt:chars "4,11,79,7621,14640634220,65938208500258353412694720,1380265084230096592847532200594565116571730065652126434152304"@en .
+

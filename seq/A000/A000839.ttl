@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.502007Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 873}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000839 a seq:Sequence ;
+    rdfs:label "A000839"@en ;
+    seq:hasTextList ( seq:A000839_I_1_20220203T022954 seq:A000839_N_1_20220203T022954 seq:A000839_C_1_20220203T022954 seq:A000839_D_1_20220203T022954 seq:A000839_H_1_20220203T022954 seq:A000839_Y_1_20220203T022954 seq:A000839_K_1_20220203T022954 seq:A000839_O_1_20220203T022954 seq:A000839_A_1_20220203T022954 seq:A000839_E_1_20220203T022954 seq:A000839_V_1_20220203T022954 ) .
+
+seq:A000839_A_1_20220203T022954 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000839_C_1_20220203T022954 a seq:Text ;
+    cnt:chars "a(n) = 2^(3*(2^n-1) - n) + 2^(2^n + 2^(n-1)) - 2^(2^n + 2^(n-1) - n). - _Sean A. Irvine_, Jul 14 2011"@en .
+
+seq:A000839_D_1_20220203T022954 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000839_E_1_20220203T022954 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 26 2000"@en .
+
+seq:A000839_H_1_20220203T022954 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000839_I_1_20220203T022954 a seq:Text ;
+    cnt:chars "M4577 N1951 #21 Feb 03 2022 02:29:54"@en .
+
+seq:A000839_K_1_20220203T022954 a seq:Text ;
+    cnt:chars "easy,nonn"@en .
+
+seq:A000839_N_1_20220203T022954 a seq:Text ;
+    cnt:chars "Number of n-input 3-output switching networks under action of complementing group on the inputs and outputs."@en .
+
+seq:A000839_O_1_20220203T022954 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000839_V_1_20220203T022954 a seq:Text ;
+    cnt:chars "8,176,265728,2199038984192,309485009821617747608469504,12259964326927110866866776295192695943928870296113643520"@en .
+
+seq:A000839_Y_1_20220203T022954 a seq:Text ;
+    cnt:chars "Cf. A000133, A000838."@en .
+

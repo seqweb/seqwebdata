@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.571052Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 549}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383000 a seq:Sequence ;
+    rdfs:label "A383000"@en ;
+    seq:hasTextList ( seq:A383000_I_1_20250412T112139 seq:A383000_N_1_20250412T112139 seq:A383000_F_1_20250412T112139 seq:A383000_o_1_20250412T112139 seq:A383000_Y_1_20250412T112139 seq:A383000_K_1_20250412T112139 seq:A383000_O_1_20250412T112139 seq:A383000_A_1_20250412T112139 seq:A383000_V_1_20250412T112139 ) .
+
+seq:A383000_A_1_20250412T112139 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 12 2025"@en .
+
+seq:A383000_F_1_20250412T112139 a seq:Text ;
+    cnt:chars """a(n) = Sum_{k=1..n} (-3)^(gcd(n,k) - 1).
+G.f.: Sum_{k>=1} phi(k) * x^k / (1 + 3*x^k)."""@en .
+
+seq:A383000_I_1_20250412T112139 a seq:Text ;
+    cnt:chars "#10 Apr 12 2025 11:21:39"@en .
+
+seq:A383000_K_1_20250412T112139 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A383000_N_1_20250412T112139 a seq:Text ;
+    cnt:chars "a(n) = Sum_{d|n} phi(n/d) * (-3)^(d-1)."@en .
+
+seq:A383000_O_1_20250412T112139 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383000_V_1_20250412T112139 a seq:Text ;
+    cnt:chars "1,-2,11,-28,85,-238,735,-2216,6585,-19610,59059,-177428,531453,-1593606,4783175,-14351152,43046737,-129134082,387420507,-1162281100,3486785925,-10460294174,31381059631,-94143360856,282429536825,-847288078026,2541865841523,-7625599078020,22876792454989"@en .
+
+seq:A383000_Y_1_20250412T112139 a seq:Text ;
+    cnt:chars """Column k=3 of A382995.
+Cf. A000010, A034754, A343465."""@en .
+
+seq:A383000_o_1_20250412T112139 a seq:Text ;
+    cnt:chars "(PARI) a(n) = sumdiv(n, d, eulerphi(n/d)*(-3)^(d-1));"@en .
+

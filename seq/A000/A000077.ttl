@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.368212Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 964}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000077 a seq:Sequence ;
+    rdfs:label "A000077"@en ;
+    seq:hasTextList ( seq:A000077_I_1_20171017T035937 seq:A000077_N_1_20171017T035937 seq:A000077_D_1_20171017T035937 seq:A000077_H_1_20171017T035937 seq:A000077_e_1_20171017T035937 seq:A000077_o_1_20171017T035937 seq:A000077_K_1_20171017T035937 seq:A000077_O_1_20171017T035937 seq:A000077_A_1_20171017T035937 seq:A000077_V_1_20171017T035937 ) .
+
+seq:A000077_A_1_20171017T035937 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000077_D_1_20171017T035937 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000077_H_1_20171017T035937 a seq:Text ;
+    cnt:chars """D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000077_I_1_20171017T035937 a seq:Text ;
+    cnt:chars "M1095 N0417 #21 Oct 17 2017 03:59:37"@en .
+
+seq:A000077_K_1_20171017T035937 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000077_N_1_20171017T035937 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form x^2 + 6 y^2."@en .
+
+seq:A000077_O_1_20171017T035937 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000077_V_1_20171017T035937 a seq:Text ;
+    cnt:chars "1,1,2,4,8,13,24,42,76,140,257,483,907,1717,3272,6261,12027,23172,44769,86708,168245,327073,636849,1241720,2424290,4738450,9271396,18157630,35591729,69820804,137069245,269270791,529312776,1041093937,2048826229,4034062310"@en .
+
+seq:A000077_e_1_20171017T035937 a seq:Text ;
+    cnt:chars "a(3)=4 since 2^3=8 and 1=1^2, 4=2^2, 6=6*1^2, 7=1^2+6*1^2."@en .
+
+seq:A000077_o_1_20171017T035937 a seq:Text ;
+    cnt:chars "(PARI) a(n)=if(n<0,0,sum(k=1,2^n,0<sum(y=0,sqrtint(k\\6),issquare(k-6*y^2))))"@en .
+

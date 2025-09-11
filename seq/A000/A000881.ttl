@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.589552Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 801}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000881 a seq:Sequence ;
+    rdfs:label "A000881"@en ;
+    seq:hasTextList ( seq:A000881_I_1_20170401T003435 seq:A000881_N_1_20170401T003435 seq:A000881_D_1_20170401T003435 seq:A000881_H_1_20170401T003435 seq:A000881_K_1_20170401T003435 seq:A000881_O_1_20170401T003435 seq:A000881_A_1_20170401T003435 seq:A000881_E_1_20170401T003435 seq:A000881_V_1_20170401T003435 ) .
+
+seq:A000881_A_1_20170401T003435 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000881_D_1_20170401T003435 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000881_E_1_20170401T003435 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 25 2012"@en .
+
+seq:A000881_H_1_20170401T003435 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000881_I_1_20170401T003435 a seq:Text ;
+    cnt:chars "M3508 N1425 #19 Apr 01 2017 00:34:35"@en .
+
+seq:A000881_K_1_20170401T003435 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000881_N_1_20170401T003435 a seq:Text ;
+    cnt:chars "Number of switching networks with AG(n,2) acting on the domain and GL(3,2) acting on the range."@en .
+
+seq:A000881_O_1_20170401T003435 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000881_V_1_20170401T003435 a seq:Text ;
+    cnt:chars "4,15,276,5534533,1473914807822315239,28960574959925842749932484608400325311784104,11182854043812984653151849586832952714557996202582672732591909323787317314909793862964567968430394"@en .
+

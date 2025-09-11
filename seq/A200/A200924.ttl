@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.350227Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 660}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200924 a seq:Sequence ;
+    rdfs:label "A200924"@en ;
+    seq:hasTextList ( seq:A200924_I_1_20230709T114911 seq:A200924_N_1_20230709T114911 seq:A200924_H_1_20230709T114911 seq:A200924_t_1_20230709T114911 seq:A200924_Y_1_20230709T114911 seq:A200924_K_1_20230709T114911 seq:A200924_O_1_20230709T114911 seq:A200924_A_1_20230709T114911 seq:A200924_V_1_20230709T114911 ) .
+
+seq:A200924_A_1_20230709T114911 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 24 2011"@en .
+
+seq:A200924_H_1_20230709T114911 a seq:Text ;
+    cnt:chars """Dario A. Alpern, <a href="https://www.alpertron.com.ar/googolm.pl">Known prime factors of Googolplex - 10</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/Googolplex.html">Googolplex</a>"""@en .
+
+seq:A200924_I_1_20230709T114911 a seq:Text ;
+    cnt:chars "#9 Jul 09 2023 11:49:11"@en .
+
+seq:A200924_K_1_20230709T114911 a seq:Text ;
+    cnt:chars "fini,nonn"@en .
+
+seq:A200924_N_1_20230709T114911 a seq:Text ;
+    cnt:chars "Successive prime factors of 10^(10^100) - 10."@en .
+
+seq:A200924_O_1_20230709T114911 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200924_V_1_20230709T114911 a seq:Text ;
+    cnt:chars "2,3,3,3,3,5,37,67,83,199,397,1231,1627,2707,3637,4519,21649,30307,34849,51203,52711,54547,56369,97561,115963,123493,136043,139987,149077,173923,199999,200003,333667,370477,513239,538987,666733,770437,943081,1466653"@en .
+
+seq:A200924_Y_1_20230709T114911 a seq:Text ;
+    cnt:chars "Cf. A200861, A200879."@en .
+
+seq:A200924_t_1_20230709T114911 a seq:Text ;
+    cnt:chars "Join[{2, 3, 3, 3, 3, 5}, Select[Prime[Range[7^6]], PowerMod[10, 10^100, #] == 10 &]]"@en .
+

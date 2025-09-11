@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.599917Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 929}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000886 a seq:Sequence ;
+    rdfs:label "A000886"@en ;
+    seq:hasTextList ( seq:A000886_I_1_20250201T195529 seq:A000886_N_1_20250201T195529 seq:A000886_D_1_20250201T195529 seq:A000886_H_1_20250201T195529 seq:A000886_K_1_20250201T195529 seq:A000886_O_1_20250201T195529 seq:A000886_A_1_20250201T195529 seq:A000886_E_1_20250201T195529 seq:A000886_V_1_20250201T195529 ) .
+
+seq:A000886_A_1_20250201T195529 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000886_D_1_20250201T195529 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327. (Preprint available at http://hdl.handle.net/2027.42/5406/.)
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000886_E_1_20250201T195529 a seq:Text ;
+    cnt:chars """More terms from _Sean A. Irvine_, Jan 26 2012
+Name corrected by _Sean A. Irvine_, Feb 01 2025"""@en .
+
+seq:A000886_H_1_20250201T195529 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000886_I_1_20250201T195529 a seq:Text ;
+    cnt:chars "M2012 N0795 #23 Feb 01 2025 19:55:29"@en .
+
+seq:A000886_K_1_20250201T195529 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000886_N_1_20250201T195529 a seq:Text ;
+    cnt:chars "Number of switching networks with S(n,2) acting on the domain and AG(2,2) acting on the range where S(n,k) is the symmetric group acting on k variables."@en .
+
+seq:A000886_O_1_20250201T195529 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000886_V_1_20250201T195529 a seq:Text ;
+    cnt:chars "2,11,590,7644658,6406102803167154,19692266672998575394929289976513119,957275870017495002938079709038262383344122314736541166025242955633607263"@en .
+

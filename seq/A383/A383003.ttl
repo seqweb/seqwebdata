@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.585729Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 560}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383003 a seq:Sequence ;
+    rdfs:label "A383003"@en ;
+    seq:hasTextList ( seq:A383003_I_1_20250412T093738 seq:A383003_N_1_20250412T093738 seq:A383003_F_1_20250412T093738 seq:A383003_o_1_20250412T093738 seq:A383003_Y_1_20250412T093738 seq:A383003_K_1_20250412T093738 seq:A383003_O_1_20250412T093738 seq:A383003_A_1_20250412T093738 seq:A383003_V_1_20250412T093738 ) .
+
+seq:A383003_A_1_20250412T093738 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 12 2025"@en .
+
+seq:A383003_F_1_20250412T093738 a seq:Text ;
+    cnt:chars """a(n) = (1/n) * A383010(n).
+a(n) = [x^n] Sum_{k>=1} log(1 + n*x^k) / k.
+a(n) = [x^n] Sum_{k>=1} x^k / (1 + n*x^k)."""@en .
+
+seq:A383003_I_1_20250412T093738 a seq:Text ;
+    cnt:chars "#12 Apr 12 2025 09:37:38"@en .
+
+seq:A383003_K_1_20250412T093738 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A383003_N_1_20250412T093738 a seq:Text ;
+    cnt:chars "a(n) = Sum_{d|n} (-n)^(d-1)."@en .
+
+seq:A383003_O_1_20250412T093738 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A383003_V_1_20250412T093738 a seq:Text ;
+    cnt:chars "1,-1,10,-67,626,-7745,117650,-2097671,43046803,-999990009,25937424602,-743008621115,23298085122482,-793714765724621,29192926025441476,-1152921504875286543,48661191875666868482,-2185911559727678460653,104127350297911241532842"@en .
+
+seq:A383003_Y_1_20250412T093738 a seq:Text ;
+    cnt:chars """Cf. A101561, A101562, A101563.
+Cf. A262843, A308814, A383010.
+Cf. A382998, A383012."""@en .
+
+seq:A383003_o_1_20250412T093738 a seq:Text ;
+    cnt:chars "(PARI) a(n) = sumdiv(n, d, (-n)^(d-1));"@en .
+

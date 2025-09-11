@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.273233Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1530}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000750 a seq:Sequence ;
+    rdfs:label "A000750"@en ;
+    seq:hasTextList ( seq:A000750_I_1_20250105T195131 seq:A000750_N_1_20250105T195131 seq:A000750_C_1_20250105T195131 seq:A000750_D_1_20250105T195131 seq:A000750_H_1_20250105T195131 seq:A000750_F_1_20250105T195131 seq:A000750_t_1_20250105T195131 seq:A000750_o_1_20250105T195131 seq:A000750_Y_1_20250105T195131 seq:A000750_K_1_20250105T195131 seq:A000750_O_1_20250105T195131 seq:A000750_A_1_20250105T195131 seq:A000750_V_1_20250105T195131 ) .
+
+seq:A000750_A_1_20250105T195131 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000750_C_1_20250105T195131 a seq:Text ;
+    cnt:chars "It appears that the (unsigned) sequence is identical to its 5th-order absolute difference. - _John W. Layman_, Sep 23 2003"@en .
+
+seq:A000750_D_1_20250105T195131 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000750_F_1_20250105T195131 a seq:Text ;
+    cnt:chars """G.f.: 1/((1+x)^5-x^5).
+a(n) = (-1)^n * Sum_{k=0..floor(n/5)} (-1)^k * binomial(n+4,5*k+4). - _Seiichi Manyama_, Mar 21 2019"""@en .
+
+seq:A000750_H_1_20250105T195131 a seq:Text ;
+    cnt:chars """Seiichi Manyama, <a href="/A000750/b000750.txt">Table of n, a(n) for n = 0..3000</a>
+H. W. Gould, <a href="https://web.archive.org/web/2024*/https://www.fq.math.ca/Scanned/2-4/gould.pdf">Binomial coefficients, the bracket function and compositions with relatively prime summands</a>, Fib. Quart. 2(4) (1964), 241-260.
+<a href="/index/Rec#order_04">Index entries for linear recurrences with constant coefficients</a>, signature (-5, -10, -10, -5)."""@en .
+
+seq:A000750_I_1_20250105T195131 a seq:Text ;
+    cnt:chars "M3851 N1576 #34 Jan 05 2025 19:51:31"@en .
+
+seq:A000750_K_1_20250105T195131 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A000750_N_1_20250105T195131 a seq:Text ;
+    cnt:chars "Expansion of bracket function."@en .
+
+seq:A000750_O_1_20250105T195131 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000750_V_1_20250105T195131 a seq:Text ;
+    cnt:chars "1,-5,15,-35,70,-125,200,-275,275,0,-1000,3625,-9500,21250,-42500,76875,-124375,171875,-171875,0,621875,-2250000,5890625,-13171875,26343750,-47656250,77109375,-106562500,106562500,0"@en .
+
+seq:A000750_Y_1_20250105T195131 a seq:Text ;
+    cnt:chars """Column 5 of A307047.
+Cf. A000748, A000749, A001659, A006090, A049016."""@en .
+
+seq:A000750_o_1_20250105T195131 a seq:Text ;
+    cnt:chars """(PARI) Vec(1/((1+x)^5-x^5) + O(x^40)) \\\\ _Michel Marcus_, Feb 11 2016
+(PARI) {a(n) = (-1)^n*sum(k=0, n\\5, (-1)^k*binomial(n+4, 5*k+4))} \\\\ _Seiichi Manyama_, Mar 21 2019"""@en .
+
+seq:A000750_t_1_20250105T195131 a seq:Text ;
+    cnt:chars "LinearRecurrence[{-5, -10, -10, -5}, {1, -5, 15, -35}, 30] (* _Jean-François Alcover_, Feb 11 2016 *)"@en .
+

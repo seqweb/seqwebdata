@@ -1,0 +1,32 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.469023Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 31, "entities": 8, "chars": 278}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000403 a seq:Sequence ;
+    rdfs:label "A000403"@en ;
+    seq:hasTextList ( seq:A000403_I_1_20170708T012132 seq:A000403_N_1_20170708T012132 seq:A000403_D_1_20170708T012132 seq:A000403_K_1_20170708T012132 seq:A000403_O_1_20170708T012132 seq:A000403_A_1_20170708T012132 seq:A000403_V_1_20170708T012132 ) .
+
+seq:A000403_A_1_20170708T012132 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000403_D_1_20170708T012132 a seq:Text ;
+    cnt:chars "Bokowski, J.; Schuchert, P.; Equifacetted 3-spheres as topes of nonpolytopal matroid polytopes. Discrete Comput. Geom. 13 (1995), no. 3-4, 347-361."@en .
+
+seq:A000403_I_1_20170708T012132 a seq:Text ;
+    cnt:chars "#10 Jul 08 2017 01:21:32"@en .
+
+seq:A000403_K_1_20170708T012132 a seq:Text ;
+    cnt:chars "nonn,more,hard"@en .
+
+seq:A000403_N_1_20170708T012132 a seq:Text ;
+    cnt:chars "Number of simple equifacetted 3-manifolds with n faces."@en .
+
+seq:A000403_O_1_20170708T012132 a seq:Text ;
+    cnt:chars "4,3"@en .
+
+seq:A000403_V_1_20170708T012132 a seq:Text ;
+    cnt:chars "1,1,2,2,5,6"@en .
+

@@ -1,0 +1,64 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.912305Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 3530}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A006966 a seq:Sequence ;
+    rdfs:label "A006966"@en ;
+    seq:hasTextList ( seq:A006966_I_1_20250108T093200 seq:A006966_N_1_20250108T093200 seq:A006966_C_1_20250108T093200 seq:A006966_D_1_20250108T093200 seq:A006966_H_1_20250108T093200 seq:A006966_Y_1_20250108T093200 seq:A006966_K_1_20250108T093200 seq:A006966_O_1_20250108T093200 seq:A006966_A_1_20250108T093200 seq:A006966_E_1_20250108T093200 seq:A006966_V_1_20250108T093200 ) .
+
+seq:A006966_A_1_20250108T093200 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A006966_C_1_20250108T093200 a seq:Text ;
+    cnt:chars """Also commutative idempotent monoids. Also commutative idempotent semigroups of order n-1.
+Commutative idempotent semigroups are also called semilattices, so A(n) counts semilattices of order n-1. - Dennis Sweeney, July 19 2024"""@en .
+
+seq:A006966_D_1_20250108T093200 a seq:Text ;
+    cnt:chars """J. Heitzig and J. Reinhold, Counting finite lattices, Algebra Universalis, 48 (2002), 43-53.
+P. D. Lincoln, personal communication.
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+J. R. Stembridge, personal communication."""@en .
+
+seq:A006966_E_1_20250108T093200 a seq:Text ;
+    cnt:chars """More terms from Jobst Heitzig (heitzig(AT)math.uni-hannover.de), Jul 03 2000
+a(19) from _Nathan Lawless_, Sep 15 2013
+a(20) from _Volker Gebhardt_, Sep 28 2016"""@en .
+
+seq:A006966_H_1_20250108T093200 a seq:Text ;
+    cnt:chars """David Wasserman and Nathan Lawless, <a href="/A006966/b006966.txt">Table of n, a(n) for n = 0..20</a> (a(20) from _Volker Gebhardt_)
+R. Belohlavek and V. Vychodil, <a href="https://doi.org/10.1007/s11083-010-9143-7">Residuated lattices of size <=12</a>, Order 27 (2010) 147-161 doi:10.1007/s11083-010-9143-7, Table 2.
+V. Gebhardt and S. Tawn, <a href="http://arxiv.org/abs/1609.08255">Constructing unlabelled lattices</a>, arXiv:1609.08255 [math.CO], 2016.
+D. J. Greenhoe, <a href="https://peerj.com/preprints/520v1.pdf">MRA-Wavelet subspace architecture for logic, probability, and symbolic sequence processing</a>, 2014.
+J. Heitzig and J. Reinhold, <a href="http://www-ifm.math.uni-hannover.de/forschung/preprintsifm.html">Counting finite lattices</a>, preprint no. 298, Institut für Mathematik, Universität Hannover, Germany, 1999.
+J. Heitzig and J. Reinhold, <a href="https://citeseerx.ist.psu.edu/pdf/4186ccb354bdd7f32931eabef3c85f8459f5b292">Counting finite lattices</a>, CiteSeer 1999.
+P. Jipsen and N. Lawless, <a href="http://math.chapman.edu/~jipsen/preprints/JipsenLawlessModularLattices20130905.pdf">Generating all modular lattices of a given size (preprint)</a>
+D. J. Kleitman and K. J. Winston, <a href="http://dx.doi.org/10.1016/S0167-5060(08)70708-8">The asymptotic number of lattices</a>, in: Combinatorial mathematics, optimal designs and their applications (Proc. Sympos. Combin. Math. and Optimal Design, Colorado State Univ., Fort Collins, Colo., 1978), Ann. Discrete Math. 6 (1980), 243-249.
+S. Kyuno, <a href="https://www.jstor.org/stable/2006054">An inductive algorithm to construct finite lattices</a>, Math. Comp. 33 (1979), no. 145, 409-421.
+N. Lawless, <a href="http://www.cs.unm.edu/~veroff/ADAM/2013/lawless.pdf">Generating all modular lattices of a given size</a>, Slides, ADAM 2013.
+Arman Shamsgovara, <a href="https://doi.org/10.1007/978-3-031-28083-2_14">Enumerating, Cataloguing and Classifying All Quantales on up to Nine Elements</a>, In: Glück, R., Santocanale, L., and Winter, M. (eds), Relational and Algebraic Methods in Computer Science (RAMiCS 2023) Lecture Notes in Computer Science, Springer, Cham, Vol. 13896.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Semilattice">Semilattice</a>.
+Richard Stanley, <a href="https://mathoverflow.net/a/55660/285346">MathOverflow: Semilattices with n elements</a>
+<a href="/index/Se#semigroups">Index entries for sequences related to semigroups</a>
+<a href="/index/Cor#core">Index entries for "core" sequences</a>"""@en .
+
+seq:A006966_I_1_20250108T093200 a seq:Text ;
+    cnt:chars "M1486 #72 Jan 08 2025 09:32:00"@en .
+
+seq:A006966_K_1_20250108T093200 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice,core"@en .
+
+seq:A006966_N_1_20250108T093200 a seq:Text ;
+    cnt:chars "Number of lattices on n unlabeled nodes."@en .
+
+seq:A006966_O_1_20250108T093200 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A006966_V_1_20250108T093200 a seq:Text ;
+    cnt:chars "1,1,1,1,2,5,15,53,222,1078,5994,37622,262776,2018305,16873364,152233518,1471613387,15150569446,165269824761,1901910625578,23003059864006"@en .
+
+seq:A006966_Y_1_20250108T093200 a seq:Text ;
+    cnt:chars "Cf. A006981, A006982, A055512. Main diagonal of A058142. a(n+1) is main diagonal of A058116."@en .
+

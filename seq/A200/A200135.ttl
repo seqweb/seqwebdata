@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.712261Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1379}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200135 a seq:Sequence ;
+    rdfs:label "A200135"@en ;
+    seq:hasTextList ( seq:A200135_I_1_20220908T084600 seq:A200135_N_1_20220908T084600 seq:A200135_H_1_20220908T084600 seq:A200135_F_1_20220908T084600 seq:A200135_e_1_20220908T084600 seq:A200135_p_1_20220908T084600 seq:A200135_t_1_20220908T084600 seq:A200135_o_1_20220908T084600 seq:A200135_Y_1_20220908T084600 seq:A200135_K_1_20220908T084600 seq:A200135_O_1_20220908T084600 seq:A200135_A_1_20220908T084600 seq:A200135_E_1_20220908T084600 seq:A200135_V_1_20220908T084600 ) .
+
+seq:A200135_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_R. J. Mathar_, Nov 13 2011"@en .
+
+seq:A200135_E_1_20220908T084600 a seq:Text ;
+    cnt:chars "More terms from _Jean-François Alcover_, Feb 11 2013"@en .
+
+seq:A200135_F_1_20220908T084600 a seq:Text ;
+    cnt:chars "Psi(1/5) = -gamma - Pi*sqrt(1 + 2/sqrt(5))/2 - 5*log(5)/4 -sqrt(5)*log((3 + sqrt(5))/2)/4 where gamma = A001620, sqrt(1 + 2/sqrt(5)) = A019952, (3 + sqrt(5))/2 = A104457."@en .
+
+seq:A200135_H_1_20220908T084600 a seq:Text ;
+    cnt:chars """G. C. Greubel, <a href="/A200135/b200135.txt">Table of n, a(n) for n = 1..10000</a>
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Digamma_function">Digamma function</a>
+<a href="/index/Di#differential_equations">Index entries for sequences related to the digamma function</a>"""@en .
+
+seq:A200135_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#22 Sep 08 2022 08:46:00"@en .
+
+seq:A200135_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "cons,nonn"@en .
+
+seq:A200135_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Decimal expansion of the negated value of the digamma function at 1/5."@en .
+
+seq:A200135_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200135_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "5,2,8,9,0,3,9,8,9,6,5,9,2,1,8,8,2,9,5,5,4,7,2,0,7,9,6,2,4,4,9,9,5,2,1,0,4,8,2,5,5,8,8,2,7,4,2,0,6,6,4,2,8,1,0,1,7,5,8,5,8,6,6,4,1,9,1,6,2,4,7,5,4,0,9,1,6,1,9,6,5,2,5,4,6,5,7,7,8,2,4,3,1,9,5,7,0,3,6,2,4,1,2,4,0"@en .
+
+seq:A200135_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars "Cf. A020759, A047787, A020777, A200064, A200134, A200136, A200137, A200138."@en .
+
+seq:A200135_e_1_20220908T084600 a seq:Text ;
+    cnt:chars "Psi(1/5) =  -5.289039896592188295547207962..."@en .
+
+seq:A200135_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(PARI) -psi(1/5) \\\\ _Charles R Greathouse IV_, Jul 19 2013
+(Magma) SetDefaultRealField(RealField(100)); R:= RealField(); -EulerGamma(R) -Pi(R)*Sqrt(1+2/Sqrt(5))/2 -5*Log(5)/4 -Sqrt(5)/4*Log((3+Sqrt(5)/2) ); // _G. C. Greubel_, Sep 03 2018"""@en .
+
+seq:A200135_p_1_20220908T084600 a seq:Text ;
+    cnt:chars "-gamma-Pi*sqrt(1+2/sqrt(5))/2-5*log(5)/4-sqrt(5)/4*log((3+sqrt(5)/2) ); evalf(%) ;"@en .
+
+seq:A200135_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "RealDigits[-PolyGamma[1/5], 10, 105] // First (* _Jean-François Alcover_, Feb 11 2013 *)"@en .
+

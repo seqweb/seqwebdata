@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.953959Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1967}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000614 a seq:Sequence ;
+    rdfs:label "A000614"@en ;
+    seq:hasTextList ( seq:A000614_I_1_20220617T161439 seq:A000614_N_1_20220617T161439 seq:A000614_C_1_20220617T161439 seq:A000614_D_1_20220617T161439 seq:A000614_H_1_20220617T161439 seq:A000614_Y_1_20220617T161439 seq:A000614_K_1_20220617T161439 seq:A000614_O_1_20220617T161439 seq:A000614_A_1_20220617T161439 seq:A000614_E_1_20220617T161439 seq:A000614_V_1_20220617T161439 ) .
+
+seq:A000614_A_1_20220617T161439 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000614_C_1_20220617T161439 a seq:Text ;
+    cnt:chars "From Philippe Langevin's article: Let m be a positive integer. The space of Boolean functions from GF(2)^m into GF(2) is denoted by RM(k,m). This notation comes from coding theory, where it is the Reed-Muller code of order k in m variables. The affine group AG(2, m) acts on the spaces RM(k,m), and thus on RM(k,m)/RM(s,m) when s <= k. - _Jonathan Vos Post_, Feb 08 2011"@en .
+
+seq:A000614_D_1_20220617T161439 a seq:Text ;
+    cnt:chars """R. J. Lechner, Harmonic Analysis of Switching Functions, in A. Mukhopadhyay, ed., Recent Developments in Switching Theory, Ac. Press, 1971, pp. 121-254, esp. p. 186.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000614_E_1_20220617T161439 a seq:Text ;
+    cnt:chars "More terms and better description from _Vladeta Jovovic_, Feb 24 2000"@en .
+
+seq:A000614_H_1_20220617T161439 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="https://doi.org/10.1109/PGEC.1963.263656">The number of equivalence classes of Boolean functions under groups containing negation</a>, IEEE Trans. Electron. Comput. 12 (1963), 559-561.
+M. A. Harrison, <a href="/A000370/a000370.pdf">The number of equivalence classes of Boolean functions under groups containing negation</a>, IEEE Trans. Electron. Comput. 12 (1963), 559-561. [Annotated scanned copy]
+M. A. Harrison, <a href="https://www.jstor.org/stable/2946369">On the classification of Boolean functions by the general linear and affine groups</a>, J. Soc. Indust. Appl. Math. 12 (1964) 285-299.
+Philippe Langevin, <a href="http://langevin.univ-tln.fr/project/agl/agl.html">Classification of Boolean functions under the affine group</a>, Oct 31, 2009.
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000614_I_1_20220617T161439 a seq:Text ;
+    cnt:chars "M0815 N0307 #36 Jun 17 2022 16:14:39"@en .
+
+seq:A000614_K_1_20220617T161439 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000614_N_1_20220617T161439 a seq:Text ;
+    cnt:chars "Number of complemented types of Boolean functions of n variables under action of AG(n,2)."@en .
+
+seq:A000614_O_1_20220617T161439 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000614_V_1_20220617T161439 a seq:Text ;
+    cnt:chars "2,3,6,18,206,7888299,8112499583888855378066,42287533217833953489054778023401252726576585396037133766"@en .
+
+seq:A000614_Y_1_20220617T161439 a seq:Text ;
+    cnt:chars "Cf. A000214."@en .
+

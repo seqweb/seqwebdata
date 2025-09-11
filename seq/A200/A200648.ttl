@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.753869Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1228}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200648 a seq:Sequence ;
+    rdfs:label "A200648"@en ;
+    seq:hasTextList ( seq:A200648_I_1_20230707T054030 seq:A200648_N_1_20230707T054030 seq:A200648_C_1_20230707T054030 seq:A200648_H_1_20230707T054030 seq:A200648_F_1_20230707T054030 seq:A200648_e_1_20230707T054030 seq:A200648_t_1_20230707T054030 seq:A200648_o_1_20230707T054030 seq:A200648_Y_1_20230707T054030 seq:A200648_K_1_20230707T054030 seq:A200648_O_1_20230707T054030 seq:A200648_A_1_20230707T054030 seq:A200648_E_1_20230707T054030 seq:A200648_V_1_20230707T054030 ) .
+
+seq:A200648_A_1_20230707T054030 a seq:Text ;
+    cnt:chars "_Casey Mongoven_, Nov 19 2011"@en .
+
+seq:A200648_C_1_20230707T054030 a seq:Text ;
+    cnt:chars "For the Stolarsky representation of n, see the C. Mongoven link."@en .
+
+seq:A200648_E_1_20230707T054030 a seq:Text ;
+    cnt:chars "More terms from _Amiram Eldar_, Jul 07 2023"@en .
+
+seq:A200648_F_1_20230707T054030 a seq:Text ;
+    cnt:chars "a(n) = A200649(n) + A200650(n). - _Michel Marcus_, Mar 14 2023"@en .
+
+seq:A200648_H_1_20230707T054030 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A200648/b200648.txt">Table of n, a(n) for n = 1..10000</a>
+Casey Mongoven, <a href="/A200648/a200648.txt">Description of Stolarsky Representations</a>."""@en .
+
+seq:A200648_I_1_20230707T054030 a seq:Text ;
+    cnt:chars "#28 Jul 07 2023 05:40:30"@en .
+
+seq:A200648_K_1_20230707T054030 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200648_N_1_20230707T054030 a seq:Text ;
+    cnt:chars "Length of Stolarsky representation of n."@en .
+
+seq:A200648_O_1_20230707T054030 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200648_V_1_20230707T054030 a seq:Text ;
+    cnt:chars "1,1,2,2,3,3,3,4,3,4,4,4,5,4,4,5,4,5,5,5,6,4,5,5,5,6,5,5,6,5,6,6,6,7,5,5,6,5,6,6,6,7,5,6,6,6,7,6,6,7,6,7,7,7,8,5,6,6,6,7,6,6,7,6,7,7,7,8,6,6,7,6,7,7,7,8,6,7,7,7,8,7,7,8,7,8,8"@en .
+
+seq:A200648_Y_1_20230707T054030 a seq:Text ;
+    cnt:chars "Cf. A135817, A200649, A200650, A200651."@en .
+
+seq:A200648_e_1_20230707T054030 a seq:Text ;
+    cnt:chars "The Stolarsky representation of 19 is 11101. This is of length 5. So a(19) = 5."@en .
+
+seq:A200648_o_1_20230707T054030 a seq:Text ;
+    cnt:chars """(PARI) stol(n) = {my(phi=quadgen(5)); if(n==1, [], if(n != round(round(n/phi)*phi), concat(stol(floor(n/phi^2) + 1), [0]), concat(stol(round(n/phi)), [1])));}
+a(n) = if(n == 1, 1, #stol(n)); \\\\ _Amiram Eldar_, Jul 07 2023"""@en .
+
+seq:A200648_t_1_20230707T054030 a seq:Text ;
+    cnt:chars """stol[n_] := stol[n] = If[n == 1, {}, If[n != Round[Round[n/GoldenRatio]*GoldenRatio], Join[stol[Floor[n/GoldenRatio^2] + 1], {0}], Join[stol[Round[n/GoldenRatio]], {1}]]];
+a[n_] := If[n == 1, 1, Length[stol[n]]]; Array[a, 100] (* _Amiram Eldar_, Jul 07 2023 *)"""@en .
+

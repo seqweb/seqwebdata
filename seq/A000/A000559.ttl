@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.822857Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1356}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000559 a seq:Sequence ;
+    rdfs:label "A000559"@en ;
+    seq:hasTextList ( seq:A000559_I_1_20250419T100357 seq:A000559_N_1_20250419T100357 seq:A000559_D_1_20250419T100357 seq:A000559_H_1_20250419T100357 seq:A000559_F_1_20250419T100357 seq:A000559_t_1_20250419T100357 seq:A000559_Y_1_20250419T100357 seq:A000559_K_1_20250419T100357 seq:A000559_O_1_20250419T100357 seq:A000559_A_1_20250419T100357 seq:A000559_E_1_20250419T100357 seq:A000559_V_1_20250419T100357 ) .
+
+seq:A000559_A_1_20250419T100357 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000559_D_1_20250419T100357 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000559_E_1_20250419T100357 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_, Jan 13 2000"@en .
+
+seq:A000559_F_1_20250419T100357 a seq:Text ;
+    cnt:chars """E.g.f.: (1/3!) * (exp(exp(x) - 1) - 1)^3. - _Vladeta Jovovic_, Sep 28 2003
+a(n) = Sum_{k=0..n} Stirling2(n,k) * Stirling2(k,3)."""@en .
+
+seq:A000559_H_1_20250419T100357 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000559/b000559.txt">Table of n, a(n) for n = 3..100</a>
+P. Blasiak, K. A. Penson and A. I. Solomon, <a href="https://arxiv.org/abs/quant-ph/0402027">The general boson normal ordering problem</a>, arXiv:quant-ph/0402027, 2004.
+R. Fray, <a href="https://web.archive.org/web/2024*/https://www.fq.math.ca/Scanned/5-4/fray.pdf">A generating function associated with the generalized Stirling numbers</a>, Fib. Quart. 5 (1967), 356-366."""@en .
+
+seq:A000559_I_1_20250419T100357 a seq:Text ;
+    cnt:chars "M4858 N2076 #40 Apr 19 2025 10:03:57"@en .
+
+seq:A000559_K_1_20250419T100357 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000559_N_1_20250419T100357 a seq:Text ;
+    cnt:chars "Generalized Stirling numbers of second kind."@en .
+
+seq:A000559_O_1_20250419T100357 a seq:Text ;
+    cnt:chars "3,2"@en .
+
+seq:A000559_V_1_20250419T100357 a seq:Text ;
+    cnt:chars "1,12,110,945,8092,70756,638423,5971350,57996774,585092607,6128147610,66579524648,749542556193,8733648533696,105203108066962,1308549777461505,16787682400875456,221901108871482760,3018891886411332135,42230736603244134242"@en .
+
+seq:A000559_Y_1_20250419T100357 a seq:Text ;
+    cnt:chars """Column k=3 of A130191.
+Cf. A000558, A046817."""@en .
+
+seq:A000559_t_1_20250419T100357 a seq:Text ;
+    cnt:chars "nn = 23; t = Range[0, nn]! CoefficientList[Series[1/6*(Exp[Exp[x] - 1] - 1)^3, {x, 0, nn}], x]; Drop[t, 3] (* _T. D. Noe_, Aug 10 2012 *)"@en .
+

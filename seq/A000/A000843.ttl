@@ -1,0 +1,36 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.511234Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 497}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000843 a seq:Sequence ;
+    rdfs:label "A000843"@en ;
+    seq:hasTextList ( seq:A000843_I_1_20200311T180012 seq:A000843_N_1_20200311T180012 seq:A000843_Y_1_20200311T180012 seq:A000843_K_1_20200311T180012 seq:A000843_O_1_20200311T180012 seq:A000843_A_1_20200311T180012 seq:A000843_E_1_20200311T180012 seq:A000843_V_1_20200311T180012 ) .
+
+seq:A000843_A_1_20200311T180012 a seq:Text ;
+    cnt:chars "_Brendan McKay_ and Eric Rogoyski"@en .
+
+seq:A000843_E_1_20200311T180012 a seq:Text ;
+    cnt:chars "a(11)-a(25) from _Andrew Howroyd_, Mar 10 2020"@en .
+
+seq:A000843_I_1_20200311T180012 a seq:Text ;
+    cnt:chars "#20 Mar 11 2020 18:00:12"@en .
+
+seq:A000843_K_1_20200311T180012 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000843_N_1_20200311T180012 a seq:Text ;
+    cnt:chars "Number of quartic bicolored graphs on n unlabeled nodes admitting an automorphism exchanging the colors."@en .
+
+seq:A000843_O_1_20200311T180012 a seq:Text ;
+    cnt:chars "1,6"@en .
+
+seq:A000843_V_1_20200311T180012 a seq:Text ;
+    cnt:chars "0,0,0,1,1,4,12,66,433,3442,30404,294951,3093770,34846185,419020738,5355289843,72466668921,1034818990771,15548633703424,245182764121059,4047990858838185,69826392559499108,1256005988628521464,23517396850332614602,457623646061902648705"@en .
+
+seq:A000843_Y_1_20200311T180012 a seq:Text ;
+    cnt:chars """Column k=4 of A333159.
+Cf. A000513, A000840."""@en .
+

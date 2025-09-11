@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.062100Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 745}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000663 a seq:Sequence ;
+    rdfs:label "A000663"@en ;
+    seq:hasTextList ( seq:A000663_I_1_20220617T145049 seq:A000663_N_1_20220617T145049 seq:A000663_C_1_20220617T145049 seq:A000663_D_1_20220617T145049 seq:A000663_H_1_20220617T145049 seq:A000663_K_1_20220617T145049 seq:A000663_O_1_20220617T145049 seq:A000663_A_1_20220617T145049 seq:A000663_E_1_20220617T145049 seq:A000663_V_1_20220617T145049 ) .
+
+seq:A000663_A_1_20220617T145049 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000663_C_1_20220617T145049 a seq:Text ;
+    cnt:chars "See the lowest row in the table given on top of page 66 in the Oberschelp reference."@en .
+
+seq:A000663_D_1_20220617T145049 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000663_E_1_20220617T145049 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Jan 10 2000"@en .
+
+seq:A000663_H_1_20220617T145049 a seq:Text ;
+    cnt:chars "W. Oberschelp, <a href=\"http://gdz.sub.uni-goettingen.de/dms/load/img/?PID=GDZPPN002298732\">Kombinatorische Anzahlbestimmungen in Relationen</a>, Math. Ann., 174 (1967), 53-78."@en .
+
+seq:A000663_I_1_20220617T145049 a seq:Text ;
+    cnt:chars "M1932 N0763 #25 Jun 17 2022 14:50:49"@en .
+
+seq:A000663_K_1_20220617T145049 a seq:Text ;
+    cnt:chars "nonn,nice,more"@en .
+
+seq:A000663_N_1_20220617T145049 a seq:Text ;
+    cnt:chars "Number of relations on an infinite set."@en .
+
+seq:A000663_O_1_20220617T145049 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000663_V_1_20220617T145049 a seq:Text ;
+    cnt:chars "1,2,9,37,183,933,5314,32043,207212,1415934,10200289,77018442,607474564,4987909231,42519634303,375395726926"@en .
+

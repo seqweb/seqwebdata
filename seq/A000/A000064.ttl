@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.334630Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2076}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000064 a seq:Sequence ;
+    rdfs:label "A000064"@en ;
+    seq:hasTextList ( seq:A000064_I_1_20230716T201010 seq:A000064_N_1_20230716T201010 seq:A000064_C_1_20230716T201010 seq:A000064_D_1_20230716T201010 seq:A000064_H_1_20230716T201010 seq:A000064_F_1_20230716T201010 seq:A000064_p_1_20230716T201010 seq:A000064_t_1_20230716T201010 seq:A000064_o_1_20230716T201010 seq:A000064_Y_1_20230716T201010 seq:A000064_K_1_20230716T201010 seq:A000064_O_1_20230716T201010 seq:A000064_A_1_20230716T201010 seq:A000064_E_1_20230716T201010 seq:A000064_V_1_20230716T201010 ) .
+
+seq:A000064_A_1_20230716T201010 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000064_C_1_20230716T201010 a seq:Text ;
+    cnt:chars "Number of partitions of n into two kinds of part 1 and one kind of parts 2, 5, and 10. - _Joerg Arndt_, May 10 2014"@en .
+
+seq:A000064_D_1_20230716T201010 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 152.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000064_E_1_20230716T201010 a seq:Text ;
+    cnt:chars "Corrected and extended by _Simon Plouffe_"@en .
+
+seq:A000064_F_1_20230716T201010 a seq:Text ;
+    cnt:chars """G.f.: 1 / ( ( 1 - x )^2 * ( 1 - x^2 ) * ( 1 - x^5 ) * ( 1 - x^10 ) ).
+a(n) = 2*a(n-1) - 2*a(n-3) + a(n-4) + a(n-5) - 2*a(n-6) + 2*a(n-8) - a(n-9) + a(n-10) - 2*a(n-11) + 2*a(n-13) - a(n-14) - a(n-15) + 2*a(n-16) - 2*a(n-18) + a(n-19). - _Fung Lam_, May 07 2014
+a(n) ~ n^4 / 2400 as n->oo. - _Daniel Checa_, Jul 11 2023"""@en .
+
+seq:A000064_H_1_20230716T201010 a seq:Text ;
+    cnt:chars """Christian G. Bower, <a href="/A000064/b000064.txt">Table of n, a(n) for n = 0..1000</a>
+<a href="/index/Rec#order_19">Index entries for linear recurrences with constant coefficients</a>, signature (2,0,-2,1,1,-2,0,2,-1,1,-2,0,2,-1,-1,2,0,-2,1)."""@en .
+
+seq:A000064_I_1_20230716T201010 a seq:Text ;
+    cnt:chars "M1002 N0375 #49 Jul 16 2023 20:10:10"@en .
+
+seq:A000064_K_1_20230716T201010 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000064_N_1_20230716T201010 a seq:Text ;
+    cnt:chars "Partial sums of (unordered) ways of making change for n cents using coins of 1, 2, 5, 10 cents."@en .
+
+seq:A000064_O_1_20230716T201010 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000064_V_1_20230716T201010 a seq:Text ;
+    cnt:chars "1,2,4,6,9,13,18,24,31,39,50,62,77,93,112,134,159,187,218,252,292,335,384,436,494,558,628,704,786,874,972,1076,1190,1310,1440,1580,1730,1890,2060,2240,2435,2640,2860,3090,3335,3595,3870,4160,4465,4785,5126"@en .
+
+seq:A000064_Y_1_20230716T201010 a seq:Text ;
+    cnt:chars "Cf. A000008."@en .
+
+seq:A000064_o_1_20230716T201010 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n<0,0,polcoeff(1/((1-x)^2*(1-x^2)*(1-x^5)*(1-x^10))+x*O(x^n),n))
+(PARI) a(n)=floor((n^4+38*n^3+476*n^2+2185*n+3735)/2400+(n+1)*(-1)^n/160+(n\\5+1)*[0,0,1,0,-1][n%5+1]/10) \\\\ _Tani Akinari_, May 10 2014"""@en .
+
+seq:A000064_p_1_20230716T201010 a seq:Text ;
+    cnt:chars """1/(1-x)^2/(1-x^2)/(1-x^5)/(1-x^10)
+a:= proc(n) local m, r; m := iquo(n, 10, 'r'); r:= r+1; (55+(119+(95+ 25*m) *m) *m) *m/6+ [1, 2, 4, 6, 9, 13, 18, 24, 31, 39][r]+ [0, 26, 61, 99, 146, 202, 267, 341, 424, 516][r]*m/6+ [0, 10, 21, 33, 46, 60, 75, 91, 108, 126][r]*m^2/2+ (5*r-5) *m^3/3 end: seq(a(n), n=0..100); # _Alois P. Heinz_, Oct 05 2008"""@en .
+
+seq:A000064_t_1_20230716T201010 a seq:Text ;
+    cnt:chars "CoefficientList[Series[1/((1-x)^2(1-x^2)(1-x^5)(1-x^10)),{x,0,100}],x] (* _Vladimir Joseph Stephan Orlovsky_, Jan 25 2012 *)"@en .
+

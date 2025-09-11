@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.761998Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1267}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200651 a seq:Sequence ;
+    rdfs:label "A200651"@en ;
+    seq:hasTextList ( seq:A200651_I_1_20230707T044948 seq:A200651_N_1_20230707T044948 seq:A200651_C_1_20230707T044948 seq:A200651_H_1_20230707T044948 seq:A200651_e_1_20230707T044948 seq:A200651_t_1_20230707T044948 seq:A200651_o_1_20230707T044948 seq:A200651_Y_1_20230707T044948 seq:A200651_K_1_20230707T044948 seq:A200651_O_1_20230707T044948 seq:A200651_A_1_20230707T044948 seq:A200651_E_1_20230707T044948 seq:A200651_V_1_20230707T044948 ) .
+
+seq:A200651_A_1_20230707T044948 a seq:Text ;
+    cnt:chars "_Casey Mongoven_, Nov 19 2011"@en .
+
+seq:A200651_C_1_20230707T044948 a seq:Text ;
+    cnt:chars "For the Stolarsky representation of n, see the C. Mongoven link."@en .
+
+seq:A200651_E_1_20230707T044948 a seq:Text ;
+    cnt:chars "More terms from _Amiram Eldar_, Jul 07 2023"@en .
+
+seq:A200651_H_1_20230707T044948 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A200651/b200651.txt">Table of n, a(n) for n = 1..10000</a>
+Casey Mongoven, <a href="/A200648/a200648_1.txt">Description of Stolarsky Representations</a>."""@en .
+
+seq:A200651_I_1_20230707T044948 a seq:Text ;
+    cnt:chars "#18 Jul 07 2023 04:49:48"@en .
+
+seq:A200651_K_1_20230707T044948 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200651_N_1_20230707T044948 a seq:Text ;
+    cnt:chars "Number of equal bit-runs in Stolarsky Representation of n."@en .
+
+seq:A200651_O_1_20230707T044948 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A200651_V_1_20230707T044948 a seq:Text ;
+    cnt:chars "1,1,1,2,1,3,2,1,2,3,3,2,1,4,3,3,2,3,3,2,1,2,5,3,4,3,4,3,3,2,3,3,2,1,4,3,5,4,3,5,4,3,2,5,3,4,3,4,3,3,2,3,3,2,1,2,5,3,6,5,5,4,3,4,5,5,4,3,4,3,5,4,3,5,4,3,2,5,3,4,3,4,3,3,2,3,3"@en .
+
+seq:A200651_Y_1_20230707T044948 a seq:Text ;
+    cnt:chars "Cf. A200647, A200648, A200649, A200650."@en .
+
+seq:A200651_e_1_20230707T044948 a seq:Text ;
+    cnt:chars "The Stolarsky representation of 19 is 11101. This has 3 equal bit-runs: '111', '0' and '1'. So a(19) = 3."@en .
+
+seq:A200651_o_1_20230707T044948 a seq:Text ;
+    cnt:chars """(PARI) stol(n) = {my(phi=quadgen(5)); if(n==1, [], if(n != round(round(n/phi)*phi), concat(stol(floor(n/phi^2) + 1), [0]), concat(stol(round(n/phi)), [1])));}
+a(n) = {my(s = stol(n), c = 1); for(k = 1, #s-1, if(s[k+1] != s[k], c++)); c; } \\\\ _Amiram Eldar_, Jul 07 2023"""@en .
+
+seq:A200651_t_1_20230707T044948 a seq:Text ;
+    cnt:chars """stol[n_] := stol[n] = If[n == 1, {}, If[n != Round[Round[n/GoldenRatio]*GoldenRatio], Join[stol[Floor[n/GoldenRatio^2] + 1], {0}], Join[stol[Round[n/GoldenRatio]], {1}]]];
+a[n_] := If[n == 1, 1, Length[Split[stol[n]]]]; Array[a, 100] (* _Amiram Eldar_, Jul 07 2023 *)"""@en .
+

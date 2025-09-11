@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.598789Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1030}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383009 a seq:Sequence ;
+    rdfs:label "A383009"@en ;
+    seq:hasTextList ( seq:A383009_I_1_20250412T094213 seq:A383009_N_1_20250412T094213 seq:A383009_C_1_20250412T094213 seq:A383009_H_1_20250412T094213 seq:A383009_F_1_20250412T094213 seq:A383009_t_1_20250412T094213 seq:A383009_o_1_20250412T094213 seq:A383009_Y_1_20250412T094213 seq:A383009_K_1_20250412T094213 seq:A383009_O_1_20250412T094213 seq:A383009_A_1_20250412T094213 seq:A383009_V_1_20250412T094213 ) .
+
+seq:A383009_A_1_20250412T094213 a seq:Text ;
+    cnt:chars "_Amiram Eldar_, Apr 12 2025"@en .
+
+seq:A383009_C_1_20250412T094213 a seq:Text ;
+    cnt:chars """The asymptotic density of this sequence is 3/7.
+In general, the asymptotic density of the indices of the even terms in the sequence of k-free numbers (numbers that are not divisible by a k-th power other than 1), for k >= 2, is (2^(k-1)-1)/(2^k-1)."""@en .
+
+seq:A383009_F_1_20250412T094213 a seq:Text ;
+    cnt:chars "A383004(a(n)) > 0."@en .
+
+seq:A383009_H_1_20250412T094213 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A383009/b383009.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383009_I_1_20250412T094213 a seq:Text ;
+    cnt:chars "#7 Apr 12 2025 09:42:13"@en .
+
+seq:A383009_K_1_20250412T094213 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383009_N_1_20250412T094213 a seq:Text ;
+    cnt:chars "Indices of the even terms in the sequence of cubefree numbers."@en .
+
+seq:A383009_O_1_20250412T094213 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383009_V_1_20250412T094213 a seq:Text ;
+    cnt:chars "2,4,6,9,11,13,16,18,20,23,24,26,29,31,33,36,38,40,43,45,49,51,53,56,58,60,63,65,67,69,71,73,76,78,80,83,85,87,90,93,96,98,100,103,105,106,109,111,113,115,117,119,122,124,126,129,131,133,137,139,142,144"@en .
+
+seq:A383009_Y_1_20250412T094213 a seq:Text ;
+    cnt:chars "Cf. A004709, A381822, A383004, A383008."@en .
+
+seq:A383009_o_1_20250412T094213 a seq:Text ;
+    cnt:chars """(PARI) iscubefree(n) = {my(f = factor(n)); for(i=1, #f~, if(f[i, 2] > 2, return (0))); 1; }
+list(lim) = {my(c = 0); for(k = 1, lim, if(iscubefree(k), c++; if(!(k % 2), print1(c, ", ")))); }"""@en .
+
+seq:A383009_t_1_20250412T094213 a seq:Text ;
+    cnt:chars "cubeFreeQ[n_] := AllTrue[FactorInteger[n][[;; , 2]], # < 3 &]; Position[Select[Range[250], cubeFreeQ], _?EvenQ] // Flatten"@en .
+

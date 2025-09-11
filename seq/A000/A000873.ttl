@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.573928Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 695}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000873 a seq:Sequence ;
+    rdfs:label "A000873"@en ;
+    seq:hasTextList ( seq:A000873_I_1_20170401T003416 seq:A000873_N_1_20170401T003416 seq:A000873_H_1_20170401T003416 seq:A000873_t_1_20170401T003416 seq:A000873_Y_1_20170401T003416 seq:A000873_K_1_20170401T003416 seq:A000873_O_1_20170401T003416 seq:A000873_A_1_20170401T003416 seq:A000873_E_1_20170401T003416 seq:A000873_V_1_20170401T003416 ) .
+
+seq:A000873_A_1_20170401T003416 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000873_E_1_20170401T003416 a seq:Text ;
+    cnt:chars """Corrected by Sam Alexander (pink2001x(AT)hotmail.com)
+Edited by _John Cerkan_, Feb 13 2017"""@en .
+
+seq:A000873_H_1_20170401T003416 a seq:Text ;
+    cnt:chars "John Cerkan, <a href=\"/A000873/b000873.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000873_I_1_20170401T003416 a seq:Text ;
+    cnt:chars "#19 Apr 01 2017 00:34:16"@en .
+
+seq:A000873_K_1_20170401T003416 a seq:Text ;
+    cnt:chars "word,nonn"@en .
+
+seq:A000873_N_1_20170401T003416 a seq:Text ;
+    cnt:chars "Numbers beginning with letter 'e' in English."@en .
+
+seq:A000873_O_1_20170401T003416 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000873_V_1_20170401T003416 a seq:Text ;
+    cnt:chars "8,11,18,80,81,82,83,84,85,86,87,88,89,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829"@en .
+
+seq:A000873_Y_1_20170401T003416 a seq:Text ;
+    cnt:chars """Subsequence of A000852.
+Cf. A000865, A000867, A000870, A000981, A006092."""@en .
+
+seq:A000873_t_1_20170401T003416 a seq:Text ;
+    cnt:chars "Select[Range[10^3], Function[d, Or[And[Mod[IntegerLength@ #, 3] == 2, MemberQ[{11, 18}, FromDigits@ Take[d, 2]]], First@ d == 8]]@ IntegerDigits@ # &] (* _Michael De Vlieger_, Feb 13 2017 *)"@en .
+

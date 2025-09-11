@@ -1,0 +1,76 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.353253Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2805}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000356 a seq:Sequence ;
+    rdfs:label "A000356"@en ;
+    seq:hasTextList ( seq:A000356_I_1_20230224T020546 seq:A000356_N_1_20230224T020546 seq:A000356_C_1_20230224T020546 seq:A000356_D_1_20230224T020546 seq:A000356_H_1_20230224T020546 seq:A000356_F_1_20230224T020546 seq:A000356_p_1_20230224T020546 seq:A000356_t_1_20230224T020546 seq:A000356_Y_1_20230224T020546 seq:A000356_K_1_20230224T020546 seq:A000356_O_1_20230224T020546 seq:A000356_A_1_20230224T020546 seq:A000356_E_1_20230224T020546 seq:A000356_V_1_20230224T020546 ) .
+
+seq:A000356_A_1_20230224T020546 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Simon Plouffe_"@en .
+
+seq:A000356_C_1_20230224T020546 a seq:Text ;
+    cnt:chars "a(2n-1) is also the sum of the numbers of standard Young tableaux of size 2n+1 and of shapes (k+3,k+2,2^{n-2-k}), 0 <= k <= n-2. - Amitai Regev (amitai.regev(AT)weizmann.ac.il), Mar 10 2010"@en .
+
+seq:A000356_D_1_20230224T020546 a seq:Text ;
+    cnt:chars """Amitai Regev, Preprint. [From Amitai Regev (amitai.regev(AT)weizmann.ac.il), Mar 10 2010]
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000356_E_1_20230224T020546 a seq:Text ;
+    cnt:chars "Better definition from _Michael Albert_, Oct 24 2008"@en .
+
+seq:A000356_F_1_20230224T020546 a seq:Text ;
+    cnt:chars """G.f.: (with offset 0) 3F2( [1, 3/2, 5/2], [3, 4], 16*x) = (1 - 2*x - 2F1( [-1/2, 1/2], [2], 16*x) ) / (4*x^2). - _Olivier Gérard_, Feb 16 2011
+a(n)*(n+2) = A000891(n). - _Gary W. Adamson_, Apr 08 2011
+D-finite with recurrence (n+2)*(n+1)*a(n)-4*(2*n-1)*(2*n+1)*a(n-1)=0. - _R. J. Mathar_, Mar 03 2013
+From _Ilya Gutkovskiy_, Feb 01 2017: (Start)
+E.g.f.: (1/2)*(2F2(1/2,3/2; 2,3; 16*x) - 1).
+a(n) ~ 2^(4*n+1)/(Pi*n^3). (End)
+From _Peter Bala_, Feb 22 2023: (Start)
+a(n) = Product_{1 <= i <= j <= n-1} (i + j + 3)/(i + j - 1).
+a(n) = (2^(n-1)) * Product_{1 <= i <= j <= n-1} (i + j + 3)/(i + j) for n >= 1.
+ Cf. A003645. (End)"""@en .
+
+seq:A000356_H_1_20230224T020546 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000356/b000356.txt">Table of n, a(n) for n = 1..800</a>
+R. K. Guy, <a href="http://www.cs.uwaterloo.ca/journals/JIS/VOL3/GUY/catwalks.html">Catwalks, sandsteps and Pascal pyramids</a>, J. Integer Sequences, Vol. 3 (2000), Article #00.1.6.
+Anatol N. Kirillov, <a href="https://doi.org/10.3842/SIGMA.2016.034">Notes on Schubert, Grothendieck and key polynomials</a>, SIGMA, Symmetry Integrability Geom. Methods Appl.  12, Paper 034, 56 p. (2016).
+W. T. Tutte, <a href="https://doi.org/10.4153/CJM-1962-032-x">A census of Hamiltonian polygons</a>, Canad. J. Math., 14 (1962), 402-417.
+W. T. Tutte, <a href="http://dx.doi.org/10.1137/0117044">On the enumeration of four-colored maps</a>, SIAM J. Appl. Math., 17 (1969), 454-460."""@en .
+
+seq:A000356_I_1_20230224T020546 a seq:Text ;
+    cnt:chars "M3978 N1647 #68 Feb 24 2023 02:05:46"@en .
+
+seq:A000356_K_1_20230224T020546 a seq:Text ;
+    cnt:chars "easy,nonn,nice"@en .
+
+seq:A000356_N_1_20230224T020546 a seq:Text ;
+    cnt:chars "Number of rooted cubic maps with 2n nodes and a distinguished Hamiltonian cycle: (2n)!(2n+1)! / (n!^2*(n+1)!(n+2)!)."@en .
+
+seq:A000356_O_1_20230224T020546 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000356_V_1_20230224T020546 a seq:Text ;
+    cnt:chars "1,5,35,294,2772,28314,306735,3476330,40831076,493684828,6114096716,77266057400,993420738000,12964140630900,171393565105575,2291968851019650,30961684478686500,422056646314726500"@en .
+
+seq:A000356_Y_1_20230224T020546 a seq:Text ;
+    cnt:chars """Cf. A000264, A000309.
+Equals A005568/2.
+Fourth row of array A102539.
+Column of array A073165.
+Image of A001700 under the "little Hankel" transform (see A056220 for definition). - _John W. Layman_, Aug 22 2000
+Cf. A000891."""@en .
+
+seq:A000356_p_1_20230224T020546 a seq:Text ;
+    cnt:chars """A000356 := proc(n)
+    binomial(2*n,n)*binomial(2*n+1,n+1)/(n+1)/(n+2) ;
+end proc:"""@en .
+
+seq:A000356_t_1_20230224T020546 a seq:Text ;
+    cnt:chars """CoefficientList[ Series[1 + (HypergeometricPFQ[{1, 3/2, 5/2}, {3, 4}, 16 x] - 1), {x, 0, 17}], x]
+Table[(2*n)!*(2*n+2)!/(2*n!*(n+1)!^2*(n+2)!),{n,30}] (* _Vincenzo Librandi_, Mar 25 2012 *)"""@en .
+

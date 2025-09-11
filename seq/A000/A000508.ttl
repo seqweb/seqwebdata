@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.709235Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1977}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000508 a seq:Sequence ;
+    rdfs:label "A000508"@en ;
+    seq:hasTextList ( seq:A000508_I_1_20241025T100556 seq:A000508_N_1_20241025T100556 seq:A000508_C_1_20241025T100556 seq:A000508_D_1_20241025T100556 seq:A000508_H_1_20241025T100556 seq:A000508_t_1_20241025T100556 seq:A000508_Y_1_20241025T100556 seq:A000508_K_1_20241025T100556 seq:A000508_O_1_20241025T100556 seq:A000508_A_1_20241025T100556 seq:A000508_E_1_20241025T100556 seq:A000508_V_1_20241025T100556 ) .
+
+seq:A000508_A_1_20241025T100556 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000508_C_1_20241025T100556 a seq:Text ;
+    cnt:chars "Let L_a(s) = Sum_{k>=0} (-a|2k+1) /(2k+1)^s be a Dirichlet series, where (-a|2k+1) is the Jacobi symbol. Then the c_(a,n) are defined by L_a(2n+1) = (Pi/(2a))^(2n+1)*sqrt(a)*c_(a,n)/(2n)! for n=0,1,2,..., a=1,2,3,..."@en .
+
+seq:A000508_D_1_20241025T100556 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000508_E_1_20241025T100556 a seq:Text ;
+    cnt:chars """More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 02 2000
+Name clarified by _James C. McMahon_, Nov 30 2023"""@en .
+
+seq:A000508_H_1_20241025T100556 a seq:Text ;
+    cnt:chars """Matthew House, <a href="/A000508/b000508.txt">Table of n, a(n) for n = 1..10000</a>
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5">Generalized Euler and class numbers</a>, Math. Comp. 21 1967 6890694.
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9">Corrigenda to: "Generalized Euler and class numbers"</a>, Math. Comp. 22 (1968), 699
+D. Shanks, <a href="/A000003/a000003.pdf">Generalized Euler and class numbers</a>, Math. Comp. 21 (1967), 689-694; 22 (1968), 699. [Annotated scanned copy]"""@en .
+
+seq:A000508_I_1_20241025T100556 a seq:Text ;
+    cnt:chars "M5324 N2315 #47 Oct 25 2024 10:05:56"@en .
+
+seq:A000508_K_1_20241025T100556 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000508_N_1_20241025T100556 a seq:Text ;
+    cnt:chars "Generalized class numbers c_(n,3)."@en .
+
+seq:A000508_O_1_20241025T100556 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000508_V_1_20241025T100556 a seq:Text ;
+    cnt:chars "61,2763,38528,249856,1066590,3487246,9493504,22634496,48649086,96448478,179369856,315621376,530788622,860061996,1346126848,2046820352,3038120316,4403100222,6254596992,8737505280,11992903772"@en .
+
+seq:A000508_Y_1_20241025T100556 a seq:Text ;
+    cnt:chars """Column 3 of A235605.
+Cf. A000003, A000233, A000362."""@en .
+
+seq:A000508_t_1_20241025T100556 a seq:Text ;
+    cnt:chars """amax = 25; km0 = 10; Clear[cc]; L[a_, s_, km_] := Sum[ JacobiSymbol[ -a, 2 k + 1]/(2 k + 1)^s, {k, 0, km}]; c[1, n_, km_] := 2 (2 n)! L[1, 2 n + 1, km] (2/Pi)^(2 n + 1) // Round; c[a_ /; a > 1, n_, km_] := (2 n)! L[a, 2 n + 1, km] (2 a/Pi)^(2 n + 1)/Sqrt[a] // Round; cc[km_] := cc[km] = Table[ c[a, 3, km], {a, 1, amax} ]; cc[km0]; cc[km = 2 km0]; While[cc[km] != cc[km/2, km = 2 km]]; A000508 = cc[km] (* _Jean-François Alcover_, Feb 09 2016 *)
+Table[rowA235605[n, 3][[4]], {n, 50}] (* see A235605 *) (* _Matthew House_, Oct 05 2024 *)"""@en .
+

@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.472205Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1168}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200510 a seq:Sequence ;
+    rdfs:label "A200510"@en ;
+    seq:hasTextList ( seq:A200510_I_1_20250411T172818 seq:A200510_N_1_20250411T172818 seq:A200510_C_1_20250411T172818 seq:A200510_H_1_20250411T172818 seq:A200510_F_1_20250411T172818 seq:A200510_e_1_20250411T172818 seq:A200510_o_1_20250411T172818 seq:A200510_Y_1_20250411T172818 seq:A200510_K_1_20250411T172818 seq:A200510_O_1_20250411T172818 seq:A200510_A_1_20250411T172818 seq:A200510_V_1_20250411T172818 ) .
+
+seq:A200510_A_1_20250411T172818 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200510_C_1_20250411T172818 a seq:Text ;
+    cnt:chars """If such an m>0 exists, this proves that n is not in A051221, i.e., not of the form 10^x-y^2. On the other hand, if n is in A051221, i.e., there are integers x, y such that n=10^x-y^2, then we know that a(n)=0.
+Similar to the comment in A200522, it is likely (but still unproven) that a(n) = 0 if and only if n is in A051221. The extension by Azuma confirms that this holds for n = 0..2000. - _Seiichi Azuma_, Apr 04 2025"""@en .
+
+seq:A200510_F_1_20250411T172818 a seq:Text ;
+    cnt:chars "a(111)=11111."@en .
+
+seq:A200510_H_1_20250411T172818 a seq:Text ;
+    cnt:chars "Seiichi Azuma, <a href=\"/A200510/b200510.txt\">Table of n, a(n) for n = 0..2000</a>"@en .
+
+seq:A200510_I_1_20250411T172818 a seq:Text ;
+    cnt:chars "#20 Apr 11 2025 17:28:18"@en .
+
+seq:A200510_K_1_20250411T172818 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200510_N_1_20250411T172818 a seq:Text ;
+    cnt:chars "Least m>0 such that n = 10^x-y^2 (mod m) has no solution, or 0 if no such m exists."@en .
+
+seq:A200510_O_1_20250411T172818 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200510_V_1_20250411T172818 a seq:Text ;
+    cnt:chars "0,0,3,5,9,3,0,9,3,0,0,3,35,5,3,11,9,3,5,0,3,16,9,3,11,9,3,20,5,3,16,9,3,5,9,3,0,11,3,0,9,3,20,5,3,32,11,3,5,9,3,0,9,3,28,37,3,11,5,3,200,9,3,5,0,3,16,9,3,16,9,3,35,5,3,0,9,3,5,9"@en .
+
+seq:A200510_Y_1_20250411T172818 a seq:Text ;
+    cnt:chars "Cf. A051204-A051221, A200505-A200524."@en .
+
+seq:A200510_e_1_20250411T172818 a seq:Text ;
+    cnt:chars "See A200507."@en .
+
+seq:A200510_o_1_20250411T172818 a seq:Text ;
+    cnt:chars "(PARI) A200510(n,b=10,p=3)={ my( x=0, qr, bx, seen ); for( m=3,9e9, while( x^p < m, issquare(b^x-n) & return(0); x++); qr=vecsort(vector(m,i,i^2+n)%m,,8); seen=0; bx=1; until( bittest(seen+=1<<bx, bx=bx*b%m), for(i=1,#qr, qr[i]<bx & next; qr[i]>bx & break; next(3))); return(m))}"@en .
+

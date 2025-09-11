@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.508033Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 4052}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000136 a seq:Sequence ;
+    rdfs:label "A000136"@en ;
+    seq:hasTextList ( seq:A000136_I_1_20250404T154508 seq:A000136_N_1_20250404T154508 seq:A000136_D_1_20250404T154508 seq:A000136_H_1_20250404T154508 seq:A000136_F_1_20250404T154508 seq:A000136_Y_1_20250404T154508 seq:A000136_K_1_20250404T154508 seq:A000136_O_1_20250404T154508 seq:A000136_A_1_20250404T154508 seq:A000136_V_1_20250404T154508 ) .
+
+seq:A000136_A_1_20250404T154508 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000136_D_1_20250404T154508 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+M. B. Wells, Elements of Combinatorial Computing. Pergamon, Oxford, 1971, p. 238."""@en .
+
+seq:A000136_F_1_20250404T154508 a seq:Text ;
+    cnt:chars "a(n) = n * A000682(n). - _Andrew Howroyd_, Dec 06 2015"@en .
+
+seq:A000136_H_1_20250404T154508 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000136/b000136.txt">Table of n, a(n) for n = 1..45</a>
+Oswin Aichholzer, Florian Lehner, and Christian Lindorfer, <a href="https://arxiv.org/abs/2402.14965">Folding polyominoes into cubes</a>, arXiv:2402.14965 [cs.CG], 2024. See p. 9.
+T. Asano, E. D. Demaine, M. L. Demaine and R. Uehara, <a href="https://dspace.jaist.ac.jp/dspace/bitstream/10119/10710/1/17799.pdf">NP-completeness of generalized Kaboozle</a>, J. Information Processing, 20 (July, 2012), 713-718.
+CombOS - Combinatorial Object Server, <a href="http://combos.org/meander">Generate meanders and stamp foldings</a>
+R. Dickau, <a href="http://www.robertdickau.com/stampfolding.html">Stamp Folding</a>
+R. Dickau, <a href="/A000136/a000136_2.pdf">Stamp Folding</a> [Cached copy, pdf format, with permission]
+Thomas C. Hull, Adham Ibrahim, Jacob Paltrowitz, Natalya Ter-Saakov, and Grace Wang, <a href="https://arxiv.org/abs/2503.23661">The Stamp Folding Problem From a Mountain-Valley Perspective: Enumerations and Bounds</a>, arXiv:2503.23661 [math.CO], 2025. See p. 1.
+J. E. Koehler, <a href="http://dx.doi.org/10.1016/S0021-9800(68)80048-1">Folding a strip of stamps</a>, J. Combin. Theory, 5 (1968), 135-152.
+J. E. Koehler, <a href="/A001011/a001011_4.pdf">Folding a strip of stamps</a>, J. Combin. Theory, 5 (1968), 135-152. [Annotated, corrected, scanned copy]
+Stéphane Legendre, <a href="/A000136/a000136_1.pdf">The 16 foldings of 4 labeled stamps</a>
+Bowie Liu, Dennis Wong, Chan-Tong Lam, and Marcus Im, <a href="https://arxiv.org/abs/2411.05458">Recursive and iterative approaches to generate rotation Gray codes for stamp foldings and semi-meanders</a>, arXiv:2411.05458 [cs.DS], 2024. See p. 2.
+W. F. Lunnon, <a href="http://dx.doi.org/10.1090/S0025-5718-1968-0221957-8 ">A map-folding problem</a>, Math. Comp. 22 (1968), 193-199.
+David Orden, <a href="http://mappingignorance.org/2014/07/07/many-ways-can-fold-strip-stamps/">In how many ways can you fold a strip of stamps?</a>, 2014.
+A. Panayotopoulos and P. Vlamos, <a href="http://dx.doi.org/10.1007/s11786-015-0234-0">Partitioning the Meandering Curves</a>, Mathematics in Computer Science (2015) p 1-10.
+Frank Ruskey, <a href="http://combos.org/meander">Information on Stamp Foldings</a>
+M. A. Sainte-Laguë, <a href="https://eudml.org/doc/192551">Les Réseaux (ou Graphes)</a>, Mémorial des Sciences Mathématiques, Fasc. 18, Gauthier-Villars, Paris, 1923, 64 pages. See p. 41.
+M. A. Sainte-Laguë, <a href="/A002560/a002560.pdf">Les Réseaux (ou Graphes)</a>, Mémorial des Sciences Mathématiques, Fasc. 18, Gauthier-Villars, Paris, 1923, 64 pages. See p. 41. [Incomplete annotated scan of title page and pages 18-51]
+J. Sawada and R. Li, <a href="http://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i2p43">Stamp foldings, semi-meanders, and open meanders: fast generation algorithms</a>, Electronic Journal of Combinatorics, Volume 19 No. 2 (2012), P#43 (16 pages).
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/StampFolding.html">Stamp Folding</a>
+M. B. Wells, <a href="/A000170/a000170.pdf">Elements of Combinatorial Computing</a>, Pergamon, Oxford, 1971. [Annotated scanned copy of pages 237-240]
+<a href="/index/Fo#fold">Index entries for sequences obtained by enumerating foldings</a>"""@en .
+
+seq:A000136_I_1_20250404T154508 a seq:Text ;
+    cnt:chars "M1614 N0630 #103 Apr 04 2025 15:45:08"@en .
+
+seq:A000136_K_1_20250404T154508 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000136_N_1_20250404T154508 a seq:Text ;
+    cnt:chars "Number of ways of folding a strip of n labeled stamps."@en .
+
+seq:A000136_O_1_20250404T154508 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000136_V_1_20250404T154508 a seq:Text ;
+    cnt:chars "1,2,6,16,50,144,462,1392,4536,14060,46310,146376,485914,1557892,5202690,16861984,56579196,184940388,622945970,2050228360,6927964218,22930109884,77692142980,258360586368,877395996200,2929432171328,9968202968958,33396290888520,113837957337750"@en .
+
+seq:A000136_Y_1_20250404T154508 a seq:Text ;
+    cnt:chars "Equals 2n*A000560 (and so 45 terms are known)."@en .
+

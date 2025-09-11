@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.710088Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1507}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200134 a seq:Sequence ;
+    rdfs:label "A200134"@en ;
+    seq:hasTextList ( seq:A200134_I_1_20240513T210547 seq:A200134_N_1_20240513T210547 seq:A200134_H_1_20240513T210547 seq:A200134_F_1_20240513T210547 seq:A200134_e_1_20240513T210547 seq:A200134_p_1_20240513T210547 seq:A200134_t_1_20240513T210547 seq:A200134_o_1_20240513T210547 seq:A200134_Y_1_20240513T210547 seq:A200134_K_1_20240513T210547 seq:A200134_O_1_20240513T210547 seq:A200134_A_1_20240513T210547 seq:A200134_V_1_20240513T210547 ) .
+
+seq:A200134_A_1_20240513T210547 a seq:Text ;
+    cnt:chars "_R. J. Mathar_, Nov 13 2011"@en .
+
+seq:A200134_F_1_20240513T210547 a seq:Text ;
+    cnt:chars """Psi(3/4) = -gamma + Pi/2 - 3*log(2) = A000796 - A020777 = 3.14159... - 4.22745...
+Pi = gamma(0,1/4) - gamma(0,3/4) = A020777 - A200134, where gamma(n,x) denotes the generalized Stieltjes constants. - _Peter Luschny_, May 16 2018"""@en .
+
+seq:A200134_H_1_20240513T210547 a seq:Text ;
+    cnt:chars """G. C. Greubel, <a href="/A200134/b200134.txt">Table of n, a(n) for n = 1..10000</a>
+E. D. Krupnikov, K. S. Kölbig, <a href="https://doi.org/10.1016/S0377-0427(96)00111-2">Some special cases of the generalized hypergeometric function (q+1)Fq</a>, J. Comp. Appl. Math. 78 (1997) 79-95.
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Digamma_function">Digamma function</a>
+<a href="/index/Di#differential_equations">Index entries for sequences related to the digamma function</a>"""@en .
+
+seq:A200134_I_1_20240513T210547 a seq:Text ;
+    cnt:chars "#31 May 13 2024 21:05:47"@en .
+
+seq:A200134_K_1_20240513T210547 a seq:Text ;
+    cnt:chars "cons,nonn"@en .
+
+seq:A200134_N_1_20240513T210547 a seq:Text ;
+    cnt:chars "Decimal expansion of the negated value of the digamma function at 3/4."@en .
+
+seq:A200134_O_1_20240513T210547 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200134_V_1_20240513T210547 a seq:Text ;
+    cnt:chars "1,0,8,5,8,6,0,8,7,9,7,8,6,4,7,2,1,6,9,6,2,6,8,8,6,7,6,2,8,1,7,1,8,0,6,9,3,1,7,0,0,7,5,0,3,9,3,3,3,1,3,6,4,5,0,6,8,0,3,3,4,9,6,7,2,1,1,1,4,0,3,8,9,5,4,3,6,4,4,3,1,8,4,4,0,5,1,9,6,3,1,6,0,9,9,4,4"@en .
+
+seq:A200134_Y_1_20240513T210547 a seq:Text ;
+    cnt:chars "Cf. A001620, A020759, A020777, A047787, A301816."@en .
+
+seq:A200134_e_1_20240513T210547 a seq:Text ;
+    cnt:chars "Psi(3/4) = -1.085860879786472169626886762817..."@en .
+
+seq:A200134_o_1_20240513T210547 a seq:Text ;
+    cnt:chars """(PARI) -psi(3/4) \\\\ _Charles R Greathouse IV_, Nov 22 2011
+(Magma) SetDefaultRealField(RealField(100)); R:= RealField(); -EulerGamma(R) + Pi(R)/2 - 3*Log(2); // _G. C. Greubel_, Aug 29 2018"""@en .
+
+seq:A200134_p_1_20240513T210547 a seq:Text ;
+    cnt:chars "evalf(-gamma+Pi/2-3*log(2)) ;"@en .
+
+seq:A200134_t_1_20240513T210547 a seq:Text ;
+    cnt:chars """RealDigits[ -PolyGamma[3/4], 10, 97] // First (* _Jean-François Alcover_, Feb 20 2013 *)
+N[StieltjesGamma[0, 3/4], 99] (* _Peter Luschny_, May 16 2018 *)"""@en .
+

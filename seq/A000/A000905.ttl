@@ -1,0 +1,75 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.642586Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 4184}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000905 a seq:Sequence ;
+    rdfs:label "A000905"@en ;
+    seq:hasTextList ( seq:A000905_I_1_20230301T153346 seq:A000905_N_1_20230301T153346 seq:A000905_C_1_20230301T153346 seq:A000905_D_1_20230301T153346 seq:A000905_H_1_20230301T153346 seq:A000905_e_1_20230301T153346 seq:A000905_p_1_20230301T153346 seq:A000905_t_1_20230301T153346 seq:A000905_o_1_20230301T153346 seq:A000905_Y_1_20230301T153346 seq:A000905_K_1_20230301T153346 seq:A000905_O_1_20230301T153346 seq:A000905_A_1_20230301T153346 seq:A000905_E_1_20230301T153346 seq:A000905_V_1_20230301T153346 ) .
+
+seq:A000905_A_1_20230301T153346 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000905_C_1_20230301T153346 a seq:Text ;
+    cnt:chars """a(n) is the minimal degree of an equation from which n successive terms after the first can be removed (by a series of transformation comparable to Tschirnhaus') without requiring the solution of an equation of degree greater than n (and excluding cases where an equation of degree greater than n is needed but is in fact factorizable into several equations of degree all less than n). Hamilton computed the first six terms of this sequence (see reference). That is the reason Sylvester and Hammond named them "Hamilton numbers". - _Olivier Gérard_, Oct 17 2007
+Named after the Irish mathematician William Rowan Hamilton (1805-1865). - _Amiram Eldar_, Jun 19 2021"""@en .
+
+seq:A000905_D_1_20230301T153346 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000905_E_1_20230301T153346 a seq:Text ;
+    cnt:chars "The formula given by Lucas on p. 498 is slightly in error - see Maple program given here."@en .
+
+seq:A000905_H_1_20230301T153346 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A000905/b000905.txt">Table of n, a(n) for n = 1..14</a>
+Tigran Ananyan and Melvin Hochster, <a href="https://arxiv.org/abs/2003.00589">Universal Lex Ideal Approximations of Extended Hilbert Functions and Hamilton Numbers</a>, arXiv:2003.00589 [math.AC], 2020.
+Alexander Chen, Y. H. He and J. McKay, <a href="https://arxiv.org/abs/1711.09253">Erland Samuel Bring's "Transformation of Algebraic Equations"</a>, arXiv preprint arXiv:1711.09253 [math.HO], 2017. See page 6.
+Raymond Garver, <a href="http://www.jstor.org/stable/1968002">The Tschirnhaus transformation</a>, The Annals of Mathematics, 2nd Ser., Vol. 29, No. 1/4. (1927 - 1928), pp. 329.
+William Rowan Hamilton, <a href="https://emis.de/classics/Hamilton/Jerrard.pdf">Inquiry Into the Validity of a Method Recently Proposed by George B. Jerrard, Esq. for Transforming and Resolving Equations of Elevated Degrees Undertaken at the Request of the Association. Richard and John E. Taylor</a>, Report of the Sixth Meeting of the British Association for the Advancement of Science, held at Bristol in August 1836 (London: John Murray, Albemarle St., 1837), pp. 295-348.
+Edouard Lucas, <a href="http://gallica.bnf.fr/ark:/12148/bpt6k29021h">Théorie des Nombres</a>, Gauthier-Villars, Paris, 1891, Vol. 1, p. 496.
+Edouard Lucas, <a href="/A000904/a000904.pdf">Théorie des Nombres</a>, Gauthier-Villars, Paris, 1891, Vol. 1. [Annotated scan of pages 488-499 only]
+Alexander J. Sutherland, <a href="https://arxiv.org/abs/2107.08139">Upper Bounds on Resolvent Degree and Its Growth Rate</a>, arXiv:2107.08139 [math.AG], 2021.
+James Joseph Sylvester and James Hammond, <a href="http://www.jstor.org/stable/90558">On Hamilton's numbers</a>, Philosophical Transactions of the Royal Society of London A, Vol. 178 (1887), pp. 285-312, <a href="https://archive.org/details/philtrans02248142">alternative link</a>.
+Jesse Wolfson, <a href="https://arxiv.org/abs/2001.06515">Tschirnhaus transformations after Hilbert</a>, arXiv:2001.06515 [math.AG], 2020."""@en .
+
+seq:A000905_I_1_20230301T153346 a seq:Text ;
+    cnt:chars "M0736 N0275 #77 Mar 01 2023 15:33:46"@en .
+
+seq:A000905_K_1_20230301T153346 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000905_N_1_20230301T153346 a seq:Text ;
+    cnt:chars "Hamilton numbers."@en .
+
+seq:A000905_O_1_20230301T153346 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000905_V_1_20230301T153346 a seq:Text ;
+    cnt:chars "2,3,5,11,47,923,409619,83763206255,3508125906290858798171,6153473687096578758448522809275077520433167,18932619208894981833333582059033329370801266249535902023330546944758507753065602135843"@en .
+
+seq:A000905_Y_1_20230301T153346 a seq:Text ;
+    cnt:chars """Cf. A001660.
+Equals A006719(n) - 1.
+Cf. A134294."""@en .
+
+seq:A000905_e_1_20230301T153346 a seq:Text ;
+    cnt:chars """a(1)=2 is the familiar fact than one can always remove the linear term of a quadratic equation.
+a(2)=3 because one can put any cubic equation in the form x^3-a=0 by a Tschirnhaus transformation based on the solutions of a quadratic equation.
+a(4)=11 because one can remove the 4 terms after the first term in a polynomial of degree 11 without having to solve a quintic."""@en .
+
+seq:A000905_o_1_20230301T153346 a seq:Text ;
+    cnt:chars """(Python)
+from sympy import binomial
+a = [2]
+[a.append(2+sum((-1)**(i)*binomial(a[n-i-1], i+2) for i in range(n))) for n in range(1,11)]
+print(a) # _Nicholas Stefan Georgescu_, Mar 01 2023"""@en .
+
+seq:A000905_p_1_20230301T153346 a seq:Text ;
+    cnt:chars "A000905 := proc(n) option remember; local i; if n=1 then 2 else 2+add((-1)^(i+1)*binomial(A000905(n-i),i+1),i=1..n-1); fi; end;"@en .
+
+seq:A000905_t_1_20230301T153346 a seq:Text ;
+    cnt:chars "a[1]=2; a[n_] := a[n] = 2+Sum[(-1)^(i+1)*Product[a[n-i] - k, {k, 0, i}]/(i+1)!, {i, 1, n-1}]; Table[a[n], {n, 1, 11}] (* _Jean-François Alcover_, May 17 2011, after Maple prog. *)"@en .
+

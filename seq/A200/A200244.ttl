@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.942793Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 617}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200244 a seq:Sequence ;
+    rdfs:label "A200244"@en ;
+    seq:hasTextList ( seq:A200244_I_1_20230320T124347 seq:A200244_N_1_20230320T124347 seq:A200244_C_1_20230320T124347 seq:A200244_H_1_20230320T124347 seq:A200244_t_1_20230320T124347 seq:A200244_o_1_20230320T124347 seq:A200244_Y_1_20230320T124347 seq:A200244_K_1_20230320T124347 seq:A200244_O_1_20230320T124347 seq:A200244_A_1_20230320T124347 seq:A200244_V_1_20230320T124347 ) .
+
+seq:A200244_A_1_20230320T124347 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 15 2011"@en .
+
+seq:A200244_C_1_20230320T124347 a seq:Text ;
+    cnt:chars "Characteristic function of A027700."@en .
+
+seq:A200244_H_1_20230320T124347 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A200244/b200244.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200244_I_1_20230320T124347 a seq:Text ;
+    cnt:chars "#19 Mar 20 2023 12:43:47"@en .
+
+seq:A200244_K_1_20230320T124347 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200244_N_1_20230320T124347 a seq:Text ;
+    cnt:chars "a(n)=1 iff binary weight of n-th prime is even."@en .
+
+seq:A200244_O_1_20230320T124347 a seq:Text ;
+    cnt:chars "1"@en .
+
+seq:A200244_V_1_20230320T124347 a seq:Text ;
+    cnt:chars "0,1,1,0,0,0,1,0,1,1,0,0,0,1,0,1,0,0,0,1,0,0,1,1,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0"@en .
+
+seq:A200244_Y_1_20230320T124347 a seq:Text ;
+    cnt:chars "Cf. A027700, A200246."@en .
+
+seq:A200244_o_1_20230320T124347 a seq:Text ;
+    cnt:chars "(Magma) [IsEven(&+Intseq(NthPrime(n),2)) select 1 else 0: n in [1..100]]; // _Bruno Berselli_, Nov 16 2011"@en .
+
+seq:A200244_t_1_20230320T124347 a seq:Text ;
+    cnt:chars "Table[1 - Mod[Total[IntegerDigits[Prime[n], 2]], 2], {n, 100}] (* _T. D. Noe_, Nov 21 2011 *)"@en .
+

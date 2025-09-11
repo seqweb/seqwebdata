@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.247247Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 1207}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000739 a seq:Sequence ;
+    rdfs:label "A000739"@en ;
+    seq:hasTextList ( seq:A000739_I_1_20220201T011203 seq:A000739_N_1_20220201T011203 seq:A000739_D_1_20220201T011203 seq:A000739_H_1_20220201T011203 seq:A000739_F_1_20220201T011203 seq:A000739_K_1_20220201T011203 seq:A000739_O_1_20220201T011203 seq:A000739_A_1_20220201T011203 seq:A000739_V_1_20220201T011203 ) .
+
+seq:A000739_A_1_20220201T011203 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000739_D_1_20220201T011203 a seq:Text ;
+    cnt:chars """Morris Newman, A table of the coefficients of the powers of eta(tau), Nederl. Akad. Wetensch. Proc. Ser. A. 59 = Indag. Math. 18 (1956), 204-216.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000739_F_1_20220201T011203 a seq:Text ;
+    cnt:chars """a(0) = 1, a(n) = -(16/n)*Sum_{k=1..n} A000203(k)*a(n-k) for n > 0. - _Seiichi Manyama_, Mar 27 2017
+G.f.: exp(-16*Sum_{k>=1} x^k/(k*(1 - x^k))). - _Ilya Gutkovskiy_, Feb 05 2018"""@en .
+
+seq:A000739_H_1_20220201T011203 a seq:Text ;
+    cnt:chars """Seiichi Manyama, <a href="/A000739/b000739.txt">Table of n, a(n) for n = 0..10000</a>
+M. Boylan, <a href="http://dx.doi.org/10.1016/S0022-314X(02)00037-9">Exceptional congruences for the coefficients of certain eta-product newforms</a>, J. Number Theory 98 (2003), no. 2, 377-389.
+<a href="/index/Pro#1mxtok">Index entries for expansions of Product_{k >= 1} (1-x^k)^m</a>"""@en .
+
+seq:A000739_I_1_20220201T011203 a seq:Text ;
+    cnt:chars "M5006 N2155 #27 Feb 01 2022 01:12:03"@en .
+
+seq:A000739_K_1_20220201T011203 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A000739_N_1_20220201T011203 a seq:Text ;
+    cnt:chars "Expansion of Product_{k>=1} (1 - x^k)^16."@en .
+
+seq:A000739_O_1_20220201T011203 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000739_V_1_20220201T011203 a seq:Text ;
+    cnt:chars "1,-16,104,-320,260,1248,-3712,1664,6890,-7280,-5568,-4160,33176,4640,-74240,29824,14035,54288,27040,-142720,1508,-110240,289536,222720,-380770,-83200,-123904,142912,7640,408000,386048"@en .
+

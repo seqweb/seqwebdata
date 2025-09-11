@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.662262Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 787}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200113 a seq:Sequence ;
+    rdfs:label "A200113"@en ;
+    seq:hasTextList ( seq:A200113_I_1_20181030T103102 seq:A200113_N_1_20181030T103102 seq:A200113_C_1_20181030T103102 seq:A200113_t_1_20181030T103102 seq:A200113_Y_1_20181030T103102 seq:A200113_K_1_20181030T103102 seq:A200113_O_1_20181030T103102 seq:A200113_A_1_20181030T103102 seq:A200113_V_1_20181030T103102 ) .
+
+seq:A200113_A_1_20181030T103102 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 18 2011"@en .
+
+seq:A200113_C_1_20181030T103102 a seq:Text ;
+    cnt:chars """s = {2,3,5,7,11}; R = circumradius (A200257).
+K = sum((s(n)/4)(4*R^2-s(n)^2)^(1/2), n=1..5) = 41.9529923613808924252...
+This is maximal area of pentagon with sides 2, 3, 5, 7, 11."""@en .
+
+seq:A200113_I_1_20181030T103102 a seq:Text ;
+    cnt:chars "#21 Oct 30 2018 10:31:02"@en .
+
+seq:A200113_K_1_20181030T103102 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200113_N_1_20181030T103102 a seq:Text ;
+    cnt:chars "Decimal expansion of the area K of cyclic pentagon with sides 2, 3, 5, 7, and 11."@en .
+
+seq:A200113_O_1_20181030T103102 a seq:Text ;
+    cnt:chars "2,1"@en .
+
+seq:A200113_V_1_20181030T103102 a seq:Text ;
+    cnt:chars "4,1,9,5,2,9,9,2,3,6,1,3,8,0,8,9,2,4,2,5,2,7,8,6,7,3,1,3,4,4,1,3,4,9,6,9,9,5,5,6,6,2,8,1,4,2,3,8,7,4,0,0,7,5,0,7,4,1,1,5,0,0,5,6,4,7,5,0,2,4,3,0,7,4,1,5,4,5,1,8,7,5,7,3,8,3"@en .
+
+seq:A200113_Y_1_20181030T103102 a seq:Text ;
+    cnt:chars "Cf. A200257."@en .
+
+seq:A200113_t_1_20181030T103102 a seq:Text ;
+    cnt:chars "digits = 86; r = x /. FindRoot[ Sum[ ArcSin[ Prime[n]/2/x], {n, 5}] == Pi, {x, 5}, WorkingPrecision -> digits+10] // Re; Sum[p/4*(4*r^2 - p^2)^(1/2), {p, Prime /@ Range[5]}] // RealDigits[#, 10, digits]& // First (* _Jean-François Alcover_, Feb 15 2013, after _Zak Seidov_ *)"@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.885063Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 1472}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000585 a seq:Sequence ;
+    rdfs:label "A000585"@en ;
+    seq:hasTextList ( seq:A000585_I_1_20201107T100556 seq:A000585_N_1_20201107T100556 seq:A000585_D_1_20201107T100556 seq:A000585_H_1_20201107T100556 seq:A000585_K_1_20201107T100556 seq:A000585_O_1_20201107T100556 seq:A000585_A_1_20201107T100556 seq:A000585_E_1_20201107T100556 seq:A000585_V_1_20201107T100556 ) .
+
+seq:A000585_A_1_20201107T100556 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000585_D_1_20201107T100556 a seq:Text ;
+    cnt:chars """V. Jovovic, The cycle indices polynomials of some classical groups, Belgrade, 1995, unpublished.
+R. J. Lechner, Harmonic Analysis of Switching Functions, in A. Mukhopadhyay, ed., Recent Developments in Switching Theory, Ac Press, 1971, pp. 121-254, esp. p. 186.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000585_E_1_20201107T100556 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_"@en .
+
+seq:A000585_H_1_20201107T100556 a seq:Text ;
+    cnt:chars """H. Fripertinger, <a href="https://doi.org/10.1016/S0024-3795(96)00530-7">Cycle indices of linear, affine and projective groups</a>, Linear Algebra and Its Applications, 263, 133-156, 1997.
+H. Fripertinger, <a href="https://web.archive.org/web/20050105072927/http://www-ang.kfunigraz.ac.at/~fripert/fga/k1zyklap.html">Implementation of cycle index of linear group</a>
+M. A. Harrison, <a href="https://doi.org/10.1145/321312.321325">On asymptotic estimates in switching and automata theory</a>, J. ACM, v. 13, no. 1, Jan. 1966, pp. 151-157.
+Vladeta Jovovic, <a href="/A062766/a062766.pdf">Cycle indices</a>
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000585_I_1_20201107T100556 a seq:Text ;
+    cnt:chars "M3337 N1343 #21 Nov 07 2020 10:05:56"@en .
+
+seq:A000585_K_1_20201107T100556 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000585_N_1_20201107T100556 a seq:Text ;
+    cnt:chars "Number of equivalence classes of Boolean functions of n variables under GL(n,2)."@en .
+
+seq:A000585_O_1_20201107T100556 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000585_V_1_20201107T100556 a seq:Text ;
+    cnt:chars "4,8,20,92,2744,950998216,2076795963681989019155896,21651217007530946175606768762255421159692845640522169779616"@en .
+

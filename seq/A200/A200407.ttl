@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.271317Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 979}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200407 a seq:Sequence ;
+    rdfs:label "A200407"@en ;
+    seq:hasTextList ( seq:A200407_I_1_20240506T065453 seq:A200407_N_1_20240506T065453 seq:A200407_C_1_20240506T065453 seq:A200407_H_1_20240506T065453 seq:A200407_F_1_20240506T065453 seq:A200407_e_1_20240506T065453 seq:A200407_t_1_20240506T065453 seq:A200407_o_1_20240506T065453 seq:A200407_Y_1_20240506T065453 seq:A200407_K_1_20240506T065453 seq:A200407_O_1_20240506T065453 seq:A200407_A_1_20240506T065453 seq:A200407_V_1_20240506T065453 ) .
+
+seq:A200407_A_1_20240506T065453 a seq:Text ;
+    cnt:chars "_Sture Sjöstedt_, Nov 17 2011"@en .
+
+seq:A200407_C_1_20240506T065453 a seq:Text ;
+    cnt:chars "When are both n+1 and 19*n+1 perfect squares? This gives the equation 19*x^2-18=y^2."@en .
+
+seq:A200407_F_1_20240506T065453 a seq:Text ;
+    cnt:chars """a(n) = 340*a(n-3)+a(n-6), a(1)=1, a(2)=9, a(3)=131, a(4)=209, a(5)=3051, a(6)=44539.
+G.f.: -x*(x-1)*(x^4+10*x^3+141*x^2+10*x+1) / (x^6-340*x^3+1). - _Colin Barker_, Sep 01 2013"""@en .
+
+seq:A200407_H_1_20240506T065453 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_06\">Index entries for linear recurrences with constant coefficients</a>, signature (0,0,340,0,0,-1)."@en .
+
+seq:A200407_I_1_20240506T065453 a seq:Text ;
+    cnt:chars "#21 May 06 2024 06:54:53"@en .
+
+seq:A200407_K_1_20240506T065453 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200407_N_1_20240506T065453 a seq:Text ;
+    cnt:chars "The x-values in the solution to 19*x^2 - 18 = y^2."@en .
+
+seq:A200407_O_1_20240506T065453 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200407_V_1_20240506T065453 a seq:Text ;
+    cnt:chars "1,9,131,209,3051,44539,71059,1037331,15143129,24159851,352689489,5148619321,8214278281,119913388929,1750515426011,2792830455689,40770199546371,595170096224419,949554140655979,13861747932377211,202356082200876449,322845614992577171"@en .
+
+seq:A200407_Y_1_20240506T065453 a seq:Text ;
+    cnt:chars "Cf. A199773, A199774, A199798, A200409."@en .
+
+seq:A200407_e_1_20240506T065453 a seq:Text ;
+    cnt:chars "a(7)=340*209-1=71059."@en .
+
+seq:A200407_o_1_20240506T065453 a seq:Text ;
+    cnt:chars "(PARI) Vec(-x*(x-1)*(x^4+10*x^3+141*x^2+10*x+1)/(x^6-340*x^3+1) + O(x^100)) \\\\ _Colin Barker_, Sep 01 2013"@en .
+
+seq:A200407_t_1_20240506T065453 a seq:Text ;
+    cnt:chars "LinearRecurrence[{0, 0, 340, 0, 0, -1}, {1, 9, 131, 209, 3051, 44539}, 50]"@en .
+

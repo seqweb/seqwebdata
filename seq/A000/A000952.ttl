@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.752095Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2076}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000952 a seq:Sequence ;
+    rdfs:label "A000952"@en ;
+    seq:hasTextList ( seq:A000952_I_1_20230725T233224 seq:A000952_N_1_20230725T233224 seq:A000952_C_1_20230725T233224 seq:A000952_D_1_20230725T233224 seq:A000952_H_1_20230725T233224 seq:A000952_e_1_20230725T233224 seq:A000952_Y_1_20230725T233224 seq:A000952_K_1_20230725T233224 seq:A000952_O_1_20230725T233224 seq:A000952_A_1_20230725T233224 seq:A000952_E_1_20230725T233224 seq:A000952_V_1_20230725T233224 ) .
+
+seq:A000952_A_1_20230725T233224 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000952_C_1_20230725T233224 a seq:Text ;
+    cnt:chars """A conference matrix of order k is a k X k {-1,0,+1} matrix A such that A A' = (k-1)I.
+If k == 2 (mod 4) then a necessary condition is that k-1 is a sum of 2 squares (A286636). It is conjectured that this condition is also sufficient. If k == 2 (mod 4) and k-1 is a prime or prime power the condition is automatically satisfied."""@en .
+
+seq:A000952_D_1_20230725T233224 a seq:Text ;
+    cnt:chars """V. Belevitch, Conference matrices and Hadamard matrices, Ann. Soc. Scientifique Bruxelles, 82 (I) (1968), 13-32.
+CRC Handbook of Combinatorial Designs, 1996, Chapter 52.
+F. J. MacWilliams and N. J. A. Sloane, The Theory of Error-Correcting Codes, Elsevier-North Holland, 1978, p. 56.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000952_E_1_20230725T233224 a seq:Text ;
+    cnt:chars """66 seems to be the smallest order for which it is not known whether a conference matrix exists. Since 65 is the sum of two squares, according to the conjecture, 66 should be the next term.
+Edited by _N. J. A. Sloane_, Mar 13 2008, Mar 16 2008, May 22 2014"""@en .
+
+seq:A000952_H_1_20230725T233224 a seq:Text ;
+    cnt:chars """Joerg Arndt, <a href="/A000952/a000952.txt">Some relevant PARI/GP programs</a>
+N. A. Balonin and Jennifer Seberry, <a href="https://ro.uow.edu.au/eispapers/2748">A review and new symmetric conference matrices</a>, 2014.
+Nikolay Balonin, Mikhail Sergeev and Anton Vostrikov, <a href="https://doi.org/10.31799/1684-8853-2020-2-2-9">Prime Fermat numbers and maximum determinant matrix conjecture</a>, Information and Control Systems (2020) No. 2, 2-9. (Abstract in Russian, English translation available on page)
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Conference_matrix">Conference matrix</a>."""@en .
+
+seq:A000952_I_1_20230725T233224 a seq:Text ;
+    cnt:chars "M1574 N0615 #53 Jul 25 2023 23:32:24"@en .
+
+seq:A000952_K_1_20230725T233224 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice"@en .
+
+seq:A000952_N_1_20230725T233224 a seq:Text ;
+    cnt:chars "Numbers k == 2 (mod 4) that are the orders of conference matrices."@en .
+
+seq:A000952_O_1_20230725T233224 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000952_V_1_20230725T233224 a seq:Text ;
+    cnt:chars "2,6,10,14,18,26,30,38,42,46,50,54,62"@en .
+
+seq:A000952_Y_1_20230725T233224 a seq:Text ;
+    cnt:chars """Subsequence of A016825.
+Cf. A286636."""@en .
+
+seq:A000952_e_1_20230725T233224 a seq:Text ;
+    cnt:chars """The essentially unique conference matrix of order 6:
+   0 +1 +1 +1 +1 +1
+  +1  0 +1 -1 -1 +1
+  +1 +1  0 +1 -1 -1
+  +1 -1 +1  0 +1 -1
+  +1 -1 -1 +1  0 +1
+  +1 +1 -1 -1 +1  0"""@en .
+

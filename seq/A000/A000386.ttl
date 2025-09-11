@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.427083Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 958}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000386 a seq:Sequence ;
+    rdfs:label "A000386"@en ;
+    seq:hasTextList ( seq:A000386_I_1_20220201T005527 seq:A000386_N_1_20220201T005527 seq:A000386_D_1_20220201T005527 seq:A000386_t_1_20220201T005527 seq:A000386_Y_1_20220201T005527 seq:A000386_K_1_20220201T005527 seq:A000386_O_1_20220201T005527 seq:A000386_A_1_20220201T005527 seq:A000386_V_1_20220201T005527 ) .
+
+seq:A000386_A_1_20220201T005527 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000386_D_1_20220201T005527 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 198.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000386_I_1_20220201T005527 a seq:Text ;
+    cnt:chars "M4137 N1715 #21 Feb 01 2022 00:55:27"@en .
+
+seq:A000386_K_1_20220201T005527 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000386_N_1_20220201T005527 a seq:Text ;
+    cnt:chars "Coefficients of ménage hit polynomials."@en .
+
+seq:A000386_O_1_20220201T005527 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A000386_V_1_20220201T005527 a seq:Text ;
+    cnt:chars "0,0,0,1,6,20,134,915,7324,65784,657180,7223637,86637650,1125842556,15757002706,236298742375,3780061394232,64251145312880,1156374220457784,21968796934412649,439337048505773790,9225384943965382564,202945418255342821470"@en .
+
+seq:A000386_Y_1_20220201T005527 a seq:Text ;
+    cnt:chars "A diagonal of A058057."@en .
+
+seq:A000386_t_1_20220201T005527 a seq:Text ;
+    cnt:chars "max = 22; f[x_, y_] := Sum[n!*((x*y)^n/(1+x*(y-1))^(2*n+1)), {n, 0, max}]; t = MapIndexed[Take[#1, #2[[1]]]&, CoefficientList[Series[f[x, y], {x, 0, max}, {y, 0, max}], {x, y}]]; a[n_] := If[n<3, 0, t[[n+1, n-2]]]; Table[ a[n], {n, 0, max}] (* _Jean-François Alcover_, Feb 08 2016, after _Vladeta Jovovic_ in A058057 *)"@en .
+

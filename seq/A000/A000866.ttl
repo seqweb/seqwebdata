@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.560506Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 783}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000866 a seq:Sequence ;
+    rdfs:label "A000866"@en ;
+    seq:hasTextList ( seq:A000866_I_1_20180623T091302 seq:A000866_N_1_20180623T091302 seq:A000866_H_1_20180623T091302 seq:A000866_t_1_20180623T091302 seq:A000866_o_1_20180623T091302 seq:A000866_Y_1_20180623T091302 seq:A000866_K_1_20180623T091302 seq:A000866_O_1_20180623T091302 seq:A000866_A_1_20180623T091302 seq:A000866_E_1_20180623T091302 seq:A000866_V_1_20180623T091302 ) .
+
+seq:A000866_A_1_20180623T091302 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Jacques Haubrich (jhaubrich(AT)freeler.nl)"@en .
+
+seq:A000866_E_1_20180623T091302 a seq:Text ;
+    cnt:chars "More terms from _Erich Friedman_."@en .
+
+seq:A000866_H_1_20180623T091302 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000866/b000866.txt\">Table of n, a(n) for n = 0..300</a>"@en .
+
+seq:A000866_I_1_20180623T091302 a seq:Text ;
+    cnt:chars "#12 Jun 23 2018 09:13:02"@en .
+
+seq:A000866_K_1_20180623T091302 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A000866_N_1_20180623T091302 a seq:Text ;
+    cnt:chars "2^n written in base 5."@en .
+
+seq:A000866_O_1_20180623T091302 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000866_V_1_20180623T091302 a seq:Text ;
+    cnt:chars "1,2,4,13,31,112,224,1003,2011,4022,13044,31143,112341,230232,1011014,2022033,4044121,13143242,31342034,113234123,232023301,1014102102,2033204204,4121413413,13243332331,32042220212,114134440424,233324431403,1022204413311"@en .
+
+seq:A000866_Y_1_20180623T091302 a seq:Text ;
+    cnt:chars """Cf. A000079, A004642, ..., A004655: powers of 2 written in base 10, 3, 4, ..., 16
+Cf. A000244, A004656, A004658, A004659, ... : powers of 3 written in base 10, 2, 4, 5, ..."""@en .
+
+seq:A000866_o_1_20180623T091302 a seq:Text ;
+    cnt:chars "(PARI) a(n)=fromdigits(digits(2^n,5)) \\\\ _M. F. Hasler_, Jun 23 2018"@en .
+
+seq:A000866_t_1_20180623T091302 a seq:Text ;
+    cnt:chars "Table[FromDigits[IntegerDigits[2^n, 5]], {n, 0, 30}] (* _T. D. Noe_, Jun 20 2012 *)"@en .
+

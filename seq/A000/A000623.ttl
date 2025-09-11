@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.974332Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1964}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000623 a seq:Sequence ;
+    rdfs:label "A000623"@en ;
+    seq:hasTextList ( seq:A000623_I_1_20220201T010540 seq:A000623_N_1_20220201T010540 seq:A000623_C_1_20220201T010540 seq:A000623_D_1_20220201T010540 seq:A000623_H_1_20220201T010540 seq:A000623_F_1_20220201T010540 seq:A000623_Y_1_20220201T010540 seq:A000623_K_1_20220201T010540 seq:A000623_O_1_20220201T010540 seq:A000623_A_1_20220201T010540 seq:A000623_E_1_20220201T010540 seq:A000623_V_1_20220201T010540 ) .
+
+seq:A000623_A_1_20220201T010540 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000623_C_1_20220201T010540 a seq:Text ;
+    cnt:chars """....X
+....|
+R-C-R' (tertiary)
+....|
+....R"
+Let the entries in the nine columns of Blair and Henze's Table I (JACS 54 (1932), p. 1098) be denoted by Ps(n), Pn(n), Ss(n), Sn(n), Ts(n), Tn(n), As(n), An(n), T(n) respectively (here P = Primary, S = Secondary, T = Tertiary, s = stereoisomers, n = non-stereoisomers and the last column T(n) gives total).
+Then Ps (and As) = A000620, Pn (and An, Sn) = A000621, Ss = A000622, Ts = this sequence, Tn = A000624, T = A000625. Recurrences generating these sequences are given in the Maple program in A000620."""@en .
+
+seq:A000623_D_1_20220201T010540 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000623_E_1_20220201T010540 a seq:Text ;
+    cnt:chars "Additional comments from Bruce Corrigan, Nov 04 2002"@en .
+
+seq:A000623_F_1_20220201T010540 a seq:Text ;
+    cnt:chars "a(n) ~ c * b^n / n^(3/2), where b = 3.287112055584474991259... (see A239803), c = 0.069641252627300354415... (see A239808). - _Vaclav Kotesovec_, Mar 27 2014"@en .
+
+seq:A000623_H_1_20220201T010540 a seq:Text ;
+    cnt:chars """Vaclav Kotesovec, <a href="/A000623/b000623.txt">Table of n, a(n) for n = 1..1930</a>
+C. M. Blair and H. R. Henze, <a href="http://dx.doi.org/10.1021/ja01342a036">The number of stereoisomeric and non-stereoisomeric mono-substitution products of the paraffins</a>, J. Amer. Chem. Soc., 54 (3) (1932), 1098-1106.
+C. M. Blair and H. R. Henze, <a href="/A000620/a000620.pdf">The number of stereoisomeric and non-stereoisomeric mono-substitution products of the paraffins</a>, J. Amer. Chem. Soc., 54 (3) (1932), 1098-1105. (Annotated scanned copy)"""@en .
+
+seq:A000623_I_1_20220201T010540 a seq:Text ;
+    cnt:chars "M4125 N1712 #21 Feb 01 2022 01:05:40"@en .
+
+seq:A000623_K_1_20220201T010540 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000623_N_1_20220201T010540 a seq:Text ;
+    cnt:chars "Number of monosubstituted alkanes C(n)H(2n+1)-X of the form shown in the Comments lines that are stereoisomers."@en .
+
+seq:A000623_O_1_20220201T010540 a seq:Text ;
+    cnt:chars "1,7"@en .
+
+seq:A000623_V_1_20220201T010540 a seq:Text ;
+    cnt:chars "0,0,0,0,0,0,6,18,66,208,646,1962,5962,18014,54578,165650,504220,1539330,4713742,14475936,44578668,137634872,425970290,1321323952,4107268140,12792332438,39915708564,124762612530,390593588402,1224681912368,3845387953884,12090382743374"@en .
+
+seq:A000623_Y_1_20220201T010540 a seq:Text ;
+    cnt:chars "Cf. A000620-A000625, A239803, A239808."@en .
+

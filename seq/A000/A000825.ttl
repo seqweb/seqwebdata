@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.469448Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 646}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000825 a seq:Sequence ;
+    rdfs:label "A000825"@en ;
+    seq:hasTextList ( seq:A000825_I_1_20171230T144423 seq:A000825_N_1_20171230T144423 seq:A000825_H_1_20171230T144423 seq:A000825_F_1_20171230T144423 seq:A000825_t_1_20171230T144423 seq:A000825_Y_1_20171230T144423 seq:A000825_K_1_20171230T144423 seq:A000825_O_1_20171230T144423 seq:A000825_A_1_20171230T144423 seq:A000825_V_1_20171230T144423 ) .
+
+seq:A000825_A_1_20171230T144423 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000825_F_1_20171230T144423 a seq:Text ;
+    cnt:chars "a(n) ~ n! * (sqrt(2) + 1 + (sqrt(2)-1)*(-1)^n) * 4^n / Pi^(n+1). - _Vaclav Kotesovec_, Jun 01 2015"@en .
+
+seq:A000825_H_1_20171230T144423 a seq:Text ;
+    cnt:chars "R. J. Mathar, <a href=\"/A000825/b000825.txt\">Table of n, a(n) for n = 0..200</a>"@en .
+
+seq:A000825_I_1_20171230T144423 a seq:Text ;
+    cnt:chars "#18 Dec 30 2017 14:44:23"@en .
+
+seq:A000825_K_1_20171230T144423 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000825_N_1_20171230T144423 a seq:Text ;
+    cnt:chars "Expansion of cos x (1 + sin x ) /cos 2x."@en .
+
+seq:A000825_O_1_20171230T144423 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000825_V_1_20171230T144423 a seq:Text ;
+    cnt:chars "1,1,3,8,57,256,2763,17408,250737,2031616,36581523,362283008,7828053417,91620376576,2309644635483,31191159799808,898621108880097,13753735117275136,445777636063460643,7625476699018231808"@en .
+
+seq:A000825_Y_1_20171230T144423 a seq:Text ;
+    cnt:chars """Cf. A000828, A000831.
+Bisections are A000281 and (1/2) * A012393."""@en .
+
+seq:A000825_t_1_20171230T144423 a seq:Text ;
+    cnt:chars "With[{nn=20},CoefficientList[Series[Cos[x] (1+Sin[x])/Cos[2x],{x,0,nn}],x] Range[0,nn]!] (* _Harvey P. Dale_, Nov 08 2013 *)"@en .
+

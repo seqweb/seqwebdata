@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.994924Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2219}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000632 a seq:Sequence ;
+    rdfs:label "A000632"@en ;
+    seq:hasTextList ( seq:A000632_I_1_20250205T101254 seq:A000632_N_1_20250205T101254 seq:A000632_D_1_20250205T101254 seq:A000632_H_1_20250205T101254 seq:A000632_F_1_20250205T101254 seq:A000632_t_1_20250205T101254 seq:A000632_K_1_20250205T101254 seq:A000632_O_1_20250205T101254 seq:A000632_A_1_20250205T101254 seq:A000632_E_1_20250205T101254 seq:A000632_V_1_20250205T101254 ) .
+
+seq:A000632_A_1_20250205T101254 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000632_D_1_20250205T101254 a seq:Text ;
+    cnt:chars """J. L. Faulon, D. Visco and D. Roe, Enumerating Molecules, In: Reviews in Computational Chemistry Vol. 21, Ed. K. Lipkowitz, Wiley-VCH, 2005.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000632_E_1_20250205T101254 a seq:Text ;
+    cnt:chars """More terms from Herman Jamke (hermanjamke(AT)fastmail.fm), Feb 24 2008
+Name clarified by _Sean A. Irvine_, Feb 01 2025"""@en .
+
+seq:A000632_F_1_20250205T101254 a seq:Text ;
+    cnt:chars "G.f.: A(x)=x*B(x)*(B(x)-1), where B(x) = g.f. for A000598. - Herman Jamke (hermanjamke(AT)fastmail.fm), Feb 24 2008"@en .
+
+seq:A000632_H_1_20250205T101254 a seq:Text ;
+    cnt:chars """Herman Jamke (hermanjamke(AT)fastmail.fm), Feb 24 2008, <a href="/A000632/b000632.txt">Table of n, a(n) for n = 2..99</a>
+J. L. Faulon, D. Visco and D. Roe, <a href="https://doi.org/10.1002/0471720895.ch3">Enumerating Molecules</a>, In: Reviews in Computational Chemistry Vol. 21, Ed. K. Lipkowitz, Wiley-VCH, 2005.
+H. R. Henze and C. M. Blair, <a href="http://dx.doi.org/10.1021/ja01316a050">The number of structural isomers of the more important types of aliphatic compounds</a>, J. Amer. Chem. Soc., 56 (1) (1934), 157-157.
+H. R. Henze and C. M. Blair, <a href="/A000632/a000632.pdf">The number of structural isomers of the more important types of aliphatic compounds</a>, J. Amer. Chem. Soc., 56 (1) (1934), 157-157. (Annotated scanned copy)
+R. C. Read, <a href="/A000598/a000598.pdf">The Enumeration of Acyclic Chemical Compounds</a>, pp. 25-61 of A. T. Balaban, ed., Chemical Applications of Graph Theory, Ac. Press, 1976. [Annotated scanned copy] See p. 28.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Ester">Ester</a>."""@en .
+
+seq:A000632_I_1_20250205T101254 a seq:Text ;
+    cnt:chars "M1174 N0451 #40 Feb 05 2025 10:12:54"@en .
+
+seq:A000632_K_1_20250205T101254 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000632_N_1_20250205T101254 a seq:Text ;
+    cnt:chars "Number of esters with n carbon atoms up to structural isomerism."@en .
+
+seq:A000632_O_1_20250205T101254 a seq:Text ;
+    cnt:chars "2,2"@en .
+
+seq:A000632_V_1_20250205T101254 a seq:Text ;
+    cnt:chars "1,2,4,9,20,45,105,249,599,1463,3614,9016,22695,57564,146985,377555,974924,2529308,6589734,17234114,45228343,119069228,314368027,832193902,2208347917,5873364623,15653499416,41800070483,111821751649"@en .
+
+seq:A000632_t_1_20250205T101254 a seq:Text ;
+    cnt:chars """terms = 29; (* B = g.f. for A000625 *) B[_] = 0; Do[B[x_] = 1 + (1/6)*x*(B[x]^3 + 3*B[x]*B[x^2] + 2*B[x^3]) + O[x]^(terms+2) // Normal, terms+2];
+A[x_] = 1*x*B[x]*(B[x] - 1) + O[x]^(terms+2);
+Drop[CoefficientList[A[x], x], 2] (* _Jean-François Alcover_, Jan 10 2018 *)"""@en .
+

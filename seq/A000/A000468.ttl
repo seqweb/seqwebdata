@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.619283Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1389}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000468 a seq:Sequence ;
+    rdfs:label "A000468"@en ;
+    seq:hasTextList ( seq:A000468_I_1_20210112T080835 seq:A000468_N_1_20210112T080835 seq:A000468_D_1_20210112T080835 seq:A000468_H_1_20210112T080835 seq:A000468_t_1_20210112T080835 seq:A000468_o_1_20210112T080835 seq:A000468_K_1_20210112T080835 seq:A000468_O_1_20210112T080835 seq:A000468_A_1_20210112T080835 seq:A000468_E_1_20210112T080835 seq:A000468_V_1_20210112T080835 ) .
+
+seq:A000468_A_1_20210112T080835 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000468_D_1_20210112T080835 a seq:Text ;
+    cnt:chars """M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 1017.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000468_E_1_20210112T080835 a seq:Text ;
+    cnt:chars "More terms from _James A. Sellers_, Jul 05 2000"@en .
+
+seq:A000468_H_1_20210112T080835 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000468/b000468.txt">Table of n, a(n) for n = 0..100</a>
+M. Abramowitz and I. A. Stegun, eds., <a href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.ASP">Handbook of Mathematical Functions</a>, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy]."""@en .
+
+seq:A000468_I_1_20210112T080835 a seq:Text ;
+    cnt:chars "M4870 N2085 #31 Jan 12 2021 08:08:35"@en .
+
+seq:A000468_K_1_20210112T080835 a seq:Text ;
+    cnt:chars "nonn,base,easy,nice"@en .
+
+seq:A000468_N_1_20210112T080835 a seq:Text ;
+    cnt:chars "Powers of ten written in base 8."@en .
+
+seq:A000468_O_1_20210112T080835 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000468_V_1_20210112T080835 a seq:Text ;
+    cnt:chars "1,12,144,1750,23420,303240,3641100,46113200,575360400,7346545000,112402762000,1351035564000,16432451210000,221411634520000,2657142036440000,34327724461500000,434157115760200000,5432127413542400000,67405553164731000000,1053071060221172000000"@en .
+
+seq:A000468_o_1_20210112T080835 a seq:Text ;
+    cnt:chars """(PARI) a(n)=fromdigits(digits(10^n,8)) \\\\ _Charles R Greathouse IV_, Feb 08 2017
+(Python)
+def a(n): return int(oct(10**n)[2:])
+print([a(n) for n in range(20)]) # _Michael S. Branicky_, Jan 12 2021"""@en .
+
+seq:A000468_t_1_20210112T080835 a seq:Text ;
+    cnt:chars "FromDigits/@IntegerDigits[10^Range[0,20],8] (* _Harvey P. Dale_, Apr 08 2012 *)"@en .
+

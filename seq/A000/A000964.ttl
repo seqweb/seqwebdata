@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.779722Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1641}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000964 a seq:Sequence ;
+    rdfs:label "A000964"@en ;
+    seq:hasTextList ( seq:A000964_I_1_20190206T020001 seq:A000964_N_1_20190206T020001 seq:A000964_D_1_20190206T020001 seq:A000964_H_1_20190206T020001 seq:A000964_F_1_20190206T020001 seq:A000964_p_1_20190206T020001 seq:A000964_t_1_20190206T020001 seq:A000964_Y_1_20190206T020001 seq:A000964_K_1_20190206T020001 seq:A000964_O_1_20190206T020001 seq:A000964_A_1_20190206T020001 seq:A000964_E_1_20190206T020001 seq:A000964_V_1_20190206T020001 ) .
+
+seq:A000964_A_1_20190206T020001 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000964_D_1_20190206T020001 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000964_E_1_20190206T020001 a seq:Text ;
+    cnt:chars "More terms from _Emeric Deutsch_, Apr 22 2006"@en .
+
+seq:A000964_F_1_20190206T020001 a seq:Text ;
+    cnt:chars """G.f.: (x^5 - 3x^4 + x^3 + x^2)/(-x^6 + 3x^4 - 7x^2 + 1).
+a(n) = 7*a(n-2) - 3*a(n-4) + a(n-6); a(0)=0, a(1)=0, a(2)=1, a(3)=1, a(4)=4, a(5)=8. - _Harvey P. Dale_, Jun 29 2011"""@en .
+
+seq:A000964_H_1_20190206T020001 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000964/b000964.txt">Table of n, a(n) for n = 0..1000</a>
+D. N. Lehmer, <a href="https://www.jstage.jst.go.jp/article/tmj1911/37/0/37_0_436/_article/-char/en">On ternary continued fractions</a>, Tohoku Math. J., 37 (1933), 436-445.
+D. N. Lehmer, <a href="/A000962/a000962.pdf">On ternary continued fractions</a> (Annotated scanned copy)
+<a href="/index/Rec#order_06">Index entries for linear recurrences with constant coefficients</a>, signature (0, 7, 0, -3, 0, 1)."""@en .
+
+seq:A000964_I_1_20190206T020001 a seq:Text ;
+    cnt:chars "M3343 N1345 #32 Feb 06 2019 02:00:01"@en .
+
+seq:A000964_K_1_20190206T020001 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000964_N_1_20190206T020001 a seq:Text ;
+    cnt:chars "The convergent sequence C_n for the ternary continued fraction (3,1;2,2) of period 2."@en .
+
+seq:A000964_O_1_20190206T020001 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A000964_V_1_20190206T020001 a seq:Text ;
+    cnt:chars "0,0,1,1,4,8,25,53,164,348,1077,2285,7072,15004,46437,98521,304920,646920,2002201,4247881,13147084,27892928,86327905,183153773,566856284,1202645508,3722157357,7896950165,24440860552,51853868404,160486408077"@en .
+
+seq:A000964_Y_1_20190206T020001 a seq:Text ;
+    cnt:chars "Cf. A000962, A000964."@en .
+
+seq:A000964_p_1_20190206T020001 a seq:Text ;
+    cnt:chars "G:=(x^5-3*x^4+x^3+x^2)/(-x^6+3*x^4-7*x^2+1): Gser:=series(G,x=0,35): seq(coeff(Gser,x,n),n=0..32); # _Emeric Deutsch_, Apr 22 2006"@en .
+
+seq:A000964_t_1_20190206T020001 a seq:Text ;
+    cnt:chars """LinearRecurrence[{0,7,0,-3,0,1},{0,0,1,1,4,8},31] (* _Harvey P. Dale_, Jun 29 2011 *)
+CoefficientList[Series[(x^5-3x^4+x^3+x^2)/(-x^6+3x^4-7x^2+1),{x,0,40}],x] (* _Vincenzo Librandi_, Apr 11 2012 *)"""@en .
+

@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.631668Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 856}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383024 a seq:Sequence ;
+    rdfs:label "A383024"@en ;
+    seq:hasTextList ( seq:A383024_I_1_20250418T212529 seq:A383024_N_1_20250418T212529 seq:A383024_C_1_20250418T212529 seq:A383024_H_1_20250418T212529 seq:A383024_F_1_20250418T212529 seq:A383024_e_1_20250418T212529 seq:A383024_o_1_20250418T212529 seq:A383024_Y_1_20250418T212529 seq:A383024_K_1_20250418T212529 seq:A383024_O_1_20250418T212529 seq:A383024_A_1_20250418T212529 seq:A383024_V_1_20250418T212529 ) .
+
+seq:A383024_A_1_20250418T212529 a seq:Text ;
+    cnt:chars "_Yifan Xie_, Apr 13 2025"@en .
+
+seq:A383024_C_1_20250418T212529 a seq:Text ;
+    cnt:chars "The infinite series {s(n)} converges to 1 from below (see link)."@en .
+
+seq:A383024_F_1_20250418T212529 a seq:Text ;
+    cnt:chars "2^n <= a(n) < 2^(n^2)."@en .
+
+seq:A383024_H_1_20250418T212529 a seq:Text ;
+    cnt:chars "Yifan Xie, <a href=\"/A383024/a383024_1.pdf\">The asymptotics of a convergent series</a>"@en .
+
+seq:A383024_I_1_20250418T212529 a seq:Text ;
+    cnt:chars "#10 Apr 18 2025 21:25:29"@en .
+
+seq:A383024_K_1_20250418T212529 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383024_N_1_20250418T212529 a seq:Text ;
+    cnt:chars "a(n) = floor(1/(1-s(n))) where s(n) = Sum_{k=1..n} phi(k)/k * log(2^k/(2^k-1)). phi(k) is the Euler totient function A000010(k)."@en .
+
+seq:A383024_O_1_20250418T212529 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383024_V_1_20250418T212529 a seq:Text ;
+    cnt:chars "3,6,13,23,61,90,229,417,917,1429,3916,5748,16323,28489,53121,89322,249079,364536,1068096,1802530,3542367,5749605,16694858,24980973,61771834,107398135,230197552,363961698,1053601058,1426995284,3997869809,7478431118"@en .
+
+seq:A383024_Y_1_20250418T212529 a seq:Text ;
+    cnt:chars "Cf. A000010."@en .
+
+seq:A383024_e_1_20250418T212529 a seq:Text ;
+    cnt:chars "For n = 3, s(3) = log(16/(sqrt(3)*7^(2/3))) = 0.926009..., so a(3) = floor(1/(1-0.926009...)) = 13."@en .
+
+seq:A383024_o_1_20250418T212529 a seq:Text ;
+    cnt:chars "(PARI) v = [log(2)]; for(n=2, 32, v = concat(v, v[n-1] + eulerphi(n)/n*log(2^n/(2^n-1)))); a(n) = floor(1/(1-v[n])); \\\\ can only compute 63 terms due to loss of precision"@en .
+

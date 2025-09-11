@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.652722Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1253}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000195 a seq:Sequence ;
+    rdfs:label "A000195"@en ;
+    seq:hasTextList ( seq:A000195_I_1_20240828T042528 seq:A000195_N_1_20240828T042528 seq:A000195_C_1_20240828T042528 seq:A000195_H_1_20240828T042528 seq:A000195_F_1_20240828T042528 seq:A000195_p_1_20240828T042528 seq:A000195_t_1_20240828T042528 seq:A000195_o_1_20240828T042528 seq:A000195_Y_1_20240828T042528 seq:A000195_K_1_20240828T042528 seq:A000195_O_1_20240828T042528 seq:A000195_A_1_20240828T042528 seq:A000195_V_1_20240828T042528 ) .
+
+seq:A000195_A_1_20240828T042528 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000195_C_1_20240828T042528 a seq:Text ;
+    cnt:chars """Equals A004233(n) - 1 for n > 1.
+Does not satisfy Benford's law [Whyman et al., 2016] - _N. J. A. Sloane_, Feb 12 2017"""@en .
+
+seq:A000195_F_1_20240828T042528 a seq:Text ;
+    cnt:chars "Conjecture: a(n) = floor(3*n^2*(n^(1/(3*n^2))-1)), checked for n <= 10^6. - _Joseph M. Shunia_, Aug 02 2024"@en .
+
+seq:A000195_H_1_20240828T042528 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000195/b000195.txt">Table of n, a(n) for n=1..10000</a>
+G. Whyman, N. Ohtori, E. Shulzinger, and Ed. Bormashenko, <a href="https://doi.org/10.1016/j.physa.2016.06.054">Revisiting the Benford law: When the Benford-like distribution of leading digits in sets of numerical data is expectable?</a>, Physica A: Statistical Mechanics and its Applications, 461, 595-601 (2016).
+<a href="/index/Be#Benford">Index entries for sequences related to Benford's law</a>"""@en .
+
+seq:A000195_I_1_20240828T042528 a seq:Text ;
+    cnt:chars "#40 Aug 28 2024 04:25:28"@en .
+
+seq:A000195_K_1_20240828T042528 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000195_N_1_20240828T042528 a seq:Text ;
+    cnt:chars "a(n) = floor(log(n))."@en .
+
+seq:A000195_O_1_20240828T042528 a seq:Text ;
+    cnt:chars "1,8"@en .
+
+seq:A000195_V_1_20240828T042528 a seq:Text ;
+    cnt:chars "0,0,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4"@en .
+
+seq:A000195_Y_1_20240828T042528 a seq:Text ;
+    cnt:chars """Cf. A000193 (nearest integer to log(n)), A004233.
+Cf. A000523."""@en .
+
+seq:A000195_o_1_20240828T042528 a seq:Text ;
+    cnt:chars """(PARI) a(n)=floor(log(n))
+(Haskell)
+a000195 = floor . log . fromIntegral  -- _Reinhard Zumkeller_, Mar 17 2015"""@en .
+
+seq:A000195_p_1_20240828T042528 a seq:Text ;
+    cnt:chars "Digits := 100; f := n->floor(evalf(log(n))); [ seq(f(n), n=1..100) ];"@en .
+
+seq:A000195_t_1_20240828T042528 a seq:Text ;
+    cnt:chars "Floor@ Log@ Range@ 105 (* _Michael De Vlieger_, Aug 21 2017 *)"@en .
+

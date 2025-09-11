@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.060237Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1795}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000662 a seq:Sequence ;
+    rdfs:label "A000662"@en ;
+    seq:hasTextList ( seq:A000662_I_1_20240702T150208 seq:A000662_N_1_20240702T150208 seq:A000662_D_1_20240702T150208 seq:A000662_H_1_20240702T150208 seq:A000662_F_1_20240702T150208 seq:A000662_o_1_20240702T150208 seq:A000662_Y_1_20240702T150208 seq:A000662_K_1_20240702T150208 seq:A000662_O_1_20240702T150208 seq:A000662_A_1_20240702T150208 seq:A000662_V_1_20240702T150208 ) .
+
+seq:A000662_A_1_20240702T150208 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000662_D_1_20240702T150208 a seq:Text ;
+    cnt:chars """F. Bergeron, G. Labelle and P. Leroux, Combinatorial Species and Tree-Like Structures, Cambridge, 1998, p. 76 (2.2.31)
+W. Oberschelp, Kombinatorische Anzahlbestimmungen in Relationen, Math. Ann., 174 (1967), 53-78.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000662_F_1_20240702T150208 a seq:Text ;
+    cnt:chars "a(n) = Sum_{1*s_1+2*s_2+...=n} (fixA[s_1, s_2,...]/(1^s_1*s_1!*2^s_2*s_2!*...)) where fixA[s_1, s_2, ...] = 2^Sum_{i, j, k>=1} (i*j*k*s_i*s_j*s_k/lcm(i, j, k)). - _Christian G. Bower_, Jan 06 2004"@en .
+
+seq:A000662_H_1_20240702T150208 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000662/b000662.txt">Table of n, a(n) for n = 1..15</a>
+P. J. Cameron, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL3/groups.html">Sequences realized by oligomorphic permutation groups</a>, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.
+W. Oberschelp, <a href="/A000662/a000662.pdf">Strukturzahlen in endlichen Relationssystemen</a>, in Contributions to Mathematical Logic (Proceedings 1966 Hanover Colloquium), pp. 199-213, North-Holland Publ., Amsterdam, 1968. [Annotated scanned copy]"""@en .
+
+seq:A000662_I_1_20240702T150208 a seq:Text ;
+    cnt:chars "M2180 N0872 #42 Jul 02 2024 15:02:08"@en .
+
+seq:A000662_K_1_20240702T150208 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000662_N_1_20240702T150208 a seq:Text ;
+    cnt:chars "Number of relations with 3 arguments on n nodes."@en .
+
+seq:A000662_O_1_20240702T150208 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000662_V_1_20240702T150208 a seq:Text ;
+    cnt:chars "2,136,22377984,768614354122719232,354460798875983863749270670915141632,146267071761884981524915186989628577728537526896649216991428608"@en .
+
+seq:A000662_Y_1_20240702T150208 a seq:Text ;
+    cnt:chars "Cf. A000595, A001377, A051241."@en .
+
+seq:A000662_o_1_20240702T150208 a seq:Text ;
+    cnt:chars """(Python)
+from itertools import product
+from math import factorial, prod, lcm
+from fractions import Fraction
+from sympy.utilities.iterables import partitions
+def A000662(n): return int(sum(Fraction(1<<sum(r*s*t//lcm(r,s,t)*p[r]*p[s]*p[t] for r,s,t in product(p.keys(),repeat=3)),prod(q**p[q]*factorial(p[q]) for q in p)) for p in partitions(n))) # _Chai Wah Wu_, Jul 02 2024"""@en .
+

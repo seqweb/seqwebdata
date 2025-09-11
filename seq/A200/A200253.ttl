@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.961357Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1126}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200253 a seq:Sequence ;
+    rdfs:label "A200253"@en ;
+    seq:hasTextList ( seq:A200253_I_1_20180223T074729 seq:A200253_N_1_20180223T074729 seq:A200253_C_1_20180223T074729 seq:A200253_H_1_20180223T074729 seq:A200253_F_1_20180223T074729 seq:A200253_e_1_20180223T074729 seq:A200253_Y_1_20180223T074729 seq:A200253_K_1_20180223T074729 seq:A200253_O_1_20180223T074729 seq:A200253_A_1_20180223T074729 seq:A200253_V_1_20180223T074729 ) .
+
+seq:A200253_A_1_20180223T074729 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 15 2011"@en .
+
+seq:A200253_C_1_20180223T074729 a seq:Text ;
+    cnt:chars "Row 4 of A200251."@en .
+
+seq:A200253_F_1_20180223T074729 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 2*a(n-1) - 2*a(n-3) + 3*a(n-4) - 4*a(n-5) + 4*a(n-7) - 3*a(n-8) + 2*a(n-9) - 2*a(n-11) + a(n-12).
+Empirical g.f.: x*(8 + 8*x + 21*x^2 + 13*x^3 + 21*x^4 + 12*x^5 + 13*x^6 - 2*x^7 + 3*x^8 - 2*x^10 + x^11) / ((1 - x)^5*(1 + x)^3*(1 + x^2)^2). - _Colin Barker_, Feb 23 2018"""@en .
+
+seq:A200253_H_1_20180223T074729 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200253/b200253.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200253_I_1_20180223T074729 a seq:Text ;
+    cnt:chars "#8 Feb 23 2018 07:47:29"@en .
+
+seq:A200253_K_1_20180223T074729 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200253_N_1_20180223T074729 a seq:Text ;
+    cnt:chars "Number of 0..n arrays x(0..3) of 4 elements with each no smaller than the sum of its previous elements modulo (n+1)."@en .
+
+seq:A200253_O_1_20180223T074729 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200253_V_1_20180223T074729 a seq:Text ;
+    cnt:chars "8,24,69,135,267,448,750,1125,1690,2376,3339,4459,5957,7680,9900,12393,15516,19000,23265,27951,33583,39744,47034,54925,64142,74088,85575,97875,111945,126976,144024,162129,182512,204120,228285,253783,282131,312000"@en .
+
+seq:A200253_Y_1_20180223T074729 a seq:Text ;
+    cnt:chars "Cf. A200251."@en .
+
+seq:A200253_e_1_20180223T074729 a seq:Text ;
+    cnt:chars """Some solutions for n=6:
+..4....4....0....1....2....0....1....4....0....1....3....2....1....3....2....2
+..4....6....2....1....6....1....6....5....0....3....5....2....1....6....6....6
+..6....5....5....6....1....2....0....6....2....5....1....5....6....3....2....4
+..1....6....3....6....2....4....3....3....5....5....3....4....5....6....3....6"""@en .
+

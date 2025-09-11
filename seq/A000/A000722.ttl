@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.208728Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2093}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000722 a seq:Sequence ;
+    rdfs:label "A000722"@en ;
+    seq:hasTextList ( seq:A000722_I_1_20240325T001535 seq:A000722_N_1_20240325T001535 seq:A000722_C_1_20240325T001535 seq:A000722_D_1_20240325T001535 seq:A000722_H_1_20240325T001535 seq:A000722_F_1_20240325T001535 seq:A000722_t_1_20240325T001535 seq:A000722_o_1_20240325T001535 seq:A000722_Y_1_20240325T001535 seq:A000722_K_1_20240325T001535 seq:A000722_O_1_20240325T001535 seq:A000722_A_1_20240325T001535 seq:A000722_V_1_20240325T001535 ) .
+
+seq:A000722_A_1_20240325T001535 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000722_C_1_20240325T001535 a seq:Text ;
+    cnt:chars """These are invertible maps from {0,1}^n to {0,1}^n, or in other words permutations of the 2^n binary vectors of length n.
+2^n-th order derivative of n-th Mandelbrot iterate. Example: a(2) = 24, after one iterate in the Mandelbrot(z(n+1) = z(n)^2 + c) we have the function z(2) = z^4 + 2*c*z^2 + c^2 + c, for which the 4th-order derivative is 24. - Bert van den Bosch (zeusooooo(AT)hotmail.com), Sep 07 2003"""@en .
+
+seq:A000722_D_1_20240325T001535 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000722_F_1_20240325T001535 a seq:Text ;
+    cnt:chars """a(n) = (2^n)!.
+Sum of reciprocals = 0.54169146825401604874... - _Cino Hilliard_, Feb 08 2003"""@en .
+
+seq:A000722_H_1_20240325T001535 a seq:Text ;
+    cnt:chars """Delbert L. Johnson, <a href="/A000722/b000722.txt">Table of n, a(n) for n = 0..8</a>
+M. A. Harrison, <a href="/A000653/a000653.pdf">The number of classes of invertible Boolean functions</a>, J. ACM 10 (1963), 25-28. [Annotated scan of page 27 only]
+C. S. Lorens, <a href="http://dx.doi.org/10.1109/PGEC.1964.263724">Invertible Boolean functions</a>, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541.
+C. S. Lorens, <a href="/A000722/a000722.pdf">Invertible Boolean functions</a>, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541. [Annotated scan of page 530 only]
+I. Strazdins, <a href="http://dx.doi.org/10.1023/A:1005769927571">Universal affine classification of Boolean functions</a>, Acta Applic. Math. 46 (1997), 147-167.
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000722_I_1_20240325T001535 a seq:Text ;
+    cnt:chars "M2144 N0853 #52 Mar 25 2024 00:15:35"@en .
+
+seq:A000722_K_1_20240325T001535 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000722_N_1_20240325T001535 a seq:Text ;
+    cnt:chars "Number of invertible Boolean functions of n variables: a(n) = (2^n)!."@en .
+
+seq:A000722_O_1_20240325T001535 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000722_V_1_20240325T001535 a seq:Text ;
+    cnt:chars "1,2,24,40320,20922789888000,263130836933693530167218012160000000,126886932185884164103433389335161480802865516174545192198801894375214704230400000000000000"@en .
+
+seq:A000722_Y_1_20240325T001535 a seq:Text ;
+    cnt:chars "Cf. A000652, A000653, A000654, A001038, A001537, A046856, A046857, A244061."@en .
+
+seq:A000722_o_1_20240325T001535 a seq:Text ;
+    cnt:chars "(PARI) atonfact(a,n) = {sr=0; for(x=1,n, y =(a^x)!; sr+=1.0/y; print1(y\" \"); ); print(); print(sr) }"@en .
+
+seq:A000722_t_1_20240325T001535 a seq:Text ;
+    cnt:chars "a[n_] := Factorial[2^n]; Table[a[n],{n,0,6}] (* _James C. McMahon_, Dec 06 2023 *)"@en .
+

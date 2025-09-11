@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.719764Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 811}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200138 a seq:Sequence ;
+    rdfs:label "A200138"@en ;
+    seq:hasTextList ( seq:A200138_I_1_20220602T054328 seq:A200138_N_1_20220602T054328 seq:A200138_H_1_20220602T054328 seq:A200138_F_1_20220602T054328 seq:A200138_e_1_20220602T054328 seq:A200138_p_1_20220602T054328 seq:A200138_t_1_20220602T054328 seq:A200138_o_1_20220602T054328 seq:A200138_Y_1_20220602T054328 seq:A200138_K_1_20220602T054328 seq:A200138_O_1_20220602T054328 seq:A200138_A_1_20220602T054328 seq:A200138_V_1_20220602T054328 ) .
+
+seq:A200138_A_1_20220602T054328 a seq:Text ;
+    cnt:chars "_R. J. Mathar_, Nov 13 2011"@en .
+
+seq:A200138_F_1_20220602T054328 a seq:Text ;
+    cnt:chars "Psi(4/5) = -gamma + Pi*sqrt(1+2/sqrt 5)/2 -5*log(5)*log((3+sqrt 5)/2)/4."@en .
+
+seq:A200138_H_1_20220602T054328 a seq:Text ;
+    cnt:chars "<a href=\"/index/Di#differential_equations\">Index entries for sequences related to the digamma function</a>"@en .
+
+seq:A200138_I_1_20220602T054328 a seq:Text ;
+    cnt:chars "#13 Jun 02 2022 05:43:28"@en .
+
+seq:A200138_K_1_20220602T054328 a seq:Text ;
+    cnt:chars "cons,nonn"@en .
+
+seq:A200138_N_1_20220602T054328 a seq:Text ;
+    cnt:chars "Decimal expansion of the negated value of the digamma function at 4/5."@en .
+
+seq:A200138_O_1_20220602T054328 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A200138_V_1_20220602T054328 a seq:Text ;
+    cnt:chars "9,6,5,0,0,8,5,6,6,7,0,6,1,3,8,4,5,9,3,9,1,2,9,7,6,3,3,1,5,6,8,3,5,4,1,9,6,3,4,1,6,0,4,8,9,6,9,5,2,2,2,8,2,9,1,0,9,8,1,0,7,9,4,2,4,4,9,6,1,2,0,7,3,8,5,6,8,4,0,0,4,3,0,6,3,7,6"@en .
+
+seq:A200138_Y_1_20220602T054328 a seq:Text ;
+    cnt:chars "Cf. A020759, A047787, A020777, A200134-A200137."@en .
+
+seq:A200138_e_1_20220602T054328 a seq:Text ;
+    cnt:chars "Psi(4/5) = -0.965008566706138459391297633..."@en .
+
+seq:A200138_o_1_20220602T054328 a seq:Text ;
+    cnt:chars "(PARI) -psi(4/5) \\\\ _Charles R Greathouse IV_, Nov 22 2011"@en .
+
+seq:A200138_p_1_20220602T054328 a seq:Text ;
+    cnt:chars "-gamma+Pi*sqrt(1+2/sqrt(5))/2-5*log(5)/4-sqrt(5)/4*log(3/2+sqrt(5)/2) ; evalf(%) ;"@en .
+
+seq:A200138_t_1_20220602T054328 a seq:Text ;
+    cnt:chars "RealDigits[ -PolyGamma[4/5], 10, 87] // First (* _Jean-François Alcover_, Feb 20 2013 *)"@en .
+

@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.116800Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 3156}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000684 a seq:Sequence ;
+    rdfs:label "A000684"@en ;
+    seq:hasTextList ( seq:A000684_I_1_20231027T182540 seq:A000684_N_1_20231027T182540 seq:A000684_C_1_20231027T182540 seq:A000684_D_1_20231027T182540 seq:A000684_H_1_20231027T182540 seq:A000684_F_1_20231027T182540 seq:A000684_t_1_20231027T182540 seq:A000684_o_1_20231027T182540 seq:A000684_Y_1_20231027T182540 seq:A000684_K_1_20231027T182540 seq:A000684_O_1_20231027T182540 seq:A000684_A_1_20231027T182540 seq:A000684_E_1_20231027T182540 seq:A000684_V_1_20231027T182540 ) .
+
+seq:A000684_A_1_20231027T182540 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000684_C_1_20231027T182540 a seq:Text ;
+    cnt:chars "a(n) = A058872(n) + 1.  This sequence counts the empty graph on n nodes which is not allowed in A058872. - _Geoffrey Critzer_, Oct 07 2012"@en .
+
+seq:A000684_D_1_20231027T182540 a seq:Text ;
+    cnt:chars """R. W. Robinson, Numerical implementation of graph counting algorithms, AGRC Grant, Math. Dept., Univ. Newcastle, Australia, 1976.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000684_E_1_20231027T182540 a seq:Text ;
+    cnt:chars "a(15) onwards added by _N. J. A. Sloane_, Oct 19 2006 from the Robinson reference"@en .
+
+seq:A000684_F_1_20231027T182540 a seq:Text ;
+    cnt:chars """G.f.: A(x) = Sum_{n>=1} x^n/(1 - 2^n*x)^n. - _Paul D. Hanna_, Sep 14 2009
+G.f.: 1/(W(0)-x) where W(k) = x*(x*2^k-1)^k - (x*2^(k+1)-1)^(k+1) + x*((2*x*2^k-1)^(2*k+2))/W(k+1); (continued fraction, Euler's 1st kind, 1-step). - _Sergei N. Gladkovskii_, Sep 17 2012
+From _Peter Bala_, Apr 01 2013: (Start)
+a(n) = Sum_{k = 0..n-1} binomial(n-1,k)*2^(k*(n-k)).
+a(n) = Sum_{k = 0..n} 2^k*A111636(n,k).
+Let E(x) = Sum_{n >= 0} x^n/(n!*2^C(n,2)). Then a generating function for this sequence (but with an offset of 0) is E(x)*E(2*x) = Sum_{n >= 0} a(n+1)*x^n/(n!*2^C(n,2)) = 1 + 3*x + 13*x^2/(2!*2) + 81*x^3/(3!*2^3) + 721*x^4/(4!*2^6) + .... Cf. A134531. (End)"""@en .
+
+seq:A000684_H_1_20231027T182540 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000684/b000684.txt">Table of n, a(n) for n = 1..100</a> (first 32 terms from R. W. Robinson)
+S. R. Finch, <a href="http://www.people.fas.harvard.edu/~sfinch/">Bipartite, k-colorable and k-colored graphs</a> (2*A000684)
+S. R. Finch, <a href="/A191371/a191371.pdf">Bipartite, k-colorable and k-colored graphs</a>, June 5, 2003. [Cached copy, with permission of the author]
+F. Harary and R. W. Robinson, <a href="http://dx.doi.org/10.4153/CJM-1979-007-3">Labeled bipartite blocks</a>, Canad. J. Math., 31 (1979), 60-68.
+F. Harary and R. W. Robinson, <a href="/A001832/a001832.pdf">Labeled bipartite blocks</a>, Canad. J. Math., 31 (1979), 60-68. (Annotated scanned copy)
+D. A. Klarner, <a href="http://dx.doi.org/10.1016/S0021-9800(69)80100-6">The number of graded partially ordered sets</a>, J. Combin. Theory, 6 (1969), 12-19.
+D. A. Klarner, <a href="/A000798/a000798_11.pdf">The number of graded partially ordered sets</a>, J. Combin. Theory, 6 (1969), 12-19. [Annotated scanned copy]
+A. Nymeyer and R. W. Robinson, <a href="/A000684/a000684.pdf">Tabulation of the Numbers of Labeled Bipartite Blocks and Related Classes of Bicolored Graphs</a>, 1982 [Annotated scanned copy of unpublished MS and letter from R.W.R.]
+R. C. Read, <a href="/A000684/a000684_1.pdf">Letter to N. J. A. Sloane, Oct. 29, 1976</a>"""@en .
+
+seq:A000684_I_1_20231027T182540 a seq:Text ;
+    cnt:chars "M2954 N1192 #73 Oct 27 2023 18:25:40"@en .
+
+seq:A000684_K_1_20231027T182540 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000684_N_1_20231027T182540 a seq:Text ;
+    cnt:chars "Number of colored labeled n-node graphs with 2 interchangeable colors."@en .
+
+seq:A000684_O_1_20231027T182540 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000684_V_1_20231027T182540 a seq:Text ;
+    cnt:chars "1,3,13,81,721,9153,165313,4244481,154732801,8005686273,587435092993,61116916981761,9011561121239041,1882834327457349633,557257804202631217153,233610656002563147038721,138681207656726645785559041"@en .
+
+seq:A000684_Y_1_20231027T182540 a seq:Text ;
+    cnt:chars """2 * A000683(n) + 1.
+Cf. A058872, A111636, A134531."""@en .
+
+seq:A000684_o_1_20231027T182540 a seq:Text ;
+    cnt:chars "(PARI) a(n)=polcoeff(sum(k=1,n,x^k/(1-2^k*x +x*O(x^n))^k),n) \\\\ _Paul D. Hanna_, Sep 14 2009"@en .
+
+seq:A000684_t_1_20231027T182540 a seq:Text ;
+    cnt:chars "With[{nn=20},Rest[CoefficientList[Series[Sum[x^n/(1-2^n x)^n,{n,nn}],{x,0,nn}], x]]] (* _Harvey P. Dale_, Nov 24 2011 *)"@en .
+

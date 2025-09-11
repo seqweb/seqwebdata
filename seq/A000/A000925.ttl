@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.689159Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1482}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000925 a seq:Sequence ;
+    rdfs:label "A000925"@en ;
+    seq:hasTextList ( seq:A000925_I_1_20170426T225925 seq:A000925_N_1_20170426T225925 seq:A000925_D_1_20170426T225925 seq:A000925_H_1_20170426T225925 seq:A000925_F_1_20170426T225925 seq:A000925_t_1_20170426T225925 seq:A000925_o_1_20170426T225925 seq:A000925_Y_1_20170426T225925 seq:A000925_K_1_20170426T225925 seq:A000925_O_1_20170426T225925 seq:A000925_A_1_20170426T225925 seq:A000925_V_1_20170426T225925 ) .
+
+seq:A000925_A_1_20170426T225925 a seq:Text ;
+    cnt:chars "Jacques Haubrich (jhaubrich(AT)freeler.nl)"@en .
+
+seq:A000925_D_1_20170426T225925 a seq:Text ;
+    cnt:chars """A. Das and A. C. Melissinos, Quantum Mechanics: A Modern Introduction, Gordon and Breach, 1986, p. 47.
+E. Grosswald, Representations of Integers as Sums of Squares. Springer-Verlag, NY, 1985."""@en .
+
+seq:A000925_F_1_20170426T225925 a seq:Text ;
+    cnt:chars """Coefficient of q^k in (1/4)*(1 + theta_3(0, q))^2.
+a(A001481(n))>0; a(A022544(n))=0. - _Benoit Cloitre_, Apr 20 2003"""@en .
+
+seq:A000925_H_1_20170426T225925 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000925/b000925.txt">Table of n, a(n) for n = 0..10000</a>
+<a href="/index/Su#ssq">Index entries for sequences related to sums of squares</a>"""@en .
+
+seq:A000925_I_1_20170426T225925 a seq:Text ;
+    cnt:chars "#30 Apr 26 2017 22:59:25"@en .
+
+seq:A000925_K_1_20170426T225925 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000925_N_1_20170426T225925 a seq:Text ;
+    cnt:chars "Number of ordered ways of writing n as a sum of 2 squares of nonnegative integers."@en .
+
+seq:A000925_O_1_20170426T225925 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000925_V_1_20170426T225925 a seq:Text ;
+    cnt:chars "1,2,1,0,2,2,0,0,1,2,2,0,0,2,0,0,2,2,1,0,2,0,0,0,0,4,2,0,0,2,0,0,1,0,2,0,2,2,0,0,2,2,0,0,0,2,0,0,0,2,3,0,2,2,0,0,0,0,2,0,0,2,0,0,2,4,0,0,2,0,0,0,1,2,2,0,0,0,0,0,2,2,2,0,0,4,0,0,0,2,2,0,0,0,0,0,0,2,1,0,4"@en .
+
+seq:A000925_Y_1_20170426T225925 a seq:Text ;
+    cnt:chars "Cf. A000290, A010052, A000161, A247367."@en .
+
+seq:A000925_o_1_20170426T225925 a seq:Text ;
+    cnt:chars """(PARI) a(n)=sum(i=0,n,sum(j=0,n,if(i^2+j^2-n,0,1)))
+(Haskell)
+a000925 n = sum $ map (a010052 . (n -)) $ takeWhile (<= n) a000290_list
+-- _Reinhard Zumkeller_, Sep 14 2014"""@en .
+
+seq:A000925_t_1_20170426T225925 a seq:Text ;
+    cnt:chars """a[n_] := (pr = PowersRepresentations[n, 2, 2]; Count[Union[Join[pr, Reverse /@ pr]], {j_ /; j >= 0, k_ /; k >= 0}]); a /@ Range[0, 100] (* _Jean-François Alcover_, Apr 05 2011 *)
+nn = 100; t = CoefficientList[Series[Sum[x^k^2, {k, 0, Sqrt[nn]}]^2, {x, 0, nn}], x] (* _T. D. Noe_, Apr 05 2011 *)
+SquareQ[n_] := IntegerQ[Sqrt[n]]; Table[Count[FrobeniusSolve[{1, 1}, n], {__?SquareQ}], {n, 0, 100}] (* _Robert G. Wilson v_, Apr 15 2017 *)"""@en .
+

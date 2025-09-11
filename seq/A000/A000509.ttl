@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.711224Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1614}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000509 a seq:Sequence ;
+    rdfs:label "A000509"@en ;
+    seq:hasTextList ( seq:A000509_I_1_20170109T044002 seq:A000509_N_1_20170109T044002 seq:A000509_C_1_20170109T044002 seq:A000509_H_1_20170109T044002 seq:A000509_e_1_20170109T044002 seq:A000509_Y_1_20170109T044002 seq:A000509_K_1_20170109T044002 seq:A000509_O_1_20170109T044002 seq:A000509_A_1_20170109T044002 seq:A000509_E_1_20170109T044002 seq:A000509_V_1_20170109T044002 ) .
+
+seq:A000509_A_1_20170109T044002 a seq:Text ;
+    cnt:chars "J. W. P. Hirschfeld [ jwph(AT)sussex.ac.uk ]"@en .
+
+seq:A000509_C_1_20170109T044002 a seq:Text ;
+    cnt:chars """The Davydov et al. reference arXiv:10004.2817 has data sufficient for a b-file. - _Jonathan Vos Post_, Apr 18 2010
+The terms run through indices q=A000961(i), i>=6. - _R. J. Mathar_, Jan 09 2017"""@en .
+
+seq:A000509_E_1_20170109T044002 a seq:Text ;
+    cnt:chars "Definition clarified by G. Keri (keri(AT)sztaki.hu), Jan 03 2008"@en .
+
+seq:A000509_H_1_20170109T044002 a seq:Text ;
+    cnt:chars """Alexander A. Davydov, Giorgio Faina, Stefano Marcugini, Fernanda Pambianco, <a href="http://arxiv.org/abs/1004.2817">New sizes of complete arcs in PG(2,q)</a>, arXiv:1004.2817 [math.CO], April 16, 2010.
+Alexander A. Davydov, Giorgio Faina, Stefano Marcugini, Fernanda Pambianco, <a href="http://dx.doi.org/10.1007/s00022-009-0009-3">On sizes of complete caps in projective spaced PG(n,q) and arcs in planes PG(2,q)</a>, J. Geom. 94 (1) (2009) 31-58.
+J. W. P. Hirschfeld, <a href="http://dx.doi.org/10.1016/S0012-365X(96)00330-5">Complete arcs</a>, Discr. Math., 174 (1997), 177-184.
+J. W. P. Hirschfeld and L. Storme, <a href="https://cage.ugent.be/~ls/max2000finalprocfilejames.pdf">The packing problem in statistics, coding theory and finite projective spaces</a>, J. Statist. Plann. Inference 72 (1998), no. 1-2, 355-380.
+G. Keri, <a href="http://dx.doi.org/10.1002/jcd.20091">Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)</a>, Journal of Combinatorial Designs, Vol. 14 (2006), pp. 363-390."""@en .
+
+seq:A000509_I_1_20170109T044002 a seq:Text ;
+    cnt:chars "#22 Jan 09 2017 04:40:02"@en .
+
+seq:A000509_K_1_20170109T044002 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice"@en .
+
+seq:A000509_N_1_20170109T044002 a seq:Text ;
+    cnt:chars "Size of second largest n-arc in PG(2,q), where q runs through the primes and prime powers >= 7."@en .
+
+seq:A000509_O_1_20170109T044002 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000509_V_1_20170109T044002 a seq:Text ;
+    cnt:chars "6,6,8,10,12,13,14,14,17,21,22,24"@en .
+
+seq:A000509_Y_1_20170109T044002 a seq:Text ;
+    cnt:chars """Cf. A000510.
+Cf. A000961."""@en .
+
+seq:A000509_e_1_20170109T044002 a seq:Text ;
+    cnt:chars "m'(31)=22 because there are no complete n-arcs in PG(2,31) for 23<=n<=31."@en .
+

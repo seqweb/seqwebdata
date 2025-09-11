@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.947805Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 702}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200246 a seq:Sequence ;
+    rdfs:label "A200246"@en ;
+    seq:hasTextList ( seq:A200246_I_1_20240702T223138 seq:A200246_N_1_20240702T223138 seq:A200246_C_1_20240702T223138 seq:A200246_H_1_20240702T223138 seq:A200246_t_1_20240702T223138 seq:A200246_o_1_20240702T223138 seq:A200246_Y_1_20240702T223138 seq:A200246_K_1_20240702T223138 seq:A200246_O_1_20240702T223138 seq:A200246_A_1_20240702T223138 seq:A200246_V_1_20240702T223138 ) .
+
+seq:A200246_A_1_20240702T223138 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 15 2011"@en .
+
+seq:A200246_C_1_20240702T223138 a seq:Text ;
+    cnt:chars "Characteristic function of A027698."@en .
+
+seq:A200246_H_1_20240702T223138 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A200246/b200246.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200246_I_1_20240702T223138 a seq:Text ;
+    cnt:chars "#20 Jul 02 2024 22:31:38"@en .
+
+seq:A200246_K_1_20240702T223138 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200246_N_1_20240702T223138 a seq:Text ;
+    cnt:chars "a(n)=1 iff binary weight of n-th prime is odd."@en .
+
+seq:A200246_O_1_20240702T223138 a seq:Text ;
+    cnt:chars "1"@en .
+
+seq:A200246_V_1_20240702T223138 a seq:Text ;
+    cnt:chars "1,0,0,1,1,1,0,1,0,0,1,1,1,0,1,0,1,1,1,0,1,1,0,0,1,0,1,1,1,0,1,1,1,0,0,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,0,1,0,1,0,0,1,0,1,1,1,1,1,1,1"@en .
+
+seq:A200246_Y_1_20240702T223138 a seq:Text ;
+    cnt:chars "Cf. A010060, A027698, A200244."@en .
+
+seq:A200246_o_1_20240702T223138 a seq:Text ;
+    cnt:chars """(Magma) [IsOdd(&+Intseq(NthPrime(n),2)) select 1 else 0: n in [1..100]]; // _Bruno Berselli_, Nov 16 2011
+(PARI) a(n) = hammingweight(prime(n))%2; \\\\ _Ruud H.G. van Tol_, Jul 02 2024"""@en .
+
+seq:A200246_t_1_20240702T223138 a seq:Text ;
+    cnt:chars "If[OddQ[Total[IntegerDigits[#,2]]],1,0]&/@Prime[Range[90]] (* _Harvey P. Dale_, Jun 04 2012 *)"@en .
+

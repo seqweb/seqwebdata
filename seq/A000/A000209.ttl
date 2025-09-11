@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.686803Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1098}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000209 a seq:Sequence ;
+    rdfs:label "A000209"@en ;
+    seq:hasTextList ( seq:A000209_I_1_20231028T120311 seq:A000209_N_1_20231028T120311 seq:A000209_C_1_20231028T120311 seq:A000209_H_1_20231028T120311 seq:A000209_p_1_20231028T120311 seq:A000209_t_1_20231028T120311 seq:A000209_K_1_20231028T120311 seq:A000209_O_1_20231028T120311 seq:A000209_A_1_20231028T120311 seq:A000209_V_1_20231028T120311 ) .
+
+seq:A000209_A_1_20231028T120311 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000209_C_1_20231028T120311 a seq:Text ;
+    cnt:chars "\"At lunch one day, feeling even more ebullient than usual, he [Richard Feynman] challenged the table to a competition. He bet that he could solve any problem within sixty seconds, to within ten percent accuracy, that could be stated within ten seconds. ... Under pressure, his friends found themselves unable to stump him. ... Then Paul Olum spoke up. ... He demanded the tangent of ten to the hundredth. The competition was over. ... Even Feynman could not produce that on short notice.\" [James Gleick, Genius, Pantheon, NY, 1992, p. 178.] - _N. J. A. Sloane_, Jun 25 2018"@en .
+
+seq:A000209_H_1_20231028T120311 a seq:Text ;
+    cnt:chars "N. J. A. Sloane, <a href=\"/A000209/b000209.txt\">Table of n, a(n) for n = 0..20000</a> (first 1000 terms from T. D. Noe)"@en .
+
+seq:A000209_I_1_20231028T120311 a seq:Text ;
+    cnt:chars "#26 Oct 28 2023 12:03:11"@en .
+
+seq:A000209_K_1_20231028T120311 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A000209_N_1_20231028T120311 a seq:Text ;
+    cnt:chars "Nearest integer to tan n."@en .
+
+seq:A000209_O_1_20231028T120311 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000209_V_1_20231028T120311 a seq:Text ;
+    cnt:chars "0,2,-2,0,1,-3,0,1,-7,0,1,-226,-1,0,7,-1,0,3,-1,0,2,-2,0,2,-2,0,1,-3,0,1,-6,0,1,-75,-1,0,8,-1,0,4,-1,0,2,-1,0,2,-2,0,1,-3,0,1,-6,0,1,-45,-1,0,8,-1,0,4,-1,0,2,-1,0,2,-2,0,1,-3,0,1,-6,0,1,-32,-1,0,9,-1"@en .
+
+seq:A000209_p_1_20231028T120311 a seq:Text ;
+    cnt:chars "Digits := 100; f := n->round(evalf(tan(n))); [ seq(f(n), n=0..100) ];"@en .
+
+seq:A000209_t_1_20231028T120311 a seq:Text ;
+    cnt:chars "Round[Tan[Range[0,90]]] (* _Harvey P. Dale_, Aug 26 2013 *)"@en .
+

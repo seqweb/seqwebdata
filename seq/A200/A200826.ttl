@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.164523Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 775}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200826 a seq:Sequence ;
+    rdfs:label "A200826"@en ;
+    seq:hasTextList ( seq:A200826_I_1_20120331T123641 seq:A200826_N_1_20120331T123641 seq:A200826_C_1_20120331T123641 seq:A200826_H_1_20120331T123641 seq:A200826_e_1_20120331T123641 seq:A200826_K_1_20120331T123641 seq:A200826_O_1_20120331T123641 seq:A200826_A_1_20120331T123641 seq:A200826_V_1_20120331T123641 ) .
+
+seq:A200826_A_1_20120331T123641 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 23 2011"@en .
+
+seq:A200826_C_1_20120331T123641 a seq:Text ;
+    cnt:chars "Column 3 of A200831"@en .
+
+seq:A200826_H_1_20120331T123641 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200826/b200826.txt\">Table of n, a(n) for n = 1..32</a>"@en .
+
+seq:A200826_I_1_20120331T123641 a seq:Text ;
+    cnt:chars "#7 Mar 31 2012 12:36:41"@en .
+
+seq:A200826_K_1_20120331T123641 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200826_N_1_20120331T123641 a seq:Text ;
+    cnt:chars "Number of nX3 0..5 arrays with every row and column running average nondecreasing rightwards and downwards"@en .
+
+seq:A200826_O_1_20120331T123641 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200826_V_1_20120331T123641 a seq:Text ;
+    cnt:chars "69,1630,33540,642953,11757774,207535740,3568229516,60064451704,994081203872,16221664901551,261576061692669,4174923985695564,66040940309213362,1036456712144381487,16152737625133763191"@en .
+
+seq:A200826_e_1_20120331T123641 a seq:Text ;
+    cnt:chars """Some solutions for n=4
+..0..0..0....0..0..0....0..0..1....0..0..0....0..0..1....0..0..0....0..0..1
+..0..1..2....0..2..3....0..1..1....0..1..2....0..1..3....0..0..0....0..2..3
+..0..4..2....2..2..5....0..3..3....0..2..1....2..3..4....1..5..5....3..3..5
+..1..3..5....3..5..4....3..3..4....2..5..5....3..5..5....1..3..3....3..3..5"""@en .
+

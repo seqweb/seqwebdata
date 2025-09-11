@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.629327Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1147}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383023 a seq:Sequence ;
+    rdfs:label "A383023"@en ;
+    seq:hasTextList ( seq:A383023_I_1_20250413T081910 seq:A383023_N_1_20250413T081910 seq:A383023_H_1_20250413T081910 seq:A383023_F_1_20250413T081910 seq:A383023_e_1_20250413T081910 seq:A383023_Y_1_20250413T081910 seq:A383023_K_1_20250413T081910 seq:A383023_O_1_20250413T081910 seq:A383023_A_1_20250413T081910 seq:A383023_V_1_20250413T081910 ) .
+
+seq:A383023_A_1_20250413T081910 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 12 2025"@en .
+
+seq:A383023_F_1_20250413T081910 a seq:Text ;
+    cnt:chars """A(n,k) = (1/n) * (k^n + Sum_{d<n and d|n} (-1)^(n/d) * d * A(d,k)).
+Product_{n>=1} (1 + x^n)^A(n,k) = 1/(1 - k*x)."""@en .
+
+seq:A383023_H_1_20250413T081910 a seq:Text ;
+    cnt:chars """Christian G. Bower, <a href="https://oeis.org/transforms_pari.txt">PARI programs for transforms</a>, 2007.
+N. J. A. Sloane, <a href="/transforms.txt">Maple programs for transforms</a>, 2001-2020."""@en .
+
+seq:A383023_I_1_20250413T081910 a seq:Text ;
+    cnt:chars "#14 Apr 13 2025 08:19:10"@en .
+
+seq:A383023_K_1_20250413T081910 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A383023_N_1_20250413T081910 a seq:Text ;
+    cnt:chars "Square array A(n,k), n >= 1, k >= 1, read by antidiagonals downwards, where A(n,k) is the n-th term of the inverse Weigh transform of j-> k^j."@en .
+
+seq:A383023_O_1_20250413T081910 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383023_V_1_20250413T081910 a seq:Text ;
+    cnt:chars "1,2,1,3,3,0,4,6,2,1,5,10,8,6,0,6,15,20,24,6,0,7,21,40,70,48,11,0,8,28,70,165,204,124,18,1,9,36,112,336,624,690,312,36,0,10,45,168,616,1554,2620,2340,834,56,0,11,55,240,1044,3360,7805,11160,8230,2184,105,0"@en .
+
+seq:A383023_Y_1_20250413T081910 a seq:Text ;
+    cnt:chars """Columns k=1..5 give A209229, A306156, A306157, A306158, A306159.
+Cf. A074650."""@en .
+
+seq:A383023_e_1_20250413T081910 a seq:Text ;
+    cnt:chars """Square array begins:
+  1,  2,   3,    4,     5,     6,      7, ...
+  1,  3,   6,   10,    15,    21,     28, ...
+  0,  2,   8,   20,    40,    70,    112, ...
+  1,  6,  24,   70,   165,   336,    616, ...
+  0,  6,  48,  204,   624,  1554,   3360, ...
+  0, 11, 124,  690,  2620,  7805,  19656, ...
+  0, 18, 312, 2340, 11160, 39990, 117648, ..."""@en .
+

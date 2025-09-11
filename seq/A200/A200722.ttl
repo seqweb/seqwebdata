@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.953327Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1070}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200722 a seq:Sequence ;
+    rdfs:label "A200722"@en ;
+    seq:hasTextList ( seq:A200722_I_1_20130513T015421 seq:A200722_N_1_20130513T015421 seq:A200722_C_1_20130513T015421 seq:A200722_H_1_20130513T015421 seq:A200722_F_1_20130513T015421 seq:A200722_o_1_20130513T015421 seq:A200722_Y_1_20130513T015421 seq:A200722_K_1_20130513T015421 seq:A200722_O_1_20130513T015421 seq:A200722_A_1_20130513T015421 seq:A200722_V_1_20130513T015421 ) .
+
+seq:A200722_A_1_20130513T015421 a seq:Text ;
+    cnt:chars "_Charles R Greathouse IV_, Nov 29 2011"@en .
+
+seq:A200722_C_1_20130513T015421 a seq:Text ;
+    cnt:chars "Members of A135581, sorted. Characterizations (see Formulas section, below) are possible for similar sequences as well."@en .
+
+seq:A200722_F_1_20130513T015421 a seq:Text ;
+    cnt:chars "Characterization: all terms of this sequence are of the form p, p^3, p^4, or pq where p and q are distinct primes. All but 16 primes {2, 3, 5, 7, 17, 19, 23, 83, 89, 97, 101, 103, 107, 109, 113} are in this sequence; all p^3 and p^4 are in this sequence; pq is in this sequence for all p < q < p^2."@en .
+
+seq:A200722_H_1_20130513T015421 a seq:Text ;
+    cnt:chars "Charles R Greathouse IV, <a href=\"/A200722/b200722.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200722_I_1_20130513T015421 a seq:Text ;
+    cnt:chars "#21 May 13 2013 01:54:21"@en .
+
+seq:A200722_K_1_20130513T015421 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200722_N_1_20130513T015421 a seq:Text ;
+    cnt:chars "Numbers that are the 5th-smallest divisor of n for some n with precisely 25 divisors."@en .
+
+seq:A200722_O_1_20130513T015421 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200722_V_1_20130513T015421 a seq:Text ;
+    cnt:chars "6,8,11,13,15,16,21,27,29,31,35,37,41,43,47,53,55,59,61,65,67,71,73,77,79,81,85,91,95,115,119,125,127,131,133,137,139,143,149,151,157,161,163,167,173,179,181,187,191,193,197,199,203,209,211,217,221,223"@en .
+
+seq:A200722_Y_1_20130513T015421 a seq:Text ;
+    cnt:chars "Cf. A135581."@en .
+
+seq:A200722_o_1_20130513T015421 a seq:Text ;
+    cnt:chars "(PARI) is(n)=my(f=factor(n));if(#f[,1]==1,f[1,2]==3||f[1,2]==4||(f[1,2]==1&&(f[1,1]>126||(f[1,1]<80&&f[1,1]>28)||f[1,1]==11||f[1,1]==13)),#f[,1]==2&&f[1,2]==1&&f[2,2]==1&&f[2,1]<f[1,1]^2)"@en .
+

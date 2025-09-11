@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.341370Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 945}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000781 a seq:Sequence ;
+    rdfs:label "A000781"@en ;
+    seq:hasTextList ( seq:A000781_I_1_20220202T035659 seq:A000781_N_1_20220202T035659 seq:A000781_H_1_20220202T035659 seq:A000781_F_1_20220202T035659 seq:A000781_t_1_20220202T035659 seq:A000781_Y_1_20220202T035659 seq:A000781_K_1_20220202T035659 seq:A000781_O_1_20220202T035659 seq:A000781_A_1_20220202T035659 seq:A000781_V_1_20220202T035659 ) .
+
+seq:A000781_A_1_20220202T035659 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000781_F_1_20220202T035659 a seq:Text ;
+    cnt:chars """G.f.: (1/2)*(((sqrt(1-4*x)-7)*x - 3*sqrt(1-4*x) + 3)/x^2 + 2/(x-1)). - _Harvey P. Dale_, Apr 28 2013
+Conjecture: 3*(n+1)*a(n) + (-19*n+7)*a(n-1) + (33*n-53)*a(n-2) + (-21*n+61)*a(n-3) + 2*(2*n-9)*a(n-4) = 0. - _R. J. Mathar_, Aug 20 2013"""@en .
+
+seq:A000781_H_1_20220202T035659 a seq:Text ;
+    cnt:chars """John Cerkan, <a href="/A000781/b000781.txt">Table of n, a(n) for n = 1..1657</a>
+J. R. Stembridge, <a href="http://dx.doi.org/10.1090/S0002-9947-97-01805-9">Some combinatorial aspects of reduced words in finite Coxeter groups</a>, Trans. Amer. Math. Soc. 349 (1997), no. 4, 1285-1332."""@en .
+
+seq:A000781_I_1_20220202T035659 a seq:Text ;
+    cnt:chars "#26 Feb 02 2022 03:56:59"@en .
+
+seq:A000781_K_1_20220202T035659 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000781_N_1_20220202T035659 a seq:Text ;
+    cnt:chars "a(n) = 3*Catalan(n) - Catalan(n-1) - 1."@en .
+
+seq:A000781_O_1_20220202T035659 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000781_V_1_20220202T035659 a seq:Text ;
+    cnt:chars "1,4,12,36,111,353,1154,3860,13155,45525,159561,565249,2020687,7280419,26410094,96378164,353576699,1303271309,4824150869,17925098069,66834680639,249981423899,937696277309,3526652828321,13295935057031,50240112815003"@en .
+
+seq:A000781_Y_1_20220202T035659 a seq:Text ;
+    cnt:chars "Cf. A000108, A000782."@en .
+
+seq:A000781_t_1_20220202T035659 a seq:Text ;
+    cnt:chars "3#[[2]]-#[[1]]-1&/@Partition[CatalanNumber[Range[0,30]],2,1] (* _Harvey P. Dale_, Apr 28 2013 *)"@en .
+

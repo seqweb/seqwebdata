@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.661790Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1779}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000913 a seq:Sequence ;
+    rdfs:label "A000913"@en ;
+    seq:hasTextList ( seq:A000913_I_1_20231210T111038 seq:A000913_N_1_20231210T111038 seq:A000913_H_1_20231210T111038 seq:A000913_F_1_20231210T111038 seq:A000913_p_1_20231210T111038 seq:A000913_t_1_20231210T111038 seq:A000913_o_1_20231210T111038 seq:A000913_Y_1_20231210T111038 seq:A000913_K_1_20231210T111038 seq:A000913_O_1_20231210T111038 seq:A000913_A_1_20231210T111038 seq:A000913_E_1_20231210T111038 seq:A000913_V_1_20231210T111038 ) .
+
+seq:A000913_A_1_20231210T111038 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000913_E_1_20231210T111038 a seq:Text ;
+    cnt:chars "More terms from _Emeric Deutsch_, Dec 19 2004"@en .
+
+seq:A000913_F_1_20231210T111038 a seq:Text ;
+    cnt:chars """From _Emeric Deutsch_, Dec 19 2004: (Start)
+a(n) = (1/4)*c(n+2) - (1/2)*c(n+1) - (3/4)*c((n+1)/2) + (1/2)*c((n-1)/4), where c(n) = binomial(2n, n)/(n+1) are the Catalan numbers for n a nonnegative integer and 0 otherwise.
+G.f.: (-4x + 8x^2 - sqrt(1-4x) + 2x*sqrt(1-4x) + 3*sqrt(1-4x^2) - 2*sqrt(1-4x^4))/(8x^3). (End)"""@en .
+
+seq:A000913_H_1_20231210T111038 a seq:Text ;
+    cnt:chars """S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin, and E. K. Lloyd, <a href="https://doi.org/10.1021/ci00026a012">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751.
+S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin, and E. K. Lloyd, <a href="/A002057/a002057.pdf">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"""@en .
+
+seq:A000913_I_1_20231210T111038 a seq:Text ;
+    cnt:chars "#32 Dec 10 2023 11:10:38"@en .
+
+seq:A000913_K_1_20231210T111038 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000913_N_1_20231210T111038 a seq:Text ;
+    cnt:chars "Number of bond-rooted polyenoids with n edges."@en .
+
+seq:A000913_O_1_20231210T111038 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000913_V_1_20231210T111038 a seq:Text ;
+    cnt:chars "0,1,2,12,38,143,490,1768,6268,22610,81620,297160,1086172,3991995,14731290,54587280,202992808,757398510,2834493948,10637507400,40023577524,150946230006,570534370692,2160865067312,8199710635816"@en .
+
+seq:A000913_Y_1_20231210T111038 a seq:Text ;
+    cnt:chars "Cf. A000108 (Catalan)."@en .
+
+seq:A000913_o_1_20231210T111038 a seq:Text ;
+    cnt:chars """(PARI) c(n) = if ((n<0) || (denominator(n) > 1), 0, binomial(2*n,n)/(n+1));
+a(n) = (1/4)*c(n+2) - (1/2)*c(n+1) - (3/4)*c((n+1)/2) + (1/2)*c((n-1)/4); \\\\ _Michel Marcus_, Aug 26 2019"""@en .
+
+seq:A000913_p_1_20231210T111038 a seq:Text ;
+    cnt:chars "c:=proc(n) if floor(n)=n then binomial(2*n,n)/(n+1) else 0 fi end:a:=n->(1/4)*c(n+2)-(1/2)*c(n+1)-(3/4)*c((n+1)/2)+(1/2)*c((n-1)/4):seq(a(n),n=1..27); # _Emeric Deutsch_, Dec 19 2004"@en .
+
+seq:A000913_t_1_20231210T111038 a seq:Text ;
+    cnt:chars "c[n_] := If[Floor[n] == n, Binomial[2 n, n]/(n + 1), 0]; a[n_] := (1/4)*c[n + 2] - (1/2)*c[n + 1] - (3/4)*c[(n + 1)/2] + (1/2)*c[(n - 1)/4]; Table[a[n], {n, 1, 25}] (* _James C. McMahon_, Dec 09 2023 after MAPLE by _Emeric Deutsch_ *)"@en .
+

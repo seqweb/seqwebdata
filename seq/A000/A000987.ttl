@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.836384Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1358}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000987 a seq:Sequence ;
+    rdfs:label "A000987"@en ;
+    seq:hasTextList ( seq:A000987_I_1_20170524T083415 seq:A000987_N_1_20170524T083415 seq:A000987_D_1_20170524T083415 seq:A000987_H_1_20170524T083415 seq:A000987_F_1_20170524T083415 seq:A000987_t_1_20170524T083415 seq:A000987_K_1_20170524T083415 seq:A000987_O_1_20170524T083415 seq:A000987_A_1_20170524T083415 seq:A000987_E_1_20170524T083415 seq:A000987_V_1_20170524T083415 ) .
+
+seq:A000987_A_1_20170524T083415 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000987_D_1_20170524T083415 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000987_E_1_20170524T083415 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Sep 24 2015"@en .
+
+seq:A000987_F_1_20170524T083415 a seq:Text ;
+    cnt:chars "a(0) = 0, a(1) = 1, a(n) = (n-2) * a(n-1) + A000985(n - 2), n >= 2. - _Sean A. Irvine_, Sep 24 2015"@en .
+
+seq:A000987_H_1_20170524T083415 a seq:Text ;
+    cnt:chars """John Cerkan, <a href="/A000987/b000987.txt">Table of n, a(n) for n = 0..445</a>
+H. Gupta, <a href="http://dx.doi.org/10.1215/S0012-7094-68-03567-9">Enumeration of symmetric matrices</a>, Duke Math. J., 35 (1968), vol 3, 653-659.
+H. Gupta, <a href="/A000085/a000085.pdf">Enumeration of symmetric matrices</a> (annotated scanned copy)."""@en .
+
+seq:A000987_I_1_20170524T083415 a seq:Text ;
+    cnt:chars "M1793 N0707 #32 May 24 2017 08:34:15"@en .
+
+seq:A000987_K_1_20170524T083415 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000987_N_1_20170524T083415 a seq:Text ;
+    cnt:chars "Number of stochastic matrices of integers."@en .
+
+seq:A000987_O_1_20170524T083415 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000987_V_1_20170524T083415 a seq:Text ;
+    cnt:chars "0,1,1,2,7,32,184,1268,10186,93356,960646,10959452,137221954,1870087808,27548231008,436081302248,7380628161076,132975267434552,2540593483517404,51299775805464824,1091447620966600804,24401984084483685248,571907754141520643296"@en .
+
+seq:A000987_t_1_20170524T083415 a seq:Text ;
+    cnt:chars "(* b = A000985 *) Clear[a, b]; b[0] = 1; b[1] = 1; b[2] = 3; b[3] = 11; b[4] = 56; b[n_] := b[n] = (2*n-1)*b[n-1] - (n-2)*(n-1)*b[n-2] - (n-2)*(n - 1)*b[n-3] + (n-3)*(n-2)*(n-1)*b[(n-4)]/2; a[0] = 0; a[1] = 1; a[n_] := a[n] = (n-2)*a[n-1] + b[n-2]; Array[a, 22, 0] (* _Jean-François Alcover_, Feb 15 2016, after _Sean A. Irvine_ *)"@en .
+

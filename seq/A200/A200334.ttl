@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.125743Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 996}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200334 a seq:Sequence ;
+    rdfs:label "A200334"@en ;
+    seq:hasTextList ( seq:A200334_I_1_20140224T065538 seq:A200334_N_1_20140224T065538 seq:A200334_e_1_20140224T065538 seq:A200334_p_1_20140224T065538 seq:A200334_t_1_20140224T065538 seq:A200334_o_1_20140224T065538 seq:A200334_K_1_20140224T065538 seq:A200334_O_1_20140224T065538 seq:A200334_A_1_20140224T065538 seq:A200334_V_1_20140224T065538 ) .
+
+seq:A200334_A_1_20140224T065538 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 28 2011"@en .
+
+seq:A200334_I_1_20140224T065538 a seq:Text ;
+    cnt:chars "#20 Feb 24 2014 06:55:38"@en .
+
+seq:A200334_K_1_20140224T065538 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200334_N_1_20140224T065538 a seq:Text ;
+    cnt:chars "Decimal expansion of Sum_{n = 2 .. infinity }[ 1 / Sum {i=1..m} d(i)^n] where d(i) are the distinct prime divisors of n and m = omega(n) is the number of distinct prime divisors of n."@en .
+
+seq:A200334_O_1_20140224T065538 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A200334_V_1_20140224T065538 a seq:Text ;
+    cnt:chars "3,5,5,0,9,3,5,7,1,9,3,0,6,7,7,6,2,3,6,2,7,3,7,6,9,0,2,2,4,3,3,8,8,8,8,8,5,8,9,0,6,1,7,3,5,8,7,9,6,8,1,0,5,2,5,4,1,3,1,3,9,9,4,4,8,7,4,3,6,9,9,3,7,8,7,8,2,3,1,3,9,7,9,8,3,5,1,2,5,1,9,1,3,1,5,8,0,7,9,3,7,1,5,8,3"@en .
+
+seq:A200334_e_1_20140224T065538 a seq:Text ;
+    cnt:chars "0.3550935719306776236273769022433888885890..."@en .
+
+seq:A200334_o_1_20140224T065538 a seq:Text ;
+    cnt:chars "(PARI) sum(n=2,1e3,f=factor(n)[,1];1./sum(i=1,#f,f[i]^n)) \\\\ _Charles R Greathouse IV_, Nov 28 2011"@en .
+
+seq:A200334_p_1_20140224T065538 a seq:Text ;
+    cnt:chars "with(numtheory):Digits:=200:s:=0:for n from 2 to 2000 do:x:=factorset(n):p:=sum(‘x[i]^n’,’i’=1..nops(x)): s:=s+evalf(1/p):od:print(s):"@en .
+
+seq:A200334_t_1_20140224T065538 a seq:Text ;
+    cnt:chars "digits = 105; s[m_] := s[m] = Sum[f = FactorInteger[n][[All, 1]]; 1/Sum[p^n, {p, f}], {n, 2, m}] // RealDigits[#, 10, digits]& // First; s[digits] ; s[m = 2*digits]; While[s[m] != s[m/2], m = 2*m]; s[m] (* _Jean-François Alcover_, Feb 24 2014 *)"@en .
+

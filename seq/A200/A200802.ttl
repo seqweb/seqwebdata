@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.117605Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 514}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200802 a seq:Sequence ;
+    rdfs:label "A200802"@en ;
+    seq:hasTextList ( seq:A200802_I_1_20210607T152854 seq:A200802_N_1_20210607T152854 seq:A200802_C_1_20210607T152854 seq:A200802_e_1_20210607T152854 seq:A200802_Y_1_20210607T152854 seq:A200802_K_1_20210607T152854 seq:A200802_O_1_20210607T152854 seq:A200802_A_1_20210607T152854 seq:A200802_V_1_20210607T152854 ) .
+
+seq:A200802_A_1_20210607T152854 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 22 2011"@en .
+
+seq:A200802_C_1_20210607T152854 a seq:Text ;
+    cnt:chars "Diagonal of A200809."@en .
+
+seq:A200802_I_1_20210607T152854 a seq:Text ;
+    cnt:chars "#8 Jun 07 2021 15:28:54"@en .
+
+seq:A200802_K_1_20210607T152854 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200802_N_1_20210607T152854 a seq:Text ;
+    cnt:chars "Number of n X n 0..2 arrays with no average of any element and its diagonal, antidiagonal, horizontal and vertical neighbors equal to one."@en .
+
+seq:A200802_O_1_20210607T152854 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200802_V_1_20210607T152854 a seq:Text ;
+    cnt:chars "2,62,4420,2869182,16571687222"@en .
+
+seq:A200802_Y_1_20210607T152854 a seq:Text ;
+    cnt:chars "Cf. A200809."@en .
+
+seq:A200802_e_1_20210607T152854 a seq:Text ;
+    cnt:chars """Some solutions for 3 X 3
+..0..1..1....1..2..1....0..0..0....1..1..1....0..0..2....0..2..1....2..2..0
+..0..1..0....1..2..2....2..0..0....2..1..2....0..0..1....2..1..2....1..2..2
+..0..0..1....2..1..2....1..0..2....1..1..1....1..0..2....2..2..0....1..1..0"""@en .
+

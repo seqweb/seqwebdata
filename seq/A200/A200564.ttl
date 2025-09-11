@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.581599Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 941}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200564 a seq:Sequence ;
+    rdfs:label "A200564"@en ;
+    seq:hasTextList ( seq:A200564_I_1_20231130T115738 seq:A200564_N_1_20231130T115738 seq:A200564_C_1_20231130T115738 seq:A200564_H_1_20231130T115738 seq:A200564_t_1_20231130T115738 seq:A200564_o_1_20231130T115738 seq:A200564_K_1_20231130T115738 seq:A200564_O_1_20231130T115738 seq:A200564_A_1_20231130T115738 seq:A200564_V_1_20231130T115738 ) .
+
+seq:A200564_A_1_20231130T115738 a seq:Text ;
+    cnt:chars "_Geoffrey Critzer_, Nov 19 2011"@en .
+
+seq:A200564_C_1_20231130T115738 a seq:Text ;
+    cnt:chars """The number of inequivalent n x n black and white checkerboards where two boards are indistinguishable if and only if they are identical after being reflected about the main diagonal.
+Cycle index = (s_1^(n^2) + s_1^n*s_2^((n^2-n)/2))/2."""@en .
+
+seq:A200564_H_1_20231130T115738 a seq:Text ;
+    cnt:chars """Michael De Vlieger, <a href="/A200564/b200564.txt">Table of n, a(n) for n = 0..57</a>
+Peter Kagey and William Keehn, <a href="https://arxiv.org/abs/2311.13072">Counting tilings of the n X m grid, cylinder, and torus</a>, arXiv:2311.13072 [math.CO], 2023. See p. 3."""@en .
+
+seq:A200564_I_1_20231130T115738 a seq:Text ;
+    cnt:chars "#19 Nov 30 2023 11:57:38"@en .
+
+seq:A200564_K_1_20231130T115738 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200564_N_1_20231130T115738 a seq:Text ;
+    cnt:chars "a(n) = (2^(n^2)+2^((n^2+n)/2))/2."@en .
+
+seq:A200564_O_1_20231130T115738 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200564_V_1_20231130T115738 a seq:Text ;
+    cnt:chars "1,2,12,288,33280,16793600,34360786944,281475110928384,9223372071214514176,1208925819632221360750592,633825300114132715146861084672,1329227995784915909797295207699447808,11150372599265311570918974863776009399828480"@en .
+
+seq:A200564_o_1_20231130T115738 a seq:Text ;
+    cnt:chars "(PARI) a(n)=2^(n^2-1) + 2^((n^2+n)/2-1) \\\\ _Charles R Greathouse IV_, Dec 08 2022"@en .
+
+seq:A200564_t_1_20231130T115738 a seq:Text ;
+    cnt:chars "Table[(2^(n^2)+2^((n^2+n)/2))/2,{n,0,10}]"@en .
+

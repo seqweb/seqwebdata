@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.137224Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 925}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000693 a seq:Sequence ;
+    rdfs:label "A000693"@en ;
+    seq:hasTextList ( seq:A000693_I_1_20220201T010959 seq:A000693_N_1_20220201T010959 seq:A000693_D_1_20220201T010959 seq:A000693_H_1_20220201T010959 seq:A000693_F_1_20220201T010959 seq:A000693_K_1_20220201T010959 seq:A000693_O_1_20220201T010959 seq:A000693_A_1_20220201T010959 seq:A000693_E_1_20220201T010959 seq:A000693_V_1_20220201T010959 ) .
+
+seq:A000693_A_1_20220201T010959 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000693_D_1_20220201T010959 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000693_E_1_20220201T010959 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Feb 24 2011"@en .
+
+seq:A000693_F_1_20220201T010959 a seq:Text ;
+    cnt:chars "a(1)=1, a(2)=2, a(n) = A000074(n) + a(n-2) for n > 2."@en .
+
+seq:A000693_H_1_20220201T010959 a seq:Text ;
+    cnt:chars """D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1964-0159174-9">The second-order term in the asymptotic expansion of B(x)</a>, Mathematics of Computation 18 (1964), pp. 75-86.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000693_I_1_20220201T010959 a seq:Text ;
+    cnt:chars "M0767 N0292 #21 Feb 01 2022 01:09:59"@en .
+
+seq:A000693_K_1_20220201T010959 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000693_N_1_20220201T010959 a seq:Text ;
+    cnt:chars "Related to population of numbers of form x^2 + y^2."@en .
+
+seq:A000693_O_1_20220201T010959 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000693_V_1_20220201T010959 a seq:Text ;
+    cnt:chars "1,2,3,6,10,19,35,62,118,219,414,783,1497,2860,5503,10593,20471,39637,76918,149501,291115,567581,1108022,2165621,4237085,8297727,16264207,31904254,62630372,123031586,241837446,475647114,936020000,1842925873"@en .
+

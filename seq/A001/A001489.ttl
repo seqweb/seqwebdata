@@ -1,0 +1,68 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.760521Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 1964}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A001489 a seq:Sequence ;
+    rdfs:label "A001489"@en ;
+    seq:hasTextList ( seq:A001489_I_1_20221115T011803 seq:A001489_N_1_20221115T011803 seq:A001489_C_1_20221115T011803 seq:A001489_H_1_20221115T011803 seq:A001489_F_1_20221115T011803 seq:A001489_e_1_20221115T011803 seq:A001489_p_1_20221115T011803 seq:A001489_t_1_20221115T011803 seq:A001489_o_1_20221115T011803 seq:A001489_Y_1_20221115T011803 seq:A001489_K_1_20221115T011803 seq:A001489_O_1_20221115T011803 seq:A001489_A_1_20221115T011803 seq:A001489_E_1_20221115T011803 seq:A001489_V_1_20221115T011803 ) .
+
+seq:A001489_A_1_20221115T011803 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A001489_C_1_20221115T011803 a seq:Text ;
+    cnt:chars """Also: the nonpositive integers, listed with offset = 0 and in decreasing order.
+An involution: the function is its own inverse, A001489 o A001489 = A001477, the identity function on N = {0, 1, 2, 3, ...}. - _M. F. Hasler_, Jan 18 2015"""@en .
+
+seq:A001489_E_1_20221115T011803 a seq:Text ;
+    cnt:chars "Edited by _M. F. Hasler_, Jan 18 2015"@en .
+
+seq:A001489_F_1_20221115T011803 a seq:Text ;
+    cnt:chars """a(n) = -n.
+G.f.: -x/(1-x)^2.
+a(n) = -a(-n) for all n in Z. - _Michael Somos_, Aug 04 2018"""@en .
+
+seq:A001489_H_1_20221115T011803 a seq:Text ;
+    cnt:chars """David Wasserman, <a href="/A001489/b001489.txt">Table of n, a(n) for n = 0..1000</a>
+D. Dumont and J. Zeng, <a href="http://dx.doi.org/10.1023/A:1009759202242">Polynomes d'Euler et les fractions continues de Stieltjes-Rogers</a>, Ramanujan J. 2 (1998) 3, 387-410.
+Tanya Khovanova, <a href="http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html">Recursive Sequences</a>
+A. Randrianarivony and J. Zeng, <a href="http://dx.doi.org/10.1006/aama.1996.0001">Une famille de polynomes qui interpole plusieurs suites classiques de nombres</a>, Adv. Appl. Math. 17 (1996), 1-26.
+J. Zeng, <a href="http://dx.doi.org/10.1016/0012-365X(95)00145-M">Sur quelques propriétés de symétrie des nombres de Genocchi</a>, Discr. Math. 153 (1996) 319-333.
+<a href="/index/Cor#core">Index entries for "core" sequences</a>
+<a href="/index/Rec#order_02">Index entries for linear recurrences with constant coefficients</a>, signature (2,-1)."""@en .
+
+seq:A001489_I_1_20221115T011803 a seq:Text ;
+    cnt:chars "#69 Nov 15 2022 01:18:03"@en .
+
+seq:A001489_K_1_20221115T011803 a seq:Text ;
+    cnt:chars "core,sign,easy"@en .
+
+seq:A001489_N_1_20221115T011803 a seq:Text ;
+    cnt:chars "a(n) = -n."@en .
+
+seq:A001489_O_1_20221115T011803 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A001489_V_1_20221115T011803 a seq:Text ;
+    cnt:chars "0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-17,-18,-19,-20,-21,-22,-23,-24,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,-38,-39,-40,-41,-42,-43,-44,-45,-46,-47,-48,-49,-50,-51,-52,-53,-54,-55,-56,-57,-58,-59,-60,-61,-62,-63,-64,-65"@en .
+
+seq:A001489_Y_1_20221115T011803 a seq:Text ;
+    cnt:chars "Partial sums of A057428."@en .
+
+seq:A001489_e_1_20221115T011803 a seq:Text ;
+    cnt:chars "G.f. = -x - 2*x^2 - 3*x^3 - 4*x^4 - 5*x^5 - 6*x^6 - 7*x^7 - ... - _Michael Somos_, Aug 04 2018"@en .
+
+seq:A001489_o_1_20221115T011803 a seq:Text ;
+    cnt:chars """(PARI) a(n)=-n \\\\ _Charles R Greathouse IV_, Jun 04 2013
+(Python)
+def A001489(n): return -n # _Chai Wah Wu_, Nov 14 2022"""@en .
+
+seq:A001489_p_1_20221115T011803 a seq:Text ;
+    cnt:chars """A001489 := n->-n;
+[ seq(-n,n=0..100) ];"""@en .
+
+seq:A001489_t_1_20221115T011803 a seq:Text ;
+    cnt:chars "Table[ -n, {n, 0, 50}] (* _Stefan Steinerberger_, Apr 01 2006 *)"@en .
+

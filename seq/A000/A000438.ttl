@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.552430Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 2477}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000438 a seq:Sequence ;
+    rdfs:label "A000438"@en ;
+    seq:hasTextList ( seq:A000438_I_1_20240805T133114 seq:A000438_N_1_20240805T133114 seq:A000438_D_1_20240805T133114 seq:A000438_H_1_20240805T133114 seq:A000438_Y_1_20240805T133114 seq:A000438_K_1_20240805T133114 seq:A000438_O_1_20240805T133114 seq:A000438_A_1_20240805T133114 seq:A000438_E_1_20240805T133114 seq:A000438_V_1_20240805T133114 ) .
+
+seq:A000438_A_1_20240805T133114 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000438_D_1_20240805T133114 a seq:Text ;
+    cnt:chars """CRC Handbook of Combinatorial Designs (see pages 655, 720-723).
+N. T. Gridgeman, Latin Squares Under Restriction and a Jumboization, J. Rec. Math., 5 (1972), 198-202.
+W. D. Wallis, 1-Factorizations of complete graphs, pp. 593-631 in Jeffrey H. Dinitz and D. R. Stinson, Contemporary Design Theory, Wiley, 1992."""@en .
+
+seq:A000438_E_1_20240805T133114 a seq:Text ;
+    cnt:chars """For K_16 the answer is approximately 1.48 * 10^44 and for K_18 1.52 * 10^63. - Dinitz et al.
+a(7) found by Patric Östergård and Petteri Kaski (petteri.kaski(AT)cs.helsinki.fi), Sep 19 2007"""@en .
+
+seq:A000438_H_1_20240805T133114 a seq:Text ;
+    cnt:chars """Jeffrey H. Dinitz, David K. Garnick, and Brendan D. McKay, <a href="https://citeseerx.ist.psu.edu/pdf/543b194a218555b552b6650f84e34f1a4e4ef5e8">There are 526,915,620 nonisomorphic one-factorizations of K_{12}</a>, J. Combin. Des. 2 (1994), no. 4, 273-285.
+Alan Hartman, and Alexander Rosa, <a href="https://doi.org/10.1016/S0195-6698(85)80020-2">Cyclic one-factorization of the complete graph</a>, European J. Combin. 6 (1985), no. 1, 45-48.
+Dieter Jungnickel, and Vladimir D. Tonchev, <a href="https://arxiv.org/abs/1709.06044">Counting Steiner triple systems with classical parameters and prescribed rank</a>, arXiv:1709.06044 [math.CO], 2017.
+Petteri Kaski, and Patric R. J. Östergård, <a href="https://doi.org/10.1002/jcd.20188">There are 1,132,835,421,602,062,347 nonisomorphic one-factorizations of K14</a>, Journal of Combinatorial Designs 17 (2009) 147-159.
+Mario Krenn, Xuemei Gu, and Anton Zeilinger, <a href="http://arxiv.org/abs/1705.06646">Quantum Experiments and Graphs: Multiparty States as coherent superpositions of Perfect Matchings</a>, arXiv:1705.06646 [quant-ph], 2017 and <a href="https://doi.org/10.1103/PhysRevLett.119.240403">Phys. Rev. Lett. 119, 240403</a>, 2017. [Mario Krenn said in an email, "We would not have discovered this connection between quantum mechanical experiments and graph theory, thus the physical interpretations and all the generalisations we are developing right now, without you and A000438."]
+D. V. Zinoviev, <a href="https://www.mathnet.ru/eng/ppi2154">On the number of 1-factorizations of a complete graph</a> [in Russian], Problemy Peredachi Informatsii, 50 (No. 4), 2014, 71-78.
+<a href="/index/To#tournament">Index entries for sequences related to tournaments</a>"""@en .
+
+seq:A000438_I_1_20240805T133114 a seq:Text ;
+    cnt:chars "#52 Aug 05 2024 13:31:14"@en .
+
+seq:A000438_K_1_20240805T133114 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice"@en .
+
+seq:A000438_N_1_20240805T133114 a seq:Text ;
+    cnt:chars "Number of 1-factorizations of complete graph K_{2n}."@en .
+
+seq:A000438_O_1_20240805T133114 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000438_V_1_20240805T133114 a seq:Text ;
+    cnt:chars "1,1,6,6240,1225566720,252282619805368320,98758655816833727741338583040"@en .
+
+seq:A000438_Y_1_20240805T133114 a seq:Text ;
+    cnt:chars "Cf. A000474, A003191, A035481, A035483. Equals A036981 / (2n+1)!."@en .
+

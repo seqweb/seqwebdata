@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.860849Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1239}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000997 a seq:Sequence ;
+    rdfs:label "A000997"@en ;
+    seq:hasTextList ( seq:A000997_I_1_20191023T121907 seq:A000997_N_1_20191023T121907 seq:A000997_C_1_20191023T121907 seq:A000997_D_1_20191023T121907 seq:A000997_H_1_20191023T121907 seq:A000997_F_1_20191023T121907 seq:A000997_p_1_20191023T121907 seq:A000997_t_1_20191023T121907 seq:A000997_Y_1_20191023T121907 seq:A000997_K_1_20191023T121907 seq:A000997_O_1_20191023T121907 seq:A000997_A_1_20191023T121907 seq:A000997_E_1_20191023T121907 seq:A000997_V_1_20191023T121907 ) .
+
+seq:A000997_A_1_20191023T121907 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000997_C_1_20191023T121907 a seq:Text ;
+    cnt:chars "Shifts 3 places left under binomial transform. - _Olivier Gérard_, Aug 12 2016"@en .
+
+seq:A000997_D_1_20191023T121907 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000997_E_1_20191023T121907 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Mar 27 2015"@en .
+
+seq:A000997_F_1_20191023T121907 a seq:Text ;
+    cnt:chars "G.f. A(x) satisfies: A(x) = x*(1 + x^2*A(x/(1 - x))/(1 - x)). - _Ilya Gutkovskiy_, May 02 2019"@en .
+
+seq:A000997_H_1_20191023T121907 a seq:Text ;
+    cnt:chars "S. Tauber, <a href=\"http://www.jstor.org/stable/2308653\">On generalizations of the exponential function</a>, Amer. Math. Monthly, 67 (1960), 763-767."@en .
+
+seq:A000997_I_1_20191023T121907 a seq:Text ;
+    cnt:chars "M0739 N0277 #27 Oct 23 2019 12:19:07"@en .
+
+seq:A000997_K_1_20191023T121907 a seq:Text ;
+    cnt:chars "nonn,eigen"@en .
+
+seq:A000997_N_1_20191023T121907 a seq:Text ;
+    cnt:chars "From a differential equation."@en .
+
+seq:A000997_O_1_20191023T121907 a seq:Text ;
+    cnt:chars "0,6"@en .
+
+seq:A000997_V_1_20191023T121907 a seq:Text ;
+    cnt:chars "0,1,0,0,1,2,3,5,12,36,110,326,963,2964,9797,34818,130585,506996,2018454,8238737,34627390,150485325,677033911,3147372610,15066340824,74025698886,372557932434,1919196902205,10119758506626,54627382038761,301832813494746"@en .
+
+seq:A000997_Y_1_20191023T121907 a seq:Text ;
+    cnt:chars "Cf. A000995."@en .
+
+seq:A000997_p_1_20191023T121907 a seq:Text ;
+    cnt:chars "a := proc(n) option remember; local k; if n<=2 then [0, 1, 0][n+1] else add (binomial(n-3, k)*a(k), k=1..n-3) fi end: seq(a(n), n=0..29); # _Sean A. Irvine_, Mar 27 2015"@en .
+
+seq:A000997_t_1_20191023T121907 a seq:Text ;
+    cnt:chars """m = 30; A[_] = 0;
+Do[A[x_] = x (1 + x^2 A[x/(1 - x)]/(1 - x)) + O[x]^m // Normal, {m}];
+CoefficientList[A[x], x] (* _Jean-François Alcover_, Oct 23 2019 *)"""@en .
+

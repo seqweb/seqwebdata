@@ -1,0 +1,65 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.782537Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 2253}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383094 a seq:Sequence ;
+    rdfs:label "A383094"@en ;
+    seq:hasTextList ( seq:A383094_I_1_20250426T080617 seq:A383094_N_1_20250426T080617 seq:A383094_e_1_20250426T080617 seq:A383094_t_1_20250426T080617 seq:A383094_Y_1_20250426T080617 seq:A383094_K_1_20250426T080617 seq:A383094_O_1_20250426T080617 seq:A383094_A_1_20250426T080617 seq:A383094_E_1_20250426T080617 seq:A383094_V_1_20250426T080617 ) .
+
+seq:A383094_A_1_20250426T080617 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 20 2025"@en .
+
+seq:A383094_E_1_20250426T080617 a seq:Text ;
+    cnt:chars "More terms from _Bert Dobbelaere_, Apr 26 2025"@en .
+
+seq:A383094_I_1_20250426T080617 a seq:Text ;
+    cnt:chars "#9 Apr 26 2025 08:06:17"@en .
+
+seq:A383094_K_1_20250426T080617 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A383094_N_1_20250426T080617 a seq:Text ;
+    cnt:chars "Number of integer partitions of n having exactly one permutation with all equal run-lengths."@en .
+
+seq:A383094_O_1_20250426T080617 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383094_V_1_20250426T080617 a seq:Text ;
+    cnt:chars "1,1,2,2,4,4,5,6,9,7,11,10,13,12,17,14,21,16,21,18,27,22,29,22,34,25,35,28,41,28,43,30,48,38,47,38,55,36,53,46,64,40,67,42,69,54,65,46,84,51,75,62,83,52,86,62,94,70,83,58,111,60,89,80,106,74,115,66,111"@en .
+
+seq:A383094_Y_1_20250426T080617 a seq:Text ;
+    cnt:chars """The complement is ranked by A382879 \\/ A383089.
+For no choices we have A382915, ranks A382879.
+For at least one choice we have A383013, for run-sums A383098, ranks A383110.
+For more than one choice we have A383090, ranks A383089.
+For at most one choice we have A383092, ranks A383091.
+For run-sums instead of lengths we have A383095, ranks A383099.
+Partitions of this type are ranked by A383112 = positions of 1 in A382857.
+Cf. A047966, A072774, A098859, A100471, A100881, A100882, A100883, A304442.
+A000041 counts integer partitions, strict A000009.
+A008284 counts partitions by length, strict A008289.
+A239455 counts Look-and-Say partitions, ranks A351294, conjugate A381432.
+A329738 counts compositions with equal run-lengths, ranks A353744.
+A329739 counts compositions with distinct run-lengths, ranks A351596, complement A351291.
+A351293 counts non-Look-and-Say partitions, ranks A351295, conjugate A381433.
+Cf. A047993, A362608, A381871, A382076, A382771, A383096, A383097, A383111."""@en .
+
+seq:A383094_e_1_20250426T080617 a seq:Text ;
+    cnt:chars """The partition (222211) has exactly one permutation with all equal run-lengths: (221122), so is counted under a(10).
+The a(1) = 1 through a(8) = 9 partitions:
+  (1)  (2)   (3)    (4)     (5)      (6)       (7)        (8)
+       (11)  (111)  (22)    (221)    (33)      (322)      (44)
+                    (211)   (311)    (222)     (331)      (332)
+                    (1111)  (11111)  (411)     (511)      (422)
+                                     (111111)  (22111)    (611)
+                                               (1111111)  (2222)
+                                                          (22211)
+                                                          (221111)
+                                                          (11111111)"""@en .
+
+seq:A383094_t_1_20250426T080617 a seq:Text ;
+    cnt:chars "Table[Length[Select[IntegerPartitions[n], Length[Select[Permutations[#], SameQ@@Length/@Split[#]&]]==1&]],{n,0,20}]"@en .
+

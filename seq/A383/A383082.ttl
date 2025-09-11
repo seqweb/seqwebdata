@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.757776Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1479}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383082 a seq:Sequence ;
+    rdfs:label "A383082"@en ;
+    seq:hasTextList ( seq:A383082_I_1_20250429T203417 seq:A383082_N_1_20250429T203417 seq:A383082_C_1_20250429T203417 seq:A383082_H_1_20250429T203417 seq:A383082_e_1_20250429T203417 seq:A383082_Y_1_20250429T203417 seq:A383082_K_1_20250429T203417 seq:A383082_O_1_20250429T203417 seq:A383082_A_1_20250429T203417 seq:A383082_V_1_20250429T203417 ) .
+
+seq:A383082_A_1_20250429T203417 a seq:Text ;
+    cnt:chars "_Peter Kagey_, Apr 15 2025"@en .
+
+seq:A383082_C_1_20250429T203417 a seq:Text ;
+    cnt:chars """A straightedge-and-compass construction starts with 2 points marked on the plane, traditionally (0,0) and (1,0). One can use a straightedge to draw a line between two marked points or a compass to draw a circle centered at a marked point through another marked point.
+New points occur at the intersections of lines or circles with lines or circles."""@en .
+
+seq:A383082_H_1_20250429T203417 a seq:Text ;
+    cnt:chars """Peter Kagey, <a href="/A383082/a383082.png">Illustration of a(3)=16</a>.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Straightedge_and_compass_construction">Straightedge and compass construction</a>"""@en .
+
+seq:A383082_I_1_20250429T203417 a seq:Text ;
+    cnt:chars "#15 Apr 29 2025 20:34:17"@en .
+
+seq:A383082_K_1_20250429T203417 a seq:Text ;
+    cnt:chars "hard,nonn,more,changed"@en .
+
+seq:A383082_N_1_20250429T203417 a seq:Text ;
+    cnt:chars "The number of distinct straightedge-and-compass constructions that can be made with a total of n lines and circles."@en .
+
+seq:A383082_O_1_20250429T203417 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A383082_V_1_20250429T203417 a seq:Text ;
+    cnt:chars "1,3,3,16,205,5886,542983"@en .
+
+seq:A383082_Y_1_20250429T203417 a seq:Text ;
+    cnt:chars "Cf. A333944, A383083."@en .
+
+seq:A383082_e_1_20250429T203417 a seq:Text ;
+    cnt:chars """For n = 0, the a(0) = 1 diagram is the one consisting of two points.
+For n = 1, there are a(1) = 3 possible constructions:
+1) a line between (0,0), and (1,0),
+2) a circle of radius 1 centered at (0,0),
+3) a circle of radius 1 centered at (1,0).
+For n = 2, there are a(2) = 3 possible constructions:
+1) a line between (0,0), and (1,0) and a circle of radius 1 centered at (0,0), which marks the point (-1,0);
+2) a line between (0,0), and (1,0) and a circle of radius 1 centered at (1,0), which marks the point (2,0);
+3) two circles, both of radius 1, centered at (0,0) and (1,0), which marks the points (1/2,sqrt(3/4)) and (1/2,-sqrt(3/4)).
+For n=3, see the a(3)=16 diagrams in the link."""@en .
+

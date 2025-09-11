@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.717192Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1486}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000512 a seq:Sequence ;
+    rdfs:label "A000512"@en ;
+    seq:hasTextList ( seq:A000512_I_1_20200404T110433 seq:A000512_N_1_20200404T110433 seq:A000512_C_1_20200404T110433 seq:A000512_D_1_20200404T110433 seq:A000512_H_1_20200404T110433 seq:A000512_e_1_20200404T110433 seq:A000512_Y_1_20200404T110433 seq:A000512_K_1_20200404T110433 seq:A000512_O_1_20200404T110433 seq:A000512_A_1_20200404T110433 seq:A000512_E_1_20200404T110433 seq:A000512_V_1_20200404T110433 ) .
+
+seq:A000512_A_1_20200404T110433 a seq:Text ;
+    cnt:chars "Eric Rogoyski"@en .
+
+seq:A000512_C_1_20200404T110433 a seq:Text ;
+    cnt:chars "Also, isomorphism classes of bicolored cubic bipartite graphs, where isomorphism cannot exchange the colors."@en .
+
+seq:A000512_D_1_20200404T110433 a seq:Text ;
+    cnt:chars """A. Burgess, P. Danziger, E. Mendelsohn, B. Stevens, Orthogonally Resolvable Cycle Decompositions, 2013; http://www.math.ryerson.ca/~andrea.burgess/OCD-submit.pdf
+Goulden and Jackson, Combin. Enum., Wiley, 1983 p. 284."""@en .
+
+seq:A000512_E_1_20200404T110433 a seq:Text ;
+    cnt:chars """Definition corrected by _Brendan McKay_, May 28 2006
+a(1)-a(12) checked by _Brendan McKay_, Aug 27 2010
+Terms a(15) and beyond from _Andrew Howroyd_, Apr 01 2020"""@en .
+
+seq:A000512_H_1_20200404T110433 a seq:Text ;
+    cnt:chars "<a href=\"/index/La#Latin\">Index entries for sequences related to Latin squares and rectangles</a>"@en .
+
+seq:A000512_I_1_20200404T110433 a seq:Text ;
+    cnt:chars "#22 Apr 04 2020 11:04:33"@en .
+
+seq:A000512_K_1_20200404T110433 a seq:Text ;
+    cnt:chars "nonn,hard"@en .
+
+seq:A000512_N_1_20200404T110433 a seq:Text ;
+    cnt:chars "Number of equivalence classes of n X n matrices over {0,1} with rows and columns summing to 3, where equivalence is defined by row and column permutations."@en .
+
+seq:A000512_O_1_20200404T110433 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000512_V_1_20200404T110433 a seq:Text ;
+    cnt:chars "0,0,1,1,2,7,16,51,224,1165,7454,56349,481309,4548786,46829325,519812910,6177695783,78190425826,1049510787100,14886252250208,222442888670708,3492326723315796,57468395960854710,989052970923320185,17767732298980160822,332572885090541084172,6475438355244504235759,130954580036269713385884"@en .
+
+seq:A000512_Y_1_20200404T110433 a seq:Text ;
+    cnt:chars """Column k=3 of A133687.
+Cf. A000186, A000513, A000840, A001501, A008325, A232215.
+A079815 may be an erroneous version of this, or it may have a slightly different (as yet unknown) definition. - _N. J. A. Sloane_, Sep 04 2010."""@en .
+
+seq:A000512_e_1_20200404T110433 a seq:Text ;
+    cnt:chars "n=4: every matrix with 3 1's in each row and column can be transformed by permutation of rows (or columns) into {1110,1101,1011,0111}, therefore a(4)=1. - _Michael Steyer_, Feb 20 2003"@en .
+

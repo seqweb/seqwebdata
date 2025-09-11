@@ -1,0 +1,57 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.820748Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 991}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200675 a seq:Sequence ;
+    rdfs:label "A200675"@en ;
+    seq:hasTextList ( seq:A200675_I_1_20230130T111215 seq:A200675_N_1_20230130T111215 seq:A200675_C_1_20230130T111215 seq:A200675_H_1_20230130T111215 seq:A200675_F_1_20230130T111215 seq:A200675_e_1_20230130T111215 seq:A200675_t_1_20230130T111215 seq:A200675_o_1_20230130T111215 seq:A200675_Y_1_20230130T111215 seq:A200675_K_1_20230130T111215 seq:A200675_O_1_20230130T111215 seq:A200675_A_1_20230130T111215 seq:A200675_E_1_20230130T111215 seq:A200675_V_1_20230130T111215 ) .
+
+seq:A200675_A_1_20230130T111215 a seq:Text ;
+    cnt:chars "_Jeremy Gardiner_, Nov 20 2011"@en .
+
+seq:A200675_C_1_20230130T111215 a seq:Text ;
+    cnt:chars "Run lengths in A173922."@en .
+
+seq:A200675_E_1_20230130T111215 a seq:Text ;
+    cnt:chars "Offset corrected by _Charles R Greathouse IV_, Oct 03 2016"@en .
+
+seq:A200675_F_1_20230130T111215 a seq:Text ;
+    cnt:chars """a(n) = 2^floor(n/4).
+G.f.: x*(1+x)*(1+x^2)/(1-2*x^4 ). - _R. J. Mathar_, Nov 21 2011"""@en .
+
+seq:A200675_H_1_20230130T111215 a seq:Text ;
+    cnt:chars """G. C. Greubel, <a href="/A200675/b200675.txt">Table of n, a(n) for n = 0..1000</a>
+<a href="/index/Rec#order_04">Index entries for linear recurrences with constant coefficients</a>, signature (0,0,0,2)"""@en .
+
+seq:A200675_I_1_20230130T111215 a seq:Text ;
+    cnt:chars "#28 Jan 30 2023 11:12:15"@en .
+
+seq:A200675_K_1_20230130T111215 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200675_N_1_20230130T111215 a seq:Text ;
+    cnt:chars "Powers of 2 repeated 4 times."@en .
+
+seq:A200675_O_1_20230130T111215 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A200675_V_1_20230130T111215 a seq:Text ;
+    cnt:chars "1,1,1,1,2,2,2,2,4,4,4,4,8,8,8,8,16,16,16,16,32,32,32,32,64,64,64,64,128,128,128,128,256,256,256,256,512,512,512,512,1024,1024,1024,1024,2048,2048,2048,2048,4096,4096,4096,4096"@en .
+
+seq:A200675_Y_1_20230130T111215 a seq:Text ;
+    cnt:chars "Cf. A000079, A016116, A173862, A108105, A173922, A200678."@en .
+
+seq:A200675_e_1_20230130T111215 a seq:Text ;
+    cnt:chars "a(4) = 2^1 = 2."@en .
+
+seq:A200675_o_1_20230130T111215 a seq:Text ;
+    cnt:chars """(PARI) a(n)=2^(n\\4) \\\\ _Charles R Greathouse IV_, Oct 03 2016
+(Python)
+def A200675(n): return 1<<(n>>2) # _Chai Wah Wu_, Jan 30 2023"""@en .
+
+seq:A200675_t_1_20230130T111215 a seq:Text ;
+    cnt:chars "CoefficientList[Series[x*(1 + x)*(1 + x^2)/(1 - 2*x^4), {x,0,50}],x] (* or *) Table[2^(Floor[n/4]), {n,0,50}] (* _G. C. Greubel_, Apr 30 2017 *)"@en .
+

@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.229350Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 783}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200860 a seq:Sequence ;
+    rdfs:label "A200860"@en ;
+    seq:hasTextList ( seq:A200860_I_1_20210118T082620 seq:A200860_N_1_20210118T082620 seq:A200860_H_1_20210118T082620 seq:A200860_F_1_20210118T082620 seq:A200860_t_1_20210118T082620 seq:A200860_K_1_20210118T082620 seq:A200860_O_1_20210118T082620 seq:A200860_A_1_20210118T082620 seq:A200860_V_1_20210118T082620 ) .
+
+seq:A200860_A_1_20210118T082620 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 23 2011"@en .
+
+seq:A200860_F_1_20210118T082620 a seq:Text ;
+    cnt:chars """a(n) = 2*a(n-1) - a(n-2), a(0)=0, a(1)=682.
+G.f.: 682*x / (x-1)^2 . - _R. J. Mathar_, Jan 18 2021"""@en .
+
+seq:A200860_H_1_20210118T082620 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_02\">Index entries for linear recurrences with constant coefficients</a>, signature (2,-1)."@en .
+
+seq:A200860_I_1_20210118T082620 a seq:Text ;
+    cnt:chars "#15 Jan 18 2021 08:26:20"@en .
+
+seq:A200860_K_1_20210118T082620 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200860_N_1_20210118T082620 a seq:Text ;
+    cnt:chars "Multiples of 682."@en .
+
+seq:A200860_O_1_20210118T082620 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200860_V_1_20210118T082620 a seq:Text ;
+    cnt:chars "0,682,1364,2046,2728,3410,4092,4774,5456,6138,6820,7502,8184,8866,9548,10230,10912,11594,12276,12958,13640,14322,15004,15686,16368,17050,17732,18414,19096,19778,20460,21142,21824,22506,23188,23870,24552,25234,25916"@en .
+
+seq:A200860_t_1_20210118T082620 a seq:Text ;
+    cnt:chars """aa = {0, 682}; a0 = 0; a1 = 682; Do[an = 2 a1 - a0; a0 = a1; a1 = an; AppendTo[aa, an], {n, 1, 100}]; aa (* Jasinski *)
+a[0] := 0; a[1] := 682; a[n_] := a[n] = 2a[n - 1] - a[n - 2]; Table[a[n], {n, 0, 51}] (* _Alonso del Arte_, Nov 23 2011 *)
+682Range[0, 51] (* AL *)"""@en .
+

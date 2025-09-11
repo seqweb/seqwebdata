@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.049872Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 887}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200768 a seq:Sequence ;
+    rdfs:label "A200768"@en ;
+    seq:hasTextList ( seq:A200768_I_1_20240221T082711 seq:A200768_N_1_20240221T082711 seq:A200768_H_1_20240221T082711 seq:A200768_F_1_20240221T082711 seq:A200768_e_1_20240221T082711 seq:A200768_p_1_20240221T082711 seq:A200768_t_1_20240221T082711 seq:A200768_Y_1_20240221T082711 seq:A200768_K_1_20240221T082711 seq:A200768_O_1_20240221T082711 seq:A200768_A_1_20240221T082711 seq:A200768_V_1_20240221T082711 ) .
+
+seq:A200768_A_1_20240221T082711 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 22 2011"@en .
+
+seq:A200768_F_1_20240221T082711 a seq:Text ;
+    cnt:chars "a(n) = Sum_{p|n} p^n. - _Wesley Ivan Hurt_, Jun 14 2021"@en .
+
+seq:A200768_H_1_20240221T082711 a seq:Text ;
+    cnt:chars "Robert Israel, <a href=\"/A200768/b200768.txt\">Table of n, a(n) for n = 1..388</a>"@en .
+
+seq:A200768_I_1_20240221T082711 a seq:Text ;
+    cnt:chars "#23 Feb 21 2024 08:27:11"@en .
+
+seq:A200768_K_1_20240221T082711 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200768_N_1_20240221T082711 a seq:Text ;
+    cnt:chars "Sum of the n-th powers of the distinct prime divisors of n."@en .
+
+seq:A200768_O_1_20240221T082711 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200768_V_1_20240221T082711 a seq:Text ;
+    cnt:chars "0,4,27,16,3125,793,823543,256,19683,9766649,285311670611,535537,302875106592253,678223089233,30531927032,65536,827240261886336764177,387682633,1978419655660313589123979,95367432689201,558545874543637210,81402749386839765307625"@en .
+
+seq:A200768_Y_1_20240221T082711 a seq:Text ;
+    cnt:chars "Cf. A005063, A008472, A199583."@en .
+
+seq:A200768_e_1_20240221T082711 a seq:Text ;
+    cnt:chars "a(6) = 793 because the distinct prime divisors of 6 are 2 and 3, and 2^6 + 3^6 = 793."@en .
+
+seq:A200768_p_1_20240221T082711 a seq:Text ;
+    cnt:chars """f:= proc(n) local p;
+   add(p^n, p = numtheory:-factorset(n))
+end proc:
+map(f, [$1..30]); # _Robert Israel_, Feb 20 2024"""@en .
+
+seq:A200768_t_1_20240221T082711 a seq:Text ;
+    cnt:chars """Prepend[Array[Plus@@First[Transpose[FactorInteger[#]^#]]&,100,2],0]
+Join[{0},Table[Total[FactorInteger[n][[All,1]]^n],{n,2,25}]] (* _Harvey P. Dale_, Jan 23 2021 *)"""@en .
+

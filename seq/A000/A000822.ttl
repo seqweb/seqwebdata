@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.463313Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 396}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000822 a seq:Sequence ;
+    rdfs:label "A000822"@en ;
+    seq:hasTextList ( seq:A000822_I_1_20220201T011929 seq:A000822_N_1_20220201T011929 seq:A000822_H_1_20220201T011929 seq:A000822_Y_1_20220201T011929 seq:A000822_K_1_20220201T011929 seq:A000822_O_1_20220201T011929 seq:A000822_A_1_20220201T011929 seq:A000822_V_1_20220201T011929 ) .
+
+seq:A000822_A_1_20220201T011929 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000822_H_1_20220201T011929 a seq:Text ;
+    cnt:chars "R. J. Mathar, <a href=\"/A000822/b000822.txt\">Table of n, a(n) for n = 0..177</a>"@en .
+
+seq:A000822_I_1_20220201T011929 a seq:Text ;
+    cnt:chars "#16 Feb 01 2022 01:19:29"@en .
+
+seq:A000822_K_1_20220201T011929 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000822_N_1_20220201T011929 a seq:Text ;
+    cnt:chars "Expansion of (sin^2 x + sin x) /cos 2x."@en .
+
+seq:A000822_O_1_20220201T011929 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000822_V_1_20220201T011929 a seq:Text ;
+    cnt:chars "0,1,2,11,40,361,1952,24611,177280,2873041,25866752,512343611,5535262720,129570724921,1633165156352,44110959165011,635421069967360,19450718635716001,315212388819402752,10784052561125704811"@en .
+
+seq:A000822_Y_1_20220201T011929 a seq:Text ;
+    cnt:chars "Bisections are A000464 and A000816."@en .
+

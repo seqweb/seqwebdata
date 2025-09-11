@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.460184Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1575}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200504 a seq:Sequence ;
+    rdfs:label "A200504"@en ;
+    seq:hasTextList ( seq:A200504_I_1_20190115T202202 seq:A200504_N_1_20190115T202202 seq:A200504_C_1_20190115T202202 seq:A200504_H_1_20190115T202202 seq:A200504_e_1_20190115T202202 seq:A200504_Y_1_20190115T202202 seq:A200504_K_1_20190115T202202 seq:A200504_O_1_20190115T202202 seq:A200504_A_1_20190115T202202 seq:A200504_V_1_20190115T202202 ) .
+
+seq:A200504_A_1_20190115T202202 a seq:Text ;
+    cnt:chars "_Alexei Kourbatov_, Nov 18 2011"@en .
+
+seq:A200504_C_1_20190115T202202 a seq:Text ;
+    cnt:chars "Prime sextuplets (p, p+4, p+6, p+10, p+12, p+16) are densest permissible constellations of 6 primes. The maximal gaps between prime sextuplets are listed in A200503; see further comments there."@en .
+
+seq:A200504_H_1_20190115T202202 a seq:Text ;
+    cnt:chars """Alexei Kourbatov, <a href="/A200504/b200504.txt">Table of n, a(n) for n = 1..56</a>
+Tony Forbes, <a href="http://anthony.d.forbes.googlepages.com/ktpatt.txt">List of all possible patterns of prime k-tuplets (up to k=50)</a>
+Alexei Kourbatov, <a href="http://www.javascripter.net/math/primes/maximalgapsbetweenktuples.htm#6tuples">Maximal gaps between prime k-tuples</a>
+Alexei Kourbatov and Marek Wolf, <a href="http://arxiv.org/abs/1901.03785">Predicting maximal gaps in sets of primes</a>, arXiv preprint arXiv:1901.03785 [math.NT], 2019."""@en .
+
+seq:A200504_I_1_20190115T202202 a seq:Text ;
+    cnt:chars "#25 Jan 15 2019 20:22:02"@en .
+
+seq:A200504_K_1_20190115T202202 a seq:Text ;
+    cnt:chars "nonn,hard"@en .
+
+seq:A200504_N_1_20190115T202202 a seq:Text ;
+    cnt:chars "Initial primes in prime sextuplets (p, p+4, p+6, p+10, p+12, p+16) preceding the maximal gaps in A200503."@en .
+
+seq:A200504_O_1_20190115T202202 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200504_V_1_20190115T202202 a seq:Text ;
+    cnt:chars "7,97,19417,43777,3400207,11664547,37055647,82984537,89483827,94752727,381674467,1569747997,2019957337,5892947647,6797589427,14048370097,23438578897,24649559647,29637700987,29869155847,45555183127,52993564567,58430706067,93378527647"@en .
+
+seq:A200504_Y_1_20190115T202202 a seq:Text ;
+    cnt:chars "Cf. A022008 (prime sextuplets), A200503, A233426."@en .
+
+seq:A200504_e_1_20190115T202202 a seq:Text ;
+    cnt:chars "Two smallest prime sextuplets (p, p+4, p+6, p+10, p+12, p+16) start at p=7 and p=97; so a(1)=7. The gap of 15960 between sextuplets starting at p=97 and p=16057 is a maximal gap - larger than any preceding gap; so a(2)=97. The next gap is smaller, so 16057 is not in A200504. The gap of 24360 after the sextuplet starting at p=19417 is a maximal gap, therefore a(3)=19417; and so on."@en .
+

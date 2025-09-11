@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.804027Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 1071}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200178 a seq:Sequence ;
+    rdfs:label "A200178"@en ;
+    seq:hasTextList ( seq:A200178_I_1_20120331T123638 seq:A200178_N_1_20120331T123638 seq:A200178_C_1_20120331T123638 seq:A200178_H_1_20120331T123638 seq:A200178_e_1_20120331T123638 seq:A200178_K_1_20120331T123638 seq:A200178_O_1_20120331T123638 seq:A200178_A_1_20120331T123638 seq:A200178_V_1_20120331T123638 ) .
+
+seq:A200178_A_1_20120331T123638 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 13 2011"@en .
+
+seq:A200178_C_1_20120331T123638 a seq:Text ;
+    cnt:chars "Column 5 of A200181"@en .
+
+seq:A200178_H_1_20120331T123638 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200178/b200178.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200178_I_1_20120331T123638 a seq:Text ;
+    cnt:chars "#5 Mar 31 2012 12:36:38"@en .
+
+seq:A200178_K_1_20120331T123638 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200178_N_1_20120331T123638 a seq:Text ;
+    cnt:chars "Number of -5..5 arrays x(0..n-1) of n elements with zero sum and no two consecutive declines, no adjacent equal elements, and no element more than one greater than the previous (random base sawtooth pattern)"@en .
+
+seq:A200178_O_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200178_V_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,5,7,19,31,72,186,460,891,1934,5241,12431,25680,59390,152436,359303,789835,1853143,4609254,10926157,24817557,58735668,144083442,342433339,794002110,1892015431,4599853709,10962118986,25773744159,61646299147"@en .
+
+seq:A200178_e_1_20120331T123638 a seq:Text ;
+    cnt:chars """Some solutions for n=6
+..5....4....3....1....4....5....3....1....2....0....3....5....3....2...-1....1
+..2....1....2....0...-1...-1...-2...-1....0....1....4...-2....0...-1....0...-1
+..3....2....3....1....0....0...-1....0....1....0....5...-1....1....0....1....0
+.-3...-2...-3...-1...-1...-1....0...-1....0....1...-4....0...-1....1....0....1
+.-2...-1...-2....0....0....0....1....0....1....2...-3....1....0....2....1...-1
+.-5...-4...-3...-1...-2...-3...-1....1...-4...-4...-5...-3...-3...-4...-1....0"""@en .
+

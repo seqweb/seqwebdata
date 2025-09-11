@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.432106Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1235}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000809 a seq:Sequence ;
+    rdfs:label "A000809"@en ;
+    seq:hasTextList ( seq:A000809_I_1_20240106T035930 seq:A000809_N_1_20240106T035930 seq:A000809_C_1_20240106T035930 seq:A000809_D_1_20240106T035930 seq:A000809_H_1_20240106T035930 seq:A000809_F_1_20240106T035930 seq:A000809_t_1_20240106T035930 seq:A000809_o_1_20240106T035930 seq:A000809_K_1_20240106T035930 seq:A000809_O_1_20240106T035930 seq:A000809_A_1_20240106T035930 seq:A000809_E_1_20240106T035930 seq:A000809_V_1_20240106T035930 ) .
+
+seq:A000809_A_1_20240106T035930 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000809_C_1_20240106T035930 a seq:Text ;
+    cnt:chars "The next term a(7) is too large to be displayed here."@en .
+
+seq:A000809_D_1_20240106T035930 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000809_E_1_20240106T035930 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jul 03 2011"@en .
+
+seq:A000809_F_1_20240106T035930 a seq:Text ;
+    cnt:chars "a(n) = (2^(3*2^n)+(2^n-1)*2^(3*2^(n-1)))/2^n. - _Sean A. Irvine_, Jul 04 2011"@en .
+
+seq:A000809_H_1_20240106T035930 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000809/b000809.txt">Table of n, a(n) for n = 1..9</a> (shortened by _N. J. A. Sloane_, Jan 13 2019)
+M. A. Harrison, <a href="https://doi.org/10.1016/0016-0032(63)90456-3">On the number of classes of switching networks</a>, J. Franklin Instit., 276 (1963), 313-327.
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000809_I_1_20240106T035930 a seq:Text ;
+    cnt:chars "M5258 N2290 #34 Jan 06 2024 03:59:30"@en .
+
+seq:A000809_K_1_20240106T035930 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000809_N_1_20240106T035930 a seq:Text ;
+    cnt:chars "Number of switching networks (see Harrison reference for precise definition)."@en .
+
+seq:A000809_O_1_20240106T035930 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000809_V_1_20240106T035930 a seq:Text ;
+    cnt:chars "36,1072,2100736,17592201773056,2475880078571033228681936896,98079714615416886934934209815610010226578261138395365376"@en .
+
+seq:A000809_o_1_20240106T035930 a seq:Text ;
+    cnt:chars "(Magma) [(2^(3*2^n)+(2^n-1)*2^(3*2^(n-1)))/2^n: n in [1..8]]; // _Vincenzo Librandi_, Jul 04 2011"@en .
+
+seq:A000809_t_1_20240106T035930 a seq:Text ;
+    cnt:chars "a[n_]:=(2^(3*2^n)+(2^n-1)*2^(3*2^(n-1)))/2^n;Table[a[n],{n,6}] (* _James C. McMahon_, Dec 07 2023 *)"@en .
+

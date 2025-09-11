@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.471298Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1083}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000826 a seq:Sequence ;
+    rdfs:label "A000826"@en ;
+    seq:hasTextList ( seq:A000826_I_1_20150304T205430 seq:A000826_N_1_20150304T205430 seq:A000826_C_1_20150304T205430 seq:A000826_D_1_20150304T205430 seq:A000826_H_1_20150304T205430 seq:A000826_K_1_20150304T205430 seq:A000826_O_1_20150304T205430 seq:A000826_A_1_20150304T205430 seq:A000826_E_1_20150304T205430 seq:A000826_V_1_20150304T205430 ) .
+
+seq:A000826_A_1_20150304T205430 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000826_C_1_20150304T205430 a seq:Text ;
+    cnt:chars "Number of equivalence classes with symmetric group of n variables operating on the domain and symmetric group of 2 variables operating on the range. - _Sean A. Irvine_, Jul 11 2011"@en .
+
+seq:A000826_D_1_20150304T205430 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000826_E_1_20150304T205430 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jul 10 2011"@en .
+
+seq:A000826_H_1_20150304T205430 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000826_I_1_20150304T205430 a seq:Text ;
+    cnt:chars "M4731 N2023 #20 Mar 04 2015 20:54:30"@en .
+
+seq:A000826_K_1_20150304T205430 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000826_N_1_20150304T205430 a seq:Text ;
+    cnt:chars "Number of switching networks (see Harrison reference for precise definition)."@en .
+
+seq:A000826_O_1_20150304T205430 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000826_V_1_20150304T205430 a seq:Text ;
+    cnt:chars "10,88,6616,91666432,76873231310808704,236307200075982899871259747594698752,11487310440209940035256956508459148560969989043872580978940882909553754112,166267459448692920381622333807116147427859895760062485070882091322892520958706179582178218311954136674872641052328937320550635171107567787263574147072"@en .
+

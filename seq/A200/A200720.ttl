@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.949041Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 443}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200720 a seq:Sequence ;
+    rdfs:label "A200720"@en ;
+    seq:hasTextList ( seq:A200720_I_1_20120330T183949 seq:A200720_N_1_20120330T183949 seq:A200720_C_1_20120330T183949 seq:A200720_D_1_20120330T183949 seq:A200720_Y_1_20120330T183949 seq:A200720_K_1_20120330T183949 seq:A200720_O_1_20120330T183949 seq:A200720_A_1_20120330T183949 seq:A200720_V_1_20120330T183949 ) .
+
+seq:A200720_A_1_20120330T183949 a seq:Text ;
+    cnt:chars "_William Rex Marshall_, Nov 21 2011"@en .
+
+seq:A200720_C_1_20120330T183949 a seq:Text ;
+    cnt:chars "The magic constant for a normal magic star of type {n/2} is 4*n + 2 = A016825(n)."@en .
+
+seq:A200720_D_1_20120330T183949 a seq:Text ;
+    cnt:chars "M. Gardner, Magic Stars and Polyhedrons, Chapter 5 in Mathematical Carnival, Mathematical Association of America, 1989, pages 55-65, Postscript, pages 272-274."@en .
+
+seq:A200720_I_1_20120330T183949 a seq:Text ;
+    cnt:chars "#5 Mar 30 2012 18:39:49"@en .
+
+seq:A200720_K_1_20120330T183949 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A200720_N_1_20120330T183949 a seq:Text ;
+    cnt:chars "Number of distinct normal magic stars of type {n/2}."@en .
+
+seq:A200720_O_1_20120330T183949 a seq:Text ;
+    cnt:chars "5,2"@en .
+
+seq:A200720_V_1_20120330T183949 a seq:Text ;
+    cnt:chars "0,80,72,112,3014,10882,53528,396930,2434692,15278390,120425006"@en .
+
+seq:A200720_Y_1_20120330T183949 a seq:Text ;
+    cnt:chars "Cf. A016825."@en .
+

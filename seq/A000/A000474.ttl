@@ -1,0 +1,57 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.631906Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2202}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000474 a seq:Sequence ;
+    rdfs:label "A000474"@en ;
+    seq:hasTextList ( seq:A000474_I_1_20230628T160151 seq:A000474_N_1_20230628T160151 seq:A000474_C_1_20230628T160151 seq:A000474_D_1_20230628T160151 seq:A000474_H_1_20230628T160151 seq:A000474_F_1_20230628T160151 seq:A000474_Y_1_20230628T160151 seq:A000474_K_1_20230628T160151 seq:A000474_O_1_20230628T160151 seq:A000474_A_1_20230628T160151 seq:A000474_E_1_20230628T160151 seq:A000474_V_1_20230628T160151 ) .
+
+seq:A000474_A_1_20230628T160151 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000474_C_1_20230628T160151 a seq:Text ;
+    cnt:chars "Number of essentially different ways of scheduling a tournament of 2n teams."@en .
+
+seq:A000474_D_1_20230628T160151 a seq:Text ;
+    cnt:chars """CRC Handbook of Combinatorial Designs (see pages 655, 720-723).
+Jeffrey H. Dinitz, David K. Garnick, Brendan D. McKay, There are 526,915,620 nonisomorphic one-factorizations of K_{12}. J. Combin. Des. 2 (1994), no. 4, 273-285.
+Petteri Kaski and Patric R. J. Östergård, There are 1,132,835,421,602,062,347 nonisomorphic one-factorizations of K_{14}, Journal of Combinatorial Designs 17 (2009), pp. 147-159.
+Charles C. Lindner, Eric Mendelsohn, and Alexander Rosa. "On the number of 1-factorizations of the complete graph." Journal of Combinatorial Theory, Series B 20.3 (1976): 265-282.
+E. Seah and D. R. Stinson, On the enumeration of one-factorizations of complete graphs containing prescribed automorphism groups. Math. Comp. 50 (1988), 607-618.
+W. D. Wallis, 1-Factorizations of complete graphs, pp. 593-631 in Jeffrey H. Dinitz and D. R. Stinson, Contemporary Design Theory, Wiley, 1992."""@en .
+
+seq:A000474_E_1_20230628T160151 a seq:Text ;
+    cnt:chars """a(7) communicated by Vesa Linja-aho (vesa.linja-aho(AT)tkk.fi), Aug 02 2008
+Comment, link, and update by _Charles R Greathouse IV_, May 11 2010"""@en .
+
+seq:A000474_F_1_20230628T160151 a seq:Text ;
+    cnt:chars "a(n) ~ exp(2n^2 log(2n)) as n -> infinity (see CRC Handbook, p. 655, Theorem 4.20)."@en .
+
+seq:A000474_H_1_20230628T160151 a seq:Text ;
+    cnt:chars """Petteri Kaski and Patric R. J. Östergård, <a href="http://arxiv.org/abs/0801.0202">There are 1,132,835,421,602,062,347 nonisomorphic one-factorizations of K_{14}</a>, arXiv:0801.0202 [math.CO], 2007.
+Joseph Malkevitch, <a href="http://www1.ams.org/samplings/feature-column/fcarc-sports">Mathematics and Sports</a>
+Brendan D. McKay and Ian M. Wanless, <a href="https://arxiv.org/abs/2104.07902">Enumeration of Latin squares with conjugate symmetry</a>, arXiv:2104.07902 [math.CO], 2021. Table 5 p. 15.
+D. V. Zinoviev, <a href="https://www.mathnet.ru/eng/ppi2154">On the number of 1-factorizations of a complete graph</a> [in Russian], Problemy Peredachi Informatsii, 50 (No. 4), 2014, 71-78.
+<a href="/index/To#tournament">Index entries for sequences related to tournaments</a>"""@en .
+
+seq:A000474_I_1_20230628T160151 a seq:Text ;
+    cnt:chars "#38 Jun 28 2023 16:01:51"@en .
+
+seq:A000474_K_1_20230628T160151 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice"@en .
+
+seq:A000474_N_1_20230628T160151 a seq:Text ;
+    cnt:chars "Number of nonisomorphic 1-factorizations of complete graph K_{2n}."@en .
+
+seq:A000474_O_1_20230628T160151 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000474_V_1_20230628T160151 a seq:Text ;
+    cnt:chars "1,1,1,6,396,526915620,1132835421602062347"@en .
+
+seq:A000474_Y_1_20230628T160151 a seq:Text ;
+    cnt:chars "For odd n this sequence equals A350017. Cf. A000438."@en .
+

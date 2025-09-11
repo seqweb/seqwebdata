@@ -1,0 +1,57 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.698375Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1866}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000503 a seq:Sequence ;
+    rdfs:label "A000503"@en ;
+    seq:hasTextList ( seq:A000503_I_1_20220814T170154 seq:A000503_N_1_20220814T170154 seq:A000503_C_1_20220814T170154 seq:A000503_H_1_20220814T170154 seq:A000503_p_1_20220814T170154 seq:A000503_t_1_20220814T170154 seq:A000503_o_1_20220814T170154 seq:A000503_Y_1_20220814T170154 seq:A000503_K_1_20220814T170154 seq:A000503_O_1_20220814T170154 seq:A000503_A_1_20220814T170154 seq:A000503_E_1_20220814T170154 seq:A000503_V_1_20220814T170154 ) .
+
+seq:A000503_A_1_20220814T170154 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000503_C_1_20220814T170154 a seq:Text ;
+    cnt:chars """Every integer appears infinitely often. - _Charles R Greathouse IV_, Aug 06 2012
+Does not satisfy Benford's law [Whyman et al., 2016]. - _N. J. A. Sloane_, Feb 12 2017"""@en .
+
+seq:A000503_E_1_20220814T170154 a seq:Text ;
+    cnt:chars "More terms from _Stefan Steinerberger_, Apr 09 2006"@en .
+
+seq:A000503_H_1_20220814T170154 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000503/b000503.txt">Table of n, a(n) for n = 0..1000</a>
+David P. Bellamy, Jeffrey C. Lagarias, Felix Lazebnik, <a href="http://math.udel.edu/~lazebnik/papers/tan_n.pdf">Proposed Problem: Large Values of Tan n</a>
+David P. Bellamy, Jeffrey C. Lagarias, Felix Lazebnik and Stephen M. Gagola, Jr., <a href="http://www.jstor.org/stable/2589040">Large Values of Tangent: 10656</a>, The American Mathematical Monthly, Vol. 106, No. 8 (Oct., 1999), pp. 782-784.
+Daniel Forgues and Jon E. Schoenfield, <a href="/A000503/a000503_1.txt">Discussion of A000503</a>
+G. Whyman, N. Ohtori, E. Shulzinger, Ed. Bormashenko, <a href="https://doi.org/10.1016/j.physa.2016.06.054">Revisiting the Benford law: When the Benford-like distribution of leading digits in sets of numerical data is expectable?</a>, Physica A: Statistical Mechanics and its Applications, 461 (2016), 595-601.
+<a href="/index/Be#Benford">Index entries for sequences related to Benford's law</a>"""@en .
+
+seq:A000503_I_1_20220814T170154 a seq:Text ;
+    cnt:chars "#102 Aug 14 2022 17:01:54"@en .
+
+seq:A000503_K_1_20220814T170154 a seq:Text ;
+    cnt:chars "sign,easy,nice"@en .
+
+seq:A000503_N_1_20220814T170154 a seq:Text ;
+    cnt:chars "a(n) = floor(tan(n))."@en .
+
+seq:A000503_O_1_20220814T170154 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000503_V_1_20220814T170154 a seq:Text ;
+    cnt:chars "0,1,-3,-1,1,-4,-1,0,-7,-1,0,-226,-1,0,7,-1,0,3,-2,0,2,-2,0,1,-3,-1,1,-4,-1,0,-7,-1,0,-76,-1,0,7,-1,0,3,-2,0,2,-2,0,1,-3,-1,1,-4,-1,0,-7,-1,0,-46,-1,0,8,-1,0,3,-2,0,2,-2,0,1,-3,-1,1,-4,-1,0,-6,-1,0,-33,-1,0,9,-1,0,3,-2,0,2,-2,0,1,-2,-1,1,-3,-1,0,-6,-1,0,-26"@en .
+
+seq:A000503_Y_1_20220814T170154 a seq:Text ;
+    cnt:chars "Cf. A005657, A000493, A000480, A000494, A000484, A088306, A195911, A195910, A037448, A258024."@en .
+
+seq:A000503_o_1_20220814T170154 a seq:Text ;
+    cnt:chars """(PARI) a(n)=tan(n)\\1 \\\\ _Charles R Greathouse IV_, Sep 04 2014
+(Magma) [Floor(Tan(n)): n in [0..80]]; // _Vincenzo Librandi_, Jun 13 2015"""@en .
+
+seq:A000503_p_1_20220814T170154 a seq:Text ;
+    cnt:chars "f := n->floor(evalf(tan(n)));"@en .
+
+seq:A000503_t_1_20220814T170154 a seq:Text ;
+    cnt:chars "Table[Floor[Tan[n]], {n, 0, 100}] (* _Stefan Steinerberger_, Apr 09 2006 *)"@en .
+

@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.435010Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1434}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000810 a seq:Sequence ;
+    rdfs:label "A000810"@en ;
+    seq:hasTextList ( seq:A000810_I_1_20200319T163345 seq:A000810_N_1_20200319T163345 seq:A000810_H_1_20200319T163345 seq:A000810_F_1_20200319T163345 seq:A000810_t_1_20200319T163345 seq:A000810_o_1_20200319T163345 seq:A000810_Y_1_20200319T163345 seq:A000810_K_1_20200319T163345 seq:A000810_O_1_20200319T163345 seq:A000810_A_1_20200319T163345 seq:A000810_V_1_20200319T163345 ) .
+
+seq:A000810_A_1_20200319T163345 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000810_F_1_20200319T163345 a seq:Text ;
+    cnt:chars """a(2n) = A000436(n).
+(-1)^n*a(2n+1)=1-sum_{i=0,1,...,n-1} (-1)^i*binomial(2n+1,2i+1)*3^(2n-2i)*a(2i+1). - _R. J. Mathar_, Nov 19 2006
+a(n) = | 3^n*2^(n+1)*lerchphi(-1,-n,1/3) |. - _Peter Luschny_, Apr 27 2013
+a(n) ~ n!*2^(n+1)*3^(n+1/2)/Pi^(n+1) if n is even and a(n) ~ n!*2^(n+1)*3^n/Pi^(n+1) if n is odd. - _Vaclav Kotesovec_, Jun 25 2013
+a(n) = (-1)^floor(n/2)*3^n*skp(n, 1/3), where skp(n,x) are the Swiss-Knife polynomials A153641. - _Peter Luschny_, Apr 19 2014"""@en .
+
+seq:A000810_H_1_20200319T163345 a seq:Text ;
+    cnt:chars "R. J. Mathar, <a href=\"/A000810/b000810.txt\">Table of n, a(n) for n = 0..200</a>"@en .
+
+seq:A000810_I_1_20200319T163345 a seq:Text ;
+    cnt:chars "#37 Mar 19 2020 16:33:45"@en .
+
+seq:A000810_K_1_20200319T163345 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000810_N_1_20200319T163345 a seq:Text ;
+    cnt:chars "Expansion of e.g.f. (sin x + cos x)/cos 3x."@en .
+
+seq:A000810_O_1_20200319T163345 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000810_V_1_20200319T163345 a seq:Text ;
+    cnt:chars "1,1,8,26,352,1936,38528,297296,7869952,78098176,2583554048,31336418816,1243925143552,17831101321216,825787662368768,13658417358350336,722906928498737152,13551022195053101056"@en .
+
+seq:A000810_Y_1_20200319T163345 a seq:Text ;
+    cnt:chars """Cf. A007286, A007289.
+(-1)^(n*(n-1)/2)*a(n) gives the alternating row sums of A225118. - _Wolfdieter Lang_, Jul 12 2017"""@en .
+
+seq:A000810_o_1_20200319T163345 a seq:Text ;
+    cnt:chars """(Sage)
+from mpmath import mp, lerchphi
+mp.dps = 32; mp.pretty = True
+def A000810(n): return abs(3^n*2^(n+1)*lerchphi(-1,-n,1/3))
+[int(A000810(n)) for n in (0..17)]  # _Peter Luschny_, Apr 27 2013
+(PARI) x='x+O('x^66); v=Vec(serlaplace( (sin(x)+cos(x)) / cos(3*x) ) ) \\\\ _Joerg Arndt_, Apr 27 2013"""@en .
+
+seq:A000810_t_1_20200319T163345 a seq:Text ;
+    cnt:chars """CoefficientList[Series[(Sin[x]+Cos[x])/Cos[3*x], {x, 0, 20}], x]* Range[0, 20]! (* _Vaclav Kotesovec_, Jun 25 2013 *)
+Table[Abs[EulerE[n, 1/3]] 6^n, {n, 0, 20}] (* _Vladimir Reshetnikov_, Oct 21 2015 *)"""@en .
+

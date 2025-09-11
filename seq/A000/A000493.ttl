@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.676873Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 689}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000493 a seq:Sequence ;
+    rdfs:label "A000493"@en ;
+    seq:hasTextList ( seq:A000493_I_1_20220908T084428 seq:A000493_N_1_20220908T084428 seq:A000493_H_1_20220908T084428 seq:A000493_F_1_20220908T084428 seq:A000493_p_1_20220908T084428 seq:A000493_t_1_20220908T084428 seq:A000493_o_1_20220908T084428 seq:A000493_Y_1_20220908T084428 seq:A000493_K_1_20220908T084428 seq:A000493_O_1_20220908T084428 seq:A000493_A_1_20220908T084428 seq:A000493_V_1_20220908T084428 ) .
+
+seq:A000493_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000493_F_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = -(A032615(n) mod 2). - _Robert Israel_, Jun 14 2015"@en .
+
+seq:A000493_H_1_20220908T084428 a seq:Text ;
+    cnt:chars "Robert Israel, <a href=\"/A000493/b000493.txt\">Table of n, a(n) for n = 0..10000</a>"@en .
+
+seq:A000493_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "#27 Sep 08 2022 08:44:28"@en .
+
+seq:A000493_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A000493_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = floor(sin(n))."@en .
+
+seq:A000493_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000493_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0"@en .
+
+seq:A000493_Y_1_20220908T084428 a seq:Text ;
+    cnt:chars "Cf. A032615, A126564 (even bisection), A000480 (floor cos(n))."@en .
+
+seq:A000493_o_1_20220908T084428 a seq:Text ;
+    cnt:chars "(Magma) [Floor(Sin(n)): n in [0..100]]; // _Vincenzo Librandi_, Jun 15 2015"@en .
+
+seq:A000493_p_1_20220908T084428 a seq:Text ;
+    cnt:chars "f := n->floor(evalf(sin(n)));"@en .
+
+seq:A000493_t_1_20220908T084428 a seq:Text ;
+    cnt:chars """f[ n_ ] := Floor[ N[ Sin[ n ] ] ]
+Floor[Sin[Range[0,90]]] (* _Harvey P. Dale_, Dec 04 2012 *)"""@en .
+

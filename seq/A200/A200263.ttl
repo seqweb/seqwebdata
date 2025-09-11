@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.980242Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 616}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200263 a seq:Sequence ;
+    rdfs:label "A200263"@en ;
+    seq:hasTextList ( seq:A200263_I_1_20230320T130539 seq:A200263_N_1_20230320T130539 seq:A200263_C_1_20230320T130539 seq:A200263_H_1_20230320T130539 seq:A200263_t_1_20230320T130539 seq:A200263_o_1_20230320T130539 seq:A200263_Y_1_20230320T130539 seq:A200263_K_1_20230320T130539 seq:A200263_O_1_20230320T130539 seq:A200263_A_1_20230320T130539 seq:A200263_V_1_20230320T130539 ) .
+
+seq:A200263_A_1_20230320T130539 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 15 2011"@en .
+
+seq:A200263_C_1_20230320T130539 a seq:Text ;
+    cnt:chars "Characteristic function of A200260."@en .
+
+seq:A200263_H_1_20230320T130539 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A200263/b200263.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200263_I_1_20230320T130539 a seq:Text ;
+    cnt:chars "#15 Mar 20 2023 13:05:39"@en .
+
+seq:A200263_K_1_20230320T130539 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200263_N_1_20230320T130539 a seq:Text ;
+    cnt:chars "a(n) = 1 iff n-th prime has an odd digit sum."@en .
+
+seq:A200263_O_1_20230320T130539 a seq:Text ;
+    cnt:chars "1"@en .
+
+seq:A200263_V_1_20230320T130539 a seq:Text ;
+    cnt:chars "0,1,1,1,0,0,0,0,1,1,0,0,1,1,1,0,0,1,1,0,0,0,1,1,0,0,0,0,0,1,0,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,1,0,0,1,0,0,1,1,0,0,1,1,0,0,1,1,1,1,1,0,0,1,1,0,1,1,0,0,1,1,1,0,1,0,0,0,1"@en .
+
+seq:A200263_Y_1_20230320T130539 a seq:Text ;
+    cnt:chars "Cf. A200260, A200261."@en .
+
+seq:A200263_o_1_20230320T130539 a seq:Text ;
+    cnt:chars "(Magma) [IsOdd(&+Intseq(NthPrime(n))) select 1 else 0: n in [1..100]];  // Bruno Berselli, Nov 15 2011"@en .
+
+seq:A200263_t_1_20230320T130539 a seq:Text ;
+    cnt:chars "If[OddQ[Total[IntegerDigits[#]]],1,0]&/@Prime[Range[100]] (* _Harvey P. Dale_, Jul 08 2019 *)"@en .
+

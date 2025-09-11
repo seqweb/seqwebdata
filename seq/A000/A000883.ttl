@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.593363Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1254}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000883 a seq:Sequence ;
+    rdfs:label "A000883"@en ;
+    seq:hasTextList ( seq:A000883_I_1_20220908T084428 seq:A000883_N_1_20220908T084428 seq:A000883_D_1_20220908T084428 seq:A000883_H_1_20220908T084428 seq:A000883_F_1_20220908T084428 seq:A000883_t_1_20220908T084428 seq:A000883_o_1_20220908T084428 seq:A000883_K_1_20220908T084428 seq:A000883_O_1_20220908T084428 seq:A000883_A_1_20220908T084428 seq:A000883_E_1_20220908T084428 seq:A000883_V_1_20220908T084428 ) .
+
+seq:A000883_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000883_D_1_20220908T084428 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000883_E_1_20220908T084428 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 23 2012"@en .
+
+seq:A000883_F_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = (4^(2^n) - 4*2^(2^n) + 8*2^n + 10*2^(n+2^n))/(24*2^n). - _Sean A. Irvine_, Jan 24 2012"@en .
+
+seq:A000883_H_1_20220908T084428 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000883/b000883.txt">Table of n, a(n) for n = 1..10</a>
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000883_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "M1956 N0774 #34 Sep 08 2022 08:44:28"@en .
+
+seq:A000883_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000883_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "Number of switching networks with C(2,n) acting on the domain and AG(2,2) acting on the range."@en .
+
+seq:A000883_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000883_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "2,9,443,11211435,24019199779842731,221537999297485986455406144733751979,37692737381938865697777013349182261812327566685142592258699083037385861803"@en .
+
+seq:A000883_o_1_20220908T084428 a seq:Text ;
+    cnt:chars """(Magma) [(4^(2^n)-4*2^(2^n)+8*2^n+10*2^(n+2^n))/(24*2^n):n in [1..11]]; // _Vincenzo Librandi_, Mar 28 2012
+(PARI) a(n)=my(N=2^n);(2^(2*N-n)-4<<(N-n)+8+10<<N)/24 \\\\ _Charles R Greathouse IV_, Mar 28 2012"""@en .
+
+seq:A000883_t_1_20220908T084428 a seq:Text ;
+    cnt:chars "Table[(4^(2^n)-4*2^(2^n)+8*2^n+10*2^(n+2^n))/(24*2^n),{n,0,11}] (* _Vincenzo Librandi_, Mar 28 2012 *)"@en .
+

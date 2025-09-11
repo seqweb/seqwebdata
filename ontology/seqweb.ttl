@@ -42,12 +42,12 @@
 
 # AugmentedSectionType mixin class
 :AugmentedSectionType a owl:Class ;
-    rdfs:label "Augmented Section Type"@en ;
+    rdfs:label "Augmented SectionType"@en ;
     rdfs:subClassOf :SectionType ;
     rdfs:comment "A SectionType variant introduced by SeqWeb to supplement the classic OEIS-defined types."@en .
 
 seq:SectionTypeOrder a rdf:List ;
-    rdfs:label "Presentation Section Type Order"@en ;
+    rdfs:label "Presentation SectionType Order"@en ;
     rdfs:comment "Presentation order used by the classic OEIS, with some inserted augmentations"@en ;
     rdf:first :IdentificationSection ;
     rdf:rest (

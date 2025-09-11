@@ -1,0 +1,32 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.978075Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 31, "entities": 8, "chars": 361}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200262 a seq:Sequence ;
+    rdfs:label "A200262"@en ;
+    seq:hasTextList ( seq:A200262_I_1_20120330T165207 seq:A200262_N_1_20120330T165207 seq:A200262_H_1_20120330T165207 seq:A200262_K_1_20120330T165207 seq:A200262_O_1_20120330T165207 seq:A200262_A_1_20120330T165207 seq:A200262_V_1_20120330T165207 ) .
+
+seq:A200262_A_1_20120330T165207 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 15 2011"@en .
+
+seq:A200262_H_1_20120330T165207 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A200262/b200262.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200262_I_1_20120330T165207 a seq:Text ;
+    cnt:chars "#6 Mar 30 2012 16:52:07"@en .
+
+seq:A200262_K_1_20120330T165207 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200262_N_1_20120330T165207 a seq:Text ;
+    cnt:chars "Partial sums of A200261."@en .
+
+seq:A200262_O_1_20120330T165207 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A200262_V_1_20120330T165207 a seq:Text ;
+    cnt:chars "1,1,1,1,2,3,4,5,5,5,6,7,7,7,7,8,9,9,9,10,11,12,12,12,13,14,15,16,17,17,18,18,18,18,19,19,19,20,21,21,21,22,22,22,22,22,23,23,23,23,24,25,25,26,27,27,27,28,29,29,29,30,31,31,31,31,31,31,32"@en .
+

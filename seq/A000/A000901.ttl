@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.632606Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1781}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000901 a seq:Sequence ;
+    rdfs:label "A000901"@en ;
+    seq:hasTextList ( seq:A000901_I_1_20180110T160506 seq:A000901_N_1_20180110T160506 seq:A000901_D_1_20180110T160506 seq:A000901_H_1_20180110T160506 seq:A000901_F_1_20180110T160506 seq:A000901_p_1_20180110T160506 seq:A000901_K_1_20180110T160506 seq:A000901_O_1_20180110T160506 seq:A000901_A_1_20180110T160506 seq:A000901_E_1_20180110T160506 seq:A000901_V_1_20180110T160506 ) .
+
+seq:A000901_A_1_20180110T160506 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Robert G. Wilson v_"@en .
+
+seq:A000901_D_1_20180110T160506 a seq:Text ;
+    cnt:chars """L. C. Larson, The number of essentially different nonattacking rook arrangements, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181.
+R. W. Robinson, Counting arrangements of bishops, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976).
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000901_E_1_20180110T160506 a seq:Text ;
+    cnt:chars "Corrected and extended by _Sean A. Irvine_, Aug 23 2011"@en .
+
+seq:A000901_F_1_20180110T160506 a seq:Text ;
+    cnt:chars "For asymptotics see the Robinson paper."@en .
+
+seq:A000901_H_1_20180110T160506 a seq:Text ;
+    cnt:chars """L. C. Larson, <a href="/A000900/a000900_1.pdf">The number of essentially different nonattacking rook arrangements</a>, J. Recreat. Math., 7 (No. 3, 1974), circa pages 180-181. [Annotated scan of pages 180 and 181 only]
+E. Lucas, <a href="http://gallica.bnf.fr/ark:/12148/bpt6k29021h">Théorie des Nombres</a>, Gauthier-Villars, Paris, 1891, Vol. 1, p. 222.
+E. Lucas, <a href="/A000899/a000899.pdf">Théorie des nombres</a> (annotated scans of a few selected pages)
+R. W. Robinson, <a href="/A000899/a000899_1.pdf">Counting arrangements of bishops</a>, pp. 198-214 of Combinatorial Mathematics IV (Adelaide 1975), Lect. Notes Math., 560 (1976). (Annotated scanned copy)
+R. G. Wilson, v, <a href="/A000900/a000900.pdf">Comments on the Larsen paper (no date)</a>"""@en .
+
+seq:A000901_I_1_20180110T160506 a seq:Text ;
+    cnt:chars "M4446 N1881 #31 Jan 10 2018 16:05:06"@en .
+
+seq:A000901_K_1_20180110T160506 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000901_N_1_20180110T160506 a seq:Text ;
+    cnt:chars "Number of solutions to the rook problem on a 2n X 2n board having a certain symmetry group (see Robinson for details)."@en .
+
+seq:A000901_O_1_20180110T160506 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000901_V_1_20180110T160506 a seq:Text ;
+    cnt:chars "0,0,7,74,882,11144,159652,2571960,46406392,928734944,20436096048,490489794464,12752891909920,357081983435904,10712466529388608,342798976818878336,11655165558112403328,419585962575107694080"@en .
+
+seq:A000901_p_1_20180110T160506 a seq:Text ;
+    cnt:chars "For Maple program see A000903."@en .
+

@@ -1,0 +1,36 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.344857Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 554}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200921 a seq:Sequence ;
+    rdfs:label "A200921"@en ;
+    seq:hasTextList ( seq:A200921_I_1_20150819T091514 seq:A200921_N_1_20150819T091514 seq:A200921_t_1_20150819T091514 seq:A200921_Y_1_20150819T091514 seq:A200921_K_1_20150819T091514 seq:A200921_O_1_20150819T091514 seq:A200921_A_1_20150819T091514 seq:A200921_V_1_20150819T091514 ) .
+
+seq:A200921_A_1_20150819T091514 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 24 2011"@en .
+
+seq:A200921_I_1_20150819T091514 a seq:Text ;
+    cnt:chars "#8 Aug 19 2015 09:15:14"@en .
+
+seq:A200921_K_1_20150819T091514 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200921_N_1_20150819T091514 a seq:Text ;
+    cnt:chars "Least k such that (3^n + k)*3^n - 1 is a prime number."@en .
+
+seq:A200921_O_1_20150819T091514 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200921_V_1_20150819T091514 a seq:Text ;
+    cnt:chars "1,1,3,3,13,9,15,3,1,13,29,1,5,53,25,9,23,1,69,13,3,3,17,1,5,117,5,13,45,51,3,11,31,73,49,43,11,83,93,277,171,383,39,11,3,31,55,61,61,13,73,107,65,137,53,39,467,53,233,277,17,53,109,177,151,97,13"@en .
+
+seq:A200921_Y_1_20150819T091514 a seq:Text ;
+    cnt:chars "Cf. A191617, A191618, A191619, A191620, A200920,  A200922, A200923."@en .
+
+seq:A200921_t_1_20150819T091514 a seq:Text ;
+    cnt:chars """Table[k = 0; While[!PrimeQ[(3^n + k)*3^n - 1], k++]; k, {n, 72}]
+lk[n_]:=Module[{c=3^n,k=0},While[!PrimeQ[(c+k)c-1],k++];k]; Array[lk,70] (* _Harvey P. Dale_, Aug 19 2015 *)"""@en .
+

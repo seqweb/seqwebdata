@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.107194Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1259}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200324 a seq:Sequence ;
+    rdfs:label "A200324"@en ;
+    seq:hasTextList ( seq:A200324_I_1_20250216T083316 seq:A200324_N_1_20250216T083316 seq:A200324_C_1_20250216T083316 seq:A200324_H_1_20250216T083316 seq:A200324_F_1_20250216T083316 seq:A200324_e_1_20250216T083316 seq:A200324_p_1_20250216T083316 seq:A200324_t_1_20250216T083316 seq:A200324_Y_1_20250216T083316 seq:A200324_K_1_20250216T083316 seq:A200324_O_1_20250216T083316 seq:A200324_A_1_20250216T083316 seq:A200324_V_1_20250216T083316 ) .
+
+seq:A200324_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 18 2011"@en .
+
+seq:A200324_C_1_20250216T083316 a seq:Text ;
+    cnt:chars "If Andrica's conjecture is true, a(n) is at most 1 when n gets very large."@en .
+
+seq:A200324_F_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n) = floor(10*(sqrt(A000040(n+1)) - sqrt(A000040(n))))."@en .
+
+seq:A200324_H_1_20250216T083316 a seq:Text ;
+    cnt:chars """Arkadiusz Wesolowski, <a href="/A200324/b200324.txt">Table of n, a(n) for n = 1..10000</a>
+Carlos Rivera, <a href="http://www.primepuzzles.net/conjectures/conj_008.htm">Conjecture 8</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/AndricasConjecture.html">Andrica's Conjecture</a>
+Marek Wolf, <a href="http://arxiv.org/abs/1010.3945">A Note on the Andrica Conjecture</a>, arXiv:1010.3945 [math.NT], 2010."""@en .
+
+seq:A200324_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#32 Feb 16 2025 08:33:16"@en .
+
+seq:A200324_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200324_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n) = floor(10*(sqrt(prime(n+1)) - sqrt(prime(n))))."@en .
+
+seq:A200324_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200324_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "3,5,4,6,2,5,2,4,5,1,5,3,1,2,4,4,1,3,2,1,3,2,3,4,2,0,1,0,1,6,1,2,0,4,0,2,2,1,2,2,0,3,0,1,0,4,4,1,0,1,1,0,3,1,1,1,0,1,1,0,2,4,1,0,1,3,1,2,0,1,1,2,1,1,1,1,2,1,1,2,0,2,0,1,0,1,1"@en .
+
+seq:A200324_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A000040, A079063, A200474."@en .
+
+seq:A200324_e_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(9) = 5 because 10*(sqrt(29) - sqrt(23)) = 5.8933328382...."@en .
+
+seq:A200324_p_1_20250216T083316 a seq:Text ;
+    cnt:chars "A200324:=n->floor(10*(sqrt(ithprime(n+1))-sqrt(ithprime(n)))): seq(A200324(n), n=1..200); # _Wesley Ivan Hurt_, Jan 19 2017"@en .
+
+seq:A200324_t_1_20250216T083316 a seq:Text ;
+    cnt:chars """Table[Floor[10*(Sqrt[Prime[n + 1]] - Sqrt[Prime[n]])], {n, 100}]
+Floor[10(Sqrt[Last[#]]-Sqrt[First[#]])]&/@Partition[Prime[Range[90]],2,1] (* _Harvey P. Dale_, Aug 24 2012 *)"""@en .
+

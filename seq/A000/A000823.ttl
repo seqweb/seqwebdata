@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.465390Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1352}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000823 a seq:Sequence ;
+    rdfs:label "A000823"@en ;
+    seq:hasTextList ( seq:A000823_I_1_20231209T121340 seq:A000823_N_1_20231209T121340 seq:A000823_C_1_20231209T121340 seq:A000823_D_1_20231209T121340 seq:A000823_H_1_20231209T121340 seq:A000823_F_1_20231209T121340 seq:A000823_t_1_20231209T121340 seq:A000823_K_1_20231209T121340 seq:A000823_O_1_20231209T121340 seq:A000823_A_1_20231209T121340 seq:A000823_E_1_20231209T121340 seq:A000823_V_1_20231209T121340 ) .
+
+seq:A000823_A_1_20231209T121340 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000823_C_1_20231209T121340 a seq:Text ;
+    cnt:chars """Number of equivalence classes with complementation of n variables on the domain and symmetric group of 2 variables operating on the range. - _Sean A. Irvine_, Jul 11 2011
+Essentially the same sequence as A000231. - _Sean A. Irvine_, Jul 11 2011"""@en .
+
+seq:A000823_D_1_20231209T121340 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000823_E_1_20231209T121340 a seq:Text ;
+    cnt:chars """More terms from _Sean A. Irvine_, Jul 10 2011
+a(7) corrected by _Sean A. Irvine_, May 29 2013"""@en .
+
+seq:A000823_F_1_20231209T121340 a seq:Text ;
+    cnt:chars "a(n) = 2^(2^(n+1) - n - 1) + 2^(2^n) - 2^(2^n - n - 1). - _Sean A. Irvine_, Jul 11 2011 [Corrected by _Sean A. Irvine_, Dec 07 2023]"@en .
+
+seq:A000823_H_1_20231209T121340 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="https://doi.org/10.1016/0016-0032(63)90456-3">On the number of classes of switching networks</a>, J. Franklin Instit., 276 (1963), 313-327.
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000823_I_1_20231209T121340 a seq:Text ;
+    cnt:chars "M4428 N1872 #35 Dec 09 2023 12:13:40"@en .
+
+seq:A000823_K_1_20231209T121340 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000823_N_1_20231209T121340 a seq:Text ;
+    cnt:chars "Number of switching networks (see Harrison reference for precise definition)."@en .
+
+seq:A000823_O_1_20231209T121340 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000823_V_1_20231209T121340 a seq:Text ;
+    cnt:chars "7,46,4336,134281216,288230380379570176,2658455991569831764110243006194384896,452312848583266388373324160190187140390789016525312000869601987902398529536"@en .
+
+seq:A000823_t_1_20231209T121340 a seq:Text ;
+    cnt:chars "a[n_]:= 2^(2^(n+1) - n - 1) + 2^(2^n) - 2^(2^n - n - 1); Table[a[n], {n, 7}] (* _James C. McMahon_, Dec 09 2023 *)"@en .
+

@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.853881Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 553}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000277 a seq:Sequence ;
+    rdfs:label "A000277"@en ;
+    seq:hasTextList ( seq:A000277_I_1_20120619T190642 seq:A000277_N_1_20120619T190642 seq:A000277_H_1_20120619T190642 seq:A000277_t_1_20120619T190642 seq:A000277_o_1_20120619T190642 seq:A000277_K_1_20120619T190642 seq:A000277_O_1_20120619T190642 seq:A000277_A_1_20120619T190642 seq:A000277_V_1_20120619T190642 ) .
+
+seq:A000277_A_1_20120619T190642 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, based on a message from Michael S. Cann Jr. (mscannjr(AT)gmail.com)"@en .
+
+seq:A000277_H_1_20120619T190642 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000277/b000277.txt\">Table of n, a(n) for n = 0..1000</a>"@en .
+
+seq:A000277_I_1_20120619T190642 a seq:Text ;
+    cnt:chars "#11 Jun 19 2012 19:06:42"@en .
+
+seq:A000277_K_1_20120619T190642 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000277_N_1_20120619T190642 a seq:Text ;
+    cnt:chars "3*n - 2*floor(sqrt(4*n+5)) + 5."@en .
+
+seq:A000277_O_1_20120619T190642 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000277_V_1_20120619T190642 a seq:Text ;
+    cnt:chars "1,2,5,6,9,10,13,16,17,20,23,24,27,30,33,34,37,40,43,44,47,50,53,56,57,60,63,66,69,70,73,76,79,82,85,86,89,92,95,98,101,102,105,108,111,114,117,120,121,124,127,130,133,136,139,140,143,146,149,152,155"@en .
+
+seq:A000277_o_1_20120619T190642 a seq:Text ;
+    cnt:chars "(PARI) a(n)=3*n-2*sqrtint(4*n+5)+5"@en .
+
+seq:A000277_t_1_20120619T190642 a seq:Text ;
+    cnt:chars "Table[3*n - 2*Floor[Sqrt[4 n + 5]] + 5, {n, 0, 100}] (* _T. D. Noe_, Jun 19 2012 *)"@en .
+

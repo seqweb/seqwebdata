@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.713058Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 376}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000510 a seq:Sequence ;
+    rdfs:label "A000510"@en ;
+    seq:hasTextList ( seq:A000510_I_1_20130509T110313 seq:A000510_N_1_20130509T110313 seq:A000510_D_1_20130509T110313 seq:A000510_Y_1_20130509T110313 seq:A000510_K_1_20130509T110313 seq:A000510_O_1_20130509T110313 seq:A000510_A_1_20130509T110313 seq:A000510_V_1_20130509T110313 ) .
+
+seq:A000510_A_1_20130509T110313 a seq:Text ;
+    cnt:chars "J. W. P. Hirschfeld [ jwph(AT)sussex.ac.uk ]"@en .
+
+seq:A000510_D_1_20130509T110313 a seq:Text ;
+    cnt:chars "J. W. P. Hirschfeld and L. Storme, The packing problem in statistics, coding theory and finite projective spaces, J. Statist. Plann. Inference 72 (1998), no. 1-2, 355-380."@en .
+
+seq:A000510_I_1_20130509T110313 a seq:Text ;
+    cnt:chars "#5 May 09 2013 11:03:13"@en .
+
+seq:A000510_K_1_20130509T110313 a seq:Text ;
+    cnt:chars "nonn,hard,more"@en .
+
+seq:A000510_N_1_20130509T110313 a seq:Text ;
+    cnt:chars "Maximal number of points in PG(2,q) with at most 3 on a line (next term is 21 or 22)."@en .
+
+seq:A000510_O_1_20130509T110313 a seq:Text ;
+    cnt:chars "2,1"@en .
+
+seq:A000510_V_1_20130509T110313 a seq:Text ;
+    cnt:chars "7,9,9,11,15,15,17"@en .
+
+seq:A000510_Y_1_20130509T110313 a seq:Text ;
+    cnt:chars "Cf. A000509."@en .
+

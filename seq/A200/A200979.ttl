@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.455299Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1389}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200979 a seq:Sequence ;
+    rdfs:label "A200979"@en ;
+    seq:hasTextList ( seq:A200979_I_1_20210103T165520 seq:A200979_N_1_20210103T165520 seq:A200979_C_1_20210103T165520 seq:A200979_F_1_20210103T165520 seq:A200979_e_1_20210103T165520 seq:A200979_p_1_20210103T165520 seq:A200979_K_1_20210103T165520 seq:A200979_O_1_20210103T165520 seq:A200979_A_1_20210103T165520 seq:A200979_V_1_20210103T165520 ) .
+
+seq:A200979_A_1_20210103T165520 a seq:Text ;
+    cnt:chars "_Dennis P. Walsh_, Nov 26 2011"@en .
+
+seq:A200979_C_1_20210103T165520 a seq:Text ;
+    cnt:chars """To derive a(n) = n!*binomial(n-1,3), we note that there are n! ways to arrange the books in a row.
+Then there are binomial(n-1,3) ways to place the arranged books on 4 consecutive shelves since there are binomial(n-1,3) compositions of n with 4 summands. Hence a(n) = n!*binomial(n-1,4).
+We note that a(n) is the fourth column of triangle A156992, the number of ways to arrange n books on k consecutice bookshelves, leaving no shelves empty."""@en .
+
+seq:A200979_F_1_20210103T165520 a seq:Text ;
+    cnt:chars """a(n) = n!*binomial(n-1,3) = n!*(n-1)*(n-2)*(n-3)/6 for n >= 4.
+E.g.f.: x^4/(1-x)^4.
+a(n) = A156992(n,4)."""@en .
+
+seq:A200979_I_1_20210103T165520 a seq:Text ;
+    cnt:chars "#13 Jan 03 2021 16:55:20"@en .
+
+seq:A200979_K_1_20210103T165520 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200979_N_1_20210103T165520 a seq:Text ;
+    cnt:chars "Number of ways to arrange n books on 4 consecutive bookshelves, leaving no shelf empty."@en .
+
+seq:A200979_O_1_20210103T165520 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A200979_V_1_20210103T165520 a seq:Text ;
+    cnt:chars "24,480,7200,100800,1411200,20321280,304819200,4790016000,79035264000,1369944576000,24932991283200,475993469952000,9519869399040000,199184959733760000,4353614119895040000,99262401933606912000,2357482045923164160000"@en .
+
+seq:A200979_e_1_20210103T165520 a seq:Text ;
+    cnt:chars "a(5) = 480 since there are 480 ways to arrange books b1, b2, b3, b4, and b5 on shelves s1, s2, s3, and s4. In this case, one shelf will hold two books, and the other three shelves will hold one each. There are 4 ways to choose the shelf for two books; there are 20 ways to choose the two books and place them in order on the two-book shelf; there are 6 ways to arrange the other three books on the other three shelves. Hence a(5) = 4*20*6 = 480."@en .
+
+seq:A200979_p_1_20210103T165520 a seq:Text ;
+    cnt:chars "seq(n!*binomial(n-1,3)n=4..20);"@en .
+

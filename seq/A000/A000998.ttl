@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.863034Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1407}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000998 a seq:Sequence ;
+    rdfs:label "A000998"@en ;
+    seq:hasTextList ( seq:A000998_I_1_20201027T084808 seq:A000998_N_1_20201027T084808 seq:A000998_C_1_20201027T084808 seq:A000998_D_1_20201027T084808 seq:A000998_H_1_20201027T084808 seq:A000998_F_1_20201027T084808 seq:A000998_p_1_20201027T084808 seq:A000998_t_1_20201027T084808 seq:A000998_K_1_20201027T084808 seq:A000998_O_1_20201027T084808 seq:A000998_A_1_20201027T084808 seq:A000998_E_1_20201027T084808 seq:A000998_V_1_20201027T084808 ) .
+
+seq:A000998_A_1_20201027T084808 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000998_C_1_20201027T084808 a seq:Text ;
+    cnt:chars "When preceded by {0, 0, 1, 0, 0}, this sequence shifts 3 places under binomial transform. - _Olivier Gérard_, Aug 12 2016"@en .
+
+seq:A000998_D_1_20201027T084808 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000998_E_1_20201027T084808 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 05 2008"@en .
+
+seq:A000998_F_1_20201027T084808 a seq:Text ;
+    cnt:chars "G.f.: A(x) = Sum(x^(3*k-3)/Product(1-l*x,l = 0 .. k)^3,k = 0 .. infinity). - _Vladeta Jovovic_, Feb 05 2008"@en .
+
+seq:A000998_H_1_20201027T084808 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000998/b000998.txt">Table of n, a(n) for n = 0..695</a>
+S. Tauber, <a href="http://www.jstor.org/stable/2308653">On generalizations of the exponential function</a>, Amer. Math. Monthly, 67 (1960), 763-767."""@en .
+
+seq:A000998_I_1_20201027T084808 a seq:Text ;
+    cnt:chars "M2549 N1009 #25 Oct 27 2020 08:48:08"@en .
+
+seq:A000998_K_1_20201027T084808 a seq:Text ;
+    cnt:chars "nonn,eigen"@en .
+
+seq:A000998_N_1_20201027T084808 a seq:Text ;
+    cnt:chars "From a differential equation."@en .
+
+seq:A000998_O_1_20201027T084808 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000998_V_1_20201027T084808 a seq:Text ;
+    cnt:chars "1,3,6,11,24,69,227,753,2451,8004,27138,97806,375313,1511868,6292884,26826701,116994453,523646202,2414394601,11487130362,56341183365,284110648983,1468690344087,7766823788295,41976012524088,231812530642644,1308325741771908"@en .
+
+seq:A000998_p_1_20201027T084808 a seq:Text ;
+    cnt:chars """b:= proc(n) option remember; `if`(n<3, [0$2, 1][n+1],
+      add(binomial(n-3, j)*b(j), j=0..n-3))
+    end:
+a:= n-> b(n+5):
+seq(a(n), n=0..30);  # _Alois P. Heinz_, May 21 2019"""@en .
+
+seq:A000998_t_1_20201027T084808 a seq:Text ;
+    cnt:chars """b[n_] := b[n] = If[n<3, {0, 0, 1}[[n+1]], Sum[Binomial[n-3, j] b[j], {j, 0, n-3}]];
+a[n_] := b[n+5];
+a /@ Range[0, 30] (* _Jean-François Alcover_, Oct 27 2020, after _Alois P. Heinz_ *)"""@en .
+

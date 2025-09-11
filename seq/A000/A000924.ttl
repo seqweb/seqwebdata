@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.687072Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1844}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000924 a seq:Sequence ;
+    rdfs:label "A000924"@en ;
+    seq:hasTextList ( seq:A000924_I_1_20211222T001028 seq:A000924_N_1_20211222T001028 seq:A000924_D_1_20211222T001028 seq:A000924_H_1_20211222T001028 seq:A000924_e_1_20211222T001028 seq:A000924_t_1_20211222T001028 seq:A000924_o_1_20211222T001028 seq:A000924_Y_1_20211222T001028 seq:A000924_K_1_20211222T001028 seq:A000924_O_1_20211222T001028 seq:A000924_A_1_20211222T001028 seq:A000924_E_1_20211222T001028 seq:A000924_V_1_20211222T001028 ) .
+
+seq:A000924_A_1_20211222T001028 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Mira Bernstein_"@en .
+
+seq:A000924_D_1_20211222T001028 a seq:Text ;
+    cnt:chars """Şaban Alaca & Kenneth S. Williams, Introductory Algebraic Number Theory. Cambridge: Cambridge University Press (2004): 322-325, Theorem 12.6.1, Example 12.6.6, Table 7.
+Z. I. Borevich and I. R. Shafarevich, Number Theory. Academic Press, NY, 1966, pp. 425-430.
+D. A. Buell, Binary Quadratic Forms. Springer-Verlag, NY, 1989, pp. 224-241.
+R. A. Mollin, Quadratics, CRC Press, 1996, Appendix D, gives a table for n <= 1999, correcting that of Borevich and Shafarevich.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000924_E_1_20211222T001028 a seq:Text ;
+    cnt:chars "Edited by _Dean Hickerson_, Mar 17 2003"@en .
+
+seq:A000924_H_1_20211222T001028 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000924/b000924.txt">Table of n, a(n) for n = 1..10000</a>
+Steven R. Finch, <a href="/A000924/a000924.pdf">Class number theory</a> [Cached copy, with permission of the author]
+<a href="/index/Qua#quadfield">Index entries for sequences related to quadratic fields</a>"""@en .
+
+seq:A000924_I_1_20211222T001028 a seq:Text ;
+    cnt:chars "M0195 N0072 #43 Dec 22 2021 00:10:28"@en .
+
+seq:A000924_K_1_20211222T001028 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000924_N_1_20211222T001028 a seq:Text ;
+    cnt:chars "Class number of Q(sqrt(-n)), n squarefree."@en .
+
+seq:A000924_O_1_20211222T001028 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000924_V_1_20211222T001028 a seq:Text ;
+    cnt:chars "1,1,1,2,2,1,2,1,2,4,2,4,1,4,2,3,6,6,4,3,4,4,2,2,6,4,8,4,1,4,5,2,6,4,4,2,3,6,8,8,8,1,8,4,7,4,10,8,4,5,4,3,4,10,6,12,2,4,8,8,4,14,4,5,8,6,3,6,12,8,8,8,2,6,10,10,2,5,12,4,5,4,14,8,8,3,8,4,10,8,16,14,7,8,4,6,8,10"@en .
+
+seq:A000924_Y_1_20211222T001028 a seq:Text ;
+    cnt:chars """Values of n run through A005117. Corresponding discriminants give A033197.
+Cf. also A003649."""@en .
+
+seq:A000924_e_1_20211222T001028 a seq:Text ;
+    cnt:chars "a(10) = 4, since 14 is the 10th squarefree number and the class number of Q(sqrt(-14)) is 4."@en .
+
+seq:A000924_o_1_20211222T001028 a seq:Text ;
+    cnt:chars "(PARI) lista(nn) = for (n=1, nn, if (issquarefree(n), print1(qfbclassno(-n*if((-n)%4>1, 4, 1)), \", \"))); \\\\ _Michel Marcus_, Jul 08 2015"@en .
+
+seq:A000924_t_1_20211222T001028 a seq:Text ;
+    cnt:chars "nmax = 100; s = Select[Range[2 * nmax], SquareFreeQ]; a[n_] := NumberFieldClassNumber[Sqrt[-s[[n]]]]; Table[a[n], {n, nmax}] (* _Jean-François Alcover_, Dec 30 2011 *)"@en .
+

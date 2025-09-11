@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.707542Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 464}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383060 a seq:Sequence ;
+    rdfs:label "A383060"@en ;
+    seq:hasTextList ( seq:A383060_I_1_20250419T180225 seq:A383060_N_1_20250419T180225 seq:A383060_H_1_20250419T180225 seq:A383060_t_1_20250419T180225 seq:A383060_Y_1_20250419T180225 seq:A383060_K_1_20250419T180225 seq:A383060_O_1_20250419T180225 seq:A383060_A_1_20250419T180225 seq:A383060_V_1_20250419T180225 ) .
+
+seq:A383060_A_1_20250419T180225 a seq:Text ;
+    cnt:chars "_Paolo Xausa_, Apr 18 2025"@en .
+
+seq:A383060_H_1_20250419T180225 a seq:Text ;
+    cnt:chars "Paolo Xausa, <a href=\"/A383060/b383060.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383060_I_1_20250419T180225 a seq:Text ;
+    cnt:chars "#6 Apr 19 2025 18:02:25"@en .
+
+seq:A383060_K_1_20250419T180225 a seq:Text ;
+    cnt:chars "sign,base"@en .
+
+seq:A383060_N_1_20250419T180225 a seq:Text ;
+    cnt:chars "First differences of A383059."@en .
+
+seq:A383060_O_1_20250419T180225 a seq:Text ;
+    cnt:chars "1,10"@en .
+
+seq:A383060_V_1_20250419T180225 a seq:Text ;
+    cnt:chars "1,1,1,1,1,1,1,1,1,11,-10,2,10,1,1,1,1,1,1,1,11,-27,29,-12,-16,30,1,1,1,1,1,11,-45,47,-30,2,16,-34,48,-12,-17,31,1,1,1,11,-63,65,-46,34,-52,66,-30,2,16,-35,49,-12,-17,31,1,111,-181,182,-163,52,-51,163,-144"@en .
+
+seq:A383060_Y_1_20250419T180225 a seq:Text ;
+    cnt:chars "Cf. A383059."@en .
+
+seq:A383060_t_1_20250419T180225 a seq:Text ;
+    cnt:chars """(* A383059list is defined at A383059 *)
+Differences[A383059list[100]]"""@en .
+

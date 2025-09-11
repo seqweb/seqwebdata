@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.749471Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1436}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200647 a seq:Sequence ;
+    rdfs:label "A200647"@en ;
+    seq:hasTextList ( seq:A200647_I_1_20250105T195139 seq:A200647_N_1_20250105T195139 seq:A200647_D_1_20250105T195139 seq:A200647_H_1_20250105T195139 seq:A200647_e_1_20250105T195139 seq:A200647_t_1_20250105T195139 seq:A200647_Y_1_20250105T195139 seq:A200647_K_1_20250105T195139 seq:A200647_O_1_20250105T195139 seq:A200647_A_1_20250105T195139 seq:A200647_E_1_20250105T195139 seq:A200647_V_1_20250105T195139 ) .
+
+seq:A200647_A_1_20250105T195139 a seq:Text ;
+    cnt:chars "_Casey Mongoven_, Nov 19 2011"@en .
+
+seq:A200647_D_1_20250105T195139 a seq:Text ;
+    cnt:chars "Wolfdieter Lang, The Wythoff and the Zeckendorf representations of numbers are equivalent, in G. E. Bergum et al. (edts.) Application of Fibonacci numbers vol. 6, Kluwer, Dordrecht, 1996, pp. 319-337. [See A317208 for a link.]"@en .
+
+seq:A200647_E_1_20250105T195139 a seq:Text ;
+    cnt:chars "More terms from _Amiram Eldar_, Jul 01 2023"@en .
+
+seq:A200647_H_1_20250105T195139 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A200647/b200647.txt">Table of n, a(n) for n = 1..10000</a>
+Aviezri S. Fraenkel, <a href="http://www.jstor.org/stable/10.4169/000298910x496787">From Enmity to Amity</a>, American Mathematical Monthly, Vol. 117, No. 7 (2010) 646-648.
+Clark Kimberling, <a href="https://web.archive.org/web/2024*/https://www.fq.math.ca/Scanned/33-1/kimberling.pdf">The Zeckendorf array equals the Wythoff array</a>, Fibonacci Quarterly 33 (1995) 3-8."""@en .
+
+seq:A200647_I_1_20250105T195139 a seq:Text ;
+    cnt:chars "#30 Jan 05 2025 19:51:39"@en .
+
+seq:A200647_K_1_20250105T195139 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200647_N_1_20250105T195139 a seq:Text ;
+    cnt:chars "Number of equal bit-runs in Wythoff representation of n."@en .
+
+seq:A200647_O_1_20250105T195139 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200647_V_1_20250105T195139 a seq:Text ;
+    cnt:chars "1,1,2,2,1,2,3,2,2,3,4,2,1,2,3,4,4,3,2,3,2,2,3,4,4,3,4,5,4,2,3,4,2,1,2,3,4,4,3,4,5,4,4,5,6,4,3,2,3,4,4,3,2,3,2,2,3,4,4,3,4,5,4,4,5,6,4,3,4,5,6,6,5,4,5,4,2,3,4,4,3,4,5,4,2,3,4"@en .
+
+seq:A200647_Y_1_20250105T195139 a seq:Text ;
+    cnt:chars "Cf. A135817, A317208."@en .
+
+seq:A200647_e_1_20250105T195139 a seq:Text ;
+    cnt:chars "The Wythoff representation of 29 is '10110'. This has 4 equal bit-runs: '1', '0', '11' and '0'. So a(29) = 4."@en .
+
+seq:A200647_t_1_20250105T195139 a seq:Text ;
+    cnt:chars "z[n_] := Floor[(n + 1)*GoldenRatio] - n - 1; h[n_] := z[n] - z[n - 1]; w[n_] := Module[{m = n, zm = 0, hm, s = {}}, While[zm != 1, hm = h[m]; AppendTo[s, hm]; If[hm == 1, zm = z[m], zm = z[z[m]]]; m = zm]; s]; a[n_] := Length[Split[w[n]]]; Array[a, 100] (* _Amiram Eldar_, Jul 01 2023 *)"@en .
+

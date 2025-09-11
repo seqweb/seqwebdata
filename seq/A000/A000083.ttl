@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.384655Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1355}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000083 a seq:Sequence ;
+    rdfs:label "A000083"@en ;
+    seq:hasTextList ( seq:A000083_I_1_20250224T224445 seq:A000083_N_1_20250224T224445 seq:A000083_D_1_20250224T224445 seq:A000083_H_1_20250224T224445 seq:A000083_F_1_20250224T224445 seq:A000083_Y_1_20250224T224445 seq:A000083_K_1_20250224T224445 seq:A000083_O_1_20250224T224445 seq:A000083_A_1_20250224T224445 seq:A000083_E_1_20250224T224445 seq:A000083_V_1_20250224T224445 ) .
+
+seq:A000083_A_1_20250224T224445 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000083_D_1_20250224T224445 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000083_E_1_20250224T224445 a seq:Text ;
+    cnt:chars "More terms from _Christian G. Bower_, Nov 15 1998"@en .
+
+seq:A000083_F_1_20250224T224445 a seq:Text ;
+    cnt:chars "G.f.: A(x) = B(x) + C(x) - B(x)*D(x), where B, C, D respectively are g.f.s of A000237, A035349, A035350. - _Christian G. Bower_, Nov 15 1998"@en .
+
+seq:A000083_H_1_20250224T224445 a seq:Text ;
+    cnt:chars """Christian G. Bower, <a href="/A000083/b000083.txt">Table of n, a(n) for n = 0..500</a>
+G. W. Ford and G. E. Uhlenbeck, <a href="http://www.jstor.org/stable/89494">Combinatorial problems in the theory of graphs III</a>, Proc. Nat. Acad. Sci. USA, 42 (1956), 529-535.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/CactusGraph.html">Cactus Graph</a>
+<a href="/index/Ca#cacti">Index entries for sequences related to cacti</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000083_I_1_20250224T224445 a seq:Text ;
+    cnt:chars "M1191 N0461 #36 Feb 24 2025 22:44:45"@en .
+
+seq:A000083_K_1_20250224T224445 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000083_N_1_20250224T224445 a seq:Text ;
+    cnt:chars "Number of mixed Husimi trees with n nodes; or polygonal cacti with bridges."@en .
+
+seq:A000083_O_1_20250224T224445 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000083_V_1_20250224T224445 a seq:Text ;
+    cnt:chars "1,1,1,2,4,9,23,63,188,596,1979,6804,24118,87379,322652,1209808,4596158,17657037,68497898,268006183,1056597059,4193905901,16748682185,67258011248,271452424286,1100632738565,4481533246014,18319020658537,75152228262785,309337095953934"@en .
+
+seq:A000083_Y_1_20250224T224445 a seq:Text ;
+    cnt:chars "Cf. A000237, A000314, A035082, A035349-A035357."@en .
+

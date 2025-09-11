@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.684986Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2059}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000497 a seq:Sequence ;
+    rdfs:label "A000497"@en ;
+    seq:hasTextList ( seq:A000497_I_1_20180609T092027 seq:A000497_N_1_20180609T092027 seq:A000497_D_1_20180609T092027 seq:A000497_H_1_20180609T092027 seq:A000497_F_1_20180609T092027 seq:A000497_p_1_20180609T092027 seq:A000497_t_1_20180609T092027 seq:A000497_Y_1_20180609T092027 seq:A000497_K_1_20180609T092027 seq:A000497_O_1_20180609T092027 seq:A000497_A_1_20180609T092027 seq:A000497_E_1_20180609T092027 seq:A000497_V_1_20180609T092027 ) .
+
+seq:A000497_A_1_20180609T092027 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000497_D_1_20180609T092027 a seq:Text ;
+    cnt:chars """L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 256.
+F. N. David and D. E. Barton, Combinatorial Chance. Hafner, NY, 1962, p. 296.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000497_E_1_20180609T092027 a seq:Text ;
+    cnt:chars "More terms from Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Dec 12 2000"@en .
+
+seq:A000497_F_1_20180609T092027 a seq:Text ;
+    cnt:chars """G.f.:  x*(4*x+1)*hypergeom([3, 7/2],[],2*x)+28*x^3*hypergeom([4, 9/2],[],2*x). - _Mark van Hoeij_, Apr 07 2013
+a(n) = n*(n+1)*(2*n+1)*2^n*GAMMA(n+3/2)/(9*sqrt(Pi)). - _Vaclav Kotesovec_, Aug 07 2013
+(2*n-1)*(n-1)*a(n) -(n+1)*(1+2*n)^2*a(n-1)=0. - _R. J. Mathar_, Jun 09 2018"""@en .
+
+seq:A000497_H_1_20180609T092027 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000497/b000497.txt">Table of n, a(n) for n = 1..100</a>
+H. W. Gould, Harris Kwong, Jocelyn Quaintance, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL18/Kwong/kwong9.html">On Certain Sums of Stirling Numbers with Binomial Coefficients</a>, J. Integer Sequences, 18 (2015), #15.9.6.
+M. Ward, <a href="http://www.jstor.org/stable/2370916">The representations of Stirling's numbers and Stirling's polynomials as sums of factorials</a>, Amer. J. Math., 56 (1934), p. 87-95."""@en .
+
+seq:A000497_I_1_20180609T092027 a seq:Text ;
+    cnt:chars "M5186 N2254 #36 Jun 09 2018 09:20:27"@en .
+
+seq:A000497_K_1_20180609T092027 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000497_N_1_20180609T092027 a seq:Text ;
+    cnt:chars "S2(j,2j+2) where S2(n,k) is a 2-associated Stirling number of the second kind."@en .
+
+seq:A000497_O_1_20180609T092027 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000497_V_1_20180609T092027 a seq:Text ;
+    cnt:chars "1,25,490,9450,190575,4099095,94594500,2343240900,62199262125,1764494857125,53338158823950,1712934942468750,58274046742786875,2094379201311271875,79318164037837725000,3157886388887074845000"@en .
+
+seq:A000497_Y_1_20180609T092027 a seq:Text ;
+    cnt:chars "Cf. A008299, A000504."@en .
+
+seq:A000497_p_1_20180609T092027 a seq:Text ;
+    cnt:chars """gf := (u,t)->exp(u*(exp(t)-1-t)); S2a := j->simplify(subs(u=0,t=0,diff(gf(u,t),u$j,t$(2*j+2)))/j!); for i from 1 to 20 do S2a(i); od;
+# Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Dec 12 2000"""@en .
+
+seq:A000497_t_1_20180609T092027 a seq:Text ;
+    cnt:chars """t[n_, k_] := Sum[ (-1)^i*Binomial[n, i]*Sum[ (-1)^j*(k-i-j)^(n-i)/(j!*(k-i-j)!), {j, 0, k-i}], {i, 0, k}]; Table[ t[2n+2, n], {n, 1, 16}  ](* _Jean-François Alcover_, Feb 24 2012 *)
+Table[n*(n+1)*(2*n+1)*2^n*Gamma[n+3/2]/(9*Sqrt[Pi]),{n,1,20}] (* _Vaclav Kotesovec_, Aug 07 2013 *)"""@en .
+

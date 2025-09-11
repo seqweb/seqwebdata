@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.635803Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1450}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383026 a seq:Sequence ;
+    rdfs:label "A383026"@en ;
+    seq:hasTextList ( seq:A383026_I_1_20250421T122011 seq:A383026_N_1_20250421T122011 seq:A383026_C_1_20250421T122011 seq:A383026_H_1_20250421T122011 seq:A383026_e_1_20250421T122011 seq:A383026_Y_1_20250421T122011 seq:A383026_K_1_20250421T122011 seq:A383026_O_1_20250421T122011 seq:A383026_A_1_20250421T122011 seq:A383026_V_1_20250421T122011 ) .
+
+seq:A383026_A_1_20250421T122011 a seq:Text ;
+    cnt:chars "_Markus Sigg_, Apr 13 2025"@en .
+
+seq:A383026_C_1_20250421T122011 a seq:Text ;
+    cnt:chars "Because A382547(n) > 0 for only finitely many n, the triangle has only finitely many nonzero rows."@en .
+
+seq:A383026_H_1_20250421T122011 a seq:Text ;
+    cnt:chars "Markus Sigg, <a href=\"/A383026/b383026.txt\">Table of n, a(n) for n = 1..231</a>, rows 1..21, flattened."@en .
+
+seq:A383026_I_1_20250421T122011 a seq:Text ;
+    cnt:chars "#16 Apr 21 2025 12:20:11"@en .
+
+seq:A383026_K_1_20250421T122011 a seq:Text ;
+    cnt:chars "nonn,fini,tabl"@en .
+
+seq:A383026_N_1_20250421T122011 a seq:Text ;
+    cnt:chars "Triangle T(n,k) read by rows whose n-th row is the lexicographically first n-tuple of ordered distinct positive integers with sum A382547(n) and product A382547(n) * 100^(n-1), or an n-tuple of zeros when A382547(n) = 0."@en .
+
+seq:A383026_O_1_20250421T122011 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383026_V_1_20250421T122011 a seq:Text ;
+    cnt:chars "1,180,225,150,175,200,125,160,175,184,125,127,150,160,200,100,125,140,150,175,192,80,100,125,150,160,173,250,80,100,110,125,140,150,200,250,50,100,112,125,150,155,160,200,250,50,80,100,125,128,150,170,175,200,250"@en .
+
+seq:A383026_Y_1_20250421T122011 a seq:Text ;
+    cnt:chars "Cf. A382547, A380887, A381187."@en .
+
+seq:A383026_e_1_20250421T122011 a seq:Text ;
+    cnt:chars """Triangle begins:
+    1,
+  180, 225,
+  150, 175, 200,
+  125, 160, 175, 184,
+  125, 127, 150, 160, 200,
+  100, 125, 140, 150, 175, 192,
+   80, 100, 125, 150, 160, 173, 250,
+   80, 100, 110, 125, 140, 150, 200, 250,
+   50, 100, 112, 125, 150, 155, 160, 200, 250,
+   50,  80, 100, 125, 128, 150, 170, 175, 200, 250,
+   50,  65,  75, 100, 125, 128, 150, 175, 200, 250, 320,
+   25,  50,  80, 100, 125, 128, 150, 200, 225, 230, 250, 300,
+  ...
+For n = 6 there are three 6-tuples with sum A382547(6) = 882 and product 100^7 * 882, namely (100, 125, 140, 150, 175, 192), (100, 125, 147, 150, 160, 200), (112, 120, 125, 150, 175, 200). The first of these is the lexicographically smallest and thus is row 6 of the triangle."""@en .
+

@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.022132Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 660}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000643 a seq:Sequence ;
+    rdfs:label "A000643"@en ;
+    seq:hasTextList ( seq:A000643_I_1_20240105T191402 seq:A000643_N_1_20240105T191402 seq:A000643_C_1_20240105T191402 seq:A000643_D_1_20240105T191402 seq:A000643_t_1_20240105T191402 seq:A000643_Y_1_20240105T191402 seq:A000643_K_1_20240105T191402 seq:A000643_O_1_20240105T191402 seq:A000643_A_1_20240105T191402 seq:A000643_E_1_20240105T191402 seq:A000643_V_1_20240105T191402 ) .
+
+seq:A000643_A_1_20240105T191402 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000643_C_1_20240105T191402 a seq:Text ;
+    cnt:chars """The next term is too large to include.
+The next term has 5050530 digits. - _Harvey P. Dale_, Jan 05 2024"""@en .
+
+seq:A000643_D_1_20240105T191402 a seq:Text ;
+    cnt:chars "D. E. Knuth, personal communication."@en .
+
+seq:A000643_E_1_20240105T191402 a seq:Text ;
+    cnt:chars "1 more term from _Vladeta Jovovic_, Mar 19 2000"@en .
+
+seq:A000643_I_1_20240105T191402 a seq:Text ;
+    cnt:chars "#21 Jan 05 2024 19:14:02"@en .
+
+seq:A000643_K_1_20240105T191402 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000643_N_1_20240105T191402 a seq:Text ;
+    cnt:chars "a(n) = a(n-1) + 2^a(n-2)."@en .
+
+seq:A000643_O_1_20240105T191402 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000643_V_1_20240105T191402 a seq:Text ;
+    cnt:chars "0,0,1,2,4,8,24,280,16777496,1942668892225729070919461906823518906642406839052139521251812409738904285205225275672"@en .
+
+seq:A000643_Y_1_20240105T191402 a seq:Text ;
+    cnt:chars "Cf. A000659."@en .
+
+seq:A000643_t_1_20240105T191402 a seq:Text ;
+    cnt:chars """Off[General::ovfl];a={1,0};Flatten[Prepend[Table[s=Plus@@a;a=2^(RotateLeft[a]);a[[ -1]]=s,{n,8}],Table[0,{m,Length[a]-1}]]] (* _Vladimir Joseph Stephan Orlovsky_, Nov 18 2009 *)
+nxt[{a_,b_}]:={b,b+2^a}; NestList[nxt,{0,0},9][[;;,1]] (* _Harvey P. Dale_, Jan 05 2024 *)"""@en .
+

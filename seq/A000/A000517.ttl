@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.727840Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2162}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000517 a seq:Sequence ;
+    rdfs:label "A000517"@en ;
+    seq:hasTextList ( seq:A000517_I_1_20230624T213747 seq:A000517_N_1_20230624T213747 seq:A000517_D_1_20230624T213747 seq:A000517_H_1_20230624T213747 seq:A000517_F_1_20230624T213747 seq:A000517_t_1_20230624T213747 seq:A000517_Y_1_20230624T213747 seq:A000517_K_1_20230624T213747 seq:A000517_O_1_20230624T213747 seq:A000517_A_1_20230624T213747 seq:A000517_E_1_20230624T213747 seq:A000517_V_1_20230624T213747 ) .
+
+seq:A000517_A_1_20230624T213747 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000517_D_1_20230624T213747 a seq:Text ;
+    cnt:chars """F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 261.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000517_E_1_20230624T213747 a seq:Text ;
+    cnt:chars "More terms from _Ralf Stephan_, Sep 18 2003"@en .
+
+seq:A000517_F_1_20230624T213747 a seq:Text ;
+    cnt:chars "G.f.: 16x^7(17-184x+636x^2-720x^3)/((1-2x)^4*(1-4x)^3*(1-6x)^2*(1-8x)). - _Ralf Stephan_, Sep 18 2003 [Proved by Désiré André, 1895, p.154, for circular permutations (see A008303). _Peter Luschny_, Aug 07 2019]"@en .
+
+seq:A000517_H_1_20230624T213747 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000517/b000517.txt">Table of n, a(n) for n = 7..200</a>
+Désiré André, <a href="https://doi.org/10.24033/bsmf.519">Mémoire sur les séquences des permutations circulaires</a>, Bulletin de la S. M. F., tome 23 (1895), pp. 122-184.
+C. J. Fewster, D. Siemssen, <a href="http://arxiv.org/abs/1403.1723">Enumerating Permutations by their Run Structure</a>, arXiv preprint arXiv:1403.1723 [math.CO], 2014.
+R. G. Rieper and M. Zeleke, <a href="http://arXiv.org/abs/math.CO/0005180">Valleyless Sequences</a>, arXiv:math/0005180 [math.CO], 2000.
+<a href="/index/Rec#order_10">Index entries for linear recurrences with constant coefficients</a>, signature (40, -700, 7056, -45360, 194304, -561728, 1082624, -1332224, 946176, -294912)."""@en .
+
+seq:A000517_I_1_20230624T213747 a seq:Text ;
+    cnt:chars "M5431 N2360 #37 Jun 24 2023 21:37:47"@en .
+
+seq:A000517_K_1_20230624T213747 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000517_N_1_20230624T213747 a seq:Text ;
+    cnt:chars "Number of permutations of length n with exactly three valleys."@en .
+
+seq:A000517_O_1_20230624T213747 a seq:Text ;
+    cnt:chars "7,1"@en .
+
+seq:A000517_V_1_20230624T213747 a seq:Text ;
+    cnt:chars "272,7936,137216,1841152,21253376,222398464,2174832640,20261765120,182172651520,1594922762240,13684856848384,115620218667008,965271355195392,7984436548730880,65569731961159680,535438370914959360,4353038473793372160,35266789418949672960"@en .
+
+seq:A000517_Y_1_20230624T213747 a seq:Text ;
+    cnt:chars """Cf. A000431, A000487.
+Column k=3 of A008303."""@en .
+
+seq:A000517_t_1_20230624T213747 a seq:Text ;
+    cnt:chars """nn = 20; Drop[CoefficientList[Series[16 x^7 (17 - 184 x + 636 x^2 - 720 x^3)/((1 - 2 x)^4*(1 - 4 x)^3*(1 - 6 x)^2*(1 - 8 x)), {x, 0, nn}], x], 7] (* _T. D. Noe_, Jun 20 2012 *)
+LinearRecurrence[{40, -700, 7056, -45360, 194304, -561728, 1082624, -1332224, 946176, -294912}, {272, 7936, 137216, 1841152, 21253376, 222398464, 2174832640, 20261765120, 182172651520, 1594922762240}, 20] (* _Jean-François Alcover_, Feb 09 2016 *)"""@en .
+

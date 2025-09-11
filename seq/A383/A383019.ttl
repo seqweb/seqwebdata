@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.621526Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2115}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383019 a seq:Sequence ;
+    rdfs:label "A383019"@en ;
+    seq:hasTextList ( seq:A383019_I_1_20250420T105825 seq:A383019_N_1_20250420T105825 seq:A383019_C_1_20250420T105825 seq:A383019_F_1_20250420T105825 seq:A383019_e_1_20250420T105825 seq:A383019_o_1_20250420T105825 seq:A383019_Y_1_20250420T105825 seq:A383019_K_1_20250420T105825 seq:A383019_O_1_20250420T105825 seq:A383019_A_1_20250420T105825 seq:A383019_V_1_20250420T105825 ) .
+
+seq:A383019_A_1_20250420T105825 a seq:Text ;
+    cnt:chars "_Mikhail Kurkov_, Apr 12 2025"@en .
+
+seq:A383019_C_1_20250420T105825 a seq:Text ;
+    cnt:chars "Conjecture: T(n,k) is the number of paths of length n + k steps from (0,0) to (2*n,0) on or above the x-axis with steps U = (1,1), D = (1,-1), and L = (2,0), where the level steps L at height m have f(m) = m + 1 colors for m >= 0. The same seems to work for any f(n). Also, it looks like that if we modify g.f. to 1/(1 - f(0)*x - g(0)*x*y/(1 - f(1)*x - g(1)*x*y/(1 - f(2)*x - g(2)*x*y/(1 - f(3)*x - g(3)*x*y/(1 - f(4)*x - g(4)*x*y/(1 - ...)))))), then steps U at height m have g(m) colors for m >= 0."@en .
+
+seq:A383019_F_1_20250420T105825 a seq:Text ;
+    cnt:chars """Conjecture: row polynomials are R(n,0,x) where R(n,k,x) = R(n-1,k+1,x) + x*Sum_{i=0..n-1} Sum_{j=0..k} binomial(k,j)*R(n-i-1,j,x)*R(i,k-j,x) for n > 0, k >= 0 with R(0,k,x) = 1 for k >= 0.
+Conjecture: using modified g.f. given in the comments, the n-th row polynomial is v_n for n > 0 where we start with vector v of fixed length m with elements v_i = Sum_{j=0..i-1} f(j) + g(j)*x, reserve t as an empty vector of fixed length m and for i=1..m-1, for j=i+1..m, apply t := v (at the beginning of each cycle for i) and also apply v_j := [j = (i+1)]*f(0)*v_{j-1} + [j > (i+1)]*(v_{j-1} + f(j-i-1)*t_{j-1}) + g(j-i-1)*x*v_j."""@en .
+
+seq:A383019_I_1_20250420T105825 a seq:Text ;
+    cnt:chars "#27 Apr 20 2025 10:58:25"@en .
+
+seq:A383019_K_1_20250420T105825 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A383019_N_1_20250420T105825 a seq:Text ;
+    cnt:chars "Triangle T(n,k) read by rows (n >= 0, k >= 0) with g.f. 1/(1 - f(0)*x - x*y/(1 - f(1)*x - x*y/(1 - f(2)*x - x*y/(1 - f(3)*x - x*y/(1 - f(4)*x - x*y/(1 - ...)))))) where f(n) = n + 1 for n >= 0."@en .
+
+seq:A383019_O_1_20250420T105825 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A383019_V_1_20250420T105825 a seq:Text ;
+    cnt:chars "1,1,1,1,4,2,1,11,16,5,1,26,80,64,14,1,57,324,490,256,42,1,120,1170,2944,2730,1024,132,1,247,3948,15403,22400,14322,4096,429,1,502,12776,73960,157564,152064,72072,16384,1430,1,1013,40264,335856,1004400,1368796,953344,351780,65536,4862"@en .
+
+seq:A383019_Y_1_20250420T105825 a seq:Text ;
+    cnt:chars "Cf. A302285 (row sums)."@en .
+
+seq:A383019_e_1_20250420T105825 a seq:Text ;
+    cnt:chars """Triangle begins:
+  1;
+  1,    1;
+  1,    4,     2;
+  1,   11,    16,     5;
+  1,   26,    80,    64,     14;
+  1,   57,   324,   490,    256,     42;
+  1,  120,  1170,  2944,   2730,   1024,   132;
+  1,  247,  3948, 15403,  22400,  14322,  4096,   429;
+  1,  502, 12776, 73960, 157564, 152064, 72072, 16384, 1430;
+  ..."""@en .
+
+seq:A383019_o_1_20250420T105825 a seq:Text ;
+    cnt:chars "(PARI) rows_upto(n) = my(A = 1, x = 'x, y = 'y, v1); forstep(j=n, 1, -1, A = 1 - j*x - x*y/A + x*O(x^n)); v1 = Vec(1/A); v1 = vector(n+1, i, Vecrev(v1[i]))"@en .
+

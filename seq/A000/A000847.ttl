@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.518832Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 789}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000847 a seq:Sequence ;
+    rdfs:label "A000847"@en ;
+    seq:hasTextList ( seq:A000847_I_1_20220202T000601 seq:A000847_N_1_20220202T000601 seq:A000847_D_1_20220202T000601 seq:A000847_H_1_20220202T000601 seq:A000847_Y_1_20220202T000601 seq:A000847_K_1_20220202T000601 seq:A000847_O_1_20220202T000601 seq:A000847_A_1_20220202T000601 seq:A000847_E_1_20220202T000601 seq:A000847_V_1_20220202T000601 ) .
+
+seq:A000847_A_1_20220202T000601 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000847_D_1_20220202T000601 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000847_E_1_20220202T000601 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 26 2000"@en .
+
+seq:A000847_H_1_20220202T000601 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000847_I_1_20220202T000601 a seq:Text ;
+    cnt:chars "M3572 N1448 #17 Feb 02 2022 00:06:01"@en .
+
+seq:A000847_K_1_20220202T000601 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000847_N_1_20220202T000601 a seq:Text ;
+    cnt:chars "Number of n-input 2-output switching networks under action of GL(n,2) on the inputs and complementing group C(2,2) on the outputs."@en .
+
+seq:A000847_O_1_20220202T000601 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000847_V_1_20220202T000601 a seq:Text ;
+    cnt:chars "4,20,264,80104,464655217384,4220043418839499735652372200,176673930781452287254786178869471177643231519559311590043612856"@en .
+
+seq:A000847_Y_1_20220202T000601 a seq:Text ;
+    cnt:chars "Cf. A000848."@en .
+

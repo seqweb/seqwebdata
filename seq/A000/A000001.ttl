@@ -1,3 +1,4 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.414695Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 67, "entities": 17, "chars": 11497}
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix oeis: <http://www.oeis.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,10 +9,10 @@ oeis:A000001 a seq:Sequence ;
     rdfs:label "A000001"@en ;
     seq:hasTextList ( seq:A000001_I_1_20250221T130704 seq:A000001_N_1_20250221T130704 seq:A000001_C_1_20250221T130704 seq:A000001_D_1_20250221T130704 seq:A000001_H_1_20250221T130704 seq:A000001_F_1_20250221T130704 seq:A000001_e_1_20250221T130704 seq:A000001_p_1_20250221T130704 seq:A000001_t_1_20250221T130704 seq:A000001_o_1_20250221T130704 seq:A000001_Y_1_20250221T130704 seq:A000001_K_1_20250221T130704 seq:A000001_O_1_20250221T130704 seq:A000001_A_1_20250221T130704 seq:A000001_E_1_20250221T130704 seq:A000001_V_1_20250221T130704 ) .
 
-seq:A000001_A_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_A_1_20250221T130704 a seq:Text ;
     cnt:chars "_N. J. A. Sloane_"@en .
 
-seq:A000001_C_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_C_1_20250221T130704 a seq:Text ;
     cnt:chars """Also, number of nonisomorphic subgroups of order n in symmetric group S_n. - _Lekraj Beedassy_, Dec 16 2004
 Also, number of nonisomorphic primitives of the combinatorial species Lin[n-1]. - _Nicolae Boicu_, Apr 29 2011
 In (J. H. Conway, Heiko Dietrich and E. A. O'Brien, 2008), a(n) is called the "group number of n", denoted by gnu(n), and the first occurrence of k is called the "minimal order attaining k", denoted by moa(k) (see A046057). - _Daniel Forgues_, Feb 15 2017
@@ -19,7 +20,7 @@ It is conjectured in (J. H. Conway, Heiko Dietrich and E. A. O'Brien, 2008) that
 MacHale (2020) shows that there are infinitely many values of n for which there are more groups than rings of that order (cf. A027623). He gives n = 36355 as an example. It would be nice to have enough values of n to create an OEIS entry for them. - _N. J. A. Sloane_, Jan 02 2021
 I conjecture that a(i) * a(j) <= a(i*j) for all nonnegative integers i and j. - _Jorge R. F. F. Lopes_, Apr 21 2024"""@en .
 
-seq:A000001_D_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_D_1_20250221T130704 a seq:Text ;
     cnt:chars """S. R. Blackburn, P. M. Neumann, and G. Venkataraman, Enumeration of Finite Groups, Cambridge, 2007.
 L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 302, #35.
 J. H. Conway et al., The Symmetries of Things, Peters, 2008, p. 209.
@@ -33,11 +34,11 @@ M. F. Newman and E. A. O'Brien, A CAYLEY library for the groups of order dividin
 N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
 N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
 
-seq:A000001_E_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_E_1_20250221T130704 a seq:Text ;
     cnt:chars """More terms from _Michael Somos_
 Typo in b-file description fixed by _David Applegate_, Sep 05 2009"""@en .
 
-seq:A000001_F_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_F_1_20250221T130704 a seq:Text ;
     cnt:chars """From _Mitch Harris_, Oct 25 2006: (Start)
 For p, q, r primes:
 a(p) = 1, a(p^2) = 2, a(p^3) = 5, a(p^4) = 14, if p = 2, otherwise 15.
@@ -72,7 +73,7 @@ a(p*q*r) (p < q < r) is one of the following:
 (End)
 a(n) = A000688(n) + A060689(n). - _R. J. Mathar_, Mar 14 2015"""@en .
 
-seq:A000001_H_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_H_1_20250221T130704 a seq:Text ;
     cnt:chars """H.-U. Besche and Ivan Panchenko, <a href="/A000001/b000001.txt">Table of n, a(n) for n = 0..2047</a> [Terms 1 through 2015 copied from Small Groups Library mentioned below. Terms 2016 - 2047 added by _Ivan Panchenko_, Aug 29 2009. 0 prepended by _Ray Chandler_, Sep 16 2015. a(1024) corrected by _Benjamin Przybocki_, Jan 06 2022]
 H. A. Bender, <a href="http://www.jstor.org/stable/1967981">A determination of the groups of order p^5</a>, Ann. of Math. (2) 29, pp. 61-72 (1927).
 Hans Ulrich Besche and Bettina Eick, <a href="http://dx.doi.org/10.1006/jsco.1998.0258">Construction of finite groups</a>, Journal of Symbolic Computation, Vol. 27, No. 4, Apr 15 1999, pp. 387-404.
@@ -108,29 +109,29 @@ Gang Xiao, <a href="http://wims.unice.fr/~wims/wims.cgi?module=tool/algebra/smal
 <a href="/index/Gre#groups">Index entries for sequences related to groups</a>
 <a href="/index/Cor#core">Index entries for "core" sequences</a>"""@en .
 
-seq:A000001_I_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_I_1_20250221T130704 a seq:Text ;
     cnt:chars "M0098 N0035 #294 Feb 21 2025 13:07:04"@en .
 
-seq:A000001_K_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_K_1_20250221T130704 a seq:Text ;
     cnt:chars "nonn,core,nice,hard"@en .
 
-seq:A000001_N_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_N_1_20250221T130704 a seq:Text ;
     cnt:chars "Number of groups of order n."@en .
 
-seq:A000001_O_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_O_1_20250221T130704 a seq:Text ;
     cnt:chars "0,5"@en .
 
-seq:A000001_V_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_V_1_20250221T130704 a seq:Text ;
     cnt:chars "0,1,1,1,2,1,2,1,5,2,2,1,5,1,2,1,14,1,5,1,5,2,2,1,15,2,2,5,4,1,4,1,51,1,2,1,14,1,2,2,14,1,6,1,4,2,2,1,52,2,5,1,5,1,15,2,13,2,2,1,13,1,2,4,267,1,4,1,5,1,4,1,50,1,2,3,4,1,6,1,52,15,2,1,15,1,2,1,12,1,10,1,4,2"@en .
 
-seq:A000001_Y_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_Y_1_20250221T130704 a seq:Text ;
     cnt:chars """The main sequences concerned with group theory are A000001 (this one), A000679, A001034, A001228, A005180, A000019, A000637, A000638, A002106, A005432, A000688, A060689, A051532.
 Cf. A046058, A046059, A023675, A023676.
 A003277 gives n for which A000001(n) = 1, A063756 (partial sums).
 A046057 gives first occurrence of each k.
 A027623 gives the number of rings of order n."""@en .
 
-seq:A000001_e_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_e_1_20250221T130704 a seq:Text ;
     cnt:chars """Groups of orders 1 through 10 (C_n = cyclic, D_n = dihedral of order n, Q_8 = quaternion, S_n = symmetric):
 1: C_1
 2: C_2
@@ -143,14 +144,14 @@ seq:A000001_e_1_20250221T130704 seq:Sequence seq:Text ;
 9: C_9, C_3 X C_3
 10: C_10, D_10"""@en .
 
-seq:A000001_o_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_o_1_20250221T130704 a seq:Text ;
     cnt:chars """(Magma) D:=SmallGroupDatabase(); [ NumberOfSmallGroups(D, n) : n in [1..1000] ]; // _John Cannon_, Dec 23 2006
 (GAP) A000001 := Concatenation([0], List([1..500], n -> NumberSmallGroups(n))); # _Muniru A Asiru_, Oct 15 2017"""@en .
 
-seq:A000001_p_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_p_1_20250221T130704 a seq:Text ;
     cnt:chars "GroupTheory:-NumGroups(n); # with(GroupTheory); loads this command - _N. J. A. Sloane_, Dec 28 2017"@en .
 
-seq:A000001_t_1_20250221T130704 seq:Sequence seq:Text ;
+seq:A000001_t_1_20250221T130704 a seq:Text ;
     cnt:chars """FiniteGroupCount[Range[100]] (* _Harvey P. Dale_, Jan 29 2013 *)
 a[ n_] := If[ n < 1, 0, FiniteGroupCount @ n]; (* _Michael Somos_, May 28 2014 *)"""@en .
 

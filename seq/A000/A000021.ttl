@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.214051Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1390}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000021 a seq:Sequence ;
+    rdfs:label "A000021"@en ;
+    seq:hasTextList ( seq:A000021_I_1_20230708T011825 seq:A000021_N_1_20230708T011825 seq:A000021_D_1_20230708T011825 seq:A000021_H_1_20230708T011825 seq:A000021_e_1_20230708T011825 seq:A000021_o_1_20230708T011825 seq:A000021_Y_1_20230708T011825 seq:A000021_K_1_20230708T011825 seq:A000021_O_1_20230708T011825 seq:A000021_A_1_20230708T011825 seq:A000021_E_1_20230708T011825 seq:A000021_V_1_20230708T011825 ) .
+
+seq:A000021_A_1_20230708T011825 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000021_D_1_20230708T011825 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000021_E_1_20230708T011825 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_, Feb 07 2000"@en .
+
+seq:A000021_H_1_20230708T011825 a seq:Text ;
+    cnt:chars """Delbert L. Johnson, <a href="/A000021/b000021.txt">Table of n, a(n) for n = 0..45</a>
+D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000021_I_1_20230708T011825 a seq:Text ;
+    cnt:chars "M0357 N0134 #33 Jul 08 2023 01:18:25"@en .
+
+seq:A000021_K_1_20230708T011825 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000021_N_1_20230708T011825 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form x^2 + 12 y^2."@en .
+
+seq:A000021_O_1_20230708T011825 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000021_V_1_20230708T011825 a seq:Text ;
+    cnt:chars "1,1,2,2,6,9,17,30,54,98,183,341,645,1220,2327,4451,8555,16489,31859,61717,119779,232919,453584,884544,1727213,3376505,6607371,12942012,25371540,49777187,97731027,192010355,377475336,742512992,1461352025,2877572478,5668965407"@en .
+
+seq:A000021_Y_1_20230708T011825 a seq:Text ;
+    cnt:chars "Cf. A000196, A010052, A272933."@en .
+
+seq:A000021_e_1_20230708T011825 a seq:Text ;
+    cnt:chars "a(4)=6 since 2^4=16 and 1=1^2, 4=2^2, 9=3^2, 12=12*1^2, 13=1^2+12*1^2, 16=4^2."@en .
+
+seq:A000021_o_1_20230708T011825 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n<0,0,sum(k=1,2^n,0<sum(y=0,sqrtint(k\\12),issquare(k-12*y^2))))
+(PARI) a(n)=local(A);if(n<0,0,A=qfrep([1,0;0,12],2^n);sum(k=1,2^n,A[k]!=0))
+(Haskell)
+a000021 n = length [() | k <- [1..2^n],
+        sum [a010052 (k - 12*y^2) | y <- [0..a000196 (k `div` 12)]] > 0]
+-- _Reinhard Zumkeller_, Apr 16 2012"""@en .
+

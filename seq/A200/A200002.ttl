@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.757335Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1057}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200002 a seq:Sequence ;
+    rdfs:label "A200002"@en ;
+    seq:hasTextList ( seq:A200002_I_1_20140306T121909 seq:A200002_N_1_20140306T121909 seq:A200002_C_1_20140306T121909 seq:A200002_F_1_20140306T121909 seq:A200002_e_1_20140306T121909 seq:A200002_t_1_20140306T121909 seq:A200002_o_1_20140306T121909 seq:A200002_Y_1_20140306T121909 seq:A200002_K_1_20140306T121909 seq:A200002_O_1_20140306T121909 seq:A200002_A_1_20140306T121909 seq:A200002_V_1_20140306T121909 ) .
+
+seq:A200002_A_1_20140306T121909 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Dec 05 2011"@en .
+
+seq:A200002_C_1_20140306T121909 a seq:Text ;
+    cnt:chars "Compare to the g.f. C(x) = 1 + x*C(x)^2 of the Catalan numbers (A000108), where C(x) = exp( Sum_{n>=1} C(2*n,n)/2 * x^n/n )."@en .
+
+seq:A200002_F_1_20140306T121909 a seq:Text ;
+    cnt:chars "Conjecture: Limit n->infinity a(n)^(1/n^2) = 4. - _Vaclav Kotesovec_, Mar 06 2014"@en .
+
+seq:A200002_I_1_20140306T121909 a seq:Text ;
+    cnt:chars "#18 Mar 06 2014 12:19:09"@en .
+
+seq:A200002_K_1_20140306T121909 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200002_N_1_20140306T121909 a seq:Text ;
+    cnt:chars "G.f.: exp( Sum_{n>=1} C(2*n,n)^n/2^n * x^n/n )."@en .
+
+seq:A200002_O_1_20140306T121909 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200002_V_1_20140306T121909 a seq:Text ;
+    cnt:chars "1,1,5,338,375502,6351970709,1620698781098852,6259260939361008796229,367534769386519350929158503892,329474737492618783473185792974307067503,4525697838840190793599072589249813785373031191426,955617474162634862818320009634143510233705849191099879550608"@en .
+
+seq:A200002_Y_1_20140306T121909 a seq:Text ;
+    cnt:chars "Cf. A224732, A201556, A001700."@en .
+
+seq:A200002_e_1_20140306T121909 a seq:Text ;
+    cnt:chars """G.f.: A(x) = 1 + x + 5*x^2 + 338*x^3 + 375502*x^4 + 6351970709*x^5 +...
+where
+log(A(x)) = x + 3^2*x^2/2 + 10^3*x^3/3 + 35^4*x^4/4 + 126^5*x^5/5 + 462^6*x^6/6 + 1716^7*x^7/7 +...+ A001700(n+1)^n*x^n/n +..."""@en .
+
+seq:A200002_o_1_20140306T121909 a seq:Text ;
+    cnt:chars "(PARI) {a(n)=polcoeff(exp(sum(m=1,n,binomial(2*m,m)^m/2^m*x^m/m)+x*O(x^n)),n)}"@en .
+
+seq:A200002_t_1_20140306T121909 a seq:Text ;
+    cnt:chars "nmax = 10; b = ConstantArray[0, nmax+1]; b[[1]] = 1; Do[b[[n+1]] = 1/n*Sum[Binomial[2*k,k]^k/2^k * b[[n-k+1]], {k, 1, n}], {n, 1, nmax}]; b  (* _Vaclav Kotesovec_, Mar 06 2014 *)"@en .
+

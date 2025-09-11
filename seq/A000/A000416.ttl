@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.499024Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1012}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000416 a seq:Sequence ;
+    rdfs:label "A000416"@en ;
+    seq:hasTextList ( seq:A000416_I_1_20200924T113632 seq:A000416_N_1_20200924T113632 seq:A000416_D_1_20200924T113632 seq:A000416_H_1_20200924T113632 seq:A000416_Y_1_20200924T113632 seq:A000416_K_1_20200924T113632 seq:A000416_O_1_20200924T113632 seq:A000416_A_1_20200924T113632 seq:A000416_E_1_20200924T113632 seq:A000416_V_1_20200924T113632 ) .
+
+seq:A000416_A_1_20200924T113632 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000416_D_1_20200924T113632 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000416_E_1_20200924T113632 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000416_H_1_20200924T113632 a seq:Text ;
+    cnt:chars """A. O. L. Atkin, P. Bratley, I. G. McDonald and J. K. S. McKay, <a href="http://boltzmann.wdfiles.com/local--files/refined-counting/ABMM.pdf">Some computations for m-dimensional partitions</a>, Proc. Camb. Phil. Soc., 63 (1967), 1097-1100.
+A. O. L. Atkin, P. Bratley, I. G. McDonald and J. K. S. McKay, <a href="/A000219/a000219.pdf">Some computations for m-dimensional partitions</a>, Proc. Camb. Phil. Soc., 63 (1967), 1097-1100. [Annotated scanned copy]"""@en .
+
+seq:A000416_I_1_20200924T113632 a seq:Text ;
+    cnt:chars "M4391 N1848 #25 Sep 24 2020 11:36:32"@en .
+
+seq:A000416_K_1_20200924T113632 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000416_N_1_20200924T113632 a seq:Text ;
+    cnt:chars "Number of 6-dimensional partitions of n."@en .
+
+seq:A000416_O_1_20200924T113632 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000416_V_1_20200924T113632 a seq:Text ;
+    cnt:chars "1,7,28,105,357,1197,3857,12300,38430,118874,362670,1095430,3271751,9673993,28310881,82033609,235359901,668779076,1882412994,5249817573,14510628853"@en .
+
+seq:A000416_Y_1_20200924T113632 a seq:Text ;
+    cnt:chars "Cf. A000390 (5-dim), A000427 (7-dim)."@en .
+

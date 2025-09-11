@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.672832Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 753}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383044 a seq:Sequence ;
+    rdfs:label "A383044"@en ;
+    seq:hasTextList ( seq:A383044_I_1_20250414T073938 seq:A383044_N_1_20250414T073938 seq:A383044_H_1_20250414T073938 seq:A383044_t_1_20250414T073938 seq:A383044_o_1_20250414T073938 seq:A383044_Y_1_20250414T073938 seq:A383044_K_1_20250414T073938 seq:A383044_O_1_20250414T073938 seq:A383044_A_1_20250414T073938 seq:A383044_V_1_20250414T073938 ) .
+
+seq:A383044_A_1_20250414T073938 a seq:Text ;
+    cnt:chars "_Michel Marcus_, Apr 14 2025"@en .
+
+seq:A383044_H_1_20250414T073938 a seq:Text ;
+    cnt:chars "Stefan Steinerberger, <a href=\"https://arxiv.org/abs/2504.08023\">On an iterated arithmetic function problem of Erdos and Graham</a>, arXiv:2504.08023 [math.NT], 2025."@en .
+
+seq:A383044_I_1_20250414T073938 a seq:Text ;
+    cnt:chars "#7 Apr 14 2025 07:39:38"@en .
+
+seq:A383044_K_1_20250414T073938 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383044_N_1_20250414T073938 a seq:Text ;
+    cnt:chars "Numbers m such that phi(m) + phi(m+phi(m)) = m where phi is the Euler totient function."@en .
+
+seq:A383044_O_1_20250414T073938 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383044_V_1_20250414T073938 a seq:Text ;
+    cnt:chars "4,6,8,10,12,14,16,20,24,28,32,40,48,56,64,70,80,94,96,112,128,140,160,188,192,224,256,280,320,376,384,448,512,560,640,752,768,896,1024,1120,1280,1504,1536,1792,2048,2240,2560,3008,3072,3584,4096,4480,5120,6016,6144,7168,8192,8960"@en .
+
+seq:A383044_Y_1_20250414T073938 a seq:Text ;
+    cnt:chars "Cf. A000010, A121048."@en .
+
+seq:A383044_o_1_20250414T073938 a seq:Text ;
+    cnt:chars "(PARI) isok(m) = eulerphi(m) + eulerphi(m+eulerphi(m)) == m;"@en .
+
+seq:A383044_t_1_20250414T073938 a seq:Text ;
+    cnt:chars "q[m_] := Module[{phi = EulerPhi[m]}, phi + EulerPhi[m + phi] == m]; Select[Range[10000], q] (* _Amiram Eldar_, Apr 14 2025 *)"@en .
+

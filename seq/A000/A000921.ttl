@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.680577Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1890}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000921 a seq:Sequence ;
+    rdfs:label "A000921"@en ;
+    seq:hasTextList ( seq:A000921_I_1_20231212T082245 seq:A000921_N_1_20231212T082245 seq:A000921_C_1_20231212T082245 seq:A000921_D_1_20231212T082245 seq:A000921_H_1_20231212T082245 seq:A000921_e_1_20231212T082245 seq:A000921_t_1_20231212T082245 seq:A000921_o_1_20231212T082245 seq:A000921_Y_1_20231212T082245 seq:A000921_K_1_20231212T082245 seq:A000921_O_1_20231212T082245 seq:A000921_A_1_20231212T082245 seq:A000921_E_1_20231212T082245 seq:A000921_V_1_20231212T082245 ) .
+
+seq:A000921_A_1_20231212T082245 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000921_C_1_20231212T082245 a seq:Text ;
+    cnt:chars "For the first 1000 terms in this sequence (primes up to 44683), the minimum difference between sqrt(p) and the sum is 1.47633.... Hence there does not seem to be a need to compute the sum to high precision. - _T. D. Noe_, Jun 20 2012"@en .
+
+seq:A000921_D_1_20231212T082245 a seq:Text ;
+    cnt:chars """H. Hasse, Vorlesungen über Zahlentheorie. Springer-Verlag, NY, 1964, p. 482.
+G. B. Mathews, Theory of Numbers, 2nd edition. Chelsea, NY, p. 228.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000921_E_1_20231212T082245 a seq:Text ;
+    cnt:chars "Edited by _Don Reble_, May 26 2007"@en .
+
+seq:A000921_H_1_20231212T082245 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000921/b000921.txt">Table of n, a(n) for n = 1..1000</a>
+D. R. Heath-Brown, <a href="http://eprints.maths.ox.ac.uk/158/01/kummer.pdf">Kummer's Conjecture for Cubic Gauss Sums</a>
+J. von Neumann and H. H. Goldstine, <a href="https://doi.org/10.1090/S0025-5718-1953-0055784-0">A numerical study of a conjecture of Kummer</a>, Math. Comp., 7 (1953), 133-134.
+J. von Neumann and H. H. Goldstine, <a href="/A000921/a000921.pdf"> A numerical study of a conjecture of Kummer</a>, Math. Comp., 7 (1953), 133-134. [Annotated scanned copy]"""@en .
+
+seq:A000921_I_1_20231212T082245 a seq:Text ;
+    cnt:chars "M4398 N1854 #42 Dec 12 2023 08:22:45"@en .
+
+seq:A000921_K_1_20231212T082245 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000921_N_1_20231212T082245 a seq:Text ;
+    cnt:chars "Primes p of the form 3k+1 such that Sum_{x=1..p} cos(2*Pi*x^3/p) >  sqrt(p)."@en .
+
+seq:A000921_O_1_20231212T082245 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000921_V_1_20231212T082245 a seq:Text ;
+    cnt:chars "7,31,43,67,73,79,103,127,163,181,223,229,271,277,307,313,337,349,409,421,439,457,463,499,523,577,643,661,673,691,709,727,757,769,811,823,829,853,877,919,967,991,997,1021,1069,1087,1093,1117,1123,1171,1213"@en .
+
+seq:A000921_Y_1_20231212T082245 a seq:Text ;
+    cnt:chars "Cf. A000922, A000923, A002476."@en .
+
+seq:A000921_e_1_20231212T082245 a seq:Text ;
+    cnt:chars "7 is here because the sum of cos(2*Pi*x^3/7) = 4.7409 > sqrt(7)."@en .
+
+seq:A000921_o_1_20231212T082245 a seq:Text ;
+    cnt:chars "(PARI) isok(p) = isprime(p) && ((p % 3) == 1) && (sum(x=1, p, cos(2*Pi*x^3/p)) > sqrt(p)); \\\\ _Michel Marcus_, Oct 16 2017"@en .
+
+seq:A000921_t_1_20231212T082245 a seq:Text ;
+    cnt:chars "isok[p_] :=Mod[p, 3]==1 && PrimeQ[p] && Sum[Cos[2*Pi*x^3/p], {x, 1, p}] > Sqrt[p]; Select[Range[1213], isok] (* _James C. McMahon_, Dec 10 2023 *)"@en .
+

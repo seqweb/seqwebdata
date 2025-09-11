@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.763738Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 772}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383085 a seq:Sequence ;
+    rdfs:label "A383085"@en ;
+    seq:hasTextList ( seq:A383085_I_1_20250418T215336 seq:A383085_N_1_20250418T215336 seq:A383085_C_1_20250418T215336 seq:A383085_H_1_20250418T215336 seq:A383085_Y_1_20250418T215336 seq:A383085_K_1_20250418T215336 seq:A383085_O_1_20250418T215336 seq:A383085_A_1_20250418T215336 seq:A383085_V_1_20250418T215336 ) .
+
+seq:A383085_A_1_20250418T215336 a seq:Text ;
+    cnt:chars "_Peter Kagey_, Apr 16 2025"@en .
+
+seq:A383085_C_1_20250418T215336 a seq:Text ;
+    cnt:chars "A straightedge-and-compass construction starts with 2 points marked on the plane, traditionally (0,0) and (1,0). In the constructions counted by this sequence, only the compass is used. Circles can be drawn at any marked point through any other marked point, and new points are marked where circles intersect."@en .
+
+seq:A383085_H_1_20250418T215336 a seq:Text ;
+    cnt:chars """Peter Kagey, <a href="/A383085/a383085.png">Illustration of the a(5)=1704 points</a>.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Mohr%E2%80%93Mascheroni_theorem">Mohr-Mascheroni theorem</a>"""@en .
+
+seq:A383085_I_1_20250418T215336 a seq:Text ;
+    cnt:chars "#10 Apr 18 2025 21:53:36"@en .
+
+seq:A383085_K_1_20250418T215336 a seq:Text ;
+    cnt:chars "nonn,hard,more"@en .
+
+seq:A383085_N_1_20250418T215336 a seq:Text ;
+    cnt:chars "The number of points in the Euclidean plane that can be determined via a straightedge-and-compass construction using no lines and n or fewer circles."@en .
+
+seq:A383085_O_1_20250418T215336 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A383085_V_1_20250418T215336 a seq:Text ;
+    cnt:chars "2,2,4,10,52,1704,214135"@en .
+
+seq:A383085_Y_1_20250418T215336 a seq:Text ;
+    cnt:chars "Cf. A383083, A383084."@en .
+

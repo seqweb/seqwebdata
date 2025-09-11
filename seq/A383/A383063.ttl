@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.713600Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 516}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383063 a seq:Sequence ;
+    rdfs:label "A383063"@en ;
+    seq:hasTextList ( seq:A383063_I_1_20250419T180248 seq:A383063_N_1_20250419T180248 seq:A383063_H_1_20250419T180248 seq:A383063_t_1_20250419T180248 seq:A383063_Y_1_20250419T180248 seq:A383063_K_1_20250419T180248 seq:A383063_O_1_20250419T180248 seq:A383063_A_1_20250419T180248 seq:A383063_V_1_20250419T180248 ) .
+
+seq:A383063_A_1_20250419T180248 a seq:Text ;
+    cnt:chars "_Paolo Xausa_, Apr 18 2025"@en .
+
+seq:A383063_H_1_20250419T180248 a seq:Text ;
+    cnt:chars "Paolo Xausa, <a href=\"/A383063/b383063.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383063_I_1_20250419T180248 a seq:Text ;
+    cnt:chars "#5 Apr 19 2025 18:02:48"@en .
+
+seq:A383063_K_1_20250419T180248 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A383063_N_1_20250419T180248 a seq:Text ;
+    cnt:chars "Split A383059 into runs of increasing elements. a(n) is the length of the n-th run."@en .
+
+seq:A383063_O_1_20250419T180248 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383063_V_1_20250419T180248 a seq:Text ;
+    cnt:chars "11,11,2,1,8,2,3,2,1,6,2,2,2,3,2,1,4,2,2,2,2,2,3,2,8,11,9,9,8,8,7,7,6,2,1,6,9,2,9,2,8,2,7,2,7,2,6,2,1,6,5,5,2,2,2,2,1,2,1,7,2,2,4,7,2,1,2,7,2,4,6,4,2,1,2,5,2,2,7,2,2,4,2,1,2,4,2,2,1,2,1"@en .
+
+seq:A383063_Y_1_20250419T180248 a seq:Text ;
+    cnt:chars "Cf. A383059."@en .
+
+seq:A383063_t_1_20250419T180248 a seq:Text ;
+    cnt:chars """(* A383059list is defined at A383059 *)
+Map[Length, Most[Split[A383059list[500], Less]]]"""@en .
+

@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.647553Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 416}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000480 a seq:Sequence ;
+    rdfs:label "A000480"@en ;
+    seq:hasTextList ( seq:A000480_I_1_20220908T084428 seq:A000480_N_1_20220908T084428 seq:A000480_p_1_20220908T084428 seq:A000480_t_1_20220908T084428 seq:A000480_o_1_20220908T084428 seq:A000480_K_1_20220908T084428 seq:A000480_O_1_20220908T084428 seq:A000480_A_1_20220908T084428 seq:A000480_V_1_20220908T084428 ) .
+
+seq:A000480_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000480_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "#18 Sep 08 2022 08:44:28"@en .
+
+seq:A000480_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A000480_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = floor(cos(n))."@en .
+
+seq:A000480_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000480_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1"@en .
+
+seq:A000480_o_1_20220908T084428 a seq:Text ;
+    cnt:chars "(Magma) [Floor(Cos(n)): n in [0..100]]; // _Wesley Ivan Hurt_, Apr 21 2021"@en .
+
+seq:A000480_p_1_20220908T084428 a seq:Text ;
+    cnt:chars "f := n->floor(evalf(cos(n)));"@en .
+
+seq:A000480_t_1_20220908T084428 a seq:Text ;
+    cnt:chars "Table[Floor[Cos[n]], {n, 0, 100}]"@en .
+

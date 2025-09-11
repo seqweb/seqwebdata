@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.678886Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 453}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000494 a seq:Sequence ;
+    rdfs:label "A000494"@en ;
+    seq:hasTextList ( seq:A000494_I_1_20160828T182332 seq:A000494_N_1_20160828T182332 seq:A000494_H_1_20160828T182332 seq:A000494_p_1_20160828T182332 seq:A000494_t_1_20160828T182332 seq:A000494_K_1_20160828T182332 seq:A000494_O_1_20160828T182332 seq:A000494_A_1_20160828T182332 seq:A000494_V_1_20160828T182332 ) .
+
+seq:A000494_A_1_20160828T182332 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000494_H_1_20160828T182332 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000494/b000494.txt\">Table of n, a(n) for n = 0..1000</a>"@en .
+
+seq:A000494_I_1_20160828T182332 a seq:Text ;
+    cnt:chars "#14 Aug 28 2016 18:23:32"@en .
+
+seq:A000494_K_1_20160828T182332 a seq:Text ;
+    cnt:chars "sign,easy,nice"@en .
+
+seq:A000494_N_1_20160828T182332 a seq:Text ;
+    cnt:chars "Nearest integer to sin(n)."@en .
+
+seq:A000494_O_1_20160828T182332 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000494_V_1_20160828T182332 a seq:Text ;
+    cnt:chars "0,1,1,0,-1,-1,0,1,1,0,-1,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1"@en .
+
+seq:A000494_p_1_20160828T182332 a seq:Text ;
+    cnt:chars "f := n->round(evalf(sin(n)));"@en .
+
+seq:A000494_t_1_20160828T182332 a seq:Text ;
+    cnt:chars "Array[ Round[ Sin[ # ] // N ]&, 90, 0 ]"@en .
+

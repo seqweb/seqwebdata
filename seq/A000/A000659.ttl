@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.054689Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 385}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000659 a seq:Sequence ;
+    rdfs:label "A000659"@en ;
+    seq:hasTextList ( seq:A000659_I_1_20220409T113651 seq:A000659_N_1_20220409T113651 seq:A000659_C_1_20220409T113651 seq:A000659_t_1_20220409T113651 seq:A000659_Y_1_20220409T113651 seq:A000659_K_1_20220409T113651 seq:A000659_O_1_20220409T113651 seq:A000659_A_1_20220409T113651 seq:A000659_V_1_20220409T113651 ) .
+
+seq:A000659_A_1_20220409T113651 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000659_C_1_20220409T113651 a seq:Text ;
+    cnt:chars "The next term has 5171655948 digits. - _Franklin T. Adams-Watters_, Jul 03 2009"@en .
+
+seq:A000659_I_1_20220409T113651 a seq:Text ;
+    cnt:chars "#16 Apr 09 2022 11:36:51"@en .
+
+seq:A000659_K_1_20220409T113651 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000659_N_1_20220409T113651 a seq:Text ;
+    cnt:chars "a(n) = 2^a(n-1) + a(n-2)."@en .
+
+seq:A000659_O_1_20220409T113651 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000659_V_1_20220409T113651 a seq:Text ;
+    cnt:chars "0,0,1,2,5,34,17179869189"@en .
+
+seq:A000659_Y_1_20220409T113651 a seq:Text ;
+    cnt:chars "Cf. A000643."@en .
+
+seq:A000659_t_1_20220409T113651 a seq:Text ;
+    cnt:chars """Join[{a=0,b=0},Table[c=2^b+a;a=b;b=c,{n,5}]] (* _Vladimir Joseph Stephan Orlovsky_, Apr 13 2011 *)
+nxt[{a_,b_}]:={b,2^b+a}; NestList[nxt,{0,0},6][[All,1]] (* _Harvey P. Dale_, Apr 09 2022 *)"""@en .
+

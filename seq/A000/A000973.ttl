@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.802176Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2252}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000973 a seq:Sequence ;
+    rdfs:label "A000973"@en ;
+    seq:hasTextList ( seq:A000973_I_1_20230624T215034 seq:A000973_N_1_20230624T215034 seq:A000973_C_1_20230624T215034 seq:A000973_D_1_20230624T215034 seq:A000973_H_1_20230624T215034 seq:A000973_F_1_20230624T215034 seq:A000973_p_1_20230624T215034 seq:A000973_t_1_20230624T215034 seq:A000973_o_1_20230624T215034 seq:A000973_Y_1_20230624T215034 seq:A000973_K_1_20230624T215034 seq:A000973_O_1_20230624T215034 seq:A000973_A_1_20230624T215034 seq:A000973_E_1_20230624T215034 seq:A000973_V_1_20230624T215034 ) .
+
+seq:A000973_A_1_20230624T215034 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000973_C_1_20230624T215034 a seq:Text ;
+    cnt:chars "a(n) = A258708(n,n-8). - _Reinhard Zumkeller_, Jun 23 2015"@en .
+
+seq:A000973_D_1_20230624T215034 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000973_E_1_20230624T215034 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_, Oct 11 2000"@en .
+
+seq:A000973_F_1_20230624T215034 a seq:Text ;
+    cnt:chars """a(n) = binomial(2*n-8, 7)/8.
+G.f.: (x^8)*(1+7*x+7*x^2+x^3)/(1-x)^8.
+G.f.: A(x)= (1+7*x+7*x^2+x^3)/(x-1)^8 = 1 + 45*x/(G(0)-45*x), |x|<1; if |x|>1, G(0)=45*x;
+G(k) = (k+1)*(2*k+3) + x*(k+5)*(2*k+9) - x*(k+1)*(k+6)*(2*k+3)*(2*k+11)/G(k+1); (continued fraction Euler's 1st kind, 1-step ). - _Sergei N. Gladkovskii_, Jun 15 2012"""@en .
+
+seq:A000973_H_1_20230624T215034 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000973/b000973.txt">Table of n, a(n) for n = 8..1000</a>
+R. P. Loh, A. G. Shannon, A. F. Horadam, <a href="/A000969/a000969.pdf">Divisibility Criteria and Sequence Generators Associated with Fermat Coefficients</a>, Preprint, 1980.
+P. A. Piza, <a href="http://www.jstor.org/stable/3029103">Fermat coefficients</a>, Math. Mag., 27 (1954), 141-146.
+Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992
+<a href="/index/Rec#order_08">Index entries for linear recurrences with constant coefficients</a>, signature (8, -28, 56, -70, 56, -28, 8, -1)."""@en .
+
+seq:A000973_I_1_20230624T215034 a seq:Text ;
+    cnt:chars "M4976 N2137 #59 Jun 24 2023 21:50:34"@en .
+
+seq:A000973_K_1_20230624T215034 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000973_N_1_20230624T215034 a seq:Text ;
+    cnt:chars "Fermat coefficients."@en .
+
+seq:A000973_O_1_20230624T215034 a seq:Text ;
+    cnt:chars "8,2"@en .
+
+seq:A000973_V_1_20230624T215034 a seq:Text ;
+    cnt:chars "1,15,99,429,1430,3978,9690,21318,43263,82225,148005,254475,420732,672452,1043460,1577532,2330445,3372291,4790071,6690585,9203634,12485550,16723070,22137570,28989675,37584261,48275865,61474519"@en .
+
+seq:A000973_Y_1_20230624T215034 a seq:Text ;
+    cnt:chars """Cf. A053129.
+Cf. A258708."""@en .
+
+seq:A000973_o_1_20230624T215034 a seq:Text ;
+    cnt:chars """(Magma) [Binomial(2*n-8, 7)/8: n in [8..40]]; // _Vincenzo Librandi_, Apr 10 2012
+(Haskell)
+a000973 n = a258708 n (n - 8)  -- _Reinhard Zumkeller_, Jun 23 2015"""@en .
+
+seq:A000973_p_1_20230624T215034 a seq:Text ;
+    cnt:chars """A000973:=(z+1)*(z**2+6*z+1)/(z-1)**8; # conjectured by _Simon Plouffe_ in his 1992 dissertation
+A000973:=n->binomial(2*n-8, 7)/8; seq(A000973(n), n=8..40); # _Wesley Ivan Hurt_, Apr 16 2014"""@en .
+
+seq:A000973_t_1_20230624T215034 a seq:Text ;
+    cnt:chars "CoefficientList[Series[(1+7*x+7*x^2+x^3)/(1-x)^8,{x,0,40}],x] (* _Vincenzo Librandi_, Apr 10 2012 *)"@en .
+

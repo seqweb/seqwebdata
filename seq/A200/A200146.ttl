@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.735982Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 852}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200146 a seq:Sequence ;
+    rdfs:label "A200146"@en ;
+    seq:hasTextList ( seq:A200146_I_1_20120330T172726 seq:A200146_N_1_20120330T172726 seq:A200146_C_1_20120330T172726 seq:A200146_e_1_20120330T172726 seq:A200146_t_1_20120330T172726 seq:A200146_Y_1_20120330T172726 seq:A200146_K_1_20120330T172726 seq:A200146_O_1_20120330T172726 seq:A200146_A_1_20120330T172726 seq:A200146_V_1_20120330T172726 ) .
+
+seq:A200146_A_1_20120330T172726 a seq:Text ;
+    cnt:chars "_Alonso del Arte_, Nov 13 2011"@en .
+
+seq:A200146_C_1_20120330T172726 a seq:Text ;
+    cnt:chars "Per Fermat's Little theorem, if n is prime, then row n is all 1s. However, if n is composite, that does not necessarily guarantee that the first column 1 is the only one in the row."@en .
+
+seq:A200146_I_1_20120330T172726 a seq:Text ;
+    cnt:chars "#16 Mar 30 2012 17:27:26"@en .
+
+seq:A200146_K_1_20120330T172726 a seq:Text ;
+    cnt:chars "nonn,easy,tabl"@en .
+
+seq:A200146_N_1_20120330T172726 a seq:Text ;
+    cnt:chars "Triangle read by rows: T(n, k) = mod(k^(n - 1), n), where 1 <= k < n."@en .
+
+seq:A200146_O_1_20120330T172726 a seq:Text ;
+    cnt:chars "2,6"@en .
+
+seq:A200146_V_1_20120330T172726 a seq:Text ;
+    cnt:chars "1,1,1,1,0,3,1,1,1,1,1,2,3,4,5,1,1,1,1,1,1,1,0,3,0,5,0,7,1,4,0,7,7,0,4,1,1,2,3,4,5,6,7,8,9,1,1,1,1,1,1,1,1,1,1,1,8,3,4,5,0,7,8,9,4,11,1,1,1,1,1,1,1,1,1,1,1,1"@en .
+
+seq:A200146_Y_1_20120330T172726 a seq:Text ;
+    cnt:chars "Cf. A089072, A066340 (Fermat's triangle)."@en .
+
+seq:A200146_e_1_20120330T172726 a seq:Text ;
+    cnt:chars """The first seven rows are
+1
+1, 1
+1, 0, 3
+1, 1, 1, 1
+1, 2, 3, 4, 5
+1, 1, 1, 1, 1, 1
+1, 0, 3, 0, 5, 0, 7
+We observe that the tenth row consists of the numbers 1 to 9 in order. In base 10, the least significant digit of n^9 is the same as that of n."""@en .
+
+seq:A200146_t_1_20120330T172726 a seq:Text ;
+    cnt:chars "Column[Table[Mod[k^(n - 1), n], {n, 2, 13}, {k, n - 1}], Center] (* Nov 14 2011 *)"@en .
+

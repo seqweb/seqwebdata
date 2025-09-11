@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.579738Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1082}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200563 a seq:Sequence ;
+    rdfs:label "A200563"@en ;
+    seq:hasTextList ( seq:A200563_I_1_20220908T084600 seq:A200563_N_1_20220908T084600 seq:A200563_H_1_20220908T084600 seq:A200563_F_1_20220908T084600 seq:A200563_t_1_20220908T084600 seq:A200563_o_1_20220908T084600 seq:A200563_K_1_20220908T084600 seq:A200563_O_1_20220908T084600 seq:A200563_A_1_20220908T084600 seq:A200563_E_1_20220908T084600 seq:A200563_V_1_20220908T084600 ) .
+
+seq:A200563_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Krishnamurthy Balasubraniam_, Nov 19 2011"@en .
+
+seq:A200563_E_1_20220908T084600 a seq:Text ;
+    cnt:chars "Definition from _R. J. Mathar_, Nov 19 2011"@en .
+
+seq:A200563_F_1_20220908T084600 a seq:Text ;
+    cnt:chars """a(n) = -a(n-1) +2*a(n-2) +8*a(n-3).
+a(n) = (6*4^n+r^(n+1)+(16/r)^(n+1))/(7*2^n), where r=-3-sqrt(-7). - _Bruno Berselli_, Dec 12 2011"""@en .
+
+seq:A200563_H_1_20220908T084600 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A200563/b200563.txt">Table of n, a(n) for n = 1..1000</a>
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (-1,2,8)."""@en .
+
+seq:A200563_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#26 Sep 08 2022 08:46:00"@en .
+
+seq:A200563_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A200563_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Expansion of -2*x*(1+4*x) / ((2*x-1)*(4*x^2+3*x+1))."@en .
+
+seq:A200563_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200563_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "2,6,-2,30,14,30,238,-66,782,990,46,8190,-178,16926,48238,-15810,247694,106590,262318,1932414,-555058,6518430,7830766,765630,67043342,-2865954,143077678,387537150,-124309426,2044005150,807673198,2285861694,15681525902,-4648416930"@en .
+
+seq:A200563_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(Maxima) makelist(expand((6*4^n+(-3-sqrt(-7))^(n+1)+(-3+sqrt(-7))^(n+1))/(7*2^n)),n,1,34); /* _Bruno Berselli_, Dec 12 2011 */
+(Magma) I:=[2, 6, -2]; [n le 3 select I[n] else -Self(n-1)+2*Self(n-2)+8*Self(n-3): n in [1..40]]; // _Vincenzo Librandi_, Jul 12 2012"""@en .
+
+seq:A200563_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "LinearRecurrence[{-1,2,8}, {2,6,-2},34] (* _Bruno Berselli_, Dec 12 2011 *)"@en .
+

@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.648409Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 584}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000193 a seq:Sequence ;
+    rdfs:label "A000193"@en ;
+    seq:hasTextList ( seq:A000193_I_1_20240628T052618 seq:A000193_N_1_20240628T052618 seq:A000193_H_1_20240628T052618 seq:A000193_p_1_20240628T052618 seq:A000193_t_1_20240628T052618 seq:A000193_o_1_20240628T052618 seq:A000193_Y_1_20240628T052618 seq:A000193_K_1_20240628T052618 seq:A000193_O_1_20240628T052618 seq:A000193_A_1_20240628T052618 seq:A000193_V_1_20240628T052618 ) .
+
+seq:A000193_A_1_20240628T052618 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000193_H_1_20240628T052618 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000193/b000193.txt\">Table of n, a(n) for n=1..10000</a>"@en .
+
+seq:A000193_I_1_20240628T052618 a seq:Text ;
+    cnt:chars "#19 Jun 28 2024 05:26:18"@en .
+
+seq:A000193_K_1_20240628T052618 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000193_N_1_20240628T052618 a seq:Text ;
+    cnt:chars "Nearest integer to log n."@en .
+
+seq:A000193_O_1_20240628T052618 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000193_V_1_20240628T052618 a seq:Text ;
+    cnt:chars "0,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4"@en .
+
+seq:A000193_Y_1_20240628T052618 a seq:Text ;
+    cnt:chars "Cf. A000195, A004233."@en .
+
+seq:A000193_o_1_20240628T052618 a seq:Text ;
+    cnt:chars """(PARI) a(n)=round(log(n))
+(Haskell)
+a000193 = round . log . fromIntegral  -- _Reinhard Zumkeller_, Mar 17 2015"""@en .
+
+seq:A000193_p_1_20240628T052618 a seq:Text ;
+    cnt:chars "Digits := 100; f := n->round(evalf(log(n))); [ seq(f(n), n=1..100) ];"@en .
+
+seq:A000193_t_1_20240628T052618 a seq:Text ;
+    cnt:chars "Round[Log[Range[100]]] (* _Paolo Xausa_, Jun 28 2024 *)"@en .
+

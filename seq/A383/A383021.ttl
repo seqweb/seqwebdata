@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.625774Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1302}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383021 a seq:Sequence ;
+    rdfs:label "A383021"@en ;
+    seq:hasTextList ( seq:A383021_I_1_20250503T234418 seq:A383021_N_1_20250503T234418 seq:A383021_C_1_20250503T234418 seq:A383021_H_1_20250503T234418 seq:A383021_Y_1_20250503T234418 seq:A383021_K_1_20250503T234418 seq:A383021_O_1_20250503T234418 seq:A383021_A_1_20250503T234418 seq:A383021_E_1_20250503T234418 seq:A383021_V_1_20250503T234418 ) .
+
+seq:A383021_A_1_20250503T234418 a seq:Text ;
+    cnt:chars "_Oisín Flynn-Connolly_, Apr 12 2025"@en .
+
+seq:A383021_C_1_20250503T234418 a seq:Text ;
+    cnt:chars """Same as integers k such that Fibonacci(k) divides Fibonacci(Fibonacci(k)+2)-1.
+Contains infinitely many terms.
+Contains all 2p and 4p such that p is prime and p = 2,8 mod 15.
+Fibonacci(k) is a subsequence of A124456."""@en .
+
+seq:A383021_E_1_20250503T234418 a seq:Text ;
+    cnt:chars "More terms from _Alois P. Heinz_, Apr 14 2025"@en .
+
+seq:A383021_H_1_20250503T234418 a seq:Text ;
+    cnt:chars """Amirali Fatehizadeh and Daniel Yaqubi, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL25/Yaqubi/yaq6.html">Average of the Fibonacci numbers</a>, J. Integer Seq. 25 (2022), no. 2, Art. 22.2.6, 10 pp.
+Oisín Flynn-Connolly, <a href="https://arxiv.org/abs/2504.09938">On the divisibility of sums of Fibonacci numbers</a>, arXiv:2504.09938 [math.NT], 2025.
+Michal Křížek and Lawrence Somer, <a href="https://math.colgate.edu/~integers/y36/y36.pdf">Period lengths modulo n and average of terms of second order linear recurrences</a>, Integers 24 (2024), Paper No. A36, 41 pp."""@en .
+
+seq:A383021_I_1_20250503T234418 a seq:Text ;
+    cnt:chars "#50 May 03 2025 23:44:18"@en .
+
+seq:A383021_K_1_20250503T234418 a seq:Text ;
+    cnt:chars "nonn,new"@en .
+
+seq:A383021_N_1_20250503T234418 a seq:Text ;
+    cnt:chars "Self-summable Fibonacci numbers: integers k such that Fibonacci(k) divides the sum of the first Fibonacci(k) nonzero Fibonacci numbers."@en .
+
+seq:A383021_O_1_20250503T234418 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383021_V_1_20250503T234418 a seq:Text ;
+    cnt:chars "1,2,3,12,24,34,36,46,48,60,68,72,92,94,96,106,108,120,144,166,168,180,188,192,212,214,216,226,240,274,288,300,324,332,334,336,346,360,384,394,428,432,452,454,466,480,504,514,526,540,548,552,576,586,600,612"@en .
+
+seq:A383021_Y_1_20250503T234418 a seq:Text ;
+    cnt:chars "Cf. A000045, A124456, A158569, A331976, A381053."@en .
+

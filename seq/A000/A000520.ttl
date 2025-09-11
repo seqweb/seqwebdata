@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.733631Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 407}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000520 a seq:Sequence ;
+    rdfs:label "A000520"@en ;
+    seq:hasTextList ( seq:A000520_I_1_20191108T002557 seq:A000520_N_1_20191108T002557 seq:A000520_H_1_20191108T002557 seq:A000520_t_1_20191108T002557 seq:A000520_K_1_20191108T002557 seq:A000520_O_1_20191108T002557 seq:A000520_A_1_20191108T002557 seq:A000520_V_1_20191108T002557 ) .
+
+seq:A000520_A_1_20191108T002557 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000520_H_1_20191108T002557 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000520/b000520.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A000520_I_1_20191108T002557 a seq:Text ;
+    cnt:chars "#10 Nov 08 2019 00:25:57"@en .
+
+seq:A000520_K_1_20191108T002557 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000520_N_1_20191108T002557 a seq:Text ;
+    cnt:chars "Nearest integer to log_10(n)."@en .
+
+seq:A000520_O_1_20191108T002557 a seq:Text ;
+    cnt:chars "1,32"@en .
+
+seq:A000520_V_1_20191108T002557 a seq:Text ;
+    cnt:chars "0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2"@en .
+
+seq:A000520_t_1_20191108T002557 a seq:Text ;
+    cnt:chars "Table[Floor[Log[10, n] + 1/2], {n, 100}] (* _T. D. Noe_, Jun 20 2012 *)"@en .
+

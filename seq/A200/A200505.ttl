@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.462031Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 987}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200505 a seq:Sequence ;
+    rdfs:label "A200505"@en ;
+    seq:hasTextList ( seq:A200505_I_1_20120331T134835 seq:A200505_N_1_20120331T134835 seq:A200505_C_1_20120331T134835 seq:A200505_H_1_20120331T134835 seq:A200505_F_1_20120331T134835 seq:A200505_e_1_20120331T134835 seq:A200505_o_1_20120331T134835 seq:A200505_Y_1_20120331T134835 seq:A200505_K_1_20120331T134835 seq:A200505_O_1_20120331T134835 seq:A200505_A_1_20120331T134835 seq:A200505_V_1_20120331T134835 ) .
+
+seq:A200505_A_1_20120331T134835 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200505_C_1_20120331T134835 a seq:Text ;
+    cnt:chars """If such an m>0 exists, this proves that n is not in A051216, i.e., not of the form 5^x-y^2. On the other hand, if there are integers x, y such that n=5^x-y^2, then we know that a(n)=0.
+a(144) > 20000."""@en .
+
+seq:A200505_F_1_20120331T134835 a seq:Text ;
+    cnt:chars "a(2+4k)=a(3+4k)=4, a(8+20k)=a(13+20k)=5 for all k>=0."@en .
+
+seq:A200505_H_1_20120331T134835 a seq:Text ;
+    cnt:chars "M. F. Hasler, <a href=\"/A200505/b200505.txt\">Table of n, a(n) for n = 0..143</a>"@en .
+
+seq:A200505_I_1_20120331T134835 a seq:Text ;
+    cnt:chars "#16 Mar 31 2012 13:48:35"@en .
+
+seq:A200505_K_1_20120331T134835 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200505_N_1_20120331T134835 a seq:Text ;
+    cnt:chars "Least m>0 such that n = 5^x-y^2 (mod m) has no solution, or 0 if no such m exists."@en .
+
+seq:A200505_O_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200505_V_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,0,4,4,0,0,4,4,5,0,4,4,24,5,4,4,0,15,4,4,75,0,4,4,0,0,4,4,5,39,4,4,15,5,4,4,24,35,4,4,175,31,4,4,0,39,4,4,5,0,4,4,35,5,4,4,21,55,4,4,24,0,4,4,31,39,4,4,5,399,4,4,31,5,4,4,0,15,4,4"@en .
+
+seq:A200505_Y_1_20120331T134835 a seq:Text ;
+    cnt:chars "Cf. A051204-A051221, A200505-A200524."@en .
+
+seq:A200505_e_1_20120331T134835 a seq:Text ;
+    cnt:chars "See A200507."@en .
+
+seq:A200505_o_1_20120331T134835 a seq:Text ;
+    cnt:chars "(PARI) A200505(n,b=5,p=3)={ my( x=0, qr, bx, seen ); for( m=3,9e9, while( x^p < m, issquare(b^x-n) & return(0); x++); qr=vecsort(vector(m,i,i^2+n)%m,,8); seen=0; bx=1; until( bittest(seen+=1<<bx, bx=bx*b%m), for(i=1,#qr, qr[i]<bx & next; qr[i]>bx & break; next(3))); return(m))}"@en .
+

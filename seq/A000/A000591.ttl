@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.898913Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 778}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000591 a seq:Sequence ;
+    rdfs:label "A000591"@en ;
+    seq:hasTextList ( seq:A000591_I_1_20220201T010349 seq:A000591_N_1_20220201T010349 seq:A000591_D_1_20220201T010349 seq:A000591_K_1_20220201T010349 seq:A000591_O_1_20220201T010349 seq:A000591_A_1_20220201T010349 seq:A000591_E_1_20220201T010349 seq:A000591_V_1_20220201T010349 ) .
+
+seq:A000591_A_1_20220201T010349 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000591_D_1_20220201T010349 a seq:Text ;
+    cnt:chars """F. Harary and E. M. Palmer, Enumeration of finite automata, Inform. Control, 10 (1967), 499-508.
+F. Harary and E. M. Palmer, Graphical Enumeration, Academic Press, NY, 1973, p. 149.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000591_E_1_20220201T010349 a seq:Text ;
+    cnt:chars "Corrected and extended by _Vladeta Jovovic_, Apr 28 2000"@en .
+
+seq:A000591_I_1_20220201T010349 a seq:Text ;
+    cnt:chars "M4752 N2033 #16 Feb 01 2022 01:03:49"@en .
+
+seq:A000591_K_1_20220201T010349 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000591_N_1_20220201T010349 a seq:Text ;
+    cnt:chars "Number of n-state 2-input 1-output automata with one initial and one terminal state."@en .
+
+seq:A000591_O_1_20220201T010349 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000591_V_1_20220201T010349 a seq:Text ;
+    cnt:chars "10,378,16576,819470,45660051,2846339383,196946930215,15006717613499,1250005718758059,113076157328915784,11044120989736000167,1158658706030435109195,129976520576914828292552"@en .
+

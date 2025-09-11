@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.296542Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1434}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000049 a seq:Sequence ;
+    rdfs:label "A000049"@en ;
+    seq:hasTextList ( seq:A000049_I_1_20220513T075811 seq:A000049_N_1_20220513T075811 seq:A000049_D_1_20220513T075811 seq:A000049_H_1_20220513T075811 seq:A000049_e_1_20220513T075811 seq:A000049_Y_1_20220513T075811 seq:A000049_K_1_20220513T075811 seq:A000049_O_1_20220513T075811 seq:A000049_A_1_20220513T075811 seq:A000049_V_1_20220513T075811 ) .
+
+seq:A000049_A_1_20220513T075811 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000049_D_1_20220513T075811 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000049_H_1_20220513T075811 a seq:Text ;
+    cnt:chars """Seth A. Troisi, <a href="/A000049/b000049.txt">Table of n, a(n) for n = 0..49</a> (terms 0..36 from N. J. A. Sloane)
+Robert G. Donnelly, Molly W. Dunkum, Sasha V. Malone, and Alexandra Nance, <a href="https://arxiv.org/abs/2012.14991">Symmetric Fibonaccian distributive lattices and representations of the special linear Lie algebras</a>, arXiv:2012.14991 [math.CO], 2020.
+D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000049_I_1_20220513T075811 a seq:Text ;
+    cnt:chars "M0714 N0264 #40 May 13 2022 07:58:11"@en .
+
+seq:A000049_K_1_20220513T075811 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000049_N_1_20220513T075811 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of the form 3*x^2 + 4*y^2."@en .
+
+seq:A000049_O_1_20220513T075811 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000049_V_1_20220513T075811 a seq:Text ;
+    cnt:chars "0,0,2,3,5,9,16,29,53,98,181,341,640,1218,2321,4449,8546,16482,31845,61707,119760,232865,453511,884493,1727125,3376376,6607207,12941838,25371086,49776945,97730393,192009517,377473965,742511438,1461351029,2877568839,5668961811"@en .
+
+seq:A000049_Y_1_20220513T075811 a seq:Text ;
+    cnt:chars "Cf. A020677."@en .
+
+seq:A000049_e_1_20220513T075811 a seq:Text ;
+    cnt:chars "There are 5 integers <= 2^4 of the form 3*x^2 + 4*y^2. The five (x,y) pairs are (1,0), (0,1), (1,1), (2,0), (0,2) and give 3, 4, 7, 12, 16 solutions, respectively. So a(4) = 5. - _Seth A. Troisi_, Apr 22 2022"@en .
+

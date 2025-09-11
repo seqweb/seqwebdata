@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.406594Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1261}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200476 a seq:Sequence ;
+    rdfs:label "A200476"@en ;
+    seq:hasTextList ( seq:A200476_I_1_20170206T083141 seq:A200476_N_1_20170206T083141 seq:A200476_C_1_20170206T083141 seq:A200476_H_1_20170206T083141 seq:A200476_e_1_20170206T083141 seq:A200476_p_1_20170206T083141 seq:A200476_t_1_20170206T083141 seq:A200476_Y_1_20170206T083141 seq:A200476_K_1_20170206T083141 seq:A200476_O_1_20170206T083141 seq:A200476_A_1_20170206T083141 seq:A200476_V_1_20170206T083141 ) .
+
+seq:A200476_A_1_20170206T083141 a seq:Text ;
+    cnt:chars "_Alois P. Heinz_, Nov 18 2011"@en .
+
+seq:A200476_C_1_20170206T083141 a seq:Text ;
+    cnt:chars "See comments in A199891, which apply to this sequence also."@en .
+
+seq:A200476_H_1_20170206T083141 a seq:Text ;
+    cnt:chars "Alois P. Heinz, <a href=\"/A200476/b200476.txt\">Table of n, a(n) for n = 1..300</a>"@en .
+
+seq:A200476_I_1_20170206T083141 a seq:Text ;
+    cnt:chars "#12 Feb 06 2017 08:31:41"@en .
+
+seq:A200476_K_1_20170206T083141 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200476_N_1_20170206T083141 a seq:Text ;
+    cnt:chars "Number of partitions of n such that the number of parts and the largest part and the smallest part are pairwise not coprime."@en .
+
+seq:A200476_O_1_20170206T083141 a seq:Text ;
+    cnt:chars "1,8"@en .
+
+seq:A200476_V_1_20170206T083141 a seq:Text ;
+    cnt:chars "0,0,0,1,0,1,0,3,1,3,1,8,3,9,6,16,9,24,17,35,29,49,45,81,73,110,115,166,166,240,250,347,372,491,539,715,776,988,1109,1393,1553,1935,2178,2676,3034,3674,4176,5056,5734,6862,7834,9316,10615,12576,14341,16890"@en .
+
+seq:A200476_Y_1_20170206T083141 a seq:Text ;
+    cnt:chars "Cf. A199891."@en .
+
+seq:A200476_e_1_20170206T083141 a seq:Text ;
+    cnt:chars """a(8)  = 3: [2,6], [4,4], [2,2,2,2];
+a(9)  = 1: [3,3,3];
+a(10) = 3: [2,8], [4,6], [2,2,2,4];
+a(11) = 1: [2,2,3,4];
+a(12) = 8: [2,10], [4,8], [6,6], [3,3,6], [2,2,2,6], [2,2,4,4], [2,3,3,4], [2,2,2,2,2,2]."""@en .
+
+seq:A200476_p_1_20170206T083141 a seq:Text ;
+    cnt:chars """b:= proc(n, j, t, k) option remember;
+      add(b(n-i, i, t+1, k), i=j..iquo(n, 2))+
+      `if`(igcd(n, t)>1 and igcd(k, t)>1 and igcd(n, k)>1, 1, 0)
+    end:
+a:= n-> add(b(n-j, j, 2, j), j=2..iquo(n, 2)):
+seq(a(n), n=1..70);"""@en .
+
+seq:A200476_t_1_20170206T083141 a seq:Text ;
+    cnt:chars "b[n_, j_, t_, k_] := b[n, j, t, k] = Sum[b[n-i, i, t+1, k], {i, j, Quotient[n, 2]}] + If[GCD[n, t]>1 && GCD[k, t]>1 && GCD[n, k]>1, 1, 0]; a[n_] := Sum [b[n-j, j, 2, j], {j, 2, Quotient[n, 2]}]; Table[a[n], {n, 1, 70}] (* _Jean-François Alcover_, Feb 06 2017, translated from Maple *)"@en .
+

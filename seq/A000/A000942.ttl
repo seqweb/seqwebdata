@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.731109Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 796}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000942 a seq:Sequence ;
+    rdfs:label "A000942"@en ;
+    seq:hasTextList ( seq:A000942_I_1_20200712T082325 seq:A000942_N_1_20200712T082325 seq:A000942_H_1_20200712T082325 seq:A000942_Y_1_20200712T082325 seq:A000942_K_1_20200712T082325 seq:A000942_O_1_20200712T082325 seq:A000942_A_1_20200712T082325 seq:A000942_E_1_20200712T082325 seq:A000942_V_1_20200712T082325 ) .
+
+seq:A000942_A_1_20200712T082325 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000942_E_1_20200712T082325 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Oct 12 2015"@en .
+
+seq:A000942_H_1_20200712T082325 a seq:Text ;
+    cnt:chars """S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="https://doi.org/10.1021/ci00026a012">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751
+S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="/A002057/a002057.pdf">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"""@en .
+
+seq:A000942_I_1_20200712T082325 a seq:Text ;
+    cnt:chars "#17 Jul 12 2020 08:23:25"@en .
+
+seq:A000942_K_1_20200712T082325 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000942_N_1_20200712T082325 a seq:Text ;
+    cnt:chars "Number of free planar polyenoids with n nodes."@en .
+
+seq:A000942_O_1_20200712T082325 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000942_V_1_20200712T082325 a seq:Text ;
+    cnt:chars "1,1,1,3,4,12,26,77,204,624,1817,5585,17007,52803,164001,514009,1615044,5100324,16152134,51324864"@en .
+
+seq:A000942_Y_1_20200712T082325 a seq:Text ;
+    cnt:chars "Cf. A197459 (where polyedges may have cycles)."@en .
+

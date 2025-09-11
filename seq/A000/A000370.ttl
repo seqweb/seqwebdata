@@ -1,0 +1,71 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.388078Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 3897}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000370 a seq:Sequence ;
+    rdfs:label "A000370"@en ;
+    seq:hasTextList ( seq:A000370_I_1_20250112T091729 seq:A000370_N_1_20250112T091729 seq:A000370_C_1_20250112T091729 seq:A000370_D_1_20250112T091729 seq:A000370_H_1_20250112T091729 seq:A000370_F_1_20250112T091729 seq:A000370_o_1_20250112T091729 seq:A000370_K_1_20250112T091729 seq:A000370_O_1_20250112T091729 seq:A000370_A_1_20250112T091729 seq:A000370_E_1_20250112T091729 seq:A000370_V_1_20250112T091729 ) .
+
+seq:A000370_A_1_20250112T091729 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000370_C_1_20250112T091729 a seq:Text ;
+    cnt:chars "Number of Boolean functions distinct under complementation/permutation."@en .
+
+seq:A000370_D_1_20250112T091729 a seq:Text ;
+    cnt:chars """M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 153.
+M. A. Harrison, The Number of Transitivity Sets of  Boolean Functions. Journal of the Society for Industrial and Applied Mathematics, Vol. 11, No. 3 (Sep., 1963), pp. 806-828
+D. E. Knuth, The Art of Computer Programming, Vol. 4A, Section 7.1.1, p. 79.
+S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38, Table 2.3.2. - Row 16.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000370_E_1_20250112T091729 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 23 2000"@en .
+
+seq:A000370_F_1_20250112T091729 a seq:Text ;
+    cnt:chars """a(n) is asymptotic to 2^{2^n} / ( n! * 2^{n+1} ) as n -> oo. This follows from a theorem of Michael Harrison.  See Theorem 3 in Harrison (JACM, 1966). - Eric Bach, Aug 07 2017
+a(n) = (A000610(n)+A000616(n)) / 2. - _Gregory Morse_, Dec 23 2024"""@en .
+
+seq:A000370_H_1_20250112T091729 a seq:Text ;
+    cnt:chars """Matthew House, <a href="/A000370/b000370.txt">Table of n, a(n) for n = 0..11</a>
+M. A. Harrison, <a href="http://dx.doi.org/10.1109/PGEC.1963.263656">The number of equivalence classes of Boolean functions under groups containing negation</a>, IEEE Trans. Electron. Comput. 12 (1963), 559-561.
+M. A. Harrison, <a href="/A000370/a000370.pdf">The number of equivalence classes of Boolean functions under groups containing negation</a>, IEEE Trans. Electron. Comput. 12 (1963), 559-561. [Annotated scanned copy]
+M. A. Harrison, <a href="https://doi.org/10.1145/321312.321325">On asymptotic estimates in switching and automata theory</a>, J. ACM, v. 13, no. 1, Jan. 1966, pp. 151-157.
+S. Muroga, <a href="/A000371/a000371.pdf">Threshold Logic and Its Applications</a>, Wiley, NY, 1971 [Annotated scans of a few pages]
+S. Muroga, T. Tsuboi and C. R. Baugh, <a href="/A002077/a002077.pdf">Enumeration of threshold functions of eight variables</a>, IEEE Trans. Computers, 19 (1970), 818-825. [Annotated scanned copy]
+Juling Zhang, Guowu Yang, William N. N. Hung, Tian Liu, Xiaoyu Song, Marek A. Perkowski, <a href="https://doi.org/10.1007/s00224-018-9903-0">A Group Algebraic Approach to NPN Classification of Boolean Functions</a>, Theory of Computing Systems (2018), 1-20.
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000370_I_1_20250112T091729 a seq:Text ;
+    cnt:chars "M1287 N0494 #74 Jan 12 2025 09:17:29"@en .
+
+seq:A000370_K_1_20250112T091729 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000370_N_1_20250112T091729 a seq:Text ;
+    cnt:chars "Number of NPN-equivalence classes of Boolean functions of n or fewer variables."@en .
+
+seq:A000370_O_1_20250112T091729 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000370_V_1_20250112T091729 a seq:Text ;
+    cnt:chars "1,2,4,14,222,616126,200253952527184,263735716028826576482466871188128,5609038300883759793482640992086670939164957990135057216103303119630336"@en .
+
+seq:A000370_o_1_20250112T091729 a seq:Text ;
+    cnt:chars """(Python)
+def partition_lin(n, d, depth=0):
+  if d == depth:
+    if n==0: yield ()
+  else: yield from (item + (i,) for i in range(n+1) for item in partition_lin(n-i*(depth+1), d, depth=depth+1))
+def get_num_equiv_bool_func(n, sc=False):
+  import math, operator, functools
+  from sympy import mobius
+  def e(k): return sum((1<<d)*mobius(k//d) for d in range(1, k+1) if k % d == 0)//k
+  def g(two_k): return sum((1<<(d//2))*mobius(two_k//d) for d in range(1, two_k+1) if two_k % d == 0 and two_k//2 % d != 0)//two_k
+  return sum(math.factorial(n)*(1<<n)//functools.reduce(operator.mul, (math.factorial(ji)*(2*(n-i))**ji for i, ji in enumerate(j)), 1)*sum(functools.reduce(operator.mul, (0 if sc and d&1 else 1<<x for d, x in a), 1) for a in ([[(1,1)]] if n==0 else functools.reduce(lambda x, y: [[(math.lcm(p, q), math.gcd(p, q)*ip*jq) for p, ip in a for q, jq in b] for a in x for b in y], ([[(d, e(d)) for d in range(1, i+1) if i % d ==0], [(d, g(d)) for d in range(1, 2*i+1) if 2*i % d == 0 and i % d != 0]] for i in range(1, n+1) for _ in range(j[n-i]))))) for j in partition_lin(n, n))//(math.factorial(n)*(1<<n))
+[(get_num_equiv_bool_func(n)+get_num_equiv_bool_func(n,True))//2 for n in range(0,10)] # _Gregory Morse_, Dec 23 2024"""@en .
+

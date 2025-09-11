@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.957484Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1665}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200724 a seq:Sequence ;
+    rdfs:label "A200724"@en ;
+    seq:hasTextList ( seq:A200724_I_1_20220908T084600 seq:A200724_N_1_20220908T084600 seq:A200724_C_1_20220908T084600 seq:A200724_H_1_20220908T084600 seq:A200724_F_1_20220908T084600 seq:A200724_t_1_20220908T084600 seq:A200724_o_1_20220908T084600 seq:A200724_Y_1_20220908T084600 seq:A200724_K_1_20220908T084600 seq:A200724_O_1_20220908T084600 seq:A200724_A_1_20220908T084600 seq:A200724_V_1_20220908T084600 ) .
+
+seq:A200724_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Bruno Berselli_, Nov 21 2011"@en .
+
+seq:A200724_C_1_20220908T084600 a seq:Text ;
+    cnt:chars """A Diophantine property of these numbers: (a(n+1)-a(n-1))^2 - 1221*a(n)^2 = 4. (See also comment in A200441.)
+a(n) equals the number of 01-avoiding words of length n on alphabet {0,1,...,34}.  - _Milan Janjic_, Jan 26 2015"""@en .
+
+seq:A200724_F_1_20220908T084600 a seq:Text ;
+    cnt:chars """G.f.: 1/(1-35*x+x^2).
+a(n) = 35*a(n-1)-a(n-2) with a(0)=1, a(1)=35.
+a(n) = -a(-n-2) = (t^(n+1)-1/t^(n+1))/(t-1/t) where t=(35+sqrt(1221))/2.
+a(n) = sum((-1)^k*binomial(n-k, k)*35^(n-2k), k=0..floor(n/2)).
+a(n) = Sum_{k, 0<=k<=n} A101950(n,k)*34^k. - _Philippe Deléham_, Feb 10 2012
+Product {n >= 0} (1 + 1/a(n)) = 1/33*(33 + sqrt(1221)). - _Peter Bala_, Dec 23 2012
+Product {n >= 1} (1 - 1/a(n)) = 1/70*(33 + sqrt(1221)). - _Peter Bala_, Dec 23 2012"""@en .
+
+seq:A200724_H_1_20220908T084600 a seq:Text ;
+    cnt:chars """Bruno Berselli, <a href="/A200724/b200724.txt">Table of n, a(n) for n = 0..500</a>
+Tanya Khovanova, <a href="http://www.tanyakhovanova.com/RecursiveSequences/RecursiveSequences.html">Recursive Sequences</a>.
+<a href="/index/Rec#order_02">Index entries for linear recurrences with constant coefficients</a>, signature (35,-1)."""@en .
+
+seq:A200724_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#25 Sep 08 2022 08:46:00"@en .
+
+seq:A200724_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200724_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Expansion of 1/(1-35*x+x^2)."@en .
+
+seq:A200724_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200724_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,35,1224,42805,1496951,52350480,1830769849,64024594235,2239030028376,78302026398925,2738331893933999,95763314261291040,3348977667251252401,117118455039532542995,4095796948716387752424,143235774750034038791845,5009156319302474969962151"@en .
+
+seq:A200724_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars "Cf. A029547, A144128."@en .
+
+seq:A200724_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(PARI)  Vec(1/(1-35*x+x^2)+O(x^17))
+(Magma)  Z<x>:=PolynomialRing(Integers()); N<r>:=NumberField(x^2-1221); S:=[(((35+r)/2)^n-1/((35+r)/2)^n)/r: n in [1..17]]; [Integers()!S[j]: j in [1..#S]];
+(Maxima)  makelist(sum((-1)^k*binomial(n-k,k)*35^(n-2*k),k,0,floor(n/2)),n,0,16);"""@en .
+
+seq:A200724_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "LinearRecurrence[{35, -1}, {1, 35}, 17]"@en .
+

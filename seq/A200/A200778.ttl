@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.070219Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 932}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200778 a seq:Sequence ;
+    rdfs:label "A200778"@en ;
+    seq:hasTextList ( seq:A200778_I_1_20241024T040315 seq:A200778_N_1_20241024T040315 seq:A200778_C_1_20241024T040315 seq:A200778_H_1_20241024T040315 seq:A200778_e_1_20241024T040315 seq:A200778_p_1_20241024T040315 seq:A200778_t_1_20241024T040315 seq:A200778_Y_1_20241024T040315 seq:A200778_K_1_20241024T040315 seq:A200778_O_1_20241024T040315 seq:A200778_A_1_20241024T040315 seq:A200778_V_1_20241024T040315 ) .
+
+seq:A200778_A_1_20241024T040315 a seq:Text ;
+    cnt:chars "_Pierre CAMI_, Nov 22 2011"@en .
+
+seq:A200778_C_1_20241024T040315 a seq:Text ;
+    cnt:chars "Limit_{N->oo} (Sum_{n=1..N} k(n)) / (Sum_{n=1..N} log(p(n))^2) = 1."@en .
+
+seq:A200778_H_1_20241024T040315 a seq:Text ;
+    cnt:chars "Pierre CAMI, <a href=\"/A200778/b200778.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200778_I_1_20241024T040315 a seq:Text ;
+    cnt:chars "#24 Oct 24 2024 04:03:15"@en .
+
+seq:A200778_K_1_20241024T040315 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200778_N_1_20241024T040315 a seq:Text ;
+    cnt:chars "Least k > 0 such that k*p*(k*p-1)-1 and k*p*(k*p-1)+1 is a twin prime pair, where p=prime(n)."@en .
+
+seq:A200778_O_1_20241024T040315 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200778_V_1_20241024T040315 a seq:Text ;
+    cnt:chars "2,1,5,1,2,3,3,13,9,8,10,43,69,15,17,50,3,42,1,2,3,3,20,33,3,44,7,35,49,9,6,189,15,1,113,21,7,154,3,3,18,12,29,33,20,6,27,3,2,3,23,11,10,12,18,137,41,12,36,29,54,17,10,59,55,3,51,36"@en .
+
+seq:A200778_Y_1_20241024T040315 a seq:Text ;
+    cnt:chars "Cf. A200654."@en .
+
+seq:A200778_e_1_20241024T040315 a seq:Text ;
+    cnt:chars "2*2*(2*2 - 1) - 1 = 11, twin prime of 13, so a(1)=2."@en .
+
+seq:A200778_p_1_20241024T040315 a seq:Text ;
+    cnt:chars """A200778 := proc(n)
+    p := ithprime(n) ;
+    for k from 1 do
+        if isprime(k*p*(k*p-1)-1) and isprime(k*p*(k*p-1)+1) then
+            return k;
+        end if;
+    end do:
+end proc:
+seq(A200778(n),n=1..80) ; # _R. J. Mathar_, Nov 26 2011"""@en .
+
+seq:A200778_t_1_20241024T040315 a seq:Text ;
+    cnt:chars "lktpp[n_]:=Module[{k=1,p=Prime[n]},While[AnyTrue[k*p(k*p-1)+{1,-1}, CompositeQ],k++];k]; Array[lktpp,70] (* _Harvey P. Dale_, May 03 2019 *)"@en .
+

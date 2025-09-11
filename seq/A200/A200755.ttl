@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.023181Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1989}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200755 a seq:Sequence ;
+    rdfs:label "A200755"@en ;
+    seq:hasTextList ( seq:A200755_I_1_20231102T103950 seq:A200755_N_1_20231102T103950 seq:A200755_C_1_20231102T103950 seq:A200755_F_1_20231102T103950 seq:A200755_e_1_20231102T103950 seq:A200755_t_1_20231102T103950 seq:A200755_o_1_20231102T103950 seq:A200755_Y_1_20231102T103950 seq:A200755_K_1_20231102T103950 seq:A200755_O_1_20231102T103950 seq:A200755_A_1_20231102T103950 seq:A200755_V_1_20231102T103950 ) .
+
+seq:A200755_A_1_20231102T103950 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 21 2011"@en .
+
+seq:A200755_C_1_20231102T103950 a seq:Text ;
+    cnt:chars "Compare to the g.f. C(x) for the Catalan numbers (A000108): C(x) = 1 + x*C(x)^3 - x^2*C(x)^4 = 1 + x*C(x)^2."@en .
+
+seq:A200755_F_1_20231102T103950 a seq:Text ;
+    cnt:chars """Recurrence: 2*n*(2*n+1)*(244*n^3 - 1713*n^2 + 3767*n - 2550)*a(n) = 3*(2196*n^5 - 17613*n^4 + 49628*n^3 - 59841*n^2 + 30478*n - 5184)*a(n-1) - 18*(244*n^5 - 2323*n^4 + 8013*n^3 - 12252*n^2 + 7774*n - 1260)*a(n-2) - (n-4)*(244*n^4 - 1713*n^3 + 4172*n^2 - 3333*n - 378)*a(n-3) - 36*(n-5)*(n-3)*(5*n + 2)*a(n-4) - 4*(n-6)*(n-4)*(244*n^3 - 981*n^2 + 1073*n - 252)*a(n-5). - _Vaclav Kotesovec_, Sep 10 2013
+a(n) ~ c*d^n/n^(3/2), where d = 5.991151107674316485... is the root of the equation -4 - 4*d - 5*d^2 - 23*d^3 + 4*d^4 = 0 and c = 0.214566307956522153666714736272121899143... - _Vaclav Kotesovec_, Sep 10 2013
+a(n) = Sum_{k=0..floor(n/2)} (-1)^k * binomial(3*n-4*k,k) * binomial(3*n-5*k,n-2*k) / (2*n-3*k+1). - _Seiichi Manyama_, Nov 02 2023"""@en .
+
+seq:A200755_I_1_20231102T103950 a seq:Text ;
+    cnt:chars "#20 Nov 02 2023 10:39:50"@en .
+
+seq:A200755_K_1_20231102T103950 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200755_N_1_20231102T103950 a seq:Text ;
+    cnt:chars "G.f. satisfies A(x) = 1 + x*A(x)^3 - x^2*A(x)^2."@en .
+
+seq:A200755_O_1_20231102T103950 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200755_V_1_20231102T103950 a seq:Text ;
+    cnt:chars "1,1,2,7,29,129,602,2910,14447,73234,377487,1972568,10425930,55640282,299403552,1622701202,8850030065,48534971244,267486182192,1480673755443,8228819436898,45895682480965,256815165790211,1441321638029496,8111194646903282"@en .
+
+seq:A200755_Y_1_20231102T103950 a seq:Text ;
+    cnt:chars """Cf. A104979, A200754.
+Cf. A000108, A137265, A200753."""@en .
+
+seq:A200755_e_1_20231102T103950 a seq:Text ;
+    cnt:chars """G.f.: A(x) = 1 + x + 2*x^2 + 7*x^3 + 29*x^4 + 129*x^5 + 602*x^6 +...
+Related expansions:
+A(x)^2 = 1 + 2*x + 5*x^2 + 18*x^3 + 76*x^4 + 344*x^5 + 1627*x^6 +...
+A(x)^3 = 1 + 3*x + 9*x^2 + 34*x^3 + 147*x^4 + 678*x^5 + 3254*x^6 +...
+where a(2) = 3 - 1; a(3) = 9 - 2; a(4) = 34 - 5; a(5) = 147 - 18; ..."""@en .
+
+seq:A200755_o_1_20231102T103950 a seq:Text ;
+    cnt:chars """(PARI) a(n)=local(A=1+x);for(i=1,n,A=1+x*A^3-x^2*A^2+x*O(x^n));polcoeff(A,n);
+(PARI) a(n) = sum(k=0, n\\2, (-1)^k*binomial(3*n-4*k, k)*binomial(3*n-5*k, n-2*k)/(2*n-3*k+1)); \\\\ _Seiichi Manyama_, Nov 02 2023"""@en .
+
+seq:A200755_t_1_20231102T103950 a seq:Text ;
+    cnt:chars "nmax=20; aa=ConstantArray[0,nmax]; aa[[1]]=1; Do[AGF=1+Sum[aa[[n]]*x^n,{n,1,j-1}]+koef*x^j; sol=Solve[Coefficient[1 + x*AGF^3 - x^2*AGF^2 - AGF,x,j]==0,koef][[1]];aa[[j]]=koef/.sol[[1]],{j,2,nmax}]; Flatten[{1,aa}] (* _Vaclav Kotesovec_, Sep 10 2013 *)"@en .
+

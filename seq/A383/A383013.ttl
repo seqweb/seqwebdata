@@ -1,0 +1,74 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.606629Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2861}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383013 a seq:Sequence ;
+    rdfs:label "A383013"@en ;
+    seq:hasTextList ( seq:A383013_I_1_20250427T150434 seq:A383013_N_1_20250427T150434 seq:A383013_C_1_20250427T150434 seq:A383013_H_1_20250427T150434 seq:A383013_e_1_20250427T150434 seq:A383013_t_1_20250427T150434 seq:A383013_Y_1_20250427T150434 seq:A383013_K_1_20250427T150434 seq:A383013_O_1_20250427T150434 seq:A383013_A_1_20250427T150434 seq:A383013_E_1_20250427T150434 seq:A383013_V_1_20250427T150434 ) .
+
+seq:A383013_A_1_20250427T150434 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 12 2025"@en .
+
+seq:A383013_C_1_20250427T150434 a seq:Text ;
+    cnt:chars "A partition of n counts towards a(n) if and only if #p + g >= 2*L where #p is the number of parts counted with multiplicity of the partition, g is the gcd of all the frequencies of every distinct part and L is the largest frequency of a part. - _David A. Corneth_, Apr 27 2025"@en .
+
+seq:A383013_E_1_20250427T150434 a seq:Text ;
+    cnt:chars "More terms from _Bert Dobbelaere_, Apr 26 2025"@en .
+
+seq:A383013_H_1_20250427T150434 a seq:Text ;
+    cnt:chars "David A. Corneth, <a href=\"/A383013/b383013.txt\">Table of n, a(n) for n = 0..82</a>"@en .
+
+seq:A383013_I_1_20250427T150434 a seq:Text ;
+    cnt:chars "#17 Apr 27 2025 15:04:34"@en .
+
+seq:A383013_K_1_20250427T150434 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A383013_N_1_20250427T150434 a seq:Text ;
+    cnt:chars "Number of integer partitions of n having a permutation with all equal run-lengths."@en .
+
+seq:A383013_O_1_20250427T150434 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383013_V_1_20250427T150434 a seq:Text ;
+    cnt:chars "1,1,2,3,5,6,9,11,18,21,31,38,56,67,94,121,162,199,265,330,438,543,693,859,1103,1353,1702,2097,2619,3194,3972,4821,5943,7206,8796,10632,12938,15536,18794,22539,27133,32374,38827,46175,55134,65421,77751,91951,109011,128482"@en .
+
+seq:A383013_Y_1_20250427T150434 a seq:Text ;
+    cnt:chars """For distinct instead of equal run-lengths we have A239455, ranked by A351294.
+The complement for distinct run-lengths is A351293, ranked by A351295.
+The complement is counted by A382915, ranked by A382879, by signature A382914.
+A000041 counts integer partitions, strict A000009.
+A304442 counts partitions with equal run-sums, ranks A353833.
+A329738 counts compositions with equal run-lengths, ranks A353744.
+A329739 counts compositions with distinct run-lengths, ranks A351596.
+A382857 counts permutations of prime indices with equal run-lengths, firsts A382878.
+Cf. A003242, A047966, A164707, A238279, A351201, A351290, A351291, A353837, A353851, A382858."""@en .
+
+seq:A383013_e_1_20250427T150434 a seq:Text ;
+    cnt:chars """The partition (2,2,1,1,1,1) has permutation (1,1,2,2,1,1) with equal run-lengths (2,2,2) so is counted under a(8).
+The a(1) = 1 through a(8) = 18 partitions:
+  (1)  (2)   (3)    (4)     (5)      (6)       (7)        (8)
+       (11)  (21)   (22)    (32)     (33)      (43)       (44)
+             (111)  (31)    (41)     (42)      (52)       (53)
+                    (211)   (221)    (51)      (61)       (62)
+                    (1111)  (311)    (222)     (322)      (71)
+                            (11111)  (321)     (331)      (332)
+                                     (411)     (421)      (422)
+                                     (2211)    (511)      (431)
+                                     (111111)  (3211)     (521)
+                                               (22111)    (611)
+                                               (1111111)  (2222)
+                                                          (3221)
+                                                          (3311)
+                                                          (4211)
+                                                          (22211)
+                                                          (32111)
+                                                          (221111)
+                                                          (11111111)"""@en .
+
+seq:A383013_t_1_20250427T150434 a seq:Text ;
+    cnt:chars "Table[Length[Select[IntegerPartitions[n],Select[Permutations[#], SameQ@@Length/@Split[#]&]!={}&]],{n,0,15}]"@en .
+

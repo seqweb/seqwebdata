@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.537648Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1130}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000854 a seq:Sequence ;
+    rdfs:label "A000854"@en ;
+    seq:hasTextList ( seq:A000854_I_1_20250117T120940 seq:A000854_N_1_20250117T120940 seq:A000854_D_1_20250117T120940 seq:A000854_H_1_20250117T120940 seq:A000854_F_1_20250117T120940 seq:A000854_o_1_20250117T120940 seq:A000854_K_1_20250117T120940 seq:A000854_O_1_20250117T120940 seq:A000854_A_1_20250117T120940 seq:A000854_E_1_20250117T120940 seq:A000854_V_1_20250117T120940 ) .
+
+seq:A000854_A_1_20250117T120940 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000854_D_1_20250117T120940 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000854_E_1_20250117T120940 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Aug 10 2011"@en .
+
+seq:A000854_F_1_20250117T120940 a seq:Text ;
+    cnt:chars "a(n) = (1/48)*(8^(2^n) + 20*(2^n-1)*8^(2^(n-1)) + 8*2^(2^n) + 16*(2^n-1)*2^(2^(n-1)) + 6*4^(2^n))/(2^n). - _Sean A. Irvine_, Aug 11 2011"@en .
+
+seq:A000854_H_1_20250117T120940 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000854/b000854.txt">Table of n, a(n) for n = 1..10</a>
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000854_I_1_20250117T120940 a seq:Text ;
+    cnt:chars "M3687 N1506 #34 Jan 17 2025 12:09:40"@en .
+
+seq:A000854_K_1_20250117T120940 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000854_N_1_20250117T120940 a seq:Text ;
+    cnt:chars "Number of n-input 3-output switching networks under action of complementing group C(2,n) on inputs and S(3) and C(2,3) on outputs."@en .
+
+seq:A000854_O_1_20250117T120940 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000854_V_1_20250117T120940 a seq:Text ;
+    cnt:chars "4,51,46218,366543984720,51580835042395388382652416,2043327387821185145142410066588796212566159639921557504"@en .
+
+seq:A000854_o_1_20250117T120940 a seq:Text ;
+    cnt:chars "(Magma) [1/48*(8^(2^n)+20*(2^n-1)*8^(2^(n-1))+8*2^(2^n)+16*(2^n-1)*2^(2^(n-1))+6*4^(2^n))/(2^n): n in [1..12]]; // _Vincenzo Librandi_, Aug 11 2011"@en .
+

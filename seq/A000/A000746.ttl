@@ -1,0 +1,61 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.263883Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1978}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000746 a seq:Sequence ;
+    rdfs:label "A000746"@en ;
+    seq:hasTextList ( seq:A000746_I_1_20220612T120251 seq:A000746_N_1_20220612T120251 seq:A000746_H_1_20220612T120251 seq:A000746_F_1_20220612T120251 seq:A000746_t_1_20220612T120251 seq:A000746_o_1_20220612T120251 seq:A000746_Y_1_20220612T120251 seq:A000746_K_1_20220612T120251 seq:A000746_O_1_20220612T120251 seq:A000746_A_1_20220612T120251 seq:A000746_V_1_20220612T120251 ) .
+
+seq:A000746_A_1_20220612T120251 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000746_F_1_20220612T120251 a seq:Text ;
+    cnt:chars """a(n) = Sum_{k=0..n} A109449(n,k)*(k + 1)*(k + 2)/2. - _Reinhard Zumkeller_, Nov 03 2013
+E.g.f.: (sec(x) + tan(x))*exp(x)*(x^2 + 4*x + 2)/2. - _Sergei N. Gladkovskii_, Oct 30 2014
+a(n) ~ n! * (Pi^2 + 8*Pi + 8) * exp(Pi/2) * 2^(n-1) / Pi^(n+1). - _Vaclav Kotesovec_, Jun 12 2015"""@en .
+
+seq:A000746_H_1_20220612T120251 a seq:Text ;
+    cnt:chars """Reinhard Zumkeller, <a href="/A000746/b000746.txt">Table of n, a(n) for n = 0..400</a>
+Peter Luschny, <a href="http://oeis.org/wiki/User:Peter_Luschny/SeidelTransform">An old operation on sequences: the Seidel transform</a>.
+J. Millar, N. J. A. Sloane and N. E. Young, A new operation on sequences: the Boustrophedon transform, J. Combin. Theory, 17A (1996), 44-54 (<a href="http://neilsloane.com/doc/bous.txt">Abstract</a>, <a href="http://neilsloane.com/doc/bous.pdf">pdf</a>, <a href="http://neilsloane.com/doc/bous.ps">ps</a>).
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Boustrophedon_transform">Boustrophedon transform</a>.
+<a href="/index/Bo#boustrophedon">Index entries for sequences related to boustrophedon transform</a>"""@en .
+
+seq:A000746_I_1_20220612T120251 a seq:Text ;
+    cnt:chars "#45 Jun 12 2022 12:02:51"@en .
+
+seq:A000746_K_1_20220612T120251 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000746_N_1_20220612T120251 a seq:Text ;
+    cnt:chars "Boustrophedon transform of triangular numbers."@en .
+
+seq:A000746_O_1_20220612T120251 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000746_V_1_20220612T120251 a seq:Text ;
+    cnt:chars "1,4,13,39,120,407,1578,7042,35840,205253,1306454,9148392,69887664,578392583,5155022894,49226836114,501420422112,5426640606697,62184720675718,752172431553308,9576956842743904,128034481788227195"@en .
+
+seq:A000746_Y_1_20220612T120251 a seq:Text ;
+    cnt:chars "Cf. A000217, A000718, A109449."@en .
+
+seq:A000746_o_1_20220612T120251 a seq:Text ;
+    cnt:chars """(Haskell)
+a000746 n = sum $ zipWith (*) (a109449_row n) $ tail a000217_list
+-- _Reinhard Zumkeller_, Nov 03 2013
+(Python)
+from itertools import accumulate, count, islice
+def A000746_gen(): # generator of terms
+    blist, c = tuple(), 1
+    for i in count(2):
+        yield (blist := tuple(accumulate(reversed(blist),initial=c)))[-1]
+        c += i
+A000746_list = list(islice(A000746_gen(),40)) # _Chai Wah Wu_, Jun 12 2022"""@en .
+
+seq:A000746_t_1_20220612T120251 a seq:Text ;
+    cnt:chars "t[n_, 0] := (n + 1) (n + 2)/2; t[n_, k_] := t[n, k] = t[n, k - 1] + t[n - 1, n - k]; a[n_] := t[n, n]; Array[a, 30, 0] (* _Jean-François Alcover_, Feb 12 2016 *)"@en .
+

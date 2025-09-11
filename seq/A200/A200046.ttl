@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.858262Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 564}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200046 a seq:Sequence ;
+    rdfs:label "A200046"@en ;
+    seq:hasTextList ( seq:A200046_I_1_20120330T183600 seq:A200046_N_1_20120330T183600 seq:A200046_C_1_20120330T183600 seq:A200046_p_1_20120330T183600 seq:A200046_Y_1_20120330T183600 seq:A200046_K_1_20120330T183600 seq:A200046_O_1_20120330T183600 seq:A200046_A_1_20120330T183600 seq:A200046_V_1_20120330T183600 ) .
+
+seq:A200046_A_1_20120330T183600 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 14 2011"@en .
+
+seq:A200046_C_1_20120330T183600 a seq:Text ;
+    cnt:chars "All numbers are composites."@en .
+
+seq:A200046_I_1_20120330T183600 a seq:Text ;
+    cnt:chars "#12 Mar 30 2012 18:36:00"@en .
+
+seq:A200046_K_1_20120330T183600 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200046_N_1_20120330T183600 a seq:Text ;
+    cnt:chars "Numbers n such that the equation x^n + (x+1)^n = (x+2)^n (mod n), x = 0..n-1 has no solution."@en .
+
+seq:A200046_O_1_20120330T183600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200046_V_1_20120330T183600 a seq:Text ;
+    cnt:chars "15,25,33,35,39,55,57,69,75,95,99,115,117,119,121,123,125,129,135,143,145,153,155,169,175,195,203,205,209,215,217,221,225,235,247,253,255,259,273,275,285,289,295,299,305,309,315,319,321,323,325,333,335,339"@en .
+
+seq:A200046_Y_1_20120330T183600 a seq:Text ;
+    cnt:chars "Cf. A195637, A200219."@en .
+
+seq:A200046_p_1_20120330T183600 a seq:Text ;
+    cnt:chars "for n from 1 to 340 do:ii:=0:for x from 0 to n-1 do:if x^n+(x+1)^n -(x+2)^n mod n =0 then ii:=ii+1:else fi:od: if ii=0 then printf(`%d, `,n):else fi:od:"@en .
+

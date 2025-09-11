@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.612483Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2224}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000465 a seq:Sequence ;
+    rdfs:label "A000465"@en ;
+    seq:hasTextList ( seq:A000465_I_1_20240101T080135 seq:A000465_N_1_20240101T080135 seq:A000465_C_1_20240101T080135 seq:A000465_D_1_20240101T080135 seq:A000465_H_1_20240101T080135 seq:A000465_F_1_20240101T080135 seq:A000465_t_1_20240101T080135 seq:A000465_Y_1_20240101T080135 seq:A000465_K_1_20240101T080135 seq:A000465_O_1_20240101T080135 seq:A000465_A_1_20240101T080135 seq:A000465_E_1_20240101T080135 seq:A000465_V_1_20240101T080135 ) .
+
+seq:A000465_A_1_20240101T080135 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000465_C_1_20240101T080135 a seq:Text ;
+    cnt:chars """Number of ways to factor p^n*q^4 where p and q are distinct primes.
+a(n) is the number of multiset partitions of the multiset {r^n, s^4}. - _Joerg Arndt_, Jan 01 2024"""@en .
+
+seq:A000465_D_1_20240101T080135 a seq:Text ;
+    cnt:chars """M. S. Cheema and H. Gupta, Tables of Partitions of Gaussian Integers. National Institute of Sciences of India, Mathematical Tables, Vol. 1, New Delhi, 1956, p. 1.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000465_E_1_20240101T080135 a seq:Text ;
+    cnt:chars "Edited by _Christian G. Bower_, Jan 08 2004"@en .
+
+seq:A000465_F_1_20240101T080135 a seq:Text ;
+    cnt:chars """a(n) = if n <= 4 then A054225(4,n) else A054225(n,4). - _Reinhard Zumkeller_, Nov 30 2011
+a(n) ~ sqrt(3) * n * exp(Pi*sqrt(2*n/3)) / (8*Pi^4). - _Vaclav Kotesovec_, Feb 01 2016"""@en .
+
+seq:A000465_H_1_20240101T080135 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000465/b000465.txt">Table of n, a(n) for n = 0..5000</a>
+F. C. Auluck, <a href="http://dx.doi.org/10.1017/S0305004100028061">On partitions of bipartite numbers</a>, Proc. Cambridge Philos. Soc. 49, (1953). 72-83.
+F. C. Auluck, <a href="/A002774/a002774.pdf">On partitions of bipartite numbers, annotated scan of a few pages.</a>
+M. S. Cheema and H. Gupta, <a href="/A002755/a002755.pdf">Tables of Partitions of Gaussian Integers. National Institute of Sciences of India, Mathematical Tables, Vol. 1, New Delhi, 1956</a> (Annotated scanned pages from, plus a review)"""@en .
+
+seq:A000465_I_1_20240101T080135 a seq:Text ;
+    cnt:chars "M3821 N1565 #50 Jan 01 2024 08:01:35"@en .
+
+seq:A000465_K_1_20240101T080135 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000465_N_1_20240101T080135 a seq:Text ;
+    cnt:chars "Number of bipartite partitions of n white objects and 4 black ones."@en .
+
+seq:A000465_O_1_20240101T080135 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000465_V_1_20240101T080135 a seq:Text ;
+    cnt:chars "5,12,29,57,109,189,323,522,831,1279,1941,2876,4215,6066,8644,12151,16933,23336,31921,43264,58250,77825,103362,136371,178975,233532,303268,391831,504069,645520,823419,1046067,1324136,1669950,2099104,2629685,3284325,4089300"@en .
+
+seq:A000465_Y_1_20240101T080135 a seq:Text ;
+    cnt:chars """Column 4 of A054225.
+Cf. A005380."""@en .
+
+seq:A000465_t_1_20240101T080135 a seq:Text ;
+    cnt:chars """max = 40; col = 4; s1 = Series[Product[1/(1-x^(n-k)*y^k), {n, 1, max+2}, {k, 0, n}], {y, 0, col}] // Normal; s2 = Series[s1, {x, 0, max+1}]; a[n_] := SeriesCoefficient[s2, {x, 0, n}, {y, 0, col}]; Table[ a[n] , {n, 0, max}] (* _Jean-François Alcover_, Mar 13 2014 *)
+nmax = 50; CoefficientList[Series[(5 + 2*x - 3*x^3 - 5*x^4 - x^5 + 3*x^7 + x^8 - x^9)/((1-x)*(1-x^2)*(1-x^3)*(1-x^4)) * Product[1/(1 - x^k), {k, 1, nmax}], {x, 0, nmax}], x] (* _Vaclav Kotesovec_, Feb 01 2016 *)"""@en .
+

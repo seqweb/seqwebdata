@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.943464Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 566}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200087 a seq:Sequence ;
+    rdfs:label "A200087"@en ;
+    seq:hasTextList ( seq:A200087_I_1_20130713T120419 seq:A200087_N_1_20130713T120419 seq:A200087_C_1_20130713T120419 seq:A200087_H_1_20130713T120419 seq:A200087_o_1_20130713T120419 seq:A200087_K_1_20130713T120419 seq:A200087_O_1_20130713T120419 seq:A200087_A_1_20130713T120419 seq:A200087_V_1_20130713T120419 ) .
+
+seq:A200087_A_1_20130713T120419 a seq:Text ;
+    cnt:chars "_Reinhard Zumkeller_, Nov 13 2011"@en .
+
+seq:A200087_C_1_20130713T120419 a seq:Text ;
+    cnt:chars "A079878(a(n)) = n and A079878(m) <> n for m < a(n)."@en .
+
+seq:A200087_H_1_20130713T120419 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller, <a href=\"/A200087/b200087.txt\">Table of n, a(n) for n = 1..860</a>"@en .
+
+seq:A200087_I_1_20130713T120419 a seq:Text ;
+    cnt:chars "#8 Jul 13 2013 12:04:19"@en .
+
+seq:A200087_K_1_20130713T120419 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200087_N_1_20130713T120419 a seq:Text ;
+    cnt:chars "Smallest number m such that A079878(m) = n."@en .
+
+seq:A200087_O_1_20130713T120419 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200087_V_1_20130713T120419 a seq:Text ;
+    cnt:chars "1,2,53,5,71,26,9,8,19,72,149,27,91,18,21,17,43,20,29,50,35,150,45,28,99,92,773,34,171,42,33,32,123,44,49,41,75227,58,137,51,295,48,789,68,47,46,65,57,891,100,269,90,111,428,921,64,131,172,105,203"@en .
+
+seq:A200087_o_1_20130713T120419 a seq:Text ;
+    cnt:chars """(Haskell)
+import Data.List (elemIndex)
+import Data.Maybe (fromJust)
+a200087 n = (fromJust $ elemIndex n a079878_list) + 1"""@en .
+

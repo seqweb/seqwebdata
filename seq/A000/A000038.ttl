@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.262246Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1825}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000038 a seq:Sequence ;
+    rdfs:label "A000038"@en ;
+    seq:hasTextList ( seq:A000038_I_1_20241023T143458 seq:A000038_N_1_20241023T143458 seq:A000038_C_1_20241023T143458 seq:A000038_D_1_20241023T143458 seq:A000038_H_1_20241023T143458 seq:A000038_F_1_20241023T143458 seq:A000038_t_1_20241023T143458 seq:A000038_o_1_20241023T143458 seq:A000038_Y_1_20241023T143458 seq:A000038_K_1_20241023T143458 seq:A000038_O_1_20241023T143458 seq:A000038_A_1_20241023T143458 seq:A000038_V_1_20241023T143458 ) .
+
+seq:A000038_A_1_20241023T143458 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000038_C_1_20241023T143458 a seq:Text ;
+    cnt:chars """Multiplicative with a(p^e) = 0. - _Mitch Harris_, Jun 09 2005
+Also decimal expansion of 1/5, with keyword cons. - _Wolfdieter Lang_, Jan 19 2023"""@en .
+
+seq:A000038_D_1_20241023T143458 a seq:Text ;
+    cnt:chars "N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."@en .
+
+seq:A000038_F_1_20241023T143458 a seq:Text ;
+    cnt:chars "a(n) = 2*A000007(n) = (-1)^A000040(n) + 1. - _Juri-Stepan Gerasimov_, Oct 29 2009"@en .
+
+seq:A000038_H_1_20241023T143458 a seq:Text ;
+    cnt:chars """James Spahlinger, <a href="/A000038/b000038.txt">Table of n, a(n) for n = 0..10000</a>
+Norman L. de Forest, <a href="http://www.gutenberg.org/ebooks/3651">The Square Root of 4 to a Million Places</a>, Project Gutenberg EBook 3651, 2003.
+Daniele A. Gewurz and Francesca Merola, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL6/Gewurz/gewurz5.html">Sequences realized as Parker vectors of oligomorphic permutation groups</a>, J. Integer Seqs., Vol. 6, 2003.
+Chai Wah Wu, <a href="https://arxiv.org/abs/1805.07431">Can machine learning identify interesting mathematics? An exploration using empirically observed laws</a>, arXiv:1805.07431 [cs.LG], 2018.
+Dominika Závacká, Cristina Dalfó, and Miquel Angel Fiol, <a href="https://ceur-ws.org/Vol-3792/paper19.pdf">Integer sequences from k-iterated line digraphs</a>, CEUR: Proc. 24th Conf. Info. Tech. - Appl. and Theory (ITAT 2024) Vol 3792, 156-161. See p. 161, Table 2. See p. 6."""@en .
+
+seq:A000038_I_1_20241023T143458 a seq:Text ;
+    cnt:chars "M0004 #60 Oct 23 2024 14:34:58"@en .
+
+seq:A000038_K_1_20241023T143458 a seq:Text ;
+    cnt:chars "easy,nonn,mult"@en .
+
+seq:A000038_N_1_20241023T143458 a seq:Text ;
+    cnt:chars "Twice A000007."@en .
+
+seq:A000038_O_1_20241023T143458 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000038_V_1_20241023T143458 a seq:Text ;
+    cnt:chars "2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"@en .
+
+seq:A000038_Y_1_20241023T143458 a seq:Text ;
+    cnt:chars "Cf. A007395, A000007."@en .
+
+seq:A000038_o_1_20241023T143458 a seq:Text ;
+    cnt:chars """(Haskell)
+a000038 n = 2 * a000007 n -- _James Spahlinger_, Oct 08 2012
+(PARI) a(n)=if(n,0,2) \\\\ _Charles R Greathouse IV_, Oct 09 2012"""@en .
+
+seq:A000038_t_1_20241023T143458 a seq:Text ;
+    cnt:chars """PadRight[{2}, 104] (* or *)
+Array[(-1)^Prime@ # + 1 &, 105] (* _Michael De Vlieger_, Aug 15 2018 *)"""@en .
+

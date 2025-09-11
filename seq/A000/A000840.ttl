@@ -1,0 +1,36 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.504060Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 513}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000840 a seq:Sequence ;
+    rdfs:label "A000840"@en ;
+    seq:hasTextList ( seq:A000840_I_1_20200311T190132 seq:A000840_N_1_20200311T190132 seq:A000840_Y_1_20200311T190132 seq:A000840_K_1_20200311T190132 seq:A000840_O_1_20200311T190132 seq:A000840_A_1_20200311T190132 seq:A000840_E_1_20200311T190132 seq:A000840_V_1_20200311T190132 ) .
+
+seq:A000840_A_1_20200311T190132 a seq:Text ;
+    cnt:chars "_Brendan McKay_ and Eric Rogoyski"@en .
+
+seq:A000840_E_1_20200311T190132 a seq:Text ;
+    cnt:chars "a(11)-a(30) from _Andrew Howroyd_, Mar 10 2020"@en .
+
+seq:A000840_I_1_20200311T190132 a seq:Text ;
+    cnt:chars "#18 Mar 11 2020 19:01:32"@en .
+
+seq:A000840_K_1_20200311T190132 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000840_N_1_20200311T190132 a seq:Text ;
+    cnt:chars "Number of cubic bicolored graphs on n unlabeled nodes admitting an automorphism exchanging the colors."@en .
+
+seq:A000840_O_1_20200311T190132 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000840_V_1_20200311T190132 a seq:Text ;
+    cnt:chars "0,0,1,1,2,5,12,31,90,285,938,3285,11983,45390,177803,718390,2986407,12749364,55802982,250068732,1145923828,5363795830,25620207380,124767647097,618983876918,3126035142910,16060182735947,83883575376862,445164927249466,2399098651337048"@en .
+
+seq:A000840_Y_1_20200311T190132 a seq:Text ;
+    cnt:chars """Column k=3 of A333159.
+Cf. A000512, A000843, A004066, A008325."""@en .
+

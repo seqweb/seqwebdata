@@ -1,0 +1,36 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.729328Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 796}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000941 a seq:Sequence ;
+    rdfs:label "A000941"@en ;
+    seq:hasTextList ( seq:A000941_I_1_20151013T181145 seq:A000941_N_1_20151013T181145 seq:A000941_H_1_20151013T181145 seq:A000941_K_1_20151013T181145 seq:A000941_O_1_20151013T181145 seq:A000941_A_1_20151013T181145 seq:A000941_E_1_20151013T181145 seq:A000941_V_1_20151013T181145 ) .
+
+seq:A000941_A_1_20151013T181145 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000941_E_1_20151013T181145 a seq:Text ;
+    cnt:chars "Added a(16)-a(19) and title improved by _Sean A. Irvine_, Oct 13 2015"@en .
+
+seq:A000941_H_1_20151013T181145 a seq:Text ;
+    cnt:chars """S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="http://dx.doi.org/10.1021/ci00026a012">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751.
+S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="/A002057/a002057.pdf">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"""@en .
+
+seq:A000941_I_1_20151013T181145 a seq:Text ;
+    cnt:chars "#19 Oct 13 2015 18:11:45"@en .
+
+seq:A000941_K_1_20151013T181145 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000941_N_1_20151013T181145 a seq:Text ;
+    cnt:chars "Number of free planar polyenoids with n nodes and symmetry point group C_s."@en .
+
+seq:A000941_O_1_20151013T181145 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000941_V_1_20151013T181145 a seq:Text ;
+    cnt:chars "0,0,0,0,2,5,21,58,194,570,1790,5434,16924,52362,163784,512670,1614406,5096314,16150180"@en .
+

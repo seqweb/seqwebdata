@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.860120Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 659}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200047 a seq:Sequence ;
+    rdfs:label "A200047"@en ;
+    seq:hasTextList ( seq:A200047_I_1_20120330T173736 seq:A200047_N_1_20120330T173736 seq:A200047_H_1_20120330T173736 seq:A200047_F_1_20120330T173736 seq:A200047_e_1_20120330T173736 seq:A200047_p_1_20120330T173736 seq:A200047_Y_1_20120330T173736 seq:A200047_K_1_20120330T173736 seq:A200047_O_1_20120330T173736 seq:A200047_A_1_20120330T173736 seq:A200047_V_1_20120330T173736 ) .
+
+seq:A200047_A_1_20120330T173736 a seq:Text ;
+    cnt:chars "_Alois P. Heinz_, Nov 13 2011"@en .
+
+seq:A200047_F_1_20120330T173736 a seq:Text ;
+    cnt:chars "G.f.: (x-1)^2*x^2/(1-2*x+x^4+x^5)."@en .
+
+seq:A200047_H_1_20120330T173736 a seq:Text ;
+    cnt:chars "Alois P. Heinz, <a href=\"/A200047/b200047.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200047_I_1_20120330T173736 a seq:Text ;
+    cnt:chars "#6 Mar 30 2012 17:37:36"@en .
+
+seq:A200047_K_1_20120330T173736 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200047_N_1_20120330T173736 a seq:Text ;
+    cnt:chars "Number of compositions of n having smallest part equal to 2."@en .
+
+seq:A200047_O_1_20120330T173736 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A200047_V_1_20120330T173736 a seq:Text ;
+    cnt:chars "0,1,0,1,2,3,5,9,15,25,42,70,116,192,317,522,858,1408,2307,3775,6170,10074,16433,26784,43623,71002,115497,187777,305147,495669,804839,1306404,2119884,3438952,5577396,9043549,14660810,23762784,38509220,62397495,101090631"@en .
+
+seq:A200047_Y_1_20120330T173736 a seq:Text ;
+    cnt:chars "Column k=2 of A105147."@en .
+
+seq:A200047_e_1_20120330T173736 a seq:Text ;
+    cnt:chars "a(7) = 5: [2,2,3], [2,3,2], [2,5], [3,2,2], [5,2]."@en .
+
+seq:A200047_p_1_20120330T173736 a seq:Text ;
+    cnt:chars "a:= n-> (<<0|1|0|0|0>, <0|0|1|0|0>, <0|0|0|1|0>, <0|0|0|0|1>, <-1|-1|0|0|2>>^n. <<0, 0, 1, 0, 1>>)[1, 1]: seq (a(n), n=1..50);"@en .
+

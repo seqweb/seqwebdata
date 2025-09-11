@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.132878Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1568}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000691 a seq:Sequence ;
+    rdfs:label "A000691"@en ;
+    seq:hasTextList ( seq:A000691_I_1_20220523T091153 seq:A000691_N_1_20220523T091153 seq:A000691_D_1_20220523T091153 seq:A000691_H_1_20220523T091153 seq:A000691_p_1_20220523T091153 seq:A000691_Y_1_20220523T091153 seq:A000691_K_1_20220523T091153 seq:A000691_O_1_20220523T091153 seq:A000691_A_1_20220523T091153 seq:A000691_E_1_20220523T091153 seq:A000691_V_1_20220523T091153 ) .
+
+seq:A000691_A_1_20220523T091153 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000691_D_1_20220523T091153 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000691_E_1_20220523T091153 a seq:Text ;
+    cnt:chars """More terms from Salvador Perez (pies314(AT)hotmail.com), May 08 2005
+Corrected by _Sean A. Irvine_, Feb 24 2011
+Name clarified by _Seth A. Troisi_, May 23 2022"""@en .
+
+seq:A000691_H_1_20220523T091153 a seq:Text ;
+    cnt:chars """D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1964-0159174-9">The second-order term in the asymptotic expansion of B(x)</a>, Mathematics of Computation 18 (1964), pp. 75-86.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000691_I_1_20220523T091153 a seq:Text ;
+    cnt:chars "M0713 N0263 #35 May 23 2022 09:11:53"@en .
+
+seq:A000691_K_1_20220523T091153 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000691_N_1_20220523T091153 a seq:Text ;
+    cnt:chars "Ramanujan's approximation to population of x^2 + y^2 <= 2^n."@en .
+
+seq:A000691_O_1_20220523T091153 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000691_V_1_20220523T091153 a seq:Text ;
+    cnt:chars "1,2,3,5,9,16,29,52,94,175,327,616,1169,2231,4273,8215,15842,30628,59345,115208,224040,436343,850981,1661663,3248231,6356076,12448925,24402959,47873156,93984236,184632691,362938014,713852252,1404817026"@en .
+
+seq:A000691_Y_1_20220523T091153 a seq:Text ;
+    cnt:chars """K = A064533.
+Other population sequences for x^2 + y^2: A000050, A000690, A000692."""@en .
+
+seq:A000691_p_1_20220523T091153 a seq:Text ;
+    cnt:chars """Digits:=500;
+K:=.764223653589220662990698731250092328116790541393409514721686673
+7496146416587328588384015050131312337219372691207925926341874206467
+8084323063315434629380531605171169636177508819961243824994277683469
+0516235139218719620569053295644670419176349770659569905712938660289
+3858998296105166296089099177929836072973697200640316985128636517347
+3921065768550978681981674707359066921; a:=n->round(evalf(K*int(1/sqrt(ln(t)),t=1..2^n))); # Salvador Perez (pies314(AT)hotmail.com), May 08 2005"""@en .
+

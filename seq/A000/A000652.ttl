@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.039241Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1556}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000652 a seq:Sequence ;
+    rdfs:label "A000652"@en ;
+    seq:hasTextList ( seq:A000652_I_1_20220201T010843 seq:A000652_N_1_20220201T010843 seq:A000652_C_1_20220201T010843 seq:A000652_D_1_20220201T010843 seq:A000652_H_1_20220201T010843 seq:A000652_F_1_20220201T010843 seq:A000652_Y_1_20220201T010843 seq:A000652_K_1_20220201T010843 seq:A000652_O_1_20220201T010843 seq:A000652_A_1_20220201T010843 seq:A000652_E_1_20220201T010843 seq:A000652_V_1_20220201T010843 ) .
+
+seq:A000652_A_1_20220201T010843 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000652_C_1_20220201T010843 a seq:Text ;
+    cnt:chars "Equivalence classes of invertible maps from {0,1}^n to {0,1}^n, under action of (C_2)^n on both domain and range."@en .
+
+seq:A000652_D_1_20220201T010843 a seq:Text ;
+    cnt:chars """M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 154, problem 12.
+C. S. Lorens, Invertible Boolean functions, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000652_E_1_20220201T010843 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 23 2000"@en .
+
+seq:A000652_F_1_20220201T010843 a seq:Text ;
+    cnt:chars "A000652: n->2^(-2*n)*( (2^n)! + (2^n-1)^2 * ( (2^(n-1))! )*2^(2^(n-1)));"@en .
+
+seq:A000652_H_1_20220201T010843 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="/A000653/a000653.pdf">The number of classes of invertible Boolean functions</a>, J. ACM 10 (1963), 25-28. [Annotated scan of page 27 only]
+C. S. Lorens, <a href="http://dx.doi.org/10.1109/PGEC.1964.263724">Invertible Boolean functions</a>, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541.
+C. S. Lorens, <a href="/A000722/a000722.pdf">Invertible Boolean functions</a>, IEEE Trans. Electron. Computers, EC-13 (1964), 529-541. [Annotated scan of page 530 only]
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000652_I_1_20220201T010843 a seq:Text ;
+    cnt:chars "M4315 N1807 #21 Feb 01 2022 01:08:43"@en .
+
+seq:A000652_K_1_20220201T010843 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000652_N_1_20220201T010843 a seq:Text ;
+    cnt:chars "Invertible Boolean functions of n variables."@en .
+
+seq:A000652_O_1_20220201T010843 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000652_V_1_20220201T010843 a seq:Text ;
+    cnt:chars "1,1,6,924,81738720000,256963707943061374889193111552000,30978254928194376001814792318154658399138184007229852126545533479881553257431040000000"@en .
+
+seq:A000652_Y_1_20220201T010843 a seq:Text ;
+    cnt:chars "Cf. A001038, A000653, A000654, A000722, A001537, A046856, A046857."@en .
+

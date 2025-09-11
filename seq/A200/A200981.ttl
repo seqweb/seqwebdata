@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.459686Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 762}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200981 a seq:Sequence ;
+    rdfs:label "A200981"@en ;
+    seq:hasTextList ( seq:A200981_I_1_20140803T140136 seq:A200981_N_1_20140803T140136 seq:A200981_H_1_20140803T140136 seq:A200981_e_1_20140803T140136 seq:A200981_p_1_20140803T140136 seq:A200981_t_1_20140803T140136 seq:A200981_Y_1_20140803T140136 seq:A200981_K_1_20140803T140136 seq:A200981_O_1_20140803T140136 seq:A200981_A_1_20140803T140136 seq:A200981_V_1_20140803T140136 ) .
+
+seq:A200981_A_1_20140803T140136 a seq:Text ;
+    cnt:chars "_Paolo P. Lava_, Dec 13 2011"@en .
+
+seq:A200981_H_1_20140803T140136 a seq:Text ;
+    cnt:chars "Paolo P. Lava, <a href=\"/A200981/b200981.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200981_I_1_20140803T140136 a seq:Text ;
+    cnt:chars "#12 Aug 03 2014 14:01:36"@en .
+
+seq:A200981_K_1_20140803T140136 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200981_N_1_20140803T140136 a seq:Text ;
+    cnt:chars "Numbers n such that the sum of non-divisors of n is prime."@en .
+
+seq:A200981_O_1_20140803T140136 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200981_V_1_20140803T140136 a seq:Text ;
+    cnt:chars "3,4,10,21,34,46,58,70,85,93,118,129,130,144,178,201,226,237,262,298,310,322,324,325,333,334,346,382,406,418,430,466,478,502,513,514,517,549,598,622,633,634,657,658,669,706,730,742,813,826,837,838"@en .
+
+seq:A200981_Y_1_20140803T140136 a seq:Text ;
+    cnt:chars "Cf. A023194, A024816."@en .
+
+seq:A200981_e_1_20140803T140136 a seq:Text ;
+    cnt:chars "Non-divisors of 10 are 3, 4, 6, 7, 8, 9 and their sum is 37 that is prime."@en .
+
+seq:A200981_p_1_20140803T140136 a seq:Text ;
+    cnt:chars """with(numtheory);
+P:=proc(i)
+local a,n;
+for n from 1 to i do
+  a:=n*(n+1)/2-sigma(n); if isprime(a) then print(n); fi;
+od;
+end:
+P(1000000);"""@en .
+
+seq:A200981_t_1_20140803T140136 a seq:Text ;
+    cnt:chars "okQ[n_] := (n > 0) && PrimeQ[n]; Select[Range[1000], okQ[# (#+1)/2 - DivisorSigma[1, #]] &] (* _T. D. Noe_, Dec 15 2011 *)"@en .
+

@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.717314Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 861}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383065 a seq:Sequence ;
+    rdfs:label "A383065"@en ;
+    seq:hasTextList ( seq:A383065_I_1_20250501T215249 seq:A383065_N_1_20250501T215249 seq:A383065_e_1_20250501T215249 seq:A383065_t_1_20250501T215249 seq:A383065_o_1_20250501T215249 seq:A383065_Y_1_20250501T215249 seq:A383065_K_1_20250501T215249 seq:A383065_O_1_20250501T215249 seq:A383065_A_1_20250501T215249 seq:A383065_V_1_20250501T215249 ) .
+
+seq:A383065_A_1_20250501T215249 a seq:Text ;
+    cnt:chars "_Juri-Stepan Gerasimov_, Apr 19 2025"@en .
+
+seq:A383065_I_1_20250501T215249 a seq:Text ;
+    cnt:chars "#21 May 01 2025 21:52:49"@en .
+
+seq:A383065_K_1_20250501T215249 a seq:Text ;
+    cnt:chars "nonn,new"@en .
+
+seq:A383065_N_1_20250501T215249 a seq:Text ;
+    cnt:chars "Integers k such that (k/rad(k))*2^rad(k) - 1 is prime where rad = A007947."@en .
+
+seq:A383065_O_1_20250501T215249 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383065_V_1_20250501T215249 a seq:Text ;
+    cnt:chars "2,3,4,5,7,9,12,13,16,17,18,19,27,31,36,50,60,61,64,80,89,107,108,112,127,135,147,189,200,212,243,252,343,448,464,500,521,576,600,607,612,648,675,688,756,768,784,800,832,875,900,1058,1212,1279,1280"@en .
+
+seq:A383065_Y_1_20250501T215249 a seq:Text ;
+    cnt:chars """Supersequence of A000043 and A172461.
+Cf. A002234, A003557, A007947."""@en .
+
+seq:A383065_e_1_20250501T215249 a seq:Text ;
+    cnt:chars "12 is a term because (12/6)*2^6 - 1 = 127 is prime, where d = 6 is largest squarefree divisor d of k = 12."@en .
+
+seq:A383065_o_1_20250501T215249 a seq:Text ;
+    cnt:chars """(Magma) [k: k in [1..1300] | IsPrime((k div &*PrimeDivisors(k))*2^&*PrimeDivisors(k)-1)];
+(PARI) isok(k) = my(r=factorback(factorint(k)[, 1])); ispseudoprime((k/r)*2^r - 1); \\\\ _Michel Marcus_, Apr 20 2025"""@en .
+
+seq:A383065_t_1_20250501T215249 a seq:Text ;
+    cnt:chars "s={};Do[r=Last[Select[Divisors[n], SquareFreeQ]];If[PrimeQ[2^r*n/r-1],AppendTo[s,n]],{n,1280}];s (* _James C. McMahon_, May 01 2025 *)"@en .
+

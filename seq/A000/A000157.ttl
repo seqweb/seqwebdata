@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.559930Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1053}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000157 a seq:Sequence ;
+    rdfs:label "A000157"@en ;
+    seq:hasTextList ( seq:A000157_I_1_20190113T155729 seq:A000157_N_1_20190113T155729 seq:A000157_D_1_20190113T155729 seq:A000157_H_1_20190113T155729 seq:A000157_F_1_20190113T155729 seq:A000157_Y_1_20190113T155729 seq:A000157_K_1_20190113T155729 seq:A000157_O_1_20190113T155729 seq:A000157_A_1_20190113T155729 seq:A000157_E_1_20190113T155729 seq:A000157_V_1_20190113T155729 ) .
+
+seq:A000157_A_1_20190113T155729 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000157_D_1_20190113T155729 a seq:Text ;
+    cnt:chars """M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 153 (divided by 2).
+M. A. Harrison, The number of equivalence classes of Boolean functions under groups containing negation, IEEE Trans. Electron. Comput. 12 (1963), 559-561.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000157_E_1_20190113T155729 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Feb 13 2012"@en .
+
+seq:A000157_F_1_20190113T155729 a seq:Text ;
+    cnt:chars "a(n) = A000370(n)/2. - _Sean A. Irvine_, Feb 14 2012"@en .
+
+seq:A000157_H_1_20190113T155729 a seq:Text ;
+    cnt:chars """Sean A. Irvine, <a href="/A000157/b000157.txt">Table of n, a(n) for n = 1..11</a> (shortened by _N. J. A. Sloane_, Jan 13 2019)
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000157_I_1_20190113T155729 a seq:Text ;
+    cnt:chars "M1818 N0721 #30 Jan 13 2019 15:57:29"@en .
+
+seq:A000157_K_1_20190113T155729 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000157_N_1_20190113T155729 a seq:Text ;
+    cnt:chars "Number of Boolean functions of n variables."@en .
+
+seq:A000157_O_1_20190113T155729 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000157_V_1_20190113T155729 a seq:Text ;
+    cnt:chars "1,2,7,111,308063,100126976263592,131867858014413288241233435594064,2804519150441879896741320496043335469582478995067528608051651559815168"@en .
+
+seq:A000157_Y_1_20190113T155729 a seq:Text ;
+    cnt:chars "Cf. A000370."@en .
+

@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.550757Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 480}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000437 a seq:Sequence ;
+    rdfs:label "A000437"@en ;
+    seq:hasTextList ( seq:A000437_I_1_20220201T005621 seq:A000437_N_1_20220201T005621 seq:A000437_C_1_20220201T005621 seq:A000437_H_1_20220201T005621 seq:A000437_Y_1_20220201T005621 seq:A000437_K_1_20220201T005621 seq:A000437_O_1_20220201T005621 seq:A000437_A_1_20220201T005621 seq:A000437_V_1_20220201T005621 ) .
+
+seq:A000437_A_1_20220201T005621 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000437_C_1_20220201T005621 a seq:Text ;
+    cnt:chars "Note that a square can be zero."@en .
+
+seq:A000437_H_1_20220201T005621 a seq:Text ;
+    cnt:chars "<a href=\"/index/Su#ssq\">Index entries for sequences related to sums of squares</a>"@en .
+
+seq:A000437_I_1_20220201T005621 a seq:Text ;
+    cnt:chars "#13 Feb 01 2022 00:56:21"@en .
+
+seq:A000437_K_1_20220201T005621 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000437_N_1_20220201T005621 a seq:Text ;
+    cnt:chars "Smallest nonnegative number that is the sum of 3 squares in exactly n ways."@en .
+
+seq:A000437_O_1_20220201T005621 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000437_V_1_20220201T005621 a seq:Text ;
+    cnt:chars "0,9,41,81,146,194,306,369,425,594,689,866,1109,1161,1154,1361,1634,1781,1889,2141,2729,2609,3626,3366,3566,3449,3506,4241,4289,4826,5066,5381,7034,5561,6254,7229,7829,8186,8069,8126,8609,8921,8774"@en .
+
+seq:A000437_Y_1_20220201T005621 a seq:Text ;
+    cnt:chars "Apart from initial term, same as A095809."@en .
+

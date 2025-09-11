@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.406671Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1183}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000802 a seq:Sequence ;
+    rdfs:label "A000802"@en ;
+    seq:hasTextList ( seq:A000802_I_1_20241119T114623 seq:A000802_N_1_20241119T114623 seq:A000802_H_1_20241119T114623 seq:A000802_F_1_20241119T114623 seq:A000802_p_1_20241119T114623 seq:A000802_t_1_20241119T114623 seq:A000802_o_1_20241119T114623 seq:A000802_K_1_20241119T114623 seq:A000802_O_1_20241119T114623 seq:A000802_A_1_20241119T114623 seq:A000802_E_1_20241119T114623 seq:A000802_V_1_20241119T114623 ) .
+
+seq:A000802_A_1_20241119T114623 a seq:Text ;
+    cnt:chars "_Jeffrey Shallit_"@en .
+
+seq:A000802_E_1_20241119T114623 a seq:Text ;
+    cnt:chars "a(34)-a(36) from _Sean A. Irvine_, Jun 23 2011"@en .
+
+seq:A000802_F_1_20241119T114623 a seq:Text ;
+    cnt:chars "a(n) = Sum_{k=0..n} min(2^k,2^(2^(n-k))-1). - _Sean A. Irvine_, Jun 24 2011"@en .
+
+seq:A000802_H_1_20241119T114623 a seq:Text ;
+    cnt:chars """John Cerkan, <a href="/A000802/b000802.txt">Table of n, a(n) for n = 0..3300</a>
+J.-M. Champarnaud and J.-E. Pin, <a href="http://dx.doi.org/10.1016/0166-218X(89)90037-1">A maxmin problem on finite automata</a>, Discrete Appl. Math. 23 (1989), no. 1, 91-96."""@en .
+
+seq:A000802_I_1_20241119T114623 a seq:Text ;
+    cnt:chars "#40 Nov 19 2024 11:46:23"@en .
+
+seq:A000802_K_1_20241119T114623 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000802_N_1_20241119T114623 a seq:Text ;
+    cnt:chars "Maximal number of states in the minimal deterministic finite automaton accepting a language over a binary alphabet consisting of some words of length n."@en .
+
+seq:A000802_O_1_20241119T114623 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000802_V_1_20241119T114623 a seq:Text ;
+    cnt:chars "1,2,4,7,11,19,34,50,82,146,274,529,785,1297,2321,4369,8465,16657,33041,65809,131344,196880,327952,590096,1114384,2162960,4260112,8454416,16843024,33620240,67174672,134283536,268501264,536936720,1073807632,2147549456,4295033104"@en .
+
+seq:A000802_o_1_20241119T114623 a seq:Text ;
+    cnt:chars "(PARI) a(n) = sum(k=0, n, min(2^k,2^(2^(n-k))-1)) \\\\ (works while n<29) _Michel Marcus_, May 25 2013"@en .
+
+seq:A000802_p_1_20241119T114623 a seq:Text ;
+    cnt:chars """a:= n-> add((t-> `if`(t>k, 2^k, 2^t-1))(2^(n-k)), k=0..n):
+seq(a(n), n=0..36);  # _Alois P. Heinz_, Apr 13 2022"""@en .
+
+seq:A000802_t_1_20241119T114623 a seq:Text ;
+    cnt:chars """a[n_] := Sum[Function[t, If[t > k, 2^k, 2^t-1]][2^(n-k)], {k, 0, n}];
+Table[a[n], {n, 0, 36}] (* _Jean-François Alcover_, Nov 19 2024, after _Alois P. Heinz_ *)"""@en .
+

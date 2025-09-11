@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.485475Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1547}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000410 a seq:Sequence ;
+    rdfs:label "A000410"@en ;
+    seq:hasTextList ( seq:A000410_I_1_20200605T150543 seq:A000410_N_1_20200605T150543 seq:A000410_C_1_20200605T150543 seq:A000410_D_1_20200605T150543 seq:A000410_H_1_20200605T150543 seq:A000410_F_1_20200605T150543 seq:A000410_Y_1_20200605T150543 seq:A000410_K_1_20200605T150543 seq:A000410_O_1_20200605T150543 seq:A000410_A_1_20200605T150543 seq:A000410_E_1_20200605T150543 seq:A000410_V_1_20200605T150543 ) .
+
+seq:A000410_A_1_20200605T150543 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000410_C_1_20200605T150543 a seq:Text ;
+    cnt:chars """Number of all n X n (0,1)-matrices having distinct, nonzero ordered rows and determinant 0 - compare A000409.
+a(n) is the number of singular n X n rational {0,1}-matrices with no zero rows and with all rows distinct, up to permutation of rows and so a(n) = binomial(2^n-1,n) - A088389(n). Cf. A116506, A116507, A116527, A116532. - _Vladeta Jovovic_, Apr 03 2006"""@en .
+
+seq:A000410_D_1_20200605T150543 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000410_E_1_20200605T150543 a seq:Text ;
+    cnt:chars """n=7 term from Guenter M. Ziegler (ziegler(AT)math.TU-Berlin.DE)
+a(8) from _Vladeta Jovovic_, Mar 28 2006"""@en .
+
+seq:A000410_F_1_20200605T150543 a seq:Text ;
+    cnt:chars "n! * a(n) = A046747(n) - 2^(n^2) + n! * binomial(2^n -1, n)."@en .
+
+seq:A000410_H_1_20200605T150543 a seq:Text ;
+    cnt:chars """N. Metropolis and P. R. Stein, <a href="https://doi.org/10.1016/S0021-9800(67)80006-1">On a class of (0,1) matrices with vanishing determinants</a>, J. Combin. Theory, 3 (1967), 191-198.
+Miodrag Zivkovic, <a href="https://arxiv.org/abs/math/0511636">Classification of small (0,1) matrices</a>, arXiv:math/0511636 [math.CO], 2005.
+Miodrag Zivkovic, <a href="https://doi.org/10.1016/j.laa.2005.10.010">Classification of small (0,1) matrices</a>, Linear Algebra and its Applications, 414 (2006), 310-346.
+<a href="/index/Mat#binmat">Index entries for sequences related to binary matrices</a>"""@en .
+
+seq:A000410_I_1_20200605T150543 a seq:Text ;
+    cnt:chars "M4308 N1803 #28 Jun 05 2020 15:05:43"@en .
+
+seq:A000410_K_1_20200605T150543 a seq:Text ;
+    cnt:chars "nonn,nice,more"@en .
+
+seq:A000410_N_1_20200605T150543 a seq:Text ;
+    cnt:chars "Number of singular n X n rational (0,1)-matrices."@en .
+
+seq:A000410_O_1_20200605T150543 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000410_V_1_20200605T150543 a seq:Text ;
+    cnt:chars "0,0,6,425,65625,27894671,35716401889,144866174953833"@en .
+
+seq:A000410_Y_1_20200605T150543 a seq:Text ;
+    cnt:chars "Cf. A000409, A046747, A064230, A064231."@en .
+

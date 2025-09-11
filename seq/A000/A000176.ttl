@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.608287Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1288}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000176 a seq:Sequence ;
+    rdfs:label "A000176"@en ;
+    seq:hasTextList ( seq:A000176_I_1_20240728T100552 seq:A000176_N_1_20240728T100552 seq:A000176_C_1_20240728T100552 seq:A000176_D_1_20240728T100552 seq:A000176_H_1_20240728T100552 seq:A000176_Y_1_20240728T100552 seq:A000176_K_1_20240728T100552 seq:A000176_O_1_20240728T100552 seq:A000176_A_1_20240728T100552 seq:A000176_E_1_20240728T100552 seq:A000176_V_1_20240728T100552 ) .
+
+seq:A000176_A_1_20240728T100552 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000176_C_1_20240728T100552 a seq:Text ;
+    cnt:chars "Consider the Dirichlet series L_a(s) = sum_{k>=0} (-a|2k+1) / (2k+1)^s, where (-a|2k+1) is the Jacobi symbol. Then the numbers d_(a,n) are defined by L_a(2n)= (Pi/(2a))^(2n)*sqrt(a)* d_(a,n)/ (2n-1)! for a>1 and n=1,2,3..."@en .
+
+seq:A000176_D_1_20240728T100552 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000176_E_1_20240728T100552 a seq:Text ;
+    cnt:chars "More terms from Kok Seng Chua (chuaks(AT)ihpc.nus.edu.sg), Jun 03 2000"@en .
+
+seq:A000176_H_1_20240728T100552 a seq:Text ;
+    cnt:chars """Sean A. Irvine, <a href="/A000176/b000176.txt">Table of n, a(n) for n = 1..10000</a>
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5">Generalized Euler and class numbers</a>. Math. Comp. 21 (1967)  689-694.
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9">Corrigenda to: "Generalized Euler and class numbers"</a>, Math. Comp. 21 (1967), 689-694; 22 (1968), 699."""@en .
+
+seq:A000176_I_1_20240728T100552 a seq:Text ;
+    cnt:chars "M2001 N0791 #31 Jul 28 2024 10:05:52"@en .
+
+seq:A000176_K_1_20240728T100552 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000176_N_1_20240728T100552 a seq:Text ;
+    cnt:chars "Generalized tangent numbers d_(n,2)."@en .
+
+seq:A000176_O_1_20240728T100552 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000176_V_1_20240728T100552 a seq:Text ;
+    cnt:chars "2,11,46,128,272,522,904,1408,2160,3154,4306,5888,7888,10012,12888,16384,19680,24354,29866,34816,41888,49778,56744,66816,78000,87358,100602,115712,128112,145804,165712,180224,203040,228964,246932,276480"@en .
+
+seq:A000176_Y_1_20240728T100552 a seq:Text ;
+    cnt:chars "Cf. A000061 for d_(n,1), A000488 for d_(n,3), A000518 for d_(n,4)."@en .
+

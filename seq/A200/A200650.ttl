@@ -1,0 +1,70 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.758876Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2275}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200650 a seq:Sequence ;
+    rdfs:label "A200650"@en ;
+    seq:hasTextList ( seq:A200650_I_1_20230707T054111 seq:A200650_N_1_20230707T054111 seq:A200650_C_1_20230707T054111 seq:A200650_H_1_20230707T054111 seq:A200650_F_1_20230707T054111 seq:A200650_e_1_20230707T054111 seq:A200650_t_1_20230707T054111 seq:A200650_o_1_20230707T054111 seq:A200650_Y_1_20230707T054111 seq:A200650_K_1_20230707T054111 seq:A200650_O_1_20230707T054111 seq:A200650_A_1_20230707T054111 seq:A200650_E_1_20230707T054111 seq:A200650_V_1_20230707T054111 ) .
+
+seq:A200650_A_1_20230707T054111 a seq:Text ;
+    cnt:chars "_Casey Mongoven_, Nov 19 2011"@en .
+
+seq:A200650_C_1_20230707T054111 a seq:Text ;
+    cnt:chars """For the Stolarsky representation of n, see the C. Mongoven link.
+a(n+1), n >= 1, gives the size of the n-th generation of each of the "[male-female] pair of Fibonacci rabbits" in the Fibonacci rabbits tree read right-to-left by row, the first pair (the root) being the 0th generation. (Cf. OEIS Wiki link below.) - _Daniel Forgues_, May 07 2015
+From _Daniel Forgues_, May 07 2015: (Start)
+Concatenation of:
+  0:                      1,
+  1:                      0,
+  2:                      0,
+  3:                   1, 0,
+  4:                1, 1, 0,
+  5:          2, 1, 1, 1, 0,
+  6: 2, 2, 1, 2, 1, 1, 1, 0,
+(...),
+where row n, n >= 3, is row n-1 prepended by incremented row n-2. (End)
+For n >= 3, this algorithm yields the next F_n terms of the sequence, where F_n is the n-th Fibonacci number (A000045). Since it is asymptotic to (phi^n)/sqrt(5), the number of terms thus obtained grows exponentially at each step! - _Daniel Forgues_, May 22 2015"""@en .
+
+seq:A200650_E_1_20230707T054111 a seq:Text ;
+    cnt:chars "Corrected and extended by _Kenny Lau_, Jul 04 2016"@en .
+
+seq:A200650_F_1_20230707T054111 a seq:Text ;
+    cnt:chars "a(n) = A200648(n) - A200649(n). - _Amiram Eldar_, Jul 07 2023"@en .
+
+seq:A200650_H_1_20230707T054111 a seq:Text ;
+    cnt:chars """Kenny Lau, <a href="/A200650/b200650.txt">Table of n, a(n) for n = 1..20000</a>
+Casey Mongoven, <a href="/A200648/a200648.txt">Description of Stolarsky Representations</a>.
+OEIS Wiki, <a href="/wiki/Fibonacci_rabbits_per_generation">Fibonacci rabbits per generation</a>."""@en .
+
+seq:A200650_I_1_20230707T054111 a seq:Text ;
+    cnt:chars "#65 Jul 07 2023 05:41:11"@en .
+
+seq:A200650_K_1_20230707T054111 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A200650_N_1_20230707T054111 a seq:Text ;
+    cnt:chars "Number of 0's in Stolarsky representation of n."@en .
+
+seq:A200650_O_1_20230707T054111 a seq:Text ;
+    cnt:chars "1,9"@en .
+
+seq:A200650_V_1_20230707T054111 a seq:Text ;
+    cnt:chars "1,0,0,1,0,1,1,0,2,1,1,1,0,2,2,1,2,1,1,1,0,3,2,2,2,1,2,2,1,2,1,1,1,0,3,3,2,3,2,2,2,1,3,2,2,2,1,2,2,1,2,1,1,1,0,4,3,3,3,2,3,3,2,3,2,2,2,1,3,3,2,3,2,2,2,1,3,2,2,2,1,2,2,1,2,1,1,1,0,4,4,3,4,3,3,3,2,4,3,3"@en .
+
+seq:A200650_Y_1_20230707T054111 a seq:Text ;
+    cnt:chars "Cf. A000045, A200648, A200649, A200651."@en .
+
+seq:A200650_e_1_20230707T054111 a seq:Text ;
+    cnt:chars "The Stolarsky representation of 19 is 11101. This has one 0. So a(19) = 1."@en .
+
+seq:A200650_o_1_20230707T054111 a seq:Text ;
+    cnt:chars """(PARI) stol(n) = {my(phi=quadgen(5)); if(n==1, [], if(n != round(round(n/phi)*phi), concat(stol(floor(n/phi^2) + 1), [0]), concat(stol(round(n/phi)), [1])));}
+a(n) = if(n == 1, 1,  my(s = stol(n)); #s - vecsum(s)); \\\\ _Amiram Eldar_, Jul 07 2023"""@en .
+
+seq:A200650_t_1_20230707T054111 a seq:Text ;
+    cnt:chars """stol[n_] := stol[n] = If[n == 1, {}, If[n != Round[Round[n/GoldenRatio]*GoldenRatio], Join[stol[Floor[n/GoldenRatio^2] + 1], {0}], Join[stol[Round[n/GoldenRatio]], {1}]]];
+a[n_] := If[n == 1, 1, Count[stol[n], 0]]; Array[a, 100] (* _Amiram Eldar_, Jul 07 2023 *)"""@en .
+

@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.717521Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 909}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200137 a seq:Sequence ;
+    rdfs:label "A200137"@en ;
+    seq:hasTextList ( seq:A200137_I_1_20220602T054304 seq:A200137_N_1_20220602T054304 seq:A200137_H_1_20220602T054304 seq:A200137_F_1_20220602T054304 seq:A200137_e_1_20220602T054304 seq:A200137_p_1_20220602T054304 seq:A200137_t_1_20220602T054304 seq:A200137_o_1_20220602T054304 seq:A200137_Y_1_20220602T054304 seq:A200137_K_1_20220602T054304 seq:A200137_O_1_20220602T054304 seq:A200137_A_1_20220602T054304 seq:A200137_E_1_20220602T054304 seq:A200137_V_1_20220602T054304 ) .
+
+seq:A200137_A_1_20220602T054304 a seq:Text ;
+    cnt:chars "_R. J. Mathar_, Nov 13 2011"@en .
+
+seq:A200137_E_1_20220602T054304 a seq:Text ;
+    cnt:chars "More terms from _Jean-François Alcover_, Feb 11 2013"@en .
+
+seq:A200137_F_1_20220602T054304 a seq:Text ;
+    cnt:chars "Psi(3/5) = -gamma +Pi*sqrt( 1-2/sqrt 5)/2 -5*log(5)/4 +sqrt(5)*log((3+sqrt 5)/2)/4."@en .
+
+seq:A200137_H_1_20220602T054304 a seq:Text ;
+    cnt:chars "<a href=\"/index/Di#differential_equations\">Index entries for sequences related to the digamma function</a>"@en .
+
+seq:A200137_I_1_20220602T054304 a seq:Text ;
+    cnt:chars "#12 Jun 02 2022 05:43:04"@en .
+
+seq:A200137_K_1_20220602T054304 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200137_N_1_20220602T054304 a seq:Text ;
+    cnt:chars "Decimal expansion of the negated digamma function at 3/5."@en .
+
+seq:A200137_O_1_20220602T054304 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200137_V_1_20220602T054304 a seq:Text ;
+    cnt:chars "1,5,4,0,6,1,9,2,1,3,8,9,3,1,9,0,4,1,4,7,6,0,6,6,3,9,4,8,8,0,6,2,3,1,9,4,1,5,1,0,5,3,4,2,5,4,6,8,9,6,0,7,2,0,8,2,6,6,6,8,5,2,6,3,2,6,1,1,6,8,8,4,1,2,4,1,1,0,2,4,6,6,0,7,3,3,4,2,4,6,7,7,1,9,7,7,8,8,2,0,1,0,0,5,7"@en .
+
+seq:A200137_Y_1_20220602T054304 a seq:Text ;
+    cnt:chars "Cf. A020759, A047787, A020777, A200134-A200138"@en .
+
+seq:A200137_e_1_20220602T054304 a seq:Text ;
+    cnt:chars "Psi(3/5) = -1.540619213893190414760663948806231941510..."@en .
+
+seq:A200137_o_1_20220602T054304 a seq:Text ;
+    cnt:chars "(PARI) -psi(3/5) \\\\ _Charles R Greathouse IV_, Jul 19 2013"@en .
+
+seq:A200137_p_1_20220602T054304 a seq:Text ;
+    cnt:chars "-gamma+Pi*sqrt(1-2/sqrt(5))/2-5*log(5)/4+sqrt(5)/4*log(3/2+sqrt(5)/2) ; evalf(%) ;"@en .
+
+seq:A200137_t_1_20220602T054304 a seq:Text ;
+    cnt:chars "RealDigits[-PolyGamma[3/5], 10, 105] // First (* _Jean-François Alcover_, Feb 11 2013 *)"@en .
+

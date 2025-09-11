@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.273457Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 906}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200408 a seq:Sequence ;
+    rdfs:label "A200408"@en ;
+    seq:hasTextList ( seq:A200408_I_1_20240312T125456 seq:A200408_N_1_20240312T125456 seq:A200408_C_1_20240312T125456 seq:A200408_H_1_20240312T125456 seq:A200408_F_1_20240312T125456 seq:A200408_t_1_20240312T125456 seq:A200408_o_1_20240312T125456 seq:A200408_Y_1_20240312T125456 seq:A200408_K_1_20240312T125456 seq:A200408_O_1_20240312T125456 seq:A200408_A_1_20240312T125456 seq:A200408_E_1_20240312T125456 seq:A200408_V_1_20240312T125456 ) .
+
+seq:A200408_A_1_20240312T125456 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 17 2011"@en .
+
+seq:A200408_C_1_20240312T125456 a seq:Text ;
+    cnt:chars "a(1) and a(2n) are perfect squares."@en .
+
+seq:A200408_E_1_20240312T125456 a seq:Text ;
+    cnt:chars "a(0)=1 prepended by _Alois P. Heinz_, Mar 11 2024"@en .
+
+seq:A200408_F_1_20240312T125456 a seq:Text ;
+    cnt:chars """a(n) = 3*a(n-1)-3*a(n-3)+a(n-4). G.f.: 1-x*(x^3-7*x^2+13*x+1) / ((x-1)*(x+1)*(x^2-3*x+1)). - _Colin Barker_, Sep 01 2013
+a(n) = A005248(n+1) - A010696(n). - _R. J. Mathar_, Jan 18 2021"""@en .
+
+seq:A200408_H_1_20240312T125456 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_04\">Index entries for linear recurrences with constant coefficients</a>, signature (3,0,-3,1)."@en .
+
+seq:A200408_I_1_20240312T125456 a seq:Text ;
+    cnt:chars "#24 Mar 12 2024 12:54:56"@en .
+
+seq:A200408_K_1_20240312T125456 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200408_N_1_20240312T125456 a seq:Text ;
+    cnt:chars "a(n) = -4 + 5*Fibonacci(n+1)^2."@en .
+
+seq:A200408_O_1_20240312T125456 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200408_V_1_20240312T125456 a seq:Text ;
+    cnt:chars "1,1,16,41,121,316,841,2201,5776,15121,39601,103676,271441,710641,1860496,4870841,12752041,33385276,87403801,228826121,599074576,1568397601,4106118241,10749957116,28143753121,73681302241,192900153616,505019158601,1322157322201"@en .
+
+seq:A200408_Y_1_20240312T125456 a seq:Text ;
+    cnt:chars "Cf. A005248."@en .
+
+seq:A200408_o_1_20240312T125456 a seq:Text ;
+    cnt:chars "(PARI) Vec(-x*(x^3-7*x^2+13*x+1)/((x-1)*(x+1)*(x^2-3*x+1)) + O(x^100)) \\\\ _Colin Barker_, Sep 01 2013"@en .
+
+seq:A200408_t_1_20240312T125456 a seq:Text ;
+    cnt:chars "Table[-4 + 5*Fibonacci[n]^2, {n, 2, 31}] (* _Alonso del Arte_, Nov 17 2011 *)"@en .
+

@@ -1,0 +1,37 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.399707Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 31, "entities": 8, "chars": 729}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200949 a seq:Sequence ;
+    rdfs:label "A200949"@en ;
+    seq:hasTextList ( seq:A200949_I_1_20120331T102314 seq:A200949_N_1_20120331T102314 seq:A200949_o_1_20120331T102314 seq:A200949_K_1_20120331T102314 seq:A200949_O_1_20120331T102314 seq:A200949_A_1_20120331T102314 seq:A200949_V_1_20120331T102314 ) .
+
+seq:A200949_A_1_20120331T102314 a seq:Text ;
+    cnt:chars "_Vladimir Kruchinin_, Nov 25 2011"@en .
+
+seq:A200949_I_1_20120331T102314 a seq:Text ;
+    cnt:chars "#8 Mar 31 2012 10:23:14"@en .
+
+seq:A200949_K_1_20120331T102314 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200949_N_1_20120331T102314 a seq:Text ;
+    cnt:chars "E.g.f. A(x) satisfies A''(x)+A'(x)=exp(A(x))+1."@en .
+
+seq:A200949_O_1_20120331T102314 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A200949_V_1_20120331T102314 a seq:Text ;
+    cnt:chars "1,1,0,2,2,10,28,130,564,3102,17464,114282,784008,5987482,48279164,422742854,3909897740,38675519334,403121938616,4449327971330,51570742407808,628575203791026,8017017724008788,106974723312803902,1488628872502049348"@en .
+
+seq:A200949_o_1_20120331T102314 a seq:Text ;
+    cnt:chars """(Maxima)
+Composita(n,k,F):=block([],if k=1  then F(n) else if n=k then (F(1))^n else sum(F(i+1)*Composita(n-i-1,k-1,F),i,0,n-k));
+SolveDiff21(G,key):=block([b],array(b,100), b[1]:1, b[2]:1/2,bfun(n):=b[n],            makelist(b[n]:-b[n-1]/n+1/(n*(n-1))*sum(Composita(n-2,k,bfun)*G(k) ,k,1,n-2),n,3,20),
+if key=1 then makelist(n!*b[n],n,1,20) else makelist(b[n],n,1,20));
+f(n):=1/n!;
+SolveDiff21(f,1);"""@en .
+

@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.596124Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1100}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200572 a seq:Sequence ;
+    rdfs:label "A200572"@en ;
+    seq:hasTextList ( seq:A200572_I_1_20180302T141354 seq:A200572_N_1_20180302T141354 seq:A200572_C_1_20180302T141354 seq:A200572_H_1_20180302T141354 seq:A200572_F_1_20180302T141354 seq:A200572_e_1_20180302T141354 seq:A200572_Y_1_20180302T141354 seq:A200572_K_1_20180302T141354 seq:A200572_O_1_20180302T141354 seq:A200572_A_1_20180302T141354 seq:A200572_V_1_20180302T141354 ) .
+
+seq:A200572_A_1_20180302T141354 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 19 2011"@en .
+
+seq:A200572_C_1_20180302T141354 a seq:Text ;
+    cnt:chars "Column 1 of A200579."@en .
+
+seq:A200572_F_1_20180302T141354 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 2*a(n-1) + a(n-2) + a(n-3) - 3*a(n-4) - 2*a(n-5).
+Empirical g.f.: 2*x*(1 + x)^2*(1 - x - x^2) / (1 - 2*x - x^2 - x^3 + 3*x^4 + 2*x^5). - _Colin Barker_, Mar 02 2018"""@en .
+
+seq:A200572_H_1_20180302T141354 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200572/b200572.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200572_I_1_20180302T141354 a seq:Text ;
+    cnt:chars "#8 Mar 02 2018 14:13:54"@en .
+
+seq:A200572_K_1_20180302T141354 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200572_N_1_20180302T141354 a seq:Text ;
+    cnt:chars "Number of n X 1 0..2 arrays with no average of any element and its horizontal and vertical neighbors equal to one."@en .
+
+seq:A200572_O_1_20180302T141354 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200572_V_1_20180302T141354 a seq:Text ;
+    cnt:chars "2,6,10,22,52,114,260,600,1374,3162,7290,16796,38722,89296,205916,474882,1095218,2525902,5825564,13435770,30987588,71468368,164831598,380160714,876787090,2022186212,4663888698,10756605360,24808602932,57217567106"@en .
+
+seq:A200572_Y_1_20180302T141354 a seq:Text ;
+    cnt:chars "Cf. A200579."@en .
+
+seq:A200572_e_1_20180302T141354 a seq:Text ;
+    cnt:chars """Some solutions for n=5:
+..2....2....0....2....1....0....0....1....0....0....1....0....2....0....2....0
+..1....2....0....2....0....0....1....0....0....0....0....0....2....0....2....1
+..1....0....2....1....1....1....0....0....0....0....0....2....1....1....1....0
+..0....0....2....1....1....1....0....2....0....2....0....2....1....0....2....0
+..1....0....1....0....2....0....1....2....1....2....1....2....2....0....2....0"""@en .
+

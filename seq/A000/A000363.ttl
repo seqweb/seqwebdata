@@ -1,0 +1,60 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.369088Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1777}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000363 a seq:Sequence ;
+    rdfs:label "A000363"@en ;
+    seq:hasTextList ( seq:A000363_I_1_20241109T170101 seq:A000363_N_1_20241109T170101 seq:A000363_D_1_20241109T170101 seq:A000363_H_1_20241109T170101 seq:A000363_F_1_20241109T170101 seq:A000363_t_1_20241109T170101 seq:A000363_o_1_20241109T170101 seq:A000363_Y_1_20241109T170101 seq:A000363_K_1_20241109T170101 seq:A000363_O_1_20241109T170101 seq:A000363_A_1_20241109T170101 seq:A000363_E_1_20241109T170101 seq:A000363_V_1_20241109T170101 ) .
+
+seq:A000363_A_1_20241109T170101 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000363_D_1_20241109T170101 a seq:Text ;
+    cnt:chars """F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000363_E_1_20241109T170101 a seq:Text ;
+    cnt:chars "More terms and better definition from _Jon E. Schoenfield_, Mar 25 2010"@en .
+
+seq:A000363_F_1_20241109T170101 a seq:Text ;
+    cnt:chars """From _Vaclav Kotesovec_, Nov 19 2012: (Start)
+a(n) = (5^n-(2*n-1)*3^n+2*n^2-2*n-2)/16.
+G.f.: -x^4*(9*x-5)/((x-1)^3*(3*x-1)^2*(5*x-1)). (End)
+E.g.f.: exp(x)*(exp(4*x) + exp(2*x)*(1 - 6*x) - 2*(1 - x^2))/16. - _Stefano Spezia_, Nov 09 2024"""@en .
+
+seq:A000363_H_1_20241109T170101 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000363/b000363.txt">Table of n, a(n) for n = 4..1000</a>
+Shaoshi Chen, Hanqian Fang, Sergey Kitaev, and Candice X.T. Zhang, <a href="https://arxiv.org/abs/2411.02897">Patterns in Multi-dimensional Permutations</a>, arXiv:2411.02897 [math.CO], 2024. See p. 7.
+<a href="/index/Rec#order_06">Index entries for linear recurrences with constant coefficients</a>, signature (14,-75,196,-263,174,-45)."""@en .
+
+seq:A000363_I_1_20241109T170101 a seq:Text ;
+    cnt:chars "M4018 N1666 #33 Nov 09 2024 17:01:01"@en .
+
+seq:A000363_K_1_20241109T170101 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000363_N_1_20241109T170101 a seq:Text ;
+    cnt:chars "Number of permutations of [n] with exactly 2 increasing runs of length at least 2."@en .
+
+seq:A000363_O_1_20241109T170101 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000363_V_1_20241109T170101 a seq:Text ;
+    cnt:chars "5,61,479,3111,18270,101166,540242,2819266,14494859,73802835,373398489,1881341265,9453340172,47417364268,237571096820,1189405165908,5951965440609,29775517732665,148927275340835,744793282001995"@en .
+
+seq:A000363_Y_1_20241109T170101 a seq:Text ;
+    cnt:chars """Contribution from _Johannes W. Meijer_, May 24 2009: (Start)
+The a(n) sequence equals the third left hand column of A008971.
+The a(2*n) sequence equals the third left hand column of A160486.
+(End)"""@en .
+
+seq:A000363_o_1_20241109T170101 a seq:Text ;
+    cnt:chars "(Magma) [(5^n-(2*n-1)*3^n+2*n^2-2*n-2)/16: n in [4..30]]; // _Vincenzo Librandi_, May 03 2013"@en .
+
+seq:A000363_t_1_20241109T170101 a seq:Text ;
+    cnt:chars "Table[(5^n-(2*n-1)*3^n+2*n^2-2*n-2)/16,{n,4,20}] (* _Vaclav Kotesovec_, Nov 19 2012 *)"@en .
+

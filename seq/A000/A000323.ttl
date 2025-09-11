@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.273543Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1364}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000323 a seq:Sequence ;
+    rdfs:label "A000323"@en ;
+    seq:hasTextList ( seq:A000323_I_1_20220201T005322 seq:A000323_N_1_20220201T005322 seq:A000323_D_1_20220201T005322 seq:A000323_H_1_20220201T005322 seq:A000323_t_1_20220201T005322 seq:A000323_Y_1_20220201T005322 seq:A000323_K_1_20220201T005322 seq:A000323_O_1_20220201T005322 seq:A000323_A_1_20220201T005322 seq:A000323_E_1_20220201T005322 seq:A000323_V_1_20220201T005322 ) .
+
+seq:A000323_A_1_20220201T005322 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000323_D_1_20220201T005322 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000323_E_1_20220201T005322 a seq:Text ;
+    cnt:chars "Entry revised Jun 28 2005"@en .
+
+seq:A000323_H_1_20220201T005322 a seq:Text ;
+    cnt:chars """David W. Wilson, <a href="/A000323/b000323.txt">Table of n, a(n) for n = 1..200</a>
+W. C. Mitchell, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0195834-3">The number of lattice points in a k-dimensional hypersphere</a>, Math. Comp., 20 (1966), 300-310."""@en .
+
+seq:A000323_I_1_20220201T005322 a seq:Text ;
+    cnt:chars "M3787 N1543 #22 Feb 01 2022 00:53:22"@en .
+
+seq:A000323_K_1_20220201T005322 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000323_N_1_20220201T005322 a seq:Text ;
+    cnt:chars "Let A(n) = #{(i,j): i^2 + j^2 <= n}, V(n) = Pi*n, P(n) = A(n) - V(n); A000099 gives values of n where |P(n)| sets a new record; sequence gives A(A000099(n))."@en .
+
+seq:A000323_O_1_20220201T005322 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000323_V_1_20220201T005322 a seq:Text ;
+    cnt:chars "5,9,21,37,69,69,89,137,177,421,481,657,749,885,1085,1305,1353,1489,1861,2617,2693,3125,5249,5761,7129,8109,9465,9465,10717,12401,12401,16237,16237,24833,30725,35237,46701,47441,47441,61493,67797,67805,67805"@en .
+
+seq:A000323_Y_1_20220201T005322 a seq:Text ;
+    cnt:chars "Cf. A000099, A000036, A000092, A000413, A000223."@en .
+
+seq:A000323_t_1_20220201T005322 a seq:Text ;
+    cnt:chars "nmax = 3*10^4; A[n_] := 1 + 4*Floor[Sqrt[n]] + 4*Floor[Sqrt[n/2]]^2 + 8* Sum[Floor[Sqrt[n - j^2]], {j, Floor[Sqrt[n/2]] + 1, Floor[Sqrt[n]]}]; V[n_] := Pi*n; P[n_] := A[n] - V[n]; record = 0; A000099 = Reap[For[k = 0; n = 1, n <= nmax, n++, p = Abs[P[n]]; If[p > record, record = p; k++; Sow[an = A[n]]; Print[\"a(\", k, \") = \", an];]]][[2, 1]] (* _Jean-François Alcover_, Feb 07 2016*)"@en .
+

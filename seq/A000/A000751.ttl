@@ -1,0 +1,68 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.275475Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1957}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000751 a seq:Sequence ;
+    rdfs:label "A000751"@en ;
+    seq:hasTextList ( seq:A000751_I_1_20220612T120107 seq:A000751_N_1_20220612T120107 seq:A000751_H_1_20220612T120107 seq:A000751_F_1_20220612T120107 seq:A000751_e_1_20220612T120107 seq:A000751_t_1_20220612T120107 seq:A000751_o_1_20220612T120107 seq:A000751_Y_1_20220612T120107 seq:A000751_K_1_20220612T120107 seq:A000751_O_1_20220612T120107 seq:A000751_A_1_20220612T120107 seq:A000751_V_1_20220612T120107 ) .
+
+seq:A000751_A_1_20220612T120107 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000751_F_1_20220612T120107 a seq:Text ;
+    cnt:chars "a(n) = Sum_{k=0..n} A109449(n,k)*A000041(k). - _Reinhard Zumkeller_, Nov 03 2013"@en .
+
+seq:A000751_H_1_20220612T120107 a seq:Text ;
+    cnt:chars """John Cerkan, <a href="/A000751/b000751.txt">Table of n, a(n) for n = 0..482</a>
+Peter Luschny, <a href="http://oeis.org/wiki/User:Peter_Luschny/SeidelTransform">An old operation on sequences: the Seidel transform</a>
+J. Millar, N. J. A. Sloane and N. E. Young, A new operation on sequences: the Boustrophedon transform, J. Combin. Theory, 17A (1996) 44-54 (<a href="http://neilsloane.com/doc/bous.txt">Abstract</a>, <a href="http://neilsloane.com/doc/bous.pdf">pdf</a>, <a href="http://neilsloane.com/doc/bous.ps">ps</a>).
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Boustrophedon_transform">Boustrophedon_transform</a>
+<a href="/index/Bo#boustrophedon">Index entries for sequences related to boustrophedon transform</a>"""@en .
+
+seq:A000751_I_1_20220612T120107 a seq:Text ;
+    cnt:chars "#34 Jun 12 2022 12:01:07"@en .
+
+seq:A000751_K_1_20220612T120107 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000751_N_1_20220612T120107 a seq:Text ;
+    cnt:chars "Boustrophedon transform of partition numbers."@en .
+
+seq:A000751_O_1_20220612T120107 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000751_V_1_20220612T120107 a seq:Text ;
+    cnt:chars "1,2,5,14,42,143,555,2485,12649,72463,461207,3229622,24671899,204185616,1819837153,17378165240,177012514388,1915724368181,21952583954117,265533531724484,3380877926676504,45199008472762756"@en .
+
+seq:A000751_Y_1_20220612T120107 a seq:Text ;
+    cnt:chars "Cf. A000733, A230957."@en .
+
+seq:A000751_e_1_20220612T120107 a seq:Text ;
+    cnt:chars """The array begins:
+                   1
+               1  ->   2
+           5  <-   4  <-   2
+       3  ->   8  ->  12  ->  14
+  42  <-  39  <-  31  <-  19  <-   5
+- _John Cerkan_, Jan 26 2017"""@en .
+
+seq:A000751_o_1_20220612T120107 a seq:Text ;
+    cnt:chars """(Haskell)
+a000751 n = sum $ zipWith (*) (a109449_row n) a000041_list
+-- _Reinhard Zumkeller_, Nov 03 2013
+(Python)
+from itertools import accumulate, count, islice
+from sympy import npartitions
+def A000751_gen(): # generator of terms
+    blist = tuple()
+    for i in count(0):
+        yield (blist := tuple(accumulate(reversed(blist),initial=npartitions(i))))[-1]
+A000751_list = list(islice(A000751_gen(),40)) # _Chai Wah Wu_, Jun 12 2022"""@en .
+
+seq:A000751_t_1_20220612T120107 a seq:Text ;
+    cnt:chars "t[n_, 0] := PartitionsP[n]; t[n_, k_] := t[n, k] = t[n, k - 1] + t[n - 1, n - k]; a[n_] := t[n, n]; Array[a, 30, 0] (* _Jean-François Alcover_, Feb 12 2016 *)"@en .
+

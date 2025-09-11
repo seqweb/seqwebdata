@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.048717Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1124}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200297 a seq:Sequence ;
+    rdfs:label "A200297"@en ;
+    seq:hasTextList ( seq:A200297_I_1_20250212T143605 seq:A200297_N_1_20250212T143605 seq:A200297_C_1_20250212T143605 seq:A200297_H_1_20250212T143605 seq:A200297_e_1_20250212T143605 seq:A200297_t_1_20250212T143605 seq:A200297_o_1_20250212T143605 seq:A200297_Y_1_20250212T143605 seq:A200297_K_1_20250212T143605 seq:A200297_O_1_20250212T143605 seq:A200297_A_1_20250212T143605 seq:A200297_V_1_20250212T143605 ) .
+
+seq:A200297_A_1_20250212T143605 a seq:Text ;
+    cnt:chars "_Clark Kimberling_, Nov 15 2011"@en .
+
+seq:A200297_C_1_20250212T143605 a seq:Text ;
+    cnt:chars "See A199949 for a guide to related sequences. The Mathematica program includes a graph."@en .
+
+seq:A200297_H_1_20250212T143605 a seq:Text ;
+    cnt:chars """G. C. Greubel, <a href="/A200297/b200297.txt">Table of n, a(n) for n = 0..10000</a>
+<a href="/index/Tra#transcendental">Index entries for transcendental numbers</a>."""@en .
+
+seq:A200297_I_1_20250212T143605 a seq:Text ;
+    cnt:chars "#12 Feb 12 2025 14:36:05"@en .
+
+seq:A200297_K_1_20250212T143605 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200297_N_1_20250212T143605 a seq:Text ;
+    cnt:chars "Decimal expansion of least x satisfying 4*x^2-3*cos(x)=2*sin(x)."@en .
+
+seq:A200297_O_1_20250212T143605 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A200297_V_1_20250212T143605 a seq:Text ;
+    cnt:chars "5,8,8,4,7,0,8,6,9,2,8,6,8,5,2,6,1,6,4,9,9,7,9,8,6,4,8,5,6,0,3,6,6,1,8,8,2,9,8,3,2,9,5,4,3,1,0,7,1,1,9,3,6,5,0,0,9,1,7,5,7,7,4,4,8,9,7,9,1,0,8,7,6,1,0,5,0,6,5,4,1,1,8,9,1,8,1,9,7,5,0,0,7,4,4,7,5,3,6"@en .
+
+seq:A200297_Y_1_20250212T143605 a seq:Text ;
+    cnt:chars "Cf. A199949."@en .
+
+seq:A200297_e_1_20250212T143605 a seq:Text ;
+    cnt:chars """least x: -0.58847086928685261649979864856036...
+greatest x: 0.922697336548314794603906551791..."""@en .
+
+seq:A200297_o_1_20250212T143605 a seq:Text ;
+    cnt:chars "(PARI) a=4; b=-3; c=2; solve(x=-.59, -.58, a*x^2 + b*cos(x) - c*sin(x)) \\\\ _G. C. Greubel_, Jun 22 2018"@en .
+
+seq:A200297_t_1_20250212T143605 a seq:Text ;
+    cnt:chars """a = 4; b = -3; c = 2;
+f[x_] := a*x^2 + b*Cos[x]; g[x_] := c*Sin[x]
+Plot[{f[x], g[x]}, {x, -1, 1}, {AxesOrigin -> {0, 0}}]
+r = x /. FindRoot[f[x] == g[x], {x, -.59, -.58}, WorkingPrecision -> 110]
+RealDigits[r]   (* A200297 *)
+r = x /. FindRoot[f[x] == g[x], {x, .92, .93}, WorkingPrecision -> 110]
+RealDigits[r]   (* A200298 *)"""@en .
+

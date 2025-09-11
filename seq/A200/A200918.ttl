@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.339965Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 931}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200918 a seq:Sequence ;
+    rdfs:label "A200918"@en ;
+    seq:hasTextList ( seq:A200918_I_1_20200226T114923 seq:A200918_N_1_20200226T114923 seq:A200918_C_1_20200226T114923 seq:A200918_H_1_20200226T114923 seq:A200918_Y_1_20200226T114923 seq:A200918_K_1_20200226T114923 seq:A200918_O_1_20200226T114923 seq:A200918_A_1_20200226T114923 seq:A200918_E_1_20200226T114923 seq:A200918_V_1_20200226T114923 ) .
+
+seq:A200918_A_1_20200226T114923 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 24 2011"@en .
+
+seq:A200918_C_1_20200226T114923 a seq:Text ;
+    cnt:chars """1006003 = A014127(2).
+2 is the only prime that occurs to a power greater than 1.
+Conjecture (*Artur Jasinski*): If another infinite sequences with good Hall's examples occurred, it would have to contain primes from this sequence as constant divisors of the whole sequence, because parts of Danilov's infinite sequence (A200216, A200217, A200218) contain divisors of (3^A014127(1) - 3)/(A014127(1)^2).
+a(21) > 10^18. - _Max Alekseyev_, Feb 26 2020"""@en .
+
+seq:A200918_E_1_20200226T114923 a seq:Text ;
+    cnt:chars """More terms from _Sean A. Irvine_, Sep 06 2012
+a(19)-a(20) from _Max Alekseyev_, Feb 13 2020"""@en .
+
+seq:A200918_H_1_20200226T114923 a seq:Text ;
+    cnt:chars "FactorDB, <a href=\"http://factordb.com/index.php?query=3%5E1006002+-+1\">Factorization of 3^1006002 - 1</a>."@en .
+
+seq:A200918_I_1_20200226T114923 a seq:Text ;
+    cnt:chars "#18 Feb 26 2020 11:49:23"@en .
+
+seq:A200918_K_1_20200226T114923 a seq:Text ;
+    cnt:chars "nonn,fini,more"@en .
+
+seq:A200918_N_1_20200226T114923 a seq:Text ;
+    cnt:chars "Successive prime factors of (3^1006003 - 3)/1006003^2."@en .
+
+seq:A200918_O_1_20200226T114923 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200918_V_1_20200226T114923 a seq:Text ;
+    cnt:chars "2,2,2,3,7,13,19,37,757,111779,670669,6371347,34204069,166437443,310854619,385634101,14188652209,42594124681,10825536799379161,154680726732318637"@en .
+
+seq:A200918_Y_1_20200226T114923 a seq:Text ;
+    cnt:chars "Cf. A014127."@en .
+

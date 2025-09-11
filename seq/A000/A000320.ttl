@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.266816Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1872}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000320 a seq:Sequence ;
+    rdfs:label "A000320"@en ;
+    seq:hasTextList ( seq:A000320_I_1_20211122T040325 seq:A000320_N_1_20211122T040325 seq:A000320_D_1_20211122T040325 seq:A000320_H_1_20211122T040325 seq:A000320_F_1_20211122T040325 seq:A000320_p_1_20211122T040325 seq:A000320_t_1_20211122T040325 seq:A000320_Y_1_20211122T040325 seq:A000320_K_1_20211122T040325 seq:A000320_O_1_20211122T040325 seq:A000320_A_1_20211122T040325 seq:A000320_E_1_20211122T040325 seq:A000320_V_1_20211122T040325 ) .
+
+seq:A000320_A_1_20211122T040325 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000320_D_1_20211122T040325 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000320_E_1_20211122T040325 a seq:Text ;
+    cnt:chars """Formula producing A000326, rather than this sequence, deleted by _Sean A. Irvine_, Sep 09 2010
+a(10)-a(13) from _Lars Blomberg_, Sep 07 2015"""@en .
+
+seq:A000320_F_1_20211122T040325 a seq:Text ;
+    cnt:chars "a(n) = (2*n-1)!*[x^(2*n-1)](sec(5*x)*(sin(x) + sin(3*x))). - _Peter Luschny_, Nov 21 2021"@en .
+
+seq:A000320_H_1_20211122T040325 a seq:Text ;
+    cnt:chars """Lars Blomberg, <a href="/A000320/b000320.txt">Table of n, a(n) for n = 1..189</a>
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5">Generalized Euler and class numbers</a>. Math. Comp. 21 (1967)  689-694.
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9">Corrigenda to: "Generalized Euler and class numbers"</a>, Math. Comp. 22 (1968), 699
+D. Shanks, <a href="/A000003/a000003.pdf">Generalized Euler and class numbers</a>, Math. Comp. 21 (1967), 689-694; 22 (1968), 699. [Annotated scanned copy]"""@en .
+
+seq:A000320_I_1_20211122T040325 a seq:Text ;
+    cnt:chars "M3722 N1521 #34 Nov 22 2021 04:03:25"@en .
+
+seq:A000320_K_1_20211122T040325 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000320_N_1_20211122T040325 a seq:Text ;
+    cnt:chars "Generalized tangent numbers d(5,n)."@en .
+
+seq:A000320_O_1_20211122T040325 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000320_V_1_20211122T040325 a seq:Text ;
+    cnt:chars "4,272,55744,23750912,17328937984,19313964388352,30527905292468224,64955605537174126592,179013508069217017790464,620314831396713435870789632,2639743384489464189324523208704,13533573366345611477262311433961472,82274260343572247169162187576069586944"@en .
+
+seq:A000320_Y_1_20211122T040325 a seq:Text ;
+    cnt:chars "Cf. A000318, A000187, A349265, A349264."@en .
+
+seq:A000320_p_1_20211122T040325 a seq:Text ;
+    cnt:chars """egf := sec(5*x)*(sin(x) + sin(3*x)): ser := series(egf, x, 26):
+seq((2*n-1)!*coeff(ser, x, 2*n-1), n = 1..13); # _Peter Luschny_, Nov 21 2021"""@en .
+
+seq:A000320_t_1_20211122T040325 a seq:Text ;
+    cnt:chars "nmax = 15; km0 = 10; Clear[dd]; L[a_, s_, km_] := Sum[JacobiSymbol[-a, 2 k + 1]/(2k+1)^s, {k, 0, km}]; d[a_ /; a>1, n_, km_] := (2n-1)! L[-a, 2n, km] (2a/Pi)^(2n)/Sqrt[a] // Round; dd[km_] := dd[km] = Table[d[5, n, km], {n, 1, nmax}]; dd[km0]; dd[km = 2km0]; While[dd[km] != dd[km/2, km = 2 km]]; A000320 = dd[km] (* _Jean-François Alcover_, Feb 07 2016 *)"@en .
+

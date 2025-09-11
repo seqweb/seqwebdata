@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.595429Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1209}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000884 a seq:Sequence ;
+    rdfs:label "A000884"@en ;
+    seq:hasTextList ( seq:A000884_I_1_20170401T003617 seq:A000884_N_1_20170401T003617 seq:A000884_D_1_20170401T003617 seq:A000884_H_1_20170401T003617 seq:A000884_F_1_20170401T003617 seq:A000884_t_1_20170401T003617 seq:A000884_K_1_20170401T003617 seq:A000884_O_1_20170401T003617 seq:A000884_A_1_20170401T003617 seq:A000884_E_1_20170401T003617 seq:A000884_V_1_20170401T003617 ) .
+
+seq:A000884_A_1_20170401T003617 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000884_D_1_20170401T003617 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000884_E_1_20170401T003617 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 23 2012"@en .
+
+seq:A000884_F_1_20170401T003617 a seq:Text ;
+    cnt:chars "a(n) = (224*2^(2^n) + 42*4^(2^n) + 8^(2^n) + 448*2^(n + 2^(n-1)) + 92*2^(n + 2^n + 2^(n-1)) + 384*2^n + 168*2^(n+2^n) - 448*2^(2^(n-1)) - 92*2^(2^n + 2^(n-1)))/(1344*2^n). - _Sean A. Irvine_, Jan 24 2012"@en .
+
+seq:A000884_H_1_20170401T003617 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000884/b000884.txt">Table of n, a(n) for n = 1..10</a>
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000884_I_1_20170401T003617 a seq:Text ;
+    cnt:chars "M1994 N0786 #25 Apr 01 2017 00:36:17"@en .
+
+seq:A000884_K_1_20170401T003617 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000884_N_1_20170401T003617 a seq:Text ;
+    cnt:chars "Number of switching networks with C(2,n) acting on the domain and AG(3,2) acting on the domain."@en .
+
+seq:A000884_O_1_20170401T003617 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000884_V_1_20170401T003617 a seq:Text ;
+    cnt:chars "2,10,2104,13098898366,1842172695541070949024622,72975978136470898183217648961745628914523492408810350"@en .
+
+seq:A000884_t_1_20170401T003617 a seq:Text ;
+    cnt:chars "Table[(224*2^(2^n)+42*4^(2^n)+8^(2^n)+448*2^(n+2^(n-1))+92*2^(n+2^n+2^(n-1))+384*2^n+168*2^(n+2^n)-448*2^(2^(n-1))-92*2^(2^n+2^(n-1)))/(1344*2^n),{n,1,11}] (* _Vincenzo Librandi_, Mar 28 2012 *)"@en .
+

@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.030053Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1306}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200758 a seq:Sequence ;
+    rdfs:label "A200758"@en ;
+    seq:hasTextList ( seq:A200758_I_1_20171107T030404 seq:A200758_N_1_20171107T030404 seq:A200758_C_1_20171107T030404 seq:A200758_H_1_20171107T030404 seq:A200758_o_1_20171107T030404 seq:A200758_Y_1_20171107T030404 seq:A200758_K_1_20171107T030404 seq:A200758_O_1_20171107T030404 seq:A200758_A_1_20171107T030404 seq:A200758_V_1_20171107T030404 ) .
+
+seq:A200758_A_1_20171107T030404 a seq:Text ;
+    cnt:chars "_Laszlo Toth_, Nov 22 2011"@en .
+
+seq:A200758_C_1_20171107T030404 a seq:Text ;
+    cnt:chars "A number n is said to be superimperfect if 2*beta(beta(n)) = n, where beta is the multiplicative function defined by beta(p^e) = p^e - p^(e-1) + p^(e-2) - ... + (-1)^e for every prime power p^e. The function beta is called the alternating sum-of-divisors function. Here beta(n) is the absolute value of A061020(n). There are no other superimperfect numbers up to 10^7. The number 2^(2^k-1) is superimperfect if and only if k=1,2,3,4,5."@en .
+
+seq:A200758_H_1_20171107T030404 a seq:Text ;
+    cnt:chars """Laszlo Toth, <a href="http://arxiv.org/abs/1111.4842">A survey of the alternating sum-of-divisors function</a>, arXiv:1111.4842 [math.NT], 2011-2014.
+Laszlo Toth, <a href="http://macs.elte.hu/downloads/abstracts/MaCS_abs_Toth.pdf">The alternating sum-of-divisors function</a>, 9th Joint Conf. on Math. and Comp. Sci., February 9-12, 2012, Siofok, Hungary."""@en .
+
+seq:A200758_I_1_20171107T030404 a seq:Text ;
+    cnt:chars "#37 Nov 07 2017 03:04:04"@en .
+
+seq:A200758_K_1_20171107T030404 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A200758_N_1_20171107T030404 a seq:Text ;
+    cnt:chars "Superimperfect numbers."@en .
+
+seq:A200758_O_1_20171107T030404 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200758_V_1_20171107T030404 a seq:Text ;
+    cnt:chars "2,4,8,128,32768,2147483648"@en .
+
+seq:A200758_Y_1_20171107T030404 a seq:Text ;
+    cnt:chars "Cf. A061020, A127724, A127725, A019279, A058891, A206369."@en .
+
+seq:A200758_o_1_20171107T030404 a seq:Text ;
+    cnt:chars """(PARI) beta(n)=sumdiv(n,d,(-1)^bigomega(n/d)*d)
+for(n=1,1e8,if(2*beta(beta(n))==n,print1(n", "))) \\\\ _Charles R Greathouse IV_, Nov 22 2011
+(PARI) ak(p,e)=my(s=1); for(i=1,e, s=s*p + (-1)^i); s
+beta(n)=my(f=factor(n)); prod(i=1,#f~, ak(f[i,1],f[i,2]))
+is(n)=my(b=beta(n)); 2*b-2 >= n && 2*beta(b)==n \\\\ _Charles R Greathouse IV_, Dec 27 2016"""@en .
+

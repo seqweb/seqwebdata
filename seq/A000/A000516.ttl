@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.726060Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 835}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000516 a seq:Sequence ;
+    rdfs:label "A000516"@en ;
+    seq:hasTextList ( seq:A000516_I_1_20200401T142714 seq:A000516_N_1_20200401T142714 seq:A000516_H_1_20200401T142714 seq:A000516_Y_1_20200401T142714 seq:A000516_K_1_20200401T142714 seq:A000516_O_1_20200401T142714 seq:A000516_A_1_20200401T142714 seq:A000516_E_1_20200401T142714 seq:A000516_V_1_20200401T142714 ) .
+
+seq:A000516_A_1_20200401T142714 a seq:Text ;
+    cnt:chars "Eric Rogoyski"@en .
+
+seq:A000516_E_1_20200401T142714 a seq:Text ;
+    cnt:chars """Definition corrected by _Brendan McKay_, May 28 2006
+Offset corrected and terms a(12) and beyond from _Andrew Howroyd_, Apr 01 2020"""@en .
+
+seq:A000516_H_1_20200401T142714 a seq:Text ;
+    cnt:chars "<a href=\"/index/La#Latin\">Index entries for sequences related to Latin squares and rectangles</a>"@en .
+
+seq:A000516_I_1_20200401T142714 a seq:Text ;
+    cnt:chars "#16 Apr 01 2020 14:27:14"@en .
+
+seq:A000516_K_1_20200401T142714 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000516_N_1_20200401T142714 a seq:Text ;
+    cnt:chars "Number of equivalence classes of n X n matrices over {0,1} with rows and columns summing to 5, where equivalence is defined by row and column permutations. Isomorphism classes of bicolored 5-regular bipartite graphs, where isomorphism cannot exchange the colors."@en .
+
+seq:A000516_O_1_20200401T142714 a seq:Text ;
+    cnt:chars "1,7"@en .
+
+seq:A000516_V_1_20200401T142714 a seq:Text ;
+    cnt:chars "0,0,0,0,1,1,4,51,3529,601055,156473848,54062069505,23869437984682,13186966476208771,8971034249976338907,7414924597575224629299,7360058177440420943520750,8683626883245180573511018830,12066478410398147578519948851818,19585444567548740264243478805318202"@en .
+
+seq:A000516_Y_1_20200401T142714 a seq:Text ;
+    cnt:chars """Column k=5 of A133687.
+Cf. A000512, A000513."""@en .
+

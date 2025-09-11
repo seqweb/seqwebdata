@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.148417Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 972}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200818 a seq:Sequence ;
+    rdfs:label "A200818"@en ;
+    seq:hasTextList ( seq:A200818_I_1_20250506T094045 seq:A200818_N_1_20250506T094045 seq:A200818_C_1_20250506T094045 seq:A200818_H_1_20250506T094045 seq:A200818_e_1_20250506T094045 seq:A200818_t_1_20250506T094045 seq:A200818_o_1_20250506T094045 seq:A200818_Y_1_20250506T094045 seq:A200818_K_1_20250506T094045 seq:A200818_O_1_20250506T094045 seq:A200818_A_1_20250506T094045 seq:A200818_E_1_20250506T094045 seq:A200818_V_1_20250506T094045 ) .
+
+seq:A200818_A_1_20250506T094045 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 23 2011"@en .
+
+seq:A200818_C_1_20250506T094045 a seq:Text ;
+    cnt:chars """No more terms < 17000. - _L. Joris Perrenet_, Mar 17 2020
+The generalization of this sequence is possible with the primes of the form  (b^n +- k)*b^n +- 1.
+a(10) > 10^5. - _Michael S. Branicky_, May 06 2025"""@en .
+
+seq:A200818_E_1_20250506T094045 a seq:Text ;
+    cnt:chars """a(8) from _L. Joris Perrenet_, Mar 17 2020
+a(9) from _Michael S. Branicky_, Jul 14 2023"""@en .
+
+seq:A200818_H_1_20250506T094045 a seq:Text ;
+    cnt:chars "Henri Lifchitz, <a href=\"http://www.primenumbers.net/Henri/us/NouvP1us.htm\">New forms of primes</a>"@en .
+
+seq:A200818_I_1_20250506T094045 a seq:Text ;
+    cnt:chars "#36 May 06 2025 09:40:45"@en .
+
+seq:A200818_K_1_20250506T094045 a seq:Text ;
+    cnt:chars "nonn,hard,more,changed"@en .
+
+seq:A200818_N_1_20250506T094045 a seq:Text ;
+    cnt:chars "Numbers k such that (2^k - k)*2^k - 1 is prime."@en .
+
+seq:A200818_O_1_20250506T094045 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200818_V_1_20250506T094045 a seq:Text ;
+    cnt:chars "2,4,5,8,77,377,4547,8248,27502"@en .
+
+seq:A200818_Y_1_20250506T094045 a seq:Text ;
+    cnt:chars "Cf. A200816, A200817, A200819, A200821, A200822, A200823, A200832."@en .
+
+seq:A200818_e_1_20250506T094045 a seq:Text ;
+    cnt:chars "4 is in the sequence because (2^4 - 4)*2^4 - 1 = 191 is prime."@en .
+
+seq:A200818_o_1_20250506T094045 a seq:Text ;
+    cnt:chars "(PARI) is(n)=ispseudoprime((2^n-n)<<n-1) \\\\ _Charles R Greathouse IV_, Feb 17 2017"@en .
+
+seq:A200818_t_1_20250506T094045 a seq:Text ;
+    cnt:chars """lst={};Do[If[PrimeQ[(2^n - n)*2^n-1],AppendTo[lst,n]],{n,10^3}];lst
+Select[Range[8300],PrimeQ[(2^#-#)2^#-1]&] (* The program generates the first 8 terms of the sequence. *) (* _Harvey P. Dale_, Aug 31 2024 *)"""@en .
+

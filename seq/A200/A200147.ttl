@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.737979Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1017}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200147 a seq:Sequence ;
+    rdfs:label "A200147"@en ;
+    seq:hasTextList ( seq:A200147_I_1_20180216T180408 seq:A200147_N_1_20180216T180408 seq:A200147_C_1_20180216T180408 seq:A200147_H_1_20180216T180408 seq:A200147_e_1_20180216T180408 seq:A200147_Y_1_20180216T180408 seq:A200147_K_1_20180216T180408 seq:A200147_O_1_20180216T180408 seq:A200147_A_1_20180216T180408 seq:A200147_E_1_20180216T180408 seq:A200147_V_1_20180216T180408 ) .
+
+seq:A200147_A_1_20180216T180408 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 13 2011"@en .
+
+seq:A200147_C_1_20180216T180408 a seq:Text ;
+    cnt:chars "Column 1 of A200154."@en .
+
+seq:A200147_E_1_20180216T180408 a seq:Text ;
+    cnt:chars "a(38)-a(52) added from Ionascu link by _Michel Marcus_, Oct 10 2016"@en .
+
+seq:A200147_H_1_20180216T180408 a seq:Text ;
+    cnt:chars """Eugen J. Ionascu, <a href="https://arxiv.org/abs/1712.01243">Bisecting binomial coefficients (II)</a>, arXiv preprint arXiv:1712.01243, 2017
+Eugen J. Ionascu, Thor Martinsen, Pantelimon Stanica, <a href="https://arxiv.org/abs/1610.02063">Bisecting binomial coefficients</a>, arXiv:1610.02063 [math.CO], 2016. See p. 11."""@en .
+
+seq:A200147_I_1_20180216T180408 a seq:Text ;
+    cnt:chars "#17 Feb 16 2018 18:04:08"@en .
+
+seq:A200147_K_1_20180216T180408 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200147_N_1_20180216T180408 a seq:Text ;
+    cnt:chars "Number of 0..1 arrays x(0..n-1) of n elements with zero n-1st difference."@en .
+
+seq:A200147_O_1_20180216T180408 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200147_V_1_20180216T180408 a seq:Text ;
+    cnt:chars "1,2,2,4,2,8,2,16,6,32,2,64,2,144,14,256,2,512,2,1024,6,2048,2,4096,50,8192,6,16384,2,34816,2,66176,6,147456,130,262168,2,524288,38,1048576,2,2127872,2,4194304,134,8388608,2,17825792,4098,33554432,6,67108864"@en .
+
+seq:A200147_Y_1_20180216T180408 a seq:Text ;
+    cnt:chars "Cf. A200154."@en .
+
+seq:A200147_e_1_20180216T180408 a seq:Text ;
+    cnt:chars """All solutions for n=6
+..0....0....0....1....1....0....1....1
+..0....1....0....1....0....1....0....1
+..1....1....0....0....1....0....0....1
+..1....1....0....0....1....0....0....1
+..0....1....0....1....0....1....0....1
+..0....0....0....1....1....0....1....1"""@en .
+

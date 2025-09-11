@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.561738Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1035}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200554 a seq:Sequence ;
+    rdfs:label "A200554"@en ;
+    seq:hasTextList ( seq:A200554_I_1_20180521T112647 seq:A200554_N_1_20180521T112647 seq:A200554_C_1_20180521T112647 seq:A200554_H_1_20180521T112647 seq:A200554_F_1_20180521T112647 seq:A200554_e_1_20180521T112647 seq:A200554_Y_1_20180521T112647 seq:A200554_K_1_20180521T112647 seq:A200554_O_1_20180521T112647 seq:A200554_A_1_20180521T112647 seq:A200554_V_1_20180521T112647 ) .
+
+seq:A200554_A_1_20180521T112647 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 19 2011"@en .
+
+seq:A200554_C_1_20180521T112647 a seq:Text ;
+    cnt:chars "Row 2 of A200553."@en .
+
+seq:A200554_F_1_20180521T112647 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 2*a(n-1) -a(n-2) +2*a(n-3) -4*a(n-4) +2*a(n-5) -a(n-6) +2*a(n-7) -a(n-8).
+Empirical g.f.: 2*x*(7 + 24*x + 31*x^2 + 47*x^3 + 24*x^4 + 9*x^5 + 2*x^6) / ((1 - x)^4*(1 + x + x^2)^2). - _Colin Barker_, May 21 2018"""@en .
+
+seq:A200554_H_1_20180521T112647 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200554/b200554.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200554_I_1_20180521T112647 a seq:Text ;
+    cnt:chars "#8 May 21 2018 11:26:47"@en .
+
+seq:A200554_K_1_20180521T112647 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200554_N_1_20180521T112647 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..3) of 4 elements with zero sum and nonzero second differences."@en .
+
+seq:A200554_O_1_20180521T112647 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200554_V_1_20180521T112647 a seq:Text ;
+    cnt:chars "14,76,200,446,836,1368,2134,3140,4368,5942,7852,10064,12734,15836,19320,23374,27956,33000,38726,45076,51968,59654,68060,77088,87022,97772,109224,121694,135076,149240,164534,180836,198000,216406,235916,256368"@en .
+
+seq:A200554_Y_1_20180521T112647 a seq:Text ;
+    cnt:chars "Cf. A200553."@en .
+
+seq:A200554_e_1_20180521T112647 a seq:Text ;
+    cnt:chars """Some solutions for n=3:
+.-2....2....2...-1....2...-3...-2...-2....1...-3....0...-1....1....2...-2....2
+..1...-3...-2....0...-1....3...-1....1....0....3...-1...-1...-2...-2...-1....1
+..2....1....0...-1....0....2....3...-2....1...-1....2....1....0...-3....2...-3
+.-1....0....0....2...-1...-2....0....3...-2....1...-1....1....1....3....1....0"""@en .
+

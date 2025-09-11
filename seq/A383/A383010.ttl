@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.600766Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 394}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383010 a seq:Sequence ;
+    rdfs:label "A383010"@en ;
+    seq:hasTextList ( seq:A383010_I_1_20250412T093743 seq:A383010_N_1_20250412T093743 seq:A383010_o_1_20250412T093743 seq:A383010_Y_1_20250412T093743 seq:A383010_K_1_20250412T093743 seq:A383010_O_1_20250412T093743 seq:A383010_A_1_20250412T093743 seq:A383010_V_1_20250412T093743 ) .
+
+seq:A383010_A_1_20250412T093743 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 12 2025"@en .
+
+seq:A383010_I_1_20250412T093743 a seq:Text ;
+    cnt:chars "#8 Apr 12 2025 09:37:43"@en .
+
+seq:A383010_K_1_20250412T093743 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A383010_N_1_20250412T093743 a seq:Text ;
+    cnt:chars "a(n) = -Sum_{d|n} (-n)^d."@en .
+
+seq:A383010_O_1_20250412T093743 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383010_V_1_20250412T093743 a seq:Text ;
+    cnt:chars "1,-2,30,-268,3130,-46470,823550,-16781368,387421227,-9999900090,285311670622,-8916103453380,302875106592266,-11112006720144694,437893890381622140,-18446744078004584688,827240261886336764194,-39346408075098212291754,1978419655660313589123998"@en .
+
+seq:A383010_Y_1_20250412T093743 a seq:Text ;
+    cnt:chars "Cf. A066108, A383003."@en .
+
+seq:A383010_o_1_20250412T093743 a seq:Text ;
+    cnt:chars "(PARI) a(n) = -sumdiv(n, d, (-n)^d);"@en .
+

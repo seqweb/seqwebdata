@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.709475Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1848}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000218 a seq:Sequence ;
+    rdfs:label "A000218"@en ;
+    seq:hasTextList ( seq:A000218_I_1_20220908T084427 seq:A000218_N_1_20220908T084427 seq:A000218_C_1_20220908T084427 seq:A000218_D_1_20220908T084427 seq:A000218_H_1_20220908T084427 seq:A000218_F_1_20220908T084427 seq:A000218_t_1_20220908T084427 seq:A000218_o_1_20220908T084427 seq:A000218_Y_1_20220908T084427 seq:A000218_K_1_20220908T084427 seq:A000218_O_1_20220908T084427 seq:A000218_A_1_20220908T084427 seq:A000218_V_1_20220908T084427 ) .
+
+seq:A000218_A_1_20220908T084427 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000218_C_1_20220908T084427 a seq:Text ;
+    cnt:chars "Could also have offset 0, considered as the orbit of 3 under A003132, i.e., n-fold application of A003132 on the initial value 3. - _M. F. Hasler_, Apr 27 2018"@en .
+
+seq:A000218_D_1_20220908T084427 a seq:Text ;
+    cnt:chars "R. Honsberger, Ingenuity in Math., Random House, 1970, p. 83."@en .
+
+seq:A000218_F_1_20220908T084427 a seq:Text ;
+    cnt:chars "Eventually periodic with period 8."@en .
+
+seq:A000218_H_1_20220908T084427 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000218/b000218.txt">Table of n, a(n) for n = 1..100</a>
+Arthur Porges, <a href="http://www.jstor.org/stable/2304639">A set of eight numbers</a>, Amer. Math. Monthly 52 (1945), 379-382.
+A. Porges, <a href="/A003621/a003621.pdf">A set of eight numbers</a>, Amer. Math. Monthly, 52 (1945), 379-382. [Annotated scanned copy]
+<a href="/index/Rec#order_08">Index entries for linear recurrences with constant coefficients</a>, signature (0, 0, 0, 0, 0, 0, 0, 1)."""@en .
+
+seq:A000218_I_1_20220908T084427 a seq:Text ;
+    cnt:chars "#47 Sep 08 2022 08:44:27"@en .
+
+seq:A000218_K_1_20220908T084427 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A000218_N_1_20220908T084427 a seq:Text ;
+    cnt:chars "Take sum of squares of digits of previous term; start with 3."@en .
+
+seq:A000218_O_1_20220908T084427 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000218_V_1_20220908T084427 a seq:Text ;
+    cnt:chars "3,9,81,65,61,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37,58,89,145,42,20,4,16,37"@en .
+
+seq:A000218_Y_1_20220908T084427 a seq:Text ;
+    cnt:chars "Cf. A003132 (the iterated map), A003621, A039943, A099645, A031176, A007770, A000216 (starting with 2), A080709 (starting with 4), A000221 (starting with 5), A008460 (starting with 6), A008462 (starting with 8), A008463 (starting with 9), A139566 (starting with 15), A122065 (starting with 74169). - _M. F. Hasler_, May 24 2009"@en .
+
+seq:A000218_o_1_20220908T084427 a seq:Text ;
+    cnt:chars """(PARI) A000218(n)=[89, 145, 42, 20, 4, 16, 37, 58, 3, 9, 81, 65, 61][n%8+8^(n<6)] \\\\ _M. F. Hasler_, May 24 2009, edited Apr 27 2018
+(Haskell)
+a000218 n = a000218_list !! (n-1)
+a000218_list = iterate a003132 3
+-- _Reinhard Zumkeller_, Aug 24 2011
+(Magma) [3, 9, 81, 65, 61] cat &cat[[37, 58, 89, 145, 42, 20, 4, 16]: n in [0..17]]; // _Vincenzo Librandi_, Jan 29 2013"""@en .
+
+seq:A000218_t_1_20220908T084427 a seq:Text ;
+    cnt:chars "NestList[Total[IntegerDigits[#]^2]&, 3, 80] (* _Vincenzo Librandi_, Jan 29 2013 *)"@en .
+

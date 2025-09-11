@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.541752Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2596}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000149 a seq:Sequence ;
+    rdfs:label "A000149"@en ;
+    seq:hasTextList ( seq:A000149_I_1_20240730T021648 seq:A000149_N_1_20240730T021648 seq:A000149_C_1_20240730T021648 seq:A000149_D_1_20240730T021648 seq:A000149_H_1_20240730T021648 seq:A000149_F_1_20240730T021648 seq:A000149_t_1_20240730T021648 seq:A000149_o_1_20240730T021648 seq:A000149_Y_1_20240730T021648 seq:A000149_K_1_20240730T021648 seq:A000149_O_1_20240730T021648 seq:A000149_A_1_20240730T021648 seq:A000149_V_1_20240730T021648 ) .
+
+seq:A000149_A_1_20240730T021648 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000149_C_1_20240730T021648 a seq:Text ;
+    cnt:chars """A000079(n) <= a(n) <= A000244(n); for n > 0: A064780(n) = a(n+1) - a(n). - _Reinhard Zumkeller_, Mar 17 2015
+Satisfies Benford's law [Whyman et al., 2016]. - _N. J. A. Sloane_, Feb 12 2017"""@en .
+
+seq:A000149_D_1_20240730T021648 a seq:Text ;
+    cnt:chars """Federal Works Agency, Work Projects Administration for the City of NY, Tables of the Exponential Function. National Bureau of Standards, Washington, DC, 1939.
+A. Fletcher, J. C. P. Miller, L. Rosenhead and L. J. Comrie, An Index of Mathematical Tables. Vols. 1 and 2, 2nd ed., Blackwell, Oxford and Addison-Wesley, Reading, MA, 1962, Vol. 1, p. 230.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000149_F_1_20240730T021648 a seq:Text ;
+    cnt:chars "a(n)^(1/n) converges to e because |1-a(n)/e^n|=|e^n-a(n)|/e^n < e^(-n) and so a(n)^(1/n)=(e^n*(1+o(1)))^(1/n)=e*(1+o(1)). - _Hieronymus Fischer_, Jan 22 2006"@en .
+
+seq:A000149_H_1_20240730T021648 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000149/b000149.txt">Table of n, a(n) for n=0..300</a>
+R. K. Guy and N. J. A. Sloane, <a href="/A005180/a005180.pdf">Correspondence</a>, 1988.
+G. Whyman, N. Ohtori, E. Shulzinger and Ed. Bormashenko, <a href="https://doi.org/10.1016/j.physa.2016.06.054">Revisiting the Benford law: When the Benford-like distribution of leading digits in sets of numerical data is expectable?</a>, Physica A: Statistical Mechanics and its Applications, 461 (2016), 595-601.
+<a href="/index/Be#Benford">Index entries for sequences related to Benford's law</a>"""@en .
+
+seq:A000149_I_1_20240730T021648 a seq:Text ;
+    cnt:chars "M1751 N0695 #56 Jul 30 2024 02:16:48"@en .
+
+seq:A000149_K_1_20240730T021648 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000149_N_1_20240730T021648 a seq:Text ;
+    cnt:chars "a(n) = floor(e^n)."@en .
+
+seq:A000149_O_1_20240730T021648 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000149_V_1_20240730T021648 a seq:Text ;
+    cnt:chars "1,2,7,20,54,148,403,1096,2980,8103,22026,59874,162754,442413,1202604,3269017,8886110,24154952,65659969,178482300,485165195,1318815734,3584912846,9744803446,26489122129,72004899337,195729609428,532048240601,1446257064291"@en .
+
+seq:A000149_Y_1_20240730T021648 a seq:Text ;
+    cnt:chars """Bisection: A116472.
+Cf. A001113, A003619, A000079, A000244, A064780 (first differences, apart from initial term).
+Cf. A000227 (round e^n), A001671 (ceiling e^n)."""@en .
+
+seq:A000149_o_1_20240730T021648 a seq:Text ;
+    cnt:chars """(PARI) for(n=0, 28, print1(floor(exp(n)), ", ")); \\\\ _Arkadiusz Wesolowski_, Nov 26 2011
+(Haskell)
+a000149 = floor . (exp 1 ^)
+a000149_list = let e = exp 1 in map floor $ iterate (* e) 1
+-- _Reinhard Zumkeller_, Mar 17 2015
+(PARI) apply( A000149(n)=exp(n)\\1, [0..30]) \\\\ An error message will say so if default(realprecision) must be increased, for large n. - _M. F. Hasler_, May 27 2018
+(Python)
+from sympy import floor, E
+def a(n):  return floor(E**n)
+print([a(n) for n in range(29)]) # _Michael S. Branicky_, Jul 20 2021"""@en .
+
+seq:A000149_t_1_20240730T021648 a seq:Text ;
+    cnt:chars """a[n_]:=Floor[E^n]; (* _Vladimir Joseph Stephan Orlovsky_, Dec 12 2008 *)
+Floor[E^Range[0,30]] (* _Harvey P. Dale_, Apr 01 2012 *)"""@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.466336Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1331}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200507 a seq:Sequence ;
+    rdfs:label "A200507"@en ;
+    seq:hasTextList ( seq:A200507_I_1_20130130T110037 seq:A200507_N_1_20130130T110037 seq:A200507_C_1_20130130T110037 seq:A200507_H_1_20130130T110037 seq:A200507_e_1_20130130T110037 seq:A200507_o_1_20130130T110037 seq:A200507_Y_1_20130130T110037 seq:A200507_K_1_20130130T110037 seq:A200507_O_1_20130130T110037 seq:A200507_A_1_20130130T110037 seq:A200507_V_1_20130130T110037 ) .
+
+seq:A200507_A_1_20130130T110037 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200507_C_1_20130130T110037 a seq:Text ;
+    cnt:chars """If such an m>0 exists, this proves that n is not in A051218, i.e., not of the form 7^x-y^2. On the other hand, if there are integers x, y such that n=7^x-y^2, then we know that a(n)=0.
+a(432) is at least of order 10^5."""@en .
+
+seq:A200507_H_1_20130130T110037 a seq:Text ;
+    cnt:chars "M. F. Hasler, <a href=\"/A200507/b200507.txt\">Table of n, a(n) for n = 0..431</a>"@en .
+
+seq:A200507_I_1_20130130T110037 a seq:Text ;
+    cnt:chars "#13 Jan 30 2013 11:00:37"@en .
+
+seq:A200507_K_1_20130130T110037 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200507_N_1_20130130T110037 a seq:Text ;
+    cnt:chars "Least m>0 such that n = 7^x-y^2 (mod m) has no solution, or 0 if no such m exists."@en .
+
+seq:A200507_O_1_20130130T110037 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200507_V_1_20130130T110037 a seq:Text ;
+    cnt:chars "0,0,3,0,8,3,0,0,3,7,8,3,8,0,3,16,7,3,8,0,3,16,28,3,0,16,3,16,8,3,7,16,3,0,8,3,8,7,3,28,0,3,8,16,3,0,19,3,0,0,3,7,8,3,0,20,3,16,7,3,8,100,3,16,35,3,8,28,3,16,20,3,7,16,3,16,8,3,28"@en .
+
+seq:A200507_Y_1_20130130T110037 a seq:Text ;
+    cnt:chars "Cf. A051204-A051221, A200505-A200524."@en .
+
+seq:A200507_e_1_20130130T110037 a seq:Text ;
+    cnt:chars "a(2)=3 since quadratic residues mod 3 (i.e. possible values for y^2 mod 3) are {0,1}, and 7^x is always congruent to 1 (mod 3), therefore there cannot be any (x,y) such that 7^x-y^2 = 2. The modulus m=3 is the least number for which this equation has no solution in Z/mZ: For m=1 the equation is always true, and for m=2 one always has the solution x=0 and y=0 (for even n) or y=1 (for odd n)."@en .
+
+seq:A200507_o_1_20130130T110037 a seq:Text ;
+    cnt:chars "(PARI) A200507(n,b=7,p=3)={ my( x=0, qr, bx, seen ); for( m=3,9e9, while( x^p < m, issquare(b^x-n) & return(0); x++); qr=vecsort(vector(m,i,i^2+n)%m,,8); seen=0; bx=1; until( bittest(seen+=1<<bx, bx=bx*b%m), for(i=1,#qr, qr[i]<bx & next; qr[i]>bx & break; next(3))); return(m))}"@en .
+

@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.589436Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1469}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000455 a seq:Sequence ;
+    rdfs:label "A000455"@en ;
+    seq:hasTextList ( seq:A000455_I_1_20250323T035715 seq:A000455_N_1_20250323T035715 seq:A000455_C_1_20250323T035715 seq:A000455_D_1_20250323T035715 seq:A000455_H_1_20250323T035715 seq:A000455_t_1_20250323T035715 seq:A000455_o_1_20250323T035715 seq:A000455_Y_1_20250323T035715 seq:A000455_K_1_20250323T035715 seq:A000455_O_1_20250323T035715 seq:A000455_A_1_20250323T035715 seq:A000455_V_1_20250323T035715 ) .
+
+seq:A000455_A_1_20250323T035715 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_; entry revised by _N. J. A. Sloane_, Jun 10 2012"@en .
+
+seq:A000455_C_1_20250323T035715 a seq:Text ;
+    cnt:chars """The number 0.a(0)a(1)a(2)...=0.124816... is a rich (or disjunctive) number. - _Robert FERREOL_, Apr 01 2020
+The constant whose decimal expansion is this sequence is irrational (Mahler, 1981). - _Amiram Eldar_, Mar 23 2025"""@en .
+
+seq:A000455_D_1_20250323T035715 a seq:Text ;
+    cnt:chars """David Gale, Tracking the Automatic ANT And Other Mathematical Explorations, 1998, pp. 42-43.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence)."""@en .
+
+seq:A000455_H_1_20250323T035715 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, <a href="/A000455/b000455.txt">Table of n, a(n) for n = 0..9999</a>
+Archimedeans, <a href="https://archive.org/details/eureka-11/page/9/mode/2up">The Problems Drive</a>, Eureka, Vol. 11 (1949), p. 10, problem (5) B.
+Kurt Mahler, <a href="https://doi.org/10.1016/0022-314X(81)90010-X">On some irrational decimal fractions</a>, Journal of Number Theory, Vol. 13, No. 2 (1981), pp. 268-269."""@en .
+
+seq:A000455_I_1_20250323T035715 a seq:Text ;
+    cnt:chars "N0413 #40 Mar 23 2025 03:57:15"@en .
+
+seq:A000455_K_1_20250323T035715 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A000455_N_1_20250323T035715 a seq:Text ;
+    cnt:chars "Digits of powers of 2."@en .
+
+seq:A000455_O_1_20250323T035715 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000455_V_1_20250323T035715 a seq:Text ;
+    cnt:chars "1,2,4,8,1,6,3,2,6,4,1,2,8,2,5,6,5,1,2,1,0,2,4,2,0,4,8,4,0,9,6,8,1,9,2,1,6,3,8,4,3,2,7,6,8,6,5,5,3,6,1,3,1,0,7,2,2,6,2,1,4,4,5,2,4,2,8,8,1,0,4,8,5,7,6,2,0,9,7,1,5,2"@en .
+
+seq:A000455_Y_1_20250323T035715 a seq:Text ;
+    cnt:chars """Cf. A000079.
+Cf. A008564, A008565, A008566, A008567, A008568, A008569, A008570, A008571, A008572, A008573, A010054."""@en .
+
+seq:A000455_o_1_20250323T035715 a seq:Text ;
+    cnt:chars "(Scala) (List.fill(32)(2: BigInt)).scanLeft(1: BigInt)(_ * _).map(_.toString.toCharArray).flatten.map(_.toInt - 48) // _Alonso del Arte_, Mar 28 2020"@en .
+
+seq:A000455_t_1_20250323T035715 a seq:Text ;
+    cnt:chars "2^Range[0, 25] // IntegerDigits // Flatten (* _Jean-François Alcover_, Feb 08 2016 *)"@en .
+

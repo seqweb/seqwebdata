@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.489994Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 564}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200996 a seq:Sequence ;
+    rdfs:label "A200996"@en ;
+    seq:hasTextList ( seq:A200996_I_1_20130713T120419 seq:A200996_N_1_20130713T120419 seq:A200996_C_1_20130713T120419 seq:A200996_H_1_20130713T120419 seq:A200996_F_1_20130713T120419 seq:A200996_o_1_20130713T120419 seq:A200996_K_1_20130713T120419 seq:A200996_O_1_20130713T120419 seq:A200996_A_1_20130713T120419 seq:A200996_V_1_20130713T120419 ) .
+
+seq:A200996_A_1_20130713T120419 a seq:Text ;
+    cnt:chars "_Reinhard Zumkeller_, Feb 14 2013"@en .
+
+seq:A200996_C_1_20130713T120419 a seq:Text ;
+    cnt:chars "A103689(n) <= a(n) <= A071558(n)."@en .
+
+seq:A200996_F_1_20130713T120419 a seq:Text ;
+    cnt:chars "a(n) = max {A053989(n), A034693(n)}."@en .
+
+seq:A200996_H_1_20130713T120419 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller, <a href=\"/A200996/b200996.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200996_I_1_20130713T120419 a seq:Text ;
+    cnt:chars "#10 Jul 13 2013 12:04:19"@en .
+
+seq:A200996_K_1_20130713T120419 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200996_N_1_20130713T120419 a seq:Text ;
+    cnt:chars "Least upper limit for numbers u and v such that u*n-1 and v*n+1 are both prime, u and v not necessarily distinct."@en .
+
+seq:A200996_O_1_20130713T120419 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200996_V_1_20130713T120419 a seq:Text ;
+    cnt:chars "3,2,2,1,4,1,4,2,2,2,4,1,8,2,2,2,6,1,10,2,2,2,6,3,6,4,4,3,6,1,10,3,4,3,4,2,4,5,6,2,4,1,6,2,4,3,6,2,4,3,2,2,4,2,6,3,4,3,12,1,8,5,4,3,6,2,6,2,2,2,8,1,14,2,2,3,6,3,4,3,8,2,4,4,12"@en .
+
+seq:A200996_o_1_20130713T120419 a seq:Text ;
+    cnt:chars """(Haskell)
+a200996 n = max (a053989 n) (a034693 n)"""@en .
+

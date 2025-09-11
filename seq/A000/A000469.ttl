@@ -1,0 +1,72 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.621233Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2512}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000469 a seq:Sequence ;
+    rdfs:label "A000469"@en ;
+    seq:hasTextList ( seq:A000469_I_1_20240802T223754 seq:A000469_N_1_20240802T223754 seq:A000469_C_1_20240802T223754 seq:A000469_H_1_20240802T223754 seq:A000469_F_1_20240802T223754 seq:A000469_p_1_20240802T223754 seq:A000469_t_1_20240802T223754 seq:A000469_o_1_20240802T223754 seq:A000469_Y_1_20240802T223754 seq:A000469_K_1_20240802T223754 seq:A000469_O_1_20240802T223754 seq:A000469_A_1_20240802T223754 seq:A000469_V_1_20240802T223754 ) .
+
+seq:A000469_A_1_20240802T223754 a seq:Text ;
+    cnt:chars "Dan Bentley (dtb(AT)research.att.com)"@en .
+
+seq:A000469_C_1_20240802T223754 a seq:Text ;
+    cnt:chars """Nonprime squarefree numbers.
+Except for 1, composite n such that the squarefree part of n is greater than phi(n). - _Benoit Cloitre_, Apr 06 2002"""@en .
+
+seq:A000469_F_1_20240802T223754 a seq:Text ;
+    cnt:chars """n such that A007913(n)>A000010(n). - _Benoit Cloitre_, Apr 06 2002
+N-floor(N/p1) - floor(N/(p2) - ... - floor(N/p(i) + floor(N/(c2) + floor(N/(c3)+ ... + floor(N/c(j)-1 where N is any number; p1,p2 are the primes with p(i) being the first prime > square root of N and c2, c3 are the numbers other than 1 in this sequence with c(j) <= N will yield the number of primes less than or equal to N other than p1, p2, ..., p(i). - _Ben Paul Thurston_, Aug 15 2007
+A005171(a(n))*A008966(a(n)) = 1. - _Reinhard Zumkeller_, Nov 01 2009
+Sum(n=1, Infinity, 1/a(n)^s) = Zeta(s)/Zeta(2s) - PrimeZeta(s). - _Enrique Pérez Herrero_, Mar 31 2012
+n such that A001221(n) = A001222(n), n nonprime. - _Carlos Eduardo Olivieri_, Aug 06 2015
+a(n) = kn + O(n/log n) where k = Pi^2/6. - _Charles R Greathouse IV_, Aug 02 2024"""@en .
+
+seq:A000469_H_1_20240802T223754 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000469/b000469.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000469_I_1_20240802T223754 a seq:Text ;
+    cnt:chars "#54 Aug 02 2024 22:37:54"@en .
+
+seq:A000469_K_1_20240802T223754 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000469_N_1_20240802T223754 a seq:Text ;
+    cnt:chars "1 together with products of 2 or more distinct primes."@en .
+
+seq:A000469_O_1_20240802T223754 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000469_V_1_20240802T223754 a seq:Text ;
+    cnt:chars "1,6,10,14,15,21,22,26,30,33,34,35,38,39,42,46,51,55,57,58,62,65,66,69,70,74,77,78,82,85,86,87,91,93,94,95,102,105,106,110,111,114,115,118,119,122,123,129,130,133,134,138,141,142,143,145,146,154,155,158"@en .
+
+seq:A000469_Y_1_20240802T223754 a seq:Text ;
+    cnt:chars "Cf. A005117, A007913, A000010, A010051, A239508, A239509, A120944 (composite squarefree numbers, same sequence apart from the first term)."@en .
+
+seq:A000469_o_1_20240802T223754 a seq:Text ;
+    cnt:chars """(PARI) for(n=0,64, if(isprime(n), n+1, if(issquarefree(n),print(n))))
+(PARI) for(n=1,160,if(core(n)*(1-isprime(n))>eulerphi(n),print1(n,",")))
+(Haskell)
+a000469 n = a000469_list !! (n-1)
+a000469_list = filter ((== 0) . a010051) a005117_list
+-- _Reinhard Zumkeller_, Mar 21 2014
+(Python)
+from math import isqrt
+from sympy import primepi, mobius
+def A000469(n):
+    def f(x): return n+primepi(x)+x-sum(mobius(k)*(x//k**2) for k in range(1, isqrt(x)+1))
+    m, k = n, f(n)
+    while m != k:
+        m, k = k, f(k)
+    return m # _Chai Wah Wu_, Aug 02 2024"""@en .
+
+seq:A000469_p_1_20240802T223754 a seq:Text ;
+    cnt:chars "select(numtheory:-issqrfree and not isprime, [$1..1000]); # _Robert Israel_, Aug 06 2015"@en .
+
+seq:A000469_t_1_20240802T223754 a seq:Text ;
+    cnt:chars """lst={}; Do[If[SquareFreeQ[n], If[ !PrimeQ[n], AppendTo[lst,n]]], {n,200}]; lst (* _Vladimir Joseph Stephan Orlovsky_, Jan 20 2009 *)
+With[{upto=200},Complement[Select[Range[upto],SquareFreeQ],Prime[ Range[ PrimePi[ upto]]]]] (* _Harvey P. Dale_, Oct 01 2011 *)
+Select[Range[200], !PrimeQ[#] && PrimeOmega[#] == PrimeNu[#] &] (* _Carlos Eduardo Olivieri_, Aug 06 2015 *)"""@en .
+

@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.286249Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1298}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200889 a seq:Sequence ;
+    rdfs:label "A200889"@en ;
+    seq:hasTextList ( seq:A200889_I_1_20171016T122314 seq:A200889_N_1_20171016T122314 seq:A200889_C_1_20171016T122314 seq:A200889_H_1_20171016T122314 seq:A200889_F_1_20171016T122314 seq:A200889_e_1_20171016T122314 seq:A200889_K_1_20171016T122314 seq:A200889_O_1_20171016T122314 seq:A200889_A_1_20171016T122314 seq:A200889_V_1_20171016T122314 ) .
+
+seq:A200889_A_1_20171016T122314 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 23 2011"@en .
+
+seq:A200889_C_1_20171016T122314 a seq:Text ;
+    cnt:chars "Row 4 of A200886."@en .
+
+seq:A200889_F_1_20171016T122314 a seq:Text ;
+    cnt:chars """Empirical: a(n) = (2/45)*n^6 + (19/15)*n^5 + (217/36)*n^4 + (71/6)*n^3 + (2057/180)*n^2 + (27/5)*n + 1.
+Conjectures from _Colin Barker_, Oct 16 2017: (Start)
+G.f.: x*(37 + 33*x + x^2 - 54*x^3 + 21*x^4 - 7*x^5 + x^6) / (1 - x)^7.
+a(n) = 7*a(n-1) - 21*a(n-2) + 35*a(n-3) - 35*a(n-4) + 21*a(n-5) - 7*a(n-6) + a(n-7) for n>7.
+(End)"""@en .
+
+seq:A200889_H_1_20171016T122314 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200889/b200889.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200889_I_1_20171016T122314 a seq:Text ;
+    cnt:chars "#10 Oct 16 2017 12:23:14"@en .
+
+seq:A200889_K_1_20171016T122314 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200889_N_1_20171016T122314 a seq:Text ;
+    cnt:chars "Number of 0..n arrays x(0..5) of 6 elements without any interior element greater than both neighbors."@en .
+
+seq:A200889_O_1_20171016T122314 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200889_V_1_20171016T122314 a seq:Text ;
+    cnt:chars "37,292,1268,3985,10213,22736,45648,84681,147565,244420,388180,595049,884989,1282240,1815872,2520369,3436245,4610692,6098260,7961569,10272053,13110736,16569040,20749625,25767261,31749732,38838772,47191033,56979085"@en .
+
+seq:A200889_e_1_20171016T122314 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..1....0....3....0....2....2....1....0....1....3....2....3....2....2....3....2
+..0....1....1....3....1....3....1....0....1....0....2....3....3....1....1....2
+..1....2....0....3....3....3....2....0....0....1....1....0....3....0....3....2
+..3....2....1....0....3....2....2....1....1....2....0....0....1....0....3....2
+..3....2....2....0....1....2....3....2....2....2....1....2....0....2....2....1
+..3....3....2....3....1....0....3....2....2....1....2....2....3....3....2....0"""@en .
+

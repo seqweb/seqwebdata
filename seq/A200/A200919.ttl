@@ -1,0 +1,37 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.341693Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 449}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200919 a seq:Sequence ;
+    rdfs:label "A200919"@en ;
+    seq:hasTextList ( seq:A200919_I_1_20130828T064613 seq:A200919_N_1_20130828T064613 seq:A200919_H_1_20130828T064613 seq:A200919_K_1_20130828T064613 seq:A200919_O_1_20130828T064613 seq:A200919_A_1_20130828T064613 seq:A200919_E_1_20130828T064613 seq:A200919_V_1_20130828T064613 ) .
+
+seq:A200919_A_1_20130828T064613 a seq:Text ;
+    cnt:chars "_Duraid Madina_, Nov 24 2011"@en .
+
+seq:A200919_E_1_20130828T064613 a seq:Text ;
+    cnt:chars """a(11) added by _Duraid Madina_, Oct 03 2012
+a(7) corrected by _Duraid Madina_, Dec 11 2012"""@en .
+
+seq:A200919_H_1_20130828T064613 a seq:Text ;
+    cnt:chars """Duraid Madina, <a href="/A200919/a200919_1.txt">Illustration of initial terms a(1) .. a(7)</a>
+N. J. A. Sloane, <a href="/A200919/a200919.pdf">Illustration for a(6) = 5</a>"""@en .
+
+seq:A200919_I_1_20130828T064613 a seq:Text ;
+    cnt:chars "#35 Aug 28 2013 06:46:13"@en .
+
+seq:A200919_K_1_20130828T064613 a seq:Text ;
+    cnt:chars "nonn,hard,nice,more"@en .
+
+seq:A200919_N_1_20130828T064613 a seq:Text ;
+    cnt:chars "Number of crossings on periodic braids with n strands such that all strands meet."@en .
+
+seq:A200919_O_1_20130828T064613 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A200919_V_1_20130828T064613 a seq:Text ;
+    cnt:chars "0,0,0,1,3,5,9,13,19,25,34"@en .
+

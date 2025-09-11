@@ -1,0 +1,84 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.791127Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2448}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200171 a seq:Sequence ;
+    rdfs:label "A200171"@en ;
+    seq:hasTextList ( seq:A200171_I_1_20120330T183732 seq:A200171_N_1_20120330T183732 seq:A200171_C_1_20120330T183732 seq:A200171_H_1_20120330T183732 seq:A200171_F_1_20120330T183732 seq:A200171_e_1_20120330T183732 seq:A200171_o_1_20120330T183732 seq:A200171_Y_1_20120330T183732 seq:A200171_K_1_20120330T183732 seq:A200171_O_1_20120330T183732 seq:A200171_A_1_20120330T183732 seq:A200171_V_1_20120330T183732 ) .
+
+seq:A200171_A_1_20120330T183732 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 13 2011"@en .
+
+seq:A200171_C_1_20120330T183732 a seq:Text ;
+    cnt:chars "The initial n rows of this triangle are obtained from the initial (n+1)^2 - 1 coefficients of the function F(x,n) = (1 + x*F(x,n))*(1 + x^n/F(x,n)) upon removing the n leading 1's and thereafter removing 2's; see the example section for illustrations of this pattern."@en .
+
+seq:A200171_F_1_20120330T183732 a seq:Text ;
+    cnt:chars """T(n,1) = (-1)^n*A000108(n) + 2 = (-1)^n*binomial(2*n,n)/(n+1) + 2, for n>=1.
+T(n,2) = (-1)^(n-1)*binomial(2*n-1,n-2) + 2, for n>=2."""@en .
+
+seq:A200171_H_1_20120330T183732 a seq:Text ;
+    cnt:chars "Paul D. Hanna, <a href=\"/A200171/b200171.txt\">Table of n, a(n) for n = 1..465</a>"@en .
+
+seq:A200171_I_1_20120330T183732 a seq:Text ;
+    cnt:chars "#36 Mar 30 2012 18:37:32"@en .
+
+seq:A200171_K_1_20120330T183732 a seq:Text ;
+    cnt:chars "sign,tabl"@en .
+
+seq:A200171_N_1_20120330T183732 a seq:Text ;
+    cnt:chars "Triangle, read by rows, such that row n equals the coefficients of x^(n^2+n-1+k) in F(x,n) for k = 1..n, where F(x,n) = (1 + x*F(x,n))*(1 + x^n/F(x,n)), for n>=1."@en .
+
+seq:A200171_O_1_20120330T183732 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200171_V_1_20120330T183732 a seq:Text ;
+    cnt:chars "1,4,1,-3,7,1,16,-19,11,1,-40,86,-54,16,1,134,-328,302,-118,22,1,-427,1289,-1483,827,-223,29,1,1432,-5003,7009,-5003,1927,-383,37,1,-4860,19450,-32030,28030,-14012,4006,-614,46,1,16798,-75580,143210,-148510,91730,-34396,7646,-934,56,1"@en .
+
+seq:A200171_Y_1_20120330T183732 a seq:Text ;
+    cnt:chars "Cf. A200172 (column 3), A200173 (column 4), A200140 (central terms)."@en .
+
+seq:A200171_e_1_20120330T183732 a seq:Text ;
+    cnt:chars """Triangle begins:
+1;
+4, 1;
+-3, 7, 1;
+16, -19, 11, 1;
+-40, 86, -54, 16, 1;
+134, -328, 302, -118, 22, 1;
+-427, 1289, -1483, 827, -223, 29, 1;
+1432, -5003, 7009, -5003, 1927, -383, 37, 1;
+-4860, 19450, -32030, 28030, -14012, 4006, -614, 46, 1;
+16798, -75580, 143210, -148510, 91730, -34396, 7646, -934, 56, 1;
+-58784, 293932, -629848, 755822, -556918, 259898, -76438, 13652, -1363, 67, 1;
+208014, -1144064, 2735812, -3730648, 3197702, -1790710, 659738, -157078, 23102, -1923, 79, 1; ...
+Row sums begin: [1,5,5,9,9,13,13,17,17,21,21,25,25,29,29,...].
+ILLUSTRATION OF INITIAL ROWS.
+The rows of this triangle can be generated in the following manner.
+For row 7, the coefficients in F(x,7) = (1 + x*F(x,7))*(1 + x^7/F(x,7)) begin:
+[1,1,1,1,1,1,1, 2,2,2,2,2,2,2, 1, 2,2,2,2,2,2, 4,1, 2,2,2,2,2, -3,7,1, 2,2,2,2, 16,-19,11,1, 2,2,2, -40,86,-54,16,1, 2,2, 134,-328,302,-118,22,1, 2, -427,1289,-1483,827,-223,29,1, ...],
+which can be arranged like so:
+1,1,1,1,1,1,1,
+2,2,2,2,2,2,2,
+1,
+2,2,2,2,2,2,
+4,1,
+2,2,2,2,2,
+-3,7,1,
+2,2,2,2,
+16,-19,11,1,
+2,2,2,
+-40,86,-54,16,1,
+2,2,
+134,-328,302,-118,22,1,
+2,
+-427,1289,-1483,827,-223,29,1, ...;
+then, if we remove all 2's and the first row of 1's, we obtain the initial 7 rows of this triangle.
+This triangle is the limit of the above process."""@en .
+
+seq:A200171_o_1_20120330T183732 a seq:Text ;
+    cnt:chars """(PARI) {T(n,k)=local(A=1+x); for(i=1, n^2+n+k, A=(1+x*A)*(1+x^n/(A+x*O(x^(n^2+k))))); polcoeff(A, n^2+n-1+k)}
+{for(n=1,15,for(k=1,n,print1(T(n,k),","));print(""))}"""@en .
+

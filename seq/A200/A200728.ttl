@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.966367Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 779}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200728 a seq:Sequence ;
+    rdfs:label "A200728"@en ;
+    seq:hasTextList ( seq:A200728_I_1_20241126T130946 seq:A200728_N_1_20241126T130946 seq:A200728_C_1_20241126T130946 seq:A200728_H_1_20241126T130946 seq:A200728_F_1_20241126T130946 seq:A200728_e_1_20241126T130946 seq:A200728_t_1_20241126T130946 seq:A200728_o_1_20241126T130946 seq:A200728_Y_1_20241126T130946 seq:A200728_K_1_20241126T130946 seq:A200728_O_1_20241126T130946 seq:A200728_A_1_20241126T130946 seq:A200728_V_1_20241126T130946 ) .
+
+seq:A200728_A_1_20241126T130946 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 21 2011"@en .
+
+seq:A200728_C_1_20241126T130946 a seq:Text ;
+    cnt:chars "Area is K = sqrt(24) = 4.89897948556635619639... (decimal expansion in A010480)."@en .
+
+seq:A200728_F_1_20241126T130946 a seq:Text ;
+    cnt:chars "R = (385/96)^(1/2)."@en .
+
+seq:A200728_H_1_20241126T130946 a seq:Text ;
+    cnt:chars """Zak Seidov, <a href="/A200728/a200728.png">Figure showing polygon</a>.
+<a href="/index/Al#algebraic_02">Index entries for algebraic numbers, degree 2</a>"""@en .
+
+seq:A200728_I_1_20241126T130946 a seq:Text ;
+    cnt:chars "#19 Nov 26 2024 13:09:46"@en .
+
+seq:A200728_K_1_20241126T130946 a seq:Text ;
+    cnt:chars "nonn,easy,cons"@en .
+
+seq:A200728_N_1_20241126T130946 a seq:Text ;
+    cnt:chars "Decimal expansion of the circumradius of cyclic quadrilateral with sides 1, 2, 3, 4."@en .
+
+seq:A200728_O_1_20241126T130946 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200728_V_1_20241126T130946 a seq:Text ;
+    cnt:chars "2,0,0,2,6,0,2,4,7,3,4,4,9,6,5,2,6,2,9,9,5,1,7,0,5,6,4,2,1,4,2,2,3,3,8,7,1,2,7,3,6,9,8,7,9,4,9,0,7,8,5,3,0,0,3,4,6,7,2,9,8,3,8,0,3,8,4,8,3,2,5,5,5,7,9,9,0,7,7,6,4,1,3,2,4,0"@en .
+
+seq:A200728_Y_1_20241126T130946 a seq:Text ;
+    cnt:chars "Cf. A090654, A010480, A200113, A200257."@en .
+
+seq:A200728_e_1_20241126T130946 a seq:Text ;
+    cnt:chars "2.0026024734496526299517..."@en .
+
+seq:A200728_o_1_20241126T130946 a seq:Text ;
+    cnt:chars "(PARI) sqrt(385/96) \\\\ _Charles R Greathouse IV_, Dec 28 2011"@en .
+
+seq:A200728_t_1_20241126T130946 a seq:Text ;
+    cnt:chars "RealDigits[Sqrt[385/96], 10, 120][[1]] (* _Amiram Eldar_, Jun 27 2023 *)"@en .
+

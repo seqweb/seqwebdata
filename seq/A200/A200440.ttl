@@ -1,0 +1,32 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.336314Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 31, "entities": 8, "chars": 188}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200440 a seq:Sequence ;
+    rdfs:label "A200440"@en ;
+    seq:hasTextList ( seq:A200440_I_1_20120331T134835 seq:A200440_N_1_20120331T134835 seq:A200440_C_1_20120331T134835 seq:A200440_K_1_20120331T134835 seq:A200440_O_1_20120331T134835 seq:A200440_A_1_20120331T134835 seq:A200440_V_1_20120331T134835 ) .
+
+seq:A200440_A_1_20120331T134835 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200440_C_1_20120331T134835 a seq:Text ;
+    cnt:chars "Larger values of A200506(n) can only occur for n=0, 1 and 2 (mod 5)."@en .
+
+seq:A200440_I_1_20120331T134835 a seq:Text ;
+    cnt:chars "#8 Mar 31 2012 13:48:35"@en .
+
+seq:A200440_K_1_20120331T134835 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200440_N_1_20120331T134835 a seq:Text ;
+    cnt:chars "Record values in A200506."@en .
+
+seq:A200440_O_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200440_V_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,5,9,63,192,259,1421,3007,9653"@en .
+

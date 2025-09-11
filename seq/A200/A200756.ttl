@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.025871Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1451}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200756 a seq:Sequence ;
+    rdfs:label "A200756"@en ;
+    seq:hasTextList ( seq:A200756_I_1_20170305T013942 seq:A200756_N_1_20170305T013942 seq:A200756_C_1_20170305T013942 seq:A200756_F_1_20170305T013942 seq:A200756_e_1_20170305T013942 seq:A200756_t_1_20170305T013942 seq:A200756_o_1_20170305T013942 seq:A200756_Y_1_20170305T013942 seq:A200756_K_1_20170305T013942 seq:A200756_O_1_20170305T013942 seq:A200756_A_1_20170305T013942 seq:A200756_V_1_20170305T013942 ) .
+
+seq:A200756_A_1_20170305T013942 a seq:Text ;
+    cnt:chars "_Vladimir Kruchinin_, Nov 22 2011"@en .
+
+seq:A200756_C_1_20170305T013942 a seq:Text ;
+    cnt:chars """Triangle T(n,k) =
+1. Riordan Array (1, (1 - sqrt(1 - 4*x - 4*x^2))/2) without first column.
+2. Riordan Array ((1 - sqrt(1 - 4*x - 4*x^2))/(2*x), (1 - sqrt(1 - 4*x - 4*x^2))/2) numbering triangle (0,0).
+The array factorizes in the Bell subgroup of the Riordan group as (1 + x, x*(1 + x)) * (c(x), x*c(x)) = A030528 * A033184, where c(x) = (1 - sqrt(1 - 4*x))/(2*x) is the o.g.f. of the Catalan numbers A000108. - _Peter Bala_, Dec 11 2015"""@en .
+
+seq:A200756_F_1_20170305T013942 a seq:Text ;
+    cnt:chars "T(n,k) = k*( Sum_{i = k..n} binomial(i,n-i)*binomial(-k+2*i-1,i-1)/i );"@en .
+
+seq:A200756_I_1_20170305T013942 a seq:Text ;
+    cnt:chars "#23 Mar 05 2017 01:39:42"@en .
+
+seq:A200756_K_1_20170305T013942 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200756_N_1_20170305T013942 a seq:Text ;
+    cnt:chars "Triangle T(n,k) = coefficient of x^n in expansion of ((1 -sqrt(1 - 4*x - 4*x^2))/2)^k."@en .
+
+seq:A200756_O_1_20170305T013942 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200756_V_1_20170305T013942 a seq:Text ;
+    cnt:chars "1,2,1,4,4,1,12,12,6,1,40,40,24,8,1,144,144,92,40,10,1,544,544,360,176,60,12,1,2128,2128,1440,752,300,84,14,1,8544,8544,5872,3200,1400,472,112,16,1,35008,35008,24336,13664,6352,2400,700,144,18,1"@en .
+
+seq:A200756_Y_1_20170305T013942 a seq:Text ;
+    cnt:chars "Cf. A025227 (column 1), A000108, A030528, A033184."@en .
+
+seq:A200756_e_1_20170305T013942 a seq:Text ;
+    cnt:chars """    1,
+    2,   1,
+    4,   4,   1,
+   12,  12,   6,   1,
+   40,  40,  24,   8,  1,
+  144, 144,  92,  40, 10,  1,
+  544, 544, 360, 176, 60, 12, 1"""@en .
+
+seq:A200756_o_1_20170305T013942 a seq:Text ;
+    cnt:chars """(Maxima) T(n,k):=k*(sum((binomial(i,n-i)*binomial(-k+2*i-1,i-1))/i,i,k,n));
+(PARI)
+tabl(nn) = {for (n=1, nn, for(k=1, n, print1(k*sum(i=k, n, binomial(i,n-i)*binomial(-k+2*i-1,i-1)/i),", ",);); print();); };
+tabl(10); \\\\ _Indranil Ghosh_, Mar 04 2017"""@en .
+
+seq:A200756_t_1_20170305T013942 a seq:Text ;
+    cnt:chars "Table[k Sum[Binomial[i, n - i] Binomial[-k + 2 i - 1, i - 1]/i, {i, k, n}], {n, 10}, {k, n}] // Flatten (* _Michael De Vlieger_, Dec 11 2015 *)"@en .
+

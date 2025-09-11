@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.544200Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1712}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200545 a seq:Sequence ;
+    rdfs:label "A200545"@en ;
+    seq:hasTextList ( seq:A200545_I_1_20190221T112547 seq:A200545_N_1_20190221T112547 seq:A200545_C_1_20190221T112547 seq:A200545_H_1_20190221T112547 seq:A200545_F_1_20190221T112547 seq:A200545_e_1_20190221T112547 seq:A200545_t_1_20190221T112547 seq:A200545_Y_1_20190221T112547 seq:A200545_K_1_20190221T112547 seq:A200545_O_1_20190221T112547 seq:A200545_A_1_20190221T112547 seq:A200545_V_1_20190221T112547 ) .
+
+seq:A200545_A_1_20190221T112547 a seq:Text ;
+    cnt:chars "_Philippe Deléham_, Nov 19 2011"@en .
+
+seq:A200545_C_1_20190221T112547 a seq:Text ;
+    cnt:chars "Row sums : A000142(n) = n!."@en .
+
+seq:A200545_F_1_20190221T112547 a seq:Text ;
+    cnt:chars """Sum_{k=0..n} T(n,k)*x^k = (-1)^n*A172485(n+1), A146559(n), A000012(n), A000142(n), A003319(n), A111529(n), A111530(n), A111531(n), A111532(n), A111533(n) for x = -2,-1,0,1,2,3,4,5,6,7 respectively.
+T(k+2,k)=(k+1)^2 = A000290(k+1).
+T(n+1,1)= A014145(n)."""@en .
+
+seq:A200545_H_1_20190221T112547 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A200545/b200545.txt">Rows n = 0..140, flattened</a>
+Sergey Kitaev, Philip B. Zhang, <a href="https://arxiv.org/abs/1811.07679">Distributions of mesh patterns of short lengths</a>, arXiv:1811.07679 [math.CO], 2018."""@en .
+
+seq:A200545_I_1_20190221T112547 a seq:Text ;
+    cnt:chars "#17 Feb 21 2019 11:25:47"@en .
+
+seq:A200545_K_1_20190221T112547 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200545_N_1_20190221T112547 a seq:Text ;
+    cnt:chars "Triangle T(n,k), read by rows, given by (1,0,2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,...) DELTA (0,1,0,1,0,1,0,1,0,1,0,1,0,1,...) where DELTA is the operator defined in A084938."@en .
+
+seq:A200545_O_1_20190221T112547 a seq:Text ;
+    cnt:chars "0,8"@en .
+
+seq:A200545_V_1_20190221T112547 a seq:Text ;
+    cnt:chars "1,1,0,1,1,0,1,4,1,0,1,13,9,1,0,1,46,56,16,1,0,1,199,334,160,25,1,0,1,1072,2157,1408,365,36,1,0,1,6985,15701,12445,4417,721,49,1,0,1,53218,129214,116698,50944,11452,1288,64,1,0,1,462331,1191336,1183216,597026,166716,25956,2136,81,1,0"@en .
+
+seq:A200545_Y_1_20190221T112547 a seq:Text ;
+    cnt:chars "Cf. A000290, A014145,"@en .
+
+seq:A200545_e_1_20190221T112547 a seq:Text ;
+    cnt:chars """Triangle begins :
+1
+1, 0
+1, 1, 0
+1, 4, 1, 0
+1, 13, 9, 1, 0
+1, 46, 56, 16, 1, 0
+1, 199, 334, 160, 25, 1, 0
+1, 1072, 2157, 1408, 365, 36, 1, 0
+1, 6985, 15701, 12445, 4417, 721, 49, 1, 0
+1, 53218, 129214, 116698, 50944, 11452, 1288, 64, 1, 0"""@en .
+
+seq:A200545_t_1_20190221T112547 a seq:Text ;
+    cnt:chars """DELTA[r_, s_, m_] := Module[{p, q, t, x, y}, q[k_] := x*r[[k + 1]] + y*s[[k + 1]]; p[0, _] = 1; p[_, -1] = 0; p[n_ /; n >= 1, k_ /; k >= 0] := p[n, k] = p[n, k - 1] + q[k]*p[n - 1, k + 1] // Expand; t[n_, k_] := Coefficient[p[n, 0], x^(n - k)*y^k]; t[0, 0] = p[0, 0]; Table[t[n, k], {n, 0, m}, {k, 0, n}]];
+m = 10;
+DELTA[LinearRecurrence[{1, 1, -1}, {1, 0, 2}, m], LinearRecurrence[{0, 1}, {0, 1}, m], m] // Flatten (* _Jean-François Alcover_, Feb 21 2019 *)"""@en .
+

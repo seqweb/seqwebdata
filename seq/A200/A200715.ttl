@@ -1,0 +1,57 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.931641Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1817}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200715 a seq:Sequence ;
+    rdfs:label "A200715"@en ;
+    seq:hasTextList ( seq:A200715_I_1_20250428T151959 seq:A200715_N_1_20250428T151959 seq:A200715_C_1_20250428T151959 seq:A200715_H_1_20250428T151959 seq:A200715_F_1_20250428T151959 seq:A200715_p_1_20250428T151959 seq:A200715_t_1_20250428T151959 seq:A200715_o_1_20250428T151959 seq:A200715_Y_1_20250428T151959 seq:A200715_K_1_20250428T151959 seq:A200715_O_1_20250428T151959 seq:A200715_A_1_20250428T151959 seq:A200715_V_1_20250428T151959 ) .
+
+seq:A200715_A_1_20250428T151959 a seq:Text ;
+    cnt:chars "_Alois P. Heinz_, Nov 21 2011"@en .
+
+seq:A200715_C_1_20250428T151959 a seq:Text ;
+    cnt:chars """_Peter A. Lawrence_ (see links) has posted a challenge to find a 3 X 3 integer matrix with "smallish" elements whose powers generate a sequence that is not in the OEIS.  This sequence is one of the solutions found.
+|a(n)| is a prime number for n in {5, 7, 8, 11, 19, 27, 108, 276, 371, 608, ...} with values {2, 3, 13, 23, 3359, 69481, 167527749243856707416101, ...}."""@en .
+
+seq:A200715_F_1_20250428T151959 a seq:Text ;
+    cnt:chars """G.f.: (-3*x^2 + x - 1)/(x^3 - 3*x^2 + x - 1).
+Term (1,1) in the 3 X 3 matrix [0,1,0; 0,0,1; 1,-3,1]^n.
+a(n) = a(n-1) - 3*a(n-2) + a(n-3); a(0)=1, a(1)=a(2)=0. - _Harvey P. Dale_, Nov 22 2011"""@en .
+
+seq:A200715_H_1_20250428T151959 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A200715/b200715.txt">Table of n, a(n) for n = 0..1000</a>
+Paul Barry, <a href="https://arxiv.org/abs/2104.01644">Centered polygon numbers, heptagons and nonagons, and the Robbins numbers</a>, arXiv:2104.01644 [math.CO], 2021.
+Peter Lawrence et al., <a href="https://web.archive.org/web/20220127112002/http://list.seqfan.eu/pipermail/seqfan/2011-November/008535.html">sequence challenge</a> and follow-up messages on the SeqFan list, Nov 21 2011
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (1,-3,1)"""@en .
+
+seq:A200715_I_1_20250428T151959 a seq:Text ;
+    cnt:chars "#68 Apr 28 2025 15:19:59"@en .
+
+seq:A200715_K_1_20250428T151959 a seq:Text ;
+    cnt:chars "sign,easy,changed"@en .
+
+seq:A200715_N_1_20250428T151959 a seq:Text ;
+    cnt:chars "Expansion of (-3*x^2 + x - 1)/(x^3 - 3*x^2 + x - 1)."@en .
+
+seq:A200715_O_1_20250428T151959 a seq:Text ;
+    cnt:chars "0,6"@en .
+
+seq:A200715_V_1_20250428T151959 a seq:Text ;
+    cnt:chars "1,0,0,1,1,-2,-4,3,13,0,-36,-23,85,118,-160,-429,169,1296,360,-3359,-3143,7294,13364,-11661,-44459,3888,125604,69481,-303443,-386282,593528,1448931,-717935,-4471200,-868464,11827201,9961393,-26388674,-44445652,44681763"@en .
+
+seq:A200715_Y_1_20250428T151959 a seq:Text ;
+    cnt:chars "Cf. A200676, A200739."@en .
+
+seq:A200715_o_1_20250428T151959 a seq:Text ;
+    cnt:chars "(PARI) Vec((-3*x^2+x-1)/(x^3-3*x^2+x-1)+O(x^99)) \\\\ _Charles R Greathouse IV_, Nov 22 2011"@en .
+
+seq:A200715_p_1_20250428T151959 a seq:Text ;
+    cnt:chars """a:= n-> (<<0|1|0>, <0|0|1>, <1|-3|1>>^n)[1, 1]:
+seq(a(n), n=0..50);"""@en .
+
+seq:A200715_t_1_20250428T151959 a seq:Text ;
+    cnt:chars "CoefficientList[Series[(-3x^2+x-1)/(x^3-3x^2+x-1),{x,0,40}],x] (* or *) LinearRecurrence[{1,-3,1},{1,0,0},40] (* _Harvey P. Dale_, Nov 22 2011 *)"@en .
+

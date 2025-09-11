@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.748529Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1570}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383080 a seq:Sequence ;
+    rdfs:label "A383080"@en ;
+    seq:hasTextList ( seq:A383080_I_1_20250417T093706 seq:A383080_N_1_20250417T093706 seq:A383080_C_1_20250417T093706 seq:A383080_e_1_20250417T093706 seq:A383080_p_1_20250417T093706 seq:A383080_t_1_20250417T093706 seq:A383080_o_1_20250417T093706 seq:A383080_Y_1_20250417T093706 seq:A383080_K_1_20250417T093706 seq:A383080_O_1_20250417T093706 seq:A383080_A_1_20250417T093706 seq:A383080_V_1_20250417T093706 ) .
+
+seq:A383080_A_1_20250417T093706 a seq:Text ;
+    cnt:chars "_Torlach Rush_, Apr 15 2025"@en .
+
+seq:A383080_C_1_20250417T093706 a seq:Text ;
+    cnt:chars """First differs from A059404 and A323055 at n = 59.
+a(n) has a square factor, A008683(a(n)) = 0.
+If p and q are distinct primes, p*q^k is in the sequence iff p + q does not divide k - 1. - _Robert Israel_, Apr 16 2025"""@en .
+
+seq:A383080_I_1_20250417T093706 a seq:Text ;
+    cnt:chars "#24 Apr 17 2025 09:37:06"@en .
+
+seq:A383080_K_1_20250417T093706 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383080_N_1_20250417T093706 a seq:Text ;
+    cnt:chars "Numbers k such that sopf(k) does not divide evenly sopfr(k)."@en .
+
+seq:A383080_O_1_20250417T093706 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383080_V_1_20250417T093706 a seq:Text ;
+    cnt:chars "12,18,20,24,28,40,44,45,48,50,52,54,56,60,63,68,72,75,76,80,84,88,90,92,96,98,99,104,108,112,116,117,120,124,126,132,135,136,140,144,147,148,150,152,153,156,160,162,164,168,171,172,175,176,180,184,188,189,198"@en .
+
+seq:A383080_Y_1_20250417T093706 a seq:Text ;
+    cnt:chars """Cf. A001414, A008472, A008683.
+Cf. A059404, A323055."""@en .
+
+seq:A383080_e_1_20250417T093706 a seq:Text ;
+    cnt:chars """12 is a term because sopf(12)=5 does not evenly divide sopfr(12)=7.
+18 is a term because sopf(18)=5 does not evenly divide sopfr(18)=8.
+20 is a term because sopf(20)=7 does not evenly divide sopfr(20)=9."""@en .
+
+seq:A383080_o_1_20250417T093706 a seq:Text ;
+    cnt:chars """(Sage) def spf(k):
+    fl = list(factor(k))
+    sr = sum(p * e for p, e in fl)
+    sd = sum(p for p, _ in fl)
+    return sd, sr
+def output(limit=198):
+    results = []
+    for k in range(2, limit + 1):
+        sd, sr = spf(k)
+        if 0 < sd and sr % sd != 0:
+            results.append(k)
+    return results
+print(output())
+(PARI) isok(k) = if (k>1, my(f=factor(k)); sum(j=1, #f~, f[j,1]*f[j,2]) % sum(j=1, #f~, f[j,1])); \\\\ _Michel Marcus_, Apr 16 2025"""@en .
+
+seq:A383080_p_1_20250417T093706 a seq:Text ;
+    cnt:chars """filter:= proc(n) local F,t;
+  F:= ifactors(n)[2];
+  add(t[1]*t[2],t=F) mod add(t[1],t=F) <> 0
+end proc:
+select(filter, [$2..300]); # _Robert Israel_, Apr 16 2025"""@en .
+
+seq:A383080_t_1_20250417T093706 a seq:Text ;
+    cnt:chars "q[k_] := Module[{f = FactorInteger[k]}, !Divisible[Plus @@ Times @@@ f, Plus @@ f[[;; , 1]]]]; Select[Range[200], q] (* _Amiram Eldar_, Apr 16 2025 *)"@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.765580Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1335}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383086 a seq:Sequence ;
+    rdfs:label "A383086"@en ;
+    seq:hasTextList ( seq:A383086_I_1_20250419T083313 seq:A383086_N_1_20250419T083313 seq:A383086_C_1_20250419T083313 seq:A383086_H_1_20250419T083313 seq:A383086_e_1_20250419T083313 seq:A383086_Y_1_20250419T083313 seq:A383086_K_1_20250419T083313 seq:A383086_O_1_20250419T083313 seq:A383086_A_1_20250419T083313 seq:A383086_V_1_20250419T083313 ) .
+
+seq:A383086_A_1_20250419T083313 a seq:Text ;
+    cnt:chars "_Peter Kagey_, Apr 16 2025"@en .
+
+seq:A383086_C_1_20250419T083313 a seq:Text ;
+    cnt:chars """We say that a real number is a constructible number if it is the distance between two points that can be determined from a straightedge-and-compass construction.
+A straightedge-and-compass construction starts with 2 points marked on the plane, traditionally (0,0) and (1,0). In the constructions counted by this sequence, only the compass is used. Circles can be drawn at any marked point through any other marked point, and new points are marked where circles intersect."""@en .
+
+seq:A383086_H_1_20250419T083313 a seq:Text ;
+    cnt:chars """Wikipedia, <a href="https://en.wikipedia.org/wiki/Constructible_number">Constructible number</a>
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Mohr%E2%80%93Mascheroni_theorem">Mohr-Mascheroni theorem</a>"""@en .
+
+seq:A383086_I_1_20250419T083313 a seq:Text ;
+    cnt:chars "#14 Apr 19 2025 08:33:13"@en .
+
+seq:A383086_K_1_20250419T083313 a seq:Text ;
+    cnt:chars "nonn,more,hard"@en .
+
+seq:A383086_N_1_20250419T083313 a seq:Text ;
+    cnt:chars "The number of distinct distances between points in the Euclidean plane where the points are constructed via a straightedge-and-compass construction using n circles and no lines."@en .
+
+seq:A383086_O_1_20250419T083313 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383086_V_1_20250419T083313 a seq:Text ;
+    cnt:chars "1,1,2,4,35,2480"@en .
+
+seq:A383086_Y_1_20250419T083313 a seq:Text ;
+    cnt:chars "Cf. A383083, A383085, A383087."@en .
+
+seq:A383086_e_1_20250419T083313 a seq:Text ;
+    cnt:chars """For n = 0 and n = 1, the only number that is constructible is 1, the distance between the two initial points.
+For n = 2, we additionally can construct sqrt(3): draw two unit circles, centered at each of the two starting points. These unit circles intersect in two places, which are a distance of sqrt(3) apart.
+For n = 3, we additionally can construct 2, and 3."""@en .
+

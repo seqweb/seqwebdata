@@ -1,0 +1,60 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.889623Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1853}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200221 a seq:Sequence ;
+    rdfs:label "A200221"@en ;
+    seq:hasTextList ( seq:A200221_I_1_20200411T070940 seq:A200221_N_1_20200411T070940 seq:A200221_D_1_20200411T070940 seq:A200221_H_1_20200411T070940 seq:A200221_F_1_20200411T070940 seq:A200221_e_1_20200411T070940 seq:A200221_p_1_20200411T070940 seq:A200221_t_1_20200411T070940 seq:A200221_Y_1_20200411T070940 seq:A200221_K_1_20200411T070940 seq:A200221_O_1_20200411T070940 seq:A200221_A_1_20200411T070940 seq:A200221_V_1_20200411T070940 ) .
+
+seq:A200221_A_1_20200411T070940 a seq:Text ;
+    cnt:chars "_Peter Luschny_, Nov 14 2011"@en .
+
+seq:A200221_D_1_20200411T070940 a seq:Text ;
+    cnt:chars "Arnold Knopfmacher and Michael Mays, Ordered and Unordered Factorizations of Integers, The Mathematica Journal, Vol 10 (1)."@en .
+
+seq:A200221_F_1_20200411T070940 a seq:Text ;
+    cnt:chars """Dirichlet g.f.: (zeta(s)-1)^3. - _Geoffrey Critzer_, Apr 06 2020
+Sum_{k=1..n} a(k) ~ n*(log(n)^2/2 + (3*gamma - 4)*log(n) + 3*gamma^2 - 9*gamma - 3*sg1 + 7), where gamma is the Euler-Mascheroni constant A001620 and sg1 is the first Stieltjes constant (see A082633). - _Vaclav Kotesovec_, Apr 07 2020"""@en .
+
+seq:A200221_H_1_20200411T070940 a seq:Text ;
+    cnt:chars "Alois P. Heinz, <a href=\"/A200221/b200221.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200221_I_1_20200411T070940 a seq:Text ;
+    cnt:chars "#29 Apr 11 2020 07:09:40"@en .
+
+seq:A200221_K_1_20200411T070940 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200221_N_1_20200411T070940 a seq:Text ;
+    cnt:chars "Ordered factorizations of n with 3 parts."@en .
+
+seq:A200221_O_1_20200411T070940 a seq:Text ;
+    cnt:chars "1,12"@en .
+
+seq:A200221_V_1_20200411T070940 a seq:Text ;
+    cnt:chars "0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,3,0,3,0,3,0,0,0,9,0,0,1,3,0,6,0,6,0,0,0,12,0,0,0,9,0,6,0,3,3,0,0,18,0,3,0,3,0,9,0,9,0,0,0,21,0,0,3,10,0,6,0,3,0,6,0,27,0,0,3,3,0,6,0,18,3,0,0,21"@en .
+
+seq:A200221_Y_1_20200411T070940 a seq:Text ;
+    cnt:chars """Cf. A200214.
+Column k=3 of A251683."""@en .
+
+seq:A200221_e_1_20200411T070940 a seq:Text ;
+    cnt:chars "a(24) = 9 = card({{4,3,2}, {4,2,3}, {3,4,2}, {3,2,4}, {2,4,3}, {2,3,4}, {6,2,2},{2,6,2}, {2,2,6}})."@en .
+
+seq:A200221_p_1_20200411T070940 a seq:Text ;
+    cnt:chars """with(numtheory):
+b:= proc(n) option remember; expand((`if`(isprime(n), 0,
+      add(b(n/d), d=divisors(n) minus {1, n}))+1)*x)
+    end:
+a:= n-> coeff(b(n), x, 3):
+seq(a(n), n=1..100);  # _Alois P. Heinz_, Dec 07 2014"""@en .
+
+seq:A200221_t_1_20200411T070940 a seq:Text ;
+    cnt:chars """OrderedFactorizations[1] = {{}}; OrderedFactorizations[n_?PrimeQ] := {{n}}; OrderedFactorizations[n_] := OrderedFactorizations[n] = Flatten[Function[d, Prepend[#, d] & /@ OrderedFactorizations[n/d]] /@ Rest[Divisors[n]], 1]; a[n_] := With[{of3 = Sort /@ Select[OrderedFactorizations[n], Length[#] == 3 &] // Union}, Length[Permutations /@ of3 // Flatten[#, 1] &]]; Table[a[n], {n, 1, 84}] (* _Jean-François Alcover_, Jul 02 2013, copied and adapted from The Mathematica Journal *)
+nn = 200; f[list_, i_] := list[[i]]; a = Prepend[Table[1, {nn}], 0];
+c = Table[DirichletConvolve[f[a, n], f[a, n], n, m], {m, 1, nn}];
+Table[DirichletConvolve[f[a, n], f[c, n], n, m], {m, 1, nn}] (* _Geoffrey Critzer_, Apr 06 2020 *)"""@en .
+

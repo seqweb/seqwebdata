@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.472027Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 745}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200987 a seq:Sequence ;
+    rdfs:label "A200987"@en ;
+    seq:hasTextList ( seq:A200987_I_1_20120331T123642 seq:A200987_N_1_20120331T123642 seq:A200987_C_1_20120331T123642 seq:A200987_H_1_20120331T123642 seq:A200987_e_1_20120331T123642 seq:A200987_K_1_20120331T123642 seq:A200987_O_1_20120331T123642 seq:A200987_A_1_20120331T123642 seq:A200987_V_1_20120331T123642 ) .
+
+seq:A200987_A_1_20120331T123642 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 25 2011"@en .
+
+seq:A200987_C_1_20120331T123642 a seq:Text ;
+    cnt:chars "Column 5 of A200990"@en .
+
+seq:A200987_H_1_20120331T123642 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200987/b200987.txt\">Table of n, a(n) for n = 1..32</a>"@en .
+
+seq:A200987_I_1_20120331T123642 a seq:Text ;
+    cnt:chars "#5 Mar 31 2012 12:36:42"@en .
+
+seq:A200987_K_1_20120331T123642 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200987_N_1_20120331T123642 a seq:Text ;
+    cnt:chars "Number of nX5 0..4 arrays with every row and column nondecreasing rightwards and downwards, and the number of instances of each value within one of each other"@en .
+
+seq:A200987_O_1_20120331T123642 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200987_V_1_20120331T123642 a seq:Text ;
+    cnt:chars "1,21,140,1095,4919,27000,97341,383172,1188521,3704820,9947816,27240277,65292069,157646021,349738426,770969390,1585648871,3256248216,6303135880,12177430692,22459794938,41128002746,72582886199,127586136583"@en .
+
+seq:A200987_e_1_20120331T123642 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..0..0..0..2..4....0..0..1..1..1....0..0..1..1..1....0..0..1..1..4
+..1..1..1..3..4....0..2..2..2..4....0..2..2..2..3....0..2..2..2..4
+..2..2..3..3..4....3..3..3..4..4....3..3..4..4..4....1..3..3..3..4"""@en .
+

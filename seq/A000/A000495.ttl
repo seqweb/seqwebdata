@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.680647Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 680}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000495 a seq:Sequence ;
+    rdfs:label "A000495"@en ;
+    seq:hasTextList ( seq:A000495_I_1_20220201T005941 seq:A000495_N_1_20220201T005941 seq:A000495_D_1_20220201T005941 seq:A000495_H_1_20220201T005941 seq:A000495_p_1_20220201T005941 seq:A000495_t_1_20220201T005941 seq:A000495_K_1_20220201T005941 seq:A000495_O_1_20220201T005941 seq:A000495_A_1_20220201T005941 seq:A000495_E_1_20220201T005941 seq:A000495_V_1_20220201T005941 ) .
+
+seq:A000495_A_1_20220201T005941 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000495_D_1_20220201T005941 a seq:Text ;
+    cnt:chars "N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence)."@en .
+
+seq:A000495_E_1_20220201T005941 a seq:Text ;
+    cnt:chars """Terms corrected by _Sean A. Irvine_, Oct 27 2010
+More terms from _Sean A. Irvine_, Nov 14 2010"""@en .
+
+seq:A000495_H_1_20220201T005941 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000495/b000495.txt\">Table of n, a(n) for n = 0..250</a>"@en .
+
+seq:A000495_I_1_20220201T005941 a seq:Text ;
+    cnt:chars "N1373 #17 Feb 01 2022 00:59:41"@en .
+
+seq:A000495_K_1_20220201T005941 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000495_N_1_20220201T005941 a seq:Text ;
+    cnt:chars "Nearest integer to sinh(n)."@en .
+
+seq:A000495_O_1_20220201T005941 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000495_V_1_20220201T005941 a seq:Text ;
+    cnt:chars "0,1,4,10,27,74,202,548,1490,4052,11013,29937,81377,221207,601302,1634509,4443055,12077476,32829985,89241150,242582598,659407867,1792456423,4872401723,13244561065,36002449669,97864804714,266024120301,723128532146,1965667148572"@en .
+
+seq:A000495_p_1_20220201T005941 a seq:Text ;
+    cnt:chars "f := n->round(evalf(sinh(n)));"@en .
+
+seq:A000495_t_1_20220201T005941 a seq:Text ;
+    cnt:chars "Table[Floor[Sinh[n] + 1/2], {n, 0, 50}] (* _T. D. Noe_, Jun 20 2012 *)"@en .
+

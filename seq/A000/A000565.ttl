@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.837051Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2198}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000565 a seq:Sequence ;
+    rdfs:label "A000565"@en ;
+    seq:hasTextList ( seq:A000565_I_1_20220908T084428 seq:A000565_N_1_20220908T084428 seq:A000565_D_1_20220908T084428 seq:A000565_H_1_20220908T084428 seq:A000565_F_1_20220908T084428 seq:A000565_p_1_20220908T084428 seq:A000565_t_1_20220908T084428 seq:A000565_o_1_20220908T084428 seq:A000565_K_1_20220908T084428 seq:A000565_O_1_20220908T084428 seq:A000565_A_1_20220908T084428 seq:A000565_E_1_20220908T084428 seq:A000565_V_1_20220908T084428 ) .
+
+seq:A000565_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000565_D_1_20220908T084428 a seq:Text ;
+    cnt:chars """J. Riordan, Discordant permutations, Scripta Math., 20 (1954), 14-23.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000565_E_1_20220908T084428 a seq:Text ;
+    cnt:chars "More terms from Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001"@en .
+
+seq:A000565_F_1_20220908T084428 a seq:Text ;
+    cnt:chars """From Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001: (Start)
+G.f.: -x^7(12x^7 - 6x^6 + 88x^5 - 131x^4 - 548x^3 - 1123x^2 - 448x - 31) / ((1 - x)^8).
+a(n) = 243/560n^7 - 243/16n^6 + 3591/16n^5 - 28737/16n^4 + 82257/10n^3 - 81931/4n^2 + 151931/7n, for n>6. (End)"""@en .
+
+seq:A000565_H_1_20220908T084428 a seq:Text ;
+    cnt:chars """Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992
+J. Riordan, <a href="/A000211/a000211.pdf">Discordant permutations</a>, Scripta Math., 20 (1954), 14-23. [Annotated scanned copy]
+<a href="/index/Rec#order_08">Index entries for linear recurrences with constant coefficients</a>, signature (8,-28, 56,-70,56,-28,8,-1)."""@en .
+
+seq:A000565_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "M5227 N2275 #38 Sep 08 2022 08:44:28"@en .
+
+seq:A000565_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000565_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "Number of discordant permutations."@en .
+
+seq:A000565_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "7,1"@en .
+
+seq:A000565_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "31,696,5823,29380,108933,327840,848380,1958004,4130895,8107024,14990889,26372124,44470165,72305160,113897310,174496828,260846703,381480456,547057075,770735316,1068589557,1460069392,1968505152,2621661540"@en .
+
+seq:A000565_o_1_20220908T084428 a seq:Text ;
+    cnt:chars "(Magma) [243/560*n^7-243/16*n^6+3591/16*n^5-28737/16*n^4+ 82257/10*n^3 - 81931/4*n^2+151931/7*n: n in [7..45]]; // _Vincenzo Librandi_, Feb 10 2016"@en .
+
+seq:A000565_p_1_20220908T084428 a seq:Text ;
+    cnt:chars """pp := n - >243/560*n^7 - 243/16*n^6 + 3591/16*n^5 - 28737/16*n^4 + 82257/10*n^3 - 81931/4*n^2 + 151931/7*n; seq(pp(n), n=0..30); # Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001
+A000565:=-(12*z**7-6*z**6-131*z**4+88*z**5-1123*z**2-548*z**3-31-448*z)/(z-1)**8; # conjectured by _Simon Plouffe_ in his 1992 dissertation"""@en .
+
+seq:A000565_t_1_20220908T084428 a seq:Text ;
+    cnt:chars "LinearRecurrence[{8, -28, 56, -70, 56, -28, 8, -1}, {31, 696, 5823, 29380, 108933, 327840, 848380, 1958004}, 30] (* _Jean-François Alcover_, Feb 10 2016 *)"@en .
+

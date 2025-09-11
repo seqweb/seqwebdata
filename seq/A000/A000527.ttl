@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.751238Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1264}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000527 a seq:Sequence ;
+    rdfs:label "A000527"@en ;
+    seq:hasTextList ( seq:A000527_I_1_20160209T073940 seq:A000527_N_1_20160209T073940 seq:A000527_D_1_20160209T073940 seq:A000527_F_1_20160209T073940 seq:A000527_t_1_20160209T073940 seq:A000527_K_1_20160209T073940 seq:A000527_O_1_20160209T073940 seq:A000527_A_1_20160209T073940 seq:A000527_E_1_20160209T073940 seq:A000527_V_1_20160209T073940 ) .
+
+seq:A000527_A_1_20160209T073940 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000527_D_1_20160209T073940 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 142.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000527_E_1_20160209T073940 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000527_F_1_20160209T073940 a seq:Text ;
+    cnt:chars "G.f.: 4(13+14S+3S^2)(1+S)/(1-S)^7, where S = g.f. for A000084. - _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000527_I_1_20160209T073940 a seq:Text ;
+    cnt:chars "M5304 N2306 #19 Feb 09 2016 07:39:40"@en .
+
+seq:A000527_K_1_20160209T073940 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000527_N_1_20160209T073940 a seq:Text ;
+    cnt:chars "Series-parallel numbers."@en .
+
+seq:A000527_O_1_20160209T073940 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000527_V_1_20160209T073940 a seq:Text ;
+    cnt:chars "52,472,3224,18888,101340,511120,2465904,11496144,52165892,231557064,1009247192,4331502840,18346242492,76822836544,318485778848,1308750158016,5335993098340,21603437175288,86912657626392,347660876627944,1383457374046444,5479086968052912,21604984733546336,84850331177724944,332001521469767940,1294589169323791912,5031934808360234760,19500424806065865400,75360646947991208396,290478417300879735680,1116919455364101145920,4284817000807140094464,16402243457215852326116,62659647762404302956856,238910441445219175239480"@en .
+
+seq:A000527_t_1_20160209T073940 a seq:Text ;
+    cnt:chars "n = 35; s = 1/(1 - x) + O[x]^(n + 1); Do[s = s/(1 - x^k)^Coefficient[s, x^k] + O[x]^(n + 1), {k, 2, n}] ; S = s - 1; CoefficientList[4 (13 + 14 S + 3 S^2) (1 + S)/(1 - S)^7 + O[x]^n, x] (* _Jean-François Alcover_, Feb 09 2016 *)"@en .
+

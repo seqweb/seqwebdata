@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.235004Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 559}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000308 a seq:Sequence ;
+    rdfs:label "A000308"@en ;
+    seq:hasTextList ( seq:A000308_I_1_20220201T005227 seq:A000308_N_1_20220201T005227 seq:A000308_H_1_20220201T005227 seq:A000308_F_1_20220201T005227 seq:A000308_e_1_20220201T005227 seq:A000308_p_1_20220201T005227 seq:A000308_Y_1_20220201T005227 seq:A000308_K_1_20220201T005227 seq:A000308_O_1_20220201T005227 seq:A000308_A_1_20220201T005227 seq:A000308_V_1_20220201T005227 ) .
+
+seq:A000308_A_1_20220201T005227 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000308_F_1_20220201T005227 a seq:Text ;
+    cnt:chars "a(n) = 2^A001590(n-1)*3^A000073(n-1). - _Henry Bottomley_, Jul 16 2001"@en .
+
+seq:A000308_H_1_20220201T005227 a seq:Text ;
+    cnt:chars "John Cerkan, <a href=\"/A000308/b000308.txt\">Table of n, a(n) for n = 1..15</a>"@en .
+
+seq:A000308_I_1_20220201T005227 a seq:Text ;
+    cnt:chars "#19 Feb 01 2022 00:52:27"@en .
+
+seq:A000308_K_1_20220201T005227 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000308_N_1_20220201T005227 a seq:Text ;
+    cnt:chars "a(n) = a(n-1)*a(n-2)*a(n-3) with a(1)=1, a(2)=2 and a(3)=3."@en .
+
+seq:A000308_O_1_20220201T005227 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000308_V_1_20220201T005227 a seq:Text ;
+    cnt:chars "1,2,3,6,36,648,139968,3265173504,296148833645101056,135345882205792807436868315512832,130876399105969522361889021452224949874232743897657526714368"@en .
+
+seq:A000308_Y_1_20220201T005227 a seq:Text ;
+    cnt:chars "Cf. A000304, A000336, A063401."@en .
+
+seq:A000308_e_1_20220201T005227 a seq:Text ;
+    cnt:chars "a(6)=36*6*3=648."@en .
+
+seq:A000308_p_1_20220201T005227 a seq:Text ;
+    cnt:chars "A000308 := proc(n) option remember; if n <=3 then n else A000308(n-1)*A000308(n-2)*A000308(n-3); fi; end;"@en .
+

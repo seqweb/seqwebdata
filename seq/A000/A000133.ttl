@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.502123Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1237}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000133 a seq:Sequence ;
+    rdfs:label "A000133"@en ;
+    seq:hasTextList ( seq:A000133_I_1_20200904T134929 seq:A000133_N_1_20200904T134929 seq:A000133_C_1_20200904T134929 seq:A000133_D_1_20200904T134929 seq:A000133_H_1_20200904T134929 seq:A000133_F_1_20200904T134929 seq:A000133_t_1_20200904T134929 seq:A000133_K_1_20200904T134929 seq:A000133_O_1_20200904T134929 seq:A000133_A_1_20200904T134929 seq:A000133_E_1_20200904T134929 seq:A000133_V_1_20200904T134929 ) .
+
+seq:A000133_A_1_20200904T134929 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000133_C_1_20200904T134929 a seq:Text ;
+    cnt:chars "The next term (a(9)) has 152 digits. - _Harvey P. Dale_, Sep 04 2020"@en .
+
+seq:A000133_D_1_20200904T134929 a seq:Text ;
+    cnt:chars """M. A. Harrison, The number of equivalence classes of Boolean functions under groups containing negation, IEEE Trans. Electron. Comput. 12 (1963), 559-561.
+M. A. Harrison, Introduction to Switching and Automata Theory. McGraw Hill, NY, 1965, p. 153.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000133_E_1_20200904T134929 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Feb 23 2000"@en .
+
+seq:A000133_F_1_20200904T134929 a seq:Text ;
+    cnt:chars "a(n) = (2^(2^n) + (2^n-1)*2^(2^(n-1)+1))/2^(n+1). - _Sean A. Irvine_, Sep 27 2009"@en .
+
+seq:A000133_H_1_20200904T134929 a seq:Text ;
+    cnt:chars """Sean A. Irvine, <a href="/A000133/b000133.txt">Table of n, a(n) for n = 1..11</a> (shortened by _N. J. A. Sloane_, Jan 13 2019)
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000133_I_1_20200904T134929 a seq:Text ;
+    cnt:chars "M1547 N0604 #29 Sep 04 2020 13:49:29"@en .
+
+seq:A000133_K_1_20200904T134929 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000133_N_1_20200904T134929 a seq:Text ;
+    cnt:chars "Number of Boolean functions of n variables."@en .
+
+seq:A000133_O_1_20200904T134929 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000133_V_1_20200904T134929 a seq:Text ;
+    cnt:chars "2,5,30,2288,67172352,144115192303714304,1329227995784915891206435945914040320,226156424291633194186662080095093570364871077725232774230036394136943198208"@en .
+
+seq:A000133_t_1_20200904T134929 a seq:Text ;
+    cnt:chars "Table[(2^(2^n)+(2^n-1)2^(2^(n-1)+1))/2^(n+1),{n,8}] (* _Harvey P. Dale_, Sep 04 2020 *)"@en .
+

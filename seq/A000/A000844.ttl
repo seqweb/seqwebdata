@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.513004Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 917}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000844 a seq:Sequence ;
+    rdfs:label "A000844"@en ;
+    seq:hasTextList ( seq:A000844_I_1_20220201T012716 seq:A000844_N_1_20220201T012716 seq:A000844_C_1_20220201T012716 seq:A000844_D_1_20220201T012716 seq:A000844_H_1_20220201T012716 seq:A000844_K_1_20220201T012716 seq:A000844_O_1_20220201T012716 seq:A000844_A_1_20220201T012716 seq:A000844_E_1_20220201T012716 seq:A000844_V_1_20220201T012716 ) .
+
+seq:A000844_A_1_20220201T012716 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000844_C_1_20220201T012716 a seq:Text ;
+    cnt:chars "Number of equivalence classes with permutation and complementation of n variables on the domain and complementation of 2 variables on the range. [Sean A. Irvine, Aug 07 2011]"@en .
+
+seq:A000844_D_1_20220201T012716 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000844_E_1_20220201T012716 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Aug 07 2011"@en .
+
+seq:A000844_H_1_20220201T012716 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000844_I_1_20220201T012716 a seq:Text ;
+    cnt:chars "M3559 N1441 #23 Feb 01 2022 01:27:16"@en .
+
+seq:A000844_K_1_20220201T012716 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000844_N_1_20220201T012716 a seq:Text ;
+    cnt:chars "Number of switching networks (see Harrison reference for precise definition)."@en .
+
+seq:A000844_O_1_20220201T012716 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000844_V_1_20220201T012716 a seq:Text ;
+    cnt:chars "4,19,556,2945786,1201330980739424,1846150007042109336331740689419264,44872306407070078313805671235110493948692333391216774983943586135973888"@en .
+

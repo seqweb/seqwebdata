@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.885011Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 845}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200219 a seq:Sequence ;
+    rdfs:label "A200219"@en ;
+    seq:hasTextList ( seq:A200219_I_1_20120330T183600 seq:A200219_N_1_20120330T183600 seq:A200219_C_1_20120330T183600 seq:A200219_H_1_20120330T183600 seq:A200219_e_1_20120330T183600 seq:A200219_p_1_20120330T183600 seq:A200219_t_1_20120330T183600 seq:A200219_Y_1_20120330T183600 seq:A200219_K_1_20120330T183600 seq:A200219_O_1_20120330T183600 seq:A200219_A_1_20120330T183600 seq:A200219_V_1_20120330T183600 ) .
+
+seq:A200219_A_1_20120330T183600 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 14 2011"@en .
+
+seq:A200219_C_1_20120330T183600 a seq:Text ;
+    cnt:chars """a(n) = 0 for n = 15, 25, 33, 35, 39, 55, 57,… (see A200046).
+a(n) = 1 if n prime."""@en .
+
+seq:A200219_H_1_20120330T183600 a seq:Text ;
+    cnt:chars "Michel Lagneau, <a href=\"/A200219/b200219.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200219_I_1_20120330T183600 a seq:Text ;
+    cnt:chars "#12 Mar 30 2012 18:36:00"@en .
+
+seq:A200219_K_1_20120330T183600 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200219_N_1_20120330T183600 a seq:Text ;
+    cnt:chars "Number of solutions of the equation x^n + (x+1)^n = (x+2)^n  (mod n) for x = 0..n-1."@en .
+
+seq:A200219_O_1_20120330T183600 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A200219_V_1_20120330T183600 a seq:Text ;
+    cnt:chars "1,1,1,2,1,2,1,4,3,2,1,4,1,2,0,8,1,6,1,4,1,2,1,8,0,2,9,2,1,4,1,16,0,2,0,12,1,2,0,8,1,4,1,2,3,2,1,16,7,10,2,2,1,18,0,8,0,2,1,8,1,2,3,32,2,4,1,4,0,2,1,24,1,2,0,4,6,4,1,16,27,2,1,8"@en .
+
+seq:A200219_Y_1_20120330T183600 a seq:Text ;
+    cnt:chars "Cf. A195637, A200046."@en .
+
+seq:A200219_e_1_20120330T183600 a seq:Text ;
+    cnt:chars """a(6) = 2 because:
+for x = 3,  3^6 + 4^6 == 1(mod 6) and 5^6 == 1(mod 6).
+for x = 5,  5^6 + 6^6 == 1 (mod 6) and (7)^6 == 1 (mod 6)."""@en .
+
+seq:A200219_p_1_20120330T183600 a seq:Text ;
+    cnt:chars "for n from 1 to 100 do:ii:=0:for x from 0 to n-1 do:if x^n+(x+1)^n -(x+2)^n mod n=0 then ii:=ii+1:else fi:od: printf(`%d, `,ii):od:"@en .
+
+seq:A200219_t_1_20120330T183600 a seq:Text ;
+    cnt:chars "Array[Function[n,Count[Array[Mod[#^n+(#+1)^n-(#+2)^n,n]&,n,0],0]],84]"@en .
+

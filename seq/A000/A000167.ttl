@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.584238Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1468}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000167 a seq:Sequence ;
+    rdfs:label "A000167"@en ;
+    seq:hasTextList ( seq:A000167_I_1_20231209T070423 seq:A000167_N_1_20231209T070423 seq:A000167_D_1_20231209T070423 seq:A000167_H_1_20231209T070423 seq:A000167_F_1_20231209T070423 seq:A000167_p_1_20231209T070423 seq:A000167_t_1_20231209T070423 seq:A000167_o_1_20231209T070423 seq:A000167_K_1_20231209T070423 seq:A000167_O_1_20231209T070423 seq:A000167_A_1_20231209T070423 seq:A000167_E_1_20231209T070423 seq:A000167_V_1_20231209T070423 ) .
+
+seq:A000167_A_1_20231209T070423 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000167_D_1_20231209T070423 a seq:Text ;
+    cnt:chars """M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 429.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000167_E_1_20231209T070423 a seq:Text ;
+    cnt:chars "More terms from _Herman P. Robinson_"@en .
+
+seq:A000167_F_1_20231209T070423 a seq:Text ;
+    cnt:chars "b(n) = (n-1)*b(n-1) + b(n-2) with b(n) = K_n(2). - _Christian Krause_, Dec 08 2023"@en .
+
+seq:A000167_H_1_20231209T070423 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000167/b000167.txt">Table of n, a(n) for n = 0..200</a>
+M. Abramowitz and I. A. Stegun, eds., <a href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.ASP">Handbook of Mathematical Functions</a>, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].
+<a href="/index/Be#Bessel">Index entries for sequences related to Bessel functions or polynomials</a>"""@en .
+
+seq:A000167_I_1_20231209T070423 a seq:Text ;
+    cnt:chars "M1938 N0767 #33 Dec 09 2023 07:04:23"@en .
+
+seq:A000167_K_1_20231209T070423 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000167_N_1_20231209T070423 a seq:Text ;
+    cnt:chars "Nearest integer to modified Bessel function K_n(2)."@en .
+
+seq:A000167_O_1_20231209T070423 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A000167_V_1_20231209T070423 a seq:Text ;
+    cnt:chars "0,0,0,1,2,9,49,306,2188,17810,162482,1642635,18231462,220420179,2883693795,40592133316,611765693528,9828843229764,167702100599524,3028466654021205,57708568527002410,1157199837194069405"@en .
+
+seq:A000167_o_1_20231209T070423 a seq:Text ;
+    cnt:chars "(PARI) a(n)=round(besselk(n,2)) \\\\ _Charles R Greathouse IV_, Jul 29 2016"@en .
+
+seq:A000167_p_1_20231209T070423 a seq:Text ;
+    cnt:chars "Digits := 60: A000167 := proc(n) round( evalf ( BesselK( n,2 ) )); end;"@en .
+
+seq:A000167_t_1_20231209T070423 a seq:Text ;
+    cnt:chars "Table[BesselK[n, 2] // Round, {n, 0, 21}] (* _Jean-François Alcover_, Mar 12 2014 *)"@en .
+

@@ -1,0 +1,79 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.643258Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 3232}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000478 a seq:Sequence ;
+    rdfs:label "A000478"@en ;
+    seq:hasTextList ( seq:A000478_I_1_20220603T190410 seq:A000478_N_1_20220603T190410 seq:A000478_C_1_20220603T190410 seq:A000478_D_1_20220603T190410 seq:A000478_H_1_20220603T190410 seq:A000478_F_1_20220603T190410 seq:A000478_e_1_20220603T190410 seq:A000478_t_1_20220603T190410 seq:A000478_o_1_20220603T190410 seq:A000478_Y_1_20220603T190410 seq:A000478_K_1_20220603T190410 seq:A000478_O_1_20220603T190410 seq:A000478_A_1_20220603T190410 seq:A000478_E_1_20220603T190410 seq:A000478_V_1_20220603T190410 ) .
+
+seq:A000478_A_1_20220603T190410 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000478_C_1_20220603T190410 a seq:Text ;
+    cnt:chars "Associated Stirling numbers."@en .
+
+seq:A000478_D_1_20220603T190410 a seq:Text ;
+    cnt:chars """L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 222.
+F. N. David and D. E. Barton, Combinatorial Chance. Hafner, NY, 1962, p. 296.
+J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 76.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000478_E_1_20220603T190410 a seq:Text ;
+    cnt:chars """Additional comments from _Michael Steyer_, Dec 02 2000
+More terms from _James A. Sellers_, Dec 06 2000
+More terms from _Joerg Arndt_, Apr 10 2013"""@en .
+
+seq:A000478_F_1_20220603T190410 a seq:Text ;
+    cnt:chars """E.g.f.: ((exp(x) - 1 - x)^3)/3!.
+G.f.: x^6*(12*x^3 - 40*x^2 + 45*x - 15)/((1 - x)^3*(1 - 2*x)^2*(3*x - 1)). - _Simon Plouffe_ in his 1992 dissertation
+a(n) = (1+n+n^2)/2 - (1/2 + n/4)*2^n + 3^n/6. - Michael Steyer (m.steyer(AT)osram.de), Jan 09 2005
+a(n) = 10*a(n-1) - 40*a(n-2) + 82*a(n-3) - 91*a(n-4) + 52*a(n-5) - 12*a(n-6), n > 11. - _Harvey P. Dale_ based on Michael Steyer's formula, Jul 17 2011
+a(n) = 3*a(n-1) + (2^(n-3)-n+1)*(n-1), a(n)=0, n < 6. - _Vladimir Kruchinin_, Oct 04 2018"""@en .
+
+seq:A000478_H_1_20220603T190410 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000478/b000478.txt">Table of n, a(n) for n=6..200</a>
+Daniel J. Bernstein, Andreas Hülsing, <a href="https://sphincs.org/data/dspr-20190513.pdf">Decisional second-preimage resistance: When does SPR imply PRE?</a>, (2019).
+Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992.
+Erik Vigren and Andreas Dieckmann, <a href="https://doi.org/10.3390/sym14061090">A New Result in Form of Finite Triple Sums for a Series from Ramanujan's Notebooks</a>, Symmetry (2022) Vol. 14, No. 6, 1090.
+<a href="/index/Rec#order_06">Index entries for linear recurrences with constant coefficients</a>, signature (10,-40,82,-91,52,-12)."""@en .
+
+seq:A000478_I_1_20220603T190410 a seq:Text ;
+    cnt:chars "M4978 N2138 #68 Jun 03 2022 19:04:10"@en .
+
+seq:A000478_K_1_20220603T190410 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000478_N_1_20220603T190410 a seq:Text ;
+    cnt:chars "Number of ways of placing n labeled balls into 3 indistinguishable boxes with at least 2 balls in each box."@en .
+
+seq:A000478_O_1_20220603T190410 a seq:Text ;
+    cnt:chars "6,1"@en .
+
+seq:A000478_V_1_20220603T190410 a seq:Text ;
+    cnt:chars "15,105,490,1918,6825,22935,74316,235092,731731,2252341,6879678,20900922,63259533,190957923,575363776,1731333808,5205011031,15638101281,46962537810,140988276150,423174543025,1269959836015,3810785476980,11434235478348,34306598748315,102927849307725"@en .
+
+seq:A000478_Y_1_20220603T190410 a seq:Text ;
+    cnt:chars "Cf. A000247 (2 boxes), A058844 (4 boxes)."@en .
+
+seq:A000478_e_1_20220603T190410 a seq:Text ;
+    cnt:chars "a(6) = 6!/(2!*2!*2!*3!) = 15."@en .
+
+seq:A000478_o_1_20220603T190410 a seq:Text ;
+    cnt:chars """(PARI) Vec(x^6*(12*x^3-40*x^2+45*x-15)/((1-x)^3*(1-2*x)^2*(3*x-1))+O(x^66)) /* _Joerg Arndt_, Apr 10 2013 */
+(Python) # based on _Vladimir Kruchinin_'s formula
+def A000478():
+    a = 15; n = 7; z = 4; s = 15;
+    while True:
+        yield a
+        z = 2*z; s += n*(z-2) + 3; a = 3*a + s; n += 1
+a = A000478(); print([next(a) for _ in range(6, 32)]) # _Peter Luschny_, Oct 04 2018"""@en .
+
+seq:A000478_t_1_20220603T190410 a seq:Text ;
+    cnt:chars """Table[(1+n+n^2)/2-(1/2+n/4)*2^n+3^n/6,{n,6,30}] (* or *) LinearRecurrence[ {10,-40,82,-91,52,-12},{15,105,490,1918,6825,22935},25] (* _Harvey P. Dale_, Jul 17 2011 *)
+offset = 6; terms = 26; egf = (Exp[x]-1-x)^3/3!; Drop[CoefficientList[egf + O[x]^(terms+offset), x]*Range[0, terms+offset-1]!, offset] (* _Jean-François Alcover_, May 07 2017 *)"""@en .
+

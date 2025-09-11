@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.796305Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 770}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200174 a seq:Sequence ;
+    rdfs:label "A200174"@en ;
+    seq:hasTextList ( seq:A200174_I_1_20120331T123638 seq:A200174_N_1_20120331T123638 seq:A200174_C_1_20120331T123638 seq:A200174_H_1_20120331T123638 seq:A200174_e_1_20120331T123638 seq:A200174_K_1_20120331T123638 seq:A200174_O_1_20120331T123638 seq:A200174_A_1_20120331T123638 seq:A200174_V_1_20120331T123638 ) .
+
+seq:A200174_A_1_20120331T123638 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 13 2011"@en .
+
+seq:A200174_C_1_20120331T123638 a seq:Text ;
+    cnt:chars "Column 1 of A200181"@en .
+
+seq:A200174_H_1_20120331T123638 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200174/b200174.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200174_I_1_20120331T123638 a seq:Text ;
+    cnt:chars "#6 Mar 31 2012 12:36:38"@en .
+
+seq:A200174_K_1_20120331T123638 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200174_N_1_20120331T123638 a seq:Text ;
+    cnt:chars "Number of -1..1 arrays x(0..n-1) of n elements with zero sum and no two consecutive declines, no adjacent equal elements, and no element more than one greater than the previous (random base sawtooth pattern)"@en .
+
+seq:A200174_O_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200174_V_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,1,3,3,2,6,10,7,12,28,29,29,70,105,96,169,327,363,449,914,1302,1426,2455,4220,5030,6925,12579,17582,21687,36154,57823,73301,106333,179101,250064,332708,538040,825039,1097810,1630708,2613839,3676575,5125886"@en .
+
+seq:A200174_e_1_20120331T123638 a seq:Text ;
+    cnt:chars """All solutions for n=6
+.-1...-1....1....0....1....1
+..0....0...-1....1....0...-1
+..1....1....0...-1....1....0
+.-1....0...-1....0...-1....1
+..0....1....0....1....0...-1
+..1...-1....1...-1...-1....0"""@en .
+

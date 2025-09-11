@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.659325Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1931}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000912 a seq:Sequence ;
+    rdfs:label "A000912"@en ;
+    seq:hasTextList ( seq:A000912_I_1_20170903T132907 seq:A000912_N_1_20170903T132907 seq:A000912_C_1_20170903T132907 seq:A000912_D_1_20170903T132907 seq:A000912_H_1_20170903T132907 seq:A000912_F_1_20170903T132907 seq:A000912_p_1_20170903T132907 seq:A000912_t_1_20170903T132907 seq:A000912_K_1_20170903T132907 seq:A000912_O_1_20170903T132907 seq:A000912_A_1_20170903T132907 seq:A000912_E_1_20170903T132907 seq:A000912_V_1_20170903T132907 ) .
+
+seq:A000912_A_1_20170903T132907 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000912_C_1_20170903T132907 a seq:Text ;
+    cnt:chars """Number of bond-rooted polyenoids with 2n-1 edges.
+Partial sums are A129366."""@en .
+
+seq:A000912_D_1_20170903T132907 a seq:Text ;
+    cnt:chars "S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, Enumeration of polyene hydrocarbons: a complete mathematical solution, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751"@en .
+
+seq:A000912_E_1_20170903T132907 a seq:Text ;
+    cnt:chars """More terms from _Emeric Deutsch_, Dec 19 2004
+Edited by _N. J. A. Sloane_, Jul 02 2008 at the suggestion of _R. J. Mathar_"""@en .
+
+seq:A000912_F_1_20170903T132907 a seq:Text ;
+    cnt:chars """a(n) = C(n) if n is even and a(n) = C(n) -C((n-1)/2) if n is odd, where C(n) = binomial(2n, n)/(n+1) are the Catalan numbers (A000108). a(n) = 2*A000150(n) for n > 0. - _Emeric Deutsch_, Dec 19 2004
+G.f.: c(x) - x*c(x^2), where c(x) = g.f. for A000108; a(n) = C(n) - C((n-1)/2)(1-(-1)^n)/2, C(n) = A000108(n). - _Paul Barry_, Apr 11 2007
+Conjecture: n*(n+1)*a(n) - 6*n*(n-1)*a(n-1) + 4*(2*n^2-10*n+9)*a(n-2) + 8*(n^2+n-9)*a(n-3) - 48*(n-3)*(n-4)*a(n-4) + 32*(2*n-9)*(n-5)*a(n-5) = 0. - _R. J. Mathar_, Nov 24 2012"""@en .
+
+seq:A000912_H_1_20170903T132907 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000912/b000912.txt">Table of n, a(n) for n = 0..200</a>
+S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="/A002057/a002057.pdf">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"""@en .
+
+seq:A000912_I_1_20170903T132907 a seq:Text ;
+    cnt:chars "#29 Sep 03 2017 13:29:07"@en .
+
+seq:A000912_K_1_20170903T132907 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000912_N_1_20170903T132907 a seq:Text ;
+    cnt:chars "Expansion of (sqrt(1-4x^2) - sqrt(1-4x))/(2x)."@en .
+
+seq:A000912_O_1_20170903T132907 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000912_V_1_20170903T132907 a seq:Text ;
+    cnt:chars "1,0,2,4,14,40,132,424,1430,4848,16796,58744,208012,742768,2674440,9694416,35357670,129643360,477638700,1767258328,6564120420,24466250224,91482563640,343059554864,1289904147324,4861946193440,18367353072152"@en .
+
+seq:A000912_p_1_20170903T132907 a seq:Text ;
+    cnt:chars "c:=n->binomial(2*n,n)/(n+1):a:=proc(n) if n mod 2 = 1 then c(n+1) else c(n+1)-c(n/2) fi end: seq(a(n),n=0..28); # _Emeric Deutsch_, Dec 19 2004"@en .
+
+seq:A000912_t_1_20170903T132907 a seq:Text ;
+    cnt:chars """nn = 200; CoefficientList[Series[(Sqrt[1 - 4 x^2] - Sqrt[1 - 4 x])/(2 x), {x, 0, nn}], x] (* _T. D. Noe_, Jun 20 2012 *)
+Table[If[EvenQ[n],CatalanNumber[n],CatalanNumber[n]-CatalanNumber[(n-1)/ 2]],{n,0,30}] (* _Harvey P. Dale_, Oct 30 2013 *)"""@en .
+

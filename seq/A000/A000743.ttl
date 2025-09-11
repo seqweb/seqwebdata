@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.257071Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1560}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000743 a seq:Sequence ;
+    rdfs:label "A000743"@en ;
+    seq:hasTextList ( seq:A000743_I_1_20250105T195131 seq:A000743_N_1_20250105T195131 seq:A000743_D_1_20250105T195131 seq:A000743_H_1_20250105T195131 seq:A000743_F_1_20250105T195131 seq:A000743_p_1_20250105T195131 seq:A000743_t_1_20250105T195131 seq:A000743_o_1_20250105T195131 seq:A000743_Y_1_20250105T195131 seq:A000743_K_1_20250105T195131 seq:A000743_O_1_20250105T195131 seq:A000743_A_1_20250105T195131 seq:A000743_E_1_20250105T195131 seq:A000743_V_1_20250105T195131 ) .
+
+seq:A000743_A_1_20250105T195131 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000743_D_1_20250105T195131 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000743_E_1_20250105T195131 a seq:Text ;
+    cnt:chars "Offset changed to 5 by _Ilya Gutkovskiy_, Feb 05 2020"@en .
+
+seq:A000743_F_1_20250105T195131 a seq:Text ;
+    cnt:chars """Möbius transform of binomial(n-1, 4).
+G.f.: Sum_{k>=1} mu(k) * x^(5*k) / (1 - x^k)^5. - _Ilya Gutkovskiy_, Feb 05 2020"""@en .
+
+seq:A000743_H_1_20250105T195131 a seq:Text ;
+    cnt:chars """Marius A. Burtea, <a href="/A000743/b000743.txt">Table of n, a(n) for n = 5..10000</a>
+H. W. Gould, <a href="https://web.archive.org/web/2024*/https://www.fq.math.ca/Scanned/2-4/gould.pdf">Binomial coefficients, the bracket function and compositions with relatively prime summands</a>, Fib. Quart. 2(4) (1964), 241-260.
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>"""@en .
+
+seq:A000743_I_1_20250105T195131 a seq:Text ;
+    cnt:chars "M3852 N1577 #41 Jan 05 2025 19:51:31"@en .
+
+seq:A000743_K_1_20250105T195131 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000743_N_1_20250105T195131 a seq:Text ;
+    cnt:chars "Number of compositions of n into 5 ordered relatively prime parts."@en .
+
+seq:A000743_O_1_20250105T195131 a seq:Text ;
+    cnt:chars "5,2"@en .
+
+seq:A000743_V_1_20250105T195131 a seq:Text ;
+    cnt:chars "1,5,15,35,70,125,210,325,495,700,1000,1330,1820,2305,3060,3750,4830,5775,7315,8490,10625,12155,14880,16835,20475,22620,27405,30100,35750,39100,46360,49655,58905,62985,73320,78340,91390,95720,111930,117425"@en .
+
+seq:A000743_Y_1_20250105T195131 a seq:Text ;
+    cnt:chars "Cf. A000741, A000742, A023031, A023032, A023033, A023034, A023035."@en .
+
+seq:A000743_o_1_20250105T195131 a seq:Text ;
+    cnt:chars "(Magma) [&+[MoebiusMu(n div d)*Binomial(d-1, 4):d in Divisors(n)]:n in[5..44]]; // _Marius A. Burtea_, Feb 08 2020"@en .
+
+seq:A000743_p_1_20250105T195131 a seq:Text ;
+    cnt:chars """with(numtheory):
+a:= n-> add(mobius(n/d)*binomial(d-1, 4), d=divisors(n)):
+seq(a(n), n=5..50);  # _Alois P. Heinz_, Feb 05 2020"""@en .
+
+seq:A000743_t_1_20250105T195131 a seq:Text ;
+    cnt:chars "a[n_] := Sum[Boole[Divisible[n, k]] MoebiusMu[n/k] Binomial[k - 1, 4], {k, 1, n}]; Table[a[n], {n, 5, 52}] (* _Jean-François Alcover_, Feb 11 2016 *)"@en .
+

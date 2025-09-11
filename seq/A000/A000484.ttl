@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.656175Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 422}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000484 a seq:Sequence ;
+    rdfs:label "A000484"@en ;
+    seq:hasTextList ( seq:A000484_I_1_20160828T182332 seq:A000484_N_1_20160828T182332 seq:A000484_H_1_20160828T182332 seq:A000484_p_1_20160828T182332 seq:A000484_t_1_20160828T182332 seq:A000484_K_1_20160828T182332 seq:A000484_O_1_20160828T182332 seq:A000484_A_1_20160828T182332 seq:A000484_V_1_20160828T182332 ) .
+
+seq:A000484_A_1_20160828T182332 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000484_H_1_20160828T182332 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000484/b000484.txt\">Table of n, a(n) for n = 0..1000</a>"@en .
+
+seq:A000484_I_1_20160828T182332 a seq:Text ;
+    cnt:chars "#20 Aug 28 2016 18:23:32"@en .
+
+seq:A000484_K_1_20160828T182332 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A000484_N_1_20160828T182332 a seq:Text ;
+    cnt:chars "a(n) = round(cos(n))."@en .
+
+seq:A000484_O_1_20160828T182332 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000484_V_1_20160828T182332 a seq:Text ;
+    cnt:chars "1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,-1,0,1,1,0,-1,-1,0,1,1,0,-1,-1,0,1,1,0"@en .
+
+seq:A000484_p_1_20160828T182332 a seq:Text ;
+    cnt:chars "f := n->round(evalf(cos(n)));"@en .
+
+seq:A000484_t_1_20160828T182332 a seq:Text ;
+    cnt:chars "Array[ Round[ Cos[ # ] // N ]&, 90, 0 ]"@en .
+

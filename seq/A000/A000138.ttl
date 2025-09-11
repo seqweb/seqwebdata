@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.512388Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2027}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000138 a seq:Sequence ;
+    rdfs:label "A000138"@en ;
+    seq:hasTextList ( seq:A000138_I_1_20240304T193638 seq:A000138_N_1_20240304T193638 seq:A000138_C_1_20240304T193638 seq:A000138_D_1_20240304T193638 seq:A000138_H_1_20240304T193638 seq:A000138_F_1_20240304T193638 seq:A000138_e_1_20240304T193638 seq:A000138_t_1_20240304T193638 seq:A000138_o_1_20240304T193638 seq:A000138_Y_1_20240304T193638 seq:A000138_K_1_20240304T193638 seq:A000138_O_1_20240304T193638 seq:A000138_A_1_20240304T193638 seq:A000138_E_1_20240304T193638 seq:A000138_V_1_20240304T193638 ) .
+
+seq:A000138_A_1_20240304T193638 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000138_C_1_20240304T193638 a seq:Text ;
+    cnt:chars "a(n) is the number of permutations in the symmetric group S_n whose cycle decomposition contains no 4-cycle."@en .
+
+seq:A000138_D_1_20240304T193638 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 85.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+R. P. Stanley, Enumerative Combinatorics, Wadsworth, Vol. 1, 1986, page 93, problem 7."""@en .
+
+seq:A000138_E_1_20240304T193638 a seq:Text ;
+    cnt:chars """Entry improved by comments from _Michael Somos_, Jul 28 2009
+Name corrected by _Joerg Arndt_, May 27 2011"""@en .
+
+seq:A000138_F_1_20240304T193638 a seq:Text ;
+    cnt:chars """a(n) = n! * Sum_{i=0..floor(n/4)} (-1)^i / (i! * 4^i); a(n)/n! ~ Sum_{i >= 0} (-1)^i / (i! * 4^i) = e^(-1/4); a(n) ~ e^(-1/4) * n!; a(n) ~ e^(-1/4) * (n/e)^n * sqrt(2*Pi*n). - Avi Peretz (njk(AT)netvision.net.il), Apr 22 2001
+a(n,k) = n!*floor(floor(n/k)!*k^floor(n/k)/exp(1/k) + 1/2)/(floor(n/k)!*k^floor(n/k)), here k=4, n>=0. _Simon Plouffe_, from old notes, 1993
+E.g.f.: exp(-x^4/4)/(1-x) = 1/G(0); G(k) = 1 - x/(1 - (x^3)/(x^3 - 4*(k+1)/G(k+1))); (continued fraction). - _Sergei N. Gladkovskii_, Feb 28 2012"""@en .
+
+seq:A000138_H_1_20240304T193638 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000138/b000138.txt">Table of n, a(n) for n = 0..100</a>
+Simon Plouffe, <a href="http://www.plouffe.fr/simon/exact.htm">Exact formulas for integer sequences</a>"""@en .
+
+seq:A000138_I_1_20240304T193638 a seq:Text ;
+    cnt:chars "M1635 N0638 #49 Mar 04 2024 19:36:38"@en .
+
+seq:A000138_K_1_20240304T193638 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000138_N_1_20240304T193638 a seq:Text ;
+    cnt:chars "Expansion of e.g.f. exp(-x^4/4)/(1-x)."@en .
+
+seq:A000138_O_1_20240304T193638 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000138_V_1_20240304T193638 a seq:Text ;
+    cnt:chars "1,1,2,6,18,90,540,3780,31500,283500,2835000,31185000,372972600,4848643800,67881013200,1018215198000,16294848570000,277012425690000,4986223662420000,94738249585980000,1894745192712372000,39789649046959812000,875372279033115864000"@en .
+
+seq:A000138_Y_1_20240304T193638 a seq:Text ;
+    cnt:chars "Cf. A000142, A000090, A000266, A060725, A060726, A060727."@en .
+
+seq:A000138_e_1_20240304T193638 a seq:Text ;
+    cnt:chars "a(4) = 18 because in S_4 the permutations with no 4-cycle are the complement of the six 4-cycles so a(4) = 4! - 6 = 18."@en .
+
+seq:A000138_o_1_20240304T193638 a seq:Text ;
+    cnt:chars "(PARI) {a(n) = if( n<0, 0, n! * polcoeff( exp( -(x^4/4) + x*O(x^n)) / (1 - x), n))} /* _Michael Somos_, Jul 28 2009 */"@en .
+
+seq:A000138_t_1_20240304T193638 a seq:Text ;
+    cnt:chars "nn=20;Range[0,nn]!CoefficientList[Series[Exp[-x^4/4]/(1-x),{x,0,nn}],x]  (* _Geoffrey Critzer_, Oct 28 2012 *)"@en .
+

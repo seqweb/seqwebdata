@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.809763Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1402}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000976 a seq:Sequence ;
+    rdfs:label "A000976"@en ;
+    seq:hasTextList ( seq:A000976_I_1_20230112T012832 seq:A000976_N_1_20230112T012832 seq:A000976_H_1_20230112T012832 seq:A000976_F_1_20230112T012832 seq:A000976_t_1_20230112T012832 seq:A000976_o_1_20230112T012832 seq:A000976_Y_1_20230112T012832 seq:A000976_K_1_20230112T012832 seq:A000976_O_1_20230112T012832 seq:A000976_A_1_20230112T012832 seq:A000976_E_1_20230112T012832 seq:A000976_V_1_20230112T012832 ) .
+
+seq:A000976_A_1_20230112T012832 a seq:Text ;
+    cnt:chars "_Simon Plouffe_"@en .
+
+seq:A000976_E_1_20230112T012832 a seq:Text ;
+    cnt:chars "One more term from _Sean A. Irvine_, Sep 28 2011"@en .
+
+seq:A000976_F_1_20230112T012832 a seq:Text ;
+    cnt:chars """a(n) = k where k is the smallest integer >= 1 such that 10^k == 1 (mod n!/(2^A011371(n)*5^A027868(n))) where A011371(n) is the highest power of 2 dividing n! and A027868(n) is the largest k such that 5^k | n!. - C. Ronaldo (aga_new_ac(AT)hotmail.com), Dec 16 2004, corrected by _David A. Corneth_, Jan 11 2023
+a(n) = order(10, n!/(2^s*5^t)) where 2^s is largest power of 2 dividing n! and 5^t is largest power of 5 dividing n!. - _Sean A. Irvine_, Sep 29 2011
+a(n) = A051626(A000142(n)). - _Michel Marcus_, Jan 12 2023"""@en .
+
+seq:A000976_H_1_20230112T012832 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000976/b000976.txt">Table of n, a(n) for n = 1..200</a>
+Michael Penn, <a href="https://www.youtube.com/watch?v=7SoYo8sBcAw">From the GOAT number theory book!</a>, YouTube video, 2022."""@en .
+
+seq:A000976_I_1_20230112T012832 a seq:Text ;
+    cnt:chars "#30 Jan 12 2023 01:28:32"@en .
+
+seq:A000976_K_1_20230112T012832 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A000976_N_1_20230112T012832 a seq:Text ;
+    cnt:chars "Period of 1/n! in base 10."@en .
+
+seq:A000976_O_1_20230112T012832 a seq:Text ;
+    cnt:chars "1,7"@en .
+
+seq:A000976_V_1_20230112T012832 a seq:Text ;
+    cnt:chars "0,0,1,1,1,1,6,6,18,18,18,54,54,378,1134,1134,9072,81648,81648,81648,1714608,18860688,18860688,56582064,56582064,735566832,19860304464,139022131248,139022131248,417066393744,2085331968720,2085331968720,68815954967760"@en .
+
+seq:A000976_Y_1_20230112T012832 a seq:Text ;
+    cnt:chars "Cf. A000142, A051626."@en .
+
+seq:A000976_o_1_20230112T012832 a seq:Text ;
+    cnt:chars """(PARI) a(n) = if(n <= 2, return(0)); znorder(Mod(10,n!/2^val(n,2)/5^val(n,5)))
+val(n, p) = my(r=0); while(n, r+=n\\=p); r \\\\ _David A. Corneth_, Jan 11 2023"""@en .
+
+seq:A000976_t_1_20230112T012832 a seq:Text ;
+    cnt:chars "Join[{0, 0}, Table[num = n!/(2^IntegerExponent[n!, 2] * 5^IntegerExponent[n!, 5]); MultiplicativeOrder[10, num], {n, 3, 30}]] (* _T. D. Noe_, Jun 21 2012 *)"@en .
+

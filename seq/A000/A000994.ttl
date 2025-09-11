@@ -1,0 +1,74 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.853728Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 3372}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000994 a seq:Sequence ;
+    rdfs:label "A000994"@en ;
+    seq:hasTextList ( seq:A000994_I_1_20230703T181104 seq:A000994_N_1_20230703T181104 seq:A000994_C_1_20230703T181104 seq:A000994_D_1_20230703T181104 seq:A000994_H_1_20230703T181104 seq:A000994_F_1_20230703T181104 seq:A000994_e_1_20230703T181104 seq:A000994_p_1_20230703T181104 seq:A000994_t_1_20230703T181104 seq:A000994_o_1_20230703T181104 seq:A000994_Y_1_20230703T181104 seq:A000994_K_1_20230703T181104 seq:A000994_O_1_20230703T181104 seq:A000994_A_1_20230703T181104 seq:A000994_V_1_20230703T181104 ) .
+
+seq:A000994_A_1_20230703T181104 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000994_C_1_20230703T181104 a seq:Text ;
+    cnt:chars "a(n) is the number of permutations of [n-1] that avoid both of the dashed patterns 1-23 and 3-12 and start with a descent (or are a singleton). For example, a(5)=5 counts 2143, 3142, 3214, 3241, 4321. - _David Callan_, Nov 21 2011"@en .
+
+seq:A000994_D_1_20230703T181104 a seq:Text ;
+    cnt:chars """Ulrike Sattler, Decidable classes of formal power series with nice closure properties, Diplomarbeit im Fach Informatik, Univ. Erlangen - Nuernberg, Jul 27 1994
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000994_F_1_20230703T181104 a seq:Text ;
+    cnt:chars """Since this satisfies a recurrence similar to that of the Bell numbers (A000110), the asymptotic behavior is presumably just as complicated - see A000110 for details.
+However, a(n)/A000995(n) (e.g., 77464/63117) -> 1.228..., the constant in A051148 and A051149.
+O.g.f.: A(x) = Sum_{n>=0} x^(2*n)*(1-n*x)/Product_{k=0..n} (1-k*x)^2. - _Paul D. Hanna_, Nov 02 2006
+Let S(n) = Sum_{k >= 1} k^n/k!^2. Then S(n) = a(n)*S(0) + A000995(n)*S(1) is stated in A086880, where S(0) = 2.279585302... (see A070910) and S(1) = 1.590636854... (see A096789). Cf. A088022. - _Peter Bala_, Jan 27 2015
+G.f. A(x) satisfies: A(x) = 1 + x^2 * A(x/(1 - x)) / (1 - x). - _Ilya Gutkovskiy_, Aug 09 2020"""@en .
+
+seq:A000994_H_1_20230703T181104 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000994/b000994.txt">Table of n, a(n) for n = 0..650</a> (first 101 terms from T. D. Noe)
+M. Bernstein and N. J. A. Sloane, <a href="https://arxiv.org/abs/math/0205301">Some canonical sequences of integers</a>, Linear Alg. Applications, 226-228 (1995), 57-72; erratum 320 (2000), 210; arXiv:math/0205301 [math.CO], 2002.
+M. Bernstein and N. J. A. Sloane, <a href="/A003633/a003633_1.pdf">Some canonical sequences of integers</a>, Linear Alg. Applications, 226-228 (1995), 57-72; erratum 320 (2000), 210. [Link to Lin. Alg. Applic. version together with omitted figures]
+R. K. Guy, <a href="/A005347/a005347.pdf">The Second Strong Law of Small Numbers</a>, Math. Mag, 63 (1990), no. 1, 3-20. [Annotated scanned copy]
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>
+S. Tauber, <a href="http://www.jstor.org/stable/2308653">On generalizations of the exponential function</a>, Amer. Math. Monthly, 67 (1960), 763-767."""@en .
+
+seq:A000994_I_1_20230703T181104 a seq:Text ;
+    cnt:chars "M1446 N0572 #61 Jul 03 2023 18:11:04"@en .
+
+seq:A000994_K_1_20230703T181104 a seq:Text ;
+    cnt:chars "nonn,easy,nice,eigen"@en .
+
+seq:A000994_N_1_20230703T181104 a seq:Text ;
+    cnt:chars "Shifts 2 places left under binomial transform."@en .
+
+seq:A000994_O_1_20230703T181104 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A000994_V_1_20230703T181104 a seq:Text ;
+    cnt:chars "1,0,1,1,2,5,13,36,109,359,1266,4731,18657,77464,337681,1540381,7330418,36301105,186688845,995293580,5491595645,31310124067,184199228226,1116717966103,6968515690273,44710457783760,294655920067105,1992750830574681,13817968813639426"@en .
+
+seq:A000994_Y_1_20230703T181104 a seq:Text ;
+    cnt:chars """Cf. A000995, A051139, A051140. Cf. A007318.
+Column k=2 of A143983. Cf. A007476, A088022, A086880."""@en .
+
+seq:A000994_e_1_20230703T181104 a seq:Text ;
+    cnt:chars "A(x) = 1 + x^2/(1-x) + x^4/((1-x)^2*(1-2x)) + x^6/((1-x)^2*(1-2x)^2*(1-3x)) +..."@en .
+
+seq:A000994_o_1_20230703T181104 a seq:Text ;
+    cnt:chars """(PARI) a(n)=polcoeff(sum(k=0, n, x^(2*k)*(1-k*x)/prod(j=0, k, 1-j*x+x*O(x^n))^2), n) \\\\ _Paul D. Hanna_, Nov 02 2006
+(Haskell)
+a000994 n = a000994_list !! n
+a000994_list = 1 : 0 : us where
+  us = 1 : 1 : f 2 where
+    f x = (1 + sum (zipWith (*) (map (a007318' x) [2..x]) us)) : f (x + 1)
+-- _Reinhard Zumkeller_, Jun 02 2013"""@en .
+
+seq:A000994_p_1_20230703T181104 a seq:Text ;
+    cnt:chars "A000994 := proc(n) local k; option remember; if n <= 1 then 1 else 1 + add(binomial(n, k)*A000994(k - 2), k = 2 .. n); fi; end;"@en .
+
+seq:A000994_t_1_20230703T181104 a seq:Text ;
+    cnt:chars "a[n_] := a[n] = 1 + Sum[Binomial[n, k]*a[k-2], {k, 2, n}]; Join[{1, 0}, Table[a[n], {n, 0, 24}]] (* _Jean-François Alcover_, Oct 11 2011, after Maple *)"@en .
+

@@ -1,0 +1,26 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.203797Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 23, "entities": 6, "chars": 128}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000017 a seq:Sequence ;
+    rdfs:label "A000017"@en ;
+    seq:hasTextList ( seq:A000017_I_1_19991211T030000 seq:A000017_N_1_19991211T030000 seq:A000017_K_1_19991211T030000 seq:A000017_O_1_19991211T030000 seq:A000017_V_1_19991211T030000 ) .
+
+seq:A000017_I_1_19991211T030000 a seq:Text ;
+    cnt:chars "#7 Dec 11 1999 03:00:00"@en .
+
+seq:A000017_K_1_19991211T030000 a seq:Text ;
+    cnt:chars "dead"@en .
+
+seq:A000017_N_1_19991211T030000 a seq:Text ;
+    cnt:chars "Erroneous version of A032522."@en .
+
+seq:A000017_O_1_19991211T030000 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000017_V_1_19991211T030000 a seq:Text ;
+    cnt:chars "1,0,0,2,2,4,8,4,16,12,48,80,136,420,1240,2872,7652,18104,50184"@en .
+

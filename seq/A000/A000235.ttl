@@ -1,0 +1,58 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.750930Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1847}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000235 a seq:Sequence ;
+    rdfs:label "A000235"@en ;
+    seq:hasTextList ( seq:A000235_I_1_20180209T214313 seq:A000235_N_1_20180209T214313 seq:A000235_C_1_20180209T214313 seq:A000235_D_1_20180209T214313 seq:A000235_H_1_20180209T214313 seq:A000235_F_1_20180209T214313 seq:A000235_p_1_20180209T214313 seq:A000235_t_1_20180209T214313 seq:A000235_Y_1_20180209T214313 seq:A000235_K_1_20180209T214313 seq:A000235_O_1_20180209T214313 seq:A000235_A_1_20180209T214313 seq:A000235_V_1_20180209T214313 ) .
+
+seq:A000235_A_1_20180209T214313 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000235_C_1_20180209T214313 a seq:Text ;
+    cnt:chars "(1, 1, 2, 3, 5, 8, ...) convolved with (0, 0, 1, 2, 4, 7, ...) = (0, 0, 1, 3, 8, ...). - _Gary W. Adamson_, Aug 14 2010"@en .
+
+seq:A000235_D_1_20180209T214313 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000235_F_1_20180209T214313 a seq:Text ;
+    cnt:chars "a(n) = A001383(n) - A000041(n-1). - _Christian G. Bower_"@en .
+
+seq:A000235_H_1_20180209T214313 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, <a href="/A000235/b000235.txt">Table of n, a(n) for n=1..200</a>
+J. Riordan, <a href="http://dx.doi.org/10.1147/rd.45.0473">Enumeration of trees by height and diameter</a>, IBM J. Res. Dev. 4 (1960), 473-478.
+J. Riordan, <a href="/A007401/a007401_8.pdf">The enumeration of trees by height and diameter</a>, IBM Journal 4 (1960), 473-478. (Annotated scanned copy)
+N. J. A. Sloane, <a href="/A000235/a000235.txt">Maple programs for counting rooted trees by height (after Riordan)</a>
+<a href="/index/Ro#rooted">Index entries for sequences related to rooted trees</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000235_I_1_20180209T214313 a seq:Text ;
+    cnt:chars "M2732 N1097 #41 Feb 09 2018 21:43:13"@en .
+
+seq:A000235_K_1_20180209T214313 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000235_N_1_20180209T214313 a seq:Text ;
+    cnt:chars "Number of n-node rooted trees of height 3."@en .
+
+seq:A000235_O_1_20180209T214313 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000235_V_1_20180209T214313 a seq:Text ;
+    cnt:chars "0,0,0,1,3,8,18,38,76,147,277,509,924,1648,2912,5088,8823,15170,25935,44042,74427,125112,209411,348960,579326,958077,1579098,2593903,4247768,6935070,11290627,18330973,29684082,47946852,77258764,124198083"@en .
+
+seq:A000235_Y_1_20180209T214313 a seq:Text ;
+    cnt:chars "Column h=3 of A034781."@en .
+
+seq:A000235_p_1_20180209T214313 a seq:Text ;
+    cnt:chars """# For Maple program see link.
+with(combstruct):
+ZL:= proc(m) local i; [T0, {seq(T||i=Prod(Z, Set(T||(i+1))), i=0..m-1), T||m=Z}, unlabeled] end: A000235:= n-> count(ZL(3), size=n)-count(ZL(2), size=n): seq(A000235(n), n=1..36); # _Zerinvary Lajos_, Sep 23 2007"""@en .
+
+seq:A000235_t_1_20180209T214313 a seq:Text ;
+    cnt:chars "m = 36; Rest @ CoefficientList[ Series[x*Product[(1-x^k)^(-PartitionsP[k-1]), {k, 1, m}], {x, 0, m}], x] - PartitionsP[Range[0, m-1]] (* _Jean-François Alcover_, Jul 05 2011, after _Christian G. Bower_ *)"@en .
+

@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.674124Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1283}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200612 a seq:Sequence ;
+    rdfs:label "A200612"@en ;
+    seq:hasTextList ( seq:A200612_I_1_20160222T045116 seq:A200612_N_1_20160222T045116 seq:A200612_H_1_20160222T045116 seq:A200612_F_1_20160222T045116 seq:A200612_e_1_20160222T045116 seq:A200612_p_1_20160222T045116 seq:A200612_t_1_20160222T045116 seq:A200612_o_1_20160222T045116 seq:A200612_Y_1_20160222T045116 seq:A200612_K_1_20160222T045116 seq:A200612_O_1_20160222T045116 seq:A200612_A_1_20160222T045116 seq:A200612_V_1_20160222T045116 ) .
+
+seq:A200612_A_1_20160222T045116 a seq:Text ;
+    cnt:chars "_Jeffrey Burch_, Nov 19 2011"@en .
+
+seq:A200612_F_1_20160222T045116 a seq:Text ;
+    cnt:chars "A001414(a(n)) mod A001222(a(n)) = 0 and A001414(a(n))/A001222(a(n)) = 3. [_Reinhard Zumkeller_, Nov 20 2011]"@en .
+
+seq:A200612_H_1_20160222T045116 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller and Donovan Johnson, <a href=\"/A200612/b200612.txt\">Table of n, a(n) for n = 1..500</a> (first 150 terms from Reinhard Zumkeller)"@en .
+
+seq:A200612_I_1_20160222T045116 a seq:Text ;
+    cnt:chars "#26 Feb 22 2016 04:51:16"@en .
+
+seq:A200612_K_1_20160222T045116 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200612_N_1_20160222T045116 a seq:Text ;
+    cnt:chars "The arithmetic mean of the prime factors (with multiplicity) of n is 3."@en .
+
+seq:A200612_O_1_20160222T045116 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200612_V_1_20160222T045116 a seq:Text ;
+    cnt:chars "3,9,20,27,60,81,112,180,243,336,400,540,729,1008,1200,1620,2187,2240,2816,3024,3600,4860,6561,6720,8000,8448,9072,10800,12544,13312,14580,19683,20160,24000,25344,27216,32400,37632,39936,43740,44800,56320,59049,60480"@en .
+
+seq:A200612_Y_1_20160222T045116 a seq:Text ;
+    cnt:chars "Subsequence of A078175."@en .
+
+seq:A200612_e_1_20160222T045116 a seq:Text ;
+    cnt:chars "20 is in the sequence because 20 = 2*2*5 and (2+2+5)/3 = 9/3 = 3."@en .
+
+seq:A200612_o_1_20160222T045116 a seq:Text ;
+    cnt:chars """(Haskell)
+a200612 n = a200612_list !! (n-1)
+a200612_list = filter f [2..] where
+   f x = r == 0 && x' == 3 where (x',r) = divMod (a001414 x) (a001222 x)
+-- _Reinhard Zumkeller_, Nov 20 2011
+(PARI) isok(n) = my(f = factor(n)); (sum(k=1, #f~, f[k,1]*f[k,2]) / vecsum(f[,2])) == 3; \\\\ _Michel Marcus_, Feb 22 2016"""@en .
+
+seq:A200612_p_1_20160222T045116 a seq:Text ;
+    cnt:chars "for i from 2 to 35000 do: a:=ifactors(i): s:=sum((a[2][j][1]*a[2][j][2]),j=1..nops(a[2])): t:=sum((a[2][j][2]),j=1..nops(a[2])): if s/t=3 then print(i); fi od:"@en .
+
+seq:A200612_t_1_20160222T045116 a seq:Text ;
+    cnt:chars "Select[Range[61000],Mean[Flatten[Table[#[[1]],{#[[2]]}]&/@FactorInteger[ #]]]==3&] (* _Harvey P. Dale_, Nov 08 2013 *)"@en .
+

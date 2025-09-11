@@ -1,0 +1,104 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.724705Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 4611}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000224 a seq:Sequence ;
+    rdfs:label "A000224"@en ;
+    seq:hasTextList ( seq:A000224_I_1_20250427T010512 seq:A000224_N_1_20250427T010512 seq:A000224_C_1_20250427T010512 seq:A000224_H_1_20250427T010512 seq:A000224_F_1_20250427T010512 seq:A000224_e_1_20250427T010512 seq:A000224_p_1_20250427T010512 seq:A000224_t_1_20250427T010512 seq:A000224_o_1_20250427T010512 seq:A000224_Y_1_20250427T010512 seq:A000224_K_1_20250427T010512 seq:A000224_O_1_20250427T010512 seq:A000224_A_1_20250427T010512 seq:A000224_V_1_20250427T010512 ) .
+
+seq:A000224_A_1_20250427T010512 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000224_C_1_20250427T010512 a seq:Text ;
+    cnt:chars """For any n > 2, there are quadratic nonresidues mod n, so a(n) < n. - _Charles R Greathouse IV_, Oct 28 2022
+Conjecture: n^2 == 1 (mod a(n)*(a(n)-1)) if and only if n is an odd prime. - _Thomas Ordowski_, Apr 13 2025
+This conjecture holds at least up to n = 10^8. - _Michel Marcus_, Apr 13 2025"""@en .
+
+seq:A000224_F_1_20250427T010512 a seq:Text ;
+    cnt:chars """a(n) = A105612(n) + 1.
+Multiplicative with a(p^e) = floor(p^e/6) + 2 if p = 2; floor(p^(e+1)/(2p + 2)) + 1 if p > 2. - _David W. Wilson_, Aug 01 2001
+a(2^n) = A023105(n). a(3^n) = A039300(n). a(5^n) = A039302(n). a(7^n) = A039304(n). - _R. J. Mathar_, Sep 28 2017
+Sum_{k=1..n} a(k) ~ c * n^2/sqrt(log(n)), where c = (17/(32*sqrt(Pi))) * Product_{p prime} (1 - (p^2+2)/(2*(p^2+1)*(p+1))) * (1-1/p)^(-1/2) = 0.37672933209687137604... (Finch and Sebah, 2006). - _Amiram Eldar_, Oct 18 2022
+If p is an odd prime, then a(p) = (p + 1)/2. - _Thomas Ordowski_, Apr 09 2025"""@en .
+
+seq:A000224_H_1_20250427T010512 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000224/b000224.txt">Table of n, a(n) for n = 1..10000</a>
+Imanuel Chen and Michael Z. Spivey, <a href="http://soundideas.pugetsound.edu/summer_research/238">Integral Generalized Binomial Coefficients of Multiplicative Functions</a>, Preprint 2015; Summer Research Paper 238, Univ. Puget.
+Steven R. Finch and Pascal Sebah, <a href="https://arxiv.org/abs/math/0604465">Squares and Cubes Modulo n</a>, arXiv:math/0604465 [math.NT], 2006-2016.
+Shuguang Li, <a href="http://pldml.icm.edu.pl/pldml/element/bwmeta1.element.bwnjournal-article-aav86i2p113bwm">On the number of elements with maximal order in the multiplicative group modulo n</a>, Acta Arithm. 86 (2) (1998) 113, see proof of theorem 2.1.
+Param Parekh, Paavan Parekh, Sourav Deb, and Manish K. Gupta, <a href="https://arxiv.org/abs/2310.11768">On the Classification of Weierstrass Elliptic Curves over Z_n</a>, arXiv:2310.11768 [cs.CR], 2023. See p. 6.
+E. J. F. Primrose, <a href="http://dx.doi.org/10.2307/3617445">The number of quadratic residues mod m</a>, Math. Gaz. v. 61 (1977) n. 415, 60-61.
+Walter D. Stangl, <a href="http://www.jstor.org/stable/2690536">Counting Squares in Z_n</a>, Math. Mag. 69 (1996) 285-289."""@en .
+
+seq:A000224_I_1_20250427T010512 a seq:Text ;
+    cnt:chars "#105 Apr 27 2025 01:05:12"@en .
+
+seq:A000224_K_1_20250427T010512 a seq:Text ;
+    cnt:chars "nonn,easy,nice,mult,changed"@en .
+
+seq:A000224_N_1_20250427T010512 a seq:Text ;
+    cnt:chars "Number of squares mod n."@en .
+
+seq:A000224_O_1_20250427T010512 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000224_V_1_20250427T010512 a seq:Text ;
+    cnt:chars "1,2,2,2,3,4,4,3,4,6,6,4,7,8,6,4,9,8,10,6,8,12,12,6,11,14,11,8,15,12,16,7,12,18,12,8,19,20,14,9,21,16,22,12,12,24,24,8,22,22,18,14,27,22,18,12,20,30,30,12,31,32,16,12,21,24,34,18,24,24,36,12"@en .
+
+seq:A000224_Y_1_20250427T010512 a seq:Text ;
+    cnt:chars "Cf. A095972, A046530 (cubic residues), A052273 (4th powers), A052274 (5th powers), A052275 (6th powers), A085310 (7th powers), A085311 (8th powers), A085312 (9th powers), A085313 (10th powers), A085314 (11th powers), A228849 (12th powers)."@en .
+
+seq:A000224_e_1_20250427T010512 a seq:Text ;
+    cnt:chars "The sequence of squares (A000290) modulo 10 reads 0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0, 1, 4, 9, 6, 5, 6, 9, 4, 1,... and this reduced sequence contains a(10) = 6 different values, {0,1,4,5,6,9}. - _R. J. Mathar_, Oct 10 2014"@en .
+
+seq:A000224_o_1_20250427T010512 a seq:Text ;
+    cnt:chars """(PARI) a(n) = local(v,i); v = vector(n,i,0); for(i=0, floor(n/2),v[i^2%n+1] = 1); sum(i=1,n,v[i]) \\\\ _Franklin T. Adams-Watters_, Nov 05 2006
+(PARI) a(n)=my(f=factor(n));prod(i=1,#f[,1],if(f[i,1]==2,2^f[1,2]\\6+2,f[i,1]^(f[i,2]+1)\\(2*f[i,1]+2)+1)) \\\\ _Charles R Greathouse IV_, Jul 15 2011
+(Haskell)
+a000224 n = product $ zipWith f (a027748_row n) (a124010_row n) where
+   f 2 e = 2 ^ e `div` 6 + 2
+   f p e = p ^ (e + 1) `div` (2 * p + 2) + 1
+-- _Reinhard Zumkeller_, Aug 01 2012
+(Python)
+from math import prod
+from sympy import factorint
+def A000224(n): return prod((p**(e+1)//((p+1)*(q:=1+(p==2)))>>1)+q for p, e in factorint(n).items()) # _Chai Wah Wu_, Oct 07 2024"""@en .
+
+seq:A000224_p_1_20250427T010512 a seq:Text ;
+    cnt:chars """A000224 := proc(m)
+    {seq( modp(b^2,m),b=0..m-1) };
+    nops(%) ;
+end proc: # _Emeric Deutsch_
+# 2nd implementation
+A000224 := proc(n)
+    local a,ifs,f,p,e,c ;
+    a := 1 ;
+    ifs := ifactors(n)[2] ;
+    for f in ifs do
+        p := op(1,f) ;
+        e := op(2,f) ;
+        if p = 2 then
+            if type(e,'odd') then
+                a := a*(2^(e-1)+5)/3 ;
+            else
+                a := a*(2^(e-1)+4)/3 ;
+            end if;
+        else
+            if type(e,'odd') then
+                c := 2*p+1 ;
+            else
+                c := p+2 ;
+            end if;
+            a := a*(p^(e+1)+c)/2/(p+1) ;
+        end if;
+    end do:
+    a ;
+end proc: # _R. J. Mathar_, Oct 10 2014"""@en .
+
+seq:A000224_t_1_20250427T010512 a seq:Text ;
+    cnt:chars """Length[Union[#]]& /@ Table[Mod[k^2, n], {n, 65}, {k, n}] (* _Jean-François Alcover_, Aug 30 2011 *)
+a[2] = 2; a[n_] := a[n] = Switch[fi = FactorInteger[n], {{_, 1}}, (fi[[1, 1]] + 1)/2, {{2, _}}, 3/2 + 2^fi[[1, 2]]/6 + (-1)^(fi[[1, 2]]+1)/6, {{_, _}}, {p, k} = fi[[1]]; 3/4 + (p-1)*(-1)^(k+1)/(4*(p+1)) + p^(k+1)/(2*(p+1)), _, Times @@ Table[ a[Power @@ f], {f, fi}]]; Table[a[n], {n, 1, 100}] (* _Jean-François Alcover_, Mar 09 2015 *)"""@en .
+

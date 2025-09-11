@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.798853Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 835}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000548 a seq:Sequence ;
+    rdfs:label "A000548"@en ;
+    seq:hasTextList ( seq:A000548_I_1_20180620T013415 seq:A000548_N_1_20180620T013415 seq:A000548_C_1_20180620T013415 seq:A000548_H_1_20180620T013415 seq:A000548_F_1_20180620T013415 seq:A000548_t_1_20180620T013415 seq:A000548_K_1_20180620T013415 seq:A000548_O_1_20180620T013415 seq:A000548_A_1_20180620T013415 seq:A000548_V_1_20180620T013415 ) .
+
+seq:A000548_A_1_20180620T013415 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_ and _J. H. Conway_"@en .
+
+seq:A000548_C_1_20180620T013415 a seq:Text ;
+    cnt:chars """Squares of nonhypotenuse numbers A004144(n). - _Lekraj Beedassy_, Jul 06 2004
+A143574(a(n)) = a(n); intersection of A000290 and A143575. - _Reinhard Zumkeller_, Aug 24 2008"""@en .
+
+seq:A000548_F_1_20180620T013415 a seq:Text ;
+    cnt:chars "A000290 \\ A134422. - _R. J. Mathar_, Feb 06 2011"@en .
+
+seq:A000548_H_1_20180620T013415 a seq:Text ;
+    cnt:chars """R. Zumkeller, <a href="/A000548/b000548.txt">Table of n, a(n) for n = 1..1000</a>
+<a href="/index/Su#ssq">Index entries for sequences related to sums of squares</a>"""@en .
+
+seq:A000548_I_1_20180620T013415 a seq:Text ;
+    cnt:chars "#25 Jun 20 2018 01:34:15"@en .
+
+seq:A000548_K_1_20180620T013415 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000548_N_1_20180620T013415 a seq:Text ;
+    cnt:chars "Squares that are not the sum of 2 nonzero squares."@en .
+
+seq:A000548_O_1_20180620T013415 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000548_V_1_20180620T013415 a seq:Text ;
+    cnt:chars "1,4,9,16,36,49,64,81,121,144,196,256,324,361,441,484,529,576,729,784,961,1024,1089,1296,1444,1764,1849,1936,2116,2209,2304,2401,2916,3136,3249,3481,3844,3969,4096,4356,4489"@en .
+
+seq:A000548_t_1_20180620T013415 a seq:Text ;
+    cnt:chars "okQ[n_] := n == 1 || AllTrue[FactorInteger[n][[All, 1]], Mod[#, 4] != 1& ]; A000548 = Select[Range[100], okQ]^2 (* _Jean-François Alcover_, Feb 09 2016 *)"@en .
+

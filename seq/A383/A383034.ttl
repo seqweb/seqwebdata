@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.651092Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 809}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383034 a seq:Sequence ;
+    rdfs:label "A383034"@en ;
+    seq:hasTextList ( seq:A383034_I_1_20250413T112630 seq:A383034_N_1_20250413T112630 seq:A383034_H_1_20250413T112630 seq:A383034_F_1_20250413T112630 seq:A383034_Y_1_20250413T112630 seq:A383034_K_1_20250413T112630 seq:A383034_O_1_20250413T112630 seq:A383034_A_1_20250413T112630 seq:A383034_V_1_20250413T112630 ) .
+
+seq:A383034_A_1_20250413T112630 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 13 2025"@en .
+
+seq:A383034_F_1_20250413T112630 a seq:Text ;
+    cnt:chars """a(n) = (1/n) * (2^n - 1 + Sum_{d<n and d|n} (-1)^(n/d) * d * a(d)).
+a(n) = A306156(n) - A209229(n).
+Product_{k>=1} (1 + x^k)^a(k) = (1 - x)/(1 - 2*x)."""@en .
+
+seq:A383034_H_1_20250413T112630 a seq:Text ;
+    cnt:chars """Seiichi Manyama, <a href="/A383034/b383034.txt">Table of n, a(n) for n = 1..3000</a>
+Christian G. Bower, <a href="https://oeis.org/transforms_pari.txt">PARI programs for transforms</a>, 2007.
+N. J. A. Sloane, <a href="/transforms.txt">Maple programs for transforms</a>, 2001-2020."""@en .
+
+seq:A383034_I_1_20250413T112630 a seq:Text ;
+    cnt:chars "#16 Apr 13 2025 11:26:30"@en .
+
+seq:A383034_K_1_20250413T112630 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383034_N_1_20250413T112630 a seq:Text ;
+    cnt:chars "Inverse Weigh transform of 2^(n-1)."@en .
+
+seq:A383034_O_1_20250413T112630 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383034_V_1_20250413T112630 a seq:Text ;
+    cnt:chars "1,2,2,5,6,11,18,35,56,105,186,346,630,1179,2182,4115,7710,14588,27594,52482,99858,190743,364722,699216,1342176,2581425,4971008,9587574,18512790,35792449,69273666,134219795,260300986,505294125,981706806,1908881548,3714566310"@en .
+
+seq:A383034_Y_1_20250413T112630 a seq:Text ;
+    cnt:chars """Column k=2 of A383033.
+Cf. A000079, A209229, A306156."""@en .
+

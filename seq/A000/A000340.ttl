@@ -1,0 +1,86 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.315197Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 3976}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000340 a seq:Sequence ;
+    rdfs:label "A000340"@en ;
+    seq:hasTextList ( seq:A000340_I_1_20250123T124112 seq:A000340_N_1_20250123T124112 seq:A000340_C_1_20250123T124112 seq:A000340_D_1_20250123T124112 seq:A000340_H_1_20250123T124112 seq:A000340_F_1_20250123T124112 seq:A000340_e_1_20250123T124112 seq:A000340_p_1_20250123T124112 seq:A000340_t_1_20250123T124112 seq:A000340_o_1_20250123T124112 seq:A000340_Y_1_20250123T124112 seq:A000340_K_1_20250123T124112 seq:A000340_O_1_20250123T124112 seq:A000340_A_1_20250123T124112 seq:A000340_V_1_20250123T124112 ) .
+
+seq:A000340_A_1_20250123T124112 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Simon Plouffe_"@en .
+
+seq:A000340_C_1_20250123T124112 a seq:Text ;
+    cnt:chars """From _Johannes W. Meijer_, Feb 20 2009: (Start)
+Second right hand column (n-m=1) of the A156920 triangle.
+The generating function of this sequence enabled the analysis of the polynomials A156921 and A156925.
+(End)
+Partial sums of A003462, and thus the second partial sums of A000244 (3^n). Also column k=2 of A106516. - _John Keith_, Jan 04 2022"""@en .
+
+seq:A000340_D_1_20250123T124112 a seq:Text ;
+    cnt:chars """F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000340_F_1_20250123T124112 a seq:Text ;
+    cnt:chars """G.f.: 1/((1-3*x)*(1-x)^2).
+a(n) = (3^(n+2) - 2*n - 5)/4.
+a(n) = Sum_{k=0..n+1} (n-k+1)*3^k = Sum_{k=0..n+1} k*3^(n-k+1). - _Paul Barry_, Jul 30 2004
+a(n) = Sum_{k=0..n} binomial(n+2, k+2)*2^k. - _Paul Barry_, Jul 30 2004
+a(-1)=0, a(0)=1, a(n) = 4*a(n-1) - 3*a(n-2) + 1. - _Miklos Kristof_, Mar 09 2005
+a(n) = 5*a(n-1) - 7*a(n-2) + 3*a(n-3). - _Johannes W. Meijer_, Feb 20 2009
+a(-2 - n) = 3^-n * A014915(n). - _Michael Somos_, May 28 2014
+E.g.f.: exp(x)*(9*exp(2*x) - 2*x - 5)/4. - _Stefano Spezia_, Nov 09 2024"""@en .
+
+seq:A000340_H_1_20250123T124112 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000340/b000340.txt">Table of n, a(n) for n = 0..1000</a>
+Dillan Agrawal, Selena Ge, Jate Greene, Tanya Khovanova, Dohun Kim, Rajarshi Mandal, Tanish Parida, Anirudh Pulugurtha, Gordon Redwine, Soham Samanta, and Albert Xu, <a href="https://arxiv.org/abs/2501.06675">Chip-Firing on Infinite k-ary Trees</a>, arXiv:2501.06675 [math.CO], 2025. See pp. 9, 18.
+Shaoshi Chen, Hanqian Fang, Sergey Kitaev, and Candice X.T. Zhang, <a href="https://arxiv.org/abs/2411.02897">Patterns in Multi-dimensional Permutations</a>, arXiv:2411.02897 [math.CO], 2024. See p. 7.
+INRIA Algorithms Project, <a href="http://ecs.inria.fr/services/structure?nbr=389">Encyclopedia of Combinatorial Structures 389</a>
+Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992
+László Tóth, <a href="https://arxiv.org/abs/2002.06584">On Schizophrenic Patterns in b-ary Expansions of Some Irrational Numbers</a>, arXiv:2002.06584 [math.NT], 2020. Mentions this sequence. See also <a href="https://doi.org/10.1090/proc/14863">Proc. Amer. Math. Soc.</a> 148 (2020), 461-469.
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (5,-7,3)."""@en .
+
+seq:A000340_I_1_20250123T124112 a seq:Text ;
+    cnt:chars "M3882 N1592 #90 Jan 23 2025 12:41:12"@en .
+
+seq:A000340_K_1_20250123T124112 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000340_N_1_20250123T124112 a seq:Text ;
+    cnt:chars "a(0)=1, a(n) = 3*a(n-1) + n + 1."@en .
+
+seq:A000340_O_1_20250123T124112 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000340_V_1_20250123T124112 a seq:Text ;
+    cnt:chars "1,5,18,58,179,543,1636,4916,14757,44281,132854,398574,1195735,3587219,10761672,32285032,96855113,290565357,871696090,2615088290,7845264891,23535794695,70607384108,211822152348,635466457069"@en .
+
+seq:A000340_Y_1_20250123T124112 a seq:Text ;
+    cnt:chars """From _Johannes W. Meijer_, Feb 20 2009: (Start)
+Cf. A156921, A156925, A156927, A156933. Other columns A156922, A156923, A156924.
+Equals A156920 second right hand column.
+Equals A142963 second right hand column divided by 2^n.
+Equals A156919 second right hand column divided by 2.
+(End)
+Cf. A014915.
+Equals column k=1 of A008971 (shifted). - _Jeremy Dover_, Jul 11 2021
+Cf. A000340, A003462 (first differences), A106516."""@en .
+
+seq:A000340_e_1_20250123T124112 a seq:Text ;
+    cnt:chars "G.f. = 1 + 5*x + 18*x^2 + 58*x^3 + 179*x^4 + 543*x^5 + 1636*x^6 + ..."@en .
+
+seq:A000340_o_1_20250123T124112 a seq:Text ;
+    cnt:chars "(Magma) [(3^(n+2)-2*n-5)/4: n in [0..30]]; // _Vincenzo Librandi_, Aug 15 2011"@en .
+
+seq:A000340_p_1_20250123T124112 a seq:Text ;
+    cnt:chars """a[ -1]:=0:a[0]:=1:for n from 1 to 50 do a[n]:=4*a[n-1]-3*a[n-2]+1 od: seq(a[n],n=0..50); # _Miklos Kristof_, Mar 09 2005
+A000340:=-1/(3*z-1)/(z-1)**2; # conjectured by _Simon Plouffe_ in his 1992 dissertation"""@en .
+
+seq:A000340_t_1_20250123T124112 a seq:Text ;
+    cnt:chars """a[ n_] := MatrixPower[ {{1, 0, 0}, {1, 1, 0}, {1, 1, 3}}, n + 1][[3, 1]]; (* _Michael Somos_, May 28 2014 *)
+RecurrenceTable[{a[0]==1,a[n]==3a[n-1]+n+1},a,{n,30}] (* or *) LinearRecurrence[{5,-7,3},{1,5,18},30] (* _Harvey P. Dale_, Jan 31 2017 *)"""@en .
+

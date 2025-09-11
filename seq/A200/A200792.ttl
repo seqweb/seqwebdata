@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.098963Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 983}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200792 a seq:Sequence ;
+    rdfs:label "A200792"@en ;
+    seq:hasTextList ( seq:A200792_I_1_20170206T084549 seq:A200792_N_1_20170206T084549 seq:A200792_H_1_20170206T084549 seq:A200792_e_1_20170206T084549 seq:A200792_p_1_20170206T084549 seq:A200792_t_1_20170206T084549 seq:A200792_Y_1_20170206T084549 seq:A200792_K_1_20170206T084549 seq:A200792_O_1_20170206T084549 seq:A200792_A_1_20170206T084549 seq:A200792_V_1_20170206T084549 ) .
+
+seq:A200792_A_1_20170206T084549 a seq:Text ;
+    cnt:chars "_Alois P. Heinz_, Nov 22 2011"@en .
+
+seq:A200792_H_1_20170206T084549 a seq:Text ;
+    cnt:chars "Alois P. Heinz, <a href=\"/A200792/b200792.txt\">Table of n, a(n) for n = 1..500</a>"@en .
+
+seq:A200792_I_1_20170206T084549 a seq:Text ;
+    cnt:chars "#13 Feb 06 2017 08:45:49"@en .
+
+seq:A200792_K_1_20170206T084549 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200792_N_1_20170206T084549 a seq:Text ;
+    cnt:chars "Number of partitions of n such that the number of parts and the greatest part are not coprime."@en .
+
+seq:A200792_O_1_20170206T084549 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A200792_V_1_20170206T084549 a seq:Text ;
+    cnt:chars "0,0,1,1,3,3,7,8,12,14,24,29,43,53,72,87,119,145,196,241,314,386,505,617,786,960,1202,1456,1813,2186,2698,3253,3975,4778,5827,6979,8463,10127,12217,14566,17509,20810,24895,29513,35128,41496,49220,57949,68445"@en .
+
+seq:A200792_Y_1_20170206T084549 a seq:Text ;
+    cnt:chars "Cf. A199887."@en .
+
+seq:A200792_e_1_20170206T084549 a seq:Text ;
+    cnt:chars """a(5) = 3: [1,1,1,2], [1,1,3], [1,4].
+a(6) = 3: [1,1,2,2], [1,2,3], [2,4].
+a(7) = 7: [1,1,1,1,1,2], [1,2,2,2], [2,2,3], [1,3,3], [1,1,1,4], [3,4], [1,6]."""@en .
+
+seq:A200792_p_1_20170206T084549 a seq:Text ;
+    cnt:chars """b:= proc(n, j, t) option remember;
+      add(b(n-i, i, t+1), i=j..iquo(n, 2))+
+      `if`(igcd(t, n)>1, 1, 0)
+    end:
+a:= n-> b(n, 1, 1):
+seq(a(n), n=1..60);"""@en .
+
+seq:A200792_t_1_20170206T084549 a seq:Text ;
+    cnt:chars "b[n_, j_, t_] := b[n, j, t] = Sum[b[n-i, i, t+1], {i, j, Quotient[n, 2]}] + If[GCD[t, n] > 1, 1, 0]; a[n_] := b[n, 1, 1]; Table[a[n], {n, 1, 60}] (* _Jean-François Alcover_, Feb 06 2017, translated from Maple *)"@en .
+

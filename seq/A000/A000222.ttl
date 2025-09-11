@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.718750Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1273}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000222 a seq:Sequence ;
+    rdfs:label "A000222"@en ;
+    seq:hasTextList ( seq:A000222_I_1_20190613T195611 seq:A000222_N_1_20190613T195611 seq:A000222_D_1_20190613T195611 seq:A000222_H_1_20190613T195611 seq:A000222_F_1_20190613T195611 seq:A000222_t_1_20190613T195611 seq:A000222_Y_1_20190613T195611 seq:A000222_K_1_20190613T195611 seq:A000222_O_1_20190613T195611 seq:A000222_A_1_20190613T195611 seq:A000222_V_1_20190613T195611 ) .
+
+seq:A000222_A_1_20190613T195611 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Simon Plouffe_"@en .
+
+seq:A000222_D_1_20190613T195611 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 198.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000222_F_1_20190613T195611 a seq:Text ;
+    cnt:chars """a(n) ~ 2/exp(2) * n!. - _Vaclav Kotesovec_, Sep 06 2014
+a(n)+2*a(n+p)+a(n+2*p) is divisible by p for any prime p. - _Mark van Hoeij_, Jun 13 2019"""@en .
+
+seq:A000222_H_1_20190613T195611 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000222/b000222.txt">Table of n, a(n) for n = 0..150</a>
+R. C. Read, <a href="/A000684/a000684_1.pdf">Letter to N. J. A. Sloane, Oct. 29, 1976</a>"""@en .
+
+seq:A000222_I_1_20190613T195611 a seq:Text ;
+    cnt:chars "M2602 N1029 #33 Jun 13 2019 19:56:11"@en .
+
+seq:A000222_K_1_20190613T195611 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000222_N_1_20190613T195611 a seq:Text ;
+    cnt:chars "Coefficients of ménage hit polynomials."@en .
+
+seq:A000222_O_1_20190613T195611 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000222_V_1_20190613T195611 a seq:Text ;
+    cnt:chars "0,0,1,3,6,38,213,1479,11692,104364,1036809,11344859,135548466,1755739218,24504637741,366596136399,5852040379224,99283915922264,1783921946910417,33840669046326579,675849838112277598,14174636583759324798"@en .
+
+seq:A000222_Y_1_20190613T195611 a seq:Text ;
+    cnt:chars "A diagonal of A058057."@en .
+
+seq:A000222_t_1_20190613T195611 a seq:Text ;
+    cnt:chars "max = 30; f[x_, y_] := Sum[n!*((x*y)^n/(1+x*(y-1))^(2*n+1)), {n, 0, max}]; t = MapIndexed[Take[#1, First[#2]]&, CoefficientList[Series[f[x, y], {x, 0, max}, {y, 0, max}], {x, y}]] ; a[0] = a[1] = 0; a[n_] := t[[n+1, n-1]]; Table[a[n], {n, 0, max}] (* _Jean-François Alcover_, Mar 11 2014, after _Vladeta Jovovic_ *)"@en .
+

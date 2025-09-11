@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.488149Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 920}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200995 a seq:Sequence ;
+    rdfs:label "A200995"@en ;
+    seq:hasTextList ( seq:A200995_I_1_20250216T083316 seq:A200995_N_1_20250216T083316 seq:A200995_C_1_20250216T083316 seq:A200995_H_1_20250216T083316 seq:A200995_e_1_20250216T083316 seq:A200995_t_1_20250216T083316 seq:A200995_Y_1_20250216T083316 seq:A200995_K_1_20250216T083316 seq:A200995_O_1_20250216T083316 seq:A200995_A_1_20250216T083316 seq:A200995_V_1_20250216T083316 ) .
+
+seq:A200995_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Jan 07 2013"@en .
+
+seq:A200995_C_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n+1) - a(n) <= 5 for all n."@en .
+
+seq:A200995_H_1_20250216T083316 a seq:Text ;
+    cnt:chars """Arkadiusz Wesolowski, <a href="/A200995/b200995.txt">Table of n, a(n) for n = 1..10000</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/LucasNumber.html">Lucas Number</a>
+<a href="/index/Lu#Lucas">Index entries for Lucas sequences</a>"""@en .
+
+seq:A200995_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#19 Feb 16 2025 08:33:16"@en .
+
+seq:A200995_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200995_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "Numbers not expressible as a product of Lucas numbers."@en .
+
+seq:A200995_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200995_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "5,10,13,15,17,19,20,23,25,26,30,31,34,35,37,38,39,40,41,43,45,46,50,51,52,53,55,57,59,60,61,62,65,67,68,69,70,71,73,74,75,78,79,80,82,83,85,86,89,90,91,92,93,95,97,100,101,102,103,104,105,106,107,109"@en .
+
+seq:A200995_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A000032. Complement of A200381."@en .
+
+seq:A200995_e_1_20250216T083316 a seq:Text ;
+    cnt:chars "65 = 5*13 is not the product of Lucas numbers, so 65 is in the sequence."@en .
+
+seq:A200995_t_1_20250216T083316 a seq:Text ;
+    cnt:chars "listMultiply[lst_] := Take[Union@Flatten@Table[lst[[i]]*lst[[j]], {i, Length[lst]}, {j, i}], 46]; A200381 = Nest[listMultiply, LucasL@Range[0, 9], 3]; Complement[Range@Last[A200381], A200381]"@en .
+

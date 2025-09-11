@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.688360Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 839}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383051 a seq:Sequence ;
+    rdfs:label "A383051"@en ;
+    seq:hasTextList ( seq:A383051_I_1_20250415T082538 seq:A383051_N_1_20250415T082538 seq:A383051_H_1_20250415T082538 seq:A383051_F_1_20250415T082538 seq:A383051_o_1_20250415T082538 seq:A383051_Y_1_20250415T082538 seq:A383051_K_1_20250415T082538 seq:A383051_O_1_20250415T082538 seq:A383051_A_1_20250415T082538 seq:A383051_V_1_20250415T082538 ) .
+
+seq:A383051_A_1_20250415T082538 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 14 2025"@en .
+
+seq:A383051_F_1_20250415T082538 a seq:Text ;
+    cnt:chars """a(n) = Sum_{k=0..n} (k+1)^n * Stirling1(n,k).
+a(n) = n! * [x^n] Sum_{k>=0} (k+1)^n * log(1+x)^k / k!.
+a(n) = n! * [x^n] (1+x) * Sum_{k=0..n} Stirling2(n+1,k+1) * log(1+x)^k."""@en .
+
+seq:A383051_H_1_20250415T082538 a seq:Text ;
+    cnt:chars """Christian G. Bower, <a href="https://oeis.org/transforms_pari.txt">PARI programs for transforms</a>, 2007.
+N. J. A. Sloane, <a href="/transforms.txt">Maple programs for transforms</a>, 2001-2020."""@en .
+
+seq:A383051_I_1_20250415T082538 a seq:Text ;
+    cnt:chars "#13 Apr 15 2025 08:25:38"@en .
+
+seq:A383051_K_1_20250415T082538 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A383051_N_1_20250415T082538 a seq:Text ;
+    cnt:chars "a(n) is the n-th term of the inverse Stirling transform of j-> (j+1)^n."@en .
+
+seq:A383051_O_1_20250415T082538 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A383051_V_1_20250415T082538 a seq:Text ;
+    cnt:chars "1,2,5,-1,-116,984,16400,-788418,5474016,941115360,-51647682648,-264087895512,244846563852864,-16953959408998080,-436871956049596800,219647419965976413744,-20283048895473275917824,-877465277974899660349440,545297904370739513319183360"@en .
+
+seq:A383051_Y_1_20250415T082538 a seq:Text ;
+    cnt:chars """Main diagonal of A383049.
+Cf. A320082, A367820."""@en .
+
+seq:A383051_o_1_20250415T082538 a seq:Text ;
+    cnt:chars "(PARI) a(n) = sum(k=0, n, (k+1)^n*stirling(n, k, 1));"@en .
+

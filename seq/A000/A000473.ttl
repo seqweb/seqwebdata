@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.629766Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1571}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000473 a seq:Sequence ;
+    rdfs:label "A000473"@en ;
+    seq:hasTextList ( seq:A000473_I_1_20210328T193101 seq:A000473_N_1_20210328T193101 seq:A000473_D_1_20210328T193101 seq:A000473_H_1_20210328T193101 seq:A000473_F_1_20210328T193101 seq:A000473_t_1_20210328T193101 seq:A000473_o_1_20210328T193101 seq:A000473_Y_1_20210328T193101 seq:A000473_K_1_20210328T193101 seq:A000473_O_1_20210328T193101 seq:A000473_A_1_20210328T193101 seq:A000473_E_1_20210328T193101 seq:A000473_V_1_20210328T193101 ) .
+
+seq:A000473_A_1_20210328T193101 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000473_D_1_20210328T193101 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+T. R. S. Walsh, Combinatorial Enumeration of Non-Planar Maps. Ph.D. Dissertation, Univ. of Toronto, 1971."""@en .
+
+seq:A000473_E_1_20210328T193101 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000473_F_1_20210328T193101 a seq:Text ;
+    cnt:chars "G.f.: x^3*(1-sqrt(1-4*x))*(17+16*x-(10+4*x)*sqrt(1-4*x))/(1-4*x)^(11/2). - _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000473_H_1_20210328T193101 a seq:Text ;
+    cnt:chars """Andrew Howroyd, <a href="/A000473/b000473.txt">Table of n, a(n) for n = 4..500</a>
+W. T. Tutte, <a href="http://dx.doi.org/10.1090/S0002-9904-1968-11877-4">On the enumeration of planar maps</a>, Bull. Amer. Math. Soc. 74 1968 64-74.
+T. R. S. Walsh and A. B. Lehman, <a href="http://dx.doi.org/10.1016/0095-8956(72)90056-1">Counting rooted maps by genus</a>, J. Comb. Thy B13 (1972), 122-141 and 192-218.
+<a href="/A007401/a007401_1.pdf">Notes</a>"""@en .
+
+seq:A000473_I_1_20210328T193101 a seq:Text ;
+    cnt:chars "M4953 N2122 #33 Mar 28 2021 19:31:01"@en .
+
+seq:A000473_K_1_20210328T193101 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000473_N_1_20210328T193101 a seq:Text ;
+    cnt:chars "Number of genus 0 rooted maps with 5 faces and n vertices."@en .
+
+seq:A000473_O_1_20210328T193101 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000473_V_1_20210328T193101 a seq:Text ;
+    cnt:chars "14,386,5868,65954,614404,5030004,37460376,259477218,1697186964,10596579708,63663115880,370293754740,2095108370600,11574690111400,62629794691632,332742342741090,1739371969822260,8961709528660140,45576855706440520,229087231033907708"@en .
+
+seq:A000473_Y_1_20210328T193101 a seq:Text ;
+    cnt:chars """Column 5 of A269920.
+Column 0 of A270409."""@en .
+
+seq:A000473_o_1_20210328T193101 a seq:Text ;
+    cnt:chars "(PARI) seq(n)={my(g=sqrt(1-4*x + O(x*x^n))); Vec((1-g)*(17+16*x-(10+4*x)*g)/((1-4*x)^5*g))} \\\\ _Andrew Howroyd_, Mar 28 2021"@en .
+
+seq:A000473_t_1_20210328T193101 a seq:Text ;
+    cnt:chars "CoefficientList[(1/x)(1-Sqrt[1-4x])(17+16x-(10+4x)Sqrt[1-4x])/(1-4x)^(11/2) + O[x]^36, x] (* _Jean-François Alcover_, Feb 08 2016 *)"@en .
+

@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.884379Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1197}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200059 a seq:Sequence ;
+    rdfs:label "A200059"@en ;
+    seq:hasTextList ( seq:A200059_I_1_20180517T105946 seq:A200059_N_1_20180517T105946 seq:A200059_C_1_20180517T105946 seq:A200059_H_1_20180517T105946 seq:A200059_F_1_20180517T105946 seq:A200059_e_1_20180517T105946 seq:A200059_Y_1_20180517T105946 seq:A200059_K_1_20180517T105946 seq:A200059_O_1_20180517T105946 seq:A200059_A_1_20180517T105946 seq:A200059_V_1_20180517T105946 ) .
+
+seq:A200059_A_1_20180517T105946 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 13 2011"@en .
+
+seq:A200059_C_1_20180517T105946 a seq:Text ;
+    cnt:chars "Row 5 of A200057."@en .
+
+seq:A200059_F_1_20180517T105946 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 2*a(n-1) -a(n-3) -2*a(n-5) +2*a(n-6) +a(n-8) -2*a(n-10) +a(n-11).
+Empirical g.f.: 2*x*(3 + 28*x + 76*x^2 + 135*x^3 + 168*x^4 + 159*x^5 + 105*x^6 + 51*x^7 + 10*x^8 + x^9) / ((1 - x)^5*(1 + x)^2*(1 + x^2)*(1 + x + x^2)). - _Colin Barker_, May 17 2018"""@en .
+
+seq:A200059_H_1_20180517T105946 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200059/b200059.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200059_I_1_20180517T105946 a seq:Text ;
+    cnt:chars "#8 May 17 2018 10:59:46"@en .
+
+seq:A200059_K_1_20180517T105946 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200059_N_1_20180517T105946 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..4) of 5 elements with zero sum and elements alternately strictly increasing and strictly decreasing."@en .
+
+seq:A200059_O_1_20180517T105946 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200059_V_1_20180517T105946 a seq:Text ;
+    cnt:chars "6,68,288,840,1948,3914,7074,11862,18732,28244,40970,57598,78816,105444,138284,178282,226362,283598,351026,429852,521230,626492,746910,883944,1038982,1213616,1409348,1627896,1870884,2140158,2437454,2764750,3123900"@en .
+
+seq:A200059_Y_1_20180517T105946 a seq:Text ;
+    cnt:chars "Cf. A200057."@en .
+
+seq:A200059_e_1_20180517T105946 a seq:Text ;
+    cnt:chars """Some solutions for n=6:
+..1...-1....3...-6...-4...-1....1....4....6...-3....5...-1....1....1....1...-2
+..0....2...-6....2....3...-5....2...-6...-1...-5...-6....2...-1....5...-2....6
+..1...-2....4...-3...-3....5...-6....3....3....5....6...-4....4...-2....2...-5
+.-3....5...-5....4....4...-1....4...-3...-5....1...-4....2...-3...-1...-5....1
+..1...-4....4....3....0....2...-1....2...-3....2...-1....1...-1...-3....4....0"""@en .
+

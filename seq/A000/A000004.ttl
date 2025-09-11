@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.433046Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1659}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000004 a seq:Sequence ;
+    rdfs:label "A000004"@en ;
+    seq:hasTextList ( seq:A000004_I_1_20230113T092626 seq:A000004_N_1_20230113T092626 seq:A000004_H_1_20230113T092626 seq:A000004_F_1_20230113T092626 seq:A000004_p_1_20230113T092626 seq:A000004_t_1_20230113T092626 seq:A000004_o_1_20230113T092626 seq:A000004_Y_1_20230113T092626 seq:A000004_K_1_20230113T092626 seq:A000004_O_1_20230113T092626 seq:A000004_A_1_20230113T092626 seq:A000004_V_1_20230113T092626 ) .
+
+seq:A000004_A_1_20230113T092626 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000004_F_1_20230113T092626 a seq:Text ;
+    cnt:chars "a(n) = 0 for all integer n."@en .
+
+seq:A000004_H_1_20230113T092626 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, <a href="/A000004/b000004.txt">Table of n, a(n) for n = 0..1000</a> [Useful when <a href="/plot2.html">plotting one sequence against another</a>.]
+Luis Manuel Rivera, <a href="http://arxiv.org/abs/1406.3081">Integer sequences and k-commuting permutations</a>, arXiv preprint arXiv:1406.3081 [math.CO], 2014-2015.
+N. J. A. Sloane, <a href="https://arxiv.org/abs/2301.03149">"A Handbook of Integer Sequences" Fifty Years Later</a>, arXiv:2301.03149 [math.NT], 2023, p. 10.
+<a href="/index/Ch#char_fns">Index entries for characteristic functions</a>
+<a href="/index/Cor#core">Index entries for "core" sequences</a>
+<a href="/index/Rec#order_01">Index entries for linear recurrences with constant coefficients</a>, signature (1).
+<a href="/index/Fi#FIXEDPOINTS">Index entries for sequences that are fixed points of mappings</a>"""@en .
+
+seq:A000004_I_1_20230113T092626 a seq:Text ;
+    cnt:chars "M0000 #128 Jan 13 2023 09:26:26"@en .
+
+seq:A000004_K_1_20230113T092626 a seq:Text ;
+    cnt:chars "core,easy,nonn,mult"@en .
+
+seq:A000004_N_1_20230113T092626 a seq:Text ;
+    cnt:chars "The zero sequence."@en .
+
+seq:A000004_O_1_20230113T092626 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000004_V_1_20230113T092626 a seq:Text ;
+    cnt:chars "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"@en .
+
+seq:A000004_Y_1_20230113T092626 a seq:Text ;
+    cnt:chars """Cf. A000012 (all 1's), A007395 (all 2's), A010701 (all 3's).
+Cf. A000007(n) = 0^n: characteristic function of {0}."""@en .
+
+seq:A000004_o_1_20230113T092626 a seq:Text ;
+    cnt:chars """(Magma) [ 0 : n in [0..100]];
+(PARI) vector(100,n,0)
+(R) rep(0,100)
+(Haskell)
+a000004 = const 0
+a000004_list = repeat 0  -- _Reinhard Zumkeller_, May 07 2012
+(Python) print([0 for n in range(102)]) # _Michael S. Branicky_, Apr 04 2022"""@en .
+
+seq:A000004_p_1_20230113T092626 a seq:Text ;
+    cnt:chars "A000004 := n->0;"@en .
+
+seq:A000004_t_1_20230113T092626 a seq:Text ;
+    cnt:chars """a[ n_] := 0;
+Table[0, {n, 100}] (* _Matthew House_, Jul 14 2015 *)
+LinearRecurrence[{1},{0},102] (* _Ray Chandler_, Jul 15 2015 *)"""@en .
+

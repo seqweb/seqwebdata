@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.515938Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1506}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000423 a seq:Sequence ;
+    rdfs:label "A000423"@en ;
+    seq:hasTextList ( seq:A000423_I_1_20220804T055325 seq:A000423_N_1_20220804T055325 seq:A000423_C_1_20220804T055325 seq:A000423_D_1_20220804T055325 seq:A000423_H_1_20220804T055325 seq:A000423_F_1_20220804T055325 seq:A000423_t_1_20220804T055325 seq:A000423_Y_1_20220804T055325 seq:A000423_K_1_20220804T055325 seq:A000423_O_1_20220804T055325 seq:A000423_A_1_20220804T055325 seq:A000423_E_1_20220804T055325 seq:A000423_V_1_20220804T055325 ) .
+
+seq:A000423_A_1_20220804T055325 a seq:Text ;
+    cnt:chars "R. Muller"@en .
+
+seq:A000423_C_1_20220804T055325 a seq:Text ;
+    cnt:chars """Sequence contains 2, 3 and all numbers of form 2^a*3^b where a >= 1 and b >= 1. - _David W. Wilson_, Aug 15 1996
+Main entry for this sequence is A033845, which is this sequence starting at 6. - _Charles R Greathouse IV_, Feb 27 2012"""@en .
+
+seq:A000423_D_1_20220804T055325 a seq:Text ;
+    cnt:chars """Amarnath Murthy, The sum of the reciprocals of the Smarandache multiplicative sequence, (to be published in Smarandache Notions Journal).
+F. Smarandache, "Properties of the Numbers", University of Craiova Archives, 1975; Arizona State University Special Collections, Tempe, AZ
+M. Myers, Smarandache Multiplicative Numbers, in Memorables 1998, Bristol Banner Books, Bristol, p. 37, 1998."""@en .
+
+seq:A000423_E_1_20220804T055325 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_, Aug 15 1996"@en .
+
+seq:A000423_F_1_20220804T055325 a seq:Text ;
+    cnt:chars "Sum_{n>=1} 1/a(n) = 4/3. - _Amiram Eldar_, Jul 31 2022"@en .
+
+seq:A000423_H_1_20220804T055325 a seq:Text ;
+    cnt:chars "F. Smarandache, <a href=\"http://www.gallup.unm.edu/~smarandache/Sequences-book.pdf\">Sequences of Numbers Involved in Unsolved Problems</a>."@en .
+
+seq:A000423_I_1_20220804T055325 a seq:Text ;
+    cnt:chars "#27 Aug 04 2022 05:53:25"@en .
+
+seq:A000423_K_1_20220804T055325 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000423_N_1_20220804T055325 a seq:Text ;
+    cnt:chars "a(n) is smallest number > a(n-1) of form a(i)*a(j), i < j < n."@en .
+
+seq:A000423_O_1_20220804T055325 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000423_V_1_20220804T055325 a seq:Text ;
+    cnt:chars "2,3,6,12,18,24,36,48,54,72,96,108,144,162,192,216,288,324,384,432,486,576,648,768,864,972,1152,1296,1458,1536,1728,1944,2304,2592,2916,3072,3456,3888,4374,4608,5184,5832,6144,6912,7776,8748,9216,10368,11664"@en .
+
+seq:A000423_Y_1_20220804T055325 a seq:Text ;
+    cnt:chars """Subsequence of A003586 (3-smooth numbers).
+A007335 and A033845 are subsequences."""@en .
+
+seq:A000423_t_1_20220804T055325 a seq:Text ;
+    cnt:chars "a[1] = 2; a[2] = 3; a[n_] := a[n] = For[k = a[n - 1] + 1, True, k++, If[ AnyTrue[Table[a[i] a[j], {i, 1, n-2}, {j, i+1, n-1}] // Flatten, # == k& ], Return[k]]]; Table[an = a[n]; Print[an]; an, {n, 1, 50}] (* _Jean-François Alcover_, Feb 08 2016 *)"@en .
+

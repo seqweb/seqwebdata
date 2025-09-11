@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.106611Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1051}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200796 a seq:Sequence ;
+    rdfs:label "A200796"@en ;
+    seq:hasTextList ( seq:A200796_I_1_20120331T123640 seq:A200796_N_1_20120331T123640 seq:A200796_C_1_20120331T123640 seq:A200796_H_1_20120331T123640 seq:A200796_F_1_20120331T123640 seq:A200796_e_1_20120331T123640 seq:A200796_K_1_20120331T123640 seq:A200796_O_1_20120331T123640 seq:A200796_A_1_20120331T123640 seq:A200796_V_1_20120331T123640 ) .
+
+seq:A200796_A_1_20120331T123640 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 22 2011"@en .
+
+seq:A200796_C_1_20120331T123640 a seq:Text ;
+    cnt:chars "Column 3 of A200801"@en .
+
+seq:A200796_F_1_20120331T123640 a seq:Text ;
+    cnt:chars "Empirical: a(n) = 60*a(n-1) -17*a(n-2) -964*a(n-3) -2509*a(n-4) +968*a(n-5) +23125*a(n-6) +31652*a(n-7) -4566*a(n-8) -17118*a(n-9) -29646*a(n-10) -74826*a(n-11) -64125*a(n-12) -13932*a(n-13) +4131*a(n-14) +1458*a(n-15) for n>16"@en .
+
+seq:A200796_H_1_20120331T123640 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200796/b200796.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200796_I_1_20120331T123640 a seq:Text ;
+    cnt:chars "#5 Mar 31 2012 12:36:40"@en .
+
+seq:A200796_K_1_20120331T123640 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200796_N_1_20120331T123640 a seq:Text ;
+    cnt:chars "Number of nX3 0..3 arrays with values 0..3 introduced in row major order and each element equal to no more than two horizontal and vertical neighbors"@en .
+
+seq:A200796_O_1_20120331T123640 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200796_V_1_20120331T123640 a seq:Text ;
+    cnt:chars "5,178,9880,583813,34679839,2060918000,122478253815,7278777317468,432571571252989,25707362563355693,1527766813187552208,90793889493222901029,5395804057415427972197,320668071260622898796015"@en .
+
+seq:A200796_e_1_20120331T123640 a seq:Text ;
+    cnt:chars """Some solutions for n=4
+..0..0..0....0..0..1....0..0..0....0..0..1....0..0..1....0..0..0....0..0..1
+..1..2..2....0..2..2....1..2..2....2..0..1....1..2..0....1..2..0....1..2..0
+..0..0..3....1..2..3....1..2..2....2..3..3....3..0..0....3..1..1....1..3..3
+..2..3..2....0..0..0....2..0..1....3..3..2....3..0..1....0..3..2....3..2..0"""@en .
+

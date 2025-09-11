@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.987783Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1313}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200739 a seq:Sequence ;
+    rdfs:label "A200739"@en ;
+    seq:hasTextList ( seq:A200739_I_1_20250428T151932 seq:A200739_N_1_20250428T151932 seq:A200739_C_1_20250428T151932 seq:A200739_H_1_20250428T151932 seq:A200739_F_1_20250428T151932 seq:A200739_p_1_20250428T151932 seq:A200739_t_1_20250428T151932 seq:A200739_Y_1_20250428T151932 seq:A200739_K_1_20250428T151932 seq:A200739_O_1_20250428T151932 seq:A200739_A_1_20250428T151932 seq:A200739_V_1_20250428T151932 ) .
+
+seq:A200739_A_1_20250428T151932 a seq:Text ;
+    cnt:chars "_Alois P. Heinz_, Nov 21 2011"@en .
+
+seq:A200739_C_1_20250428T151932 a seq:Text ;
+    cnt:chars "_Peter A. Lawrence_ (see links) has posted a challenge to find a 3x3 integer matrix with \"smallish\" elements whose powers generate a sequence that is not in the OEIS. This sequence is one of the solutions found."@en .
+
+seq:A200739_F_1_20250428T151932 a seq:Text ;
+    cnt:chars """G.f.: (-x^2+5*x-1)/(x^3-x^2+5*x-1).
+Term (1,1) in the 3x3 matrix [0,1,0; 0,0,1; 1,-1,5]^n."""@en .
+
+seq:A200739_H_1_20250428T151932 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A200739/b200739.txt">Table of n, a(n) for n = 0..450</a>
+Peter Lawrence et al., <a href="https://web.archive.org/web/20220127112002/http://list.seqfan.eu/pipermail/seqfan/2011-November/008535.html">sequence challenge</a> and follow-up messages on the SeqFan list, Nov 21 2011
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (5,-1,1)"""@en .
+
+seq:A200739_I_1_20250428T151932 a seq:Text ;
+    cnt:chars "#23 Apr 28 2025 15:19:32"@en .
+
+seq:A200739_K_1_20250428T151932 a seq:Text ;
+    cnt:chars "nonn,easy,changed"@en .
+
+seq:A200739_N_1_20250428T151932 a seq:Text ;
+    cnt:chars "Expansion of (-x^2+5*x-1)/(x^3-x^2+5*x-1)."@en .
+
+seq:A200739_O_1_20250428T151932 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A200739_V_1_20250428T151932 a seq:Text ;
+    cnt:chars "1,0,0,1,5,24,116,561,2713,13120,63448,306833,1483837,7175800,34701996,167818017,811563889,3924703424,18979771248,91785716705,443873515701,2146561633048,10380720366244,50200913713873,242770409836169,1174031855833216,5677589783043784"@en .
+
+seq:A200739_Y_1_20250428T151932 a seq:Text ;
+    cnt:chars "Cf. A200676."@en .
+
+seq:A200739_p_1_20250428T151932 a seq:Text ;
+    cnt:chars """a:= n-> (<<0|1|0>, <0|0|1>, <1|-1|5>>^n)[1, 1]:
+seq(a(n), n=0..30);"""@en .
+
+seq:A200739_t_1_20250428T151932 a seq:Text ;
+    cnt:chars "CoefficientList[Series[(-x^2 + 5 x - 1)/(x^3 - x^2 + 5 x - 1), {x, 0, 30}], x] (* or *) LinearRecurrence[{5,-1,1},{1,0,0},30] (* _Harvey P. Dale_, Nov 26 2017 *)"@en .
+

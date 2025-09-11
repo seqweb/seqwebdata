@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.698489Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2048}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000214 a seq:Sequence ;
+    rdfs:label "A000214"@en ;
+    seq:hasTextList ( seq:A000214_I_1_20190414T021009 seq:A000214_N_1_20190414T021009 seq:A000214_C_1_20190414T021009 seq:A000214_D_1_20190414T021009 seq:A000214_H_1_20190414T021009 seq:A000214_Y_1_20190414T021009 seq:A000214_K_1_20190414T021009 seq:A000214_O_1_20190414T021009 seq:A000214_A_1_20190414T021009 seq:A000214_E_1_20190414T021009 seq:A000214_V_1_20190414T021009 ) .
+
+seq:A000214_A_1_20190414T021009 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000214_C_1_20190414T021009 a seq:Text ;
+    cnt:chars "AG denotes affine group."@en .
+
+seq:A000214_D_1_20190414T021009 a seq:Text ;
+    cnt:chars """V. Jovovic, The cycle indices polynomials of some classical groups, Belgrade, 1995, unpublished.
+R. J. Lechner, Harmonic Analysis of Switching Functions, in A. Mukhopadhyay, ed., Recent Developments in Switching Theory, Ac Press, 1971, pp. 121-254, esp. p. 186.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000214_E_1_20190414T021009 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_"@en .
+
+seq:A000214_H_1_20190414T021009 a seq:Text ;
+    cnt:chars """Kenny Lau, <a href="/A000214/b000214.txt">Table of n, a(n) for n = 1..10</a> (one digit in a(9) corrected by _Georg Fischer_, Apr 13 2019)
+H. Fripertinger, <a href="http://www-ang.kfunigraz.ac.at/~fripert/linaffproj.html">Cycle indices of linear, affine and projective groups</a>, Linear Algebra and Its Applications, 263, 133-156, 1997.
+H. Fripertinger, <a href="http://www-ang.kfunigraz.ac.at/~fripert/fga/k1zyklap.html">Implementation of cycle index of linear group</a>
+M. A. Harrison, <a href="http://hdl.handle.net/2027.42/5405">On the classification of Boolean functions by the general linear and affine groups</a>, Technical Note, (1962).
+M. A. Harrison, <a href="https://www.jstor.org/stable/2946369">On the classification of Boolean functions by the general linear and affine groups</a>, J. Soc. Industrial and Applied Mathematics, 12.2 (1964), 285-299. [This journal later became the SIAM Journal]
+M. A. Harrison, <a href="https://doi.org/10.1145/321312.321325">On asymptotic estimates in switching and automata theory</a>, J. Assoc. Comput. Mach. 13 1966, 151-157.
+Vladeta Jovovic, <a href="/A062766/a062766.pdf">Cycle indices</a>
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000214_I_1_20190414T021009 a seq:Text ;
+    cnt:chars "M2470 N0980 #38 Apr 14 2019 02:10:09"@en .
+
+seq:A000214_K_1_20190414T021009 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000214_N_1_20190414T021009 a seq:Text ;
+    cnt:chars "Number of equivalence classes of Boolean functions of n variables under action of AG(n,2)."@en .
+
+seq:A000214_O_1_20190414T021009 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000214_V_1_20190414T021009 a seq:Text ;
+    cnt:chars "3,5,10,32,382,15768919,16224999167506438730294,84575066435667906978109556031081616704183639810103015118"@en .
+
+seq:A000214_Y_1_20190414T021009 a seq:Text ;
+    cnt:chars "Cf. A000585."@en .
+

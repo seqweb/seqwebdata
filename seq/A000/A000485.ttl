@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.657972Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1697}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000485 a seq:Sequence ;
+    rdfs:label "A000485"@en ;
+    seq:hasTextList ( seq:A000485_I_1_20230324T090408 seq:A000485_N_1_20230324T090408 seq:A000485_D_1_20230324T090408 seq:A000485_H_1_20230324T090408 seq:A000485_F_1_20230324T090408 seq:A000485_p_1_20230324T090408 seq:A000485_t_1_20230324T090408 seq:A000485_Y_1_20230324T090408 seq:A000485_K_1_20230324T090408 seq:A000485_O_1_20230324T090408 seq:A000485_A_1_20230324T090408 seq:A000485_E_1_20230324T090408 seq:A000485_V_1_20230324T090408 ) .
+
+seq:A000485_A_1_20230324T090408 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000485_D_1_20230324T090408 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 138.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000485_E_1_20230324T090408 a seq:Text ;
+    cnt:chars "More terms from _Vladeta Jovovic_, Oct 19 2001"@en .
+
+seq:A000485_F_1_20230324T090408 a seq:Text ;
+    cnt:chars "G.f.: A(x) = B(x)^4*(16-19*B(x)+6*B(x)^2)/(1-B(x))^5, where B(x) is g.f. for rooted trees with n nodes, cf. A000081."@en .
+
+seq:A000485_H_1_20230324T090408 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000485/b000485.txt">Table of n, a(n) for n = 4..1000</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000485_I_1_20230324T090408 a seq:Text ;
+    cnt:chars "M5008 N2156 #42 Mar 24 2023 09:04:08"@en .
+
+seq:A000485_K_1_20230324T090408 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000485_N_1_20230324T090408 a seq:Text ;
+    cnt:chars "Number of partially labeled trees with n nodes (4 of which are labeled)."@en .
+
+seq:A000485_O_1_20230324T090408 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000485_V_1_20230324T090408 a seq:Text ;
+    cnt:chars "16,125,680,3135,13155,51873,195821,715614,2550577,8911942,30640888,103951415,348724844,1158722880,3818514232,12493703403,40620949971,131336770375,422536529249,1353341880777,4317248276746,13722302173753"@en .
+
+seq:A000485_Y_1_20230324T090408 a seq:Text ;
+    cnt:chars "Column k=4 of A034799."@en .
+
+seq:A000485_p_1_20230324T090408 a seq:Text ;
+    cnt:chars "b:= proc(n) option remember; if n<=1 then n else add(k*b(k)* s(n-1, k), k=1..n-1)/(n-1) fi end: s:= proc(n,k) option remember; add(b(n+1-j*k), j=1..iquo(n,k)) end: B:= proc(n) option remember; add(b(k)*x^k, k=1..n) end: a:= n-> coeff(series(B(n-3)^4*(16-19*B(n-3)+6*B(n-3)^2)/(1-B(n-3))^5, x=0, n+1), x,n): seq(a(n), n=4..25); # _Alois P. Heinz_, Aug 21 2008"@en .
+
+seq:A000485_t_1_20230324T090408 a seq:Text ;
+    cnt:chars "b[n_] := b[n] = If[n <= 1, n, Sum[k*b[k]*s[n-1, k], {k, 1, n-1}]/(n-1)]; s[n_, k_] := s[n, k] = Sum[b[n+1-j*k], {j, 1, Quotient[n, k]}]; B[n_] := B[n] = Sum[b[k]*x^k, {k, 1, n}]; a[n_] := SeriesCoefficient[B[n-3]^4*(16-19*B[n-3] + 6*B[n-3]^2)/(1-B[n-3])^5, {x, 0, n}]; Table[a[n], {n, 4, 25}] (* _Jean-François Alcover_, Mar 20 2014, after _Alois P. Heinz_ *)"@en .
+

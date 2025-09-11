@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.585201Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1108}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000879 a seq:Sequence ;
+    rdfs:label "A000879"@en ;
+    seq:hasTextList ( seq:A000879_I_1_20240421T230119 seq:A000879_N_1_20240421T230119 seq:A000879_C_1_20240421T230119 seq:A000879_H_1_20240421T230119 seq:A000879_F_1_20240421T230119 seq:A000879_t_1_20240421T230119 seq:A000879_o_1_20240421T230119 seq:A000879_Y_1_20240421T230119 seq:A000879_K_1_20240421T230119 seq:A000879_O_1_20240421T230119 seq:A000879_A_1_20240421T230119 seq:A000879_E_1_20240421T230119 seq:A000879_V_1_20240421T230119 ) .
+
+seq:A000879_A_1_20240421T230119 a seq:Text ;
+    cnt:chars "gandalf(AT)hrn.office.ssi.net (James D. Ausfahl)"@en .
+
+seq:A000879_C_1_20240421T230119 a seq:Text ;
+    cnt:chars """a(n) is the least index i such that A052180(i) = prime(n). - _Labos Elemer_, May 14 2003
+Number of primes determined at the n-th step of the sieve of Eratosthenes. - _Jean-Christophe Hervé_, Oct 21 2013
+There are only 3 squares in the current data: 4, 9, 7745089. - _Michel Marcus_, Apr 07 2018
+There are no other squares up to a(780000). - _Giovanni Resta_, Apr 09 2018"""@en .
+
+seq:A000879_E_1_20240421T230119 a seq:Text ;
+    cnt:chars "Edited by _Ralf Stephan_, Aug 24 2004"@en .
+
+seq:A000879_F_1_20240421T230119 a seq:Text ;
+    cnt:chars "a(n) = A000720(A001248(n)). - _Michel Marcus_, Apr 07 2018"@en .
+
+seq:A000879_H_1_20240421T230119 a seq:Text ;
+    cnt:chars "Donovan Johnson, <a href=\"/A000879/b000879.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000879_I_1_20240421T230119 a seq:Text ;
+    cnt:chars "#50 Apr 21 2024 23:01:19"@en .
+
+seq:A000879_K_1_20240421T230119 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000879_N_1_20240421T230119 a seq:Text ;
+    cnt:chars "Number of primes < prime(n)^2."@en .
+
+seq:A000879_O_1_20240421T230119 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000879_V_1_20240421T230119 a seq:Text ;
+    cnt:chars "2,4,9,15,30,39,61,72,99,146,162,219,263,283,329,409,487,519,609,675,705,811,886,1000,1163,1252,1294,1381,1423,1523,1877,1976,2141,2190,2489,2547,2729,2915,3043,3241,3436,3512,3868,3945,4089,4164,4627,5106"@en .
+
+seq:A000879_Y_1_20240421T230119 a seq:Text ;
+    cnt:chars "Cf. A050216 (first differences), A089609, A052180, A000720, A001248, A000885, A054270 (primes of rank a(n))."@en .
+
+seq:A000879_o_1_20240421T230119 a seq:Text ;
+    cnt:chars "(PARI) a(n) = primepi(prime(n)^2); \\\\ _Michel Marcus_, Oct 28 2013"@en .
+
+seq:A000879_t_1_20240421T230119 a seq:Text ;
+    cnt:chars "PrimePi[Prime[Range[50]]^2] (* _Harvey P. Dale_, Jan 16 2013 *)"@en .
+

@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.420478Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1576}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000805 a seq:Sequence ;
+    rdfs:label "A000805"@en ;
+    seq:hasTextList ( seq:A000805_I_1_20220907T154453 seq:A000805_N_1_20220907T154453 seq:A000805_C_1_20220907T154453 seq:A000805_D_1_20220907T154453 seq:A000805_H_1_20220907T154453 seq:A000805_F_1_20220907T154453 seq:A000805_Y_1_20220907T154453 seq:A000805_K_1_20220907T154453 seq:A000805_O_1_20220907T154453 seq:A000805_A_1_20220907T154453 seq:A000805_E_1_20220907T154453 seq:A000805_V_1_20220907T154453 ) .
+
+seq:A000805_A_1_20220907T154453 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000805_C_1_20220907T154453 a seq:Text ;
+    cnt:chars "Sixth column of triangle A008305. - _Vladeta Jovovic_, Oct 03 2003"@en .
+
+seq:A000805_D_1_20220907T154453 a seq:Text ;
+    cnt:chars """Henryk Minc and Marvin Marcus, Permanents, Cambridge University Press, 1984, pp. 47-48.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000805_E_1_20220907T154453 a seq:Text ;
+    cnt:chars """More terms from _Vladeta Jovovic_, Oct 03 2003
+More terms from _Sean A. Irvine_, Jun 28 2011
+Missing term a(5) = 120 inserted by _Pontus von Brömssen_, Sep 07 2022"""@en .
+
+seq:A000805_F_1_20220907T154453 a seq:Text ;
+    cnt:chars "a(n) = 96+sum(b(i)*a(n-i),i=1..15) where b(i)=[2, 2, 1, 0, -4, -18, -16, -12, -10, -4, 4, 3, 2, 2, 1] for n>=21. - _Sean A. Irvine_, Jun 29 2011"@en .
+
+seq:A000805_H_1_20220907T154453 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000805/b000805.txt">Table of n, a(n) for n = 0..1001</a>
+N. Metropolis, M. L. Stein, and P. R. Stein, <a href="http://dx.doi.org/10.1016/S0021-9800(69)80058-X">Permanents of cyclic (0,1) matrices</a>, J. Combin. Theory, 7 (1969), 291-321.
+H. Minc, <a href="http://dx.doi.org/10.4153/CMB-1964-023-3">Permanents of (0,1)-circulants</a>, Canad. Math. Bull., 7 (1964), 253-263.
+<a href="/index/Mat#binmat">Index entries for sequences related to binary matrices</a>"""@en .
+
+seq:A000805_I_1_20220907T154453 a seq:Text ;
+    cnt:chars "M5471 N2369 #35 Sep 07 2022 15:44:53"@en .
+
+seq:A000805_K_1_20220907T154453 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000805_N_1_20220907T154453 a seq:Text ;
+    cnt:chars "Permanent of a certain cyclic n X n (0,1) matrix."@en .
+
+seq:A000805_O_1_20220907T154453 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000805_V_1_20220907T154453 a seq:Text ;
+    cnt:chars "1,1,2,6,24,120,720,1854,4738,12072,30818,79118,204448,528950,1370674,3557408,9244418,24043990,62573616,162925614,424377730,1105703640,2881483458,7510389278,19577689120,51038756326,133066443346,346944079632,904622495746,2358783572710,6150613767440,16038217209886"@en .
+
+seq:A000805_Y_1_20220907T154453 a seq:Text ;
+    cnt:chars "Cf. A000804. A column of A008305."@en .
+

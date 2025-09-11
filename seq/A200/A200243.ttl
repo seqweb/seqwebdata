@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.940881Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 960}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200243 a seq:Sequence ;
+    rdfs:label "A200243"@en ;
+    seq:hasTextList ( seq:A200243_I_1_20180521T110326 seq:A200243_N_1_20180521T110326 seq:A200243_C_1_20180521T110326 seq:A200243_H_1_20180521T110326 seq:A200243_e_1_20180521T110326 seq:A200243_t_1_20180521T110326 seq:A200243_o_1_20180521T110326 seq:A200243_K_1_20180521T110326 seq:A200243_O_1_20180521T110326 seq:A200243_A_1_20180521T110326 seq:A200243_V_1_20180521T110326 ) .
+
+seq:A200243_A_1_20180521T110326 a seq:Text ;
+    cnt:chars "_Jonathan Vos Post_, Nov 14 2011"@en .
+
+seq:A200243_C_1_20180521T110326 a seq:Text ;
+    cnt:chars "Bezdek asks: if the Euclidean 3-space is partitioned into convex cells each containing a unit ball, how should the shapes of the cells be designed to minimize the average surface area of the cells? He proves that the average surface area in question is always at least sqrt(192)."@en .
+
+seq:A200243_H_1_20180521T110326 a seq:Text ;
+    cnt:chars "Karoly Bezdek, <a href=\"http://arxiv.org/abs/1111.3092\">On a strong version of the Kepler conjecture</a>, arXiv:1111.3092v1 [math.MG], Nov 14, 2011."@en .
+
+seq:A200243_I_1_20180521T110326 a seq:Text ;
+    cnt:chars "#15 May 21 2018 11:03:26"@en .
+
+seq:A200243_K_1_20180521T110326 a seq:Text ;
+    cnt:chars "nonn,easy,cons"@en .
+
+seq:A200243_N_1_20180521T110326 a seq:Text ;
+    cnt:chars "Decimal expansion of sqrt(192)."@en .
+
+seq:A200243_O_1_20180521T110326 a seq:Text ;
+    cnt:chars "2,2"@en .
+
+seq:A200243_V_1_20180521T110326 a seq:Text ;
+    cnt:chars "1,3,8,5,6,4,0,6,4,6,0,5,5,1,0,1,8,3,4,8,2,1,9,5,7,0,7,3,2,0,4,6,9,7,8,9,3,5,5,4,2,4,4,2,0,3,0,4,8,3,0,4,5,0,2,4,4,4,6,4,5,5,8,3,5,6,1,5,4,6,4,1,3,5,2,7,0,4,0,0,2,9,6,6,4,9,1,6,9,4,9,4,0,5,7,9,8,8,6,0,5,4,0,5,0"@en .
+
+seq:A200243_e_1_20180521T110326 a seq:Text ;
+    cnt:chars "13.856406460551018348219570732046978935542442030483045024446455835615.... = 8*A002194."@en .
+
+seq:A200243_o_1_20180521T110326 a seq:Text ;
+    cnt:chars "(PARI) sqrt(192) \\\\ _Charles R Greathouse IV_, Nov 14 2011"@en .
+
+seq:A200243_t_1_20180521T110326 a seq:Text ;
+    cnt:chars "RealDigits[Sqrt[192],10,120][[1]] (* _Harvey P. Dale_, May 21 2018 *)"@en .
+

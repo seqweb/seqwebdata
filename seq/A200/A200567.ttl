@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.586671Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 612}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200567 a seq:Sequence ;
+    rdfs:label "A200567"@en ;
+    seq:hasTextList ( seq:A200567_I_1_20120331T103050 seq:A200567_N_1_20120331T103050 seq:A200567_C_1_20120331T103050 seq:A200567_H_1_20120331T103050 seq:A200567_Y_1_20120331T103050 seq:A200567_K_1_20120331T103050 seq:A200567_O_1_20120331T103050 seq:A200567_A_1_20120331T103050 seq:A200567_V_1_20120331T103050 ) .
+
+seq:A200567_A_1_20120331T103050 a seq:Text ;
+    cnt:chars "_Andrey V. Kulsha_, Nov 19 2011"@en .
+
+seq:A200567_C_1_20120331T103050 a seq:Text ;
+    cnt:chars "Heuristics show that these terms are valid, but a strict proof is yet to be done."@en .
+
+seq:A200567_H_1_20120331T103050 a seq:Text ;
+    cnt:chars "Andrey V. Kulsha, <a href=\"/A200567/b200567.txt\">Table of n, a(n) for n = 1..45</a>"@en .
+
+seq:A200567_I_1_20120331T103050 a seq:Text ;
+    cnt:chars "#11 Mar 31 2012 10:30:50"@en .
+
+seq:A200567_K_1_20120331T103050 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200567_N_1_20120331T103050 a seq:Text ;
+    cnt:chars "Integers n such that for all i > n the largest prime factor of product(i+k, {k,0,9}) exceeds the largest prime factor of product(n+k, {k,0,9})."@en .
+
+seq:A200567_O_1_20120331T103050 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200567_V_1_20120331T103050 a seq:Text ;
+    cnt:chars "1,3,7,9,13,19,21,27,31,33,37,43,49,51,117,201,527,867,3472,8472,48508,146064,373824,591215,4325170,6629044,6823283,30188529,105066156,203403620,203403621,323547634,439515072,478478082,585101566,1170278794,2809596042"@en .
+
+seq:A200567_Y_1_20120331T103050 a seq:Text ;
+    cnt:chars "Cf. A200566, A200568."@en .
+

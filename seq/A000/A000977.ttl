@@ -1,0 +1,68 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.811821Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2040}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000977 a seq:Sequence ;
+    rdfs:label "A000977"@en ;
+    seq:hasTextList ( seq:A000977_I_1_20240422T083800 seq:A000977_N_1_20240422T083800 seq:A000977_C_1_20240422T083800 seq:A000977_D_1_20240422T083800 seq:A000977_H_1_20240422T083800 seq:A000977_F_1_20240422T083800 seq:A000977_p_1_20240422T083800 seq:A000977_t_1_20240422T083800 seq:A000977_o_1_20240422T083800 seq:A000977_Y_1_20240422T083800 seq:A000977_K_1_20240422T083800 seq:A000977_O_1_20240422T083800 seq:A000977_A_1_20240422T083800 seq:A000977_E_1_20240422T083800 seq:A000977_V_1_20240422T083800 ) .
+
+seq:A000977_A_1_20240422T083800 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000977_C_1_20240422T083800 a seq:Text ;
+    cnt:chars """a(n+1)-a(n) seems bounded and sequence appears to give n such that the number of integers of the form nk/(n+k) k>=1 is not equal to Sum_{ d | n} omega(d) (i.e., n such that A062799(n) is not equal to A063647(n)). - _Benoit Cloitre_, Aug 27 2002
+The first differences are bounded: clearly a(n+1) - a(n) <= 30. - _Charles R Greathouse IV_, Dec 19 2011"""@en .
+
+seq:A000977_D_1_20240422T083800 a seq:Text ;
+    cnt:chars "M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 844."@en .
+
+seq:A000977_E_1_20240422T083800 a seq:Text ;
+    cnt:chars "More terms from Vit Planocka (planocka(AT)mistral.cz), Sep 17 2002"@en .
+
+seq:A000977_F_1_20240422T083800 a seq:Text ;
+    cnt:chars """a(n) = n + O(n log log n / log n). - _Charles R Greathouse IV_, Dec 19 2011 A001221(a(n)) > 2. - _Reinhard Zumkeller_, May 03 2013
+A033992 UNION A033993 UNION A051270 UNION A074969 UNION A176655 UNION ... - _R. J. Mathar_, Dec 05 2016"""@en .
+
+seq:A000977_H_1_20240422T083800 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000977/b000977.txt">Table of n, a(n) for n = 1..10000</a>
+M. Abramowitz and I. A. Stegun, eds., <a href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.ASP">Handbook of Mathematical Functions</a>, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy]."""@en .
+
+seq:A000977_I_1_20240422T083800 a seq:Text ;
+    cnt:chars "#46 Apr 22 2024 08:38:00"@en .
+
+seq:A000977_K_1_20240422T083800 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000977_N_1_20240422T083800 a seq:Text ;
+    cnt:chars "Numbers that are divisible by at least three different primes."@en .
+
+seq:A000977_O_1_20240422T083800 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000977_V_1_20240422T083800 a seq:Text ;
+    cnt:chars "30,42,60,66,70,78,84,90,102,105,110,114,120,126,130,132,138,140,150,154,156,165,168,170,174,180,182,186,190,195,198,204,210,220,222,228,230,231,234,238,240,246,252,255,258,260,264,266,270,273,276,280,282,285"@en .
+
+seq:A000977_Y_1_20240422T083800 a seq:Text ;
+    cnt:chars """Cf. A000961, A007774, A033992, A033993, A051270.
+Complement of A070915."""@en .
+
+seq:A000977_o_1_20240422T083800 a seq:Text ;
+    cnt:chars """(PARI) is(n)=omega(n)>2 \\\\ _Charles R Greathouse IV_, Dec 19 2011
+(Haskell)
+a000977 n = a000977_list !! (n-1)
+a000977_list = filter ((> 2) . a001221) [1..]
+-- _Reinhard Zumkeller_, May 03 2013"""@en .
+
+seq:A000977_p_1_20240422T083800 a seq:Text ;
+    cnt:chars """A000977 := proc(n)
+if (nops(numtheory[factorset](n)) >= 3) then
+   RETURN(n)
+fi: end:  seq(A000977(n), n=1..500); # _Jani Melik_, Feb 24 2011"""@en .
+
+seq:A000977_t_1_20240422T083800 a seq:Text ;
+    cnt:chars """DeleteCases[Table[If[Count[PrimeQ[Divisors[i]], True] >= 3, i, 0], {i, 1, 274}], 0]
+Select[Range[300], PrimeNu[#] >= 3 &] (* _Paolo Xausa_, Mar 28 2024 *)"""@en .
+

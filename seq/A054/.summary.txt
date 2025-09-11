@@ -1,0 +1,1 @@
+# {"summary": "v1.0", "at": "2025-09-11T08:10:00.000000Z", "by": "app.fab.summarize_metadata.main", "path": "/Users/mlb/Devo/Data/SeqWeb/seqwebdata/seq/A054", "files": 1, "triples": 47, "entities": 12, "chars": 1017, "skipped": 0}

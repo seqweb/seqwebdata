@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.641196Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 784}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200595 a seq:Sequence ;
+    rdfs:label "A200595"@en ;
+    seq:hasTextList ( seq:A200595_I_1_20141207T094728 seq:A200595_N_1_20141207T094728 seq:A200595_C_1_20141207T094728 seq:A200595_e_1_20141207T094728 seq:A200595_t_1_20141207T094728 seq:A200595_o_1_20141207T094728 seq:A200595_Y_1_20141207T094728 seq:A200595_K_1_20141207T094728 seq:A200595_O_1_20141207T094728 seq:A200595_A_1_20141207T094728 seq:A200595_V_1_20141207T094728 ) .
+
+seq:A200595_A_1_20141207T094728 a seq:Text ;
+    cnt:chars "_Clark Kimberling_, Nov 19 2011"@en .
+
+seq:A200595_C_1_20141207T094728 a seq:Text ;
+    cnt:chars "See A200338 for a guide to related sequences. The Mathematica program includes a graph."@en .
+
+seq:A200595_I_1_20141207T094728 a seq:Text ;
+    cnt:chars "#7 Dec 07 2014 09:47:28"@en .
+
+seq:A200595_K_1_20141207T094728 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200595_N_1_20141207T094728 a seq:Text ;
+    cnt:chars "Decimal expansion of least x>0 satisfying 3*x^2-3*x+4=tan(x)."@en .
+
+seq:A200595_O_1_20141207T094728 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200595_V_1_20141207T094728 a seq:Text ;
+    cnt:chars "1,3,9,5,8,5,1,3,6,0,6,2,1,1,4,9,0,7,4,2,7,3,3,7,7,9,0,3,8,5,6,2,9,4,1,8,1,3,8,6,2,5,9,2,9,3,6,6,7,1,2,8,5,3,4,1,1,5,7,8,9,5,2,1,2,5,9,4,3,7,2,5,3,3,8,5,0,8,2,3,6,6,7,8,3,1,4,5,0,3,2,9,1,1,4,1,5,2,3"@en .
+
+seq:A200595_Y_1_20141207T094728 a seq:Text ;
+    cnt:chars "Cf. A200338."@en .
+
+seq:A200595_e_1_20141207T094728 a seq:Text ;
+    cnt:chars "1.3958513606211490742733779038562941813862592..."@en .
+
+seq:A200595_o_1_20141207T094728 a seq:Text ;
+    cnt:chars "(PARI) solve(x=1,2,3*x^2-3*x+4-tan(x)) \\\\ _Charles R Greathouse IV_, Dec 07 2014"@en .
+
+seq:A200595_t_1_20141207T094728 a seq:Text ;
+    cnt:chars """a = 3; b = -3; c = 4;
+f[x_] := a*x^2 + b*x + c; g[x_] := Tan[x]
+Plot[{f[x], g[x]}, {x, -.1, Pi/2}, {AxesOrigin -> {0, 0}}]
+r = x /. FindRoot[f[x] == g[x], {x, 1.3, 1.4}, WorkingPrecision -> 110]
+RealDigits[r]     (* A200595 *)"""@en .
+

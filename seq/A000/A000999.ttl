@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.865877Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1679}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000999 a seq:Sequence ;
+    rdfs:label "A000999"@en ;
+    seq:hasTextList ( seq:A000999_I_1_20230307T023527 seq:A000999_N_1_20230307T023527 seq:A000999_H_1_20230307T023527 seq:A000999_F_1_20230307T023527 seq:A000999_t_1_20230307T023527 seq:A000999_o_1_20230307T023527 seq:A000999_Y_1_20230307T023527 seq:A000999_K_1_20230307T023527 seq:A000999_O_1_20230307T023527 seq:A000999_A_1_20230307T023527 seq:A000999_E_1_20230307T023527 seq:A000999_V_1_20230307T023527 ) .
+
+seq:A000999_A_1_20230307T023527 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _R. K. Guy_"@en .
+
+seq:A000999_E_1_20230307T023527 a seq:Text ;
+    cnt:chars "More terms from _Michael Somos_, Jun 27 2002"@en .
+
+seq:A000999_F_1_20230307T023527 a seq:Text ;
+    cnt:chars """From _Amiram Eldar_, Feb 12 2021: (Start)
+a(n) = A112765(A000984(n)).
+a(n) = (2*A053824(n) - A053824(2*n))/4. (End)"""@en .
+
+seq:A000999_H_1_20230307T023527 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000999/b000999.txt">Table of n, a(n) for n = 0..1000</a>
+E. E. Kummer, <a href="https://doi.org/10.1515/crll.1852.44.93">Über die Ergänzungssätze zu den allgemeinen Reciprocitätsgesetzen</a>, Journal für die reine und angewandte Mathematik, Vol. 44 (1852), pp. 93-146; <a href="https://eudml.org/doc/147500">alternative link</a>.
+Dorel Miheţ, <a href="https://doi.org/10.1007/s12045-010-0123-4">Legendre's and Kummer's theorems again</a>, Resonance, Vol. 15, No. 12 (2010), pp. 1111-1121; <a href="https://www.ias.ac.in/public/Volumes/reso/015/12/1111-1121.pdf">alternative link</a>.
+Armin Straub, Victor H. Moll and Tewodros Amdeberhan, <a href="https://eudml.org/doc/278348">The p-adic valuation of k-central binomial coefficients</a>, Acta Arithmetica, Vol. 140, No. 1 (2009), pp. 31-42.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Kummer&#39;s_theorem">Kummer's theorem</a>."""@en .
+
+seq:A000999_I_1_20230307T023527 a seq:Text ;
+    cnt:chars "#23 Mar 07 2023 02:35:27"@en .
+
+seq:A000999_K_1_20230307T023527 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000999_N_1_20230307T023527 a seq:Text ;
+    cnt:chars "5-adic valuation of binomial(2*n,n): largest k such that 5^k divides binomial(2*n, n)."@en .
+
+seq:A000999_O_1_20230307T023527 a seq:Text ;
+    cnt:chars "0,14"@en .
+
+seq:A000999_V_1_20230307T023527 a seq:Text ;
+    cnt:chars "0,0,0,1,1,0,0,0,1,1,0,0,0,2,2,1,1,1,2,2,1,1,1,2,2,0,0,0,1,1,0,0,0,1,1,0,0,0,2,2,1,1,1,2,2,1,1,1,2,2,0,0,0,1,1,0,0,0,1,1,0,0,0,3,3,2,2,2,3,3,2,2,2,3,3,1,1,1,2,2,1,1,1,2,2,1,1"@en .
+
+seq:A000999_Y_1_20230307T023527 a seq:Text ;
+    cnt:chars "Cf. A000984, A000989, A053824, A112765."@en .
+
+seq:A000999_o_1_20230307T023527 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n<0,0,valuation(binomial(2*n,n),5))
+(PARI) a(n) = my(v=digits(n,5),c=0); sum(i=0,#v-1, c=(c+v[#v-i]>=3)); \\\\ _Kevin Ryde_, Mar 07 2023"""@en .
+
+seq:A000999_t_1_20230307T023527 a seq:Text ;
+    cnt:chars "Table[IntegerExponent[Binomial[2*n, n], 5], {n, 0, 100}] (* _T. D. Noe_, Jun 21 2012 *)"@en .
+

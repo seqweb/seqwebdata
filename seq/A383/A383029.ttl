@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.640695Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 816}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383029 a seq:Sequence ;
+    rdfs:label "A383029"@en ;
+    seq:hasTextList ( seq:A383029_I_1_20250413T163225 seq:A383029_N_1_20250413T163225 seq:A383029_H_1_20250413T163225 seq:A383029_F_1_20250413T163225 seq:A383029_t_1_20250413T163225 seq:A383029_o_1_20250413T163225 seq:A383029_Y_1_20250413T163225 seq:A383029_K_1_20250413T163225 seq:A383029_O_1_20250413T163225 seq:A383029_A_1_20250413T163225 seq:A383029_V_1_20250413T163225 ) .
+
+seq:A383029_A_1_20250413T163225 a seq:Text ;
+    cnt:chars "_Amiram Eldar_, Apr 13 2025"@en .
+
+seq:A383029_F_1_20250413T163225 a seq:Text ;
+    cnt:chars """a(n) = A007814(A268335(n)).
+a(A383030(n)) > 0.
+Asymptotic mean: Limit_{m->oo} (1/m) * Sum_{k=1..m} a(k) = 2/3."""@en .
+
+seq:A383029_H_1_20250413T163225 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A383029/b383029.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383029_I_1_20250413T163225 a seq:Text ;
+    cnt:chars "#8 Apr 13 2025 16:32:25"@en .
+
+seq:A383029_K_1_20250413T163225 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383029_N_1_20250413T163225 a seq:Text ;
+    cnt:chars "Exponent of the highest power of 2 dividing the n-th exponentially odd number."@en .
+
+seq:A383029_O_1_20250413T163225 a seq:Text ;
+    cnt:chars "1,7"@en .
+
+seq:A383029_V_1_20250413T163225 a seq:Text ;
+    cnt:chars "0,1,0,0,1,0,3,1,0,0,1,0,0,0,0,1,0,3,1,0,0,1,0,5,0,1,0,0,1,0,3,0,1,0,1,0,0,0,1,0,3,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,3,0,0,0,1,0,5,0,0,1,0,3,0,1,0,0,1,0,0,1,0,1,0,3,1"@en .
+
+seq:A383029_Y_1_20250413T163225 a seq:Text ;
+    cnt:chars "Cf. A007814, A268335, A383030."@en .
+
+seq:A383029_o_1_20250413T163225 a seq:Text ;
+    cnt:chars """(PARI) isexpodd(n) = {my(f = factor(n)); for(i=1, #f~, if(!(f[i, 2] % 2), return (0))); 1; }
+list(lim) = for(k = 1, lim, if(isexpodd(k), print1(valuation(k, 2), ", ")));"""@en .
+
+seq:A383029_t_1_20250413T163225 a seq:Text ;
+    cnt:chars "expOddQ[n_] := AllTrue[FactorInteger[n][[;; , 2]], OddQ]; IntegerExponent[Select[Range[200], expOddQ], 2]"@en .
+

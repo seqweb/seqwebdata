@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.809425Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1353}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000553 a seq:Sequence ;
+    rdfs:label "A000553"@en ;
+    seq:hasTextList ( seq:A000553_I_1_20211219T093724 seq:A000553_N_1_20211219T093724 seq:A000553_D_1_20211219T093724 seq:A000553_H_1_20211219T093724 seq:A000553_F_1_20211219T093724 seq:A000553_p_1_20211219T093724 seq:A000553_t_1_20211219T093724 seq:A000553_K_1_20211219T093724 seq:A000553_O_1_20211219T093724 seq:A000553_A_1_20211219T093724 seq:A000553_E_1_20211219T093724 seq:A000553_V_1_20211219T093724 ) .
+
+seq:A000553_A_1_20211219T093724 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000553_D_1_20211219T093724 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000553_E_1_20211219T093724 a seq:Text ;
+    cnt:chars "More terms from _Paul Zimmermann_, Mar 15 1996"@en .
+
+seq:A000553_F_1_20211219T093724 a seq:Text ;
+    cnt:chars "E.g.f.: x*(exp(x*exp(x*exp(x*exp(x)))) - exp(x*exp(x*exp(x)))). - _Vladeta Jovovic_, Jan 29 2008"@en .
+
+seq:A000553_H_1_20211219T093724 a seq:Text ;
+    cnt:chars """J. Riordan, <a href="http://dx.doi.org/10.1147/rd.45.0473">Enumeration of trees by height and diameter</a>, IBM J. Res. Dev. 4 (1960), 473-478.
+<a href="/index/Ro#rooted">Index entries for sequences related to rooted trees</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000553_I_1_20211219T093724 a seq:Text ;
+    cnt:chars "M5378 N2335 #31 Dec 19 2021 09:37:24"@en .
+
+seq:A000553_K_1_20211219T093724 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000553_N_1_20211219T093724 a seq:Text ;
+    cnt:chars "Number of labeled rooted trees of height 4 with n nodes."@en .
+
+seq:A000553_O_1_20211219T093724 a seq:Text ;
+    cnt:chars "5,1"@en .
+
+seq:A000553_V_1_20211219T093724 a seq:Text ;
+    cnt:chars "120,2520,43680,757680,13747104,264181680,5395040640,117080049240,2696387899920,65774992411128,1695845836077120,46110625382246880,1319345179723609920,39640903618873667040,1248193457738661143808"@en .
+
+seq:A000553_p_1_20211219T093724 a seq:Text ;
+    cnt:chars "ht := proc(m) local i; [ T0,{seq(T.i=Prod(Z,Set(T.(i+1))),i=0..m-1),T.m=Z},labeled ] end: M[ 5378 ] := n -> count(ht(4),size=n)-count(ht(3),size=n): seq(M[ 5378 ](n), n=5..19);"@en .
+
+seq:A000553_t_1_20211219T093724 a seq:Text ;
+    cnt:chars "egf = x*(Exp[x*Exp[x*Exp[x*Exp[x]]]] - Exp[x*Exp[x*Exp[x]]]); a[n_] := SeriesCoefficient[egf, {x, 0, n}]*n!; Table[a[n], {n, 5, 19}] (* _Jean-François Alcover_, Jan 17 2014, after _Vladeta Jovovic_ *)"@en .
+

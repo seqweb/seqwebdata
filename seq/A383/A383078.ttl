@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.744606Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 733}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383078 a seq:Sequence ;
+    rdfs:label "A383078"@en ;
+    seq:hasTextList ( seq:A383078_I_1_20250418T133550 seq:A383078_N_1_20250418T133550 seq:A383078_H_1_20250418T133550 seq:A383078_F_1_20250418T133550 seq:A383078_Y_1_20250418T133550 seq:A383078_K_1_20250418T133550 seq:A383078_O_1_20250418T133550 seq:A383078_A_1_20250418T133550 seq:A383078_E_1_20250418T133550 seq:A383078_V_1_20250418T133550 ) .
+
+seq:A383078_A_1_20250418T133550 a seq:Text ;
+    cnt:chars "_Edwin Hermann_, Apr 15 2025"@en .
+
+seq:A383078_E_1_20250418T133550 a seq:Text ;
+    cnt:chars "More terms from _Alois P. Heinz_, Apr 15 2025"@en .
+
+seq:A383078_F_1_20250418T133550 a seq:Text ;
+    cnt:chars "G.f.: x*(2*x^4+x^3-9*x^2-2*x+9)/((x+1)*(x^3-3*x+1)). - _Alois P. Heinz_, Apr 15 2025"@en .
+
+seq:A383078_H_1_20250418T133550 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_04\">Index entries for linear recurrences with constant coefficients</a>, signature (2,3,-1,-1)."@en .
+
+seq:A383078_I_1_20250418T133550 a seq:Text ;
+    cnt:chars "#10 Apr 18 2025 13:35:50"@en .
+
+seq:A383078_K_1_20250418T133550 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383078_N_1_20250418T133550 a seq:Text ;
+    cnt:chars "Number of n-digit positive integers where all pairs of consecutive digits have a difference of at least 6."@en .
+
+seq:A383078_O_1_20250418T133550 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383078_V_1_20250418T133550 a seq:Text ;
+    cnt:chars "9,16,50,140,407,1168,3367,9691,27908,80354,231374,666211,1918282,5523469,15904199,45794312,131859470,379674208,1093228315,3147825472,9063802211,26098178315,75146709476,216376326214,623030800330,1793945691511,5165460748322,14873351444633"@en .
+
+seq:A383078_Y_1_20250418T133550 a seq:Text ;
+    cnt:chars """Cf. A052268, A100062, A383070, A383071, A383072, A383077.
+Cf. A147704."""@en .
+

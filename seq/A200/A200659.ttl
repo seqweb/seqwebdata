@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.779737Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 938}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200659 a seq:Sequence ;
+    rdfs:label "A200659"@en ;
+    seq:hasTextList ( seq:A200659_I_1_20130222T144022 seq:A200659_N_1_20130222T144022 seq:A200659_F_1_20130222T144022 seq:A200659_e_1_20130222T144022 seq:A200659_Y_1_20130222T144022 seq:A200659_K_1_20130222T144022 seq:A200659_O_1_20130222T144022 seq:A200659_A_1_20130222T144022 seq:A200659_V_1_20130222T144022 ) .
+
+seq:A200659_A_1_20130222T144022 a seq:Text ;
+    cnt:chars "_Philippe Deléham_, Nov 20 2011"@en .
+
+seq:A200659_F_1_20130222T144022 a seq:Text ;
+    cnt:chars """Sum_{k, 0<=k<=n} T(n,k)*x^k = A153881(n+1), A000007(n), A003319(n), A111537(n), A111546(n), A111556(n), A177354(n-1) for x = -2,-1,0,1,2,3,4 respectively.
+Sum_ {k, 0<=k<=n} T(n,k)*x^(n-k) = A000012(n), A111537(n), A167872(n) for x = 0,1,2 respectively.
+T(k+1,k)=(k+1)^2."""@en .
+
+seq:A200659_I_1_20130222T144022 a seq:Text ;
+    cnt:chars "#11 Feb 22 2013 14:40:22"@en .
+
+seq:A200659_K_1_20130222T144022 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200659_N_1_20130222T144022 a seq:Text ;
+    cnt:chars "Triangle T(n,k), read by rows, given by (1,2,2,3,3,4,4,5,5,6,6,...) DELTA (1,0,1,0,1,0,1,0,1,0,1,0,1,...) where DELTA is the operator defined in A084938."@en .
+
+seq:A200659_O_1_20130222T144022 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A200659_V_1_20130222T144022 a seq:Text ;
+    cnt:chars "1,1,1,3,4,1,13,21,9,1,71,132,76,16,1,461,955,670,200,25,1,3447,7782,6309,2374,435,36,1,29093,70441,63833,28413,6713,833,49,1,273343,701352,694500,351512,99868,16240,1456,64,1"@en .
+
+seq:A200659_Y_1_20130222T144022 a seq:Text ;
+    cnt:chars "Cf. A111537, A111546, A111556, A167872"@en .
+
+seq:A200659_e_1_20130222T144022 a seq:Text ;
+    cnt:chars """Triangle begins :
+1
+1, 1
+3, 4, 1
+13, 21, 9, 1
+71, 132, 76, 16, 1
+461, 955, 670, 200, 25, 1
+3447, 7782, 6309, 2374, 435, 36, 1
+29093, 70441, 63833, 28413, 6713, 833, 49, 1
+273343, 701352, 694500, 351512, 99868, 16240, 1456, 64, 1"""@en .
+

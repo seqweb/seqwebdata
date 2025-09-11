@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.562355Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 607}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000867 a seq:Sequence ;
+    rdfs:label "A000867"@en ;
+    seq:hasTextList ( seq:A000867_I_1_20231212T223646 seq:A000867_N_1_20231212T223646 seq:A000867_H_1_20231212T223646 seq:A000867_t_1_20231212T223646 seq:A000867_Y_1_20231212T223646 seq:A000867_K_1_20231212T223646 seq:A000867_O_1_20231212T223646 seq:A000867_A_1_20231212T223646 seq:A000867_E_1_20231212T223646 seq:A000867_V_1_20231212T223646 ) .
+
+seq:A000867_A_1_20231212T223646 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000867_E_1_20231212T223646 a seq:Text ;
+    cnt:chars "More terms from _John Cerkan_, Feb 11 2017"@en .
+
+seq:A000867_H_1_20231212T223646 a seq:Text ;
+    cnt:chars "John Cerkan, <a href=\"/A000867/b000867.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000867_I_1_20231212T223646 a seq:Text ;
+    cnt:chars "#29 Dec 12 2023 22:36:46"@en .
+
+seq:A000867_K_1_20231212T223646 a seq:Text ;
+    cnt:chars "word,nonn"@en .
+
+seq:A000867_N_1_20231212T223646 a seq:Text ;
+    cnt:chars "Numbers beginning with letter 'f' in English."@en .
+
+seq:A000867_O_1_20231212T223646 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000867_V_1_20231212T223646 a seq:Text ;
+    cnt:chars "4,5,14,15,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432"@en .
+
+seq:A000867_Y_1_20231212T223646 a seq:Text ;
+    cnt:chars """Subsequence of A125299.
+Cf. A000865, A000870, A000873, A000981, A006092."""@en .
+
+seq:A000867_t_1_20231212T223646 a seq:Text ;
+    cnt:chars "Select[Range[1000], First[Characters[IntegerName[#,\"Words\"]]]==\"f\"&] (* _James C. McMahon_, Dec 11 2023 *)"@en .
+

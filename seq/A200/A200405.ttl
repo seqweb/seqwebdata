@@ -1,0 +1,36 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.267313Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 690}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200405 a seq:Sequence ;
+    rdfs:label "A200405"@en ;
+    seq:hasTextList ( seq:A200405_I_1_20250222T034750 seq:A200405_N_1_20250222T034750 seq:A200405_H_1_20250222T034750 seq:A200405_K_1_20250222T034750 seq:A200405_O_1_20250222T034750 seq:A200405_A_1_20250222T034750 seq:A200405_E_1_20250222T034750 seq:A200405_V_1_20250222T034750 ) .
+
+seq:A200405_A_1_20250222T034750 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 17 2011"@en .
+
+seq:A200405_E_1_20250222T034750 a seq:Text ;
+    cnt:chars "a(11)-a(15) from _Lars Blomberg_, Apr 16 2018"@en .
+
+seq:A200405_H_1_20250222T034750 a seq:Text ;
+    cnt:chars """Andrew M. Baxter and Lara K. Pudwell, <a href="http://arxiv.org/abs/1108.2642">Enumeration schemes for dashed patterns</a>, arXiv preprint arXiv:1108.2642 [math.CO], 2011.
+Yan Wang, Qi Fang, Shishuo Fu, Sergey Kitaev, and Haijun Li, <a href="https://arxiv.org/abs/2502.10128">Consecutive and quasi-consecutive patterns: des-Wilf classifications and generating functions</a>, arXiv:2502.10128 [math.CO], 2025. See p. 9."""@en .
+
+seq:A200405_I_1_20250222T034750 a seq:Text ;
+    cnt:chars "#22 Feb 22 2025 03:47:50"@en .
+
+seq:A200405_K_1_20250222T034750 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A200405_N_1_20250222T034750 a seq:Text ;
+    cnt:chars "Number of permutations of [n] avoiding the pattern 214-3."@en .
+
+seq:A200405_O_1_20250222T034750 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200405_V_1_20250222T034750 a seq:Text ;
+    cnt:chars "1,2,6,23,107,583,3637,25548,199506,1714383,16075861,163346039,1787800653,20968763454,262377046698"@en .
+

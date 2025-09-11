@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.955827Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1922}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000615 a seq:Sequence ;
+    rdfs:label "A000615"@en ;
+    seq:hasTextList ( seq:A000615_I_1_20231027T032239 seq:A000615_N_1_20231027T032239 seq:A000615_D_1_20231027T032239 seq:A000615_H_1_20231027T032239 seq:A000615_F_1_20231027T032239 seq:A000615_Y_1_20231027T032239 seq:A000615_K_1_20231027T032239 seq:A000615_O_1_20231027T032239 seq:A000615_A_1_20231027T032239 seq:A000615_E_1_20231027T032239 seq:A000615_V_1_20231027T032239 ) .
+
+seq:A000615_A_1_20231027T032239 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000615_D_1_20231027T032239 a seq:Text ;
+    cnt:chars """S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38, Table 2.3.2. - Row 4.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence in two entries, N0142 and N0747).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000615_E_1_20231027T032239 a seq:Text ;
+    cnt:chars "Entry revised by _N. J. A. Sloane_, Jun 11 2012"@en .
+
+seq:A000615_F_1_20231027T032239 a seq:Text ;
+    cnt:chars "A000609(n) = Sum_{k=0..n} a(k)*binomial(n,k). - Alastair D. King, Mar 17, 2023."@en .
+
+seq:A000615_H_1_20231027T032239 a seq:Text ;
+    cnt:chars """Goto, Eiichi, and Hidetosi Takahasi, <a href="/A000371/a000371_1.pdf">Some Theorems Useful in Threshold Logic for Enumerating Boolean Functions</a>, in Proceedings International Federation for Information Processing (IFIP) Congress, 1962, pp. 747-752. [Annotated scans of certain pages]
+Alastair D. King, <a href="/A002080/a002080.pdf">Comments on A002080 and related sequences based on threshold functions</a>, Mar 17 2023.
+S. Muroga, I. Toda and M. Kondo, <a href="https://doi.org/10.1090/S0025-5718-62-99195-0">Majority decision functions of up to six variables</a>, Math. Comp., 16 (1962), 459-472.
+S. Muroga, I. Toda and M. Kondo, <a href="/A001528/a001528.pdf">Majority decision functions of up to six variables</a>, Math. Comp., 16 (1962), 459-472. [Annotated partially scanned copy]
+S. Muroga, T. Tsuboi and C. R. Baugh, <a href="https://doi.org/10.1109/T-C.1970.223046">Enumeration of threshold functions of eight variables</a>, IEEE Trans. Computers, 19 (1970), 818-825.
+S. Muroga, T. Tsuboi and C. R. Baugh, <a href="/A002077/a002077.pdf">Enumeration of threshold functions of eight variables</a>, IEEE Trans. Computers, 19 (1970), 818-825. [Annotated scanned copy]
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000615_I_1_20231027T032239 a seq:Text ;
+    cnt:chars "M0379 N0142 N0747 #31 Oct 27 2023 03:22:39"@en .
+
+seq:A000615_K_1_20231027T032239 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000615_N_1_20231027T032239 a seq:Text ;
+    cnt:chars "Threshold functions of exactly n variables."@en .
+
+seq:A000615_O_1_20231027T032239 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000615_V_1_20231027T032239 a seq:Text ;
+    cnt:chars "2,2,8,72,1536,86080,14487040,8274797440,17494930604032"@en .
+
+seq:A000615_Y_1_20231027T032239 a seq:Text ;
+    cnt:chars "Cf. A000609."@en .
+

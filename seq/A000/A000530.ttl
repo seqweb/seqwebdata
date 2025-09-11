@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.756763Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 448}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000530 a seq:Sequence ;
+    rdfs:label "A000530"@en ;
+    seq:hasTextList ( seq:A000530_I_1_20130509T110603 seq:A000530_N_1_20130509T110603 seq:A000530_C_1_20130509T110603 seq:A000530_K_1_20130509T110603 seq:A000530_O_1_20130509T110603 seq:A000530_A_1_20130509T110603 seq:A000530_E_1_20130509T110603 seq:A000530_V_1_20130509T110603 ) .
+
+seq:A000530_A_1_20130509T110603 a seq:Text ;
+    cnt:chars "Jonas Wallgren [ jwc(AT)ida.liu.se ]"@en .
+
+seq:A000530_C_1_20130509T110603 a seq:Text ;
+    cnt:chars "a(9)>=29995812 (probably equal to this value)"@en .
+
+seq:A000530_E_1_20130509T110603 a seq:Text ;
+    cnt:chars "a(7)-a(8) from _Sean A. Irvine_, Nov 14 2010"@en .
+
+seq:A000530_I_1_20130509T110603 a seq:Text ;
+    cnt:chars "#10 May 09 2013 11:06:03"@en .
+
+seq:A000530_K_1_20130509T110603 a seq:Text ;
+    cnt:chars "nonn,hard,more"@en .
+
+seq:A000530_N_1_20130509T110603 a seq:Text ;
+    cnt:chars "Let p(n, s, x) be predicate that number of occurrences of s's in x >= 2*n - the length of the longest sequence of s's in x. Then a(n)=#{x in {0,1}* | x ends in 0 and p(n,0,x) and (there is no prefix y of x such that p(n,0,y) or p(n,1,y))}."@en .
+
+seq:A000530_O_1_20130509T110603 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000530_V_1_20130509T110603 a seq:Text ;
+    cnt:chars "1,5,28,226,2077,20770,222884,2529541"@en .
+

@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.250686Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1692}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000314 a seq:Sequence ;
+    rdfs:label "A000314"@en ;
+    seq:hasTextList ( seq:A000314_I_1_20141229T172942 seq:A000314_N_1_20141229T172942 seq:A000314_D_1_20141229T172942 seq:A000314_H_1_20141229T172942 seq:A000314_F_1_20141229T172942 seq:A000314_p_1_20141229T172942 seq:A000314_t_1_20141229T172942 seq:A000314_Y_1_20141229T172942 seq:A000314_K_1_20141229T172942 seq:A000314_O_1_20141229T172942 seq:A000314_A_1_20141229T172942 seq:A000314_E_1_20141229T172942 seq:A000314_V_1_20141229T172942 ) .
+
+seq:A000314_A_1_20141229T172942 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000314_D_1_20141229T172942 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000314_E_1_20141229T172942 a seq:Text ;
+    cnt:chars "More terms from _Christian G. Bower_, Nov 15 1998"@en .
+
+seq:A000314_F_1_20141229T172942 a seq:Text ;
+    cnt:chars "a(n) = A035351/n, n>0. - _Christian G. Bower_, Nov 15 1998"@en .
+
+seq:A000314_H_1_20141229T172942 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A000314/b000314.txt">Table of n, a(n) for n = 0..100</a>
+G. W. Ford and G. E. Uhlenbeck, <a href="http://www.jstor.org/stable/89494">Combinatorial problems in the theory of graphs III</a>, Proc. Nat. Acad. Sci. USA, 42 (1956), 529-535.
+<a href="/index/Ca#cacti">Index entries for sequences related to cacti</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000314_I_1_20141229T172942 a seq:Text ;
+    cnt:chars "M3639 N1480 #30 Dec 29 2014 17:29:42"@en .
+
+seq:A000314_K_1_20141229T172942 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000314_N_1_20141229T172942 a seq:Text ;
+    cnt:chars "Number of mixed Husimi trees with n nodes; or labeled polygonal cacti with bridges."@en .
+
+seq:A000314_O_1_20141229T172942 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000314_V_1_20141229T172942 a seq:Text ;
+    cnt:chars "1,1,1,4,31,362,5676,111982,2666392,74433564,2384579440,86248530296,3476794472064,154579941792256,7514932528712896,396595845237540600,22581060079942183936,1379771773100463174608,90059660791562688208128,6253914166368448348512064"@en .
+
+seq:A000314_Y_1_20141229T172942 a seq:Text ;
+    cnt:chars "Cf. A000083, A000237, A035082, A035349-A035357."@en .
+
+seq:A000314_p_1_20141229T172942 a seq:Text ;
+    cnt:chars "A:= proc(n) option remember; if n<=0 then x else convert(series(x* exp((2*A(n-1) -A(n-1)^2)/ (2-2*A(n-1))),x=0,n+2), polynom) fi end: a:= n-> if n=0 then 1 else coeff(series(A(n-1), x=0,n+1), x,n)*(n-1)! fi: seq(a(n), n=0..30); # _Alois P. Heinz_, Aug 20 2008"@en .
+
+seq:A000314_t_1_20141229T172942 a seq:Text ;
+    cnt:chars "A[n_] := A[n] = If[n <= 0, x, Normal[Series[x*Exp[(2*A[n-1]-A[n-1]^2)/ (2-2*A[n-1])], {x, 0, n+2}]]]; a[n_] := If[n == 0, 1, Coefficient [Series[A[n-1], {x, 0, n+1}], x, n]*(n-1)!]; Table [a[n], {n, 0, 30}] (* _Jean-François Alcover_, Mar 03 2014, after _Alois P. Heinz_ *)"@en .
+

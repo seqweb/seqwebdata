@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.428636Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1155}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200965 a seq:Sequence ;
+    rdfs:label "A200965"@en ;
+    seq:hasTextList ( seq:A200965_I_1_20220530T060619 seq:A200965_N_1_20220530T060619 seq:A200965_C_1_20220530T060619 seq:A200965_F_1_20220530T060619 seq:A200965_e_1_20220530T060619 seq:A200965_t_1_20220530T060619 seq:A200965_o_1_20220530T060619 seq:A200965_Y_1_20220530T060619 seq:A200965_K_1_20220530T060619 seq:A200965_O_1_20220530T060619 seq:A200965_A_1_20220530T060619 seq:A200965_V_1_20220530T060619 ) .
+
+seq:A200965_A_1_20220530T060619 a seq:Text ;
+    cnt:chars "_Vladimir Kruchinin_, Nov 25 2011"@en .
+
+seq:A200965_C_1_20220530T060619 a seq:Text ;
+    cnt:chars """Triangle T(n,k)=
+1. Riordan Array (1,(1-sqrt(1-4*x))/((1-x)*2)) without first column.
+2. Riordan Array ((1-sqrt(1-4*x))/((1-x)*2*x),(1-sqrt(1-4*x))/((1-x)*2)) numbering triangle (0,0).
+Convolution triangle of A014137(n). - _Philippe Deléham_, Jan 23 2014"""@en .
+
+seq:A200965_F_1_20220530T060619 a seq:Text ;
+    cnt:chars "T(n,k):=k*sum(i=0..n-k, (binomial(i+k-1,k-1)*binomial(2*(n-i)-k-1,n-i-1))/(n-i))."@en .
+
+seq:A200965_I_1_20220530T060619 a seq:Text ;
+    cnt:chars "#17 May 30 2022 06:06:19"@en .
+
+seq:A200965_K_1_20220530T060619 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200965_N_1_20220530T060619 a seq:Text ;
+    cnt:chars "Triangle T(n,k) = coefficient of x^n in expansion of ((1-sqrt(1-4*x))/((1-x)*2))^k = sum(n>=k, T(n,k) * x^n)."@en .
+
+seq:A200965_O_1_20220530T060619 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200965_V_1_20220530T060619 a seq:Text ;
+    cnt:chars "1,2,1,4,4,1,9,12,6,1,23,34,24,8,1,65,98,83,40,10,1,197,294,273,164,60,12,1,626,919,891,612,285,84,14,1,2056,2974,2938,2188,1195,454,112,16,1,6918,9891,9846,7698,4677,2118,679,144,18,1,23714,33604,33549"@en .
+
+seq:A200965_Y_1_20220530T060619 a seq:Text ;
+    cnt:chars "Cf. Columns: A014137, A014143"@en .
+
+seq:A200965_e_1_20220530T060619 a seq:Text ;
+    cnt:chars """Triangle:
+1,
+2, 1,
+4, 4, 1,
+9, 12, 6, 1,
+23, 34, 24, 8, 1,
+65, 98, 83, 40, 10, 1,
+197, 294, 273, 164, 60, 12, 1"""@en .
+
+seq:A200965_o_1_20220530T060619 a seq:Text ;
+    cnt:chars """(Maxima)
+T(n,k):=k*sum((binomial(i+k-1,k-1)*binomial(2*(n-i)-k-1,n-i-1))/(n-i),i,0,n-k);"""@en .
+
+seq:A200965_t_1_20220530T060619 a seq:Text ;
+    cnt:chars """T[n_, k_]:= (k/n) (Binomial[-1 - k + 2 n, -1 + n] HypergeometricPFQ[{k, k - n, -n}, {1/2 + k/2 - n, 1 + k/2 - n}, 1/4]);
+Table[T[n, k], {n, 1, 9}, {k, 1, n}] // TableForm (* _Peter Luschny_, May 30 2022 *)"""@en .
+

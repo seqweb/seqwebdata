@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.396393Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1512}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200947 a seq:Sequence ;
+    rdfs:label "A200947"@en ;
+    seq:hasTextList ( seq:A200947_I_1_20230612T094722 seq:A200947_N_1_20230612T094722 seq:A200947_H_1_20230612T094722 seq:A200947_F_1_20230612T094722 seq:A200947_e_1_20230612T094722 seq:A200947_p_1_20230612T094722 seq:A200947_t_1_20230612T094722 seq:A200947_Y_1_20230612T094722 seq:A200947_K_1_20230612T094722 seq:A200947_O_1_20230612T094722 seq:A200947_A_1_20230612T094722 seq:A200947_E_1_20230612T094722 seq:A200947_V_1_20230612T094722 ) .
+
+seq:A200947_A_1_20230612T094722 a seq:Text ;
+    cnt:chars "_Frank M Jackson_, Nov 24 2011"@en .
+
+seq:A200947_E_1_20230612T094722 a seq:Text ;
+    cnt:chars "Edited by _N. J. A. Sloane_, May 20 2023"@en .
+
+seq:A200947_F_1_20230612T094722 a seq:Text ;
+    cnt:chars """a(n) = decimal(A007924(n)).
+a(n) mod 2 = A121559(n) for n>=1. - _Alois P. Heinz_, Jun 12 2023"""@en .
+
+seq:A200947_H_1_20230612T094722 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A200947/b200947.txt">Table of n, a(n) for n = 0..10000</a>
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Complete_sequence">"Complete" sequence</a>. [Wikipedia calls a sequence "complete" (sic) if every positive integer is a sum of distinct terms. This name is extremely misleading and should be avoided. - _N. J. A. Sloane_, May 20 2023]"""@en .
+
+seq:A200947_I_1_20230612T094722 a seq:Text ;
+    cnt:chars "#29 Jun 12 2023 09:47:22"@en .
+
+seq:A200947_K_1_20230612T094722 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200947_N_1_20230612T094722 a seq:Text ;
+    cnt:chars "Sequence A007924 expressed in decimal."@en .
+
+seq:A200947_O_1_20230612T094722 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200947_V_1_20230612T094722 a seq:Text ;
+    cnt:chars "0,1,2,4,5,8,9,16,17,18,20,32,33,64,65,66,68,128,129,256,257,258,260,512,513,514,516,517,520,1024,1025,2048,2049,2050,2052,2053,2056,4096,4097,4098,4100,8192,8193,16384,16385,16386,16388,32768,32769,32770"@en .
+
+seq:A200947_Y_1_20230612T094722 a seq:Text ;
+    cnt:chars "Cf. A003714, A007895, A007924, A027941, A066352, A121559, A345297."@en .
+
+seq:A200947_e_1_20230612T094722 a seq:Text ;
+    cnt:chars "8=7+1, hence A007924(8)=10001, so a(8)=17."@en .
+
+seq:A200947_p_1_20230612T094722 a seq:Text ;
+    cnt:chars """a:= proc(n) option remember; local m, p, r; m:=n; r:=0;
+      while m>0 do
+        if m=1 then r:=r+1; break fi;
+        p:= prevprime(m+1); m:= m-p;
+        r:= r+2^numtheory[pi](p)
+      od; r
+    end:
+seq(a(n), n=0..52);  # _Alois P. Heinz_, Jun 12 2023"""@en .
+
+seq:A200947_t_1_20230612T094722 a seq:Text ;
+    cnt:chars "cprime[n_Integer] := If[n==0, 1, Prime[n]]; gentable[n_Integer] := (m=n; ptable={}; While[m != 0, (i = 0; While[cprime[i] <= m, i++]; j=0; While[j<i, AppendTo[ptable, 0]; j++]; ptable[[i]]=1; m=m-cprime[i-1])]; ptable); decimal[n_Integer] := (gentable[n]; Sum[2^(k - 1)*ptable[[k]], {k, 1, Length[ptable]}]); Table[decimal[n], {n, 0, 100}]"@en .
+

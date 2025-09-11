@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.379927Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1738}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000794 a seq:Sequence ;
+    rdfs:label "A000794"@en ;
+    seq:hasTextList ( seq:A000794_I_1_20250430T162101 seq:A000794_N_1_20250430T162101 seq:A000794_D_1_20250430T162101 seq:A000794_H_1_20250430T162101 seq:A000794_e_1_20250430T162101 seq:A000794_K_1_20250430T162101 seq:A000794_O_1_20250430T162101 seq:A000794_A_1_20250430T162101 seq:A000794_E_1_20250430T162101 seq:A000794_V_1_20250430T162101 ) .
+
+seq:A000794_A_1_20250430T162101 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000794_D_1_20250430T162101 a seq:Text ;
+    cnt:chars """H. J. Ryser, Combinatorial Mathematics. Mathematical Association of America, Carus Mathematical Monograph 14, 1963, p. 124.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000794_E_1_20250430T162101 a seq:Text ;
+    cnt:chars "a(6) from _Georg Muntingh_, Feb 03 2014"@en .
+
+seq:A000794_H_1_20250430T162101 a seq:Text ;
+    cnt:chars """Shamil Asgarli, Brian Freidin, <a href="https://arxiv.org/abs/2009.13421">On the proportion of transverse-free plane curves</a>, arXiv:2009.13421 [math.AG], 2020.
+Zeynelabidin Karakaş, <a href="https://hdl.handle.net/11511/105942">Classification of Distinct Maximal Flag Codes of a Prescriped Type and Related Results</a>, PhD Thesis, Middle East Technical University, 2023. See pages 40 and 43.
+Georg Muntingh, <a href="/A000794/a000794.txt">Sage code for constructing the incidence matrix of the projective plane over a finite field of order n, and its permanent.</a>
+Georg Muntingh, <a href="/A000794/a000794_2.txt">Incidence matrix of a projective plane over a finite field of order 2, 3, 4, 5, 7, 8, and 9</a>.
+P. J. Nikolai, <a href="http://dx.doi.org/10.1090/S0025-5718-1960-0114764-0">Permanents of incidence matrices</a>, Math. Comp., 14 (1960), 262-266."""@en .
+
+seq:A000794_I_1_20250430T162101 a seq:Text ;
+    cnt:chars "M2143 N2248 #39 Apr 30 2025 16:21:01"@en .
+
+seq:A000794_K_1_20250430T162101 a seq:Text ;
+    cnt:chars "nonn,more,changed"@en .
+
+seq:A000794_N_1_20250430T162101 a seq:Text ;
+    cnt:chars "Permanent of projective plane of order n."@en .
+
+seq:A000794_O_1_20250430T162101 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000794_V_1_20250430T162101 a seq:Text ;
+    cnt:chars "1,2,24,3852,18534400,4598378639550"@en .
+
+seq:A000794_e_1_20250430T162101 a seq:Text ;
+    cnt:chars """From _Georg Muntingh_, Feb 03 2014: (Start)
+The projective plane over a finite field of order 2 has 7 points and 7 lines, for instance meeting with the incidence matrix
+    [1 0 0 1 1 0 0]
+    [0 1 1 0 1 0 0]
+    [1 0 1 0 0 1 0]
+    [0 1 0 1 0 1 0]
+    [0 0 1 1 0 0 1]
+    [1 1 0 0 0 0 1]
+    [0 0 0 0 1 1 1]
+which has permanent 24.  (End)"""@en .
+

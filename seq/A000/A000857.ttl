@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.543302Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 972}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000857 a seq:Sequence ;
+    rdfs:label "A000857"@en ;
+    seq:hasTextList ( seq:A000857_I_1_20200113T135457 seq:A000857_N_1_20200113T135457 seq:A000857_D_1_20200113T135457 seq:A000857_H_1_20200113T135457 seq:A000857_K_1_20200113T135457 seq:A000857_O_1_20200113T135457 seq:A000857_A_1_20200113T135457 seq:A000857_E_1_20200113T135457 seq:A000857_V_1_20200113T135457 ) .
+
+seq:A000857_A_1_20200113T135457 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000857_D_1_20200113T135457 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000857_E_1_20200113T135457 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Aug 10 2011"@en .
+
+seq:A000857_H_1_20200113T135457 a seq:Text ;
+    cnt:chars """F. Yano and H. Yoshida, <a href="https://doi.org/10.1016/j.disc.2007.03.050">Some set partition statistics in non-crossing partitions and generating functions</a>, Discr. Math., 307 (2007), 3147-3160.
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000857_I_1_20200113T135457 a seq:Text ;
+    cnt:chars "M3696 N1511 #24 Jan 13 2020 13:54:57"@en .
+
+seq:A000857_K_1_20200113T135457 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000857_N_1_20200113T135457 a seq:Text ;
+    cnt:chars "Number of n-input 3-output switching networks under the action of S(n) on the inputs and S(3) and complementing group C(2,3) on the outputs."@en .
+
+seq:A000857_O_1_20200113T135457 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000857_V_1_20200113T135457 a seq:Text ;
+    cnt:chars "4,74,63440,244728561176,13754897546985740953546112,181629101139670580935062344094172140654053010592464896"@en .
+

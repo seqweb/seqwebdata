@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.583353Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 237}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200565 a seq:Sequence ;
+    rdfs:label "A200565"@en ;
+    seq:hasTextList ( seq:A200565_I_1_20120331T102218 seq:A200565_N_1_20120331T102218 seq:A200565_C_1_20120331T102218 seq:A200565_Y_1_20120331T102218 seq:A200565_K_1_20120331T102218 seq:A200565_O_1_20120331T102218 seq:A200565_A_1_20120331T102218 seq:A200565_V_1_20120331T102218 ) .
+
+seq:A200565_A_1_20120331T102218 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 19 2011"@en .
+
+seq:A200565_C_1_20120331T102218 a seq:Text ;
+    cnt:chars "a(4)=A200216(2)."@en .
+
+seq:A200565_I_1_20120331T102218 a seq:Text ;
+    cnt:chars "#11 Mar 31 2012 10:22:18"@en .
+
+seq:A200565_K_1_20120331T102218 a seq:Text ;
+    cnt:chars "nonn,fini,full"@en .
+
+seq:A200565_N_1_20120331T102218 a seq:Text ;
+    cnt:chars "Integral x solutions of elliptic curve x^3-y^2 = 54814765 = A200218(2)."@en .
+
+seq:A200565_O_1_20120331T102218 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200565_V_1_20120331T102218 a seq:Text ;
+    cnt:chars "819,5256,838044,322001299796379844"@en .
+
+seq:A200565_Y_1_20120331T102218 a seq:Text ;
+    cnt:chars "Cf. A200216, A200217, A200218, A134105."@en .
+

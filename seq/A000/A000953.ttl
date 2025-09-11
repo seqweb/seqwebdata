@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.754158Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 739}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000953 a seq:Sequence ;
+    rdfs:label "A000953"@en ;
+    seq:hasTextList ( seq:A000953_I_1_20151015T143040 seq:A000953_N_1_20151015T143040 seq:A000953_D_1_20151015T143040 seq:A000953_H_1_20151015T143040 seq:A000953_F_1_20151015T143040 seq:A000953_K_1_20151015T143040 seq:A000953_O_1_20151015T143040 seq:A000953_A_1_20151015T143040 seq:A000953_E_1_20151015T143040 seq:A000953_V_1_20151015T143040 ) .
+
+seq:A000953_A_1_20151015T143040 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000953_D_1_20151015T143040 a seq:Text ;
+    cnt:chars "S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, Enumeration of polyene hydrocarbons: a complete mathematical solution, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751"@en .
+
+seq:A000953_E_1_20151015T143040 a seq:Text ;
+    cnt:chars "a(16)-a(19) from _Sean A. Irvine_, Oct 15 2015"@en .
+
+seq:A000953_F_1_20151015T143040 a seq:Text ;
+    cnt:chars "a(n) = A000207(n) - A000942(n). - _Sean A. Irvine_, Oct 15 2015"@en .
+
+seq:A000953_H_1_20151015T143040 a seq:Text ;
+    cnt:chars "S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href=\"/A002057/a002057.pdf\">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"@en .
+
+seq:A000953_I_1_20151015T143040 a seq:Text ;
+    cnt:chars "#14 Oct 15 2015 14:30:40"@en .
+
+seq:A000953_K_1_20151015T143040 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000953_N_1_20151015T143040 a seq:Text ;
+    cnt:chars "Number of free nonplanar polyenoids with n nodes."@en .
+
+seq:A000953_O_1_20151015T143040 a seq:Text ;
+    cnt:chars "7,2"@en .
+
+seq:A000953_V_1_20151015T143040 a seq:Text ;
+    cnt:chars "1,5,24,109,465,1943,7827,31095,121356,469235,1797376,6844290,25928036"@en .
+

@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.974513Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 692}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200260 a seq:Sequence ;
+    rdfs:label "A200260"@en ;
+    seq:hasTextList ( seq:A200260_I_1_20220908T084600 seq:A200260_N_1_20220908T084600 seq:A200260_H_1_20220908T084600 seq:A200260_t_1_20220908T084600 seq:A200260_o_1_20220908T084600 seq:A200260_Y_1_20220908T084600 seq:A200260_K_1_20220908T084600 seq:A200260_O_1_20220908T084600 seq:A200260_A_1_20220908T084600 seq:A200260_V_1_20220908T084600 ) .
+
+seq:A200260_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 15 2011"@en .
+
+seq:A200260_H_1_20220908T084600 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A200260/b200260.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200260_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#19 Sep 08 2022 08:46:00"@en .
+
+seq:A200260_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200260_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Numbers k such that k-th prime has an odd digit sum."@en .
+
+seq:A200260_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200260_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "2,3,4,9,10,13,14,15,18,19,23,24,30,32,33,34,36,37,40,41,43,44,45,46,48,49,50,53,56,57,60,61,64,65,66,67,68,71,72,74,75,78,79,80,82,86,87,89,90,91,93,102,105,106,108,109,110,111,116,117,118,121,124"@en .
+
+seq:A200260_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars "Cf. A119450, A200259 (complement)."@en .
+
+seq:A200260_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(Magma) [ n: n in [1..162] | IsOdd(&+Intseq(NthPrime(n))) ];  // _Bruno Berselli_, Nov 15 2011
+(PARI) isok(k) = sumdigits(prime(k)) % 2; \\\\ _Michel Marcus_, Jul 03 2021"""@en .
+
+seq:A200260_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "Select[Range[1000], OddQ[Total[IntegerDigits[Prime[#]]]] &] (* _T. D. Noe_, Nov 21 2011 *)"@en .
+

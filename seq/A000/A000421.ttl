@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.510634Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2100}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000421 a seq:Sequence ;
+    rdfs:label "A000421"@en ;
+    seq:hasTextList ( seq:A000421_I_1_20200319T160004 seq:A000421_N_1_20200319T160004 seq:A000421_C_1_20200319T160004 seq:A000421_D_1_20200319T160004 seq:A000421_H_1_20200319T160004 seq:A000421_F_1_20200319T160004 seq:A000421_e_1_20200319T160004 seq:A000421_o_1_20200319T160004 seq:A000421_Y_1_20200319T160004 seq:A000421_K_1_20200319T160004 seq:A000421_O_1_20200319T160004 seq:A000421_A_1_20200319T160004 seq:A000421_E_1_20200319T160004 seq:A000421_V_1_20200319T160004 ) .
+
+seq:A000421_A_1_20200319T160004 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000421_C_1_20200319T160004 a seq:Text ;
+    cnt:chars """a(n) is also the number of isomorphism classes of connected 3-regular simple graphs of order 2n with possibly loops. - _Nico Van Cleemput_, Jun 04 2014
+There are no graphs of order 2n+1 satisfying the condition above. -  _Natan Arie Consigli_, Dec 20 2019"""@en .
+
+seq:A000421_D_1_20200319T160004 a seq:Text ;
+    cnt:chars """A. T. Balaban, Enumeration of Cyclic Graphs, pp. 63-105 of A. T. Balaban, ed., Chemical Applications of Graph Theory, Ac. Press, 1976; see p. 92 [gives incorrect a(6)].
+CRC Handbook of Combinatorial Designs, 1996, p. 651 [or: 2006, table 4.40]."""@en .
+
+seq:A000421_E_1_20200319T160004 a seq:Text ;
+    cnt:chars """More terms from _Brendan McKay_, Apr 15 2007
+a(13)-a(20) from _Andrew Howroyd_, Mar 19 2020"""@en .
+
+seq:A000421_F_1_20200319T160004 a seq:Text ;
+    cnt:chars "Inverse Euler transform of A129416. - _Andrew Howroyd_, Mar 19 2020"@en .
+
+seq:A000421_H_1_20200319T160004 a seq:Text ;
+    cnt:chars """Jan-Peter Börnsen, Anton E. M. van de Ven, <a href="https://arxiv.org/abs/1807.04817">Tangent Developable Orbit Space of an Octupole</a>, arXiv:1807.04817 [hep-th], 2018.
+G. Brinkmann, N. Van Cleemput, T. Pisanski, <a href="http://dx.doi.org/10.1016/j.tcs.2012.01.018">Generation of various classes of trivalent graphs</a>, Theoretical Computer Science 502, 2013, pp.16-29.
+R. J. Mathar, <a href="/A000421/a000421.pdf">Cubic multigraphs A000421</a>
+Brendan McKay and others, <a href="http://pallini.di.uniroma1.it/">Nauty Traces</a>"""@en .
+
+seq:A000421_I_1_20200319T160004 a seq:Text ;
+    cnt:chars "#59 Mar 19 2020 16:00:04"@en .
+
+seq:A000421_K_1_20200319T160004 a seq:Text ;
+    cnt:chars "nonn,hard,more"@en .
+
+seq:A000421_N_1_20200319T160004 a seq:Text ;
+    cnt:chars "Number of isomorphism classes of connected 3-regular (trivalent, cubic) loopless multigraphs of order 2n."@en .
+
+seq:A000421_O_1_20200319T160004 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000421_V_1_20200319T160004 a seq:Text ;
+    cnt:chars "1,2,6,20,91,509,3608,31856,340416,4269971,61133757,978098997,17228295555,330552900516,6853905618223,152626436936272,3631575281503404,91928898608055819,2466448432564961852,69907637101781318907"@en .
+
+seq:A000421_Y_1_20200319T160004 a seq:Text ;
+    cnt:chars """Column k=3 of A328682 (table of k-regular n-node multigraphs).
+Cf. A129416, A005967 (loops allowed), A129417, A129419, A129421, A129423, A129425, A002851 (no multiedges)."""@en .
+
+seq:A000421_e_1_20200319T160004 a seq:Text ;
+    cnt:chars """From _Natan Arie Consigli_, Dec 20 2019: (Start)
+a(1) = 1: with two nodes the only viable option is the triple edged path multigraph.
+a(2) = 4: with four nodes we have two cases: the tetrahedral graph and the square graph with single and double edges on opposite sides.
+(End)"""@en .
+
+seq:A000421_o_1_20200319T160004 a seq:Text ;
+    cnt:chars "(nauty/bash) for n in {1..10}; do geng -cqD3 $[2*$n] | multig -ur3; done # _Sean A. Irvine_, Sep 24 2015"@en .
+

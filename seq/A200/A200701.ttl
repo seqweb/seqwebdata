@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.901640Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 765}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200701 a seq:Sequence ;
+    rdfs:label "A200701"@en ;
+    seq:hasTextList ( seq:A200701_I_1_20250207T164407 seq:A200701_N_1_20250207T164407 seq:A200701_C_1_20250207T164407 seq:A200701_H_1_20250207T164407 seq:A200701_e_1_20250207T164407 seq:A200701_t_1_20250207T164407 seq:A200701_Y_1_20250207T164407 seq:A200701_K_1_20250207T164407 seq:A200701_O_1_20250207T164407 seq:A200701_A_1_20250207T164407 seq:A200701_V_1_20250207T164407 ) .
+
+seq:A200701_A_1_20250207T164407 a seq:Text ;
+    cnt:chars "_Clark Kimberling_, Nov 21 2011"@en .
+
+seq:A200701_C_1_20250207T164407 a seq:Text ;
+    cnt:chars "See A200614 for a guide to related sequences. The Mathematica program includes a graph."@en .
+
+seq:A200701_H_1_20250207T164407 a seq:Text ;
+    cnt:chars "<a href=\"/index/Tra#transcendental\">Index entries for transcendental numbers</a>."@en .
+
+seq:A200701_I_1_20250207T164407 a seq:Text ;
+    cnt:chars "#8 Feb 07 2025 16:44:07"@en .
+
+seq:A200701_K_1_20250207T164407 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200701_N_1_20250207T164407 a seq:Text ;
+    cnt:chars "Decimal expansion of least x>0 satisfying 1-6*x^2=tan(x)."@en .
+
+seq:A200701_O_1_20250207T164407 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A200701_V_1_20250207T164407 a seq:Text ;
+    cnt:chars "3,3,0,8,0,1,8,0,6,1,0,5,5,8,6,9,9,1,4,3,4,0,8,7,8,0,3,1,0,8,9,9,0,9,3,5,7,4,3,3,6,3,3,8,1,6,8,1,9,8,0,7,0,4,0,2,4,4,2,3,2,0,8,5,2,7,1,6,4,1,4,2,9,8,2,0,7,8,0,6,5,2,9,5,2,8,4,6,4,8,5,6,4,6,0,5,7,1,6"@en .
+
+seq:A200701_Y_1_20250207T164407 a seq:Text ;
+    cnt:chars "Cf. A200338."@en .
+
+seq:A200701_e_1_20250207T164407 a seq:Text ;
+    cnt:chars "0.33080180610558699143408780310899093574336338..."@en .
+
+seq:A200701_t_1_20250207T164407 a seq:Text ;
+    cnt:chars """a = -6; c = 1;
+f[x_] := a*x^2 + c; g[x_] := Tan[x]
+Plot[{f[x], g[x]}, {x, -.1, Pi/2}, {AxesOrigin -> {0, 0}}]
+r = x /. FindRoot[f[x] == g[x], {x, .3, .4}, WorkingPrecision -> 110]
+RealDigits[r]   (* A200701 *)"""@en .
+

@@ -1,0 +1,37 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.947414Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 604}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000611 a seq:Sequence ;
+    rdfs:label "A000611"@en ;
+    seq:hasTextList ( seq:A000611_I_1_20240519T094214 seq:A000611_N_1_20240519T094214 seq:A000611_H_1_20240519T094214 seq:A000611_Y_1_20240519T094214 seq:A000611_K_1_20240519T094214 seq:A000611_O_1_20240519T094214 seq:A000611_A_1_20240519T094214 seq:A000611_V_1_20240519T094214 ) .
+
+seq:A000611_A_1_20240519T094214 a seq:Text ;
+    cnt:chars "_Brendan McKay_"@en .
+
+seq:A000611_H_1_20240519T094214 a seq:Text ;
+    cnt:chars """B. D. McKay and E. Rogoyski, <a href="https://doi.org/10.37236/1222">Latin squares of order ten</a>, Electron. J. Combinatorics, 2 (1995) #N3.
+B. D. McKay and I. M. Wanless, <a href="https://doi.org/10.1006/jcta.1998.2947">Most Latin squares have many subsquares</a>, J. Combin. Theory A 86 (1999), 323-347.
+<a href="/index/La#Latin">Index entries for sequences related to Latin squares and rectangles</a>"""@en .
+
+seq:A000611_I_1_20240519T094214 a seq:Text ;
+    cnt:chars "#16 May 19 2024 09:42:14"@en .
+
+seq:A000611_K_1_20240519T094214 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000611_N_1_20240519T094214 a seq:Text ;
+    cnt:chars "Number of normalized Latin squares of order n containing no 2 X 2 Latin subsquare."@en .
+
+seq:A000611_O_1_20240519T094214 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000611_V_1_20240519T094214 a seq:Text ;
+    cnt:chars "1,0,1,0,6,40,17760,2096640,29659631400"@en .
+
+seq:A000611_Y_1_20240519T094214 a seq:Text ;
+    cnt:chars "Cf. A097548, A097549."@en .
+

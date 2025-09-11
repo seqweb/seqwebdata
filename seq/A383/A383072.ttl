@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.732481Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 902}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383072 a seq:Sequence ;
+    rdfs:label "A383072"@en ;
+    seq:hasTextList ( seq:A383072_I_1_20250415T220617 seq:A383072_N_1_20250415T220617 seq:A383072_H_1_20250415T220617 seq:A383072_F_1_20250415T220617 seq:A383072_t_1_20250415T220617 seq:A383072_Y_1_20250415T220617 seq:A383072_K_1_20250415T220617 seq:A383072_O_1_20250415T220617 seq:A383072_A_1_20250415T220617 seq:A383072_E_1_20250415T220617 seq:A383072_V_1_20250415T220617 ) .
+
+seq:A383072_A_1_20250415T220617 a seq:Text ;
+    cnt:chars "_Edwin Hermann_, Apr 15 2025"@en .
+
+seq:A383072_E_1_20250415T220617 a seq:Text ;
+    cnt:chars "More terms from _Alois P. Heinz_, Apr 15 2025"@en .
+
+seq:A383072_F_1_20250415T220617 a seq:Text ;
+    cnt:chars "G.f.: x*(10*x^3+14*x^2-9*x-9)/(-6*x^4-6*x^3+8*x^2+3*x-1). - _Alois P. Heinz_, Apr 15 2025"@en .
+
+seq:A383072_H_1_20250415T220617 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_04\">Index entries for linear recurrences with constant coefficients</a>, signature (3,8,-6,-6)."@en .
+
+seq:A383072_I_1_20250415T220617 a seq:Text ;
+    cnt:chars "#23 Apr 15 2025 22:06:17"@en .
+
+seq:A383072_K_1_20250415T220617 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A383072_N_1_20250415T220617 a seq:Text ;
+    cnt:chars "Number of n-digit positive integers where all pairs of consecutive digits have a difference of at least 4."@en .
+
+seq:A383072_O_1_20250415T220617 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383072_V_1_20250415T220617 a seq:Text ;
+    cnt:chars "9,36,166,722,3224,14236,63172,279728,1239800,5492776,24339328,107843024,477848240,2117296288,9381580672,41568964736,184188672416,816124473376,3616179527008,16022988545120,70996522976672,314579653288672,1393876135246624,6176148562918496"@en .
+
+seq:A383072_Y_1_20250415T220617 a seq:Text ;
+    cnt:chars "Cf. A052268, A100062, A383070, A383071."@en .
+
+seq:A383072_t_1_20250415T220617 a seq:Text ;
+    cnt:chars "LinearRecurrence[{3,8,-6,-6},{9, 36, 166, 722},24] (* or *) Rest[CoefficientList[Series[x*(10*x^3+14*x^2-9*x-9)/(-6*x^4-6*x^3+8*x^2+3*x-1),{x,0,24}] ,x]] (* _James C. McMahon_, Apr 15 2025 *)"@en .
+

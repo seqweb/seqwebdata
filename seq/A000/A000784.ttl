@@ -1,0 +1,57 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.347802Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1584}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000784 a seq:Sequence ;
+    rdfs:label "A000784"@en ;
+    seq:hasTextList ( seq:A000784_I_1_20220617T145126 seq:A000784_N_1_20220617T145126 seq:A000784_D_1_20220617T145126 seq:A000784_H_1_20220617T145126 seq:A000784_t_1_20220617T145126 seq:A000784_Y_1_20220617T145126 seq:A000784_K_1_20220617T145126 seq:A000784_O_1_20220617T145126 seq:A000784_A_1_20220617T145126 seq:A000784_E_1_20220617T145126 seq:A000784_V_1_20220617T145126 ) .
+
+seq:A000784_A_1_20220617T145126 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000784_D_1_20220617T145126 a seq:Text ;
+    cnt:chars """P. A. MacMahon, Combinatory Analysis. Cambridge Univ. Press, London and New York, Vol. 1, 1915 and Vol. 2, 1916; see vol. 2, p 332.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000784_E_1_20220617T145126 a seq:Text ;
+    cnt:chars "More terms from _Wouter Meeussen_"@en .
+
+seq:A000784_H_1_20220617T145126 a seq:Text ;
+    cnt:chars """Jean-François Alcover, <a href="/A000784/b000784.txt">Table of n, a(n) for n = 1..150</a>
+P. A. MacMahon, <a href="http://www.hti.umich.edu/cgi/t/text/text-idx?c=umhistmath;idno=ABU9009">Combinatory analysis</a>."""@en .
+
+seq:A000784_I_1_20220617T145126 a seq:Text ;
+    cnt:chars "M0322 N0119 #24 Jun 17 2022 14:51:26"@en .
+
+seq:A000784_K_1_20220617T145126 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000784_N_1_20220617T145126 a seq:Text ;
+    cnt:chars "Number of symmetrical planar partitions of n (planar partitions (A000219) that when regarded as 3-D objects have just one symmetry plane)."@en .
+
+seq:A000784_O_1_20220617T145126 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000784_V_1_20220617T145126 a seq:Text ;
+    cnt:chars "0,1,2,2,4,6,6,11,16,20,28,41,51,70,93,122,158,211,266,350,450,577,730,948,1186,1510,1901,2408,2999,3790,4703,5898,7310,9111,11231,13979,17168,21229,26036,32095,39188,48155,58657,71798,87262,106472,129014"@en .
+
+seq:A000784_Y_1_20220617T145126 a seq:Text ;
+    cnt:chars """Equals -A048141 + 2*A048140 - A000219.
+Cf. A000785, A000786, A005987, A048142."""@en .
+
+seq:A000784_t_1_20220617T145126 a seq:Text ;
+    cnt:chars """nmax = 150;
+a219[0] = 1;
+a219[n_] := a219[n] = Sum[a219[n - j] DivisorSigma[2, j], {j, n}]/n;
+s = Product[1/(1 - x^(2 i - 1))/(1 - x^(2 i))^Floor[i/2], {i, 1, Ceiling[( nmax + 1)/2]}] + O[x]^( nmax + 1);
+A005987 = CoefficientList[s, x];
+a048140[n_] := (a219[n] + A005987[[n + 1]])/2;
+A048141 = Cases[Import["https://oeis.org/A048141/b048141.txt", "Table"], {_, _}][[All, 2]];
+a[1] = 0;
+a[n_] := -A048141[[n]] + 2 a048140[n] - a219[n];
+a /@ Range[1, nmax] (* _Jean-François Alcover_, Dec 28 2019 *)"""@en .
+

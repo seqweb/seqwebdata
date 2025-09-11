@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.363732Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1230}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000075 a seq:Sequence ;
+    rdfs:label "A000075"@en ;
+    seq:hasTextList ( seq:A000075_I_1_20220605T131101 seq:A000075_N_1_20220605T131101 seq:A000075_D_1_20220605T131101 seq:A000075_H_1_20220605T131101 seq:A000075_e_1_20220605T131101 seq:A000075_o_1_20220605T131101 seq:A000075_Y_1_20220605T131101 seq:A000075_K_1_20220605T131101 seq:A000075_O_1_20220605T131101 seq:A000075_A_1_20220605T131101 seq:A000075_V_1_20220605T131101 ) .
+
+seq:A000075_A_1_20220605T131101 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000075_D_1_20220605T131101 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000075_H_1_20220605T131101 a seq:Text ;
+    cnt:chars """D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000075_I_1_20220605T131101 a seq:Text ;
+    cnt:chars "M1078 N0408 #26 Jun 05 2022 13:11:01"@en .
+
+seq:A000075_K_1_20220605T131101 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000075_N_1_20220605T131101 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form 2 x^2 + 3 y^2."@en .
+
+seq:A000075_O_1_20220605T131101 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000075_V_1_20220605T131101 a seq:Text ;
+    cnt:chars "0,1,2,4,7,14,23,42,76,139,258,482,907,1717,3269,6257,12020,23171,44762,86683,168233,327053,636837,1241723,2424228,4738426,9271299,18157441,35591647,69820626,137068908,269270450,529312241,1041093048,2048825748,4034059456"@en .
+
+seq:A000075_Y_1_20220605T131101 a seq:Text ;
+    cnt:chars "Cf. A002480."@en .
+
+seq:A000075_e_1_20220605T131101 a seq:Text ;
+    cnt:chars "a(3)=4 since 2^3=8 and 2=2*1^2, 3=3*1^2, 5=2*1^2+3*1^2, 8=2*2^2."@en .
+
+seq:A000075_o_1_20220605T131101 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n<0,0,sum(k=1,2^n,0<sum(y=0,sqrtint(k\\3),issquare((k-3*y^2)/2))))
+(Python)
+import math
+def A000075(n):
+    return len(set([2*x**2+3*y**2 for x in range(1+int(math.floor(2**((n-1)/2)))) for y in range(1+int(math.floor(math.sqrt((2**n-2*x**2)/3)))) if 0 < 2*x**2+3*y**2 <= 2**n]))
+# _Chai Wah Wu_, Aug 20 2014"""@en .
+

@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.770227Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1792}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000536 a seq:Sequence ;
+    rdfs:label "A000536"@en ;
+    seq:hasTextList ( seq:A000536_I_1_20160209T083644 seq:A000536_N_1_20160209T083644 seq:A000536_D_1_20160209T083644 seq:A000536_H_1_20160209T083644 seq:A000536_F_1_20160209T083644 seq:A000536_t_1_20160209T083644 seq:A000536_K_1_20160209T083644 seq:A000536_O_1_20160209T083644 seq:A000536_A_1_20160209T083644 seq:A000536_E_1_20160209T083644 seq:A000536_V_1_20160209T083644 ) .
+
+seq:A000536_A_1_20160209T083644 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000536_D_1_20160209T083644 a seq:Text ;
+    cnt:chars """Eggleton, Roger B. "Maximal Midpoint-Free Subsets of Integers." International Journal of Combinatorics Volume 2015, Article ID 216475, 14 pages; http://dx.doi.org/10.1155/2015/216475; http://www.hindawi.com/journals/ijcom/2015/216475/abs/
+J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 210.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000536_E_1_20160209T083644 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Nov 15 2010"@en .
+
+seq:A000536_F_1_20160209T083644 a seq:Text ;
+    cnt:chars "Let K(0,0)=1; K(n,0)=n*K(n-1,0)+(-1)^n, n>0; and j*K(n,j)=n*(n+1-2*j)*K(n-1,j-1)+n*(n-1)*K(n-2,j-1), j>0. Sequence is a(n)=K(n,2). - _Sean A. Irvine_, Nov 15 2010"@en .
+
+seq:A000536_H_1_20160209T083644 a seq:Text ;
+    cnt:chars "<a href=\"/index/La#Latin\">Index entries for sequences related to Latin squares and rectangles</a>"@en .
+
+seq:A000536_I_1_20160209T083644 a seq:Text ;
+    cnt:chars "M5152 N2236 #26 Feb 09 2016 08:36:44"@en .
+
+seq:A000536_K_1_20160209T083644 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000536_N_1_20160209T083644 a seq:Text ;
+    cnt:chars "Number of 3-line Latin rectangles."@en .
+
+seq:A000536_O_1_20160209T083644 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000536_V_1_20160209T083644 a seq:Text ;
+    cnt:chars "24,240,2520,26880,304080,3671136,47391120,653463360,9603708840,150046937040,2485510331304,43536519673920,804343214307360,15636586027419840,319143375070100640,6824486562845878656,152599994618389811640,3561710724832153990320,86627571138529803385080,2192153071078356814538880,57633178354598014299807984,1572073330365520093029415200,44434609885866805678475703600,1299879247128621094998213278400,39312834919322919649653205283400,1227895179113516869799082638629776,39569125440836907870479047149487560,1314368274045259508166257769617810880,44963797526832537006635800892057862720,1582832153412276057834241761650127323520"@en .
+
+seq:A000536_t_1_20160209T083644 a seq:Text ;
+    cnt:chars "K[0, 0] = 1; K[n_, 0] := K[n, 0] = n*K[n-1, 0] + (-1)^n; K[n_, j_] := K[n, j] = (1/j)(n*(n+1-2*j)*K[n-1, j-1] + n*(n-1)*K[n-2, j-1]); a[n_] := K[n, 2]; Table[a[n], {n, 4, 33}] (* _Jean-François Alcover_, Feb 09 2016, after _Sean A. Irvine_ *)"@en .
+

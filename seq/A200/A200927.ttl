@@ -1,0 +1,61 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.356131Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 981}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200927 a seq:Sequence ;
+    rdfs:label "A200927"@en ;
+    seq:hasTextList ( seq:A200927_I_1_20150918T042937 seq:A200927_N_1_20150918T042937 seq:A200927_C_1_20150918T042937 seq:A200927_H_1_20150918T042937 seq:A200927_p_1_20150918T042937 seq:A200927_t_1_20150918T042937 seq:A200927_Y_1_20150918T042937 seq:A200927_K_1_20150918T042937 seq:A200927_O_1_20150918T042937 seq:A200927_A_1_20150918T042937 seq:A200927_V_1_20150918T042937 ) .
+
+seq:A200927_A_1_20150918T042937 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 24 2011"@en .
+
+seq:A200927_C_1_20150918T042937 a seq:Text ;
+    cnt:chars "a(n) = 0 if and only if n is semiprime."@en .
+
+seq:A200927_H_1_20150918T042937 a seq:Text ;
+    cnt:chars "Arkadiusz Wesolowski, <a href=\"/A200927/b200927.txt\">Table of n, a(n) for n = 4..10000</a>"@en .
+
+seq:A200927_I_1_20150918T042937 a seq:Text ;
+    cnt:chars "#14 Sep 18 2015 04:29:37"@en .
+
+seq:A200927_K_1_20150918T042937 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200927_N_1_20150918T042937 a seq:Text ;
+    cnt:chars "Difference between (least semiprime >= n) and (largest semiprime <= n)."@en .
+
+seq:A200927_O_1_20150918T042937 a seq:Text ;
+    cnt:chars "4,2"@en .
+
+seq:A200927_V_1_20150918T042937 a seq:Text ;
+    cnt:chars "0,2,0,3,3,0,0,4,4,4,0,0,6,6,6,6,6,0,0,3,3,0,0,7,7,7,7,7,7,0,0,0,3,3,0,0,7,7,7,7,7,7,0,3,3,0,2,0,4,4,4,0,2,0,0,4,4,4,0,3,3,0,4,4,4,0,5,5,5,5,0,3,3,0,5,5,5,5,0,3,3,0,0,0,4,4,4"@en .
+
+seq:A200927_Y_1_20150918T042937 a seq:Text ;
+    cnt:chars "Cf. A001358, A065516."@en .
+
+seq:A200927_p_1_20150918T042937 a seq:Text ;
+    cnt:chars """A106325 := proc(n)
+    for a from n do
+        if numtheory[bigomega](a) = 2 then
+            return a;
+        end if;
+    end do:
+end proc;
+prevSpr := proc(n)
+    for a from n by -1 do
+        if numtheory[bigomega](a) = 2 then
+            return a;
+        end if;
+    end do:
+end proc;
+A200927 := proc(n)
+    A106325(n)-prevSpr(n) ;
+end proc:
+seq(A200927(n),n=4..80) ; # _R. J. Mathar_, Nov 26 2011"""@en .
+
+seq:A200927_t_1_20150918T042937 a seq:Text ;
+    cnt:chars "Table[a = b = 0; While[! PrimeOmega[n - a] == 2, a++]; While[! PrimeOmega[n + b] == 2, b++]; a + b, {n, 4, 100}]"@en .
+

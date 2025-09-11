@@ -1,3 +1,4 @@
+# {"metadata": "v1.0", "at": "2025-09-10T13:59:09.425184Z", "by": "app.fab.make_one.main>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1017}
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix oeis: <http://www.oeis.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,38 +9,38 @@ oeis:A054244 a seq:Sequence ;
     rdfs:label "A054244"@en ;
     seq:hasTextList ( seq:A054244_I_1_20240120T154428 seq:A054244_N_1_20240120T154428 seq:A054244_H_1_20240120T154428 seq:A054244_F_1_20240120T154428 seq:A054244_e_1_20240120T154428 seq:A054244_t_1_20240120T154428 seq:A054244_Y_1_20240120T154428 seq:A054244_K_1_20240120T154428 seq:A054244_O_1_20240120T154428 seq:A054244_A_1_20240120T154428 seq:A054244_V_1_20240120T154428 ) .
 
-seq:A054244_A_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_A_1_20240120T154428 a seq:Text ;
     cnt:chars "_Marc LeBrun_, Feb 08 2000"@en .
 
-seq:A054244_F_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_F_1_20240120T154428 a seq:Text ;
     cnt:chars "a(n) = A003465(A000120(n))."@en .
 
-seq:A054244_H_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_H_1_20240120T154428 a seq:Text ;
     cnt:chars """T. D. Noe, <a href="/A054244/b054244.txt">Table of n, a(n) for n=1..1000</a>
 D. Applegate, M. LeBrun, N. J. A. Sloane, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL14/Sloane/carry2.html">Dismal Arithmetic</a>, J. Int. Seq. 14 (2011) # 11.9.8."""@en .
 
-seq:A054244_I_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_I_1_20240120T154428 a seq:Text ;
     cnt:chars "#23 Jan 20 2024 15:44:28"@en .
 
-seq:A054244_K_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_K_1_20240120T154428 a seq:Text ;
     cnt:chars "easy,nonn,nice"@en .
 
-seq:A054244_N_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_N_1_20240120T154428 a seq:Text ;
     cnt:chars "Number of partitions of n into distinct positive parts <= n, with parts combined by IOR (inclusive or)."@en .
 
-seq:A054244_O_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_O_1_20240120T154428 a seq:Text ;
     cnt:chars "1,3"@en .
 
-seq:A054244_V_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_V_1_20240120T154428 a seq:Text ;
     cnt:chars "1,1,5,1,5,5,109,1,5,5,109,5,109,109,32297,1,5,5,109,5,109,109,32297,5,109,109,32297,109,32297,32297,2147321017,1,5,5,109,5,109,109,32297,5,109,109,32297,109,32297,32297,2147321017,5,109,109,32297,109,32297"@en .
 
-seq:A054244_Y_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_Y_1_20240120T154428 a seq:Text ;
     cnt:chars """Cf. A003465 (if duplicates are removed from the current sequence), A000120, A054243 (XOR version).
 Cf. also A087079."""@en .
 
-seq:A054244_e_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_e_1_20240120T154428 a seq:Text ;
     cnt:chars "a(3)=5 thus: 3 3+2 3+1 3+2+1 2+1 (with \"+\" meaning IOR)."@en .
 
-seq:A054244_t_1_20240120T154428 seq:Sequence seq:Text ;
+seq:A054244_t_1_20240120T154428 a seq:Text ;
     cnt:chars "A003465[n_] := Sum[(-1)^k*Binomial[n, k]*2^(2^(n - k)), {k, 0, n}]/2; a[n_] := A003465[DigitCount[n, 2, 1]]; Table[a[n], {n, 1, 53}] (* _Jean-François Alcover_, Nov 21 2012, from formula *)"@en .
 

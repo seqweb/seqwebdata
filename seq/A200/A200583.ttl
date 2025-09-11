@@ -1,0 +1,64 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.617867Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1515}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200583 a seq:Sequence ;
+    rdfs:label "A200583"@en ;
+    seq:hasTextList ( seq:A200583_I_1_20140303T042509 seq:A200583_N_1_20140303T042509 seq:A200583_C_1_20140303T042509 seq:A200583_H_1_20140303T042509 seq:A200583_F_1_20140303T042509 seq:A200583_e_1_20140303T042509 seq:A200583_p_1_20140303T042509 seq:A200583_t_1_20140303T042509 seq:A200583_Y_1_20140303T042509 seq:A200583_K_1_20140303T042509 seq:A200583_O_1_20140303T042509 seq:A200583_A_1_20140303T042509 seq:A200583_V_1_20140303T042509 ) .
+
+seq:A200583_A_1_20140303T042509 a seq:Text ;
+    cnt:chars "_Peter Luschny_, Nov 20 2011"@en .
+
+seq:A200583_C_1_20140303T042509 a seq:Text ;
+    cnt:chars "A meander is a closed curve drawn by arcs of equal length and central angle of equal magnitude, starting with a positively oriented arc."@en .
+
+seq:A200583_F_1_20140303T042509 a seq:Text ;
+    cnt:chars "T(n,k) = A198060(d-1,n/d-1) where d is the k-th divisor of n (the divisors in natural order)."@en .
+
+seq:A200583_H_1_20140303T042509 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A200583/b200583.txt">Table of n, a(n) for n = 1..482</a>
+Peter Luschny, <a href="http://oeis.org/wiki/User:Peter_Luschny/Meander">Meander</a>."""@en .
+
+seq:A200583_I_1_20140303T042509 a seq:Text ;
+    cnt:chars "#14 Mar 03 2014 04:25:09"@en .
+
+seq:A200583_K_1_20140303T042509 a seq:Text ;
+    cnt:chars "nonn,tabf"@en .
+
+seq:A200583_N_1_20140303T042509 a seq:Text ;
+    cnt:chars "Table read by rows, n >= 1, 1 <= k <= card(divisors(n)), T(n,k) meanders of length n and central angle of 360/d degrees, d the k-th divisor of n."@en .
+
+seq:A200583_O_1_20140303T042509 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200583_V_1_20140303T042509 a seq:Text ;
+    cnt:chars "1,2,1,4,1,8,3,1,16,1,32,10,4,1,64,1,128,35,5,1,256,22,1,512,126,6,1,1024,1,2048,462,134,46,7,1,4096,1,8192,1716,8,1,16384,866,94,1,32768,6435,485,9,1,65536,1,131072,24310,5812,190,10,1,262144,1,524288"@en .
+
+seq:A200583_Y_1_20140303T042509 a seq:Text ;
+    cnt:chars "Cf. A198060, A199932, A200062."@en .
+
+seq:A200583_e_1_20140303T042509 a seq:Text ;
+    cnt:chars """[ 1]            1
+[ 2]          2, 1
+[ 3]          4, 1
+[ 4]        8, 3, 1
+[ 5]         16, 1
+[ 6]      32, 10, 4, 1
+[ 7]         64, 1
+[ 8]     128, 35, 5, 1
+[ 9]       256, 22, 1
+[10]     512, 126, 6, 1
+[11]        1024, 1
+[12] 2048, 462, 134, 46, 7, 1"""@en .
+
+seq:A200583_p_1_20140303T042509 a seq:Text ;
+    cnt:chars """A200583_row := proc(n) local i;
+seq(A198060(i-1,n/i-1),i=numtheory[divisors](n)) end:
+seq(print(A200583_row(i)),i=1..12);"""@en .
+
+seq:A200583_t_1_20140303T042509 a seq:Text ;
+    cnt:chars "A198060[m_, n_] := Sum[Sum[Sum[(-1)^(j+i)*Binomial[i, j]*Binomial[n, k]^(m+1)*(n+1)^j*(k+1)^(m-j)/(k+1)^m, {i, 0, m}], {j, 0, m}], {k, 0, n}]; row[n_] := Table[A198060[d-1, n/d-1], {d, Divisors[n]}]; Table[row[n], {n, 1, 20}] // Flatten (* _Jean-François Alcover_, Feb 25 2014, after Maple *)"@en .
+

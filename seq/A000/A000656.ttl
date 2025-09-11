@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.047790Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 919}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000656 a seq:Sequence ;
+    rdfs:label "A000656"@en ;
+    seq:hasTextList ( seq:A000656_I_1_20220201T010903 seq:A000656_N_1_20220201T010903 seq:A000656_C_1_20220201T010903 seq:A000656_D_1_20220201T010903 seq:A000656_H_1_20220201T010903 seq:A000656_K_1_20220201T010903 seq:A000656_O_1_20220201T010903 seq:A000656_A_1_20220201T010903 seq:A000656_E_1_20220201T010903 seq:A000656_V_1_20220201T010903 ) .
+
+seq:A000656_A_1_20220201T010903 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000656_C_1_20220201T010903 a seq:Text ;
+    cnt:chars "Harrison paper gives incorrect a(4)=43265728. [_Sean A. Irvine_, Feb 27 2012]"@en .
+
+seq:A000656_D_1_20220201T010903 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000656_E_1_20220201T010903 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Feb 26 2012"@en .
+
+seq:A000656_H_1_20220201T010903 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="https://www.jstor.org/stable/2946369">On the classification of Boolean functions by the general linear and affine groups</a>, J. Soc. Indust. Appl. Math. 12 (1964) 285-299.
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000656_I_1_20220201T010903 a seq:Text ;
+    cnt:chars "M0924 N0348 #23 Feb 01 2022 01:09:03"@en .
+
+seq:A000656_K_1_20220201T010903 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000656_N_1_20220201T010903 a seq:Text ;
+    cnt:chars "Invertible Boolean functions of n variables with S(n) acting on the domain and GL(n,2) acting on the range."@en .
+
+seq:A000656_O_1_20220201T010903 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000656_V_1_20220201T010903 a seq:Text ;
+    cnt:chars "2,3,56,43265712,219289731988435167257927904,8742218740996073061357349746759733054713953086811227917496519524423937904640"@en .
+

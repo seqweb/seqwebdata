@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.598033Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 646}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000885 a seq:Sequence ;
+    rdfs:label "A000885"@en ;
+    seq:hasTextList ( seq:A000885_I_1_20131121T124545 seq:A000885_N_1_20131121T124545 seq:A000885_H_1_20131121T124545 seq:A000885_t_1_20131121T124545 seq:A000885_Y_1_20131121T124545 seq:A000885_K_1_20131121T124545 seq:A000885_O_1_20131121T124545 seq:A000885_A_1_20131121T124545 seq:A000885_E_1_20131121T124545 seq:A000885_V_1_20131121T124545 ) .
+
+seq:A000885_A_1_20131121T124545 a seq:Text ;
+    cnt:chars "gandalf(AT)hrn.office.ssi.net (James D. Ausfahl)"@en .
+
+seq:A000885_E_1_20131121T124545 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_"@en .
+
+seq:A000885_H_1_20131121T124545 a seq:Text ;
+    cnt:chars "Donovan Johnson, <a href=\"/A000885/b000885.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000885_I_1_20131121T124545 a seq:Text ;
+    cnt:chars "#14 Nov 21 2013 12:45:45"@en .
+
+seq:A000885_K_1_20131121T124545 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000885_N_1_20131121T124545 a seq:Text ;
+    cnt:chars "Number of twin prime pairs < square of n-th prime."@en .
+
+seq:A000885_O_1_20131121T124545 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000885_V_1_20131121T124545 a seq:Text ;
+    cnt:chars "0,2,4,6,10,12,19,21,25,33,35,46,53,56,67,80,93,98,117,128,131,146,160,174,195,210,217,227,233,244,286,298,325,331,376,386,406,423,444,467,492,505,554,561,581,589,641,700,723,732,748,780,789,835,868,895,938,945,975"@en .
+
+seq:A000885_Y_1_20131121T124545 a seq:Text ;
+    cnt:chars "Cf. A000879."@en .
+
+seq:A000885_t_1_20131121T124545 a seq:Text ;
+    cnt:chars "With[{tpps=Select[Partition[Prime[Range[10000]],2,1],Last[#]- First[#] == 2&]}, Table[ Count[tpps,_?(Last[#]<Prime[n]^2&)],{n,60}]] (* _Harvey P. Dale_, Aug 11 2011 *)"@en .
+

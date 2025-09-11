@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.504933Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 937}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200526 a seq:Sequence ;
+    rdfs:label "A200526"@en ;
+    seq:hasTextList ( seq:A200526_I_1_20190802T041041 seq:A200526_N_1_20190802T041041 seq:A200526_C_1_20190802T041041 seq:A200526_t_1_20190802T041041 seq:A200526_Y_1_20190802T041041 seq:A200526_K_1_20190802T041041 seq:A200526_O_1_20190802T041041 seq:A200526_A_1_20190802T041041 seq:A200526_V_1_20190802T041041 ) .
+
+seq:A200526_A_1_20190802T041041 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 18 2011"@en .
+
+seq:A200526_C_1_20190802T041041 a seq:Text ;
+    cnt:chars "Successive maxima of the GCD in A200217 occur between A200217(n) and A200217(3n-1) terms. Conjecture: All terms have same set of prime divisors, that can be used to complete prime factorization of every term in this sequence by the GCD method. All prime divisors with exception 19 are of the form 4k+1. The integer 19 divides a(3n+1) for n=0,1,2,3,..."@en .
+
+seq:A200526_I_1_20190802T041041 a seq:Text ;
+    cnt:chars "#25 Aug 02 2019 04:10:41"@en .
+
+seq:A200526_K_1_20190802T041041 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200526_N_1_20190802T041041 a seq:Text ;
+    cnt:chars "a(n) = gcd(t(n), t(3n-1)), where t = A200217."@en .
+
+seq:A200526_O_1_20190802T041041 a seq:Text ;
+    cnt:chars "2,1"@en .
+
+seq:A200526_V_1_20190802T041041 a seq:Text ;
+    cnt:chars "2156316023,211148507797805,392841376460687116573,13886731309220741899538675431,1359801885649216204023955447726829,2529908688645864568558938918274367865293,89430911052730984787593270943984417274689212615"@en .
+
+seq:A200526_Y_1_20190802T041041 a seq:Text ;
+    cnt:chars "Cf. A200217."@en .
+
+seq:A200526_t_1_20190802T041041 a seq:Text ;
+    cnt:chars "ff = {}; Do[AppendTo[ff, GCD[15/8 Fibonacci[15 (-1 + 2 n)] - 9/20 Fibonacci[30 (-1 + 2 n)] + 1/40 Fibonacci[45 (-1 + 2 n)], 15/8 Fibonacci[15 (-1 + 2 (3 n - 1))] - 9/20 Fibonacci[30 (-1 + 2 (3 n - 1))] + 1/40 Fibonacci[45 (-1 + 2 (3 n - 1))]]], {n, 2, 10}]; ff"@en .
+

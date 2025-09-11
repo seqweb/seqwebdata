@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.732881Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1184}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000943 a seq:Sequence ;
+    rdfs:label "A000943"@en ;
+    seq:hasTextList ( seq:A000943_I_1_20141209T002556 seq:A000943_N_1_20141209T002556 seq:A000943_D_1_20141209T002556 seq:A000943_p_1_20141209T002556 seq:A000943_t_1_20141209T002556 seq:A000943_Y_1_20141209T002556 seq:A000943_K_1_20141209T002556 seq:A000943_O_1_20141209T002556 seq:A000943_A_1_20141209T002556 seq:A000943_E_1_20141209T002556 seq:A000943_V_1_20141209T002556 ) .
+
+seq:A000943_A_1_20141209T002556 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000943_D_1_20141209T002556 a seq:Text ;
+    cnt:chars """B. Grünbaum, Convex Polytopes. Wiley, NY, 1967, p. 424.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000943_E_1_20141209T002556 a seq:Text ;
+    cnt:chars "n=12 term corrected (typo in reference), formula (due to Perles) and more terms from Lukas Finschi (finschi(AT)ifor.math.ethz.ch), Mar 06 2001"@en .
+
+seq:A000943_I_1_20141209T002556 a seq:Text ;
+    cnt:chars "M1352 N0519 #16 Dec 09 2014 00:25:56"@en .
+
+seq:A000943_K_1_20141209T002556 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000943_N_1_20141209T002556 a seq:Text ;
+    cnt:chars "Number of combinatorial types of simplicial n-dimensional polytopes with n+3 nodes."@en .
+
+seq:A000943_O_1_20141209T002556 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000943_V_1_20141209T002556 a seq:Text ;
+    cnt:chars "1,2,5,8,18,29,57,96,183,318,604,1080,2047,3762,7145,13354,25471,48164,92193,175780,337581,647313,1246849,2400828,4636375,8956045,17334785,33570800,65108045,126355319,245492226,477284164,928772631,1808538336"@en .
+
+seq:A000943_Y_1_20141209T002556 a seq:Text ;
+    cnt:chars "Cf. A049337, A000944."@en .
+
+seq:A000943_p_1_20141209T002556 a seq:Text ;
+    cnt:chars "with(numtheory); n := 50; for d from 2 to n do C(d) := 0; for h from 1 to d+3 do if (h mod 2 = 1) and (d+3 mod h = 0) then C(d) := C(d) + phi(h) * 2^((d+3)/h); fi; od; C(d) := 2^(floor(d/2)) - floor ((d+4)/2) + C(d)/(4*(d+3)); od: A000943 := n-> eval(C(n));"@en .
+
+seq:A000943_t_1_20141209T002556 a seq:Text ;
+    cnt:chars "a[ n_ ] := 2^Floor[ n/2 ]-Floor[ (n+4)/2 ]+(1/(4*(n+3)))*Plus@@Map[ EulerPhi[ # ]*2^((n+3)/#)&, Select[ Divisors[ n+3 ], OddQ ] ]"@en .
+

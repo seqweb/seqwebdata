@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.731786Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1319}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000519 a seq:Sequence ;
+    rdfs:label "A000519"@en ;
+    seq:hasTextList ( seq:A000519_I_1_20200403T113200 seq:A000519_N_1_20200403T113200 seq:A000519_C_1_20200403T113200 seq:A000519_H_1_20200403T113200 seq:A000519_F_1_20200403T113200 seq:A000519_e_1_20200403T113200 seq:A000519_Y_1_20200403T113200 seq:A000519_K_1_20200403T113200 seq:A000519_O_1_20200403T113200 seq:A000519_A_1_20200403T113200 seq:A000519_E_1_20200403T113200 seq:A000519_V_1_20200403T113200 ) .
+
+seq:A000519_A_1_20200403T113200 a seq:Text ;
+    cnt:chars "Eric Rogoyski"@en .
+
+seq:A000519_C_1_20200403T113200 a seq:Text ;
+    cnt:chars """Previous name was: Number of different row sums among Latin squares of order n.
+A regular 0-1 matrix has all row sums and column sums equal. Equivalence is defined by independently permuting rows and columns (but not by transposing). - _Brendan McKay_, Nov 18 2015"""@en .
+
+seq:A000519_E_1_20200403T113200 a seq:Text ;
+    cnt:chars """Description changed, after discussion with Andrew Howroyd, by _Brendan McKay_, Nov 18 2015
+Terms a(12) and beyond from _Andrew Howroyd_, Apr 03 2020"""@en .
+
+seq:A000519_F_1_20200403T113200 a seq:Text ;
+    cnt:chars "a(n) = A333681(n-1). - _Andrew Howroyd_, Apr 03 2020"@en .
+
+seq:A000519_H_1_20200403T113200 a seq:Text ;
+    cnt:chars "<a href=\"/index/La#Latin\">Index entries for sequences related to Latin squares and rectangles</a>"@en .
+
+seq:A000519_I_1_20200403T113200 a seq:Text ;
+    cnt:chars "#25 Apr 03 2020 11:32:00"@en .
+
+seq:A000519_K_1_20200403T113200 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000519_N_1_20200403T113200 a seq:Text ;
+    cnt:chars "Number of equivalence classes of nonzero regular 0-1 matrices of order n."@en .
+
+seq:A000519_O_1_20200403T113200 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000519_V_1_20200403T113200 a seq:Text ;
+    cnt:chars "1,2,3,5,7,18,43,313,7525,846992,324127859,403254094631,1555631972009429,19731915624463099552,791773335030637885025287,107432353216118868234728540267,47049030539260648478475949282317451,71364337698829887974206671525372672234854"@en .
+
+seq:A000519_Y_1_20200403T113200 a seq:Text ;
+    cnt:chars """One less than the row sums of A133687.
+Cf. A333681."""@en .
+
+seq:A000519_e_1_20200403T113200 a seq:Text ;
+    cnt:chars """For n = 4, representatives of the a(4) = 5 classes are
+[1 0 0 0]  [1 1 0 0]  [1 1 0 0]  [1 1 1 0]  [1 1 1 1]
+[0 1 0 0]  [1 1 0 0]  [0 1 1 0]  [1 1 0 1]  [1 1 1 1]
+[0 0 1 0]  [0 0 1 1]  [0 0 1 1]  [1 0 1 1]  [1 1 1 1]
+[0 0 0 1]  [0 0 1 1]  [1 0 0 1]  [0 1 1 1]  [1 1 1 1].
+G.f. = x + 2*x^2 + 3*x^3 + 5*x^4 + 7*x^5 + 18*x^6 + 43*x^7 + 313*x^8 + 7525*x^9 + ..."""@en .
+

@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.524310Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1573}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200536 a seq:Sequence ;
+    rdfs:label "A200536"@en ;
+    seq:hasTextList ( seq:A200536_I_1_20150828T095124 seq:A200536_N_1_20150828T095124 seq:A200536_H_1_20150828T095124 seq:A200536_F_1_20150828T095124 seq:A200536_e_1_20150828T095124 seq:A200536_o_1_20150828T095124 seq:A200536_Y_1_20150828T095124 seq:A200536_K_1_20150828T095124 seq:A200536_O_1_20150828T095124 seq:A200536_A_1_20150828T095124 seq:A200536_V_1_20150828T095124 ) .
+
+seq:A200536_A_1_20150828T095124 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 18 2011"@en .
+
+seq:A200536_F_1_20150828T095124 a seq:Text ;
+    cnt:chars """Central terms in rows form the central Delannoy numbers: T(n,n) = A001850(n).
+T(2*n,n) = A190726(n).
+T(n,n+1) = n*A006318(n), where A006318 form the large Schroeder numbers."""@en .
+
+seq:A200536_H_1_20150828T095124 a seq:Text ;
+    cnt:chars """Paul D. Hanna, <a href="/A200536/b200536.txt">Table of n, a(n) for n = 0..1295; Rows n = 0..35, flattened.</a>
+We-jin Woan, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL10/Woan/woan655.html">The Lagrange Inversion formula and divisibility properties</a>, JIS 10 (2007) 07.7.8, Example 3."""@en .
+
+seq:A200536_I_1_20150828T095124 a seq:Text ;
+    cnt:chars "#13 Aug 28 2015 09:51:24"@en .
+
+seq:A200536_K_1_20150828T095124 a seq:Text ;
+    cnt:chars "nonn,tabf"@en .
+
+seq:A200536_N_1_20150828T095124 a seq:Text ;
+    cnt:chars "Triangle, read by rows of 2*n+1 terms, where row n lists the coefficients in (1+3*x+2*x^2)^n."@en .
+
+seq:A200536_O_1_20150828T095124 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200536_V_1_20150828T095124 a seq:Text ;
+    cnt:chars "1,1,3,2,1,6,13,12,4,1,9,33,63,66,36,8,1,12,62,180,321,360,248,96,16,1,15,100,390,985,1683,1970,1560,800,240,32,1,18,147,720,2355,5418,8989,10836,9420,5760,2352,576,64,1,21,203,1197,4809,13923,29953,48639,59906,55692,38472,19152,6496,1344,128"@en .
+
+seq:A200536_Y_1_20150828T095124 a seq:Text ;
+    cnt:chars """Cf. A001850 (central Delannoy numbers), A006318, A190726; related triangle: A118384.
+Cf. A200537."""@en .
+
+seq:A200536_e_1_20150828T095124 a seq:Text ;
+    cnt:chars """The triangle begins:
+1;
+1, 3, 2;
+1, 6, 13, 12, 4;
+1, 9, 33, 63, 66, 36, 8;
+1, 12, 62, 180, 321, 360, 248, 96, 16;
+1, 15, 100, 390, 985, 1683, 1970, 1560, 800, 240, 32;
+1, 18, 147, 720, 2355, 5418, 8989, 10836, 9420, 5760, 2352, 576, 64;
+1, 21, 203, 1197, 4809, 13923, 29953, 48639, 59906, 55692, 38472, 19152, 6496, 1344, 128;
+1, 24, 268, 1848, 8806, 30744, 81340, 166344, 265729, 332688, 325360, 245952, 140896, 59136, 17152, 3072, 256; ...
+where row n equals the coefficients in (1+x)^n*(1+2*x)^n."""@en .
+
+seq:A200536_o_1_20150828T095124 a seq:Text ;
+    cnt:chars """(PARI) {T(n,k)=polcoeff((1+3*x+2*x^2+x*O(x^k))^n,k)}
+{for(n=0,10,for(k=0,2*n,print1(T(n,k),","));print(""))}"""@en .
+

@@ -1,0 +1,37 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.875425Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 842}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000286 a seq:Sequence ;
+    rdfs:label "A000286"@en ;
+    seq:hasTextList ( seq:A000286_I_1_20171017T055226 seq:A000286_N_1_20171017T055226 seq:A000286_D_1_20171017T055226 seq:A000286_H_1_20171017T055226 seq:A000286_K_1_20171017T055226 seq:A000286_O_1_20171017T055226 seq:A000286_A_1_20171017T055226 seq:A000286_V_1_20171017T055226 ) .
+
+seq:A000286_A_1_20171017T055226 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000286_D_1_20171017T055226 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000286_H_1_20171017T055226 a seq:Text ;
+    cnt:chars """D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000286_I_1_20171017T055226 a seq:Text ;
+    cnt:chars "M3251 N1312 #18 Oct 17 2017 05:52:26"@en .
+
+seq:A000286_K_1_20171017T055226 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000286_N_1_20171017T055226 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form 2 x^2 + 5 y^2."@en .
+
+seq:A000286_O_1_20171017T055226 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000286_V_1_20171017T055226 a seq:Text ;
+    cnt:chars "0,1,1,4,5,11,20,36,65,119,218,412,770,1466,2784,5322,10226,19691,38048,73665,142927,277822,540851,1054502,2058507,4023164,7871226,15414517,30213010,59266164,116343183,228545303,449240025,883569304,1738768584,3423466797,6743729031"@en .
+

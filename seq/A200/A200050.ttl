@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.866594Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 980}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200050 a seq:Sequence ;
+    rdfs:label "A200050"@en ;
+    seq:hasTextList ( seq:A200050_I_1_20220908T084600 seq:A200050_N_1_20220908T084600 seq:A200050_C_1_20220908T084600 seq:A200050_H_1_20220908T084600 seq:A200050_F_1_20220908T084600 seq:A200050_e_1_20220908T084600 seq:A200050_t_1_20220908T084600 seq:A200050_o_1_20220908T084600 seq:A200050_Y_1_20220908T084600 seq:A200050_K_1_20220908T084600 seq:A200050_O_1_20220908T084600 seq:A200050_A_1_20220908T084600 seq:A200050_V_1_20220908T084600 ) .
+
+seq:A200050_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Apr 16 2012"@en .
+
+seq:A200050_C_1_20220908T084600 a seq:Text ;
+    cnt:chars "Record values in A192599. The index sequence of this one is 1, 2, 3, 6, 7, 9, 11, 13, 17, 18, 21, 23, 25, 29, 31, 34, 36, 40, 42, 45, 47, 50, 52, 56, 58, 61."@en .
+
+seq:A200050_F_1_20220908T084600 a seq:Text ;
+    cnt:chars "a(2) = 1, a(n) = A006093(n)*A172367(n-2)/2."@en .
+
+seq:A200050_H_1_20220908T084600 a seq:Text ;
+    cnt:chars "Arkadiusz Wesolowski, <a href=\"/A200050/b200050.txt\">Table of n, a(n) for n = 2..10000</a>"@en .
+
+seq:A200050_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#23 Sep 08 2022 08:46:00"@en .
+
+seq:A200050_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200050_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "a(2) = 1, then (p-1)*(p-4)/2, with p = prime(n), n > 2."@en .
+
+seq:A200050_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "2,2"@en .
+
+seq:A200050_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,2,9,35,54,104,135,209,350,405,594,740,819,989,1274,1595,1710,2079,2345,2484,2925,3239,3740,4464,4850,5049,5459,5670,6104,7749,8255,9044,9315,10730,11025,11934,12879,13529,14534,15575,15930,17765,18144,18914,19305"@en .
+
+seq:A200050_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars "Cf. A000096, A014107, A192599."@en .
+
+seq:A200050_e_1_20220908T084600 a seq:Text ;
+    cnt:chars "A192599(13) = 209 since A192599(17) = 350 is the next record value."@en .
+
+seq:A200050_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(Magma) [(p-1)*Abs(p-4)/2: p in [NthPrime(n+1): n in [1..45]]]
+(PARI) vector(45, n, p=prime(n+1); (p-1)*abs(p-4)/2)"""@en .
+
+seq:A200050_t_1_20220908T084600 a seq:Text ;
+    cnt:chars """Table[p = Prime[n + 1]; (p - 1)*Abs[p - 4]/2, {n, 45}]
+Join[{1},((#-1)(#-4))/2&/@Prime[Range[3,50]]] (* _Harvey P. Dale_, Aug 04 2020 *)"""@en .
+

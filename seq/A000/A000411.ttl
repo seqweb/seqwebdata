@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.487501Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2050}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000411 a seq:Sequence ;
+    rdfs:label "A000411"@en ;
+    seq:hasTextList ( seq:A000411_I_1_20211122T040330 seq:A000411_N_1_20211122T040330 seq:A000411_D_1_20211122T040330 seq:A000411_H_1_20211122T040330 seq:A000411_F_1_20211122T040330 seq:A000411_p_1_20211122T040330 seq:A000411_t_1_20211122T040330 seq:A000411_o_1_20211122T040330 seq:A000411_Y_1_20211122T040330 seq:A000411_K_1_20211122T040330 seq:A000411_O_1_20211122T040330 seq:A000411_A_1_20211122T040330 seq:A000411_E_1_20211122T040330 seq:A000411_V_1_20211122T040330 ) .
+
+seq:A000411_A_1_20211122T040330 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000411_D_1_20211122T040330 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000411_E_1_20211122T040330 a seq:Text ;
+    cnt:chars "a(10)-a(12) from _Lars Blomberg_, Sep 07 2015"@en .
+
+seq:A000411_F_1_20211122T040330 a seq:Text ;
+    cnt:chars """a(n) = (2*n-1)! * [x^(2*n-1)] 2*sin(3*x) / (2*cos(4*x) - 1). - _F. Chapoton_, Oct 06 2020
+a(n) = (2*n-1)!*[x^(2*n-1)](sec(6*x)*(sin(x) + sin(5*x))). - _Peter Luschny_, Nov 21 2021"""@en .
+
+seq:A000411_H_1_20211122T040330 a seq:Text ;
+    cnt:chars """Lars Blomberg, <a href="/A000411/b000411.txt">Table of n, a(n) for n = 1..184</a>
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1967-0223295-5">Generalized Euler and class numbers</a>, Math. Comp. 21 (1967)  689-694.
+D. Shanks, <a href="http://dx.doi.org/10.1090/S0025-5718-1968-0227093-9">Corrigenda to: "Generalized Euler and class numbers"</a>, Math. Comp. 22 (1968), 699.
+D. Shanks, <a href="/A000003/a000003.pdf">Generalized Euler and class numbers</a>, Math. Comp. 21 (1967), 689-694; 22 (1968), 699. [Annotated scanned copy]"""@en .
+
+seq:A000411_I_1_20211122T040330 a seq:Text ;
+    cnt:chars "M4312 N1805 #46 Nov 22 2021 04:03:30"@en .
+
+seq:A000411_K_1_20211122T040330 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000411_N_1_20211122T040330 a seq:Text ;
+    cnt:chars "Generalized tangent numbers d(6,n)."@en .
+
+seq:A000411_O_1_20211122T040330 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000411_V_1_20211122T040330 a seq:Text ;
+    cnt:chars "6,522,152166,93241002,97949265606,157201459863882,357802951084619046,1096291279711115037162,4350684698032741048452486,21709332137467778453687752842,133032729004732721625426681085926,982136301747914281420205946546842922,8597768767880274820173388403096814519366"@en .
+
+seq:A000411_Y_1_20211122T040330 a seq:Text ;
+    cnt:chars "Cf. A000192, A000320, A001587, A349264."@en .
+
+seq:A000411_o_1_20211122T040330 a seq:Text ;
+    cnt:chars """(Sage)
+t = PowerSeriesRing(QQ, 't', default_prec=24).gen()
+f = 2 * sin(3 * t) / (2 * cos(4 * t) - 1)
+f.egf_to_ogf().list()[1::2] # _F. Chapoton_, Oct 06 2020"""@en .
+
+seq:A000411_p_1_20211122T040330 a seq:Text ;
+    cnt:chars """egf := sec(6*x)*(sin(x) + sin(5*x)): ser := series(egf, x, 24):
+seq((2*n-1)!*coeff(ser, x, 2*n-1), n = 1..12); # _Peter Luschny_, Nov 21 2021"""@en .
+
+seq:A000411_t_1_20211122T040330 a seq:Text ;
+    cnt:chars "nmax = 15; km0 = 10; Clear[dd]; L[a_, s_, km_] := Sum[JacobiSymbol[-a, 2 k + 1]/(2 k + 1)^s, {k, 0, km}]; d[a_ /; a > 1, n_, km_] := (2 n - 1)! L[-a, 2 n, km] (2 a/Pi)^(2 n)/Sqrt[a] // Round; dd[km_] := dd[km] = Table[d[6, n, km], {n, 1, nmax}]; dd[km0]; dd[km = 2 km0]; While[dd[km] != dd[km/2, km = 2 km]]; A000411 = dd[km] (* _Jean-François Alcover_, Feb 08 2016 *)"@en .
+

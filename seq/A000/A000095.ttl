@@ -1,0 +1,65 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.416283Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2151}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000095 a seq:Sequence ;
+    rdfs:label "A000095"@en ;
+    seq:hasTextList ( seq:A000095_I_1_20221015T080901 seq:A000095_N_1_20221015T080901 seq:A000095_D_1_20221015T080901 seq:A000095_H_1_20221015T080901 seq:A000095_F_1_20221015T080901 seq:A000095_e_1_20221015T080901 seq:A000095_p_1_20221015T080901 seq:A000095_t_1_20221015T080901 seq:A000095_o_1_20221015T080901 seq:A000095_Y_1_20221015T080901 seq:A000095_K_1_20221015T080901 seq:A000095_O_1_20221015T080901 seq:A000095_A_1_20221015T080901 seq:A000095_E_1_20221015T080901 seq:A000095_V_1_20221015T080901 ) .
+
+seq:A000095_A_1_20221015T080901 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000095_D_1_20221015T080901 a seq:Text ;
+    cnt:chars """Bruno Schoeneberg, Elliptic Modular Functions, Springer-Verlag, NY, 1974, p. 101.
+Goro Shimura, Introduction to the Arithmetic Theory of Automorphic Functions, Princeton, 1971, see p. 25, Eq. (2)."""@en .
+
+seq:A000095_E_1_20221015T080901 a seq:Text ;
+    cnt:chars "Values a(1)-a(10^4) double checked by _M. F. Hasler_, Mar 24 2012"@en .
+
+seq:A000095_F_1_20221015T080901 a seq:Text ;
+    cnt:chars """a(n) is multiplicative with a(2) = 2, a(2^e) = 0 if e>1, a(p^e) = 2 if p == 1 mod 4 and a(p^e) = 0 if p == 3 mod 4. - _Michael Somos_, Jul 15 2004
+Asymptotic mean: Limit_{m->oo} (1/m) * Sum_{k=1..m} a(k) = 2/Pi = 0.636619... (A060294). - _Amiram Eldar_, Oct 15 2022"""@en .
+
+seq:A000095_H_1_20221015T080901 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller, <a href=\"/A000095/b000095.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000095_I_1_20221015T080901 a seq:Text ;
+    cnt:chars "#29 Oct 15 2022 08:09:01"@en .
+
+seq:A000095_K_1_20221015T080901 a seq:Text ;
+    cnt:chars "nonn,easy,mult"@en .
+
+seq:A000095_N_1_20221015T080901 a seq:Text ;
+    cnt:chars "Number of fixed points of GAMMA_0 (n) of type i."@en .
+
+seq:A000095_O_1_20221015T080901 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000095_V_1_20221015T080901 a seq:Text ;
+    cnt:chars "1,2,0,0,2,0,0,0,0,4,0,0,2,0,0,0,2,0,0,0,0,0,0,0,2,4,0,0,2,0,0,0,0,4,0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,4,0,0,2,0,0,0,0,4,0,0,2,0,0,0,4,0,0,0,0,0,0,0,2,4,0,0,0,0,0,0,0,4,0,0,4,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0"@en .
+
+seq:A000095_Y_1_20221015T080901 a seq:Text ;
+    cnt:chars "Cf. A027748, A060294, A124010, A000089."@en .
+
+seq:A000095_e_1_20221015T080901 a seq:Text ;
+    cnt:chars "G.f. = x + 2*x^2 + 2*x^5 + 4*x^10 + 2*x^13 + 2*x^17 + 2*x^25 + 4*x^26 + 2*x^29 + ..."@en .
+
+seq:A000095_o_1_20221015T080901 a seq:Text ;
+    cnt:chars """(PARI) {a(n) = my(t); if( n<=1 || n%4==0, n==1, t=1; fordiv(n, d, if( isprime(d), t *= (1 + kronecker(-1, d)))); t)}; /* _Michael Somos_, Jul 15 2004 */
+(Haskell)
+a000095 n = product $ zipWith f (a027748_row n) (a124010_row n) where
+   f 2 e = if e == 1 then 2 else 0
+   f p _ = if p `mod` 4 == 1 then 2 else 0
+-- _Reinhard Zumkeller_, Mar 24 2012
+(PARI) A000095(n)=n%3 && n%4 && n%7 && n%11 && return(prod(k=1,#n=factor(n)[,1],1+kronecker(-1,n[k]))) /* the n%4 is needed, the others only reduce execution time by 34% */ \\\\ _M. F. Hasler_, Mar 24 2012"""@en .
+
+seq:A000095_p_1_20221015T080901 a seq:Text ;
+    cnt:chars "A000095 := proc(n) local b,d: if irem(n,4) = 0 then RETURN(0); else b := 1; for d from 2 to n do if irem(n,d) = 0 and isprime(d) then b := b*(1+legendre(-1,d)); fi; od; RETURN(b); fi: end;"@en .
+
+seq:A000095_t_1_20221015T080901 a seq:Text ;
+    cnt:chars """A000095[ 1 ] = 1; A000095[ n_Integer ] := If[ Mod[ n, 4 ]==0, 0, Fold[ #1*(1+JacobiSymbol[ -1, #2 ])&, If[ EvenQ[ n ], 2, 1 ], Select[ First[ Transpose[ FactorInteger[ n ] ] ], OddQ ] ] ]
+a[ n_] := If[ n < 1, 0, Times @@ (Which[# == 1, 1, # == 2, 2 Boole[#2 == 1], Mod[#, 4] == 1, 2, True, 0] & @@@ FactorInteger[n])]; (* _Michael Somos_, Nov 15 2015 *)"""@en .
+

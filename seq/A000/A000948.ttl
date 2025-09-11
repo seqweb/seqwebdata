@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.743572Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 840}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000948 a seq:Sequence ;
+    rdfs:label "A000948"@en ;
+    seq:hasTextList ( seq:A000948_I_1_20151016T032739 seq:A000948_N_1_20151016T032739 seq:A000948_H_1_20151016T032739 seq:A000948_F_1_20151016T032739 seq:A000948_K_1_20151016T032739 seq:A000948_O_1_20151016T032739 seq:A000948_A_1_20151016T032739 seq:A000948_E_1_20151016T032739 seq:A000948_V_1_20151016T032739 ) .
+
+seq:A000948_A_1_20151016T032739 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000948_E_1_20151016T032739 a seq:Text ;
+    cnt:chars "a(16)-a(19) and title improved by _Sean A. Irvine_, Oct 16 2015"@en .
+
+seq:A000948_F_1_20151016T032739 a seq:Text ;
+    cnt:chars "a(n) = A000131(n+2) - A000941(n). - _Sean A. Irvine_, Oct 15 2015"@en .
+
+seq:A000948_H_1_20151016T032739 a seq:Text ;
+    cnt:chars """S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="http://dx.doi.org/10.1021/ci00026a012">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751.
+S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href="/A002057/a002057.pdf">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"""@en .
+
+seq:A000948_I_1_20151016T032739 a seq:Text ;
+    cnt:chars "#18 Oct 16 2015 03:27:39"@en .
+
+seq:A000948_K_1_20151016T032739 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000948_N_1_20151016T032739 a seq:Text ;
+    cnt:chars "Number of free nonplanar polyenoids with n nodes and symmetry point group C_s."@en .
+
+seq:A000948_O_1_20151016T032739 a seq:Text ;
+    cnt:chars "7,2"@en .
+
+seq:A000948_V_1_20151016T032739 a seq:Text ;
+    cnt:chars "0,3,20,99,450,1896,7771,30895,121144,468409,1796584,6841014,25925062"@en .
+

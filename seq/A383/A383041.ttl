@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.666502Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1151}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383041 a seq:Sequence ;
+    rdfs:label "A383041"@en ;
+    seq:hasTextList ( seq:A383041_I_1_20250502T134619 seq:A383041_N_1_20250502T134619 seq:A383041_C_1_20250502T134619 seq:A383041_D_1_20250502T134619 seq:A383041_H_1_20250502T134619 seq:A383041_e_1_20250502T134619 seq:A383041_t_1_20250502T134619 seq:A383041_K_1_20250502T134619 seq:A383041_O_1_20250502T134619 seq:A383041_A_1_20250502T134619 seq:A383041_V_1_20250502T134619 ) .
+
+seq:A383041_A_1_20250502T134619 a seq:Text ;
+    cnt:chars "_Kevin Knight_, Apr 13 2025"@en .
+
+seq:A383041_C_1_20250502T134619 a seq:Text ;
+    cnt:chars """Equivalent to primes p where p | 3^n-2^n and p | 2^m-3^n, for some coprime m and n.
+Motivated by analysis of the rational Collatz circuit of length m, with n odd terms, whose smallest member is (3^n-2^n)/(2^m-3^n) [Davison 1976].
+For p = 331, y = 121; for p = 1210483, y = 379107; for p = 45661129, y = 86668; for p = 107889071, y = 30855641."""@en .
+
+seq:A383041_D_1_20250502T134619 a seq:Text ;
+    cnt:chars """J. L. Davison, Some Comments on an Iteration Problem, Proc. 6th Manitoba Conference on Numerical Mathematics and Computing (1976), 155-159.
+R. P. Steiner, A Theorem on the Syracuse Problem, Proc. 7th Manitoba Conference on Numerical Mathematics and Computing (1978), 553-559."""@en .
+
+seq:A383041_H_1_20250502T134619 a seq:Text ;
+    cnt:chars "M. Chamberland, <a href=\"https://chamberland.math.grinnell.edu/papers/3x_survey_eng.pdf\">An Update on the 3x+1 Problem</a>, Butlleti de la Societat Catalana de Matematiques 18 (2003), 19-45. See p. 16 for (3^n-2^n)/(2^m-3^n) motivation."@en .
+
+seq:A383041_I_1_20250502T134619 a seq:Text ;
+    cnt:chars "#17 May 02 2025 13:46:19"@en .
+
+seq:A383041_K_1_20250502T134619 a seq:Text ;
+    cnt:chars "nonn,more,changed"@en .
+
+seq:A383041_N_1_20250502T134619 a seq:Text ;
+    cnt:chars "Primes p such that for some y > 0, 2^y == 3^y == 2 (mod p)."@en .
+
+seq:A383041_O_1_20250502T134619 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383041_V_1_20250502T134619 a seq:Text ;
+    cnt:chars "331,1210483,45661129,107889071"@en .
+
+seq:A383041_e_1_20250502T134619 a seq:Text ;
+    cnt:chars "For p = 331, 2^121 = 3^121 = 2 (mod 331)."@en .
+
+seq:A383041_t_1_20250502T134619 a seq:Text ;
+    cnt:chars "Select[Prime[Range[100]],With[{p=#}, AnyTrue[Range[p-1], Mod[{2, 3}^#, p] == {2, 2} &]] &]"@en .
+

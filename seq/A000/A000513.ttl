@@ -1,0 +1,66 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.719144Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1703}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000513 a seq:Sequence ;
+    rdfs:label "A000513"@en ;
+    seq:hasTextList ( seq:A000513_I_1_20200402T114537 seq:A000513_N_1_20200402T114537 seq:A000513_D_1_20200402T114537 seq:A000513_H_1_20200402T114537 seq:A000513_e_1_20200402T114537 seq:A000513_Y_1_20200402T114537 seq:A000513_K_1_20200402T114537 seq:A000513_O_1_20200402T114537 seq:A000513_A_1_20200402T114537 seq:A000513_E_1_20200402T114537 seq:A000513_V_1_20200402T114537 ) .
+
+seq:A000513_A_1_20200402T114537 a seq:Text ;
+    cnt:chars "Eric Rogoyski"@en .
+
+seq:A000513_D_1_20200402T114537 a seq:Text ;
+    cnt:chars "A. Burgess, P. Danziger, E. Mendelsohn, B. Stevens, Orthogonally Resolvable Cycle Decompositions, 2013; http://www.math.ryerson.ca/~andrea.burgess/OCD-submit.pdf"@en .
+
+seq:A000513_E_1_20200402T114537 a seq:Text ;
+    cnt:chars """Definition corrected by _Brendan McKay_, May 28 2006
+Offset corrected and a(12) added (from Al-Azemi) by _N. J. A. Sloane_, Mar 01 2013
+Terms a(13) and beyond from _Andrew Howroyd_, Apr 01 2020"""@en .
+
+seq:A000513_H_1_20200402T114537 a seq:Text ;
+    cnt:chars """A. Al-Azemi, <a href="https://www.alazmi95.com/ewExternalFiles/iso_rej.pdf">Isomorph-rejection: theory and an application</a>, Kuwait J. Sci., 39 (2A) (2012), 1-14. - From _N. J. A. Sloane_, Mar 01 2013
+A. Burgess, P. Danziger, E. Mendelsohn, B. Stevens, <a href="https://doi.org/10.1002/jcd.21404">Orthogonally Resolvable Cycle Decompositions</a>, Journal of Combinatorial Designs, Volume 23, Issue 8, August 2015, Pages 328-351.
+<a href="/index/La#Latin">Index entries for sequences related to Latin squares and rectangles</a>"""@en .
+
+seq:A000513_I_1_20200402T114537 a seq:Text ;
+    cnt:chars "#31 Apr 02 2020 11:45:37"@en .
+
+seq:A000513_K_1_20200402T114537 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000513_N_1_20200402T114537 a seq:Text ;
+    cnt:chars "Number of equivalence classes of n X n matrices over {0,1} with rows and columns summing to 4, where equivalence is defined by row and column permutations. Also number of isomorphism classes of bicolored quartic bipartite graphs, where isomorphism cannot exchange the colors."@en .
+
+seq:A000513_O_1_20200402T114537 a seq:Text ;
+    cnt:chars "1,6"@en .
+
+seq:A000513_V_1_20200402T114537 a seq:Text ;
+    cnt:chars "0,0,0,1,1,4,16,194,3529,121790,5582612,317579783,21543414506,1711281449485,157117486414656,16502328443493967,1965612709107379155,263512349078757245789,39497131936385398782814,6579940884199010139737829,1211896874083479131415289345,245593008009270037388205883048"@en .
+
+seq:A000513_Y_1_20200402T114537 a seq:Text ;
+    cnt:chars """Column k=4 of A133687.
+Cf. A000512."""@en .
+
+seq:A000513_e_1_20200402T114537 a seq:Text ;
+    cnt:chars """a(4) = 1:
+1111
+1111
+1111
+1111
+a(5)=1:
+01111
+10111
+11011
+11101
+11110
+Two of the four examples with n = 6:
+111100 . 111100
+110011 . 011110
+001111 . 001111
+111100 . 100111
+110011 . 110011
+001111 . 111001"""@en .
+

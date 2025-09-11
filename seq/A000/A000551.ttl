@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.805479Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1608}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000551 a seq:Sequence ;
+    rdfs:label "A000551"@en ;
+    seq:hasTextList ( seq:A000551_I_1_20170417T144636 seq:A000551_N_1_20170417T144636 seq:A000551_D_1_20170417T144636 seq:A000551_H_1_20170417T144636 seq:A000551_F_1_20170417T144636 seq:A000551_p_1_20170417T144636 seq:A000551_t_1_20170417T144636 seq:A000551_K_1_20170417T144636 seq:A000551_O_1_20170417T144636 seq:A000551_A_1_20170417T144636 seq:A000551_E_1_20170417T144636 seq:A000551_V_1_20170417T144636 ) .
+
+seq:A000551_A_1_20170417T144636 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000551_D_1_20170417T144636 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000551_E_1_20170417T144636 a seq:Text ;
+    cnt:chars "More terms from Flajolet and Zimmermann, Mar 15 1996"@en .
+
+seq:A000551_F_1_20170417T144636 a seq:Text ;
+    cnt:chars """E.g.f.: x*(exp(x*exp(x))-exp(x)), cf. A074728. - _Vladeta Jovovic_, Jan 29 2008
+a(n) = n*(n-1)*A074728(n-2). - _Sean A. Irvine_, Nov 21 2010"""@en .
+
+seq:A000551_H_1_20170417T144636 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000551/b000551.txt">Table of n, a(n) for n = 3..200</a>
+J. Riordan, <a href="http://dx.doi.org/10.1147/rd.45.0473">Enumeration of trees by height and diameter</a>, IBM J. Res. Dev. 4 (1960), 473-478.
+<a href="/index/Ro#rooted">Index entries for sequences related to rooted trees</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000551_I_1_20170417T144636 a seq:Text ;
+    cnt:chars "M4220 N1764 #41 Apr 17 2017 14:46:36"@en .
+
+seq:A000551_K_1_20170417T144636 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000551_N_1_20170417T144636 a seq:Text ;
+    cnt:chars "Number of labeled rooted trees of height 2 with n nodes."@en .
+
+seq:A000551_O_1_20170417T144636 a seq:Text ;
+    cnt:chars "3,1"@en .
+
+seq:A000551_V_1_20170417T144636 a seq:Text ;
+    cnt:chars "6,36,200,1170,7392,50568,372528,2936070,24617120,218521116,2045278248,20112821274,207162957120,2228888801040,24989309310944,291322555295886,3524580202643136,44176839081266340,572725044269255640"@en .
+
+seq:A000551_p_1_20170417T144636 a seq:Text ;
+    cnt:chars "# ht(m) counts trees of height<=m; ht := proc(m) local i; [ T0,{seq(T.i=Prod(Z,Set(T.(i+1))),i=0..m-1),T.m=Z},labeled ] end: M[ 4220 ] := n->count(ht(2),size=n)-count(ht(1),size=n): seq(M[ 4220 ](n), n=3..21);"@en .
+
+seq:A000551_t_1_20170417T144636 a seq:Text ;
+    cnt:chars """a[n_] = n*(n-1)*Sum[k^(n-2-k)*Binomial[n-2, k-1], {k, n-2}]; Table[a[n], {n, 3, 21}] (* _Jean-François Alcover_, Jun 29 2011, after formula *)
+With[{nn=30},Drop[CoefficientList[Series[x (Exp[x Exp[x]]-Exp[x]),{x,0,nn}], x] Range[0,nn]!,3]] (* _Harvey P. Dale_, Apr 17 2017 *)"""@en .
+

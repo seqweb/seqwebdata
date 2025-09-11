@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.191431Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1174}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200840 a seq:Sequence ;
+    rdfs:label "A200840"@en ;
+    seq:hasTextList ( seq:A200840_I_1_20171015T011141 seq:A200840_N_1_20171015T011141 seq:A200840_C_1_20171015T011141 seq:A200840_H_1_20171015T011141 seq:A200840_F_1_20171015T011141 seq:A200840_e_1_20171015T011141 seq:A200840_K_1_20171015T011141 seq:A200840_O_1_20171015T011141 seq:A200840_A_1_20171015T011141 seq:A200840_V_1_20171015T011141 ) .
+
+seq:A200840_A_1_20171015T011141 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 23 2011"@en .
+
+seq:A200840_C_1_20171015T011141 a seq:Text ;
+    cnt:chars "Row 3 of A200838."@en .
+
+seq:A200840_F_1_20171015T011141 a seq:Text ;
+    cnt:chars """Empirical: a(n) = (4/15)*n^5 + (17/6)*n^4 + (28/3)*n^3 + (73/6)*n^2 + (32/5)*n + 1.
+Conjectures from _Colin Barker_, Oct 14 2017: (Start)
+G.f.: x*(32 - x + 10*x^2 - 14*x^3 + 6*x^4 - x^5) / (1 - x)^6.
+a(n) = 6*a(n-1) - 15*a(n-2) + 20*a(n-3) - 15*a(n-4) + 6*a(n-5) - a(n-6) for n>6.
+(End)"""@en .
+
+seq:A200840_H_1_20171015T011141 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200840/b200840.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200840_I_1_20171015T011141 a seq:Text ;
+    cnt:chars "#9 Oct 15 2017 01:11:41"@en .
+
+seq:A200840_K_1_20171015T011141 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200840_N_1_20171015T011141 a seq:Text ;
+    cnt:chars "Number of 0..n arrays x(0..4) of 5 elements without any two consecutive increases or two consecutive decreases."@en .
+
+seq:A200840_O_1_20171015T011141 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200840_V_1_20171015T011141 a seq:Text ;
+    cnt:chars "32,191,676,1817,4108,8239,15128,25953,42184,65615,98396,143065,202580,280351,380272,506753,664752,859807,1098068,1386329,1732060,2143439,2629384,3199585,3864536,4635567,5524876,6545561,7711652,9038143"@en .
+
+seq:A200840_e_1_20171015T011141 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..2....1....1....1....2....3....1....0....0....0....2....2....1....1....2....3
+..3....3....3....3....0....0....0....2....0....0....0....2....3....1....0....3
+..0....3....0....0....0....1....3....2....2....3....0....0....1....2....3....2
+..3....1....2....3....3....1....3....0....0....0....0....2....2....1....3....3
+..0....2....0....2....0....0....1....0....2....0....0....0....2....3....0....2"""@en .
+

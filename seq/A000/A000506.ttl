@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.705239Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1127}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000506 a seq:Sequence ;
+    rdfs:label "A000506"@en ;
+    seq:hasTextList ( seq:A000506_I_1_20220105T003113 seq:A000506_N_1_20220105T003113 seq:A000506_D_1_20220105T003113 seq:A000506_F_1_20220105T003113 seq:A000506_t_1_20220105T003113 seq:A000506_Y_1_20220105T003113 seq:A000506_K_1_20220105T003113 seq:A000506_O_1_20220105T003113 seq:A000506_A_1_20220105T003113 seq:A000506_E_1_20220105T003113 seq:A000506_V_1_20220105T003113 ) .
+
+seq:A000506_A_1_20220105T003113 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000506_D_1_20220105T003113 a seq:Text ;
+    cnt:chars """L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 260, #13
+F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000506_E_1_20220105T003113 a seq:Text ;
+    cnt:chars "More terms from _Emeric Deutsch_, Feb 21 2004"@en .
+
+seq:A000506_F_1_20220105T003113 a seq:Text ;
+    cnt:chars "Limit_{n->infinity} 16*a(n)/5^n = 1. - _Philippe Deléham_, Feb 22 2004"@en .
+
+seq:A000506_I_1_20220105T003113 a seq:Text ;
+    cnt:chars "M5322 N2313 #24 Jan 05 2022 00:31:13"@en .
+
+seq:A000506_K_1_20220105T003113 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000506_N_1_20220105T003113 a seq:Text ;
+    cnt:chars "One half of the number of permutations of [n] such that the differences have 5 runs with the same signs."@en .
+
+seq:A000506_O_1_20220105T003113 a seq:Text ;
+    cnt:chars "6,1"@en .
+
+seq:A000506_V_1_20220105T003113 a seq:Text ;
+    cnt:chars "61,841,7311,51663,325446,1910706,10715506,58258210,309958755,1623847695,8412276585,43220104041,220683627988,1121561317408,5679711010548,28683869195556,144552802373145,727271783033445"@en .
+
+seq:A000506_Y_1_20220105T003113 a seq:Text ;
+    cnt:chars "A diagonal of A008970."@en .
+
+seq:A000506_t_1_20220105T003113 a seq:Text ;
+    cnt:chars "p[n_ /; n >= 2, 1] = 2; p[n_ /; n >= 2, k_] /; 1 <= k <= n := p[n, k] = k*p[n-1, k] + 2*p[n-1, k-1] + (n-k)*p[n-1, k-2]; p[n_, k_] = 0; t[n_, k_] := p[n, k]/2; a[n_] := t[n, 5]; Table[a[n], {n, 6, 23}] (* _Jean-François Alcover_, Feb 09 2016 *)"@en .
+

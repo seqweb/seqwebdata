@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.027441Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 997}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000646 a seq:Sequence ;
+    rdfs:label "A000646"@en ;
+    seq:hasTextList ( seq:A000646_I_1_20220201T010723 seq:A000646_N_1_20220201T010723 seq:A000646_D_1_20220201T010723 seq:A000646_H_1_20220201T010723 seq:A000646_F_1_20220201T010723 seq:A000646_K_1_20220201T010723 seq:A000646_O_1_20220201T010723 seq:A000646_A_1_20220201T010723 seq:A000646_V_1_20220201T010723 ) .
+
+seq:A000646_A_1_20220201T010723 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000646_D_1_20220201T010723 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000646_F_1_20220201T010723 a seq:Text ;
+    cnt:chars "G.f.: A(x) = A000598(x)^2."@en .
+
+seq:A000646_H_1_20220201T010723 a seq:Text ;
+    cnt:chars """G. Polya, <a href="http://dx.doi.org/10.1524/zkri.1936.93.1.415">Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen</a>, Zeit. f. Kristall., 93 (1936), 415-443; line 12 of Table I.
+G. Polya, <a href="/A000598/a000598_3.pdf">Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen</a>,  Zeit. f. Kristall., 93 (1936), 415-443; Table I, line 12. (Annotated scanned copy)"""@en .
+
+seq:A000646_I_1_20220201T010723 a seq:Text ;
+    cnt:chars "M0800 N0303 #18 Feb 01 2022 01:07:23"@en .
+
+seq:A000646_K_1_20220201T010723 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000646_N_1_20220201T010723 a seq:Text ;
+    cnt:chars "Number of alkyls Y^{II} C_n H_{2n+2} with n carbon atoms."@en .
+
+seq:A000646_O_1_20220201T010723 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000646_V_1_20220201T010723 a seq:Text ;
+    cnt:chars "1,2,3,6,13,28,62,144,338,810,1970,4852,12073,30334,76805,195850,502461,1296122,3359527,8745744,22856223,59944156,157718380,416189954,1101204387,2920914484,7765357967,20688204244,55225188289,147688302518"@en .
+

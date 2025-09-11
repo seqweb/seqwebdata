@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.434375Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1788}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000388 a seq:Sequence ;
+    rdfs:label "A000388"@en ;
+    seq:hasTextList ( seq:A000388_I_1_20150628T102939 seq:A000388_N_1_20150628T102939 seq:A000388_D_1_20150628T102939 seq:A000388_H_1_20150628T102939 seq:A000388_F_1_20150628T102939 seq:A000388_p_1_20150628T102939 seq:A000388_t_1_20150628T102939 seq:A000388_Y_1_20150628T102939 seq:A000388_K_1_20150628T102939 seq:A000388_O_1_20150628T102939 seq:A000388_A_1_20150628T102939 seq:A000388_E_1_20150628T102939 seq:A000388_V_1_20150628T102939 ) .
+
+seq:A000388_A_1_20150628T102939 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000388_D_1_20150628T102939 a seq:Text ;
+    cnt:chars """J. Riordan, Discordant permutations, Scripta Math., 20 (1954), 14-23.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000388_E_1_20150628T102939 a seq:Text ;
+    cnt:chars "More terms from Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001"@en .
+
+seq:A000388_F_1_20150628T102939 a seq:Text ;
+    cnt:chars "a(n) = coefficient of y^2 in sum_0^n sigma_{n, k}(n - k)!(y - 1)^k on y where the sigma_{n, k} have generating function sigma(t, u) = (1 - 2t^2(u^2) - 2t^2(1 + t)u^3 + 3t^4(u^4))(1 - tu)^(-1)(1 - (1 + 2t)u - tu^2 + t^3(u^3))^(-1). - Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001"@en .
+
+seq:A000388_H_1_20150628T102939 a seq:Text ;
+    cnt:chars "J. Riordan, <a href=\"/A000211/a000211.pdf\">Discordant permutations</a>, Scripta Math., 20 (1954), 14-23. [Annotated scanned copy]"@en .
+
+seq:A000388_I_1_20150628T102939 a seq:Text ;
+    cnt:chars "M4139 N1717 #28 Jun 28 2015 10:29:39"@en .
+
+seq:A000388_K_1_20150628T102939 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000388_N_1_20150628T102939 a seq:Text ;
+    cnt:chars "Number of permutations of an n-sequence discordant with three given permutations (see reference) in n-2 places."@en .
+
+seq:A000388_O_1_20150628T102939 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000388_V_1_20150628T102939 a seq:Text ;
+    cnt:chars "6,20,180,1106,9292,82980,831545,9139482,109595496,1423490744,19911182207,298408841160,4770598226296,81037124739588,1457607971046492,27675791180024802,553166885187641670,11609691036091870428,255273744004170486155,5868308906885934514178"@en .
+
+seq:A000388_Y_1_20150628T102939 a seq:Text ;
+    cnt:chars "Cf. A000500, A000470, A000440, A000476, A000380, A000492."@en .
+
+seq:A000388_p_1_20150628T102939 a seq:Text ;
+    cnt:chars "seq(f(n,2), n=5..30); # code for f(n,k) is given in A000440 - Barbara Haas Margolius (margolius(AT)math.csuohio.edu), Feb 17 2001"@en .
+
+seq:A000388_t_1_20150628T102939 a seq:Text ;
+    cnt:chars "sigma[t_, u_] = (1 - 2 t^2 (u^2) - 2 t^2 (1 + t) u^3 + 3 t^4 (u^4)) (1 - t* u)^(-1) (1 - (1 + 2 t) u - t *u^2 + t^3 (u^3))^(-1); ds[t_, n_] := D[sigma[t, u], {u, n}] /. u -> 0; su[n_] := su[n] = Sum[ Coefficient[ds[t, n]/n!, t, j]*(n - j)!*(y - 1)^j, {j, 0, n}]; f[n_, k_] := Coefficient[su[n], y, k]; Table[f[n, 2], {n, 4, 23}] (* _Jean-François Alcover_, Sep 01 2011, after Maple prog. *)"@en .
+

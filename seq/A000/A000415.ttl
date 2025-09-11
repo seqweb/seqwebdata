@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.496922Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2398}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000415 a seq:Sequence ;
+    rdfs:label "A000415"@en ;
+    seq:hasTextList ( seq:A000415_I_1_20250216T083221 seq:A000415_N_1_20250216T083221 seq:A000415_C_1_20250216T083221 seq:A000415_D_1_20250216T083221 seq:A000415_H_1_20250216T083221 seq:A000415_F_1_20250216T083221 seq:A000415_t_1_20250216T083221 seq:A000415_o_1_20250216T083221 seq:A000415_Y_1_20250216T083221 seq:A000415_K_1_20250216T083221 seq:A000415_O_1_20250216T083221 seq:A000415_A_1_20250216T083221 seq:A000415_E_1_20250216T083221 seq:A000415_V_1_20250216T083221 ) .
+
+seq:A000415_A_1_20250216T083221 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_ and _J. H. Conway_"@en .
+
+seq:A000415_C_1_20250216T083221 a seq:Text ;
+    cnt:chars """Only these numbers can occur as discriminants of quintic polynomials with solvable Galois group F20. - _Artur Jasinski_, Oct 25 2007
+Complement of A022544 in the nonsquare positive integers A000037. - _Max Alekseyev_, Jan 21 2010
+Nonsquare positive integers D such that Pell equation y^2 - D*x^2 = -1 has rational solutions. - _Max Alekseyev_, Mar 09 2010
+Nonsquares for which all 4k+3 primes in the integer's canonical form occur with even multiplicity. - _Ant King_, Nov 02 2010"""@en .
+
+seq:A000415_D_1_20250216T083221 a seq:Text ;
+    cnt:chars "E. Grosswald, Representation of Integers as Sums of Squares, Springer-Verlag, New York Inc., (1985), p.15. - _Ant King_, Nov 02 2010"@en .
+
+seq:A000415_E_1_20250216T083221 a seq:Text ;
+    cnt:chars "More terms from Arlin Anderson (starship1(AT)gmail.com)"@en .
+
+seq:A000415_F_1_20250216T083221 a seq:Text ;
+    cnt:chars "{ A000404 } minus { A134422 }. - _Artur Jasinski_, Oct 25 2007"@en .
+
+seq:A000415_H_1_20250216T083221 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000415/b000415.txt">Table of n, a(n) for n = 1..10000</a>
+R. K. Guy, <a href="https://www.jstor.org/stable/2324367">Every number is expressible as the sum of how many polygonal numbers?</a>, Amer. Math. Monthly 101 (1994), 169-172. - _Ant King_, Nov 02 2010
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/SquareNumber.html">Square Number</a>
+<a href="/index/Su#ssq">Index entries for sequences related to sums of squares</a>"""@en .
+
+seq:A000415_I_1_20250216T083221 a seq:Text ;
+    cnt:chars "#47 Feb 16 2025 08:32:21"@en .
+
+seq:A000415_K_1_20250216T083221 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000415_N_1_20250216T083221 a seq:Text ;
+    cnt:chars "Numbers that are the sum of 2 but no fewer nonzero squares."@en .
+
+seq:A000415_O_1_20250216T083221 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000415_V_1_20250216T083221 a seq:Text ;
+    cnt:chars "2,5,8,10,13,17,18,20,26,29,32,34,37,40,41,45,50,52,53,58,61,65,68,72,73,74,80,82,85,89,90,97,98,101,104,106,109,113,116,117,122,125,128,130,136,137,145,146,148,149,153,157,160,162,164,170,173,178,180,181"@en .
+
+seq:A000415_Y_1_20250216T083221 a seq:Text ;
+    cnt:chars "Cf. A000404, A000419, A001481, A002828, A009003, A134422."@en .
+
+seq:A000415_o_1_20250216T083221 a seq:Text ;
+    cnt:chars """(PARI) is(n)=my(f=factor(n)); for(i=1, #f[, 1], if(f[i, 2]%2 && f[i, 1]%4==3, return(0))); !issquare(n) \\\\ _Charles R Greathouse IV_, Feb 07 2017
+(Python)
+from itertools import count, islice
+from sympy import factorint
+def A000415_gen(startvalue=2): # generator of terms >= startvalue
+    for n in count(max(startvalue,2)):
+        f = factorint(n).items()
+        if any(e&1 for p,e in f if p&3<3) and not any(e&1 for p,e in f if p&3==3):
+            yield n
+A000415_list = list(islice(A000415_gen(),20)) # _Chai Wah Wu_, Aug 01 2023"""@en .
+
+seq:A000415_t_1_20250216T083221 a seq:Text ;
+    cnt:chars """c = {}; Do[Do[k = a^2 + b^2; If[IntegerQ[Sqrt[k]], Null, AppendTo[c,k]], {a, 1, 100}], {b, 1, 100}]; Union[c] (* _Artur Jasinski_, Oct 25 2007 *)
+Select[Range[181],Length[PowersRepresentations[ #,2,2]]>0 && !IntegerQ[Sqrt[ # ]] &] (* _Ant King_, Nov 02 2010 *)"""@en .
+

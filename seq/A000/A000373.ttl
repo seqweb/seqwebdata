@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.395488Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1779}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000373 a seq:Sequence ;
+    rdfs:label "A000373"@en ;
+    seq:hasTextList ( seq:A000373_I_1_20240923T102131 seq:A000373_N_1_20240923T102131 seq:A000373_C_1_20240923T102131 seq:A000373_D_1_20240923T102131 seq:A000373_H_1_20240923T102131 seq:A000373_e_1_20240923T102131 seq:A000373_o_1_20240923T102131 seq:A000373_Y_1_20240923T102131 seq:A000373_K_1_20240923T102131 seq:A000373_O_1_20240923T102131 seq:A000373_A_1_20240923T102131 seq:A000373_V_1_20240923T102131 ) .
+
+seq:A000373_A_1_20240923T102131 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000373_C_1_20240923T102131 a seq:Text ;
+    cnt:chars """There is an explicit formula for the n-th term of this sequence (see Eq. (8.4) of Smith (1982)). It is conjectured that this gives the answer to a question of Manin about the dimension of a certain module associated with the free commutative Moufang loop with n generators. - _N. J. A. Sloane_, May 21 2014
+The underlying hypothesis has been disproven, see Grishkov & Shestakov (2008-2011). - _Matthew House_, Sep 03 2024"""@en .
+
+seq:A000373_D_1_20240923T102131 a seq:Text ;
+    cnt:chars "Yu. I. Manin, Cubic Forms, Second edition, North-Holland Publishing Co., Amsterdam, 1986, page 312. MR0833513 (87d:11037)"@en .
+
+seq:A000373_H_1_20240923T102131 a seq:Text ;
+    cnt:chars """Matthew House, <a href="/A000373/b000373.txt">Table of n, a(n) for n = 1..523</a>
+Alexander N. Grishkov and Ivan P. Shestakov, <a href="https://doi.org/10.1016/j.jalgebra.2010.11.020">Commutative Moufang loops and alternative algebras</a>, J. Algebra, 333 (2011), 1-13; <a href="https://arxiv.org/abs/0811.3787">Preprint</a>, arXiv:0811.3787 [math.RA], 2008.
+Jonathan D. H. Smith, <a href="https://doi.org/10.1007/BF01393379">Commutative Moufang loops and Bessel functions</a>, Invent. Math. 67 (1982), no. 1, 173-187."""@en .
+
+seq:A000373_I_1_20240923T102131 a seq:Text ;
+    cnt:chars "#32 Sep 23 2024 10:21:31"@en .
+
+seq:A000373_K_1_20240923T102131 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000373_N_1_20240923T102131 a seq:Text ;
+    cnt:chars "Conjectured dimension of a module associated with the free commutative Moufang loop with n generators."@en .
+
+seq:A000373_O_1_20240923T102131 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A000373_V_1_20240923T102131 a seq:Text ;
+    cnt:chars "0,0,1,8,44,214,1000,4592,20888,94846,434973,2042836,9979086,51460622,283839957,1688139424,10859199656,75338888918,560740210491,4445766353604,37329808482989,330143634313064,3064464030121369"@en .
+
+seq:A000373_Y_1_20240923T102131 a seq:Text ;
+    cnt:chars "Cf. A152123."@en .
+
+seq:A000373_e_1_20240923T102131 a seq:Text ;
+    cnt:chars "G.f. = x^3 + 8*x^4 + 44*x^5 + 214*x^6 + 1000*x^7 + 4592*x^8 + 20888*x^9 + ..."@en .
+
+seq:A000373_o_1_20240923T102131 a seq:Text ;
+    cnt:chars "(PARI) {a(n) = local(A); if( n<3, 0, A = Vec(-1 + serlaplace( serlaplace( subst( 1 / besselj(0, x + O(x^n)), x^2, 4*x)))); A[1] = 0; sum(k=1, (n-1)\\2, sum(p=0, n - 2*k - 1, n! / p! / (2*k+1)! / (n - p - 2*k -1 )! * (A[k] + binomial( p+k-1, k-1)))))}; /* _Michael Somos_, May 17 2004 */"@en .
+

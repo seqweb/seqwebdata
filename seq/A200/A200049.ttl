@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.864650Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 672}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200049 a seq:Sequence ;
+    rdfs:label "A200049"@en ;
+    seq:hasTextList ( seq:A200049_I_1_20181030T103102 seq:A200049_N_1_20181030T103102 seq:A200049_H_1_20181030T103102 seq:A200049_F_1_20181030T103102 seq:A200049_o_1_20181030T103102 seq:A200049_Y_1_20181030T103102 seq:A200049_K_1_20181030T103102 seq:A200049_O_1_20181030T103102 seq:A200049_A_1_20181030T103102 seq:A200049_V_1_20181030T103102 ) .
+
+seq:A200049_A_1_20181030T103102 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 13 2011"@en .
+
+seq:A200049_F_1_20181030T103102 a seq:Text ;
+    cnt:chars "A062739(a(n)) = (A000040(n+1))^2."@en .
+
+seq:A200049_H_1_20181030T103102 a seq:Text ;
+    cnt:chars "Zak Seidov, <a href=\"/A200049/b200049.txt\">Table of n, a(n) for n = 1..1000</a>"@en .
+
+seq:A200049_I_1_20181030T103102 a seq:Text ;
+    cnt:chars "#16 Oct 30 2018 10:31:02"@en .
+
+seq:A200049_K_1_20181030T103102 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200049_N_1_20181030T103102 a seq:Text ;
+    cnt:chars "Positions of squares of odd primes among odd powerful numbers A062739."@en .
+
+seq:A200049_O_1_20181030T103102 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200049_V_1_20181030T103102 a seq:Text ;
+    cnt:chars "2,3,5,7,9,12,14,16,20,21,27,29,30,34,37,44,45,48,52,53,58,61,65,71,75,76,78,79,84,93,97,100,101,109,111,115,119,122,128,132,133,142,144,146,147,157,165,169,170,172,178,180,188,193,198,202,203,207,211,213,221,231,233,234,238,251,254,261,263,267,271"@en .
+
+seq:A200049_Y_1_20181030T103102 a seq:Text ;
+    cnt:chars "Cf. A000040, A062739."@en .
+
+seq:A200049_o_1_20181030T103102 a seq:Text ;
+    cnt:chars "(PARI) lista(nn) = select(x->(issquare(x) && isprime(sqrtint(x))), select(x->(ispowerful(x) && (x % 2)), vector(nn, k, k)), 1); \\\\ _Michel Marcus_, Jun 18 2017"@en .
+

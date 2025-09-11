@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.451548Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 573}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200977 a seq:Sequence ;
+    rdfs:label "A200977"@en ;
+    seq:hasTextList ( seq:A200977_I_1_20181030T103102 seq:A200977_N_1_20181030T103102 seq:A200977_C_1_20181030T103102 seq:A200977_e_1_20181030T103102 seq:A200977_Y_1_20181030T103102 seq:A200977_K_1_20181030T103102 seq:A200977_O_1_20181030T103102 seq:A200977_A_1_20181030T103102 seq:A200977_V_1_20181030T103102 ) .
+
+seq:A200977_A_1_20181030T103102 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 29 2011"@en .
+
+seq:A200977_C_1_20181030T103102 a seq:Text ;
+    cnt:chars "Incidentally all terms are multiples of 3."@en .
+
+seq:A200977_I_1_20181030T103102 a seq:Text ;
+    cnt:chars "#26 Oct 30 2018 10:31:02"@en .
+
+seq:A200977_K_1_20181030T103102 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200977_N_1_20181030T103102 a seq:Text ;
+    cnt:chars "Smallest number expressible in the form a^2 + 2b^2, with positive integers a and b, in exactly n ways."@en .
+
+seq:A200977_O_1_20181030T103102 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200977_V_1_20181030T103102 a seq:Text ;
+    cnt:chars "3,27,99,297,891,1683,8019,5049,18513,15147,649539,31977,314721,136323,166617,95931,10673289,351747,64304361,287793,1499553,8450649,127680201,863379,20160657,99379467,5979699,5180274,1235641473,3165723,50984802,3933171"@en .
+
+seq:A200977_Y_1_20181030T103102 a seq:Text ;
+    cnt:chars "Cf. A154777 (numbers of the form a^2 + 2b^2 with positive integers a, b)."@en .
+
+seq:A200977_e_1_20181030T103102 a seq:Text ;
+    cnt:chars """3 = 1+2*1^2.
+27 = 3+2*3^2 = 5^2+2*1^2.
+99 = 1+2*7^2 = 7^2+2*5^2 = 9^2+2*3^2."""@en .
+

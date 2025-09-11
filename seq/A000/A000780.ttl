@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.338701Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1053}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000780 a seq:Sequence ;
+    rdfs:label "A000780"@en ;
+    seq:hasTextList ( seq:A000780_I_1_20220908T084428 seq:A000780_N_1_20220908T084428 seq:A000780_H_1_20220908T084428 seq:A000780_F_1_20220908T084428 seq:A000780_p_1_20220908T084428 seq:A000780_t_1_20220908T084428 seq:A000780_o_1_20220908T084428 seq:A000780_K_1_20220908T084428 seq:A000780_O_1_20220908T084428 seq:A000780_A_1_20220908T084428 seq:A000780_V_1_20220908T084428 ) .
+
+seq:A000780_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000780_F_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = (n-1)!* (n^2+3*n-2)/2. - _Gary Detlefs_, May 22 2010"@en .
+
+seq:A000780_H_1_20220908T084428 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000780/b000780.txt">Table of n, a(n) for n = 1..200</a>
+INRIA Algorithms Project, <a href="http://ecs.inria.fr/services/structure?nbr=392">Encyclopedia of Combinatorial Structures 392</a>
+J. R. Stembridge, <a href="http://dx.doi.org/10.1090/S0002-9947-97-01805-9">Some combinatorial aspects of reduced words in finite Coxeter groups</a>, Trans. Amer. Math. Soc. 349 (1997), no. 4, 1285-1332."""@en .
+
+seq:A000780_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "#30 Sep 08 2022 08:44:28"@en .
+
+seq:A000780_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000780_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = (n+1)!/2 + (n-1)(n-1)!."@en .
+
+seq:A000780_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000780_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,4,16,78,456,3120,24480,216720,2136960,23224320,275788800,3552595200,49337164800,734788454400,11681891020800,197458829568000,3535951491072000,66869236482048000,1331693730791424000,27856727993622528000,610658404052336640000"@en .
+
+seq:A000780_o_1_20220908T084428 a seq:Text ;
+    cnt:chars "(Magma) [Factorial(n+1)/2+(n-1)*Factorial(n-1): n in [1..25]]; // _Vincenzo Librandi_, Jun 07 2013"@en .
+
+seq:A000780_p_1_20220908T084428 a seq:Text ;
+    cnt:chars "seq((n-1)!* (n^2+3*n-2)/2, n = 1..19); # _Gary Detlefs_, May 22 2010"@en .
+
+seq:A000780_t_1_20220908T084428 a seq:Text ;
+    cnt:chars "Table[(n + 1)!/2 + (n - 1)*(n - 1)!, {n, 40}] (* _Vladimir Joseph Stephan Orlovsky_, Feb 23 2012 *)"@en .
+

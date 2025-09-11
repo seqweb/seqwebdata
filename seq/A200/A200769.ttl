@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.051816Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 625}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200769 a seq:Sequence ;
+    rdfs:label "A200769"@en ;
+    seq:hasTextList ( seq:A200769_I_1_20170426T114009 seq:A200769_N_1_20170426T114009 seq:A200769_C_1_20170426T114009 seq:A200769_e_1_20170426T114009 seq:A200769_Y_1_20170426T114009 seq:A200769_K_1_20170426T114009 seq:A200769_O_1_20170426T114009 seq:A200769_A_1_20170426T114009 seq:A200769_V_1_20170426T114009 ) .
+
+seq:A200769_A_1_20170426T114009 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 22 2011"@en .
+
+seq:A200769_C_1_20170426T114009 a seq:Text ;
+    cnt:chars "Diagonal of A200777."@en .
+
+seq:A200769_I_1_20170426T114009 a seq:Text ;
+    cnt:chars "#8 Apr 26 2017 11:40:09"@en .
+
+seq:A200769_K_1_20170426T114009 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200769_N_1_20170426T114009 a seq:Text ;
+    cnt:chars "Number of n X n 0..2 arrays with every row and column running average nondecreasing rightwards and downwards, and the number of instances of each value within one of each other."@en .
+
+seq:A200769_O_1_20170426T114009 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200769_V_1_20170426T114009 a seq:Text ;
+    cnt:chars "3,5,13,342,7725,91755,17965438,2189118202,159001066390"@en .
+
+seq:A200769_Y_1_20170426T114009 a seq:Text ;
+    cnt:chars "Cf. A200777."@en .
+
+seq:A200769_e_1_20170426T114009 a seq:Text ;
+    cnt:chars """Some solutions for n=4
+..0..0..1..1....0..0..0..0....0..0..0..1....0..0..0..1....0..0..0..0
+..0..2..1..2....0..0..1..2....0..0..2..1....0..0..1..1....0..1..1..2
+..0..1..1..2....1..1..2..2....0..2..1..1....0..1..1..2....0..1..1..1
+..0..2..1..2....1..1..2..2....1..2..2..2....2..2..2..2....2..2..2..2"""@en .
+

@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.596009Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 768}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000458 a seq:Sequence ;
+    rdfs:label "A000458"@en ;
+    seq:hasTextList ( seq:A000458_I_1_20221209T132527 seq:A000458_N_1_20221209T132527 seq:A000458_H_1_20221209T132527 seq:A000458_p_1_20221209T132527 seq:A000458_t_1_20221209T132527 seq:A000458_K_1_20221209T132527 seq:A000458_O_1_20221209T132527 seq:A000458_A_1_20221209T132527 seq:A000458_V_1_20221209T132527 ) .
+
+seq:A000458_A_1_20221209T132527 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000458_H_1_20221209T132527 a seq:Text ;
+    cnt:chars "T. D. Noe, <a href=\"/A000458/b000458.txt\">Table of n, a(n) for n=0..100</a>"@en .
+
+seq:A000458_I_1_20221209T132527 a seq:Text ;
+    cnt:chars "#17 Dec 09 2022 13:25:27"@en .
+
+seq:A000458_K_1_20221209T132527 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000458_N_1_20221209T132527 a seq:Text ;
+    cnt:chars "a(0) = a(1) = 1; thereafter a(n) = sigma(a(n-1)) + sigma(a(n-2))."@en .
+
+seq:A000458_O_1_20221209T132527 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000458_V_1_20221209T132527 a seq:Text ;
+    cnt:chars "1,1,2,4,10,25,49,88,237,500,1412,3570,12846,36072,126504,493920,2358720,12292224,49984224,171237888,642804078,1980490350,6380883000,27032104440,117961599600,555861355920,2623445776224"@en .
+
+seq:A000458_p_1_20221209T132527 a seq:Text ;
+    cnt:chars "A000458 := proc(n) options remember; if n <= 1 then RETURN(1) else sigma(A000458(n-1))+sigma(A000458(n-2)); fi; end;"@en .
+
+seq:A000458_t_1_20221209T132527 a seq:Text ;
+    cnt:chars """a[0] = a[1] = 1; a[n_] := a[n] = DivisorSigma[1, a[n-1]] + DivisorSigma[1, a[n-2]]; Table[a[n], {n, 0, 30}] (* _Jean-François Alcover_, Feb 08 2016 *)
+nxt[{a_,b_}]:={b,DivisorSigma[1,a]+DivisorSigma[1,b]}; NestList[nxt,{1,1},30][[All,1]] (* _Harvey P. Dale_, Dec 09 2022 *)"""@en .
+

@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.215517Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1149}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000725 a seq:Sequence ;
+    rdfs:label "A000725"@en ;
+    seq:hasTextList ( seq:A000725_I_1_20220203T004613 seq:A000725_N_1_20220203T004613 seq:A000725_C_1_20220203T004613 seq:A000725_D_1_20220203T004613 seq:A000725_H_1_20220203T004613 seq:A000725_K_1_20220203T004613 seq:A000725_O_1_20220203T004613 seq:A000725_A_1_20220203T004613 seq:A000725_E_1_20220203T004613 seq:A000725_V_1_20220203T004613 ) .
+
+seq:A000725_A_1_20220203T004613 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000725_C_1_20220203T004613 a seq:Text ;
+    cnt:chars "Equivalence classes of invertible maps from {0,1}^n to {0,1}^n, under action of permutation of variables on the domain and permutation and complementation of the range. [_Sean A. Irvine_, Mar 16 2011]"@en .
+
+seq:A000725_D_1_20220203T004613 a seq:Text ;
+    cnt:chars """M. A. Harrison, The number of classes of invertible Boolean functions, J. ACM 10 (1963), 25-28.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000725_E_1_20220203T004613 a seq:Text ;
+    cnt:chars """More terms from _Sean A. Irvine_, Mar 15 2011
+a(6) corrected by _Sean A. Irvine_, May 29 2013
+a(5) corrected by _Sean A. Irvine_, Jun 03 2013"""@en .
+
+seq:A000725_H_1_20220203T004613 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="/A000653/a000653.pdf">The number of classes of invertible Boolean functions</a>, J. ACM 10 (1963), 25-28. [Annotated scan of page 27 only]
+<a href="/index/Bo#Boolean">Index entries for sequences related to Boolean functions</a>"""@en .
+
+seq:A000725_I_1_20220203T004613 a seq:Text ;
+    cnt:chars "M2181 N0873 #29 Feb 03 2022 00:46:13"@en .
+
+seq:A000725_K_1_20220203T004613 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000725_N_1_20220203T004613 a seq:Text ;
+    cnt:chars "Invertible Boolean functions of n variables."@en .
+
+seq:A000725_O_1_20220203T004613 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000725_V_1_20220203T004613 a seq:Text ;
+    cnt:chars "1,2,154,2270394624,571030462095782973206774552784,3824475917061034074298122508414160251634847335755905881951011420229530501911521280"@en .
+

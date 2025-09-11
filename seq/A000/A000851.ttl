@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.531614Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 798}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000851 a seq:Sequence ;
+    rdfs:label "A000851"@en ;
+    seq:hasTextList ( seq:A000851_I_1_20211219T105036 seq:A000851_N_1_20211219T105036 seq:A000851_C_1_20211219T105036 seq:A000851_D_1_20211219T105036 seq:A000851_H_1_20211219T105036 seq:A000851_K_1_20211219T105036 seq:A000851_O_1_20211219T105036 seq:A000851_A_1_20211219T105036 seq:A000851_E_1_20211219T105036 seq:A000851_V_1_20211219T105036 ) .
+
+seq:A000851_A_1_20211219T105036 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000851_C_1_20211219T105036 a seq:Text ;
+    cnt:chars "Next term has 99 digits. - _Sean A. Irvine_, Jan 20 2012"@en .
+
+seq:A000851_D_1_20211219T105036 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000851_E_1_20211219T105036 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 19 2012"@en .
+
+seq:A000851_H_1_20211219T105036 a seq:Text ;
+    cnt:chars "<a href=\"/index/Sw#switching\">Index entries for sequences related to switching networks</a>"@en .
+
+seq:A000851_I_1_20211219T105036 a seq:Text ;
+    cnt:chars "M4537 N1925 #21 Dec 19 2021 10:50:36"@en .
+
+seq:A000851_K_1_20211219T105036 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000851_N_1_20211219T105036 a seq:Text ;
+    cnt:chars "Number of n-input 3-output switching networks under action of AG(n,2) on the inputs and complementing group C(3,2) on the outputs."@en .
+
+seq:A000851_O_1_20211219T105036 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000851_V_1_20211219T105036 a seq:Text ;
+    cnt:chars "8,50,2908,115125476,30952209248265753648,608172074158442696987382009681097839529937904"@en .
+

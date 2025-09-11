@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.575372Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 679}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200561 a seq:Sequence ;
+    rdfs:label "A200561"@en ;
+    seq:hasTextList ( seq:A200561_I_1_20180214T031624 seq:A200561_N_1_20180214T031624 seq:A200561_H_1_20180214T031624 seq:A200561_F_1_20180214T031624 seq:A200561_K_1_20180214T031624 seq:A200561_O_1_20180214T031624 seq:A200561_A_1_20180214T031624 seq:A200561_E_1_20180214T031624 seq:A200561_V_1_20180214T031624 ) .
+
+seq:A200561_A_1_20180214T031624 a seq:Text ;
+    cnt:chars "_Krishnamurthy Balasubraniam_, Nov 19 2011"@en .
+
+seq:A200561_E_1_20180214T031624 a seq:Text ;
+    cnt:chars "Definition from _R. J. Mathar_, Nov 19 2011"@en .
+
+seq:A200561_F_1_20180214T031624 a seq:Text ;
+    cnt:chars """a(n) = -a(n-1) +2*a(n-2) +8*a(n-3).
+7*a(n) = 2^(n+1) -2*(-1)^n*(2*A049072(n-1)+A049072(n)). - _R. J. Mathar_, Dec 01 2011"""@en .
+
+seq:A200561_H_1_20180214T031624 a seq:Text ;
+    cnt:chars "<a href=\"/index/Rec#order_03\">Index entries for linear recurrences with constant coefficients</a>, signature (-1,2,8)."@en .
+
+seq:A200561_I_1_20180214T031624 a seq:Text ;
+    cnt:chars "#20 Feb 14 2018 03:16:24"@en .
+
+seq:A200561_K_1_20180214T031624 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A200561_N_1_20180214T031624 a seq:Text ;
+    cnt:chars "Expansion of -2*x / ( (2*x-1)*(4*x^2+3*x+1) )."@en .
+
+seq:A200561_O_1_20180214T031624 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200561_V_1_20180214T031624 a seq:Text ;
+    cnt:chars "2,-2,6,6,-10,70,-42,102,374,-506,2070,-90,182,16198,-16554,50406,46070,-77690,573078,-359898,884534,2980294,-4090410,17127270,-1465738,2996998,131089686,-136821594,422976950,352097350,-600716202,4688726502,-3073380106,7645103494,23717948310,-33014782170,141611506742"@en .
+

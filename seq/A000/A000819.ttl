@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.455289Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1368}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000819 a seq:Sequence ;
+    rdfs:label "A000819"@en ;
+    seq:hasTextList ( seq:A000819_I_1_20171230T143334 seq:A000819_N_1_20171230T143334 seq:A000819_H_1_20171230T143334 seq:A000819_F_1_20171230T143334 seq:A000819_e_1_20171230T143334 seq:A000819_t_1_20171230T143334 seq:A000819_o_1_20171230T143334 seq:A000819_Y_1_20171230T143334 seq:A000819_K_1_20171230T143334 seq:A000819_O_1_20171230T143334 seq:A000819_A_1_20171230T143334 seq:A000819_V_1_20171230T143334 ) .
+
+seq:A000819_A_1_20171230T143334 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000819_F_1_20171230T143334 a seq:Text ;
+    cnt:chars """E.g.f.: cos(x)^2/cos(2x)=1/Q(0)+1/2;   Q(k)=1+1/(1-2*(x^2)/(2*(x^2)-(k+1)*(2k+1)/Q(k+1)));  (continued fraction). - _Sergei N. Gladkovskii_, Nov 18 2011
+From _Michael Somos_, Apr 04 2017: (Start)
+E.g.f.: cos(x)^2 / cos(2*x) = (1 + sec(2*x)) / 2 = tan(2*x) / (2 * tan(x)) = 1 / (1 - tan(x)^2).
+a(n) = A000816(n) unless n=0.
+a(n) = 1/2 * A002436(n) unless n=0.
+a(n) = 2^(2*n - 1) * A000364(n). (End)"""@en .
+
+seq:A000819_H_1_20171230T143334 a seq:Text ;
+    cnt:chars "R. J. Mathar, <a href=\"/A000819/b000819.txt\">Table of n, a(n) for n = 0..200</a>"@en .
+
+seq:A000819_I_1_20171230T143334 a seq:Text ;
+    cnt:chars "#31 Dec 30 2017 14:33:34"@en .
+
+seq:A000819_K_1_20171230T143334 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000819_N_1_20171230T143334 a seq:Text ;
+    cnt:chars "E.g.f.: cos(x)^2 / cos(2x) = Sum_{n >= 0} a(n) * x^(2n) / (2n)!."@en .
+
+seq:A000819_O_1_20171230T143334 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000819_V_1_20171230T143334 a seq:Text ;
+    cnt:chars "1,2,40,1952,177280,25866752,5535262720,1633165156352,635421069967360,315212388819402752,194181169538675507200,145435130631317935357952,130145345400688287667978240,137139396592145493713802493952"@en .
+
+seq:A000819_Y_1_20171230T143334 a seq:Text ;
+    cnt:chars """Essentially the same as A000816.
+Second column of array A103905.
+Cf. A000364, A002436."""@en .
+
+seq:A000819_e_1_20171230T143334 a seq:Text ;
+    cnt:chars "G.f. = 1 + 2*x + 40*x^2 + 1952*x^3 + 177280*x^4 + 25866752*x^5 + ... - _Michael Somos_, Apr 04 2017"@en .
+
+seq:A000819_o_1_20171230T143334 a seq:Text ;
+    cnt:chars "(PARI) {a(n) = my(m); if( n<0, 0, m = 2*n; m! * polcoeff( 1 / (1 - tan(x + x * O(x^m))^2), m))}; /* _Michael Somos_, Apr 04 2017 */"@en .
+
+seq:A000819_t_1_20171230T143334 a seq:Text ;
+    cnt:chars """With[{nn=30},Take[CoefficientList[Series[Cos[x]^2/Cos[2x],{x,0,nn}],x] Range[ 0,nn]!,{1,-1,2}]] (* _Harvey P. Dale_, Jul 06 2014 *)
+a[ n_] := If[ n < 0, 0, With[ {m = 2 n}, m! SeriesCoefficient[ 1 / (1 - Tan[x]^2), {x, 0, m}]]]; (* _Michael Somos_, Apr 04 2017 *)"""@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.918114Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 806}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200709 a seq:Sequence ;
+    rdfs:label "A200709"@en ;
+    seq:hasTextList ( seq:A200709_I_1_20230504T121957 seq:A200709_N_1_20230504T121957 seq:A200709_C_1_20230504T121957 seq:A200709_H_1_20230504T121957 seq:A200709_e_1_20230504T121957 seq:A200709_Y_1_20230504T121957 seq:A200709_K_1_20230504T121957 seq:A200709_O_1_20230504T121957 seq:A200709_A_1_20230504T121957 seq:A200709_V_1_20230504T121957 ) .
+
+seq:A200709_A_1_20230504T121957 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 20 2011"@en .
+
+seq:A200709_C_1_20230504T121957 a seq:Text ;
+    cnt:chars "Column 3 of A200713."@en .
+
+seq:A200709_H_1_20230504T121957 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200709/b200709.txt\">Table of n, a(n) for n = 1..23</a>"@en .
+
+seq:A200709_I_1_20230504T121957 a seq:Text ;
+    cnt:chars "#7 May 04 2023 12:19:57"@en .
+
+seq:A200709_K_1_20230504T121957 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200709_N_1_20230504T121957 a seq:Text ;
+    cnt:chars "Number of n X 3 0..7 arrays with every row and column running average nondecreasing rightwards and downwards."@en .
+
+seq:A200709_O_1_20230504T121957 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200709_V_1_20230504T121957 a seq:Text ;
+    cnt:chars "154,7370,317656,12904303,501622631,18836416881,688892422045,24679562321720,870010030574894,30274045926194001,1042315568516067529,35569907932628823872,1204745819326637993000,40540325062931324645529"@en .
+
+seq:A200709_Y_1_20230504T121957 a seq:Text ;
+    cnt:chars "Cf. A200713."@en .
+
+seq:A200709_e_1_20230504T121957 a seq:Text ;
+    cnt:chars """Some solutions for n=4
+..0..4..7....0..0..3....0..0..1....0..0..1....0..0..0....0..2..2....0..2..2
+..0..4..7....0..0..5....0..4..3....0..0..4....0..2..1....0..2..7....0..4..7
+..0..6..7....0..4..6....0..2..3....0..0..5....0..4..3....0..4..6....0..4..7
+..1..6..7....0..3..7....0..5..3....2..2..7....0..5..4....0..4..5....0..6..6"""@en .
+

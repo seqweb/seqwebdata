@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.230340Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1189}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000306 a seq:Sequence ;
+    rdfs:label "A000306"@en ;
+    seq:hasTextList ( seq:A000306_I_1_20230519T042304 seq:A000306_N_1_20230519T042304 seq:A000306_D_1_20230519T042304 seq:A000306_H_1_20230519T042304 seq:A000306_o_1_20230519T042304 seq:A000306_Y_1_20230519T042304 seq:A000306_K_1_20230519T042304 seq:A000306_O_1_20230519T042304 seq:A000306_A_1_20230519T042304 seq:A000306_E_1_20230519T042304 seq:A000306_V_1_20230519T042304 ) .
+
+seq:A000306_A_1_20230519T042304 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000306_D_1_20230519T042304 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000306_E_1_20230519T042304 a seq:Text ;
+    cnt:chars "More terms from _Christian Sievers_, May 18 2023"@en .
+
+seq:A000306_H_1_20230519T042304 a seq:Text ;
+    cnt:chars """Christian Sievers, <a href="/A000306/b000306.txt">Table of n, a(n) for n = 9..4442</a>
+J. Riordan, <a href="http://dx.doi.org/10.1147/rd.45.0473">Enumeration of trees by height and diameter</a>, IBM J. Res. Dev. 4 (1960), 473-478.
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000306_I_1_20230519T042304 a seq:Text ;
+    cnt:chars "M3552 N1440 #39 May 19 2023 04:23:04"@en .
+
+seq:A000306_K_1_20230519T042304 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000306_N_1_20230519T042304 a seq:Text ;
+    cnt:chars "Number of trees of diameter 8."@en .
+
+seq:A000306_O_1_20230519T042304 a seq:Text ;
+    cnt:chars "9,2"@en .
+
+seq:A000306_V_1_20230519T042304 a seq:Text ;
+    cnt:chars "1,4,19,66,219,645,1813,4802,12265,30198,72396,169231,387707,871989,1930868,4215615,9091410,19389327,40944999,85691893,177898521,366614456,750494796,1526979694,3089556090,6219191608,12460307373,24856533408,49387348955,97765283686,192870793594,379287172272"@en .
+
+seq:A000306_Y_1_20230519T042304 a seq:Text ;
+    cnt:chars "Cf. A034853."@en .
+
+seq:A000306_o_1_20230519T042304 a seq:Text ;
+    cnt:chars """(PARI)
+sh_euler(p)={my(m=serprec(p,x)-1); x*exp(sum(i=1, m, subst(p+O(x^(1+m\\i)), x, x^i)/i))}
+lista(n)={my(s2=sh_euler(sh_euler(x+O(x*x^n))), s3=sh_euler(s2), s4=sh_euler(s3), r3=s3-s2, r4=s4-s3, t8=r4-r3*s3); Vec(t8)} \\\\ _Christian Sievers_, May 18 2023"""@en .
+

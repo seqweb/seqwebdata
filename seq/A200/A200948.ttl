@@ -1,0 +1,29 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.398268Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 27, "entities": 7, "chars": 288}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200948 a seq:Sequence ;
+    rdfs:label "A200948"@en ;
+    seq:hasTextList ( seq:A200948_I_1_20240101T104009 seq:A200948_N_1_20240101T104009 seq:A200948_K_1_20240101T104009 seq:A200948_O_1_20240101T104009 seq:A200948_A_1_20240101T104009 seq:A200948_V_1_20240101T104009 ) .
+
+seq:A200948_A_1_20240101T104009 a seq:Text ;
+    cnt:chars "_Zak Seidov_, Nov 24 2011"@en .
+
+seq:A200948_I_1_20240101T104009 a seq:Text ;
+    cnt:chars "#14 Jan 01 2024 10:40:09"@en .
+
+seq:A200948_K_1_20240101T104009 a seq:Text ;
+    cnt:chars "dead"@en .
+
+seq:A200948_N_1_20240101T104009 a seq:Text ;
+    cnt:chars "Erroneous version of A275148."@en .
+
+seq:A200948_O_1_20240101T104009 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200948_V_1_20240101T104009 a seq:Text ;
+    cnt:chars "1,3,5,24,26,29,41,290,314,626,1784,6041,556,7589,8876,26171,52454,153089,159731,218084,576239,1478531,2677289,2934539,3085781,3569114,3802301,4692866,24307841,25051934,54168539,285820856,362822099"@en .
+

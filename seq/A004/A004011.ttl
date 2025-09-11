@@ -1,0 +1,119 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.858092Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 67, "entities": 17, "chars": 8033}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A004011 a seq:Sequence ;
+    rdfs:label "A004011"@en ;
+    seq:hasTextList ( seq:A004011_I_1_20250216T083227 seq:A004011_N_1_20250216T083227 seq:A004011_C_1_20250216T083227 seq:A004011_D_1_20250216T083227 seq:A004011_H_1_20250216T083227 seq:A004011_F_1_20250216T083227 seq:A004011_e_1_20250216T083227 seq:A004011_p_1_20250216T083227 seq:A004011_t_1_20250216T083227 seq:A004011_o_1_20250216T083227 seq:A004011_Y_1_20250216T083227 seq:A004011_K_1_20250216T083227 seq:A004011_O_1_20250216T083227 seq:A004011_A_1_20250216T083227 seq:A004011_E_1_20250216T083227 seq:A004011_V_1_20250216T083227 ) .
+
+seq:A004011_A_1_20250216T083227 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A004011_C_1_20250216T083227 a seq:Text ;
+    cnt:chars """D_4 is also the Barnes-Wall lattice in 4 dimensions.
+E_{gamma,2} is the unique normalized modular form for Gamma_0(2) of weight 2.
+Cubic AGM theta functions: a(q) (see A004016), b(q) (A005928), c(q) (A005882).
+Ramanujan's Eisenstein series: P(q) (see A006352), Q(q) (A004009), R(q) (A013973).
+Convolution square is A008658. - _Michael Somos_, Aug 21 2014
+Expansion of 2*P(x^2) - P(x) in powers of x where P() is a Ramanujan Eisenstein series. - _Michael Somos_, Feb 16 2015
+a(n) is the number of Hurwitz quaternions of norm n. - _Michael Somos_, Feb 16 2015"""@en .
+
+seq:A004011_D_1_20250216T083227 a seq:Text ;
+    cnt:chars """Bruce C. Berndt, Ramanujan's Notebooks Part V, Springer-Verlag, 1998, see p. 148 Eq. (9.11).
+Harvey Cohn, Advanced Number Theory, Dover Publications, Inc., 1980, p. 89. Eq. (1).
+J. H. Conway and N. J. A. Sloane, "Sphere Packings, Lattices and Groups", Springer-Verlag, p. 119.
+S. Ramanujan, Notebooks, Tata Institute of Fundamental Research, Bombay 1957 Vol. 1, see page 214.
+N. J. A. Sloane, Seven Staggering Sequences, in Homage to a Pied Puzzler, E. Pegg Jr., A. H. Schoen and T. Rodgers (editors), A. K. Peters, Wellesley, MA, 2009, pp. 93-110.
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A004011_E_1_20250216T083227 a seq:Text ;
+    cnt:chars "Additional comments from Barry Brent (barryb(AT)primenet.com)"@en .
+
+seq:A004011_F_1_20250216T083227 a seq:Text ;
+    cnt:chars """a(0) = 1; if n>0 then a(n) = 24 (Sum_{d|n, d odd, d>0} d) = 24 * A000593(n).
+G.f.: 1 + 24 Sum_{n>0} n x^n /(1 + x^n). a(n) = A000118(2*n) = A096727(2*n).
+G.f.: (1/2) * (theta_3(z)^4 + theta_4(z)^4) = theta_3(2z)^4 + theta_2(2z)^4 = Sum_{k>=0} a(k) * x^(2*k).
+G.f.: Sum_{a, b, c, d in Z} x^(a^2 + b^2 + c^2 + d^2 + a*d + b*d + c*d). - _Michael Somos_, Jan 11 2011
+Expansion of (1 + k^2) * K(k^2)^2 / (Pi/2)^2 in powers of nome q. - _Michael Somos_, Jun 10 2006
+Expansion of (1 - k^2/2) * K(k^2)^2 / (Pi/2)^2 in powers of nome q^2. - _Michael Somos_, Mar 14 2012
+Expansion of b(x) * b(x^2) + 3 * c(x) * c(x^2) in powers of x where b(), c() are cubic AGM theta functions. - _Michael Somos_, Jan 11 2011
+Expansion of b(x) * b(x^2) + c(x) * c(x^2) / 3 in powers of x^3 where b(), c() are cubic AGM theta functions. - _Michael Somos_, Mar 14 2012
+G.f. is a period 1 Fourier series which satisfies f(-1 / (2 t)) = 2 (t/i)^2 f(t) where q = exp(2 Pi i t). - _Michael Somos_, Sep 11 2007
+G.f. A(x) satisfies 0 = f(A(x), A(x^2), A(x^4)) where f(u, v, w) = u^2 - 2*u*v - 7*v^2 - 8*v*w + 16*w^2. - _Michael Somos_, May 29 2005
+G.f. A(x) satisfies 0 = f(A(x), A(x^2), A(x^3), A(x^6)) where f(u1, u2, u3, u6) = u1^2 + 4*u2^2 + 9*u3^2 + 36*u6^2 - 2*u1*u2 - 10*u1*u3 + 10*u1*u6 + 10*u2*u3 - 40*u2*u6 - 18*u3*u6. - _Michael Somos_, Sep 11 2007
+Sum_{k=1..n} a(k) ~ c * n^2, where c = Pi^2 = 9.869604... (A002388). - _Amiram Eldar_, Dec 29 2023"""@en .
+
+seq:A004011_H_1_20250216T083227 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A004011/b004011.txt">Table of n, a(n) for n = 0..10000</a>
+Megumi Asada, Bruce Fang, Eva Fourakis, Sarah Manski, Nathan McNew, Steven J. Miller, Gwyneth Moreland, Ajmain Yamin, and Sindy Xin Zhang, <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/math/papers/ramseynoncommutative10.pdf">Avoiding 3-Term Geometric Progressions in Hurwitz Quaternions</a>, Williams College (2023).
+Barry Brent, <a href="http://www.emis.de/journals/EM/expmath/volumes/7/7.html">Quadratic Minima and Modular Forms</a>, Experimental Mathematics, Vol. 7, No. 3 (1998), 257-274.
+Michael Gilleland, <a href="/selfsimilar.html">Some Self-Similar Integer Sequences</a>.
+Fern Gossow, <a href="https://arxiv.org/abs/2410.05678">Lyndon-like cyclic sieving and Gauss congruence</a>, arXiv:2410.05678 [math.CO], 2024. See p. 26.
+Nadia Heninger, E. M. Rains, and N. J. A. Sloane, <a href="https://arxiv.org/abs/math/0509316">On the Integrality of n-th Roots of Generating Functions</a>, arXiv:math/0509316 [math.NT], 2005-2006; J. Combinatorial Theory, Series A, 113 (2006), 1732-1745.
+Masao Koike, <a href="https://oeis.org/A004016/a004016.pdf">Modular forms on non-compact arithmetic triangle groups</a>, Unpublished manuscript [Extensively annotated with OEIS A-numbers by N. J. A. Sloane, Feb 14 2021. I wrote 2005 on the first page but the internal evidence suggests 1997.]
+Gabriele Nebe and N. J. A. Sloane, <a href="http://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/D4.html">Home page for D_4 lattice</a>
+N. J. A. Sloane, <a href="/A004011/a004011.gif">The 24 minimal vectors form the 24-cell polytope</a>.
+N. J. A. Sloane, <a href="http://neilsloane.com/doc/g4g7.pdf">Seven Staggering Sequences</a>.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/24-Cell.html">24-Cell</a>.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/Barnes-WallLattice.html">Barnes-Wall Lattice</a>.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/EisensteinSeries.html">Eisenstein Series</a>.
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Hurwitz_quaternion">Hurwitz quaternion</a>.
+<a href="/index/Cor#core">Index entries for "core" sequences</a>.
+<a href="/index/Ba#BW">Index entries for sequences related to Barnes-Wall lattices</a>.
+<a href="/index/Da#D4">Index entries for sequences related to D_4 lattice</a>.
+<a href="/index/Ed#Eisen">Index entries for sequences related to Eisenstein series</a>."""@en .
+
+seq:A004011_I_1_20250216T083227 a seq:Text ;
+    cnt:chars "M5140 #144 Feb 16 2025 08:32:27"@en .
+
+seq:A004011_K_1_20250216T083227 a seq:Text ;
+    cnt:chars "nonn,easy,core,nice"@en .
+
+seq:A004011_N_1_20250216T083227 a seq:Text ;
+    cnt:chars "Theta series of D_4 lattice; Fourier coefficients of Eisenstein series E_{gamma,2}."@en .
+
+seq:A004011_O_1_20250216T083227 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A004011_V_1_20250216T083227 a seq:Text ;
+    cnt:chars "1,24,24,96,24,144,96,192,24,312,144,288,96,336,192,576,24,432,312,480,144,768,288,576,96,744,336,960,192,720,576,768,24,1152,432,1152,312,912,480,1344,144,1008,768,1056,288,1872,576,1152,96,1368,744,1728,336"@en .
+
+seq:A004011_Y_1_20250216T083227 a seq:Text ;
+    cnt:chars """Cf. A002388, A000118, A000593, A008658, A096727, A108092, A108096.
+Cf. A004016, A005882, A005928.
+Partial sums give A046949.
+Cf. A108092 (convolution fourth root)."""@en .
+
+seq:A004011_e_1_20250216T083227 a seq:Text ;
+    cnt:chars """G.f. = 1 + 24*x + 24*x^2 + 96*x^3 + 24*x^4 + 144*x^5 + 96*x^6 + 192*x^7 + 24*x^8 + ...
+G.f. = 1 + 24*q^2 + 24*q^4 + 96*q^6 + 24*q^8 + 144*q^10 + 96*q^12 + 192*q^14 + 24*q^16 + ..."""@en .
+
+seq:A004011_o_1_20250216T083227 a seq:Text ;
+    cnt:chars """(PARI) {a(n) = if( n<1, n==0, 24 * sumdiv( n, d, d%2 * d))}; /* _Michael Somos_, Apr 17 2000 */
+(PARI) {a(n) = my(G); if( n<0, 0, G = [2, 1, 1, 1; 1, 2, 0, 0; 1, 0, 2, 0; 1, 0, 0, 2]; polcoeff( 1 + 2 * x * Ser(qfrep( G, n, 1)), n))}; /* _Michael Somos_, Sep 11 2007 */
+(PARI) {a(n) = my(A); if( n<0, 0, A = x * O(x^n); polcoeff( eta(x^2 + A)^20 / (eta(x + A) * eta(x^4 + A))^8 + 16 * x * eta(x^4 + A)^8 / eta(x^2 + A)^4, n))}; /* _Michael Somos_, Oct 21 2017 */
+(Sage) ModularForms( Gamma0(2), 2, prec=54).0; # _Michael Somos_, Jun 04 2013
+(Magma) Basis( ModularForms( Gamma0(2), 2), 54) [1]; /* _Michael Somos_, May 27 2014 */
+(Python)
+from sympy import divisors
+def a(n): return 1 if n==0 else 24*sum(d for d in divisors(n) if d%2)
+print([a(n) for n in range(101)]) # _Indranil Ghosh_, Jun 24 2017
+(Python)
+from math import prod
+from sympy import factorint
+def A004011(n): return 24*prod((p**(e+1)-1)//(p-1) for p, e in factorint(n).items() if p > 2) if n else 1 # _Chai Wah Wu_, Nov 13 2022"""@en .
+
+seq:A004011_p_1_20250216T083227 a seq:Text ;
+    cnt:chars "readlib(ifactors): with(numtheory): for n from 1 to 100 do if n mod 2 = 0 then m := n/ifactors(n)[2][1][1]^ifactors(n)[2][1][2] else m := n fi: printf(`%d,`,24*sigma(m)) od: # _James A. Sellers_, Dec 07 2000"@en .
+
+seq:A004011_t_1_20250216T083227 a seq:Text ;
+    cnt:chars """a[ n_] := If[ n < 0, 0, With[ {m = Floor @ Sqrt[4 n]}, SeriesCoefficient[ Sum[ q^( x^2 + y^2 + z^2 + t^2 + (x + y + z) t ), {x, -m, m}, {y, -m, m}, {z, -m, m}, {t, -m, m}] + O[q]^(n + 1), n]]]; (* _Michael Somos_, Jan 11 2011 *)
+a[n_] := 24*Total[ Select[ Divisors[n], OddQ]]; a[0]=1; Table[a[n], {n, 0, 52}] (* _Jean-François Alcover_, Sep 12 2012 *)
+a[ n_] := With[{m = InverseEllipticNomeQ @q}, SeriesCoefficient[ (1 + m) (EllipticK[ m] / (Pi/2))^2, {q, 0, n}]]; (* _Michael Somos_, Jun 04 2013 *)
+a[ n_] := With[{m = InverseEllipticNomeQ @q}, SeriesCoefficient[ (1 - m/2) (EllipticK[ m] / (Pi/2))^2, {q, 0, 2 n}]]; (* _Michael Somos_, Jun 04 2013 *)
+a[ n_] := SeriesCoefficient[ EllipticTheta[ 3, 0, q]^4 + EllipticTheta[ 2, 0, q]^4, {q, 0, n}]; (* _Michael Somos_, Jun 04 2013 *)
+a[ n_] := SeriesCoefficient[ (EllipticTheta[ 3, 0, q]^4 + EllipticTheta[ 4, 0, q]^4) / 2, {q, 0, 2 n}]; (* _Michael Somos_, Jun 04 2013 *)"""@en .
+

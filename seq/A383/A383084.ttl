@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.761899Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 950}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383084 a seq:Sequence ;
+    rdfs:label "A383084"@en ;
+    seq:hasTextList ( seq:A383084_I_1_20250418T215154 seq:A383084_N_1_20250418T215154 seq:A383084_H_1_20250418T215154 seq:A383084_e_1_20250418T215154 seq:A383084_Y_1_20250418T215154 seq:A383084_K_1_20250418T215154 seq:A383084_O_1_20250418T215154 seq:A383084_A_1_20250418T215154 seq:A383084_V_1_20250418T215154 ) .
+
+seq:A383084_A_1_20250418T215154 a seq:Text ;
+    cnt:chars "_Peter Kagey_, Apr 16 2025"@en .
+
+seq:A383084_H_1_20250418T215154 a seq:Text ;
+    cnt:chars "Peter Kagey, <a href=\"/A383084/a383084.png\">Illustration of the a(5)=5743 points</a>."@en .
+
+seq:A383084_I_1_20250418T215154 a seq:Text ;
+    cnt:chars "#10 Apr 18 2025 21:51:54"@en .
+
+seq:A383084_K_1_20250418T215154 a seq:Text ;
+    cnt:chars "nonn,hard,more"@en .
+
+seq:A383084_N_1_20250418T215154 a seq:Text ;
+    cnt:chars "The number of points in the Euclidean plane that can be determined via a straightedge-and-compass construction using n or fewer lines and circles."@en .
+
+seq:A383084_O_1_20250418T215154 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A383084_V_1_20250418T215154 a seq:Text ;
+    cnt:chars "2,2,6,14,147,5743,900487"@en .
+
+seq:A383084_Y_1_20250418T215154 a seq:Text ;
+    cnt:chars "Cf. A333944, A383082, A383085."@en .
+
+seq:A383084_e_1_20250418T215154 a seq:Text ;
+    cnt:chars """For both n = 0 and n = 1, the a(0) = a(1) = 2 points are the initial points: (0,0) and (1,0).
+For n = 2, the a(2) = 6 points are the two above points along with (-1,0), (2,0), (1/2,-sqrt(3)/2), and (1/2,sqrt(3)/2):
+  (-1,0): formed by intersecting the line between (0,0) and (1,0) with the circle of radius 1 centered at (0,0).
+  (2,0): formed by intersecting the line between (0,0) and (1,0) with the circle of radius 1 centered at (1,0).
+  (1/2,-sqrt(3)/2), and (1/2,sqrt(3)/2): formed by intersecting the circle of radius 1 centered at (0,0) with the circle of radius 1 centered at (1,0)."""@en .
+

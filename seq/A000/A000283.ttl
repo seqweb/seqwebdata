@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.868123Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1220}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000283 a seq:Sequence ;
+    rdfs:label "A000283"@en ;
+    seq:hasTextList ( seq:A000283_I_1_20230916T033435 seq:A000283_N_1_20230916T033435 seq:A000283_H_1_20230916T033435 seq:A000283_F_1_20230916T033435 seq:A000283_p_1_20230916T033435 seq:A000283_t_1_20230916T033435 seq:A000283_o_1_20230916T033435 seq:A000283_Y_1_20230916T033435 seq:A000283_K_1_20230916T033435 seq:A000283_O_1_20230916T033435 seq:A000283_A_1_20230916T033435 seq:A000283_E_1_20230916T033435 seq:A000283_V_1_20230916T033435 ) .
+
+seq:A000283_A_1_20230916T033435 a seq:Text ;
+    cnt:chars "Stephen J. Greenfield (greenfie(AT)math.rutgers.edu)"@en .
+
+seq:A000283_E_1_20230916T033435 a seq:Text ;
+    cnt:chars "Name clarified by _David A. Corneth_, Jul 14 2018"@en .
+
+seq:A000283_F_1_20230916T033435 a seq:Text ;
+    cnt:chars "a(0)=0; for n >= 1, a(n) = floor(A^(2^(n-1))), where A=1.2353927377854368896\\ 22331013228440824347457186913679454733601897236639743839118542826528455451978134... - _Benoit Cloitre_, May 03 2003"@en .
+
+seq:A000283_H_1_20230916T033435 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A000283/b000283.txt">Table of n, a(n) for n = 0..14</a>
+Steven J. Miller (ed.), <a href="https://www.jstor.org/stable/j.ctt1dr358t">Benford's Law: Theory and Applications</a>, Princeton University Press, 2015; see page 5."""@en .
+
+seq:A000283_I_1_20230916T033435 a seq:Text ;
+    cnt:chars "#58 Sep 16 2023 03:34:35"@en .
+
+seq:A000283_K_1_20230916T033435 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000283_N_1_20230916T033435 a seq:Text ;
+    cnt:chars "a(n) = a(n-1)^2 + a(n-2)^2 for n >= 2 with a(0) = 0 and a(1) = 1."@en .
+
+seq:A000283_O_1_20230916T033435 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A000283_V_1_20230916T033435 a seq:Text ;
+    cnt:chars "0,1,1,2,5,29,866,750797,563696885165,317754178345286893212434,100967717855888389973004846476977145423449281581"@en .
+
+seq:A000283_Y_1_20230916T033435 a seq:Text ;
+    cnt:chars "Cf. A000278."@en .
+
+seq:A000283_o_1_20230916T033435 a seq:Text ;
+    cnt:chars """(PARI) {a(n) = if( n<2, n>0, a(n-1)^2 + a(n-2)^2)}; /* _Michael Somos_, Feb 10 2002 */
+(Maxima) a(n) := if n=0 then 0 elseif n=1 then 1 else a(n-1)^2 + a(n-2)^2;
+makelist(a(n),n,0,12); /* _Emanuele Munarini_, Mar 30 2017 */"""@en .
+
+seq:A000283_p_1_20230916T033435 a seq:Text ;
+    cnt:chars "A000283 := proc(n) option remember; if n <= 1 then n else A000283(n-2)^2+A000283(n-1)^2; fi; end;"@en .
+
+seq:A000283_t_1_20230916T033435 a seq:Text ;
+    cnt:chars "RecurrenceTable[{a[n + 2] == a[n + 1]^2 + a[n]^2, a[0] == 0, a[1] == 1}, a, {n, 0, 12}] (* _Emanuele Munarini_, Mar 30 2017 *)"@en .
+

@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.817747Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1554}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200674 a seq:Sequence ;
+    rdfs:label "A200674"@en ;
+    seq:hasTextList ( seq:A200674_I_1_20250216T083316 seq:A200674_N_1_20250216T083316 seq:A200674_C_1_20250216T083316 seq:A200674_H_1_20250216T083316 seq:A200674_F_1_20250216T083316 seq:A200674_t_1_20250216T083316 seq:A200674_o_1_20250216T083316 seq:A200674_Y_1_20250216T083316 seq:A200674_K_1_20250216T083316 seq:A200674_O_1_20250216T083316 seq:A200674_A_1_20250216T083316 seq:A200674_E_1_20250216T083316 seq:A200674_V_1_20250216T083316 ) .
+
+seq:A200674_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 20 2011"@en .
+
+seq:A200674_C_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n) is 1/3 the sum of the eccentricities of the vertices. - _Andrew Howroyd_, Aug 08 2024"@en .
+
+seq:A200674_E_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(21)-a(22) from _Vincenzo Librandi_, Sep 11 2015"@en .
+
+seq:A200674_F_1_20250216T083316 a seq:Text ;
+    cnt:chars """y(0)=0; y(n+1) = 6*y(n) + 2*3^n + 3 - 2*0^n. a(n)=y(n)/3.
+a(n) = -2*3^(n-2) +14*6^n/45-1/5, n>0. - _R. J. Mathar_, Dec 13 2011
+G.f.: x*(1+x)*(2*x-1) / ( (x-1)*(6*x-1)*(3*x-1) ). - _R. J. Mathar_, Dec 13 2011"""@en .
+
+seq:A200674_H_1_20250216T083316 a seq:Text ;
+    cnt:chars """Andreas M. Hinz and Daniele Parisse, <a href="http://dx.doi.org/10.1007/s00373-011-1076-4">The Average Eccentricity of Sierpinski Graphs</a>, Graphs and Combinatorics, 2011.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/GraphEccentricity.html">Graph Eccentricity</a>.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/HanoiGraph.html">Hanoi Graph</a>.
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (10,-27,18)."""@en .
+
+seq:A200674_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#24 Feb 16 2025 08:33:16"@en .
+
+seq:A200674_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200674_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "Total eccentricity of Tower of Hanoi graph H_n^{3} (divided by 3)."@en .
+
+seq:A200674_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200674_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "0,1,9,61,385,2365,14353,86605,521089,3130909,18798577,112830829,677103073,4062972733,24378899281,146276584333,877669071937,5266043129437,31596344870065,189578327500717,1137470739845281,6824826763594621,40948967555136529"@en .
+
+seq:A200674_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A000244 (number of vertices)."@en .
+
+seq:A200674_o_1_20250216T083316 a seq:Text ;
+    cnt:chars """(PARI) Vec(x*(1+x)*(2*x-1) / ( (x-1)*(6*x-1)*(3*x-1) ) + O(x^40)) \\\\ _Michel Marcus_, Sep 11 2015
+(Magma) [0] cat [-2*3^(n-2) +14*6^n/45-1/5: n in [1..25]]; // _Vincenzo Librandi_, Sep 11 2015"""@en .
+
+seq:A200674_t_1_20250216T083316 a seq:Text ;
+    cnt:chars "Join[{0}, LinearRecurrence[{10, -27, 18}, {1, 9, 61}, 25]] (* _Vincenzo Librandi_, Sep 11 2015 *)"@en .
+

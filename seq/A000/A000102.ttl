@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.411599Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 2458}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000102 a seq:Sequence ;
+    rdfs:label "A000102"@en ;
+    seq:hasTextList ( seq:A000102_I_1_20250430T182059 seq:A000102_N_1_20250430T182059 seq:A000102_C_1_20250430T182059 seq:A000102_D_1_20250430T182059 seq:A000102_H_1_20250430T182059 seq:A000102_F_1_20250430T182059 seq:A000102_e_1_20250430T182059 seq:A000102_p_1_20250430T182059 seq:A000102_t_1_20250430T182059 seq:A000102_K_1_20250430T182059 seq:A000102_O_1_20250430T182059 seq:A000102_A_1_20250430T182059 seq:A000102_E_1_20250430T182059 seq:A000102_V_1_20250430T182059 ) .
+
+seq:A000102_A_1_20250430T182059 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000102_C_1_20250430T182059 a seq:Text ;
+    cnt:chars "a(n) is also the number of binary sequences of length n-1 in which the longest run of consecutive 0's is exactly three. - _Geoffrey Critzer_, Nov 06 2008"@en .
+
+seq:A000102_D_1_20250430T182059 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 155.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+J. L. Yucas, Counting special sets of binary Lyndon words, Ars Combin., 31 (1991), 21-29."""@en .
+
+seq:A000102_E_1_20250430T182059 a seq:Text ;
+    cnt:chars """More terms from _Sascha Kurz_, Aug 15 2002
+Definition improved by _David Callan_ and _Franklin T. Adams-Watters_"""@en .
+
+seq:A000102_F_1_20250430T182059 a seq:Text ;
+    cnt:chars """G.f.: x^4/(1 - x - x^2 - x^3)/(1 - x - x^2 - x^3 - x^4).
+a(n) = 2*a(n-1) + a(n-2) - 2*a(n-4) - 3*a(n-5) - 2*a(n-6) - a(n-7). Convolution of tribonacci and tetranacci numbers (A000073 and A000078). - _Franklin T. Adams-Watters_, Jan 13 2006"""@en .
+
+seq:A000102_H_1_20250430T182059 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000102/b000102.txt">Table of n, a(n) for n=0..200</a>
+Nick Hobson, <a href="/A000102/a000102.py.txt">Python program for this sequence</a>
+J. L. Yucas, <a href="/A006980/a006980.pdf">Counting special sets of binary Lyndon words</a>, Ars Combin., 31 (1991), 21-29. (Annotated scanned copy)
+<a href="/index/Rec#order_07">Index entries for linear recurrences with constant coefficients</a>, signature (2, 1, 0, -2, -3, -2, -1)."""@en .
+
+seq:A000102_I_1_20250430T182059 a seq:Text ;
+    cnt:chars "M1409 N0551 #69 Apr 30 2025 18:20:59"@en .
+
+seq:A000102_K_1_20250430T182059 a seq:Text ;
+    cnt:chars "nonn,nice,easy,changed"@en .
+
+seq:A000102_N_1_20250430T182059 a seq:Text ;
+    cnt:chars "a(n) = number of compositions of n in which the maximum part size is 4."@en .
+
+seq:A000102_O_1_20250430T182059 a seq:Text ;
+    cnt:chars "0,6"@en .
+
+seq:A000102_V_1_20250430T182059 a seq:Text ;
+    cnt:chars "0,0,0,0,1,2,5,12,27,59,127,269,563,1167,2400,4903,9960,20135,40534,81300,162538,324020,644282,1278152,2530407,5000178,9863763,19427976,38211861,75059535,147263905,288609341,565047233,1105229439,2159947998,4217784107,8230006378"@en .
+
+seq:A000102_e_1_20250430T182059 a seq:Text ;
+    cnt:chars """For example, a(6)=5 counts 1+1+4, 2+4, 4+2, 4+1+1, 1+4+1. - _David Callan_, Dec 09 2004
+a(6)=5 because there are 5 binary sequences of length 5 in which the longest run of consecutive 0's is exactly 3; 00010, 00011, 01000, 10001, 11000. - _Geoffrey Critzer_, Nov 06 2008"""@en .
+
+seq:A000102_p_1_20250430T182059 a seq:Text ;
+    cnt:chars "a:= n-> (Matrix(7, (i,j)-> if i+1=j then 1 elif j=1 then [2, 1, 0, -2, -3, -2, -1][i] else 0 fi)^n)[1,5]: seq(a(n), n=0..40); # _Alois P. Heinz_, Oct 07 2008"@en .
+
+seq:A000102_t_1_20250430T182059 a seq:Text ;
+    cnt:chars """a[n_] := MatrixPower[ Table[ Which[i+1 == j, 1, j == 1, {2, 1, 0, -2, -3, -2, -1}[[i]], True, 0], {i, 1, 7}, {j, 1, 7}], n][[1, 5]]; Table[a[n], {n, 0, 34}] (* _Jean-François Alcover_, May 28 2013, after _Alois P. Heinz_ *)
+LinearRecurrence[{2,1,0,-2,-3,-2,-1},{0,0,0,0,1,2,5},40] (* _Harvey P. Dale_, Jul 01 2013 *)"""@en .
+

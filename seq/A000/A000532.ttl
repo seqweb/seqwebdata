@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.761289Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1462}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000532 a seq:Sequence ;
+    rdfs:label "A000532"@en ;
+    seq:hasTextList ( seq:A000532_I_1_20230725T101305 seq:A000532_N_1_20230725T101305 seq:A000532_C_1_20230725T101305 seq:A000532_H_1_20230725T101305 seq:A000532_Y_1_20230725T101305 seq:A000532_K_1_20230725T101305 seq:A000532_O_1_20230725T101305 seq:A000532_A_1_20230725T101305 seq:A000532_E_1_20230725T101305 seq:A000532_V_1_20230725T101305 ) .
+
+seq:A000532_A_1_20230725T101305 a seq:Text ;
+    cnt:chars "_Russ Cox_, Mar 15 1996"@en .
+
+seq:A000532_C_1_20230725T101305 a seq:Text ;
+    cnt:chars "Number of walks reaching each cell exactly once."@en .
+
+seq:A000532_E_1_20230725T101305 a seq:Text ;
+    cnt:chars """More terms from _Zhao Hui Du_, Jul 08 2008
+Edited by _Franklin T. Adams-Watters_, Jul 03 2009
+Name clarified by _Andrew Howroyd_, Apr 10 2016"""@en .
+
+seq:A000532_H_1_20230725T101305 a seq:Text ;
+    cnt:chars """Ed Wynn, <a href="/A000532/b000532.txt">Table of n, a(n) for n = 1..19</a> (first 18 terms from KeyTo9(AT)Fans)
+KeyTo9(AT)Fans, <a href="https://web.archive.org/web/20150911034408/https://tieba.baidu.com/f?kz=395424512">Counting paths in a grid</a> - Chinese web page giving the sequence up to 18 items.
+Douglas M. McKenna, <a href="http://archive.bridgesmathart.org/2016/bridges2016-119.pdf">Tendril Motifs for Space-Filling, Half-Domino Curves</a>, in: Bridges Finland Conference Proceedings, 2016, pp. 119-126.
+Douglas M. McKenna, <a href="https://archive.bridgesmathart.org/2023/bridges2023-91.html">Are Maximally Unbalanced Hilbert-Style Square-Filling Curve Motifs a Drawing Medium?</a>, Bridges Conf. Proc.; Math., Art, Music, Architecture, Culture (2023) 91-98."""@en .
+
+seq:A000532_I_1_20230725T101305 a seq:Text ;
+    cnt:chars "#65 Jul 25 2023 10:13:05"@en .
+
+seq:A000532_K_1_20230725T101305 a seq:Text ;
+    cnt:chars "nonn,walk"@en .
+
+seq:A000532_N_1_20230725T101305 a seq:Text ;
+    cnt:chars "Number of Hamiltonian paths from NW to SW corners in an n X n grid."@en .
+
+seq:A000532_O_1_20230725T101305 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A000532_V_1_20230725T101305 a seq:Text ;
+    cnt:chars "1,1,2,8,86,1770,88418,8934966,2087813834,1013346943033,1111598871478668,2568944901392936854,13251059359839620127088,145194816279817259193401518,3524171261632305641165676374930,182653259988707123426135593460533473"@en .
+
+seq:A000532_Y_1_20230725T101305 a seq:Text ;
+    cnt:chars """Main diagonal of A271592.
+Cf. A181688, A181689, A014524, A014585.
+Cf. A001184, A145157, A120443, A003763, A271507, A007764, A121785, A121789.
+See also A350148."""@en .
+

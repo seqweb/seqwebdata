@@ -1,0 +1,73 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.400037Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1501}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200473 a seq:Sequence ;
+    rdfs:label "A200473"@en ;
+    seq:hasTextList ( seq:A200473_I_1_20170324T034950 seq:A200473_N_1_20170324T034950 seq:A200473_C_1_20170324T034950 seq:A200473_H_1_20170324T034950 seq:A200473_F_1_20170324T034950 seq:A200473_e_1_20170324T034950 seq:A200473_p_1_20170324T034950 seq:A200473_t_1_20170324T034950 seq:A200473_Y_1_20170324T034950 seq:A200473_K_1_20170324T034950 seq:A200473_O_1_20170324T034950 seq:A200473_A_1_20170324T034950 seq:A200473_V_1_20170324T034950 ) .
+
+seq:A200473_A_1_20170324T034950 a seq:Text ;
+    cnt:chars "_Dennis P. Walsh_, Nov 18 2011"@en .
+
+seq:A200473_C_1_20170324T034950 a seq:Text ;
+    cnt:chars "This sequence is A200472 with zeros removed."@en .
+
+seq:A200473_F_1_20170324T034950 a seq:Text ;
+    cnt:chars """T(n,k) = (n!/d_k!)/(n/d_k)!^d_k, n>=1, 1<=k<=tau(n), d_k = k-th divisor of n.
+Sum_{k=1..tau(k)} T(n,k) = A038041(n). - _Alois P. Heinz_, Jul 22 2016"""@en .
+
+seq:A200473_H_1_20170324T034950 a seq:Text ;
+    cnt:chars """Alois P. Heinz, <a href="/A200473/b200473.txt">Rows n = 1..250, flattened</a>
+Dennis P. Walsh, <a href="http://frank.mtsu.edu/~dwalsh/GROUPCT3.pdf">Note on assigning n people to k unlabeled groups of equal size</a>"""@en .
+
+seq:A200473_I_1_20170324T034950 a seq:Text ;
+    cnt:chars "#28 Mar 24 2017 03:49:50"@en .
+
+seq:A200473_K_1_20170324T034950 a seq:Text ;
+    cnt:chars "nonn,tabf"@en .
+
+seq:A200473_N_1_20170324T034950 a seq:Text ;
+    cnt:chars "Irregular triangle read by rows: T(n,k) = number of ways to assign n people to d_k unlabeled groups of equal size (where d_k is the k-th divisor of n)."@en .
+
+seq:A200473_O_1_20170324T034950 a seq:Text ;
+    cnt:chars "1,7"@en .
+
+seq:A200473_V_1_20170324T034950 a seq:Text ;
+    cnt:chars "1,1,1,1,1,1,3,1,1,1,1,10,15,1,1,1,1,35,105,1,1,280,1,1,126,945,1,1,1,1,462,5775,15400,10395,1,1,1,1,1716,135135,1,1,126126,1401400,1,1,6435,2627625,2027025,1,1,1,1,24310,2858856,190590400,34459425,1,1"@en .
+
+seq:A200473_Y_1_20170324T034950 a seq:Text ;
+    cnt:chars """Cf. A200472, A000005 (row lengths).
+Cf. A038041 (row sums)."""@en .
+
+seq:A200473_e_1_20170324T034950 a seq:Text ;
+    cnt:chars """T(n,k) begins:
+1;
+1,      1;
+1,      1;
+1,      3,       1;
+1,      1;
+1,     10,      15,       1;
+1,      1;
+1,     35,     105,       1;
+1,    280,       1;
+1,    126,     945,       1;
+1,      1;
+1,    462,    5775,   15400, 10395,   1;
+1,      1;
+1,   1716,  135135,       1;
+1, 126126, 1401400,       1;
+1,   6435, 2627625, 2027025,     1;"""@en .
+
+seq:A200473_p_1_20170324T034950 a seq:Text ;
+    cnt:chars """with(numtheory):
+S:= n-> sort([divisors(n)[]]):
+T:= (n,k)-> n!/(S(n)[k])!/((n/(S(n)[k]))!)^(S(n)[k]):
+seq(seq(T(n, k), k=1..tau(n)), n=1..10);"""@en .
+
+seq:A200473_t_1_20170324T034950 a seq:Text ;
+    cnt:chars """row[n_] := (n!/#!)/(n/#)!^#& /@ Divisors[n];
+Table[row[n], {n, 1, 20}] // Flatten (* _Jean-François Alcover_, Mar 24 2017 *)"""@en .
+

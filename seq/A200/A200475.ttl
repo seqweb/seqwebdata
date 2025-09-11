@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.404682Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1773}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200475 a seq:Sequence ;
+    rdfs:label "A200475"@en ;
+    seq:hasTextList ( seq:A200475_I_1_20120330T183732 seq:A200475_N_1_20120330T183732 seq:A200475_C_1_20120330T183732 seq:A200475_F_1_20120330T183732 seq:A200475_e_1_20120330T183732 seq:A200475_o_1_20120330T183732 seq:A200475_Y_1_20120330T183732 seq:A200475_K_1_20120330T183732 seq:A200475_O_1_20120330T183732 seq:A200475_A_1_20120330T183732 seq:A200475_V_1_20120330T183732 ) .
+
+seq:A200475_A_1_20120330T183732 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 18 2011"@en .
+
+seq:A200475_C_1_20120330T183732 a seq:Text ;
+    cnt:chars " Trinomial coefficients satisfy: Sum_{k=0..2*n} A027907(n,k)*x^k = (1+x+x^2)^n."@en .
+
+seq:A200475_F_1_20120330T183732 a seq:Text ;
+    cnt:chars " G.f. satisfies: A(x) = (1 + x^3*A(x)^6)*(1 + x^6*A(x)^12)/((1 - x*A(x)^2)*(1 - x^4*A(x)^8))."@en .
+
+seq:A200475_I_1_20120330T183732 a seq:Text ;
+    cnt:chars "#5 Mar 30 2012 18:37:32"@en .
+
+seq:A200475_K_1_20120330T183732 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200475_N_1_20120330T183732 a seq:Text ;
+    cnt:chars " G.f. satisfies: A(x) = exp( Sum_{n>=1} [Sum_{k=0..2*n} A027907(n,k)^2 * x^k * A(x)^(2*k)] * x^n*A(x)^n/n ), where A027907 is the triangle of trinomial coefficients."@en .
+
+seq:A200475_O_1_20120330T183732 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200475_V_1_20120330T183732 a seq:Text ;
+    cnt:chars "1,1,3,13,65,350,1981,11627,70132,432090,2707595,17202779,110563543,717547090,4695774335,30952628861,205318395288,1369539030021,9180527051187,61813112864984,417850301293691,2834802846097200,19294989810689802,131723105933867817,901709774424393614"@en .
+
+seq:A200475_Y_1_20120330T183732 a seq:Text ;
+    cnt:chars " Cf. A200377, A199248, A186236, A199257, A168592, A027907."@en .
+
+seq:A200475_e_1_20120330T183732 a seq:Text ;
+    cnt:chars """ G.f.: A(x) = 1 + x + 3*x^2 + 13*x^3 + 65*x^4 + 350*x^5 + 1981*x^6 +...
+Let A = g.f. A(x), then the logarithm of the g.f. equals the series:
+log(A(x)) = (1 + x*A^2 + x^2*A^4)*x*A +
+(1 + 2^2*x*A^2 + 3^2*x^2*A^4 + 2^2*x^3*A^6 + x^4*A^8)*x^2*A^2/2 +
+(1 + 3^2*x*A^2 + 6^2*x^2*A^4 + 7^2*x^3*A^6 + 6^2*x^4*A^8 + 3^2*x^5*A^10 + x^6*A^12)*x^3*A^3/3 +
+(1 + 4^2*x*A^2 + 10^2*x^2*A^4 + 16^2*x^3*A^6 + 19^2*x^4*A^8 + 16^2*x^5*A^10 + 10^2*x^6*A^12 + 4^2*x^7*A^14 + x^8*A^16)*x^4*A^4/4 +
+(1 + 5^2*x*A^2 + 15^2*x^2*A^4 + 30^2*x^3*A^6 + 45^2*x^4*A^8 + 51^2*x^5*A^10 + 45^2*x^6*A^12 + 30^2*x^7*A^14 + 15^2*x^8*A^16 + 5^2*x^9*A^18 + x^10*A^20)*x^5*A^5/5 +...
+which involves the squares of the trinomial coefficients A027907(n,k)."""@en .
+
+seq:A200475_o_1_20120330T183732 a seq:Text ;
+    cnt:chars """ (PARI) {a(n)=local(A=1+x);for(i=1,n,A=(1-x*A^2+x^3*A^6-x^5*A^10+x^6*A^12)/(1-x*A^2+x*O(x^n))^2);polcoeff(A,n)}
+(PARI) /* G.f. A(x) using the squares of the trinomial coefficients */
+{A027907(n, k)=polcoeff((1+x+x^2)^n, k)}
+{a(n)=local(A=1+x); for(i=1, n, A=exp(sum(m=1, n, sum(k=0, 2*m, A027907(m, k)^2 *x^k*(A+x*O(x^n))^(2*k))*x^m*A^m/m))); polcoeff(A, n)}"""@en .
+

@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.579798Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 1237}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000876 a seq:Sequence ;
+    rdfs:label "A000876"@en ;
+    seq:hasTextList ( seq:A000876_I_1_20170420T120944 seq:A000876_N_1_20170420T120944 seq:A000876_H_1_20170420T120944 seq:A000876_Y_1_20170420T120944 seq:A000876_K_1_20170420T120944 seq:A000876_O_1_20170420T120944 seq:A000876_A_1_20170420T120944 seq:A000876_V_1_20170420T120944 ) .
+
+seq:A000876_A_1_20170420T120944 a seq:Text ;
+    cnt:chars "_M. Jeremie Lafitte (Levitas)_"@en .
+
+seq:A000876_H_1_20170420T120944 a seq:Text ;
+    cnt:chars """M. Jeremie Lafitte (Levitas), <a href="/A000360/a000360_1.pdf">Ensembles Auto-Similaires d'Interieur Non-Vide</a>, Preprint Hiver 1997, Chaire de Geometrie, Departement de Mathematiques, Ecole Polytechnique Federale de Lausanne, Switzerland. [Cached copy, with permission]
+M. Jeremie Lafitte (Levitas), <a href="/A000360/a000360.png">Fractal triangle underlying A000360, A000361, A000876</a>
+M. Jeremie Lafitte (Levitas), <a href="/A000360/a000360.pdf">Notes on A000360, A000361, A000876</a> [Based on a latex file sent by M. Jeremie Lafitte (Levitas) to NJAS in 1995 - see file of emails below]
+M. Jeremie Lafitte (Levitas), <a href="/A000360/a000360.tex">Latex source for the pdf file</a> [Sent by M. Jeremie Lafitte (Levitas) to NJAS in 1995 - see file of emails below]
+M. Jeremie Lafitte (Levitas) and N. J. A. Sloane, <a href="/A000360/a000360.txt">Emails, 1995-2007</a> (The three sequences mentioned in this correspondence are now A000360, A000361, A000876)"""@en .
+
+seq:A000876_I_1_20170420T120944 a seq:Text ;
+    cnt:chars "#21 Apr 20 2017 12:09:44"@en .
+
+seq:A000876_K_1_20170420T120944 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000876_N_1_20170420T120944 a seq:Text ;
+    cnt:chars "From a self-replicating tiling."@en .
+
+seq:A000876_O_1_20170420T120944 a seq:Text ;
+    cnt:chars "0,5"@en .
+
+seq:A000876_V_1_20170420T120944 a seq:Text ;
+    cnt:chars "1,1,0,0,3,3,0,0,1,0,1,1,2,0,7,7,0,2,1,1,0,1,2,2,3,0,3,6,10,0,13,2,9,3,10,0,15,15,0,10,3,9,2,13,0,10,6,3,0,3,2,2,5,2,25,1,42,12,7,0,7,28,170,1,217,10,37,1"@en .
+
+seq:A000876_Y_1_20170420T120944 a seq:Text ;
+    cnt:chars "Cf. A000360, A000361."@en .
+

@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.912825Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 478}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200706 a seq:Sequence ;
+    rdfs:label "A200706"@en ;
+    seq:hasTextList ( seq:A200706_I_1_20151218T181754 seq:A200706_N_1_20151218T181754 seq:A200706_C_1_20151218T181754 seq:A200706_e_1_20151218T181754 seq:A200706_K_1_20151218T181754 seq:A200706_O_1_20151218T181754 seq:A200706_A_1_20151218T181754 seq:A200706_V_1_20151218T181754 ) .
+
+seq:A200706_A_1_20151218T181754 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 20 2011"@en .
+
+seq:A200706_C_1_20151218T181754 a seq:Text ;
+    cnt:chars "Diagonal of A200713"@en .
+
+seq:A200706_I_1_20151218T181754 a seq:Text ;
+    cnt:chars "#6 Dec 18 2015 18:17:54"@en .
+
+seq:A200706_K_1_20151218T181754 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200706_N_1_20151218T181754 a seq:Text ;
+    cnt:chars "Number of n X n 0..7 arrays with every row and column running average nondecreasing rightwards and downwards"@en .
+
+seq:A200706_O_1_20151218T181754 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200706_V_1_20151218T181754 a seq:Text ;
+    cnt:chars "8,540,317656,1630978608,71952946981858"@en .
+
+seq:A200706_e_1_20151218T181754 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..0..0..1....0..0..2....0..2..4....0..0..0....0..0..3....0..4..4....0..0..0
+..0..1..7....7..7..7....3..4..4....2..5..6....1..2..3....4..4..7....4..4..4
+..0..5..7....6..6..7....3..5..4....3..7..7....1..4..3....3..4..7....3..6..6"""@en .
+

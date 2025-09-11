@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.541519Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 871}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000856 a seq:Sequence ;
+    rdfs:label "A000856"@en ;
+    seq:hasTextList ( seq:A000856_I_1_20250117T094525 seq:A000856_N_1_20250117T094525 seq:A000856_D_1_20250117T094525 seq:A000856_H_1_20250117T094525 seq:A000856_K_1_20250117T094525 seq:A000856_O_1_20250117T094525 seq:A000856_A_1_20250117T094525 seq:A000856_E_1_20250117T094525 seq:A000856_V_1_20250117T094525 ) .
+
+seq:A000856_A_1_20250117T094525 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000856_D_1_20250117T094525 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000856_E_1_20250117T094525 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Aug 10 2011"@en .
+
+seq:A000856_H_1_20250117T094525 a seq:Text ;
+    cnt:chars """M. A. Harrison, <a href="https://doi.org/10.1016/0016-0032(63)90456-3">On the number of classes of switching networks</a>, J. Franklin Instit., 276 (1963), 313-327.
+<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>"""@en .
+
+seq:A000856_I_1_20250117T094525 a seq:Text ;
+    cnt:chars "M3108 N1259 #26 Jan 17 2025 09:45:25"@en .
+
+seq:A000856_K_1_20250117T094525 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000856_N_1_20250117T094525 a seq:Text ;
+    cnt:chars "Number of n-input 2-output switching networks under the action of S(n) on the inputs and S(2) and complementing group C(2,2) on the outputs."@en .
+
+seq:A000856_O_1_20250117T094525 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000856_V_1_20250117T094525 a seq:Text ;
+    cnt:chars "3,24,1676,22920064,19218307944059712,59076800018995725211209511239630848,2871827610052485008814239127114787142200471197616427462842969283498868736"@en .
+

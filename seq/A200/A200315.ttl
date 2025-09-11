@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.089202Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 878}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200315 a seq:Sequence ;
+    rdfs:label "A200315"@en ;
+    seq:hasTextList ( seq:A200315_I_1_20120330T183732 seq:A200315_N_1_20120330T183732 seq:A200315_F_1_20120330T183732 seq:A200315_e_1_20120330T183732 seq:A200315_o_1_20120330T183732 seq:A200315_Y_1_20120330T183732 seq:A200315_K_1_20120330T183732 seq:A200315_O_1_20120330T183732 seq:A200315_A_1_20120330T183732 seq:A200315_V_1_20120330T183732 ) .
+
+seq:A200315_A_1_20120330T183732 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 15 2011"@en .
+
+seq:A200315_F_1_20120330T183732 a seq:Text ;
+    cnt:chars """a(n) = (5*n+1)^(n-1) * (5*n)! / (n!*(5!)^n).
+E.g.f.: (1/x)*Series_Reversion( x*exp(-x^5/5!) ).
+Powers of e.g.f.: define a(n,m) by A(x)^m = Sum_{n>=0} a(n,m)*x^(5*n)/(5*n)!
+then a(n,m) = m*(5*n+m)^(n-1) * (5*n)!/(n!*(5!)^n)."""@en .
+
+seq:A200315_I_1_20120330T183732 a seq:Text ;
+    cnt:chars "#11 Mar 30 2012 18:37:32"@en .
+
+seq:A200315_K_1_20120330T183732 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200315_N_1_20120330T183732 a seq:Text ;
+    cnt:chars "E.g.f. satisfies: A(x) = exp(x^5*A(x)^5/5!)."@en .
+
+seq:A200315_O_1_20120330T183732 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200315_V_1_20120330T183732 a seq:Text ;
+    cnt:chars "1,1,1386,32288256,4527372986136,2373840824586206976,3532226719132271834449776,12455133709483299692008910094336,91656142095228409912231665590704016256,1280796898530759870923631204720457656538791936"@en .
+
+seq:A200315_Y_1_20120330T183732 a seq:Text ;
+    cnt:chars "Cf. A034941, A200313, A200314."@en .
+
+seq:A200315_e_1_20120330T183732 a seq:Text ;
+    cnt:chars """E.g.f.: A(x) = 1 + x^5/5! + 1386*x^10/10! + 32288256*x^15/15! +...
+where log(A(x)) = x^5*A(x)^5/5! and
+A(x)^5 = 1 + 5*x^5/5! + 9450*x^10/10! + 252252000*x^15/15! + 38192529375000*x^20/20! +..."""@en .
+
+seq:A200315_o_1_20120330T183732 a seq:Text ;
+    cnt:chars """(PARI) {a(n)=(5*n)!*polcoeff(1/x*serreverse(x*(exp(-x^5/5!+x*O(x^(5*n))))),5*n)}
+(PARI) {a(n)=(5*n+1)^(n-1)*(5*n)!/(n!*(5!)^n)}"""@en .
+

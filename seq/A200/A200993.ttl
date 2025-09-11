@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.483839Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2446}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200993 a seq:Sequence ;
+    rdfs:label "A200993"@en ;
+    seq:hasTextList ( seq:A200993_I_1_20220908T084600 seq:A200993_N_1_20220908T084600 seq:A200993_C_1_20220908T084600 seq:A200993_H_1_20220908T084600 seq:A200993_F_1_20220908T084600 seq:A200993_e_1_20220908T084600 seq:A200993_t_1_20220908T084600 seq:A200993_o_1_20220908T084600 seq:A200993_Y_1_20220908T084600 seq:A200993_K_1_20220908T084600 seq:A200993_O_1_20220908T084600 seq:A200993_A_1_20220908T084600 seq:A200993_V_1_20220908T084600 ) .
+
+seq:A200993_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Charlie Marion_, Dec 15 2011"@en .
+
+seq:A200993_C_1_20220908T084600 a seq:Text ;
+    cnt:chars """For n>1, a(n) = 98*a(n-1) - a (n-2) + 10.  In general, for m>0, let b(n) be those triangular numbers such that for some triangular number c(n), (m+1)*b(n) = m*c(n).  Then b(0) = 0, b(1)= A014105(m) and for n>1,  b(n) = 2*A069129(m+1)*b(n-1) - b(n-2) + A014105(m).
+Further, c(0) = 0, c(1) = A000384(m+1) and for n>1, c(n) = 2*A069129(m+1)*c(n-1) - c(n-2) + A000384(m+1)."""@en .
+
+seq:A200993_F_1_20220908T084600 a seq:Text ;
+    cnt:chars """G.f. 10*x / ((1-x)*(x^2-98*x+1)). - _R. J. Mathar_, Dec 20 2011
+a(n) = 99*a(n-1)-99*a(n-2)+a(n-3) for n>2. - _Colin Barker_, Mar 02 2016
+a(n) = (-10+(5-2*sqrt(6))*(49+20*sqrt(6))^(-n)+(5+2*sqrt(6))*(49+20*sqrt(6))^n)/96. - _Colin Barker_, Mar 07 2016"""@en .
+
+seq:A200993_H_1_20220908T084600 a seq:Text ;
+    cnt:chars """Colin Barker, <a href="/A200993/b200993.txt">Table of n, a(n) for n = 0..500</a>
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (I).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_1.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (II).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_2.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (III).
+Editors, L'Intermédiaire des Mathématiciens, <a href="/A072256/a072256_3.pdf">Query 4500: The equation x(x+1)/2 = y*(y+1)/3</a>, L'Intermédiaire des Mathématiciens, 22 (1915), 255-260 (IV).
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (99,-99,1)."""@en .
+
+seq:A200993_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#32 Sep 08 2022 08:46:00"@en .
+
+seq:A200993_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200993_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Triangular numbers, T(m), that are two-thirds of another triangular number; T(m) such that 3*T(m) = 2*T(k) for some k."@en .
+
+seq:A200993_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200993_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "0,10,990,97020,9506980,931587030,91286021970,8945098566040,876528373449960,85890835499530050,8416425350580494950,824723793521388975060,80814515339745539060940,7918997779501541438997070,775980967875811315482651930,76038215854050007375860892080"@en .
+
+seq:A200993_Y_1_20220908T084600 a seq:Text ;
+    cnt:chars "Cf. A001652, A029549, A053141, A075528, A200994-A201008."@en .
+
+seq:A200993_e_1_20220908T084600 a seq:Text ;
+    cnt:chars """3*0 = 2*0.
+3*10 = 2*15.
+3*990 = 2*1485.
+3*97020 = 2*145530."""@en .
+
+seq:A200993_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(PARI) concat(0, Vec(10*x/((1-x)*(1-98*x+x^2)) + O(x^40))) \\\\ _Colin Barker_, Mar 02 2016
+(Magma) m:=30; R<x>:=PowerSeriesRing(Integers(), m); [0] cat Coefficients(R!(10*x/((1-x)*(x^2-98*x+1)))); // _G. C. Greubel_, Jul 15 2018"""@en .
+
+seq:A200993_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "LinearRecurrence[{99,-99,1},{0,10,990},20] (* _Harvey P. Dale_, Feb 25 2018 *)"@en .
+

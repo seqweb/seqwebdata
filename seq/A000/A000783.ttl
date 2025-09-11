@@ -1,0 +1,29 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.346035Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 27, "entities": 7, "chars": 303}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000783 a seq:Sequence ;
+    rdfs:label "A000783"@en ;
+    seq:hasTextList ( seq:A000783_I_1_20030516T030000 seq:A000783_N_1_20030516T030000 seq:A000783_D_1_20030516T030000 seq:A000783_K_1_20030516T030000 seq:A000783_O_1_20030516T030000 seq:A000783_V_1_20030516T030000 ) .
+
+seq:A000783_D_1_20030516T030000 a seq:Text ;
+    cnt:chars "A. H. Beiler, Recreations in the Theory of Numbers, Dover, NY, 1964, p. 42."@en .
+
+seq:A000783_I_1_20030516T030000 a seq:Text ;
+    cnt:chars "#4 May 16 2003 03:00:00"@en .
+
+seq:A000783_K_1_20030516T030000 a seq:Text ;
+    cnt:chars "dead"@en .
+
+seq:A000783_N_1_20030516T030000 a seq:Text ;
+    cnt:chars "Erroneous version of A007535."@en .
+
+seq:A000783_O_1_20030516T030000 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000783_V_1_20030516T030000 a seq:Text ;
+    cnt:chars "4,341,91,15,124,35,25,9,28,33,15,65,21,15,341,51,45,25,45,21,55,69,33,25,28,27,65,87,35,49,49,33,85,35,51,91,45,39,95,91,105,205,77,45,76,133,65,49,66,51,65,85,65"@en .
+

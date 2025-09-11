@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.959890Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2344}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000617 a seq:Sequence ;
+    rdfs:label "A000617"@en ;
+    seq:hasTextList ( seq:A000617_I_1_20240104T063743 seq:A000617_N_1_20240104T063743 seq:A000617_C_1_20240104T063743 seq:A000617_D_1_20240104T063743 seq:A000617_H_1_20240104T063743 seq:A000617_F_1_20240104T063743 seq:A000617_Y_1_20240104T063743 seq:A000617_K_1_20240104T063743 seq:A000617_O_1_20240104T063743 seq:A000617_A_1_20240104T063743 seq:A000617_V_1_20240104T063743 ) .
+
+seq:A000617_A_1_20240104T063743 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000617_C_1_20240104T063743 a seq:Text ;
+    cnt:chars """From _Fabián Riquelme_, Jun 01 2012: (Start)
+NP-equivalence classes of threshold functions are equivalent to weighted games, in simple game theory.
+The number for n=9 was first documented in Tautenhahn's thesis. (End)"""@en .
+
+seq:A000617_D_1_20240104T063743 a seq:Text ;
+    cnt:chars """S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38, Table 2.3.2. - Row 14.
+S. Muroga, T. Tsuboi, and C. R. Baugh, Enumeration of threshold functions of eight variables, IEEE Trans. Computers, 19 (1970), 818-825.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+N. Tautenhahn, Enumeration einfacher Spiele mit Anwendungen in der Stimmgewichtsverteilung, 2008. Master's thesis, University of Bayreuth, 269 pages (in German)."""@en .
+
+seq:A000617_F_1_20240104T063743 a seq:Text ;
+    cnt:chars "a(n) = Sum_{k=0..n} A000619(k). - Alastair D. King, Oct 26, 2023."@en .
+
+seq:A000617_H_1_20240104T063743 a seq:Text ;
+    cnt:chars """S. Bolus, <a href="https://macau.uni-kiel.de/receive/diss_mods_00009114">A QOBDD-based Approach to Simple Games</a>, Dissertation, Doktor der Ingenieurwissenschaften der Technischen Fakultaet der Christian-Albrechts-Universitaet zu Kiel, 2012. - From _N. J. A. Sloane_, Dec 22 2012
+I. Krohn and P. Sudhölter, <a href="http://dx.doi.org/10.1007/BF01415753">Directed and weighted majority games</a>, Math. Methods Operat. Res. 42 (2) (1995) 189-216, Table 1.
+S. Kurz, <a href="http://arxiv.org/abs/1103.1445">On minimum sum representations for weighted voting games</a>, arXiv:1103.1445 [math.CO], 2011-2018.
+S. Muroga, <a href="/A000371/a000371.pdf">Threshold Logic and Its Applications</a>, Wiley, NY, 1971 [Annotated scans of a few pages]
+S. Muroga, T. Tsuboi, and C. R. Baugh, <a href="/A002077/a002077.pdf">Enumeration of threshold functions of eight variables</a>, IEEE Trans. Computers, 19 (1970), 818-825. [Annotated scanned copy]
+Eda Uyanık, Olivier Sobrie, Vincent Mousseau, and Marc Pirlot, <a href="https://dx.doi.org/10.1016/j.dam.2017.04.010">Enumerating and categorizing positive Boolean functions separable by a k-additive capacity</a>, Discrete Applied Mathematics, Vol. 229, 1 October 2017, p. 17-30. See Table 3."""@en .
+
+seq:A000617_I_1_20240104T063743 a seq:Text ;
+    cnt:chars "M0727 N0272 #52 Jan 04 2024 06:37:43"@en .
+
+seq:A000617_K_1_20240104T063743 a seq:Text ;
+    cnt:chars "nonn,hard,more,nice"@en .
+
+seq:A000617_N_1_20240104T063743 a seq:Text ;
+    cnt:chars "Number of NP-equivalence classes of threshold functions of n or fewer variables."@en .
+
+seq:A000617_O_1_20240104T063743 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000617_V_1_20240104T063743 a seq:Text ;
+    cnt:chars "2,3,5,10,27,119,1113,29375,2730166,989913346"@en .
+
+seq:A000617_Y_1_20240104T063743 a seq:Text ;
+    cnt:chars "Cf. A000619."@en .
+

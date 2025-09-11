@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.324142Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1394}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200434 a seq:Sequence ;
+    rdfs:label "A200434"@en ;
+    seq:hasTextList ( seq:A200434_I_1_20180521T084814 seq:A200434_N_1_20180521T084814 seq:A200434_C_1_20180521T084814 seq:A200434_H_1_20180521T084814 seq:A200434_F_1_20180521T084814 seq:A200434_e_1_20180521T084814 seq:A200434_Y_1_20180521T084814 seq:A200434_K_1_20180521T084814 seq:A200434_O_1_20180521T084814 seq:A200434_A_1_20180521T084814 seq:A200434_V_1_20180521T084814 ) .
+
+seq:A200434_A_1_20180521T084814 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 17 2011"@en .
+
+seq:A200434_C_1_20180521T084814 a seq:Text ;
+    cnt:chars "Row 4 of A200430."@en .
+
+seq:A200434_F_1_20180521T084814 a seq:Text ;
+    cnt:chars """Empirical: a(n) = (5887/180)*n^6 - (5813/60)*n^5 + (6083/36)*n^4 - (2191/12)*n^3 + (9119/90)*n^2 - (353/15)*n.
+Conjectures from _Colin Barker_, May 21 2018: (Start)
+G.f.: 2*x^2*(297 + 2870*x + 5520*x^2 + 2784*x^3 + 303*x^4) / (1 - x)^7.
+a(n) = 7*a(n-1) - 21*a(n-2) + 35*a(n-3) - 35*a(n-4) + 21*a(n-5) - 7*a(n-6) + a(n-7) for n>7.
+(End)"""@en .
+
+seq:A200434_H_1_20180521T084814 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200434/b200434.txt\">Table of n, a(n) for n = 1..144</a>"@en .
+
+seq:A200434_I_1_20180521T084814 a seq:Text ;
+    cnt:chars "#9 May 21 2018 08:48:14"@en .
+
+seq:A200434_K_1_20180521T084814 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200434_N_1_20180521T084814 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..6) of 7 elements with zero sum and no two or three adjacent elements summing to zero."@en .
+
+seq:A200434_O_1_20180521T084814 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200434_V_1_20180521T084814 a seq:Text ;
+    cnt:chars "0,594,9898,67852,293464,955602,2567334,6003816,12643728,24534258,44579634,76753204,126333064,200161234,306926382,457470096,665116704,946026642,1319573370,1808743836,2440562488,3246538834,4263138550"@en .
+
+seq:A200434_Y_1_20180521T084814 a seq:Text ;
+    cnt:chars "Cf. A200430."@en .
+
+seq:A200434_e_1_20180521T084814 a seq:Text ;
+    cnt:chars """Some solutions for n=3:
+..0...-3....3....2...-2....1....2...-1....3....0...-1....0...-2....2...-1....1
+.-3....0....2...-1....3....0....3...-2....3....1...-2...-2...-2...-1....0....1
+.-1....2...-1....2....0....1...-2...-3...-1....2...-2....1...-1....3....2....0
+..2....0...-3....0....2....3....0....0...-3....1....3....3...-1....3....1...-3
+..1....2....2...-1....1...-2....1....1....1...-2....1....2....3...-2....0...-3
+..1....1....0...-1...-2...-2...-3....3...-3...-3....3...-1....0...-3...-3....1
+..0...-2...-3...-1...-2...-1...-1....2....0....1...-2...-3....3...-2....1....3"""@en .
+

@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.983683Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2617}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200265 a seq:Sequence ;
+    rdfs:label "A200265"@en ;
+    seq:hasTextList ( seq:A200265_I_1_20221022T161932 seq:A200265_N_1_20221022T161932 seq:A200265_C_1_20221022T161932 seq:A200265_D_1_20221022T161932 seq:A200265_H_1_20221022T161932 seq:A200265_F_1_20221022T161932 seq:A200265_e_1_20221022T161932 seq:A200265_t_1_20221022T161932 seq:A200265_K_1_20221022T161932 seq:A200265_O_1_20221022T161932 seq:A200265_A_1_20221022T161932 seq:A200265_V_1_20221022T161932 ) .
+
+seq:A200265_A_1_20221022T161932 a seq:Text ;
+    cnt:chars "_Juan Arias-de-Reyna_, Nov 15 2011"@en .
+
+seq:A200265_C_1_20221022T161932 a seq:Text ;
+    cnt:chars """The asymptotic expansion of p_n, the n-th prime, is p_n ~ n*log n + n*(log log n -1) + n * Sum_{k>=1} P_k(log log n)*(log n)^(-k),
+where P_k(y) = ((-1)^(k+1)/ k!) Sum_{r=0..k} (-1)^r a_{k,r} y^(k-r), and
+where a_{r,k} are natural numbers."""@en .
+
+seq:A200265_D_1_20221022T161932 a seq:Text ;
+    cnt:chars "M. Cipolla, \"La determinazione asintotica dell'n-mo numero primo.\", Rend. d. R. Acc. di sc. fis. e mat. di Napoli, s. 3, VIII (1902), pp. 132-166."@en .
+
+seq:A200265_F_1_20221022T161932 a seq:Text ;
+    cnt:chars """The polynomials P_k are defined by
+P_1(y) = y-2, P_2(y) = -(y^2-6y+11)/2, P_n = n*P_{n-1} - P'_{n-1} + (1/n)*Sum_{k=1..n-1} k*((k-1)*P_{k-1} - P_k - P'_{k-1})*P_{n-k-1}, where P_0(y) = y-1."""@en .
+
+seq:A200265_H_1_20221022T161932 a seq:Text ;
+    cnt:chars """Juan Arias-de-Reyna, <a href="/A200265/b200265.txt">Table of n, a(n) for n = 0..1484</a>
+J. Arias-de-Reyna, J. Toulisse, <a href="https://arxiv.org/abs/1203.5413">The n-th prime asymptotically</a>, arXiv:1203.5413 [math.NT], 2012.
+P. Dusart, <a href="http://dx.doi.org/10.1090/S0025-5718-99-01037-6">The kth prime is greater than k(ln k+ ln ln k+1) for k>=2</a>, Math. Comp 68 (225) (1999) 411-415 [<a href="http://www.ams.org/mathscinet-getitem?mr=1620223">MR1620223</a>]
+G. Mincu, <a href="http://www.emis.de/journals/JIPAM/article268.html">An asymptotic expansion</a> J. Ineq. Pure Appl Math. 4 (2) (2003) #30 [<a href="http://www.ams.org/mathscinet-getitem?mr=1994243">MR1994243</a>]
+B. Salvy, <a href="http://dx.doi.org/10.1006/jsco.1994.1014">Fast computation of some asymptotic functional inverses</a>, J. Symbolic Comput., 17 (1994), 227-236.
+N. K. Sinha, <a href="http://arxiv.org/abs/1011.1667">On the asymptotic expansion of the sum of the first n primes</a>, arXiv:1011.1667 [math.NT], 2010-2015."""@en .
+
+seq:A200265_I_1_20221022T161932 a seq:Text ;
+    cnt:chars "#49 Oct 22 2022 16:19:32"@en .
+
+seq:A200265_K_1_20221022T161932 a seq:Text ;
+    cnt:chars "nonn,tabl"@en .
+
+seq:A200265_N_1_20221022T161932 a seq:Text ;
+    cnt:chars "Triangle read by rows: coefficients in an asymptotic expansion of the n-th prime."@en .
+
+seq:A200265_O_1_20221022T161932 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200265_V_1_20221022T161932 a seq:Text ;
+    cnt:chars "1,1,2,1,6,11,2,21,84,131,6,92,588,1908,2666,24,490,4380,22020,62860,81534,120,3084,35790,246480,1075020,2823180,3478014,720,22428,322224,2838570,16775640,66811920,165838848,196993194"@en .
+
+seq:A200265_e_1_20221022T161932 a seq:Text ;
+    cnt:chars """Triangle begins
+   1;
+   1,   2;
+   1,   6,   11;
+   2,  21,   84,   131;
+   6,  92,  588,  1908,  2666;
+  24, 490, 4380, 22020, 62860, 81534;
+  ...
+See a(n,k) table on top of page 14 of article by Arias-de-Reyna and Toulisse."""@en .
+
+seq:A200265_t_1_20221022T161932 a seq:Text ;
+    cnt:chars "a[0, -1] = a[0, 0] = a[1, 0] = 1; a[1, 1] = 2; a[n_, k_] /; k == n-1 := a[n, k] = n*a[n-1, k-1] + n*(n-1)*a[n-1, n-1]; a[n_, n_] := a[n, n] = a[n-1, n-1]*n^2 + a[n-1, n-2]*n - (n-1)*Sum[Binomial[n-2, k-1]*(k*a[k-1, k-2] + k*(k-1)*a[k-1, k-1] - a[k, k])*a[n-k-1, n-k-1], {k, 1, n-1}]; a[n_, k_] /; k<0 || k>n = 0; a[n_, k_] := a[n, k] = n*a[n-1, k-1] + (n*(n-1)*a[n-1, k])/(n-k); Table[a[n, k], {n, 0, 9}, {k, 0, n}] // Flatten (* _Jean-François Alcover_, Mar 31 2015 *)"@en .
+

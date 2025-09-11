@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.269240Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1072}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200880 a seq:Sequence ;
+    rdfs:label "A200880"@en ;
+    seq:hasTextList ( seq:A200880_I_1_20171016T100818 seq:A200880_N_1_20171016T100818 seq:A200880_C_1_20171016T100818 seq:A200880_H_1_20171016T100818 seq:A200880_F_1_20171016T100818 seq:A200880_e_1_20171016T100818 seq:A200880_K_1_20171016T100818 seq:A200880_O_1_20171016T100818 seq:A200880_A_1_20171016T100818 seq:A200880_V_1_20171016T100818 ) .
+
+seq:A200880_A_1_20171016T100818 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 23 2011"@en .
+
+seq:A200880_C_1_20171016T100818 a seq:Text ;
+    cnt:chars "Column 2 of A200886."@en .
+
+seq:A200880_F_1_20171016T100818 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 3*a(n-1) -3*a(n-2) +4*a(n-3) -a(n-4) +a(n-5).
+Empirical g.f.: x*(22 - 15*x + 34*x^2 - 6*x^3 + 9*x^4) / (1 - 3*x + 3*x^2 - 4*x^3 + x^4 - x^5). - _Colin Barker_, Oct 16 2017"""@en .
+
+seq:A200880_H_1_20171016T100818 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200880/b200880.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200880_I_1_20171016T100818 a seq:Text ;
+    cnt:chars "#11 Oct 16 2017 10:08:18"@en .
+
+seq:A200880_K_1_20171016T100818 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200880_N_1_20171016T100818 a seq:Text ;
+    cnt:chars "Number of 0..2 arrays x(0..n+1) of n+2 elements without any interior element greater than both neighbors."@en .
+
+seq:A200880_O_1_20171016T100818 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200880_V_1_20171016T100818 a seq:Text ;
+    cnt:chars "22,51,121,292,704,1691,4059,9749,23422,56268,135166,324692,779977,1873673,4500958,10812237,25973244,62393157,149881402,360046432,864906711,2077686532,4991036946,11989513056,28801314179,69186771332"@en .
+
+seq:A200880_e_1_20171016T100818 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..2....0....2....0....2....1....2....2....2....1....1....1....0....2....2....1
+..0....2....1....0....1....2....2....1....2....2....0....1....0....2....2....2
+..1....2....0....2....1....2....0....2....0....2....1....1....1....1....2....2
+..1....0....1....2....0....1....1....2....0....2....1....1....1....0....1....1
+..0....1....2....0....1....1....1....1....1....2....1....0....1....1....2....2"""@en .
+

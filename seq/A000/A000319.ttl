@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.264325Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1330}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000319 a seq:Sequence ;
+    rdfs:label "A000319"@en ;
+    seq:hasTextList ( seq:A000319_I_1_20250318T013911 seq:A000319_N_1_20250318T013911 seq:A000319_C_1_20250318T013911 seq:A000319_H_1_20250318T013911 seq:A000319_e_1_20250318T013911 seq:A000319_t_1_20250318T013911 seq:A000319_Y_1_20250318T013911 seq:A000319_K_1_20250318T013911 seq:A000319_O_1_20250318T013911 seq:A000319_A_1_20250318T013911 seq:A000319_V_1_20250318T013911 ) .
+
+seq:A000319_A_1_20250318T013911 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000319_C_1_20250318T013911 a seq:Text ;
+    cnt:chars """Using 3000-digit precision, interval arithmetic provides an efficient method of computing over 2000000 terms of this sequence. The iteration is stopped when an interval contains an integer. So far, no term equals 319. - _T. D. Noe_, Mar 07 2008
+The question whether 319 occurs is relevant for sequences A053169 and A053873. - _Antti Karttunen_ and _M. F. Hasler_, Mar 01 2025"""@en .
+
+seq:A000319_H_1_20250318T013911 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000319/b000319.txt">Table of n, a(n) for n = 0..10000</a>
+Tim Peters, <a href="/A000319/a000319.csv.txt">CSV table of a(n) for n = 0..7366317 in "value,count" format</a>"""@en .
+
+seq:A000319_I_1_20250318T013911 a seq:Text ;
+    cnt:chars "#47 Mar 18 2025 01:39:11"@en .
+
+seq:A000319_K_1_20250318T013911 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A000319_N_1_20250318T013911 a seq:Text ;
+    cnt:chars "a(n) = floor(b(n)), where b(n) = tan(b(n-1)), b(0)=1."@en .
+
+seq:A000319_O_1_20250318T013911 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000319_V_1_20250318T013911 a seq:Text ;
+    cnt:chars "1,1,74,-1,-2,-3,0,1,30,-2,-2,29,1,4,-6,0,1,2,-1,-1,-1,-1,-2,-9,0,0,1,2,-2,-35,-1,-1,-1,-1,-1,-1,-1,-2,-3,0,0,1,5,-2,-2,3,1,1,-4,-1,-1,-1,-1,-1,-1,-1,-1,-2,-3,1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-2,-3,0,1,2,-1,-2,-21,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"@en .
+
+seq:A000319_Y_1_20250318T013911 a seq:Text ;
+    cnt:chars """See A381230 (resp. A381231) for when n (resp. -n) appears.
+Cf. A053169, A053873, A085665, A085666.
+Cf. A000329 (with round)."""@en .
+
+seq:A000319_e_1_20250318T013911 a seq:Text ;
+    cnt:chars """From _José María Grau Ribas_, Apr 13 2010: (Start)
+For n=2, tan(tan(1)) = 74.68... (A085665), so a(2)=74.
+For n=3, tan(tan(tan(1))) = -0.8635... (A085666), so a(3)=-1. (End)"""@en .
+
+seq:A000319_t_1_20250318T013911 a seq:Text ;
+    cnt:chars "Floor[Table[Nest[Tan, 1, n], {n, 1, 200}]] (* _José María Grau Ribas_, Apr 13 2010 *)"@en .
+

@@ -1,0 +1,110 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:11:38.739734Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 4694}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000230 a seq:Sequence ;
+    rdfs:label "A000230"@en ;
+    seq:hasTextList ( seq:A000230_I_1_20250212T142133 seq:A000230_N_1_20250212T142133 seq:A000230_C_1_20250212T142133 seq:A000230_D_1_20250212T142133 seq:A000230_H_1_20250212T142133 seq:A000230_F_1_20250212T142133 seq:A000230_e_1_20250212T142133 seq:A000230_t_1_20250212T142133 seq:A000230_o_1_20250212T142133 seq:A000230_Y_1_20250212T142133 seq:A000230_K_1_20250212T142133 seq:A000230_O_1_20250212T142133 seq:A000230_A_1_20250212T142133 seq:A000230_E_1_20250212T142133 seq:A000230_V_1_20250212T142133 ) .
+
+seq:A000230_A_1_20250212T142133 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000230_C_1_20250212T142133 a seq:Text ;
+    cnt:chars """p + 1 = A045881(n) starts the smallest run of exactly 2n-1 successive composite numbers. - _Lekraj Beedassy_, Apr 23 2010
+Weintraub gives upper bounds on a(252), a(255), a(264), a(273), and a(327) based on a search from 1.1 * 10^16 to 1.1 * 10^16 + 1.5 * 10^9, probably performed on a 1970s microcomputer. - _Charles R Greathouse IV_, Aug 26 2022"""@en .
+
+seq:A000230_D_1_20250212T142133 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000230_E_1_20250212T142133 a seq:Text ;
+    cnt:chars """a(29)-a(37) from _Jud McCranie_, Dec 11 1999
+a(38)-a(49) from Robert A. Stump (bee_ess107(AT)yahoo.com), Jan 11 2002
+"or -1 if ..." added to definition at the suggestion of Alexander Wajnberg by _N. J. A. Sloane_, Feb 02 2020"""@en .
+
+seq:A000230_F_1_20250212T142133 a seq:Text ;
+    cnt:chars "a(n) = A000040(A038664(n)). - _Lekraj Beedassy_, Sep 09 2006"@en .
+
+seq:A000230_H_1_20250212T142133 a seq:Text ;
+    cnt:chars """Brian Kehrig, <a href="/A000230/b000230.txt">Table of n, a(n) for n = 0..721</a> (terms 0..672 from Hugo Pfoertner)
+A. Booker, <a href="https://t5k.org/nthprime">The Nth Prime Page</a>
+L. J. Lander and T. R. Parkin, <a href="http://dx.doi.org/10.1090/S0025-5718-1967-0230677-4">On the first appearance of prime differences</a>, Math. Comp., 21 (1967), 483-488.
+Thomas R. Nicely, <a href="https://faculty.lynchburg.edu/~nicely/gaps/gaplist.html">First occurrence prime gaps</a> [For local copy see A000101]
+Tomás Oliveira e Silva, <a href="http://sweet.ua.pt/tos/gaps.html">Gaps between consecutive primes</a>
+J. Thonnard, <a href="http://www.proftnj.com/calcprem.htm">Les nombres premiers (Primality check; Closest next prime; Factorizer)</a>
+Sol Weintraub, <a href="https://doi.org/10.1090/S0025-5718-1981-0595062-1">A large prime gap</a>, Mathematics of Computation Vol. 36, No. 153 (Jan 1981), p. 279.
+J. Young and A. Potler, <a href="http://dx.doi.org/10.1090/S0025-5718-1989-0947470-1">First occurrence prime gaps</a>, Math. Comp., 52 (1989), 221-224.
+Yitang Zhang, <a href="https://doi.org/10.4007/annals.2014.179.3.7">Bounded gaps between primes</a>, Annals of Mathematics, Volume 179 (2014), Issue 3, pp. 1121-1174.
+<a href="/index/Pri#gaps">Index entries for primes, gaps between</a>"""@en .
+
+seq:A000230_I_1_20250212T142133 a seq:Text ;
+    cnt:chars "M2685 N1075 #156 Feb 12 2025 14:21:33"@en .
+
+seq:A000230_K_1_20250212T142133 a seq:Text ;
+    cnt:chars "nonn,nice"@en .
+
+seq:A000230_N_1_20250212T142133 a seq:Text ;
+    cnt:chars "a(0)=2; for n>=1, a(n) = smallest prime p such that there is a gap of exactly 2n between p and next prime, or -1 if no such prime exists."@en .
+
+seq:A000230_O_1_20250212T142133 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000230_V_1_20250212T142133 a seq:Text ;
+    cnt:chars "2,3,7,23,89,139,199,113,1831,523,887,1129,1669,2477,2971,4297,5591,1327,9551,30593,19333,16141,15683,81463,28229,31907,19609,35617,82073,44293,43331,34061,89689,162143,134513,173359,31397,404597,212701,188029,542603,265621,461717,155921,544279,404851,927869,1100977,360653,604073"@en .
+
+seq:A000230_Y_1_20250212T142133 a seq:Text ;
+    cnt:chars """A001632(n) = 2n + a(n) = nextprime(a(n)).
+Cf. A001223, A002386, A005250, A045881, A038664.
+Cf. A100964 (least prime number that begins a prime gap of at least 2n).
+Cf. also A133429 (records), A133430, A100180, A226657, A229021, A229028, A229030, A229033, A229034."""@en .
+
+seq:A000230_e_1_20250212T142133 a seq:Text ;
+    cnt:chars """The following table, based on a very much larger table in the web page of Tomás Oliveira e Silva (see link) shows, for each gap g, P(g) = the smallest prime such that P(g)+g is the smallest prime number larger than P(g);
+* marks a record-holder: g is a record-holder if P(g') > P(g) for all (even) g' > g, i.e., if all prime gaps are smaller than g for all primes smaller than P(g); P(g) is a record-holder if P(g') < P(g) for all (even) g' < g.
+This table gives rise to many sequences: P(g) is A000230, the present sequence; P(g)* is A133430; the positions of the *'s in the P(g) column give A100180, A133430; g* is A005250; P(g*) is A002386; etc.
+   -----
+   g P(g)
+   -----
+   1* 2*
+   2* 3*
+   4* 7*
+   6* 23*
+   8* 89*
+   10 139*
+   12 199*
+   14* 113
+   16 1831*
+   18* 523
+   20* 887
+   22* 1129
+   24 1669
+   26 2477*
+   28 2971*
+   30 4297*
+   32 5591*
+   34* 1327
+   36* 9551*
+   ........
+The first time a gap of 4 occurs between primes is between 7 and 11, so a(2)=7 and A001632(2)=11."""@en .
+
+seq:A000230_o_1_20250212T142133 a seq:Text ;
+    cnt:chars """(PARI) a(n)=my(p=2);forprime(q=3,,if(q-p==2*n,return(p));p=q) \\\\ _Charles R Greathouse IV_, Nov 20 2012
+(Perl) use ntheory ":all"; my($l,$i,@g)=(2,0); forprimes { $g[($_-$l) >> 1] //= $l;  while (defined $g[$i]) { print "$i $g[$i]\\n"; $i++; }  $l=$_; } 1e10; # _Dana Jacobsen_, Mar 29 2019
+(Python)
+import numpy
+from sympy import sieve as prime
+aupto = 50
+A000230 = np.zeros(aupto+1, dtype=object)
+A000230[0], it = 2, 2
+while all(A000230) == 0:
+    gap = (prime[it+1] - prime[it]) // 2
+    if gap <= aupto and A000230[gap] == 0: A000230[gap] = prime[it]
+    it += 1
+print(list(A000230)) # _Karl-Heinz Hofmann_, Jun 07 2023"""@en .
+
+seq:A000230_t_1_20250212T142133 a seq:Text ;
+    cnt:chars "Join[{2}, With[{pr = Partition[Prime[Range[86000]], 2, 1]}, Transpose[ Flatten[ Table[Select[pr, #[[2]] - #[[1]] == 2n &, 1], {n, 50}], 1]][[1]]]] (* _Harvey P. Dale_, Apr 20 2012 *)"@en .
+

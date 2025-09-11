@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.976357Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 485}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200733 a seq:Sequence ;
+    rdfs:label "A200733"@en ;
+    seq:hasTextList ( seq:A200733_I_1_20220908T084600 seq:A200733_N_1_20220908T084600 seq:A200733_H_1_20220908T084600 seq:A200733_t_1_20220908T084600 seq:A200733_o_1_20220908T084600 seq:A200733_K_1_20220908T084600 seq:A200733_O_1_20220908T084600 seq:A200733_A_1_20220908T084600 seq:A200733_V_1_20220908T084600 ) .
+
+seq:A200733_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Vincenzo Librandi_, Nov 23 2011"@en .
+
+seq:A200733_H_1_20220908T084600 a seq:Text ;
+    cnt:chars "Vincenzo Librandi, <a href=\"/A200733/b200733.txt\">Table of n, a(n) for n = 1..700</a>"@en .
+
+seq:A200733_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#8 Sep 08 2022 08:46:00"@en .
+
+seq:A200733_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200733_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Primes of the form 4*n^3-7."@en .
+
+seq:A200733_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200733_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "101,857,2909,23321,48661,70297,97549,275677,530597,1257721,1431637,1898201,2047993,2125757,3217421,5038841,5926169,6243577,9624409,11696821,11943929,14895493,15185657,20000837,25326493,29205529,41440921"@en .
+
+seq:A200733_o_1_20220908T084600 a seq:Text ;
+    cnt:chars "(Magma) [a: n in [2..250] | IsPrime(a) where a is 4*n^3-7]"@en .
+
+seq:A200733_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "Select[Table[4n^3-7,{n,2,5000}],PrimeQ]"@en .
+

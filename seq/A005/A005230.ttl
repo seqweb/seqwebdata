@@ -1,0 +1,74 @@
+# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.883014Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2811}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A005230 a seq:Sequence ;
+    rdfs:label "A005230"@en ;
+    seq:hasTextList ( seq:A005230_I_1_20240412T014126 seq:A005230_N_1_20240412T014126 seq:A005230_C_1_20240412T014126 seq:A005230_D_1_20240412T014126 seq:A005230_H_1_20240412T014126 seq:A005230_F_1_20240412T014126 seq:A005230_p_1_20240412T014126 seq:A005230_t_1_20240412T014126 seq:A005230_o_1_20240412T014126 seq:A005230_Y_1_20240412T014126 seq:A005230_K_1_20240412T014126 seq:A005230_O_1_20240412T014126 seq:A005230_A_1_20240412T014126 seq:A005230_E_1_20240412T014126 seq:A005230_V_1_20240412T014126 ) .
+
+seq:A005230_A_1_20240412T014126 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Simon Plouffe_"@en .
+
+seq:A005230_C_1_20240412T014126 a seq:Text ;
+    cnt:chars """A002487 is THE Stern's sequence!
+Limit_{n->oo} a(n)/2^n = 0.11756264240558743281779408719593950494049225979176... - _Jon E. Schoenfield_, Dec 17 2016"""@en .
+
+seq:A005230_D_1_20240412T014126 a seq:Text ;
+    cnt:chars "N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."@en .
+
+seq:A005230_E_1_20240412T014126 a seq:Text ;
+    cnt:chars """Name corrected by Mario Szegedy, Sep 15 1996
+Name revised by Ulrich Schimke (ulrschimke(AT)aol.com), Mar 16 2002"""@en .
+
+seq:A005230_F_1_20240412T014126 a seq:Text ;
+    cnt:chars """Partial sums give Conway-Guy sequence A005318. Cf. A066777.
+2*a(n*(n+1)/2 + 1) = a(n*(n+1)/2 + 2) for n>=1; lim_{n->oo} a(n+1)/a(n) = 2. - _Paul D. Hanna_, Aug 28 2006"""@en .
+
+seq:A005230_H_1_20240412T014126 a seq:Text ;
+    cnt:chars """Harvey P. Dale, <a href="/A005230/b005230.txt">Table of n, a(n) for n = 1..1000</a> [extending prior submission by T. D. Noe]
+Jaegug Bae and Sungjin Choi, <a href="https://doi.org/10.4134/JKMS.2003.40.5.757">A generalization of a subset-sum-distinct sequence</a>, J. Korean Math. Soc. 40 (2003), no. 5, 757-768. MR1996839 (2004d:05198). See d_1(n).
+G. Kreweras, <a href="http://www.numdam.org/item?id=MSH_1983__84__45_0">Sur quelques problèmes relatifs au vote pondéré</a>, [Some problems of weighted voting], Math. Sci. Humaines No. 84 (1983), 45-63.
+M. A. Stern, <a href="http://dx.doi.org/10.1515/crll.1838.18.100">Aufgaben</a>, J. Reine Angew. Math., 18 (1838), 100.
+<a href="/index/St#Stern">Index entries for sequences related to Stern's sequences</a>
+<a href="/index/Cor#core">Index entries for "core" sequences</a>"""@en .
+
+seq:A005230_I_1_20240412T014126 a seq:Text ;
+    cnt:chars "M0785 #70 Apr 12 2024 01:41:26"@en .
+
+seq:A005230_K_1_20240412T014126 a seq:Text ;
+    cnt:chars "core,easy,nonn,nice"@en .
+
+seq:A005230_N_1_20240412T014126 a seq:Text ;
+    cnt:chars "Stern's sequence: a(1) = 1, a(n+1) is the sum of the m preceding terms, where m*(m-1)/2 < n <= m*(m+1)/2 or equivalently m = ceiling((sqrt(8*n+1)-1)/2) = A002024(n)."@en .
+
+seq:A005230_O_1_20240412T014126 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A005230_V_1_20240412T014126 a seq:Text ;
+    cnt:chars "1,1,2,3,6,11,20,40,77,148,285,570,1120,2200,4323,8498,16996,33707,66844,132568,262936,521549,1043098,2077698,4138400,8243093,16419342,32706116,65149296,130298592,260075635,519108172,1036138646,2068138892,4128034691"@en .
+
+seq:A005230_Y_1_20240412T014126 a seq:Text ;
+    cnt:chars "Cf. A002487."@en .
+
+seq:A005230_o_1_20240412T014126 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n==1,1,sum(k=1,ceil((sqrt(8*n-7)-1)/2),a(n-k))) \\\\ _Paul D. Hanna_, Aug 28 2006
+(PARI) v=vector(10^3);v[1]=v[2]=1;v[3]=2;v[4]=3;u=vector(#v,i,if(i>4,0,sum(j=1,i,v[j])));for(i=5,#v,m=ceil((sqrt(8*i-7)-1)/2);v[i]=u[i-1]-u[i-m-1];u[i]=u[i-1]+v[i]);u=0;v \\\\ _Charles R Greathouse IV_, Sep 19 2011
+(Python)
+from itertools import count, islice
+from math import isqrt
+def A005230_gen(): # generator of terms
+    blist = [1]
+    for n in count(1):
+        yield blist[-1]
+        blist.append(sum(blist[-i] for i in range(1,(isqrt(8*n)+3)//2)))
+A005230_list = list(islice(A005230_gen(),30)) # _Chai Wah Wu_, Feb 02 2022"""@en .
+
+seq:A005230_p_1_20240412T014126 a seq:Text ;
+    cnt:chars "A005230[1] := 1: n := 50: for k from 1 to n-1 do: A005230[k+1] := sum('A005230[j]','j'=k+1-(ceil((sqrt(8*k+1)-1)/2))..k): od: [seq(A005230[k],k=1..n)]; # UlrSchimke(AT)aol.com, Mar 16 2002"@en .
+
+seq:A005230_t_1_20240412T014126 a seq:Text ;
+    cnt:chars "Module[{lst={1,1},n=2},While[n<40,AppendTo[lst,Total[ Take[lst, -Ceiling[ (Sqrt[8n+1]-1)/2]]]];n++];lst] (* _Harvey P. Dale_, Apr 02 2012 *)"@en .
+

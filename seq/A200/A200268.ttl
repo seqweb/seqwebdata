@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.989359Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 757}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200268 a seq:Sequence ;
+    rdfs:label "A200268"@en ;
+    seq:hasTextList ( seq:A200268_I_1_20120331T123638 seq:A200268_N_1_20120331T123638 seq:A200268_C_1_20120331T123638 seq:A200268_e_1_20120331T123638 seq:A200268_K_1_20120331T123638 seq:A200268_O_1_20120331T123638 seq:A200268_A_1_20120331T123638 seq:A200268_V_1_20120331T123638 ) .
+
+seq:A200268_A_1_20120331T123638 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 15 2011"@en .
+
+seq:A200268_C_1_20120331T123638 a seq:Text ;
+    cnt:chars "Column 4 of A200272"@en .
+
+seq:A200268_I_1_20120331T123638 a seq:Text ;
+    cnt:chars "#4 Mar 31 2012 12:36:38"@en .
+
+seq:A200268_K_1_20120331T123638 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200268_N_1_20120331T123638 a seq:Text ;
+    cnt:chars "Number of 0..4 arrays x(0..n+1) of n+2 elements with zero n-1st differences"@en .
+
+seq:A200268_O_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200268_V_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,5,7,9,13,13,21,31,19,37,75,139,97,181,101,225,277,505,465,971,225"@en .
+
+seq:A200268_e_1_20120331T123638 a seq:Text ;
+    cnt:chars """All solutions for n=6
+..2....0....1....1....2....2....3....4....3....2....3....2....1
+..0....0....0....1....4....1....2....4....3....2....4....3....2
+..2....0....1....1....2....2....3....4....3....2....3....2....1
+..4....0....2....1....0....3....4....4....3....2....2....1....0
+..4....0....2....1....0....3....4....4....3....2....2....1....0
+..2....0....1....1....2....2....3....4....3....2....3....2....1
+..0....0....0....1....4....1....2....4....3....2....4....3....2
+..2....0....1....1....2....2....3....4....3....2....3....2....1"""@en .
+

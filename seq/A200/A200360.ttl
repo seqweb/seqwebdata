@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.176785Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 707}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200360 a seq:Sequence ;
+    rdfs:label "A200360"@en ;
+    seq:hasTextList ( seq:A200360_I_1_20250207T164406 seq:A200360_N_1_20250207T164406 seq:A200360_C_1_20250207T164406 seq:A200360_e_1_20250207T164406 seq:A200360_t_1_20250207T164406 seq:A200360_Y_1_20250207T164406 seq:A200360_K_1_20250207T164406 seq:A200360_O_1_20250207T164406 seq:A200360_A_1_20250207T164406 seq:A200360_V_1_20250207T164406 ) .
+
+seq:A200360_A_1_20250207T164406 a seq:Text ;
+    cnt:chars "_Clark Kimberling_, Nov 17 2011"@en .
+
+seq:A200360_C_1_20250207T164406 a seq:Text ;
+    cnt:chars "See A200338 for a guide to related sequences. The Mathematica program includes a graph."@en .
+
+seq:A200360_I_1_20250207T164406 a seq:Text ;
+    cnt:chars "#8 Feb 07 2025 16:44:06"@en .
+
+seq:A200360_K_1_20250207T164406 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200360_N_1_20250207T164406 a seq:Text ;
+    cnt:chars "Decimal expansion of least x>0 satisfying 2*x^2+x+1=tan(x)."@en .
+
+seq:A200360_O_1_20250207T164406 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200360_V_1_20250207T164406 a seq:Text ;
+    cnt:chars "1,4,1,6,4,9,7,8,3,4,1,7,8,0,0,1,3,0,2,3,8,7,9,2,6,6,8,6,2,7,1,0,0,2,9,1,7,7,9,8,4,0,3,9,5,7,6,9,1,4,6,0,4,0,7,0,7,5,6,3,9,8,0,6,1,4,9,1,8,4,9,2,3,4,8,3,5,0,6,8,1,8,1,1,8,9,5,5,2,8,2,4,8,0,2,9,1,6,1,5,6,6,5"@en .
+
+seq:A200360_Y_1_20250207T164406 a seq:Text ;
+    cnt:chars "Cf. A200338."@en .
+
+seq:A200360_e_1_20250207T164406 a seq:Text ;
+    cnt:chars "x=1.41649783417800130238792668627100291779840..."@en .
+
+seq:A200360_t_1_20250207T164406 a seq:Text ;
+    cnt:chars """a = 2; b = 1; c = 1;
+f[x_] := a*x^2 + b*x + c; g[x_] := Tan[x]
+Plot[{f[x], g[x]}, {x, -.1, Pi/2}, {AxesOrigin -> {0, 0}}]
+r = x /. FindRoot[f[x] == g[x], {x, 1.4, 1.5}, WorkingPrecision -> 110]
+RealDigits[r]   (* A200360 *)"""@en .
+

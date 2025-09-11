@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.315998Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2420}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000771 a seq:Sequence ;
+    rdfs:label "A000771"@en ;
+    seq:hasTextList ( seq:A000771_I_1_20210725T112631 seq:A000771_N_1_20210725T112631 seq:A000771_C_1_20210725T112631 seq:A000771_D_1_20210725T112631 seq:A000771_H_1_20210725T112631 seq:A000771_F_1_20210725T112631 seq:A000771_t_1_20210725T112631 seq:A000771_Y_1_20210725T112631 seq:A000771_K_1_20210725T112631 seq:A000771_O_1_20210725T112631 seq:A000771_A_1_20210725T112631 seq:A000771_E_1_20210725T112631 seq:A000771_V_1_20210725T112631 ) .
+
+seq:A000771_A_1_20210725T112631 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000771_C_1_20210725T112631 a seq:Text ;
+    cnt:chars "G.f.: x^7/product(1-k*x,k=1..7). E.g.f.: ((exp(x)-1)^7)/7!."@en .
+
+seq:A000771_D_1_20210725T112631 a seq:Text ;
+    cnt:chars """M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions, National Bureau of Standards Applied Math. Series 55, 1964 (and various reprintings), p. 835.
+F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 223.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000771_E_1_20210725T112631 a seq:Text ;
+    cnt:chars """Two more terms from Neven Juric, Oct 22 2009
+Definition corrected by _Vaclav Kotesovec_, Nov 19 2012"""@en .
+
+seq:A000771_F_1_20210725T112631 a seq:Text ;
+    cnt:chars """a(n) = A008277(n, 7) (Stirling2 triangle).
+a(n) = 1/720*(7^(n-1)-6^n+3*5^n-5*4^n+5*3^n-3*2^n+1). - _Vaclav Kotesovec_, Nov 19 2012
+a(n) = det(|s(i+7,j+6)|, 1 <= i,j <= n-7), where s(n,k) are Stirling numbers of the first kind. - _Mircea Merca_, Apr 06 2013"""@en .
+
+seq:A000771_H_1_20210725T112631 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000771/b000771.txt">Table of n, a(n) for n=7..200</a>
+M. Abramowitz and I. A. Stegun, eds., <a href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.ASP">Handbook of Mathematical Functions</a>, National Bureau of Standards, Applied Math. Series 55, Tenth Printing, 1972 [alternative scanned copy].
+INRIA Algorithms Project, <a href="http://ecs.inria.fr/services/structure?nbr=350">Encyclopedia of Combinatorial Structures 350</a>
+<a href="/index/Rec#order_07">Index entries for linear recurrences with constant coefficients</a>, signature (28,-322,1960,-6769,13132,-13068,5040)."""@en .
+
+seq:A000771_I_1_20210725T112631 a seq:Text ;
+    cnt:chars "M5201 N2263 #41 Jul 25 2021 11:26:31"@en .
+
+seq:A000771_K_1_20210725T112631 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000771_N_1_20210725T112631 a seq:Text ;
+    cnt:chars "Stirling numbers of second kind, S(n,7)."@en .
+
+seq:A000771_O_1_20210725T112631 a seq:Text ;
+    cnt:chars "7,2"@en .
+
+seq:A000771_V_1_20210725T112631 a seq:Text ;
+    cnt:chars "1,28,462,5880,63987,627396,5715424,49329280,408741333,3281882604,25708104786,197462483400,1492924634839,11143554045652,82310957214948,602762379967440,4382641999117305,31677463851804540,227832482998716310,1631853797991016600"@en .
+
+seq:A000771_Y_1_20210725T112631 a seq:Text ;
+    cnt:chars "Cf. A008277."@en .
+
+seq:A000771_t_1_20210725T112631 a seq:Text ;
+    cnt:chars """lst={};Do[f=StirlingS2[n, 7];AppendTo[lst, f], {n, 7, 5!}];lst (* _Vladimir Joseph Stephan Orlovsky_, Sep 27 2008 *)
+CoefficientList[Series[1/((1 - x) (1 - 2 x) (1 - 3 x) (1 - 4 x) (1 - 5 x) (1 - 6 x) (1 - 7 x)), {x, 0, 25}], x] (* _Vladimir Joseph Stephan Orlovsky_, Jun 20 2011 *)
+Table[1/720*(7^(n-1)-6^n+3*5^n-5*4^n+5*3^n-3*2^n+1),{n,7,20}] (* _Vaclav Kotesovec_, Nov 19 2012 *)
+LinearRecurrence[{28,-322,1960,-6769,13132,-13068,5040},{1,28,462, 5880, 63987, 627396,5715424},20] (* or *) Drop[StirlingS2[Range[30],7],6] (* _Harvey P. Dale_, Jul 25 2021 *)"""@en .
+

@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.378785Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1869}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200938 a seq:Sequence ;
+    rdfs:label "A200938"@en ;
+    seq:hasTextList ( seq:A200938_I_1_20241118T223225 seq:A200938_N_1_20241118T223225 seq:A200938_C_1_20241118T223225 seq:A200938_H_1_20241118T223225 seq:A200938_F_1_20241118T223225 seq:A200938_t_1_20241118T223225 seq:A200938_o_1_20241118T223225 seq:A200938_Y_1_20241118T223225 seq:A200938_K_1_20241118T223225 seq:A200938_O_1_20241118T223225 seq:A200938_A_1_20241118T223225 seq:A200938_V_1_20241118T223225 ) .
+
+seq:A200938_A_1_20241118T223225 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 25 2011"@en .
+
+seq:A200938_C_1_20241118T223225 a seq:Text ;
+    cnt:chars """For x values see A200936.
+For y values see A200937.
+This sequence is equivalent of A200218, but A200218 was for quadratic field with extension sqrt(5).
+All numbers in this sequence are of the form 216*(4k+3).
+When indices n are even d=a(n) are positive, when n is odd  d=a(n) are negative."""@en .
+
+seq:A200938_F_1_20241118T223225 a seq:Text ;
+    cnt:chars """a(n) = A200936(n)^3 - A200937(n)^2.
+a(n) = a(n-1) + 6*a(n-2) - 6*a(n-3) - a(n-4) + a(n-5).
+G.f.: 216*(3 - 28*z + 78*z^2 + 4*z^3 - 13*z^4)/((1 - z)*(1 + 2*z - z^2) *(1 - 2*z - z^2)).
+E.g.f.: 216*(cosh(x)*(14*cosh(sqrt(2)*x) - 4*sqrt(2)*sinh(sqrt(2)*x) - 11) - sinh(x)*(6*cosh(sqrt(2)*x) - 10*sqrt(2)*sinh(sqrt(2)*x) + 11)). - _Stefano Spezia_, Oct 03 2022"""@en .
+
+seq:A200938_H_1_20241118T223225 a seq:Text ;
+    cnt:chars """G. C. Greubel, <a href="/A200938/b200938.txt">Table of n, a(n) for n = 0..1000</a>
+<a href="/index/Rec#order_05">Index entries for linear recurrences with constant coefficients</a>, signature (1,6,-6,-1,1)."""@en .
+
+seq:A200938_I_1_20241118T223225 a seq:Text ;
+    cnt:chars "#30 Nov 18 2024 22:32:25"@en .
+
+seq:A200938_K_1_20241118T223225 a seq:Text ;
+    cnt:chars "sign,easy"@en .
+
+seq:A200938_N_1_20241118T223225 a seq:Text ;
+    cnt:chars "Values d for infinite sequence x^3-y^2 = d with increasing coefficient r=sqrt(x)/|d| or family of solutions Mordell curve with extension sqrt(2)."@en .
+
+seq:A200938_O_1_20241118T223225 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A200938_V_1_20241118T223225 a seq:Text ;
+    cnt:chars "648,-5400,15336,-20088,100872,-105624,599400,-604152,3505032,-3509784,20440296,-20445048,119146248,-119151000,694446696,-694451448,4047543432,-4047548184,23590823400,-23590828152,137497406472,-137497411224,801393624936,-801393629688"@en .
+
+seq:A200938_Y_1_20241118T223225 a seq:Text ;
+    cnt:chars "Cf. A200216, A200217, A200218, A200936, A200937."@en .
+
+seq:A200938_o_1_20241118T223225 a seq:Text ;
+    cnt:chars """(PARI) my(x='x+O('x^30)); Vec(216*(3-28*x+78*x^2+4*x^3-13*x^4)/((1-x)*(1+2*x-x^2)*(1-2*x-x^2))) \\\\ _G. C. Greubel_, Aug 18 2018
+(Magma) m:=30; R<x>:=PowerSeriesRing(Integers(), m); Coefficients(R!(216*(3-28*x+78*x^2+4*x^3-13*x^4)/((1-x)*(1+2*x-x^2)*(1-2*x-x^2)))); // _G. C. Greubel_, Aug 18 2018"""@en .
+
+seq:A200938_t_1_20241118T223225 a seq:Text ;
+    cnt:chars "uu = {648, -5400, 15336, -20088, 100872}; a1 = aa[[1]]; a2 = aa[[2]]; a3 = aa[[3]]; a4 = aa[[4]]; a5 = aa[[5]]; Do[an = a5 + 6 a4 - 6 a3 - a2 + a1; a1 = a2; a2 = a3; a3 = a4; a4 = a5; a5 = an; AppendTo[uu, an], {nn, 1, 20}]; uu"@en .
+

@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.863112Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 952}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000576 a seq:Sequence ;
+    rdfs:label "A000576"@en ;
+    seq:hasTextList ( seq:A000576_I_1_20181129T160046 seq:A000576_N_1_20181129T160046 seq:A000576_H_1_20181129T160046 seq:A000576_Y_1_20181129T160046 seq:A000576_K_1_20181129T160046 seq:A000576_O_1_20181129T160046 seq:A000576_A_1_20181129T160046 seq:A000576_E_1_20181129T160046 seq:A000576_V_1_20181129T160046 ) .
+
+seq:A000576_A_1_20181129T160046 a seq:Text ;
+    cnt:chars "_Brendan McKay_ and Eric Rogoyski"@en .
+
+seq:A000576_E_1_20181129T160046 a seq:Text ;
+    cnt:chars "a(11) from _Ian Wanless_, Jul 30 2010, from the 2005 McKay-Wanless paper."@en .
+
+seq:A000576_H_1_20181129T160046 a seq:Text ;
+    cnt:chars """B. D. McKay and I. M. Wanless, <a href="http://dx.doi.org/10.1007/s00026-005-0261-7">On the number of Latin squares</a>, Ann. Combinat. 9 (2005) 335-344.
+D. S. Stones, <a href="http://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1a1">The many formulas for the number of Latin rectangles</a>, Electron. J. Combin 17 (2010), A1.
+D. S. Stones and I. M. Wanless, <a href="http://dx.doi.org/10.1016/j.jcta.2009.03.019">Divisors of the number of Latin rectangles</a>, J. Combin. Theory Ser. A 117 (2010), 204-215.
+<a href="/index/La#Latin">Index entries for sequences related to Latin squares and rectangles</a>"""@en .
+
+seq:A000576_I_1_20181129T160046 a seq:Text ;
+    cnt:chars "#16 Nov 29 2018 16:00:46"@en .
+
+seq:A000576_K_1_20181129T160046 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000576_N_1_20181129T160046 a seq:Text ;
+    cnt:chars "a(n) is the number of (n-2) X n normalized Latin rectangles."@en .
+
+seq:A000576_O_1_20181129T160046 a seq:Text ;
+    cnt:chars "3,2"@en .
+
+seq:A000576_V_1_20181129T160046 a seq:Text ;
+    cnt:chars "1,3,46,6552,11270400,335390189568,224382967916691456,4292039421591854273003520,2905990310033882693113989027594240"@en .
+
+seq:A000576_Y_1_20181129T160046 a seq:Text ;
+    cnt:chars "Cf. A001009."@en .
+

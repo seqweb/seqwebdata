@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.717091Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 716}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000936 a seq:Sequence ;
+    rdfs:label "A000936"@en ;
+    seq:hasTextList ( seq:A000936_I_1_20151014T145332 seq:A000936_N_1_20151014T145332 seq:A000936_D_1_20151014T145332 seq:A000936_H_1_20151014T145332 seq:A000936_K_1_20151014T145332 seq:A000936_O_1_20151014T145332 seq:A000936_A_1_20151014T145332 seq:A000936_E_1_20151014T145332 seq:A000936_V_1_20151014T145332 ) .
+
+seq:A000936_A_1_20151014T145332 a seq:Text ;
+    cnt:chars "E. K. Lloyd (E.K.Lloyd(AT)soton.ac.uk)"@en .
+
+seq:A000936_D_1_20151014T145332 a seq:Text ;
+    cnt:chars "S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, Enumeration of polyene hydrocarbons: a complete mathematical solution, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751."@en .
+
+seq:A000936_E_1_20151014T145332 a seq:Text ;
+    cnt:chars "a(16)-a(20) and title improved by _Sean A. Irvine_, Oct 14 2015"@en .
+
+seq:A000936_H_1_20151014T145332 a seq:Text ;
+    cnt:chars "S. J. Cyvin, J. Brunvoll, E. Brendsdal, B. N. Cyvin and E. K. Lloyd, <a href=\"/A002057/a002057.pdf\">Enumeration of polyene hydrocarbons: a complete mathematical solution</a>, J. Chem. Inf. Comput. Sci., 35 (1995) 743-751. [Annotated scanned copy]"@en .
+
+seq:A000936_I_1_20151014T145332 a seq:Text ;
+    cnt:chars "#13 Oct 14 2015 14:53:32"@en .
+
+seq:A000936_K_1_20151014T145332 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000936_N_1_20151014T145332 a seq:Text ;
+    cnt:chars "Number of free planar polyenoids with n nodes and symmetry point group C_{2v}."@en .
+
+seq:A000936_O_1_20151014T145332 a seq:Text ;
+    cnt:chars "1,5"@en .
+
+seq:A000936_V_1_20151014T145332 a seq:Text ;
+    cnt:chars "0,0,1,1,2,4,4,12,10,29,27,88,76,247,217,722,638,2134,1901,6413"@en .
+

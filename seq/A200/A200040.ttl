@@ -1,0 +1,49 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.844829Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1151}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200040 a seq:Sequence ;
+    rdfs:label "A200040"@en ;
+    seq:hasTextList ( seq:A200040_I_1_20180517T110003 seq:A200040_N_1_20180517T110003 seq:A200040_C_1_20180517T110003 seq:A200040_H_1_20180517T110003 seq:A200040_F_1_20180517T110003 seq:A200040_e_1_20180517T110003 seq:A200040_Y_1_20180517T110003 seq:A200040_K_1_20180517T110003 seq:A200040_O_1_20180517T110003 seq:A200040_A_1_20180517T110003 seq:A200040_V_1_20180517T110003 ) .
+
+seq:A200040_A_1_20180517T110003 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 12 2011"@en .
+
+seq:A200040_C_1_20180517T110003 a seq:Text ;
+    cnt:chars "Row 4 of A200038."@en .
+
+seq:A200040_F_1_20180517T110003 a seq:Text ;
+    cnt:chars """Empirical: a(n) = a(n-2) +2*a(n-3) -a(n-5) -a(n-6) -a(n-7) -a(n-8) +2*a(n-10) +a(n-11) -a(n-13).
+Empirical g.f.: 2*x*(1 + 14*x + 41*x^2 + 93*x^3 + 152*x^4 + 212*x^5 + 240*x^6 + 243*x^7 + 191*x^8 + 138*x^9 + 79*x^10 + 36*x^11) / ((1 - x)^4*(1 + x)*(1 + x + x^2)^2*(1 + x + x^2 + x^3 + x^4)). - _Colin Barker_, May 17 2018"""@en .
+
+seq:A200040_H_1_20180517T110003 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200040/b200040.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200040_I_1_20180517T110003 a seq:Text ;
+    cnt:chars "#8 May 17 2018 11:00:03"@en .
+
+seq:A200040_K_1_20180517T110003 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200040_N_1_20180517T110003 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..3) of 4 elements with sum zero and with zeroth through 3rd differences all nonzero."@en .
+
+seq:A200040_O_1_20180517T110003 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200040_V_1_20180517T110003 a seq:Text ;
+    cnt:chars "2,28,84,218,444,808,1330,2068,2996,4230,5740,7552,9746,12348,15304,18782,22732,27144,32162,37784,43912,50790,58332,66496,75494,85280,95736,107166,119452,132524,146646,161752,177688,194822,213008,232132,252534"@en .
+
+seq:A200040_Y_1_20180517T110003 a seq:Text ;
+    cnt:chars "Cf. A200038."@en .
+
+seq:A200040_e_1_20180517T110003 a seq:Text ;
+    cnt:chars """Some solutions for n=6:
+..2...-2...-1....6...-2....5....4...-5...-1...-6...-2....1...-4...-3...-6...-1
+..5...-3....2...-3....6...-6...-5....3....3....6...-3...-4....1...-1...-1....6
+.-2....6....1...-5....2...-5...-1...-2...-3...-2....3....6....2....5....5...-2
+.-5...-1...-2....2...-6....6....2....4....1....2....2...-3....1...-1....2...-3"""@en .
+

@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.301607Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1576}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000764 a seq:Sequence ;
+    rdfs:label "A000764"@en ;
+    seq:hasTextList ( seq:A000764_I_1_20220612T122309 seq:A000764_N_1_20220612T122309 seq:A000764_H_1_20220612T122309 seq:A000764_F_1_20220612T122309 seq:A000764_e_1_20220612T122309 seq:A000764_t_1_20220612T122309 seq:A000764_o_1_20220612T122309 seq:A000764_Y_1_20220612T122309 seq:A000764_K_1_20220612T122309 seq:A000764_O_1_20220612T122309 seq:A000764_A_1_20220612T122309 seq:A000764_V_1_20220612T122309 ) .
+
+seq:A000764_A_1_20220612T122309 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000764_F_1_20220612T122309 a seq:Text ;
+    cnt:chars "E.g.f.: (tan(x) + sec(x))*exp(exp(x) - 1)."@en .
+
+seq:A000764_H_1_20220612T122309 a seq:Text ;
+    cnt:chars """John Cerkan, <a href="/A000764/b000764.txt">Table of n, a(n) for n = 0..482</a>
+J. Millar, N. J. A. Sloane and N. E. Young, A new operation on sequences: the Boustrophedon transform, J. Combin. Theory, 17A (1996) 44-54 (<a href="http://neilsloane.com/doc/bous.txt">Abstract</a>, <a href="http://neilsloane.com/doc/bous.pdf">pdf</a>, <a href="http://neilsloane.com/doc/bous.ps">ps</a>).
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>.
+<a href="/index/Bo#boustrophedon">Index entries for sequences related to boustrophedon transform</a>"""@en .
+
+seq:A000764_I_1_20220612T122309 a seq:Text ;
+    cnt:chars "#30 Jun 12 2022 12:23:09"@en .
+
+seq:A000764_K_1_20220612T122309 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000764_N_1_20220612T122309 a seq:Text ;
+    cnt:chars "Boustrophedon transform of Bell numbers."@en .
+
+seq:A000764_O_1_20220612T122309 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000764_V_1_20220612T122309 a seq:Text ;
+    cnt:chars "1,2,5,16,60,258,1247,6686,39371,252688,1756920,13168178,105949517,911834394,8367625793,81642384468,844718036940,9245285569526,106790005796627,1298920385093126,16602066548692623"@en .
+
+seq:A000764_Y_1_20220612T122309 a seq:Text ;
+    cnt:chars "Cf. A000110."@en .
+
+seq:A000764_e_1_20220612T122309 a seq:Text ;
+    cnt:chars """The array begins:
+                   1
+               1  ->   2
+           5  <-   4  <-   2
+       5  ->  10  ->  14  ->  16
+  60  <-  55  <-  45  <-  31  <-  15
+- _John Cerkan_, Feb 02 2017"""@en .
+
+seq:A000764_o_1_20220612T122309 a seq:Text ;
+    cnt:chars """(Python)
+from itertools import accumulate, islice
+def A000764_gen(): # generator of terms
+    blist, alist = (1,2), (1,)
+    yield from blist
+    while True:
+        yield (blist := tuple(accumulate(reversed(blist),initial=(alist := list(accumulate(alist, initial=alist[-1])))[-1])))[-1]
+A000764_list = list(islice(A000764_gen(),40)) # _Chai Wah Wu_, Jun 12 2022"""@en .
+
+seq:A000764_t_1_20220612T122309 a seq:Text ;
+    cnt:chars "t[n_, 0] := BellB[n]; t[n_, k_] := t[n, k] = t[n, k - 1] + t[n - 1, n - k]; a[n_] := t[n, n]; Array[a, 30, 0] (* _Jean-François Alcover_, Feb 12 2016 *)"@en .
+

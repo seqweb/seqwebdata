@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.274708Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1260}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200883 a seq:Sequence ;
+    rdfs:label "A200883"@en ;
+    seq:hasTextList ( seq:A200883_I_1_20171016T095807 seq:A200883_N_1_20171016T095807 seq:A200883_C_1_20171016T095807 seq:A200883_H_1_20171016T095807 seq:A200883_F_1_20171016T095807 seq:A200883_e_1_20171016T095807 seq:A200883_K_1_20171016T095807 seq:A200883_O_1_20171016T095807 seq:A200883_A_1_20171016T095807 seq:A200883_V_1_20171016T095807 ) .
+
+seq:A200883_A_1_20171016T095807 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 23 2011"@en .
+
+seq:A200883_C_1_20171016T095807 a seq:Text ;
+    cnt:chars "Column 5 of A200886."@en .
+
+seq:A200883_F_1_20171016T095807 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 6*a(n-1) -15*a(n-2) +35*a(n-3) -35*a(n-4) +56*a(n-5) -28*a(n-6) +36*a(n-7) -9*a(n-8) +10*a(n-9) -a(n-10) +a(n-11).
+Empirical g.f.: x*(161 - 330*x + 1106*x^2 - 924*x^3 + 1884*x^4 - 792*x^5 + 1252*x^6 - 264*x^7 + 355*x^8 - 30*x^9 + 36*x^10) / (1 - 6*x + 15*x^2 - 35*x^3 + 35*x^4 - 56*x^5 + 28*x^6 - 36*x^7 + 9*x^8 - 10*x^9 + x^10 - x^11). - _Colin Barker_, Oct 16 2017"""@en .
+
+seq:A200883_H_1_20171016T095807 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200883/b200883.txt\">Table of n, a(n) for n = 1..210</a>"@en .
+
+seq:A200883_I_1_20171016T095807 a seq:Text ;
+    cnt:chars "#10 Oct 16 2017 09:58:07"@en .
+
+seq:A200883_K_1_20171016T095807 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200883_N_1_20171016T095807 a seq:Text ;
+    cnt:chars "Number of 0..5 arrays x(0..n+1) of n+2 elements without any interior element greater than both neighbors."@en .
+
+seq:A200883_O_1_20171016T095807 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200883_V_1_20171016T095807 a seq:Text ;
+    cnt:chars "161,636,2507,10213,42182,173606,710976,2908797,11911516,48807427,199987737,819315100,3356387171,13749952752,56330082115,230771042950,945410224602,3873094298871,15867039092263,65003096433432"@en .
+
+seq:A200883_e_1_20171016T095807 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..4....3....5....4....3....5....2....2....1....2....4....0....1....2....2....4
+..4....4....2....0....5....3....1....4....2....2....1....2....0....4....0....0
+..3....4....1....0....5....1....2....4....4....4....1....3....0....4....1....3
+..1....0....0....2....5....1....2....1....4....4....1....3....1....4....3....3
+..0....2....1....5....3....0....3....4....4....0....2....0....3....1....3....3"""@en .
+

@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.489308Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 983}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200518 a seq:Sequence ;
+    rdfs:label "A200518"@en ;
+    seq:hasTextList ( seq:A200518_I_1_20120331T134835 seq:A200518_N_1_20120331T134835 seq:A200518_C_1_20120331T134835 seq:A200518_H_1_20120331T134835 seq:A200518_e_1_20120331T134835 seq:A200518_o_1_20120331T134835 seq:A200518_Y_1_20120331T134835 seq:A200518_K_1_20120331T134835 seq:A200518_O_1_20120331T134835 seq:A200518_A_1_20120331T134835 seq:A200518_V_1_20120331T134835 ) .
+
+seq:A200518_A_1_20120331T134835 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200518_C_1_20120331T134835 a seq:Text ;
+    cnt:chars "If a(n)>0, this proves that n cannot be a member of A051210, i.e., cannot be written as y^2-8^x. To prove that an integer n is in A051210, it is sufficient to find integers x,y such that y^2-8^x=n. In that case, a(n)=0."@en .
+
+seq:A200518_H_1_20120331T134835 a seq:Text ;
+    cnt:chars "M. F. Hasler, <a href=\"/A200518/b200518.txt\">Table of n, a(n) for n = 0..1000</a>"@en .
+
+seq:A200518_I_1_20120331T134835 a seq:Text ;
+    cnt:chars "#9 Mar 31 2012 13:48:35"@en .
+
+seq:A200518_K_1_20120331T134835 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200518_N_1_20120331T134835 a seq:Text ;
+    cnt:chars "Least m>0 such that n = y^2-8^x (mod m) has no solution, or 0 if no such m exists."@en .
+
+seq:A200518_O_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A200518_V_1_20120331T134835 a seq:Text ;
+    cnt:chars "0,0,4,0,7,7,4,9,0,7,4,7,7,8,4,0,7,0,4,7,32,8,4,7,0,7,4,16,0,8,4,9,7,7,4,0,0,7,4,7,7,0,4,9,7,8,4,7,0,9,4,7,9,7,4,12,0,0,4,16,7,7,4,0,0,7,4,7,7,8,4,16,7,0,4,7,9,8,4,7,0,7,4,32"@en .
+
+seq:A200518_Y_1_20120331T134835 a seq:Text ;
+    cnt:chars "Cf. A051204-A051221, A200505-A200520."@en .
+
+seq:A200518_e_1_20120331T134835 a seq:Text ;
+    cnt:chars "See A200512 for motivation and detailed examples."@en .
+
+seq:A200518_o_1_20120331T134835 a seq:Text ;
+    cnt:chars "(PARI) A200518(n,b=8,p=3)={ my( x=0, qr, bx, seen ); for( m=3,9e9, while( x^p < m, issquare(b^x+n) & return(0); x++); qr=vecsort(vector(m,y,y^2-n)%m,,8); seen=0; bx=1; until( bittest(seen+=1<<bx, bx=bx*b%m), for(i=1,#qr, qr[i]<bx & next; qr[i]>bx & break; next(3))); return(m))}"@en .
+

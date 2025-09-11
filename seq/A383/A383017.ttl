@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.614788Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 734}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383017 a seq:Sequence ;
+    rdfs:label "A383017"@en ;
+    seq:hasTextList ( seq:A383017_I_1_20250429T165234 seq:A383017_N_1_20250429T165234 seq:A383017_C_1_20250429T165234 seq:A383017_F_1_20250429T165234 seq:A383017_t_1_20250429T165234 seq:A383017_o_1_20250429T165234 seq:A383017_Y_1_20250429T165234 seq:A383017_K_1_20250429T165234 seq:A383017_O_1_20250429T165234 seq:A383017_A_1_20250429T165234 seq:A383017_V_1_20250429T165234 ) .
+
+seq:A383017_A_1_20250429T165234 a seq:Text ;
+    cnt:chars "_Peter Luschny_, Apr 12 2025"@en .
+
+seq:A383017_C_1_20250429T165234 a seq:Text ;
+    cnt:chars "See the comments in A382883."@en .
+
+seq:A383017_F_1_20250429T165234 a seq:Text ;
+    cnt:chars """A382883 = this sequence union A383016 union A382943.
+A000040 is a subsequence."""@en .
+
+seq:A383017_I_1_20250429T165234 a seq:Text ;
+    cnt:chars "#11 Apr 29 2025 16:52:34"@en .
+
+seq:A383017_K_1_20250429T165234 a seq:Text ;
+    cnt:chars "nonn,new"@en .
+
+seq:A383017_N_1_20250429T165234 a seq:Text ;
+    cnt:chars "Numbers k such that A382883(k) = -1."@en .
+
+seq:A383017_O_1_20250429T165234 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A383017_V_1_20250429T165234 a seq:Text ;
+    cnt:chars "2,3,5,7,11,13,17,19,23,29,30,31,36,37,41,42,43,47,53,59,61,64,66,67,70,71,73,78,79,83,89,97,100,101,102,103,105,107,109,110,113,114,127,130,131,137,138,139,149,151,154,157,163,165,167,170,173,174,179"@en .
+
+seq:A383017_Y_1_20250429T165234 a seq:Text ;
+    cnt:chars "Cf. A382883, A382943, A383016, A000040, A325264."@en .
+
+seq:A383017_o_1_20250429T165234 a seq:Text ;
+    cnt:chars """(SageMath)
+def A383017List(upto): return [n for n in srange(1, upto) if A382883(n) == -1]"""@en .
+
+seq:A383017_t_1_20250429T165234 a seq:Text ;
+    cnt:chars "V[n_, e_] := If[e == 1, 1, IntegerExponent[n, e]]; f[n_] := f[n] = -DivisorSum[n, V[n, #] * f[#] &, # < n &]; f[1] = 1; Select[Range[200], f[#] == -1 &] (* _Amiram Eldar_, Apr 29 2025 *)"@en .
+

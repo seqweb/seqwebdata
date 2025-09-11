@@ -1,0 +1,46 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.265147Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1047}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200878 a seq:Sequence ;
+    rdfs:label "A200878"@en ;
+    seq:hasTextList ( seq:A200878_I_1_20211011T134500 seq:A200878_N_1_20211011T134500 seq:A200878_H_1_20211011T134500 seq:A200878_e_1_20211011T134500 seq:A200878_t_1_20211011T134500 seq:A200878_o_1_20211011T134500 seq:A200878_Y_1_20211011T134500 seq:A200878_K_1_20211011T134500 seq:A200878_O_1_20211011T134500 seq:A200878_A_1_20211011T134500 seq:A200878_V_1_20211011T134500 ) .
+
+seq:A200878_A_1_20211011T134500 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 23 2011"@en .
+
+seq:A200878_H_1_20211011T134500 a seq:Text ;
+    cnt:chars "Arkadiusz Wesolowski, <a href=\"/A200878/b200878.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A200878_I_1_20211011T134500 a seq:Text ;
+    cnt:chars "#26 Oct 11 2021 13:45:00"@en .
+
+seq:A200878_K_1_20211011T134500 a seq:Text ;
+    cnt:chars "base,nonn"@en .
+
+seq:A200878_N_1_20211011T134500 a seq:Text ;
+    cnt:chars "Composite numbers whose prime factors have equal numbers of bits."@en .
+
+seq:A200878_O_1_20211011T134500 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200878_V_1_20211011T134500 a seq:Text ;
+    cnt:chars "4,6,8,9,12,16,18,24,25,27,32,35,36,48,49,54,64,72,81,96,108,121,125,128,143,144,162,169,175,192,216,243,245,256,288,289,323,324,343,361,384,391,432,437,486,493,512,527,529,551,576,589,625,648,667,713"@en .
+
+seq:A200878_Y_1_20211011T134500 a seq:Text ;
+    cnt:chars "Supersequence of A085721 and of A182302."@en .
+
+seq:A200878_e_1_20211011T134500 a seq:Text ;
+    cnt:chars """7429 = 17*19*23 -> 10001*10011*10111, therefore 7429 is a term.
+7430 = 2*5*743 -> 10*101*1011100111, therefore 7430 is not a term."""@en .
+
+seq:A200878_o_1_20211011T134500 a seq:Text ;
+    cnt:chars "(PARI) is(n)=my(f=factor(n)[,1]);#binary(f[1])==#binary(f[#f])&&!isprime(n) \\\\ _Charles R Greathouse IV_, Dec 23 2011"@en .
+
+seq:A200878_t_1_20211011T134500 a seq:Text ;
+    cnt:chars """lst = {}; Do[b = IntegerDigits[FactorInteger[n], 2]; If[! PrimeQ[n] && Length[b[[-1, 1]]] == Length[b[[1, 1]]], AppendTo[lst, n]], {n, 4, 6!}]; lst (* _Arkadiusz Wesolowski_, Dec 03 2011 *)
+Select[Range[800],CompositeQ[#]&&Length[Union[IntegerLength[ #,2]&/@ FactorInteger[ #][[All,1]]]]==1&] (* _Harvey P. Dale_, Oct 11 2021 *)"""@en .
+

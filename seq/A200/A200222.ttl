@@ -1,0 +1,60 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.891728Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2602}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200222 a seq:Sequence ;
+    rdfs:label "A200222"@en ;
+    seq:hasTextList ( seq:A200222_I_1_20240118T064545 seq:A200222_N_1_20240118T064545 seq:A200222_H_1_20240118T064545 seq:A200222_F_1_20240118T064545 seq:A200222_e_1_20240118T064545 seq:A200222_t_1_20240118T064545 seq:A200222_o_1_20240118T064545 seq:A200222_Y_1_20240118T064545 seq:A200222_K_1_20240118T064545 seq:A200222_O_1_20240118T064545 seq:A200222_A_1_20240118T064545 seq:A200222_V_1_20240118T064545 ) .
+
+seq:A200222_A_1_20240118T064545 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 14 2011"@en .
+
+seq:A200222_F_1_20240118T064545 a seq:Text ;
+    cnt:chars """By the Jacobi triple product identity, g.f. A(x) satisfies:
+(1) A(x) = Product_{n>=1} (1 + x^(2*n-1)*A(x)^(2*n-2)) * (1 + x^(2*n-1)*A(x)^(2*n)) * (1 - x^(2*n)*A(x)^(2*n)).
+Let G(x) be the g.f. of A190791, then A(x) satisfies:
+(2) A(x) = (1/x)*Series_Reversion(x/G(x)),
+(3) A(x) = G(x*A(x)) and G(x) = A(x/G(x)),
+(4) a(n) = [x^n] G(x)^(n+1)/(n+1),
+where G(x) = 1 + Sum_{n>=1} x^(n^2) * (G(x)^n + 1/G(x)^n).
+a(n) ~ c * d^n / n^(3/2), where d = 5.42800145666083947972618... and c = 0.45497910593346577587... - _Vaclav Kotesovec_, Sep 04 2017"""@en .
+
+seq:A200222_H_1_20240118T064545 a seq:Text ;
+    cnt:chars "Vaclav Kotesovec, <a href=\"/A200222/b200222.txt\">Table of n, a(n) for n = 0..430</a> (terms 0..200 from Paul D. Hanna)"@en .
+
+seq:A200222_I_1_20240118T064545 a seq:Text ;
+    cnt:chars "#22 Jan 18 2024 06:45:45"@en .
+
+seq:A200222_K_1_20240118T064545 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200222_N_1_20240118T064545 a seq:Text ;
+    cnt:chars "G.f. satisfies: A(x) = 1 + Sum_{n>=1} (x*A(x))^(n^2) * (A(x)^n + 1/A(x)^n)."@en .
+
+seq:A200222_O_1_20240118T064545 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200222_V_1_20240118T064545 a seq:Text ;
+    cnt:chars "1,2,4,12,42,164,688,3024,13680,63110,295520,1401012,6713280,32470468,158343504,777725264,3843992546,19104857608,95419519076,478668009828,2410698765472,12184259877320,61782045169312,314202878599696,1602270787137472,8191160756085318,41971595130249968,215522156779513584"@en .
+
+seq:A200222_Y_1_20240118T064545 a seq:Text ;
+    cnt:chars "Cf. A190791, A199576, A196354, A197707."@en .
+
+seq:A200222_e_1_20240118T064545 a seq:Text ;
+    cnt:chars """G.f.: A(x) = 1 + 2*x + 4*x^2 + 12*x^3 + 42*x^4 + 164*x^5 + 688*x^6 +...
+The g.f. A = A(x) may be expressed by the series:
+A(x) = 1 + x*A*(A + 1/A) + x^4*A^4*(A^2 + 1/A^2) + x^9*A^9*(A^3 + 1/A^3) + x^16*A^16*(A^4 + 1/A^4) + x^25*A^25*(A^5 + 1/A^5) +...
+and by the Jacobi triple product:
+A(x) = (1+x)*(1+x*A^2)*(1-x^2*A^2) * (1+x^3*A^2)*(1+x^3*A^4)*(1-x^4*A^4) * (1+x^5*A^4)*(1+x^5*A^6)*(1-x^6*A^6) * (1+x^7*A^6)*(1+x^7*A^8)*(1-x^8*A^8) *..."""@en .
+
+seq:A200222_o_1_20240118T064545 a seq:Text ;
+    cnt:chars """(PARI) {a(n)=local(A=1+x); for(i=1,n,A=1+sum(m=1, sqrtint(n+1), (A^m +1/(A+x*O(x^n))^m)*(x*A)^(m^2))); polcoeff(A, n)}
+(PARI) /* By Jacobi's Triple Product Identity: */
+{a(n)=local(A=1+x); for(i=1,n,A=prod(m=1, n\\2+1, (1+x^(2*m-1)*A^(2*m-2)+x*O(x^n))*(1+x^(2*m-1)*A^(2*m))*(1-x^(2*m)*A^(2*m)) )); polcoeff(A, n)}"""@en .
+
+seq:A200222_t_1_20240118T064545 a seq:Text ;
+    cnt:chars "(* Calculation of constant d: *) 1/r /. FindRoot[{s == r^2*s^2 * QPochhammer[-1/r, r^2*s^2] * QPochhammer[-1/(r*s^2), r^2*s^2] * QPochhammer[r^2*s^2, r^2*s^2]/((1 + r)*(1 + r*s^2)), 1 - r*s^2 - 2*(1 + r*s^2) * QPolyGamma[0, 1, r^2*s^2] / Log[r^2*s^2] + 2*(1 + r*s^2) * QPolyGamma[0, Log[-1/(r*s^2)] / Log[r^2*s^2], r^2*s^2] / Log[r^2*s^2] + 2*r^2*s^2*((1 + r*s^2)*(Derivative[0, 1][QPochhammer][-1/r, r^2*s^2] / QPochhammer[-1/r, r^2*s^2] + Derivative[0, 1][QPochhammer][-1/(r*s^2), r^2*s^2] / QPochhammer[-1/(r*s^2), r^2*s^2]) + r^2*s * QPochhammer[-1/r, r^2*s^2] * QPochhammer[-1/(r*s^2), r^2*s^2] *  Derivative[0, 1][QPochhammer][r^2*s^2, r^2*s^2] / (1 + r)) == 0}, {r, 1/5}, {s, 2}, WorkingPrecision -> 70] (* _Vaclav Kotesovec_, Jan 18 2024 *)"@en .
+

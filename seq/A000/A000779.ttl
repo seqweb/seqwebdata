@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.334318Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1011}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000779 a seq:Sequence ;
+    rdfs:label "A000779"@en ;
+    seq:hasTextList ( seq:A000779_I_1_20220908T084428 seq:A000779_N_1_20220908T084428 seq:A000779_H_1_20220908T084428 seq:A000779_p_1_20220908T084428 seq:A000779_t_1_20220908T084428 seq:A000779_o_1_20220908T084428 seq:A000779_Y_1_20220908T084428 seq:A000779_K_1_20220908T084428 seq:A000779_O_1_20220908T084428 seq:A000779_A_1_20220908T084428 seq:A000779_E_1_20220908T084428 seq:A000779_V_1_20220908T084428 ) .
+
+seq:A000779_A_1_20220908T084428 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000779_E_1_20220908T084428 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jun 13 2011"@en .
+
+seq:A000779_H_1_20220908T084428 a seq:Text ;
+    cnt:chars """Nathaniel Johnston, <a href="/A000779/b000779.txt">Table of n, a(n) for n = 1..250</a>
+J. R. Stembridge, <a href="http://dx.doi.org/10.1090/S0002-9947-97-01805-9">Some combinatorial aspects of reduced words in finite Coxeter groups</a>, Trans. Amer. Math. Soc. 349 (1997), no. 4, 1285-1332."""@en .
+
+seq:A000779_I_1_20220908T084428 a seq:Text ;
+    cnt:chars "#29 Sep 08 2022 08:44:28"@en .
+
+seq:A000779_K_1_20220908T084428 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000779_N_1_20220908T084428 a seq:Text ;
+    cnt:chars "a(n) = 2*(2n-1)!!-(n-1)!*2^(n-1), where (2n-1)!! is A001147(n)."@en .
+
+seq:A000779_O_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000779_V_1_20220908T084428 a seq:Text ;
+    cnt:chars "1,4,22,162,1506,16950,224190,3408930,58596930,1123663590,23782729950,550718680050,13849716607650,375904338960150,10952237584237950,340947694234397250,11294123783425733250,396665528378000631750"@en .
+
+seq:A000779_Y_1_20220908T084428 a seq:Text ;
+    cnt:chars "Cf. A001147."@en .
+
+seq:A000779_o_1_20220908T084428 a seq:Text ;
+    cnt:chars "(Magma) A001147:=func< n | n eq 0 select 1 else &*[ k: k in [1..2*n-1 by 2] ] >; [ 2*A001147(n)-Factorial(n-1)*2^(n-1): n in [1..20] ]; // _Klaus Brockhaus_, Jun 22 2011"@en .
+
+seq:A000779_p_1_20220908T084428 a seq:Text ;
+    cnt:chars "seq(2*doublefactorial(2*n-1)-(n-1)!*2^(n-1), n=1..18); # _Nathaniel Johnston_, Jun 23 2011"@en .
+
+seq:A000779_t_1_20220908T084428 a seq:Text ;
+    cnt:chars "Table[2*(2n-1)!! - (n-1)!*2^(n-1), {n, 1, 20}] (* _Jean-François Alcover_, Feb 11 2016 *)"@en .
+

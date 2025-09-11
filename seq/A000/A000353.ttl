@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.345967Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1688}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000353 a seq:Sequence ;
+    rdfs:label "A000353"@en ;
+    seq:hasTextList ( seq:A000353_I_1_20240120T035300 seq:A000353_N_1_20240120T035300 seq:A000353_C_1_20240120T035300 seq:A000353_H_1_20240120T035300 seq:A000353_F_1_20240120T035300 seq:A000353_p_1_20240120T035300 seq:A000353_t_1_20240120T035300 seq:A000353_o_1_20240120T035300 seq:A000353_Y_1_20240120T035300 seq:A000353_K_1_20240120T035300 seq:A000353_O_1_20240120T035300 seq:A000353_A_1_20240120T035300 seq:A000353_E_1_20240120T035300 seq:A000353_V_1_20240120T035300 ) .
+
+seq:A000353_A_1_20240120T035300 a seq:Text ;
+    cnt:chars "_Robert A. J. Matthews_"@en .
+
+seq:A000353_C_1_20240120T035300 a seq:Text ;
+    cnt:chars """The decimal expansion of 1/a(n) will produce a stream of a(n)-1 pseudo-random digits. - _Reinhard Zumkeller_, Feb 10 2009
+The condition in the name is sufficient for primes p such that the decimal expansion of 1/p recurs after p-1 digits, which is the maximum-possible cycle length. - _Robert A. J. Matthews_, Oct 31 2023"""@en .
+
+seq:A000353_E_1_20240120T035300 a seq:Text ;
+    cnt:chars "More terms from _Reinhard Zumkeller_, Feb 10 2009"@en .
+
+seq:A000353_F_1_20240120T035300 a seq:Text ;
+    cnt:chars "a(n) = 2*A000355(n)+1. - _Reinhard Zumkeller_, Feb 10 2009"@en .
+
+seq:A000353_H_1_20240120T035300 a seq:Text ;
+    cnt:chars """Reinhard Zumkeller, <a href="/A000353/b000353.txt">Table of n, a(n) for n = 1..1000</a>
+Robert A. J. Matthews, <a href="https://www.researchgate.net/publication/266728416_Maximally_periodic_reciprocals">Maximally periodic reciprocals</a>, Bull. Institute of Mathematics and Its Applications, vol. 28, p. 147-148, 1992.
+Wikipedia, <a href="http://en.wikipedia.org/wiki/Sophie_Germain_prime">Sophie Germain prime</a>
+<a href="/index/1#1overn">Index entries for sequences related to decimal expansion of 1/n.</a>"""@en .
+
+seq:A000353_I_1_20240120T035300 a seq:Text ;
+    cnt:chars "#36 Jan 20 2024 03:53:00"@en .
+
+seq:A000353_K_1_20240120T035300 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000353_N_1_20240120T035300 a seq:Text ;
+    cnt:chars "Primes p == 7, 19, 23 (mod 40) such that (p-1)/2 is also prime."@en .
+
+seq:A000353_O_1_20240120T035300 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000353_V_1_20240120T035300 a seq:Text ;
+    cnt:chars "7,23,47,59,167,179,263,383,503,863,887,983,1019,1367,1487,1619,1823,2063,2099,2207,2447,2459,2579,2819,2903,3023,3167,3623,3779,3863,4007,4127,4139,4259,4703,5087,5099,5807,5927,5939,6047,6659,6779,6899,6983,7247"@en .
+
+seq:A000353_Y_1_20240120T035300 a seq:Text ;
+    cnt:chars """Subset of A005385.
+Subsequence of A001913, A006883."""@en .
+
+seq:A000353_o_1_20240120T035300 a seq:Text ;
+    cnt:chars "(PARI) is(n)=my(k=n%40); (k==7||k==19||k==23) && isprime(n\\2) && isprime(n) \\\\ _Charles R Greathouse IV_, Nov 20 2014"@en .
+
+seq:A000353_p_1_20240120T035300 a seq:Text ;
+    cnt:chars """q:= p-> irem(p, 40) in {7, 19, 23} and andmap(isprime, [p, (p-1)/2]):
+select(q, [$1..10000])[];  # _Alois P. Heinz_, Oct 31 2023"""@en .
+
+seq:A000353_t_1_20240120T035300 a seq:Text ;
+    cnt:chars "Select[Prime[Range[1000]], MatchQ[Mod[#, 40], 7|19|23] && PrimeQ[(#-1)/2]&] (* _Jean-François Alcover_, Feb 07 2016 *)"@en .
+

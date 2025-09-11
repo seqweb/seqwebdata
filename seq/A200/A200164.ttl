@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.770460Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 663}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200164 a seq:Sequence ;
+    rdfs:label "A200164"@en ;
+    seq:hasTextList ( seq:A200164_I_1_20120331T123638 seq:A200164_N_1_20120331T123638 seq:A200164_C_1_20120331T123638 seq:A200164_e_1_20120331T123638 seq:A200164_K_1_20120331T123638 seq:A200164_O_1_20120331T123638 seq:A200164_A_1_20120331T123638 seq:A200164_V_1_20120331T123638 ) .
+
+seq:A200164_A_1_20120331T123638 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 13 2011"@en .
+
+seq:A200164_C_1_20120331T123638 a seq:Text ;
+    cnt:chars "Column 7 of A200165"@en .
+
+seq:A200164_I_1_20120331T123638 a seq:Text ;
+    cnt:chars "#4 Mar 31 2012 12:36:38"@en .
+
+seq:A200164_K_1_20120331T123638 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200164_N_1_20120331T123638 a seq:Text ;
+    cnt:chars "Number of -7..7 arrays x(0..n-1) of n elements with nonzero sum and with zero through n-1 differences all nonzero"@en .
+
+seq:A200164_O_1_20120331T123638 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200164_V_1_20120331T123638 a seq:Text ;
+    cnt:chars "14,168,2180,27160,336992,4141212,50917674,624074768"@en .
+
+seq:A200164_e_1_20120331T123638 a seq:Text ;
+    cnt:chars """Some solutions for n=5
+.-3....4....1...-7...-3...-3...-3....1....1....1...-7....5...-7...-7...-4...-7
+..2...-6...-7....6...-6...-4...-7...-1...-4....7....3....4....7...-5....4...-3
+.-3...-2...-5...-3...-5....2....1...-7....3....4...-2...-3...-7....2...-7...-1
+..6...-7....1...-1...-3...-4....3....6....2...-1....2....4...-4...-7...-1....6
+..2...-1...-1...-7....4....7....4...-1...-6...-3...-7...-6....6...-6...-3...-7"""@en .
+

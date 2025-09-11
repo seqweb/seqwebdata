@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.402672Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1229}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200474 a seq:Sequence ;
+    rdfs:label "A200474"@en ;
+    seq:hasTextList ( seq:A200474_I_1_20250216T083316 seq:A200474_N_1_20250216T083316 seq:A200474_C_1_20250216T083316 seq:A200474_H_1_20250216T083316 seq:A200474_F_1_20250216T083316 seq:A200474_e_1_20250216T083316 seq:A200474_t_1_20250216T083316 seq:A200474_Y_1_20250216T083316 seq:A200474_K_1_20250216T083316 seq:A200474_O_1_20250216T083316 seq:A200474_A_1_20250216T083316 seq:A200474_V_1_20250216T083316 ) .
+
+seq:A200474_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 18 2011"@en .
+
+seq:A200474_C_1_20250216T083316 a seq:Text ;
+    cnt:chars """Cramer's conjecture is true if, for every n >= 5, a(n) is smaller than 10.
+If Cramer's conjecture is true, then Andrica's conjecture is true. [_John W. Nicholson_, Feb 06 2012]
+Some mathematicians are trying to prove: if Andrica's conjecture is true, then Cramer's conjecture is true. [_Arkadiusz Wesolowski_, Feb 22 2012]"""@en .
+
+seq:A200474_F_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n) = floor(10*A001223(n)/log(A000040(n))^2), n >= 5."@en .
+
+seq:A200474_H_1_20250216T083316 a seq:Text ;
+    cnt:chars """Arkadiusz Wesolowski, <a href="/A200474/b200474.txt">Table of n, a(n) for n = 5..10000</a>
+Carlos Rivera, <a href="http://www.primepuzzles.net/conjectures/conj_007.htm">Conjecture 7. The Cramer's Conjecture</a>, The Prime Puzzles and Problems Connection.
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/CramerConjecture.html">Cramer Conjecture</a>"""@en .
+
+seq:A200474_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#36 Feb 16 2025 08:33:16"@en .
+
+seq:A200474_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200474_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(n) = floor(10*(prime(n+1)-prime(n))/log(prime(n))^2)."@en .
+
+seq:A200474_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "5,1"@en .
+
+seq:A200474_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "3,6,2,4,6,1,5,3,1,2,4,3,1,3,2,1,3,2,3,3,1,0,1,0,1,6,1,2,0,4,0,2,2,1,2,2,0,3,0,1,0,4,4,1,0,1,2,0,3,1,1,1,0,1,1,0,3,4,1,0,1,4,1,2,0,1,1,2,1,1,1,1,2,1,2,2,0,2,0,1,1,1,2,1,0,1,3"@en .
+
+seq:A200474_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A000040, A001223, A086142, A124129, A200324."@en .
+
+seq:A200474_e_1_20250216T083316 a seq:Text ;
+    cnt:chars "a(9) = 6 because 10*(29-23)/log(23)^2 = 6.1029419977...."@en .
+
+seq:A200474_t_1_20250216T083316 a seq:Text ;
+    cnt:chars "Table[Floor[10*(Prime[n + 1] - Prime[n])/Log[Prime[n]]^2], {n, 5, 100}]"@en .
+

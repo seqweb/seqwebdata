@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.777798Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 538}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200658 a seq:Sequence ;
+    rdfs:label "A200658"@en ;
+    seq:hasTextList ( seq:A200658_I_1_20120331T102218 seq:A200658_N_1_20120331T102218 seq:A200658_C_1_20120331T102218 seq:A200658_Y_1_20120331T102218 seq:A200658_K_1_20120331T102218 seq:A200658_O_1_20120331T102218 seq:A200658_A_1_20120331T102218 seq:A200658_V_1_20120331T102218 ) .
+
+seq:A200658_A_1_20120331T102218 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 20 2011"@en .
+
+seq:A200658_C_1_20120331T102218 a seq:Text ;
+    cnt:chars """For x values see A200656.
+For y values see A200657.
+Definition: Secondary terms occured when existed such integer k that A200656 is divisible by k^2 and A200657 is divisible by k^3 and A200658 is divisible by k^6.
+Terms free of such k are primary terms.
+Secondary terms are: a(6)=a(2)*2^6, a(7)=a(3)*2^6.
+A200218 is subset of this sequence."""@en .
+
+seq:A200658_I_1_20120331T102218 a seq:Text ;
+    cnt:chars "#11 Mar 31 2012 10:22:18"@en .
+
+seq:A200658_K_1_20120331T102218 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A200658_N_1_20120331T102218 a seq:Text ;
+    cnt:chars "a(n) = A200656(n)^3 - A200657(n)^2."@en .
+
+seq:A200658_O_1_20120331T102218 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200658_V_1_20120331T102218 a seq:Text ;
+    cnt:chars "52488,15336,-20088,219375,-293625,981504,-1285632,-474552,1367631"@en .
+
+seq:A200658_Y_1_20120331T102218 a seq:Text ;
+    cnt:chars "Cf. A200218,  A200656, A200657."@en .
+

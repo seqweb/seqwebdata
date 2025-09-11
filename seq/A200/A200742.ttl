@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.994116Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 800}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200742 a seq:Sequence ;
+    rdfs:label "A200742"@en ;
+    seq:hasTextList ( seq:A200742_I_1_20130713T120419 seq:A200742_N_1_20130713T120419 seq:A200742_C_1_20130713T120419 seq:A200742_H_1_20130713T120419 seq:A200742_o_1_20130713T120419 seq:A200742_Y_1_20130713T120419 seq:A200742_K_1_20130713T120419 seq:A200742_O_1_20130713T120419 seq:A200742_A_1_20130713T120419 seq:A200742_V_1_20130713T120419 ) .
+
+seq:A200742_A_1_20130713T120419 a seq:Text ;
+    cnt:chars "_Reinhard Zumkeller_, Nov 21 2011"@en .
+
+seq:A200742_C_1_20130713T120419 a seq:Text ;
+    cnt:chars "Shorter rows in A200741 are contained in longer rows; a(n) gives length of common initial segments of consecutive rows: A200741(n,k) = A200741(n+1,k) for k <= a(n)."@en .
+
+seq:A200742_H_1_20130713T120419 a seq:Text ;
+    cnt:chars "Reinhard Zumkeller, <a href=\"/A200742/b200742.txt\">Table of n, a(n) for n = 1..100</a>"@en .
+
+seq:A200742_I_1_20130713T120419 a seq:Text ;
+    cnt:chars "#8 Jul 13 2013 12:04:19"@en .
+
+seq:A200742_K_1_20130713T120419 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200742_N_1_20130713T120419 a seq:Text ;
+    cnt:chars "Greatest number such that in table A200741 the first terms in row n coincide with row n+1."@en .
+
+seq:A200742_O_1_20130713T120419 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200742_V_1_20130713T120419 a seq:Text ;
+    cnt:chars "1,2,4,10,7,35,33,36,31,82,17,81,78,170,55,132,28,195,247,313,439,325,415,498,376,213,161,693,608,948,739,557,831,1007,1252,631,1156,1370,148,579,1023,1755,1677,1239,1638,1839,2281,2401,1963,2630,2521,2951"@en .
+
+seq:A200742_Y_1_20130713T120419 a seq:Text ;
+    cnt:chars "Cf. A200738."@en .
+
+seq:A200742_o_1_20130713T120419 a seq:Text ;
+    cnt:chars """(Haskell)
+a200742 n = a200742_list !! (n-1)
+a200742_list = f a200741_tabl where
+   f (rs:rss'@(rs':rss)) =
+     (length $ takeWhile (== EQ) $ zipWith compare rs rs') : f rss'"""@en .
+

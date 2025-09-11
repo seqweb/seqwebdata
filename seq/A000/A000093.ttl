@@ -1,0 +1,65 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.410650Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1706}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000093 a seq:Sequence ;
+    rdfs:label "A000093"@en ;
+    seq:hasTextList ( seq:A000093_I_1_20240908T223006 seq:A000093_N_1_20240908T223006 seq:A000093_D_1_20240908T223006 seq:A000093_H_1_20240908T223006 seq:A000093_F_1_20240908T223006 seq:A000093_p_1_20240908T223006 seq:A000093_t_1_20240908T223006 seq:A000093_o_1_20240908T223006 seq:A000093_Y_1_20240908T223006 seq:A000093_K_1_20240908T223006 seq:A000093_O_1_20240908T223006 seq:A000093_A_1_20240908T223006 seq:A000093_E_1_20240908T223006 seq:A000093_V_1_20240908T223006 ) .
+
+seq:A000093_A_1_20240908T223006 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000093_D_1_20240908T223006 a seq:Text ;
+    cnt:chars """B. K. Agarwala and F. C. Auluck, Statistical mechanics and partitions into non-integral powers of integers, Proc. Camb. Phil. Soc., 47 (1951), 207-216.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000093_E_1_20240908T223006 a seq:Text ;
+    cnt:chars "More terms from _James A. Sellers_, May 04 2000"@en .
+
+seq:A000093_F_1_20240908T223006 a seq:Text ;
+    cnt:chars """a(n) = A077121(n) - 1. [_Reinhard Zumkeller_, Oct 31 2009]
+a(n) = floor(n*sqrt(n)). [_Arkadiusz Wesolowski_, Jun 01 2011]
+a(n) = A000196(A000578(n)) = A074704(n)+n*A000196(n). [_Reinhard Zumkeller_, Jun 27 2011]"""@en .
+
+seq:A000093_H_1_20240908T223006 a seq:Text ;
+    cnt:chars """Christian G. Bower, <a href="/A000093/b000093.txt">Table of n, a(n) for n=0..500</a>
+B. K. Agarwala and F. C. Auluck, <a href="/A000093/a000093.pdf">Statistical mechanics and partitions into non-integral powers of integers</a>, Proc. Camb. Phil. Soc., 47 (1951), 207-216. [Annotated scanned copy]"""@en .
+
+seq:A000093_I_1_20240908T223006 a seq:Text ;
+    cnt:chars "M1344 N0515 #42 Sep 08 2024 22:30:06"@en .
+
+seq:A000093_K_1_20240908T223006 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000093_N_1_20240908T223006 a seq:Text ;
+    cnt:chars "a(n) = floor(n^(3/2))."@en .
+
+seq:A000093_O_1_20240908T223006 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000093_V_1_20240908T223006 a seq:Text ;
+    cnt:chars "0,1,2,5,8,11,14,18,22,27,31,36,41,46,52,58,64,70,76,82,89,96,103,110,117,125,132,140,148,156,164,172,181,189,198,207,216,225,234,243,252,262,272,281,291,301,311,322,332,343,353,364,374,385,396,407,419,430"@en .
+
+seq:A000093_Y_1_20240908T223006 a seq:Text ;
+    cnt:chars """Integer part of square root of n^k: A000196 (k=1), this sequence (k=3), A155013 (k=5), A155014 (k=7), A155015 (k=11), A155016 (k=13), A155018 (k=15), A155019 (k=17).
+Cf. A002821.
+Cf. A185549."""@en .
+
+seq:A000093_o_1_20240908T223006 a seq:Text ;
+    cnt:chars """(PARI) a(n)=if(n<0,0,sqrtint(n^3))
+(Haskell)
+a000093 = a000196 . a000578  -- _Reinhard Zumkeller_, Jul 11 2014
+(Python)
+from math import isqrt
+def A000093(n): return isqrt(n**3) # _Chai Wah Wu_, Sep 08 2024"""@en .
+
+seq:A000093_p_1_20240908T223006 a seq:Text ;
+    cnt:chars "Digits := 100: A000093 := n->floor(evalf(n^(3/2)));"@en .
+
+seq:A000093_t_1_20240908T223006 a seq:Text ;
+    cnt:chars "Table[ Floor[ Sqrt[n^3]], {n, 0, 60}]"@en .
+

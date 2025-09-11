@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.441498Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 517}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200972 a seq:Sequence ;
+    rdfs:label "A200972"@en ;
+    seq:hasTextList ( seq:A200972_I_1_20221117T184806 seq:A200972_N_1_20221117T184806 seq:A200972_C_1_20221117T184806 seq:A200972_e_1_20221117T184806 seq:A200972_Y_1_20221117T184806 seq:A200972_K_1_20221117T184806 seq:A200972_O_1_20221117T184806 seq:A200972_A_1_20221117T184806 seq:A200972_V_1_20221117T184806 ) .
+
+seq:A200972_A_1_20221117T184806 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 25 2011"@en .
+
+seq:A200972_C_1_20221117T184806 a seq:Text ;
+    cnt:chars "Column 6 of A200974."@en .
+
+seq:A200972_I_1_20221117T184806 a seq:Text ;
+    cnt:chars "#6 Nov 17 2022 18:48:06"@en .
+
+seq:A200972_K_1_20221117T184806 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200972_N_1_20221117T184806 a seq:Text ;
+    cnt:chars "Number of n X 6 0..6 arrays with every row and column running average nondecreasing rightwards and downwards."@en .
+
+seq:A200972_O_1_20221117T184806 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200972_V_1_20221117T184806 a seq:Text ;
+    cnt:chars "4874,3543465,2279060645,1342587653727,738228105542702"@en .
+
+seq:A200972_Y_1_20221117T184806 a seq:Text ;
+    cnt:chars "Cf. A200974."@en .
+
+seq:A200972_e_1_20221117T184806 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..0..0..0..0..1..5....0..0..0..0..1..2....0..0..0..0..0..1....0..0..0..0..1..3
+..0..0..0..0..1..5....0..0..0..0..2..4....0..0..0..0..2..2....0..0..0..0..2..4
+..0..0..3..6..5..5....0..0..1..3..5..4....0..0..6..6..6..5....0..0..2..2..4..6"""@en .
+

@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.812715Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1516}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200182 a seq:Sequence ;
+    rdfs:label "A200182"@en ;
+    seq:hasTextList ( seq:A200182_I_1_20150507T122823 seq:A200182_N_1_20150507T122823 seq:A200182_H_1_20150507T122823 seq:A200182_F_1_20150507T122823 seq:A200182_e_1_20150507T122823 seq:A200182_Y_1_20150507T122823 seq:A200182_K_1_20150507T122823 seq:A200182_O_1_20150507T122823 seq:A200182_A_1_20150507T122823 seq:A200182_V_1_20150507T122823 ) .
+
+seq:A200182_A_1_20150507T122823 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 13 2011"@en .
+
+seq:A200182_F_1_20150507T122823 a seq:Text ;
+    cnt:chars """Empirical: a(n) = 2*a(n-1) -a(n-2) +a(n-3) -2*a(n-4) +a(n-5)
+     a(3*k-2) = ((3*k+1)^2)/3 - 7/3.
+     a(3*k-1) = ((3*k+2)^2)/3 - 7/3.
+     a(3*k)   = ((3*k+3)^2)/3 -  1  = 3*(k+1)^2 - 1.
+     a(3*k+1) = ((3*k+4)^2)/3 - 7/3.
+     a(3*k+2) = ((3*k+5)^2)/3 - 7/3 ... and so on.
+The terms a(3*k-1) and a(3*k+1) seem to be terms of A241199: numbers n such that 4 consecutive terms of binomial(n,k) satisfy a quadratic relation for 0 <= k <= n/2. - _Avi Friedlich_, Apr 28 2015
+Empirical g.f.: -x*(2*x^4-5*x^3+2*x^2+3) / ((x-1)^3*(x^2+x+1)). - _Colin Barker_, Apr 28 2015"""@en .
+
+seq:A200182_H_1_20150507T122823 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200182/b200182.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200182_I_1_20150507T122823 a seq:Text ;
+    cnt:chars "#26 May 07 2015 12:28:23"@en .
+
+seq:A200182_K_1_20150507T122823 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200182_N_1_20150507T122823 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..3) of 4 elements with zero sum and no two consecutive declines, no adjacent equal elements, and no element more than one greater than the previous (random base sawtooth pattern)."@en .
+
+seq:A200182_O_1_20150507T122823 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200182_V_1_20150507T122823 a seq:Text ;
+    cnt:chars "3,6,11,14,19,26,31,38,47,54,63,74,83,94,107,118,131,146,159,174,191,206,223,242,259,278,299,318,339,362,383,406,431,454,479,506,531,558,587,614,643,674,703,734,767,798,831,866,899,934,971,1006,1043,1082,1119,1158"@en .
+
+seq:A200182_Y_1_20150507T122823 a seq:Text ;
+    cnt:chars """Row 4 of A200181.
+A014206 is a related sequence."""@en .
+
+seq:A200182_e_1_20150507T122823 a seq:Text ;
+    cnt:chars """Some solutions for n=6:
+..3....4....2....6....5....2....0....6....1....0....0....5....6....1....4....3
+.-2....0....1...-2....6....3...-1...-1....2....1....1....0...-3....0...-1....1
+.-1....1....2...-1...-6...-3....0....0....3....2...-1....1...-2....1....0....2
+..0...-5...-5...-3...-5...-2....1...-5...-6...-3....0...-6...-1...-2...-3...-6"""@en .
+

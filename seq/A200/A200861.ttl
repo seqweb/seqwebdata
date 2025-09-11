@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.231123Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 772}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200861 a seq:Sequence ;
+    rdfs:label "A200861"@en ;
+    seq:hasTextList ( seq:A200861_I_1_20230708T210006 seq:A200861_N_1_20230708T210006 seq:A200861_C_1_20230708T210006 seq:A200861_H_1_20230708T210006 seq:A200861_p_1_20230708T210006 seq:A200861_t_1_20230708T210006 seq:A200861_Y_1_20230708T210006 seq:A200861_K_1_20230708T210006 seq:A200861_O_1_20230708T210006 seq:A200861_A_1_20230708T210006 seq:A200861_E_1_20230708T210006 seq:A200861_V_1_20230708T210006 ) .
+
+seq:A200861_A_1_20230708T210006 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 23 2011"@en .
+
+seq:A200861_C_1_20230708T210006 a seq:Text ;
+    cnt:chars "Is this sequence the same as \"Primes p such that 10^p - 1 divides 10^(10^100) - 10\"?"@en .
+
+seq:A200861_E_1_20230708T210006 a seq:Text ;
+    cnt:chars "Name changed by _T. D. Noe_ and _Arkadiusz Wesolowski_, Nov 29 2011"@en .
+
+seq:A200861_H_1_20230708T210006 a seq:Text ;
+    cnt:chars """Dario A. Alpern, <a href="https://www.alpertron.com.ar/googolm.pl">Known prime factors of Googolplex - 10</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/Googol.html">Googol</a>"""@en .
+
+seq:A200861_I_1_20230708T210006 a seq:Text ;
+    cnt:chars "#35 Jul 08 2023 21:00:06"@en .
+
+seq:A200861_K_1_20230708T210006 a seq:Text ;
+    cnt:chars "fini,full,nonn"@en .
+
+seq:A200861_N_1_20230708T210006 a seq:Text ;
+    cnt:chars "Prime factors of 10^100 - 1."@en .
+
+seq:A200861_O_1_20230708T210006 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200861_V_1_20230708T210006 a seq:Text ;
+    cnt:chars "3,3,11,41,101,251,271,3541,5051,9091,21401,25601,27961,60101,7019801,182521213001,14103673319201,78875943472201,1680588011350901"@en .
+
+seq:A200861_Y_1_20230708T210006 a seq:Text ;
+    cnt:chars "Subsequence of A178070 except for 3."@en .
+
+seq:A200861_p_1_20230708T210006 a seq:Text ;
+    cnt:chars "sort(map(i-> i[1]$i[2], ifactors(10^100-1)[2]))[];  # _Alois P. Heinz_, Jan 27 2023"@en .
+
+seq:A200861_t_1_20230708T210006 a seq:Text ;
+    cnt:chars "Join[{3}, Transpose[FactorInteger[10^100 - 1]][[1]]]"@en .
+

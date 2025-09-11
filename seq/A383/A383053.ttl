@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.692655Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 809}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383053 a seq:Sequence ;
+    rdfs:label "A383053"@en ;
+    seq:hasTextList ( seq:A383053_I_1_20250415T082634 seq:A383053_N_1_20250415T082634 seq:A383053_C_1_20250415T082634 seq:A383053_H_1_20250415T082634 seq:A383053_F_1_20250415T082634 seq:A383053_o_1_20250415T082634 seq:A383053_Y_1_20250415T082634 seq:A383053_K_1_20250415T082634 seq:A383053_O_1_20250415T082634 seq:A383053_A_1_20250415T082634 seq:A383053_V_1_20250415T082634 ) .
+
+seq:A383053_A_1_20250415T082634 a seq:Text ;
+    cnt:chars "_Seiichi Manyama_, Apr 14 2025"@en .
+
+seq:A383053_C_1_20250415T082634 a seq:Text ;
+    cnt:chars "Stirling transform of (n+1)^4."@en .
+
+seq:A383053_F_1_20250415T082634 a seq:Text ;
+    cnt:chars """a(n) = A362925(n+4,4).
+E.g.f.: Sum_{k>=0} (k+1)^4 * (exp(x) - 1)^k / k!.
+E.g.f.: exp(exp(x) - 1) * Sum_{k=0..4} Stirling2(5,k+1) * (exp(x) - 1)^k."""@en .
+
+seq:A383053_H_1_20250415T082634 a seq:Text ;
+    cnt:chars "Eric Weisstein's World of Mathematics, <a href=\"https://mathworld.wolfram.com/StirlingTransform.html\">Stirling Transform</a>"@en .
+
+seq:A383053_I_1_20250415T082634 a seq:Text ;
+    cnt:chars "#10 Apr 15 2025 08:26:34"@en .
+
+seq:A383053_K_1_20250415T082634 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A383053_N_1_20250415T082634 a seq:Text ;
+    cnt:chars "a(n) = Sum_{k=0..n} (k+1)^4 * Stirling2(n,k)."@en .
+
+seq:A383053_O_1_20250415T082634 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A383053_V_1_20250415T082634 a seq:Text ;
+    cnt:chars "1,16,97,515,2744,15177,88033,536882,3441439,23151411,163135410,1201594675,9232595661,73858810120,614045917741,5296398334735,47321198203496,437310785441381,4174403973827181,41107555809612466,417122543915965091,4356601173778017487"@en .
+
+seq:A383053_Y_1_20250415T082634 a seq:Text ;
+    cnt:chars "Cf. A000110, A222748, A362925."@en .
+
+seq:A383053_o_1_20250415T082634 a seq:Text ;
+    cnt:chars """(PARI) a(n) = sum(k=0, n, (k+1)^4*stirling(n, k, 2));
+(PARI) my(N=30, x='x+O('x^N)); Vec(serlaplace(sum(k=0, N, (k+1)^4*(exp(x)-1)^k/k!)))"""@en .
+

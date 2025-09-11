@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.275622Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1232}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200409 a seq:Sequence ;
+    rdfs:label "A200409"@en ;
+    seq:hasTextList ( seq:A200409_I_1_20240506T065505 seq:A200409_N_1_20240506T065505 seq:A200409_C_1_20240506T065505 seq:A200409_H_1_20240506T065505 seq:A200409_F_1_20240506T065505 seq:A200409_e_1_20240506T065505 seq:A200409_t_1_20240506T065505 seq:A200409_o_1_20240506T065505 seq:A200409_Y_1_20240506T065505 seq:A200409_K_1_20240506T065505 seq:A200409_O_1_20240506T065505 seq:A200409_A_1_20240506T065505 seq:A200409_V_1_20240506T065505 ) .
+
+seq:A200409_A_1_20240506T065505 a seq:Text ;
+    cnt:chars "_Sture Sjöstedt_, Nov 17 2011"@en .
+
+seq:A200409_C_1_20240506T065505 a seq:Text ;
+    cnt:chars "When are both n+1 and 19*n+1 perfect squares? This gives the equation 19*x^2 - 18 = y^2."@en .
+
+seq:A200409_F_1_20240506T065505 a seq:Text ;
+    cnt:chars """a(n) = 340*a(n-3) - a(n-6), a(1)=1, a(2)=39, a(3)=571, a(4)=911, a(5)=13299, a(6)=194141.
+G.f.: x*(x+1)*(x^4 + 38*x^3 + 533*x^2 + 38*x + 1) / (x^6 - 340*x^3 + 1). - _Colin Barker_, Sep 01 2013"""@en .
+
+seq:A200409_H_1_20240506T065505 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A200409/b200409.txt">Table of n, a(n) for n = 1..300</a>
+<a href="/index/Rec#order_06">Index entries for linear recurrences with constant coefficients</a>, signature (0,0,340,0,0,-1)."""@en .
+
+seq:A200409_I_1_20240506T065505 a seq:Text ;
+    cnt:chars "#24 May 06 2024 06:55:05"@en .
+
+seq:A200409_K_1_20240506T065505 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200409_N_1_20240506T065505 a seq:Text ;
+    cnt:chars "The y-values in the solution to 19*x^2 - 18 = y^2."@en .
+
+seq:A200409_O_1_20240506T065505 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200409_V_1_20240506T065505 a seq:Text ;
+    cnt:chars "1,39,571,911,13299,194141,309739,4521621,66007369,105310349,1537337841,22442311319,35805208921,522690344319,7630319841091,12173665722791,177713179730619,2594286303659621,4139010540540019,60421958418066141,882049712924430049"@en .
+
+seq:A200409_Y_1_20240506T065505 a seq:Text ;
+    cnt:chars "Cf. A200407, A199773, A199774, A199798."@en .
+
+seq:A200409_e_1_20240506T065505 a seq:Text ;
+    cnt:chars "a(7) = 340*911 - 1 = 309739."@en .
+
+seq:A200409_o_1_20240506T065505 a seq:Text ;
+    cnt:chars """(Magma) I:=[1, 39, 571, 911, 13299, 194141]; [n le 6 select I[n] else 340*Self(n-3)-Self(n-6): n in [1..30]]; // _Vincenzo Librandi_, Nov 18 2011
+(PARI) Vec(x*(x+1)*(x^4+38*x^3+533*x^2+38*x+1)/(x^6-340*x^3+1) + O(x^100)) \\\\ _Colin Barker_, Sep 01 2013"""@en .
+
+seq:A200409_t_1_20240506T065505 a seq:Text ;
+    cnt:chars "LinearRecurrence[{0, 0, 340, 0, 0, -1}, {1, 39, 571, 911, 13299,194141}, 50]"@en .
+

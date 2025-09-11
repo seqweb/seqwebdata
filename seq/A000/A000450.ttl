@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.578653Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1064}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000450 a seq:Sequence ;
+    rdfs:label "A000450"@en ;
+    seq:hasTextList ( seq:A000450_I_1_20170810T182132 seq:A000450_N_1_20170810T182132 seq:A000450_D_1_20170810T182132 seq:A000450_H_1_20170810T182132 seq:A000450_t_1_20170810T182132 seq:A000450_Y_1_20170810T182132 seq:A000450_K_1_20170810T182132 seq:A000450_O_1_20170810T182132 seq:A000450_A_1_20170810T182132 seq:A000450_V_1_20170810T182132 ) .
+
+seq:A000450_A_1_20170810T182132 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, _Simon Plouffe_"@en .
+
+seq:A000450_D_1_20170810T182132 a seq:Text ;
+    cnt:chars """J. Riordan, An Introduction to Combinatorial Analysis, Wiley, 1958, p. 198.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000450_H_1_20170810T182132 a seq:Text ;
+    cnt:chars "R. C. Read, <a href=\"/A000684/a000684_1.pdf\">Letter to N. J. A. Sloane, Oct. 29, 1976</a>"@en .
+
+seq:A000450_I_1_20170810T182132 a seq:Text ;
+    cnt:chars "M4709 N2012 #23 Aug 10 2017 18:21:32"@en .
+
+seq:A000450_K_1_20170810T182132 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000450_N_1_20170810T182132 a seq:Text ;
+    cnt:chars "Coefficients of ménage hit polynomials."@en .
+
+seq:A000450_O_1_20170810T182132 a seq:Text ;
+    cnt:chars "4,2"@en .
+
+seq:A000450_V_1_20170810T182132 a seq:Text ;
+    cnt:chars "1,10,50,385,3130,28764,291900,3249210,39367395,515874470,7270929806,109691447395,1763782644020,30114243100760,544123405603800,10373304279494964,208092476689208805,4381794437494059810,96635643877147885450,2227562535558247510885"@en .
+
+seq:A000450_Y_1_20170810T182132 a seq:Text ;
+    cnt:chars "A diagonal of A058057."@en .
+
+seq:A000450_t_1_20170810T182132 a seq:Text ;
+    cnt:chars "max = 23; f[x_, y_] := Sum[n!*((x*y)^n/(1 + x*(y-1))^(2*n+1)), {n, 0, max} ]; t = MapIndexed[Take[#1, #2[[1]]]&, CoefficientList[Series[f[x, y], {x, 0, max}, {y, 0, max}], {x, y}]]; a[n_] := t[[n+1, n-3]]; Table[a[n], {n, 4, max}] (* _Jean-François Alcover_, Feb 08 2016, after _Vladeta Jovovic_ in A058057 *)"@en .
+

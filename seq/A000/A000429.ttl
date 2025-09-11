@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.531829Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1322}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000429 a seq:Sequence ;
+    rdfs:label "A000429"@en ;
+    seq:hasTextList ( seq:A000429_I_1_20170708T031558 seq:A000429_N_1_20170708T031558 seq:A000429_D_1_20170708T031558 seq:A000429_H_1_20170708T031558 seq:A000429_F_1_20170708T031558 seq:A000429_p_1_20170708T031558 seq:A000429_t_1_20170708T031558 seq:A000429_Y_1_20170708T031558 seq:A000429_K_1_20170708T031558 seq:A000429_O_1_20170708T031558 seq:A000429_A_1_20170708T031558 seq:A000429_V_1_20170708T031558 ) .
+
+seq:A000429_A_1_20170708T031558 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000429_D_1_20170708T031558 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000429_F_1_20170708T031558 a seq:Text ;
+    cnt:chars "a(n) = A034825(n) - A034824(n). - _Christian G. Bower_"@en .
+
+seq:A000429_H_1_20170708T031558 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, <a href="/A000429/b000429.txt">Table of n, a(n) for n=1..200</a>
+J. Riordan, <a href="http://dx.doi.org/10.1147/rd.45.0473">Enumeration of trees by height and diameter</a>, IBM J. Res. Dev. 4 (1960), 473-478.
+<a href="/index/Ro#rooted">Index entries for sequences related to rooted trees</a>
+<a href="/index/Tra#trees">Index entries for sequences related to trees</a>"""@en .
+
+seq:A000429_I_1_20170708T031558 a seq:Text ;
+    cnt:chars "M4525 N1918 #32 Jul 08 2017 03:15:58"@en .
+
+seq:A000429_K_1_20170708T031558 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000429_N_1_20170708T031558 a seq:Text ;
+    cnt:chars "Number of n-node rooted trees of height 8."@en .
+
+seq:A000429_O_1_20170708T031558 a seq:Text ;
+    cnt:chars "1,10"@en .
+
+seq:A000429_V_1_20170708T031558 a seq:Text ;
+    cnt:chars "0,0,0,0,0,0,0,0,1,8,43,188,728,2593,8706,27961,86802,262348,776126,2256418,6466614,18311915,51334232,142673720,393611872,1078955836,2941029334,7977065816,21541492856,57942770689,155304829763,414934057486"@en .
+
+seq:A000429_Y_1_20170708T031558 a seq:Text ;
+    cnt:chars "Column h=8 of A034781."@en .
+
+seq:A000429_p_1_20170708T031558 a seq:Text ;
+    cnt:chars "For Maple program see link in A000235."@en .
+
+seq:A000429_t_1_20170708T031558 a seq:Text ;
+    cnt:chars "b[n_, i_, k_] := b[n, i, k] = If[n == 0, 1, If[i < 1 || k < 1, 0, Sum[ Binomial[b[i - 1, i - 1, k - 1] + j - 1, j]*b[n - i*j, i - 1, k], {j, 0, n/i}]]]; a[n_] := b[n - 1, n - 1, 8] - b[n - 1, n - 1, 7]; Array[a, 40] (* _Jean-François Alcover_, Feb 08 2016, after _Alois P. Heinz_ in A034781 *)"@en .
+

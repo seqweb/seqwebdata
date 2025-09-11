@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.233046Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 1072}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200862 a seq:Sequence ;
+    rdfs:label "A200862"@en ;
+    seq:hasTextList ( seq:A200862_I_1_20250425T122745 seq:A200862_N_1_20250425T122745 seq:A200862_H_1_20250425T122745 seq:A200862_F_1_20250425T122745 seq:A200862_t_1_20250425T122745 seq:A200862_K_1_20250425T122745 seq:A200862_O_1_20250425T122745 seq:A200862_A_1_20250425T122745 seq:A200862_V_1_20250425T122745 ) .
+
+seq:A200862_A_1_20250425T122745 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_, Nov 23 2011"@en .
+
+seq:A200862_F_1_20250425T122745 a seq:Text ;
+    cnt:chars "a(n) = 2*a(n-1) +5*a(n-2) -9*a(n-3) for n>2. - _Vincenzo Librandi_, Jun 30 2014"@en .
+
+seq:A200862_H_1_20250425T122745 a seq:Text ;
+    cnt:chars """Vincenzo Librandi, <a href="/A200862/b200862.txt">Table of n, a(n) for n = 0..1000</a>
+Peter Lawrence et al., <a href="https://web.archive.org/web/20220127112002/http://list.seqfan.eu/pipermail/seqfan/2011-November/008535.html">sequence challenge</a> and follow-up messages on the SeqFan list, Nov 21 2011
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (2,5,-9)."""@en .
+
+seq:A200862_I_1_20250425T122745 a seq:Text ;
+    cnt:chars "#21 Apr 25 2025 12:27:45"@en .
+
+seq:A200862_K_1_20250425T122745 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A200862_N_1_20250425T122745 a seq:Text ;
+    cnt:chars "G.f.: (1-2*x^2)/(1-2*x-5*x^2+9*x^3)."@en .
+
+seq:A200862_O_1_20250425T122745 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200862_V_1_20250425T122745 a seq:Text ;
+    cnt:chars "1,2,7,15,47,106,312,731,2068,4983,13727,33757,91302,227846,608389,1534290,4059911,10315771,27122487,69284630,181339756,465000279,1213137668,3119218927,8119123683,20916102989,54354854050,140218109898,363965563145,939827989330,2437520805303,6298491488951,16326135100447"@en .
+
+seq:A200862_t_1_20250425T122745 a seq:Text ;
+    cnt:chars """LinearRecurrence[{2,5,-9},{1,2,7},40] (* _Harvey P. Dale_, Jun 29 2014 *)
+CoefficientList[Series[(1 - 2 x^2)/(1 - 2 x - 5 x^2 + 9 x^3), {x, 0, 40}], x] (* _Vincenzo Librandi_, Jun 30 2014 *)"""@en .
+

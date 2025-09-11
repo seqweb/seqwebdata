@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.607020Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 482}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200578 a seq:Sequence ;
+    rdfs:label "A200578"@en ;
+    seq:hasTextList ( seq:A200578_I_1_20120331T123640 seq:A200578_N_1_20120331T123640 seq:A200578_C_1_20120331T123640 seq:A200578_e_1_20120331T123640 seq:A200578_K_1_20120331T123640 seq:A200578_O_1_20120331T123640 seq:A200578_A_1_20120331T123640 seq:A200578_V_1_20120331T123640 ) .
+
+seq:A200578_A_1_20120331T123640 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 19 2011"@en .
+
+seq:A200578_C_1_20120331T123640 a seq:Text ;
+    cnt:chars "Column 7 of A200579"@en .
+
+seq:A200578_I_1_20120331T123640 a seq:Text ;
+    cnt:chars "#4 Mar 31 2012 12:36:40"@en .
+
+seq:A200578_K_1_20120331T123640 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200578_N_1_20120331T123640 a seq:Text ;
+    cnt:chars "Number of nX7 0..2 arrays with no average of any element and its horizontal and vertical neighbors equal to one"@en .
+
+seq:A200578_O_1_20120331T123640 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200578_V_1_20120331T123640 a seq:Text ;
+    cnt:chars "260,163706,70594592,32523513414,15075017283404,6967106819900592"@en .
+
+seq:A200578_e_1_20120331T123640 a seq:Text ;
+    cnt:chars """Some solutions for n=3
+..0..0..0..2..0..0..1....0..0..0..1..1..2..2....0..0..0..2..2..1..0
+..0..0..0..1..1..0..1....0..0..2..1..2..1..2....0..0..0..2..2..0..1
+..0..0..0..0..2..0..0....0..0..0..0..2..2..2....0..0..0..1..0..0..0"""@en .
+

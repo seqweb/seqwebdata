@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.031365Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1337}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000648 a seq:Sequence ;
+    rdfs:label "A000648"@en ;
+    seq:hasTextList ( seq:A000648_I_1_20211219T094137 seq:A000648_N_1_20211219T094137 seq:A000648_D_1_20211219T094137 seq:A000648_H_1_20211219T094137 seq:A000648_F_1_20211219T094137 seq:A000648_t_1_20211219T094137 seq:A000648_Y_1_20211219T094137 seq:A000648_K_1_20211219T094137 seq:A000648_O_1_20211219T094137 seq:A000648_A_1_20211219T094137 seq:A000648_V_1_20211219T094137 ) .
+
+seq:A000648_A_1_20211219T094137 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000648_D_1_20211219T094137 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000648_F_1_20211219T094137 a seq:Text ;
+    cnt:chars "G.f.: A(x) = (r(x)^10 + r(x)^2*r(x^2)^4 + 2*r(x^2)^5)/4, r(x) = A000598(x)."@en .
+
+seq:A000648_H_1_20211219T094137 a seq:Text ;
+    cnt:chars """G. Polya, <a href="http://dx.doi.org/10.1524/zkri.1936.93.1.415">Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen</a>, Zeit. f. Kristall., 93 (1936), 415-443; line 15 of Table I.
+G. Polya, <a href="/A000598/a000598_3.pdf">Algebraische Berechnung der Anzahl der Isomeren einiger organischer Verbindungen</a>,  Zeit. f. Kristall., 93 (1936), 415-443; Table I, line 15. (Annotated scanned copy)"""@en .
+
+seq:A000648_I_1_20211219T094137 a seq:Text ;
+    cnt:chars "M3045 N1235 #21 Dec 19 2021 09:41:37"@en .
+
+seq:A000648_K_1_20211219T094137 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A000648_N_1_20211219T094137 a seq:Text ;
+    cnt:chars "Number of alkyls C_{n+15} H_{2n+10} (Anthr.) with n carbon atoms."@en .
+
+seq:A000648_O_1_20211219T094137 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000648_V_1_20211219T094137 a seq:Text ;
+    cnt:chars "1,3,18,61,225,716,2272,6826,20238,58552,167625,473929,1330490,3709591,10296336,28466065,78481065,215878221,592832960,1625887129,4454936029,12198071235,33383810793,91336813784,249851178964,683421422654"@en .
+
+seq:A000648_Y_1_20211219T094137 a seq:Text ;
+    cnt:chars "Cf. A000649."@en .
+
+seq:A000648_t_1_20211219T094137 a seq:Text ;
+    cnt:chars """terms = 26; (* r = g.f. for A000598 *) r[_] = 0; Do[r[x_] = 1 + (1/6)*x*(r[x]^3 + 3*r[x]*r[x^2] + 2*r[x^3]) + O[x]^terms // Normal, terms];
+A[x_] = (r[x]^10 + r[x]^2*r[x^2]^4 + 2*r[x^2]^5)/4 + O[x]^terms;
+CoefficientList[A[x], x] (* _Jean-François Alcover_, Jan 10 2018 *)"""@en .
+

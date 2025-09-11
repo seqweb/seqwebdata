@@ -1,0 +1,64 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.331877Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1803}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200438 a seq:Sequence ;
+    rdfs:label "A200438"@en ;
+    seq:hasTextList ( seq:A200438_I_1_20170324T044141 seq:A200438_N_1_20170324T044141 seq:A200438_C_1_20170324T044141 seq:A200438_H_1_20170324T044141 seq:A200438_F_1_20170324T044141 seq:A200438_e_1_20170324T044141 seq:A200438_p_1_20170324T044141 seq:A200438_t_1_20170324T044141 seq:A200438_o_1_20170324T044141 seq:A200438_Y_1_20170324T044141 seq:A200438_K_1_20170324T044141 seq:A200438_O_1_20170324T044141 seq:A200438_A_1_20170324T044141 seq:A200438_V_1_20170324T044141 ) .
+
+seq:A200438_A_1_20170324T044141 a seq:Text ;
+    cnt:chars "_Paul D. Hanna_, Nov 17 2011"@en .
+
+seq:A200438_C_1_20170324T044141 a seq:Text ;
+    cnt:chars """Compare g.f. to the trivial identity: G(x) = exp(Sum_{n>=1} G(-x^n)*x^n/n) where G(x) = 1+x.
+abs(a(n+1)/a(n)) tends to 3.576353722518567708610064857260994390208457341780918501933217195112489... . - _Vaclav Kotesovec_, Mar 24 2017"""@en .
+
+seq:A200438_F_1_20170324T044141 a seq:Text ;
+    cnt:chars "Equals the Euler transformation of the coefficients in A(-x)^2, where A(x) is the g.f. of this sequence."@en .
+
+seq:A200438_H_1_20170324T044141 a seq:Text ;
+    cnt:chars "Alois P. Heinz, <a href=\"/A200438/b200438.txt\">Table of n, a(n) for n = 0..1816</a>"@en .
+
+seq:A200438_I_1_20170324T044141 a seq:Text ;
+    cnt:chars "#16 Mar 24 2017 04:41:41"@en .
+
+seq:A200438_K_1_20170324T044141 a seq:Text ;
+    cnt:chars "sign"@en .
+
+seq:A200438_N_1_20170324T044141 a seq:Text ;
+    cnt:chars "G.f. satisfies: A(x) = exp( Sum_{n>=1} A(-x^n)^2 * x^n/n )."@en .
+
+seq:A200438_O_1_20170324T044141 a seq:Text ;
+    cnt:chars "0,4"@en .
+
+seq:A200438_V_1_20170324T044141 a seq:Text ;
+    cnt:chars "1,1,-1,-2,5,14,-40,-119,351,1083,-3291,-10424,32562,105066,-334666,-1094595,3536043,11686231,-38172425,-127199414,419230644,1406346735,-4669311299,-15750517780,52616257231,178312867791,-598779740235,-2037290707630,6871904761413,23461177498832"@en .
+
+seq:A200438_Y_1_20170324T044141 a seq:Text ;
+    cnt:chars "Cf. A200402."@en .
+
+seq:A200438_e_1_20170324T044141 a seq:Text ;
+    cnt:chars """G.f.: A(x) = 1 + x - x^2 - 2*x^3 + 5*x^4 + 14*x^5 - 40*x^6 - 119*x^7 +...
+where
+log(A(x)) = A(-x)^2*x + A(-x^2)^2*x^2/2 + A(-x^3)^2*x^3/3 + A(-x^4)^2*x^4/4 +...
+The coefficients in A(-x)^2 begin:
+[1,-2,-1,6,7,-42,-58,366,513,-3406,-4846,33310,48304,-339446,...]
+and the g.f. may be expressed by the Euler product:
+A(x) = 1/((1-x)^1*(1-x^2)^-2*(1-x^3)^-1*(1-x^4)^6*(1-x^5)^7*(1-x^6)^-42*(1-x^7)^-58*(1-x^8)^366*...)."""@en .
+
+seq:A200438_o_1_20170324T044141 a seq:Text ;
+    cnt:chars "(PARI) {a(n)=local(A=1+x);for(i=1,n,A=exp(sum(m=1,n,subst(A^2,x,-x^m)*x^m/m)+x*O(x^n)));polcoeff(A,n)}"@en .
+
+seq:A200438_p_1_20170324T044141 a seq:Text ;
+    cnt:chars """b:= proc(n) option remember; (-1)^n*add(a(i)*a(n-i), i=0..n) end:
+a:= proc(n) option remember; `if`(n=0, 1, add(add(
+      d*b(d-1), d=numtheory[divisors](j))*a(n-j), j=1..n)/n)
+    end:
+seq(a(n), n=0..30);  # _Alois P. Heinz_, Jan 24 2017"""@en .
+
+seq:A200438_t_1_20170324T044141 a seq:Text ;
+    cnt:chars "A200438List[n_] := Module[{A, x, i}, A = 1+x; For[i=1, i <= n, i++, A = Exp[Sum[(A^2 /. x -> -x^m)*x^m/m, {m, 1, n}] + x*O[x]^n // Normal]]; CoefficientList[A + O[x]^n, x]]; A200438List[30] (* _Jean-François Alcover_, Mar 24 2017, adapted from PARI *)"@en .
+

@@ -1,0 +1,66 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.788102Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 2461}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383097 a seq:Sequence ;
+    rdfs:label "A383097"@en ;
+    seq:hasTextList ( seq:A383097_I_1_20250426T112657 seq:A383097_N_1_20250426T112657 seq:A383097_e_1_20250426T112657 seq:A383097_t_1_20250426T112657 seq:A383097_Y_1_20250426T112657 seq:A383097_K_1_20250426T112657 seq:A383097_O_1_20250426T112657 seq:A383097_A_1_20250426T112657 seq:A383097_E_1_20250426T112657 seq:A383097_V_1_20250426T112657 ) .
+
+seq:A383097_A_1_20250426T112657 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 17 2025"@en .
+
+seq:A383097_E_1_20250426T112657 a seq:Text ;
+    cnt:chars "More terms from _Bert Dobbelaere_, Apr 26 2025"@en .
+
+seq:A383097_I_1_20250426T112657 a seq:Text ;
+    cnt:chars "#9 Apr 26 2025 11:26:57"@en .
+
+seq:A383097_K_1_20250426T112657 a seq:Text ;
+    cnt:chars "nonn,changed"@en .
+
+seq:A383097_N_1_20250426T112657 a seq:Text ;
+    cnt:chars "Number of integer partitions of n having more than one permutation with all equal run-sums."@en .
+
+seq:A383097_O_1_20250426T112657 a seq:Text ;
+    cnt:chars "0,9"@en .
+
+seq:A383097_V_1_20250426T112657 a seq:Text ;
+    cnt:chars "0,0,0,0,1,0,1,0,3,0,1,0,7,0,1,0,9,0,7,0,12,0,1,0,38,0,1,1,18,0,38,0,32,0,1,0,90,0,1,0,71,0,78,0,33,10,1,0,228,0,31,0,42,0,156,0,123,0,1,0,447,0,1,16,146,0,222,0,63,0,102,0,811,0,1,29,75,0,334,0"@en .
+
+seq:A383097_Y_1_20250426T112657 a seq:Text ;
+    cnt:chars """These partitions are ranked by A383015, positions of terms > 1 in A382877.
+For run-lengths instead of sums we have A383090, ranks A383089, unique A383094.
+The complement is A383095 + A383096, ranks A383099 \\/ A383100.
+For any positive number of permutations we have A383098, ranks A383110.
+Counting and ranking partitions by run-lengths and run-sums:
+- constant: A047966 (ranks A072774), sums A304442 (ranks A353833)
+- distinct: A098859 (ranks A130091), sums A353837 (ranks A353838)
+- weakly decreasing: A100882 (ranks A242031), sums A304405 (ranks A357875)
+- weakly increasing: A100883 (ranks A304678), sums A304406 (ranks A357861)
+- strictly decreasing: A100881 (ranks A304686), sums A304428 (ranks A357862)
+- strictly increasing: A100471 (ranks A334965), sums A304430 (ranks A357864)
+A275870 counts collapsible partitions, ranks A300273.
+A326534 ranks multiset partitions with a common sum, counted by A321455, normal A326518.
+A353851 counts compositions with all equal run-sums, ranks A353848.
+A382876 counts permutations of prime indices with distinct run-sums, zeros A381636.
+Cf. A006171, A329738, A353832, A353839, A353850, A353932, A354584, A381717, A382076."""@en .
+
+seq:A383097_e_1_20250426T112657 a seq:Text ;
+    cnt:chars """The a(27) = 1 partition is: (9,3,3,3,1,1,1,1,1,1,1,1,1).
+The a(4) = 1 through a(16) = 9 partitions (empty columns not shown):
+  (211)  (3111)  (422)     (511111)  (633)        (71111111)  (844)
+                 (41111)             (6222)                   (82222)
+                 (221111)            (33222)                  (442222)
+                                     (4221111)                (44221111)
+                                     (6111111)                (422221111)
+                                     (33111111)               (811111111)
+                                     (222111111)              (4411111111)
+                                                              (42211111111)
+                                                              (222211111111)"""@en .
+
+seq:A383097_t_1_20250426T112657 a seq:Text ;
+    cnt:chars "Table[Length[Select[IntegerPartitions[n],Length[Select[Permutations[#],SameQ@@Total/@Split[#]&]]>1&]],{n,0,15}]"@en .
+

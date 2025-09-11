@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.448531Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 463}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000394 a seq:Sequence ;
+    rdfs:label "A000394"@en ;
+    seq:hasTextList ( seq:A000394_I_1_20170708T012435 seq:A000394_N_1_20170708T012435 seq:A000394_t_1_20170708T012435 seq:A000394_Y_1_20170708T012435 seq:A000394_K_1_20170708T012435 seq:A000394_O_1_20170708T012435 seq:A000394_A_1_20170708T012435 seq:A000394_V_1_20170708T012435 ) .
+
+seq:A000394_A_1_20170708T012435 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000394_I_1_20170708T012435 a seq:Text ;
+    cnt:chars "#16 Jul 08 2017 01:24:35"@en .
+
+seq:A000394_K_1_20170708T012435 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000394_N_1_20170708T012435 a seq:Text ;
+    cnt:chars "Numbers of form x^2 + y^2 + 7z^2."@en .
+
+seq:A000394_O_1_20170708T012435 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000394_V_1_20170708T012435 a seq:Text ;
+    cnt:chars "0,1,2,4,5,7,8,9,10,11,12,13,15,16,17,18,20,23,24,25,26,27,28,29,30,32,33,34,36,37,38,39,40,41,43,44,45,46,47,48,49,50,52,53,54,56,57,58,59,60,61,62,63,64,65,67,68,69,71,72"@en .
+
+seq:A000394_Y_1_20170708T012435 a seq:Text ;
+    cnt:chars "Complement of A097633."@en .
+
+seq:A000394_t_1_20170708T012435 a seq:Text ;
+    cnt:chars "r[n_] := Reduce[n == x^2 + y^2 + 7z^2, {x, y, z}, Integers]; Reap[For[n = 0, n <= 100, n++, If[r[n] =!= False, Print[n]; Sow[n]]]][[2, 1]] (* _Jean-François Alcover_, Feb 08 2016 *)"@en .
+

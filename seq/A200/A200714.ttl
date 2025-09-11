@@ -1,0 +1,63 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.929287Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1833}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200714 a seq:Sequence ;
+    rdfs:label "A200714"@en ;
+    seq:hasTextList ( seq:A200714_I_1_20241027T061136 seq:A200714_N_1_20241027T061136 seq:A200714_C_1_20241027T061136 seq:A200714_H_1_20241027T061136 seq:A200714_F_1_20241027T061136 seq:A200714_e_1_20241027T061136 seq:A200714_t_1_20241027T061136 seq:A200714_o_1_20241027T061136 seq:A200714_Y_1_20241027T061136 seq:A200714_K_1_20241027T061136 seq:A200714_O_1_20241027T061136 seq:A200714_A_1_20241027T061136 seq:A200714_E_1_20241027T061136 seq:A200714_V_1_20241027T061136 ) .
+
+seq:A200714_A_1_20241027T061136 a seq:Text ;
+    cnt:chars "_Casey Mongoven_, Nov 20 2011"@en .
+
+seq:A200714_C_1_20241027T061136 a seq:Text ;
+    cnt:chars "See explanation of Stolarsky representations in the C. Mongoven link."@en .
+
+seq:A200714_E_1_20241027T061136 a seq:Text ;
+    cnt:chars "More terms from _Amiram Eldar_, Jul 07 2023"@en .
+
+seq:A200714_F_1_20241027T061136 a seq:Text ;
+    cnt:chars """From _Amiram Eldar_, Jul 07 2023: (Start)
+A000120(a(n)) = A200649(n).
+A023416(a(n)) = A200650(n).
+A070939(a(n)) = A200648(n).
+A005811(a(n)) = A200651(n). (End)
+Conjecture: a(n) = A367306(A358654(n-1)). - _Mikhail Kurkov_, Oct 17 2024"""@en .
+
+seq:A200714_H_1_20241027T061136 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A200714/b200714.txt">Table of n, a(n) for n = 1..10000</a>
+Casey Mongoven, <a href="/A200648/a200648.txt">Description of Stolarsky Representations</a>."""@en .
+
+seq:A200714_I_1_20241027T061136 a seq:Text ;
+    cnt:chars "#31 Oct 27 2024 06:11:36"@en .
+
+seq:A200714_K_1_20241027T061136 a seq:Text ;
+    cnt:chars "nonn,base"@en .
+
+seq:A200714_N_1_20241027T061136 a seq:Text ;
+    cnt:chars "Stolarsky representation interpreted as binary to decimal integers."@en .
+
+seq:A200714_O_1_20241027T061136 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200714_V_1_20241027T061136 a seq:Text ;
+    cnt:chars "0,1,3,2,7,5,6,15,4,11,13,14,31,10,9,23,12,27,29,30,63,8,21,19,22,47,26,25,55,28,59,61,62,127,20,17,43,18,39,45,46,95,24,53,51,54,111,58,57,119,60,123,125,126,255,16,41,35,42,87,37,38,79,44,91,93"@en .
+
+seq:A200714_Y_1_20241027T061136 a seq:Text ;
+    cnt:chars """Cf. A048679, A200648, A200649, A200650, A200651.
+Cf. A000120, A005811, A023416, A070939."""@en .
+
+seq:A200714_e_1_20241027T061136 a seq:Text ;
+    cnt:chars "The Stolarsky representation of 19 is 11101. In binary this is equal to 29. So a(19) = 29."@en .
+
+seq:A200714_o_1_20241027T061136 a seq:Text ;
+    cnt:chars """(PARI) a(n) = {if (n == 1, return (0)); tau = (1 + sqrt(5))/2; mn = 0; while ((m = round(mn*tau)) < n, mn++;); if (m == n, return (2*a(mn)+1)); mn = 0; while ((m = floor(mn*(1+tau)-tau/2)) < n, mn++;); if (m == n, return (2*a(mn))); error("neither A nor B !!");} \\\\ (cf C. Mongoven link) _Michel Marcus_, May 21 2013, Sep 02 2013
+(PARI) stol(n) = {my(phi=quadgen(5)); if(n==1, [], if(n != round(round(n/phi)*phi), concat(stol(floor(n/phi^2) + 1), [0]), concat(stol(round(n/phi)), [1])));}
+a(n) = fromdigits(stol(n), 2); \\\\ _Amiram Eldar_, Jul 07 2023"""@en .
+
+seq:A200714_t_1_20241027T061136 a seq:Text ;
+    cnt:chars """stol[n_] := stol[n] = If[n == 1, {}, If[n != Round[Round[n/GoldenRatio]*GoldenRatio], Join[stol[Floor[n/GoldenRatio^2] + 1], {0}], Join[stol[Round[n/GoldenRatio]], {1}]]];
+a[n_] := FromDigits[stol[n], 2]; Array[a, 100] (* _Amiram Eldar_, Jul 07 2023 *)"""@en .
+

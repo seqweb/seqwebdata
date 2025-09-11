@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.150461Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 819}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200819 a seq:Sequence ;
+    rdfs:label "A200819"@en ;
+    seq:hasTextList ( seq:A200819_I_1_20210607T011312 seq:A200819_N_1_20210607T011312 seq:A200819_C_1_20210607T011312 seq:A200819_H_1_20210607T011312 seq:A200819_e_1_20210607T011312 seq:A200819_t_1_20210607T011312 seq:A200819_Y_1_20210607T011312 seq:A200819_K_1_20210607T011312 seq:A200819_O_1_20210607T011312 seq:A200819_A_1_20210607T011312 seq:A200819_E_1_20210607T011312 seq:A200819_V_1_20210607T011312 ) .
+
+seq:A200819_A_1_20210607T011312 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 23 2011"@en .
+
+seq:A200819_C_1_20210607T011312 a seq:Text ;
+    cnt:chars """The corresponding indices k are 2, 4, 5, 8, 77, 377, 4547, ... (see A200818).
+The generalization of this sequence is possible with the primes of the form  (b^n +- k)*b^n +- 1.
+For k = 377, a(6) contains 227 digits;
+For k = 4547, a(7) contains 2738 digits;
+For k = 8248, a(8) contains 4966 digits."""@en .
+
+seq:A200819_E_1_20210607T011312 a seq:Text ;
+    cnt:chars "a(8) from _L. Joris Perrenet_, Mar 17 2020"@en .
+
+seq:A200819_H_1_20210607T011312 a seq:Text ;
+    cnt:chars "Henri Lifchitz, <a href=\"http://www.primenumbers.net/Henri/us/NouvP1us.htm\">New forms of primes</a>"@en .
+
+seq:A200819_I_1_20210607T011312 a seq:Text ;
+    cnt:chars "#27 Jun 07 2021 01:13:12"@en .
+
+seq:A200819_K_1_20210607T011312 a seq:Text ;
+    cnt:chars "nonn,hard"@en .
+
+seq:A200819_N_1_20210607T011312 a seq:Text ;
+    cnt:chars "Primes of the form (2^k - k)*2^k - 1."@en .
+
+seq:A200819_O_1_20210607T011312 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200819_V_1_20210607T011312 a seq:Text ;
+    cnt:chars "7,191,863,63487,22835963083295358096920939600178131376317399039"@en .
+
+seq:A200819_Y_1_20210607T011312 a seq:Text ;
+    cnt:chars "Cf. A200816, A200817, A200818, A200821, A200822, A200823, A200832."@en .
+
+seq:A200819_e_1_20210607T011312 a seq:Text ;
+    cnt:chars "191 is in the sequence because, for k=4, (2^4 - 4)*2^4 - 1 = 191 is prime."@en .
+
+seq:A200819_t_1_20210607T011312 a seq:Text ;
+    cnt:chars "a={};Do[p=(2^n-n)*2^n-1;If[PrimeQ[p],AppendTo[a,p]],{n,10^3}];Print[a]"@en .
+

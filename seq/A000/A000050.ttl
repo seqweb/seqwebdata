@@ -1,0 +1,62 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.298599Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 2163}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000050 a seq:Sequence ;
+    rdfs:label "A000050"@en ;
+    seq:hasTextList ( seq:A000050_I_1_20221219T101728 seq:A000050_N_1_20221219T101728 seq:A000050_D_1_20221219T101728 seq:A000050_H_1_20221219T101728 seq:A000050_e_1_20221219T101728 seq:A000050_t_1_20221219T101728 seq:A000050_o_1_20221219T101728 seq:A000050_Y_1_20221219T101728 seq:A000050_K_1_20221219T101728 seq:A000050_O_1_20221219T101728 seq:A000050_A_1_20221219T101728 seq:A000050_V_1_20221219T101728 ) .
+
+seq:A000050_A_1_20221219T101728 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000050_D_1_20221219T101728 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000050_H_1_20221219T101728 a seq:Text ;
+    cnt:chars """Seth A. Troisi, <a href="/A000050/b000050.txt">Table of n, a(n) for n = 0..50</a> (terms 0..35 from N. J. A. Sloane)
+P. Moree and H. J. J. te Riele, <a href="https://arxiv.org/abs/math/0204332">The hexagonal versus the square lattice</a>, arXiv:math/0204332 [math.NT], 2002.
+P. Moree and H. J. J. te Riele, <a href="http://dx.doi.org/10.1090/S0025-5718-03-01556-4">The hexagonal versus the square lattice</a>, Math. Comp. 73 (2004), no. 245, 451-473.
+D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+Seth A. Troisi, <a href="https://github.com/sethtroisi/OEIS/tree/main/A000050">C++ program</a>
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000050_I_1_20221219T101728 a seq:Text ;
+    cnt:chars "M0715 N0265 #40 Dec 19 2022 10:17:28"@en .
+
+seq:A000050_K_1_20221219T101728 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000050_N_1_20221219T101728 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form x^2 + y^2."@en .
+
+seq:A000050_O_1_20221219T101728 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000050_V_1_20221219T101728 a seq:Text ;
+    cnt:chars "1,2,3,5,9,16,29,54,97,180,337,633,1197,2280,4357,8363,16096,31064,60108,116555,226419,440616,858696,1675603,3273643,6402706,12534812,24561934,48168461,94534626,185661958,364869032,717484560,1411667114,2778945873,5473203125"@en .
+
+seq:A000050_Y_1_20221219T101728 a seq:Text ;
+    cnt:chars "Cf. A001481."@en .
+
+seq:A000050_e_1_20221219T101728 a seq:Text ;
+    cnt:chars "There are 5 integers <= 2^3 of the form x^2 + y^2. The five (x,y) pairs (x <= y) are (0,1), (1,1), (0,2), (1,2), (2,2) and give the integers 1, 2, 4, 5, 8, respectively. So a(3) = 5. - _Seth A. Troisi_, Apr 27 2022"@en .
+
+seq:A000050_o_1_20221219T101728 a seq:Text ;
+    cnt:chars """(Haskell)
+isqrt = a000196
+issquare = a010052
+a000050 n = foldl f 0 [1..2^n]
+  where f i j = if a000050' j > 0 then i + 1 else i
+a000050' k = foldl f 0 (h k)
+  where f i y = g y + i
+          where g y = issquare (k - y^2)
+        h k = [0..isqrt k]
+-- _James Spahlinger_, Oct 09 2012"""@en .
+
+seq:A000050_t_1_20221219T101728 a seq:Text ;
+    cnt:chars "(* This program is not suitable for a large number of terms *) a[0] = 1; a[n_] := a[n] = (For[cnt = 0; k = 2^(n-1)+1, k <= 2^n, k++, If[SquaresR[2, k] > 0, cnt++]]; cnt + a[n-1]); Table[Print[\"a(\", n, \") = \", a[n]]; a[n], {n, 0, 26}] (* _Jean-François Alcover_, Mar 20 2014 *)"@en .
+

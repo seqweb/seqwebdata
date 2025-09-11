@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.317155Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 515}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200906 a seq:Sequence ;
+    rdfs:label "A200906"@en ;
+    seq:hasTextList ( seq:A200906_I_1_20150620T144237 seq:A200906_N_1_20150620T144237 seq:A200906_C_1_20150620T144237 seq:A200906_e_1_20150620T144237 seq:A200906_t_1_20150620T144237 seq:A200906_o_1_20150620T144237 seq:A200906_Y_1_20150620T144237 seq:A200906_K_1_20150620T144237 seq:A200906_O_1_20150620T144237 seq:A200906_A_1_20150620T144237 seq:A200906_V_1_20150620T144237 ) .
+
+seq:A200906_A_1_20150620T144237 a seq:Text ;
+    cnt:chars "_Serge Batalov_, Nov 23 2011"@en .
+
+seq:A200906_C_1_20150620T144237 a seq:Text ;
+    cnt:chars """2415 corresponds to a probable prime. - _Serge Batalov_, Nov 24 2011
+a(12) > 15000. - _Robert Price_, Jun 20 2015"""@en .
+
+seq:A200906_I_1_20150620T144237 a seq:Text ;
+    cnt:chars "#21 Jun 20 2015 14:42:37"@en .
+
+seq:A200906_K_1_20150620T144237 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200906_N_1_20150620T144237 a seq:Text ;
+    cnt:chars "Numbers n such that cyclotomic polynomial value Phi(5,n!) is prime."@en .
+
+seq:A200906_O_1_20150620T144237 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200906_V_1_20150620T144237 a seq:Text ;
+    cnt:chars "0,1,2,4,5,21,44,64,244,268,2415"@en .
+
+seq:A200906_Y_1_20150620T144237 a seq:Text ;
+    cnt:chars "Cf. A002981, A002982, A046029, A046029."@en .
+
+seq:A200906_e_1_20150620T144237 a seq:Text ;
+    cnt:chars "5 is in the sequence because Phi(5,5!) = ((5!)^5-1)/(5!-1)= 209102521 is prime."@en .
+
+seq:A200906_o_1_20150620T144237 a seq:Text ;
+    cnt:chars "(PARI) for(n=0,600,x=n!;if(isprime(eval(polcyclo(5))),print(n)))"@en .
+
+seq:A200906_t_1_20150620T144237 a seq:Text ;
+    cnt:chars "Do[If[PrimeQ[Cyclotomic[5, n!]], Print[n]], {n, 0, 600}]"@en .
+

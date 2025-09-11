@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.831919Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2060}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000985 a seq:Sequence ;
+    rdfs:label "A000985"@en ;
+    seq:hasTextList ( seq:A000985_I_1_20250113T112427 seq:A000985_N_1_20250113T112427 seq:A000985_D_1_20250113T112427 seq:A000985_H_1_20250113T112427 seq:A000985_F_1_20250113T112427 seq:A000985_t_1_20250113T112427 seq:A000985_Y_1_20250113T112427 seq:A000985_K_1_20250113T112427 seq:A000985_O_1_20250113T112427 seq:A000985_A_1_20250113T112427 seq:A000985_V_1_20250113T112427 ) .
+
+seq:A000985_A_1_20250113T112427 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000985_D_1_20250113T112427 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
+R. P. Stanley, Enumerative Combinatorics, Cambridge, Vol. 2, 1999; see Example 5.2.7."""@en .
+
+seq:A000985_F_1_20250113T112427 a seq:Text ;
+    cnt:chars """E.g.f.: (1-x)^(-1/2)*exp(x^2/4 + x/(2*(1-x))).
+a(n) ~ n^n*exp(sqrt(2*n)-n)/sqrt(2) * (1-5/(24*sqrt(2*n))). - _Vaclav Kotesovec_, Jul 29 2013
+Recurrence: 2*a(n) = 2*(2*n-1)*a(n-1) - 2*(n-2)*(n-1)*a(n-2) - 2*(n-2)*(n-1)*a(n-3) + (n-3)*(n-2)*(n-1)*a(n-4). - _Vaclav Kotesovec_, Jul 29 2013"""@en .
+
+seq:A000985_H_1_20250113T112427 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000985/b000985.txt">Table of n, a(n) for n=0..100</a>
+Jacob L. Bourjaily, Michael Plesser, and Cristian Vergu, <a href="https://arxiv.org/abs/2412.21189">The Many Colours of Amplitudes</a>, arXiv:2412.21189 [hep-th], 2024. See p. 33.
+P. Flajolet and R. Sedgewick, <a href="http://algo.inria.fr/flajolet/Publications/books.html">Analytic Combinatorics</a>, 2009; see page 584
+H. Gupta, <a href="http://dx.doi.org/10.1215/S0012-7094-68-03567-9">Enumeration of symmetric matrices</a>, Duke Math. J., 35 (1968), vol 3, 653-659.
+H. Gupta, <a href="/A000085/a000085.pdf">Enumeration of symmetric matrices</a> (annotated scanned copy)
+Tomislav Došlic and Darko Veljan, <a href="http://dx.doi.org/10.1016/j.disc.2007.04.066">Logarithmic behavior of some combinatorial sequences</a>, Discrete Math. 308 (2008), no. 11, 2182--2212. MR2404544 (2009j:05019). - From _N. J. A. Sloane_, May 01 2012"""@en .
+
+seq:A000985_I_1_20250113T112427 a seq:Text ;
+    cnt:chars "M2907 N1168 #44 Jan 13 2025 11:24:27"@en .
+
+seq:A000985_K_1_20250113T112427 a seq:Text ;
+    cnt:chars "nonn,nice,easy"@en .
+
+seq:A000985_N_1_20250113T112427 a seq:Text ;
+    cnt:chars "Number of n X n symmetric matrices with nonnegative entries and all row sums 2."@en .
+
+seq:A000985_O_1_20250113T112427 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000985_V_1_20250113T112427 a seq:Text ;
+    cnt:chars "1,1,3,11,56,348,2578,22054,213798,2313638,27627434,360646314,5107177312,77954299144,1275489929604,22265845018412,412989204564572,8109686585668956,168051656468233972,3664479286118269972,83868072451846938336,2009964340465840802576"@en .
+
+seq:A000985_Y_1_20250113T112427 a seq:Text ;
+    cnt:chars "Cf. A000986."@en .
+
+seq:A000985_t_1_20250113T112427 a seq:Text ;
+    cnt:chars "max = 21; egf[x_] := (1-x)^(-1/2)*Exp[x^2/4 + x/(2*(1-x))]; CoefficientList[ Series[ egf[x], {x, 0, max}], x]*Range[0, max]! (* _Jean-François Alcover_, Nov 25 2011 *)"@en .
+

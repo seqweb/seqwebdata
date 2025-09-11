@@ -1,0 +1,38 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.592601Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 617}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200570 a seq:Sequence ;
+    rdfs:label "A200570"@en ;
+    seq:hasTextList ( seq:A200570_I_1_20120331T103050 seq:A200570_N_1_20120331T103050 seq:A200570_C_1_20120331T103050 seq:A200570_H_1_20120331T103050 seq:A200570_Y_1_20120331T103050 seq:A200570_K_1_20120331T103050 seq:A200570_O_1_20120331T103050 seq:A200570_A_1_20120331T103050 seq:A200570_V_1_20120331T103050 ) .
+
+seq:A200570_A_1_20120331T103050 a seq:Text ;
+    cnt:chars "_Andrey V. Kulsha_, Nov 19 2011"@en .
+
+seq:A200570_C_1_20120331T103050 a seq:Text ;
+    cnt:chars "Heuristics show that these terms are valid, but a strict proof is yet to be done."@en .
+
+seq:A200570_H_1_20120331T103050 a seq:Text ;
+    cnt:chars "Andrey V. Kulsha, <a href=\"/A200570/b200570.txt\">Table of n, a(n) for n = 1..43</a>"@en .
+
+seq:A200570_I_1_20120331T103050 a seq:Text ;
+    cnt:chars "#17 Mar 31 2012 10:30:50"@en .
+
+seq:A200570_K_1_20120331T103050 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200570_N_1_20120331T103050 a seq:Text ;
+    cnt:chars "Integers n such that for all i > n the largest prime factor of product(i+k, {k,0,12}) exceeds the largest prime factor of product(n+k, {k,0,12})."@en .
+
+seq:A200570_O_1_20120331T103050 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200570_V_1_20120331T103050 a seq:Text ;
+    cnt:chars "4,6,10,16,18,24,28,30,34,40,46,48,114,118,124,126,136,138,294,318,1332,1333,48505,48509,87164,135990,416319,436744,780358,8763442,25039772,35176558,44444364,61575288,100918165,846178875,1214569400,2644138052,9381631594"@en .
+
+seq:A200570_Y_1_20120331T103050 a seq:Text ;
+    cnt:chars "Cf. A200569, A209837."@en .
+

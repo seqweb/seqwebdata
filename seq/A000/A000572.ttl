@@ -1,0 +1,50 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.854435Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1017}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000572 a seq:Sequence ;
+    rdfs:label "A000572"@en ;
+    seq:hasTextList ( seq:A000572_I_1_20220201T010319 seq:A000572_N_1_20220201T010319 seq:A000572_D_1_20220201T010319 seq:A000572_H_1_20220201T010319 seq:A000572_p_1_20220201T010319 seq:A000572_t_1_20220201T010319 seq:A000572_Y_1_20220201T010319 seq:A000572_K_1_20220201T010319 seq:A000572_O_1_20220201T010319 seq:A000572_A_1_20220201T010319 seq:A000572_E_1_20220201T010319 seq:A000572_V_1_20220201T010319 ) .
+
+seq:A000572_A_1_20220201T010319 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000572_D_1_20220201T010319 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000572_E_1_20220201T010319 a seq:Text ;
+    cnt:chars "More terms from _James A. Sellers_, Feb 19 2001"@en .
+
+seq:A000572_H_1_20220201T010319 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000572/b000572.txt">Table of n, a(n) for n = 1..1000</a>
+I. G. Connell, <a href="http://dx.doi.org/10.4153/CMB-1960-004-2">Some properties of Beatty sequences II</a>, Canad. Math. Bull., 3 (1960), 17-22.
+<a href="/index/Be#Beatty">Index entries for sequences related to Beatty sequences</a>"""@en .
+
+seq:A000572_I_1_20220201T010319 a seq:Text ;
+    cnt:chars "M2621 N1037 #24 Feb 01 2022 01:03:19"@en .
+
+seq:A000572_K_1_20220201T010319 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000572_N_1_20220201T010319 a seq:Text ;
+    cnt:chars "A Beatty sequence: [ n(e+1) ]."@en .
+
+seq:A000572_O_1_20220201T010319 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000572_V_1_20220201T010319 a seq:Text ;
+    cnt:chars "3,7,11,14,18,22,26,29,33,37,40,44,48,52,55,59,63,66,70,74,78,81,85,89,92,96,100,104,107,111,115,118,122,126,130,133,137,141,145,148,152,156,159,163,167,171,174,178,182,185,189,193,197,200,204,208,211,215,219"@en .
+
+seq:A000572_Y_1_20220201T010319 a seq:Text ;
+    cnt:chars "Cf. A006594."@en .
+
+seq:A000572_p_1_20220201T010319 a seq:Text ;
+    cnt:chars "for n from 1 to 200 do printf(`%d,`,floor( n*(exp(1)+1))) od:"@en .
+
+seq:A000572_t_1_20220201T010319 a seq:Text ;
+    cnt:chars "Table[Floor[n*(E + 1)], {n, 100}] (* _T. D. Noe_, Jun 20 2012 *)"@en .
+

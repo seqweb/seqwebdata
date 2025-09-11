@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.922066Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 578}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200076 a seq:Sequence ;
+    rdfs:label "A200076"@en ;
+    seq:hasTextList ( seq:A200076_I_1_20221020T230324 seq:A200076_N_1_20221020T230324 seq:A200076_C_1_20221020T230324 seq:A200076_e_1_20221020T230324 seq:A200076_Y_1_20221020T230324 seq:A200076_K_1_20221020T230324 seq:A200076_O_1_20221020T230324 seq:A200076_A_1_20221020T230324 seq:A200076_V_1_20221020T230324 ) .
+
+seq:A200076_A_1_20221020T230324 a seq:Text ;
+    cnt:chars "_R. H. Hardin_, Nov 13 2011"@en .
+
+seq:A200076_C_1_20221020T230324 a seq:Text ;
+    cnt:chars "Column 2 of A200082."@en .
+
+seq:A200076_I_1_20221020T230324 a seq:Text ;
+    cnt:chars "#7 Oct 20 2022 23:03:24"@en .
+
+seq:A200076_K_1_20221020T230324 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200076_N_1_20221020T230324 a seq:Text ;
+    cnt:chars "Number of 0..2 arrays x(0..n) of n+1 elements with zero n-1st differences."@en .
+
+seq:A200076_O_1_20221020T230324 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200076_V_1_20221020T230324 a seq:Text ;
+    cnt:chars "1,3,3,3,7,9,9,15,7,3,11,29,43,73,25,5,27,53,97,123,29,41,93,85,35,35,17,9,55,73"@en .
+
+seq:A200076_Y_1_20221020T230324 a seq:Text ;
+    cnt:chars "Cf. A200082."@en .
+
+seq:A200076_e_1_20221020T230324 a seq:Text ;
+    cnt:chars """All solutions for n=6
+..1....0....2....1....2....1....0....2....0
+..1....1....1....2....0....0....2....2....0
+..1....2....0....1....0....1....2....2....0
+..1....2....0....0....1....2....1....2....0
+..1....1....1....0....2....2....0....2....0
+..1....0....2....1....2....1....0....2....0
+..1....1....1....2....0....0....2....2....0"""@en .
+

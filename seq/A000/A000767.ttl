@@ -1,0 +1,44 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.307781Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 909}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000767 a seq:Sequence ;
+    rdfs:label "A000767"@en ;
+    seq:hasTextList ( seq:A000767_I_1_20211219T094537 seq:A000767_N_1_20211219T094537 seq:A000767_D_1_20211219T094537 seq:A000767_H_1_20211219T094537 seq:A000767_Y_1_20211219T094537 seq:A000767_K_1_20211219T094537 seq:A000767_O_1_20211219T094537 seq:A000767_A_1_20211219T094537 seq:A000767_E_1_20211219T094537 seq:A000767_V_1_20211219T094537 ) .
+
+seq:A000767_A_1_20211219T094537 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000767_D_1_20211219T094537 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000767_E_1_20211219T094537 a seq:Text ;
+    cnt:chars """Edited and extended by _Joseph Myers_, Jul 14 2013
+a(12)-a(15) from _Bert Dobbelaere_, Jan 13 2019"""@en .
+
+seq:A000767_H_1_20211219T094537 a seq:Text ;
+    cnt:chars """J. L. Martin, <a href="http://dx.doi.org/10.1017/S0305004100036240">The exact enumeration of self-avoiding walks on a lattice</a>, Proc. Camb. Phil. Soc., 58 (1962), 92-101.
+<a href="/index/Fa#fcc">Index entries for sequences related to f.c.c. lattice</a>"""@en .
+
+seq:A000767_I_1_20211219T094537 a seq:Text ;
+    cnt:chars "M5017 N2162 #24 Dec 19 2021 09:45:37"@en .
+
+seq:A000767_K_1_20211219T094537 a seq:Text ;
+    cnt:chars "nonn,walk,more"@en .
+
+seq:A000767_N_1_20211219T094537 a seq:Text ;
+    cnt:chars "Number of n-step self-avoiding walks on f.c.c. lattice ending at point with x = 2."@en .
+
+seq:A000767_O_1_20211219T094537 a seq:Text ;
+    cnt:chars "2,1"@en .
+
+seq:A000767_V_1_20211219T094537 a seq:Text ;
+    cnt:chars "16,192,2016,20160,197940,1930944,18805488,183156320,1785303660,17421627280,170214459928,1665089608504,16307758577692,159896665015064"@en .
+
+seq:A000767_Y_1_20211219T094537 a seq:Text ;
+    cnt:chars "Cf. A000765, A000766, A000768, A001336, A227511."@en .
+

@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.134081Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 686}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200811 a seq:Sequence ;
+    rdfs:label "A200811"@en ;
+    seq:hasTextList ( seq:A200811_I_1_20140811T224547 seq:A200811_N_1_20140811T224547 seq:A200811_C_1_20140811T224547 seq:A200811_H_1_20140811T224547 seq:A200811_Y_1_20140811T224547 seq:A200811_K_1_20140811T224547 seq:A200811_O_1_20140811T224547 seq:A200811_A_1_20140811T224547 seq:A200811_V_1_20140811T224547 ) .
+
+seq:A200811_A_1_20140811T224547 a seq:Text ;
+    cnt:chars "_Charles R Greathouse IV_, Nov 23 2011"@en .
+
+seq:A200811_C_1_20140811T224547 a seq:Text ;
+    cnt:chars "a(n) is not 3 for n in {9, 45, 58, 89, 128, 163, 168, ...}."@en .
+
+seq:A200811_H_1_20140811T224547 a seq:Text ;
+    cnt:chars """Charles R Greathouse IV, <a href="/A200811/b200811.txt">Table of n, a(n) for n = 1..10000</a>
+Tímea Csajbók and János Kasza, <a href="http://ac.inf.elte.hu/Vol_035_2011/083.pdf">Iterating the tau-function</a>, Annales Univ. Sci. Budapest., Sec. Math. 35 (2011), pp. 83-93."""@en .
+
+seq:A200811_I_1_20140811T224547 a seq:Text ;
+    cnt:chars "#10 Aug 11 2014 22:45:47"@en .
+
+seq:A200811_K_1_20140811T224547 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200811_N_1_20140811T224547 a seq:Text ;
+    cnt:chars "Iterate k -> d(k) until an odd prime is reached, starting from the n-th composite."@en .
+
+seq:A200811_O_1_20140811T224547 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200811_V_1_20140811T224547 a seq:Text ;
+    cnt:chars "3,3,3,3,3,3,3,3,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,7,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3"@en .
+
+seq:A200811_Y_1_20140811T224547 a seq:Text ;
+    cnt:chars "Cf. A200810, A200815."@en .
+

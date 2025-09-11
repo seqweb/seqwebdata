@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.592263Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 848}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383006 a seq:Sequence ;
+    rdfs:label "A383006"@en ;
+    seq:hasTextList ( seq:A383006_I_1_20250412T094146 seq:A383006_N_1_20250412T094146 seq:A383006_H_1_20250412T094146 seq:A383006_F_1_20250412T094146 seq:A383006_t_1_20250412T094146 seq:A383006_o_1_20250412T094146 seq:A383006_Y_1_20250412T094146 seq:A383006_K_1_20250412T094146 seq:A383006_O_1_20250412T094146 seq:A383006_A_1_20250412T094146 seq:A383006_V_1_20250412T094146 ) .
+
+seq:A383006_A_1_20250412T094146 a seq:Text ;
+    cnt:chars "_Amiram Eldar_, Apr 12 2025"@en .
+
+seq:A383006_F_1_20250412T094146 a seq:Text ;
+    cnt:chars """a(n) = A007814(A001694(n)).
+a(A363189(n)) = 0.
+Asymptotic mean: Limit_{m->oo} (1/m) * Sum_{k=1..m} a(k) = (11 + 6*sqrt(2))/7 = 2.7836116... ."""@en .
+
+seq:A383006_H_1_20250412T094146 a seq:Text ;
+    cnt:chars """Amiram Eldar, <a href="/A383006/b383006.txt">Table of n, a(n) for n = 1..10000</a>
+<a href="/index/Pow#powerful">Index entries for sequences related to powerful numbers</a>."""@en .
+
+seq:A383006_I_1_20250412T094146 a seq:Text ;
+    cnt:chars "#7 Apr 12 2025 09:41:46"@en .
+
+seq:A383006_K_1_20250412T094146 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383006_N_1_20250412T094146 a seq:Text ;
+    cnt:chars "Exponent of the highest power of 2 dividing the n-th powerful number."@en .
+
+seq:A383006_O_1_20250412T094146 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A383006_V_1_20250412T094146 a seq:Text ;
+    cnt:chars "0,2,3,0,4,0,0,5,2,0,6,3,0,2,2,0,0,7,4,0,2,3,3,0,0,8,5,0,2,0,0,3,4,4,0,2,2,9,0,6,0,3,0,2,0,4,5,0,5,2,0,3,2,3,10,0,0,7,2,0,4,0,0,3,0,2,2,0,5,6,0,6,2,3,0,4,3,4,0,11,2,0,0,0,8,3,0"@en .
+
+seq:A383006_Y_1_20250412T094146 a seq:Text ;
+    cnt:chars "Cf. A001694, A007814, A363189, A373549, A383007."@en .
+
+seq:A383006_o_1_20250412T094146 a seq:Text ;
+    cnt:chars "(PARI) list(lim) = for(k = 1, lim, if(ispowerful(k), print1(valuation(k, 2), \", \")));"@en .
+
+seq:A383006_t_1_20250412T094146 a seq:Text ;
+    cnt:chars "IntegerExponent[Select[Range[5000], # == 1 || Min[FactorInteger[#][[;; , 2]]] > 1 &], 2]"@en .
+

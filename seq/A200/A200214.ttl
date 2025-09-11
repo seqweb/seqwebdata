@@ -1,0 +1,53 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.873923Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 1865}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200214 a seq:Sequence ;
+    rdfs:label "A200214"@en ;
+    seq:hasTextList ( seq:A200214_I_1_20241024T035159 seq:A200214_N_1_20241024T035159 seq:A200214_H_1_20241024T035159 seq:A200214_F_1_20241024T035159 seq:A200214_e_1_20241024T035159 seq:A200214_t_1_20241024T035159 seq:A200214_o_1_20241024T035159 seq:A200214_Y_1_20241024T035159 seq:A200214_K_1_20241024T035159 seq:A200214_O_1_20241024T035159 seq:A200214_A_1_20241024T035159 seq:A200214_E_1_20241024T035159 seq:A200214_V_1_20241024T035159 ) .
+
+seq:A200214_A_1_20241024T035159 a seq:Text ;
+    cnt:chars "_Peter Luschny_, Nov 14 2011"@en .
+
+seq:A200214_E_1_20241024T035159 a seq:Text ;
+    cnt:chars "Description clarified, term a(0) removed and a second example added by _Antti Karttunen_, Jul 09 2017"@en .
+
+seq:A200214_F_1_20241024T035159 a seq:Text ;
+    cnt:chars "a(n) = 6*A122180(n). - _Antti Karttunen_, Jul 08 2017"@en .
+
+seq:A200214_H_1_20241024T035159 a seq:Text ;
+    cnt:chars """Antti Karttunen, <a href="/A200214/b200214.txt">Table of n, a(n) for n = 1..1001</a>
+Benny Chor, Paul Lemke, Ziv Mador, <a href="http://dx.doi.org/10.1016/S0012-365X(99)00223-X">On the number of ordered factorizations of natural numbers</a>, Discrete Mathematics, Vol. 214[1], 2000, p. 123-133.
+Arnold Knopfmacher and Michael Mays, <a href="https://www.mathematica-journal.com/issue/v10i1/contents/Factorizations/Factorizations_3.html">Ordered and Unordered Factorizations of Integers</a>, The Mathematica Journal, Vol 10 (1), 2006."""@en .
+
+seq:A200214_I_1_20241024T035159 a seq:Text ;
+    cnt:chars "#49 Oct 24 2024 03:51:59"@en .
+
+seq:A200214_K_1_20241024T035159 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200214_N_1_20241024T035159 a seq:Text ;
+    cnt:chars "Ordered factorizations of n with 3 distinct parts, all > 1."@en .
+
+seq:A200214_O_1_20241024T035159 a seq:Text ;
+    cnt:chars "1,24"@en .
+
+seq:A200214_V_1_20241024T035159 a seq:Text ;
+    cnt:chars "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,6,0,0,0,0,0,6,0,0,0,6,0,6,0,0,0,0,0,12,0,0,0,0,0,6,0,6,0,0,0,18,0,0,0,6,0,6,0,0,0,6,0,18,0,0,0,0,0,6,0,12,0,0,0,18"@en .
+
+seq:A200214_Y_1_20241024T035159 a seq:Text ;
+    cnt:chars "Cf. A025487, A122180, A200213."@en .
+
+seq:A200214_e_1_20241024T035159 a seq:Text ;
+    cnt:chars """a(24) = 6 = card({{2,3,4}, {2,4,3}, {3,2,4}, {3,4,2}, {4,2,3}, {4,3,2}}).
+a(64) = 6 = card({{2,4,8}, {2,8,4}, {4,2,8}, {4,8,2}, {8,2,4}, {8,4,2}})."""@en .
+
+seq:A200214_o_1_20241024T035159 a seq:Text ;
+    cnt:chars "(PARI) A200214(n) = { my(s=0); fordiv(n, x, if((x>1)&&(x<n),for(y=x+1, n-1, for(z=y+1, n-1, if(x*y*z==n, s++))))); (6*s); }; \\\\ (After A122180, still quite naive) - _Antti Karttunen_, Jul 09 2017"@en .
+
+seq:A200214_t_1_20241024T035159 a seq:Text ;
+    cnt:chars "OrderedFactorizations[1] = {{}}; OrderedFactorizations[n_?PrimeQ] := {{n}}; OrderedFactorizations[n_] := OrderedFactorizations[n] = Flatten[Function[d, Prepend[#, d] & /@ OrderedFactorizations[n/d]] /@ Rest[Divisors[n]], 1]; a[n_] := With[{of3 = Sort /@ Select[OrderedFactorizations[n], Length[#] == 3 && Length[# // Union] == 3 &] // Union}, Length[Permutations /@ of3 // Flatten[#, 1] &]];  Table[a[n], {n, 1, 84}] (* _Jean-François Alcover_, Jul 02 2013, copied and adapted from The Mathematica Journal *)"@en .
+

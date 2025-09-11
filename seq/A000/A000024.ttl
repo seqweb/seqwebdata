@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.221096Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 916}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000024 a seq:Sequence ;
+    rdfs:label "A000024"@en ;
+    seq:hasTextList ( seq:A000024_I_1_20171017T035856 seq:A000024_N_1_20171017T035856 seq:A000024_D_1_20171017T035856 seq:A000024_H_1_20171017T035856 seq:A000024_o_1_20171017T035856 seq:A000024_K_1_20171017T035856 seq:A000024_O_1_20171017T035856 seq:A000024_A_1_20171017T035856 seq:A000024_V_1_20171017T035856 ) .
+
+seq:A000024_A_1_20171017T035856 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000024_D_1_20171017T035856 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000024_H_1_20171017T035856 a seq:Text ;
+    cnt:chars """D. Shanks and L. P. Schmid, <a href="http://dx.doi.org/10.1090/S0025-5718-1966-0210678-1">Variations on a theorem of Landau. Part I</a>, Math. Comp., 20 (1966), 551-569.
+<a href="/index/Qua#quadpop">Index entries for sequences related to populations of quadratic forms</a>"""@en .
+
+seq:A000024_I_1_20171017T035856 a seq:Text ;
+    cnt:chars "M0368 N0139 #19 Oct 17 2017 03:58:56"@en .
+
+seq:A000024_K_1_20171017T035856 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000024_N_1_20171017T035856 a seq:Text ;
+    cnt:chars "Number of positive integers <= 2^n of form x^2 + 10 y^2."@en .
+
+seq:A000024_O_1_20171017T035856 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000024_V_1_20171017T035856 a seq:Text ;
+    cnt:chars "1,1,2,2,7,10,20,36,65,118,221,409,776,1463,2788,5328,10222,19714,38054,73685,142944,277838,540889,1054535,2058537,4023278,7871313,15414638,30213190,59266422,116343776,228545682,449240740,883570480,1738769611,3423469891,6743730746"@en .
+
+seq:A000024_o_1_20171017T035856 a seq:Text ;
+    cnt:chars "(PARI) a(n)=local(A);if(n<0,0,A=qfrep([1,0;0,10],2^n);sum(k=1,2^n,A[k]!=0))"@en .
+

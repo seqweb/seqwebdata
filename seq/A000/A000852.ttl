@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.533359Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 380}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000852 a seq:Sequence ;
+    rdfs:label "A000852"@en ;
+    seq:hasTextList ( seq:A000852_I_1_20170401T002928 seq:A000852_N_1_20170401T002928 seq:A000852_H_1_20170401T002928 seq:A000852_Y_1_20170401T002928 seq:A000852_K_1_20170401T002928 seq:A000852_O_1_20170401T002928 seq:A000852_A_1_20170401T002928 seq:A000852_V_1_20170401T002928 ) .
+
+seq:A000852_A_1_20170401T002928 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000852_H_1_20170401T002928 a seq:Text ;
+    cnt:chars "John Cerkan, <a href=\"/A000852/b000852.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000852_I_1_20170401T002928 a seq:Text ;
+    cnt:chars "#13 Apr 01 2017 00:29:28"@en .
+
+seq:A000852_K_1_20170401T002928 a seq:Text ;
+    cnt:chars "word,nonn,easy"@en .
+
+seq:A000852_N_1_20170401T002928 a seq:Text ;
+    cnt:chars "Numbers beginning with a vowel in English."@en .
+
+seq:A000852_O_1_20170401T002928 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000852_V_1_20170401T002928 a seq:Text ;
+    cnt:chars "1,8,11,18,80,81,82,83,84,85,86,87,88,89,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132"@en .
+
+seq:A000852_Y_1_20170401T002928 a seq:Text ;
+    cnt:chars "Cf. A000865, A000873."@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.674979Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 757}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383045 a seq:Sequence ;
+    rdfs:label "A383045"@en ;
+    seq:hasTextList ( seq:A383045_I_1_20250414T090341 seq:A383045_N_1_20250414T090341 seq:A383045_e_1_20250414T090341 seq:A383045_t_1_20250414T090341 seq:A383045_o_1_20250414T090341 seq:A383045_Y_1_20250414T090341 seq:A383045_K_1_20250414T090341 seq:A383045_O_1_20250414T090341 seq:A383045_A_1_20250414T090341 seq:A383045_E_1_20250414T090341 seq:A383045_V_1_20250414T090341 ) .
+
+seq:A383045_A_1_20250414T090341 a seq:Text ;
+    cnt:chars "_Michel Marcus_, Apr 14 2025"@en .
+
+seq:A383045_E_1_20250414T090341 a seq:Text ;
+    cnt:chars "a(36)-a(39) from _Amiram Eldar_, Apr 14 2025"@en .
+
+seq:A383045_I_1_20250414T090341 a seq:Text ;
+    cnt:chars "#13 Apr 14 2025 09:03:41"@en .
+
+seq:A383045_K_1_20250414T090341 a seq:Text ;
+    cnt:chars "nonn,base,more"@en .
+
+seq:A383045_N_1_20250414T090341 a seq:Text ;
+    cnt:chars "Integers k for which the sum of digits of Fibonacci(k) is a Fibonacci number."@en .
+
+seq:A383045_O_1_20250414T090341 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A383045_V_1_20250414T090341 a seq:Text ;
+    cnt:chars "0,1,2,3,4,5,6,8,13,28,33,49,85,94,107,286,299,366,421,422,443,657,2807,4483,4531,18694,49140,79033,79850,80290,128306,129049,129618,208245,338888,546571,882766,883822,886342"@en .
+
+seq:A383045_Y_1_20250414T090341 a seq:Text ;
+    cnt:chars "Cf. A000045, A020995, A067515, A004090, A382053."@en .
+
+seq:A383045_e_1_20250414T090341 a seq:Text ;
+    cnt:chars "Fibonacci(8) = 21 and sumdigits(21) = 3, a Fibonacci number, so 8 is a term."@en .
+
+seq:A383045_o_1_20250414T090341 a seq:Text ;
+    cnt:chars """(PARI) isfib(n) = my(k=n^2); k+=(k+1)<<2; issquare(k) || (n>0 && issquare(k-8));
+isok(k) = isfib(sumdigits(fibonacci(k)));"""@en .
+
+seq:A383045_t_1_20250414T090341 a seq:Text ;
+    cnt:chars "fibQ[n_] := Or @@ IntegerQ /@ Sqrt[5*n^2 + {-4, 4}]; Select[Range[0, 1000], fibQ[DigitSum[Fibonacci[#]]] &] (* _Amiram Eldar_, Apr 14 2025 *)"@en .
+

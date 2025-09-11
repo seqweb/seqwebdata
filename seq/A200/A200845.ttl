@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.202165Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 588}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200845 a seq:Sequence ;
+    rdfs:label "A200845"@en ;
+    seq:hasTextList ( seq:A200845_I_1_20220908T084600 seq:A200845_N_1_20220908T084600 seq:A200845_H_1_20220908T084600 seq:A200845_t_1_20220908T084600 seq:A200845_o_1_20220908T084600 seq:A200845_K_1_20220908T084600 seq:A200845_O_1_20220908T084600 seq:A200845_A_1_20220908T084600 seq:A200845_V_1_20220908T084600 ) .
+
+seq:A200845_A_1_20220908T084600 a seq:Text ;
+    cnt:chars "_Vincenzo Librandi_, Nov 23 2011"@en .
+
+seq:A200845_H_1_20220908T084600 a seq:Text ;
+    cnt:chars "Vincenzo Librandi, <a href=\"/A200845/b200845.txt\">Table of n, a(n) for n = 1..2000</a>"@en .
+
+seq:A200845_I_1_20220908T084600 a seq:Text ;
+    cnt:chars "#12 Sep 08 2022 08:46:00"@en .
+
+seq:A200845_K_1_20220908T084600 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A200845_N_1_20220908T084600 a seq:Text ;
+    cnt:chars "Primes of the form 6n^3 - 5."@en .
+
+seq:A200845_O_1_20220908T084600 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200845_V_1_20220908T084600 a seq:Text ;
+    cnt:chars "43,157,379,1291,2053,3067,13177,24571,29473,41149,72997,82939,118093,131707,215617,355909,413521,444523,584011,663547,843643,893257,1053691,1170667,1232269,1500277,1724971,1971049,2147461,2334097,3188641"@en .
+
+seq:A200845_o_1_20220908T084600 a seq:Text ;
+    cnt:chars """(Magma) [a: n in [1..90] | IsPrime(a) where a is 6*n^3-5]
+(PARI) for(n=1,1e3,if(isprime(t=6*n^3-5),print1(t", "))) \\\\ _Charles R Greathouse IV_, Nov 23 2011"""@en .
+
+seq:A200845_t_1_20220908T084600 a seq:Text ;
+    cnt:chars "Select[Table[6n^3-5,{n,1,50000}],PrimeQ]"@en .
+

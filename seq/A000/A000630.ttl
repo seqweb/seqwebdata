@@ -1,0 +1,56 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.990394Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1061}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000630 a seq:Sequence ;
+    rdfs:label "A000630"@en ;
+    seq:hasTextList ( seq:A000630_I_1_20211219T093934 seq:A000630_N_1_20211219T093934 seq:A000630_D_1_20211219T093934 seq:A000630_H_1_20211219T093934 seq:A000630_F_1_20211219T093934 seq:A000630_e_1_20211219T093934 seq:A000630_p_1_20211219T093934 seq:A000630_K_1_20211219T093934 seq:A000630_O_1_20211219T093934 seq:A000630_A_1_20211219T093934 seq:A000630_E_1_20211219T093934 seq:A000630_V_1_20211219T093934 ) .
+
+seq:A000630_A_1_20211219T093934 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000630_D_1_20211219T093934 a seq:Text ;
+    cnt:chars "D. E. Knuth, personal communication."@en .
+
+seq:A000630_E_1_20211219T093934 a seq:Text ;
+    cnt:chars "More terms from _David W. Wilson_"@en .
+
+seq:A000630_F_1_20211219T093934 a seq:Text ;
+    cnt:chars """Sum_{n>=0} a(n)*q^n = 1/(1 - Sum_{n>=0} a(n)*q^(2^n) ).
+As n increases, a(n+1)/a(n) approaches the value x = 1.874542... satisfying 1 = Sum_{j>=0} a(j)/x^(2^j). [_David W. Wilson_]"""@en .
+
+seq:A000630_H_1_20211219T093934 a seq:Text ;
+    cnt:chars "D. E. Knuth, <a href=\"/A000630/a000630.pdf\">Letter to N. J. A. Sloane, Jan. 1995</a>"@en .
+
+seq:A000630_I_1_20211219T093934 a seq:Text ;
+    cnt:chars "#38 Dec 19 2021 09:39:34"@en .
+
+seq:A000630_K_1_20211219T093934 a seq:Text ;
+    cnt:chars "nonn,easy,nice"@en .
+
+seq:A000630_N_1_20211219T093934 a seq:Text ;
+    cnt:chars "Number of ways to represent n using the binary operator a * b = 2^a + b."@en .
+
+seq:A000630_O_1_20211219T093934 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A000630_V_1_20211219T093934 a seq:Text ;
+    cnt:chars "1,1,2,3,7,12,23,41,81,149,282,522,987,1843,3463,6473,12160,22773,42719,80025,150074,281258,527320,988334,1852849,3473061,6510681,12204139,22877649,42884585,80389797,150692973,282481747,529522496,992614937,1860696007"@en .
+
+seq:A000630_e_1_20211219T093934 a seq:Text ;
+    cnt:chars "E.g. 4 = 1+1+1+1 = 2^1 + 1+1 = 2^1 + 2^1 = 2^2 = 2^1+1 = 1+2^1 + 1 = 1+1+2^1."@en .
+
+seq:A000630_p_1_20211219T093934 a seq:Text ;
+    cnt:chars """N:= 100: # to get all terms up to a(N)
+F:= add(a[i]*q^i,i=0..N) - 1/(1 - add(a[i]*q^(2^i),i=0..ilog2(N))):
+S:= series(F, q, N+1);
+sol:= {}:
+for i from 0 to N do
+  eq:= subs(sol, coeff(S,q,i));
+  sol:= sol union {a[i]=solve(eq,a[i])};
+od:
+subs(sol, [seq(a[i],i=0..N)]); # _Robert Israel_, Dec 12 2014"""@en .
+

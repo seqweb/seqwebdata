@@ -1,0 +1,48 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.888350Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1220}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200061 a seq:Sequence ;
+    rdfs:label "A200061"@en ;
+    seq:hasTextList ( seq:A200061_I_1_20120331T123637 seq:A200061_N_1_20120331T123637 seq:A200061_C_1_20120331T123637 seq:A200061_H_1_20120331T123637 seq:A200061_F_1_20120331T123637 seq:A200061_e_1_20120331T123637 seq:A200061_K_1_20120331T123637 seq:A200061_O_1_20120331T123637 seq:A200061_A_1_20120331T123637 seq:A200061_V_1_20120331T123637 ) .
+
+seq:A200061_A_1_20120331T123637 a seq:Text ;
+    cnt:chars "_R. H. Hardin_ Nov 13 2011"@en .
+
+seq:A200061_C_1_20120331T123637 a seq:Text ;
+    cnt:chars "Row 7 of A200057"@en .
+
+seq:A200061_F_1_20120331T123637 a seq:Text ;
+    cnt:chars "Empirical: a(n) = 2*a(n-1) -a(n-3) -a(n-5) +a(n-6) -2*a(n-7) +2*a(n-8) +a(n-9) -a(n-13) -2*a(n-14) +2*a(n-15) -a(n-16) +a(n-17) +a(n-19) -2*a(n-21) +a(n-22)"@en .
+
+seq:A200061_H_1_20120331T123637 a seq:Text ;
+    cnt:chars "R. H. Hardin, <a href=\"/A200061/b200061.txt\">Table of n, a(n) for n = 1..200</a>"@en .
+
+seq:A200061_I_1_20120331T123637 a seq:Text ;
+    cnt:chars "#5 Mar 31 2012 12:36:37"@en .
+
+seq:A200061_K_1_20120331T123637 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200061_N_1_20120331T123637 a seq:Text ;
+    cnt:chars "Number of -n..n arrays x(0..6) of 7 elements with zero sum and elements alternately strictly increasing and strictly decreasing"@en .
+
+seq:A200061_O_1_20120331T123637 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200061_V_1_20120331T123637 a seq:Text ;
+    cnt:chars "14,472,4224,20978,74338,211242,514168,1115572,2215290,4099888,7165376,11941380,19119208,29580842,44432366,65037696,93057524,130487666,179703518,243503094,325156994,428455996,557766736,718083722,915090720"@en .
+
+seq:A200061_e_1_20120331T123637 a seq:Text ;
+    cnt:chars """Some solutions for n=6
+..1....4....3...-2....3....6...-3....0...-6...-6...-3....0....4....0...-4....4
+.-6....2...-1....0...-6...-6....2....2....6...-4....0...-1....3....4...-6...-6
+..6....4....3...-3....2...-2...-4...-4...-4...-5...-6....0....5...-4....6....5
+.-6...-6...-1....0...-3...-3....6....6....4....5....5...-3...-6....3....1...-4
+..3....0....0...-1....4....6...-5...-5....0....3...-3....5...-4...-6....6....4
+..0...-5...-4....6...-6...-3....5....6....1....5....5...-2...-6....4...-4...-5
+..2....1....0....0....6....2...-1...-5...-1....2....2....1....4...-1....1....2"""@en .
+

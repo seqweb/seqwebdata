@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.128953Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 55, "entities": 14, "chars": 2182}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000689 a seq:Sequence ;
+    rdfs:label "A000689"@en ;
+    seq:hasTextList ( seq:A000689_I_1_20240706T210928 seq:A000689_N_1_20240706T210928 seq:A000689_C_1_20240706T210928 seq:A000689_H_1_20240706T210928 seq:A000689_F_1_20240706T210928 seq:A000689_e_1_20240706T210928 seq:A000689_t_1_20240706T210928 seq:A000689_o_1_20240706T210928 seq:A000689_Y_1_20240706T210928 seq:A000689_K_1_20240706T210928 seq:A000689_O_1_20240706T210928 seq:A000689_A_1_20240706T210928 seq:A000689_V_1_20240706T210928 ) .
+
+seq:A000689_A_1_20240706T210928 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000689_C_1_20240706T210928 a seq:Text ;
+    cnt:chars """These are the analogs of the powers of 2 in carryless arithmetic mod 10.
+Let G = {2,4,8,6}. Let o be defined as XoY = least significant digit in XY. Then (G,o) is an Abelian group wherein 2 is a generator (also see the first comment under A001148). - _K.V.Iyer_, Mar 12 2010
+This is also the decimal expansion of 227/1818. - _Kritsada Moomuang_, Dec 21 2021"""@en .
+
+seq:A000689_F_1_20240706T210928 a seq:Text ;
+    cnt:chars """Periodic with period 4.
+a(n) = 2^n mod 10.
+a(n) = A002081(n) - A002081(n-1), for n > 0.
+From _R. J. Mathar_, Apr 13 2010: (start)
+a(n) = a(n-1) - a(n-2) + a(n-3), n > 3.
+G.f.: (x+3*x^2+5*x^3+1)/((1-x) * (1+x^2)). (End)
+For n >= 1, a(n) = 10 - (4x^3 + 47x - 27x^2)/3, where x = (n+3) mod 4 + 1.
+For n >= 1, a(n) = A070402(n) + 5*floor( ((n-1) mod 4)/2 ).
+G.f.: 1 / (1 - 2*x / (1 + 5*x^3 / (1 + x / (1 - 3*x / (1 + 3*x))))). - _Michael Somos_, May 12 2012
+a(n) = 5 + cos((n*Pi)/2) - 3*sin((n*Pi)/2) for n >= 1. - _Kritsada Moomuang_, Dec 21 2021"""@en .
+
+seq:A000689_H_1_20240706T210928 a seq:Text ;
+    cnt:chars """David Applegate, Marc LeBrun and N. J. A. Sloane, <a href="http://neilsloane.com/doc/carry1.pdf">Carryless Arithmetic (I): The Mod 10 Version</a>
+<a href="/index/Ca#CARRYLESS">Index entries for sequences related to carryless arithmetic</a>
+<a href="/index/Fi#final">Index entries for sequences related to final digits of numbers</a>
+<a href="/index/Rec#order_03">Index entries for linear recurrences with constant coefficients</a>, signature (1,-1,1)."""@en .
+
+seq:A000689_I_1_20240706T210928 a seq:Text ;
+    cnt:chars "#84 Jul 06 2024 21:09:28"@en .
+
+seq:A000689_K_1_20240706T210928 a seq:Text ;
+    cnt:chars "nonn,base,easy"@en .
+
+seq:A000689_N_1_20240706T210928 a seq:Text ;
+    cnt:chars "Final decimal digit of 2^n."@en .
+
+seq:A000689_O_1_20240706T210928 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000689_V_1_20240706T210928 a seq:Text ;
+    cnt:chars "1,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6,2,4,8,6"@en .
+
+seq:A000689_Y_1_20240706T210928 a seq:Text ;
+    cnt:chars "Cf. A000079, A000855, A008952, A034887, A173635."@en .
+
+seq:A000689_e_1_20240706T210928 a seq:Text ;
+    cnt:chars "G.f. = 1 + 2*x + 4*x^2 + 8*x^3 + 6*x^4 + 2*x^5 + 4*x^6 + 8*x^7 + 6*x^8 + ..."@en .
+
+seq:A000689_o_1_20240706T210928 a seq:Text ;
+    cnt:chars """(Sage) [power_mod(2,n,10)for n in range(0, 81)] #  _Zerinvary Lajos_, Nov 03 2009
+(PARI) for(n=0,80, if(n,{x=(n+3)%4+1; print1(10-(4*x^3+47*x-27*x^2)/3,", ")},{print1("1, ")}))
+(Magma) [2^n mod 10: n in [0..150]]; // _Vincenzo Librandi_, Apr 12 2011
+(Haskell)
+a000689 n = a000689_list !! n
+a000689_list = 1 : cycle [2,4,8,6]  -- _Reinhard Zumkeller_, Sep 15 2011"""@en .
+
+seq:A000689_t_1_20240706T210928 a seq:Text ;
+    cnt:chars "Table[PowerMod[2, n, 10], {n, 0, 200}] (* _Vladimir Joseph Stephan Orlovsky_, Jun 10 2011 *)"@en .
+

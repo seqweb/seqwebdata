@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.188516Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1696}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000714 a seq:Sequence ;
+    rdfs:label "A000714"@en ;
+    seq:hasTextList ( seq:A000714_I_1_20220204T020148 seq:A000714_N_1_20220204T020148 seq:A000714_C_1_20220204T020148 seq:A000714_D_1_20220204T020148 seq:A000714_H_1_20220204T020148 seq:A000714_F_1_20220204T020148 seq:A000714_e_1_20220204T020148 seq:A000714_p_1_20220204T020148 seq:A000714_t_1_20220204T020148 seq:A000714_K_1_20220204T020148 seq:A000714_O_1_20220204T020148 seq:A000714_A_1_20220204T020148 seq:A000714_E_1_20220204T020148 seq:A000714_V_1_20220204T020148 ) .
+
+seq:A000714_A_1_20220204T020148 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000714_C_1_20220204T020148 a seq:Text ;
+    cnt:chars "Convolution of A000712 and A008619. - _Vaclav Kotesovec_, Aug 18 2015"@en .
+
+seq:A000714_D_1_20220204T020148 a seq:Text ;
+    cnt:chars """H. Gupta et al., Tables of Partitions. Royal Society Mathematical Tables, Vol. 4, Cambridge Univ. Press, 1958, p. 122.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000714_E_1_20220204T020148 a seq:Text ;
+    cnt:chars "Extended with formula from _Christian G. Bower_, Apr 15 1998"@en .
+
+seq:A000714_F_1_20220204T020148 a seq:Text ;
+    cnt:chars """EULER transform of 3, 3, 2, 2, 2, 2, 2, 2, ...
+G.f.: 1/((1-x)*(1-x^2)*Product_{k>=1} (1 - x^k)^2). - _Emeric Deutsch_, Apr 17 2006
+a(n) ~ 3^(1/4) * exp(2*Pi*sqrt(n/3)) / (8 * Pi^2 * n^(1/4)). - _Vaclav Kotesovec_, Aug 18 2015"""@en .
+
+seq:A000714_H_1_20220204T020148 a seq:Text ;
+    cnt:chars """Vaclav Kotesovec, <a href="/A000714/b000714.txt">Table of n, a(n) for n = 0..2000</a>
+T. Doslic, <a href="https://cs.uwaterloo.ca/journals/JIS/VOL17/Doslic/doslic3.html">Kepler-Bouwkamp Radius of Combinatorial Sequences</a>, Journal of Integer Sequences, Vol. 17, 2014, #14.11.3.
+N. J. A. Sloane, <a href="/transforms.txt">Transforms</a>"""@en .
+
+seq:A000714_I_1_20220204T020148 a seq:Text ;
+    cnt:chars "M2777 N1117 #35 Feb 04 2022 02:01:48"@en .
+
+seq:A000714_K_1_20220204T020148 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000714_N_1_20220204T020148 a seq:Text ;
+    cnt:chars "Number of partitions of n, with three kinds of 1 and 2 and two kinds of 3,4,5,...."@en .
+
+seq:A000714_O_1_20220204T020148 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A000714_V_1_20220204T020148 a seq:Text ;
+    cnt:chars "1,3,9,21,47,95,186,344,620,1078,1835,3045,4967,7947,12534,19470,29879,45285,67924,100820,148301,216199,312690,448738,639464,905024,1272837,1779237,2473065,3418655,4701611,6434015,8763676"@en .
+
+seq:A000714_e_1_20220204T020148 a seq:Text ;
+    cnt:chars "a(2)=9 because we have 2, 2', 2\", 1+1, 1'+1', 1\"+1\", 1+1', 1+1\", 1'+1\"."@en .
+
+seq:A000714_p_1_20220204T020148 a seq:Text ;
+    cnt:chars "g:=1/((1-x)*(1-x^2)*product((1-x^k)^2,k=1..40)): gser:=series(g,x=0,50): seq(coeff(gser,x,n),n=0..32); # _Emeric Deutsch_, Apr 17 2006"@en .
+
+seq:A000714_t_1_20220204T020148 a seq:Text ;
+    cnt:chars "p=Product[1/(1-x^i),{i,1,20}];CoefficientList[Series[p^2/(1 - x)/(1 - x^2), {x, 0, 20}], x] (* _Geoffrey Critzer_, Nov 28 2011 *)"@en .
+

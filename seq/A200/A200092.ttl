@@ -1,0 +1,55 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.960210Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1338}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200092 a seq:Sequence ;
+    rdfs:label "A200092"@en ;
+    seq:hasTextList ( seq:A200092_I_1_20171209T191449 seq:A200092_N_1_20171209T191449 seq:A200092_C_1_20171209T191449 seq:A200092_F_1_20171209T191449 seq:A200092_e_1_20171209T191449 seq:A200092_Y_1_20171209T191449 seq:A200092_K_1_20171209T191449 seq:A200092_O_1_20171209T191449 seq:A200092_A_1_20171209T191449 seq:A200092_V_1_20171209T191449 ) .
+
+seq:A200092_A_1_20171209T191449 a seq:Text ;
+    cnt:chars "_Peter Bala_, Dec 04 2011"@en .
+
+seq:A200092_C_1_20171209T191449 a seq:Text ;
+    cnt:chars "Equivalently, the number of ordered set partitions of the set [n] into k blocks of size at least three. When the boxes are unlabeled we obtain A059022."@en .
+
+seq:A200092_F_1_20171209T191449 a seq:Text ;
+    cnt:chars """E.g.f. with additional constant 1: 1/(1 - t*(exp(x) - 1 - x - x^2/2!)) = 1 + t*x^3/3! + t*x^4/4! + t*x^5/5! + (t+20*t^2)*x^6/6! + ....
+Recurrence relation: T(n+1,k) = k*(T(n,k) + n*(n-1)/2*T(n-2,k-1)). T(n,k) = k!*A059022(n,k)."""@en .
+
+seq:A200092_I_1_20171209T191449 a seq:Text ;
+    cnt:chars "#10 Dec 09 2017 19:14:49"@en .
+
+seq:A200092_K_1_20171209T191449 a seq:Text ;
+    cnt:chars "nonn,easy,tabf"@en .
+
+seq:A200092_N_1_20171209T191449 a seq:Text ;
+    cnt:chars "The number of ways of putting n labeled items into k labeled boxes so that each box receives at least 3 objects."@en .
+
+seq:A200092_O_1_20171209T191449 a seq:Text ;
+    cnt:chars "3,5"@en .
+
+seq:A200092_V_1_20171209T191449 a seq:Text ;
+    cnt:chars "1,1,1,1,20,1,70,1,182,1,420,1680,1,912,12600,1,1914,62370,1,3938,256410,369600,1,8008,949806,4804800,1,16172,3297294,38678640,1,32526,10966956,248047800,168168000"@en .
+
+seq:A200092_Y_1_20171209T191449 a seq:Text ;
+    cnt:chars "Cf. A019538, A059022, A200091."@en .
+
+seq:A200092_e_1_20171209T191449 a seq:Text ;
+    cnt:chars """Table begins
+  n\\k |  1     2       3
+  ----+-----------------
+   3  |  1
+   4  |  1
+   5  |  1
+   6  |  1    20
+   7  |  1    70
+   8  |  1   182
+   9  |  1   420    1680
+  10  |  1   912   12600
+  11  |  1  1914   62370
+  ...
+T(6,2) = 20: The arrangements of 6 objects into 2 boxes { } and [ ] so that each box contains at least 3 items are {1,2,3}[4,5,6], {1,2,4}[3,5,6], {1,2,5}[3,4,6], {1,2,6}[3,4,5], {1,3,4}[2,5,6], {1,3,5}[2,4,6], {1,3,6}[2,4,5], {1,4,5}[2,3,6], {1,4,6}[2,3,5], {1,5,6}[2,3,4] and the 10 other possibilities where the contents of a pair of boxes are swapped."""@en .
+

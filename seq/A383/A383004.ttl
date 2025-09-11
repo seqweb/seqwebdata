@@ -1,0 +1,47 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.587837Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 833}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383004 a seq:Sequence ;
+    rdfs:label "A383004"@en ;
+    seq:hasTextList ( seq:A383004_I_1_20250412T094224 seq:A383004_N_1_20250412T094224 seq:A383004_H_1_20250412T094224 seq:A383004_F_1_20250412T094224 seq:A383004_t_1_20250412T094224 seq:A383004_o_1_20250412T094224 seq:A383004_Y_1_20250412T094224 seq:A383004_K_1_20250412T094224 seq:A383004_O_1_20250412T094224 seq:A383004_A_1_20250412T094224 seq:A383004_V_1_20250412T094224 ) .
+
+seq:A383004_A_1_20250412T094224 a seq:Text ;
+    cnt:chars "_Amiram Eldar_, Apr 12 2025"@en .
+
+seq:A383004_F_1_20250412T094224 a seq:Text ;
+    cnt:chars """a(n) = A007814(A004709(n)).
+A383009(a(n)) > 0.
+Asymptotic mean: Limit_{m->oo} (1/m) * Sum_{k=1..m} a(k) = 4/7."""@en .
+
+seq:A383004_H_1_20250412T094224 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A383004/b383004.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A383004_I_1_20250412T094224 a seq:Text ;
+    cnt:chars "#9 Apr 12 2025 09:42:24"@en .
+
+seq:A383004_K_1_20250412T094224 a seq:Text ;
+    cnt:chars "nonn,easy"@en .
+
+seq:A383004_N_1_20250412T094224 a seq:Text ;
+    cnt:chars "Exponent of the highest power of 2 dividing the n-th cubefree number."@en .
+
+seq:A383004_O_1_20250412T094224 a seq:Text ;
+    cnt:chars "1,4"@en .
+
+seq:A383004_V_1_20250412T094224 a seq:Text ;
+    cnt:chars "0,1,0,2,0,1,0,0,1,0,2,0,1,0,0,1,0,2,0,1,0,0,1,2,0,1,0,0,1,0,2,0,1,0,0,1,0,2,0,1,0,0,1,0,2,0,0,0,1,0,2,0,1,0,0,1,0,2,0,1,0,0,1,0,2,0,1,0,1,0,2,0,1,0,0,1,0,2,0,1,0,0,1,0,2,0,1"@en .
+
+seq:A383004_Y_1_20250412T094224 a seq:Text ;
+    cnt:chars "Cf. A004709, A007814, A373550, A383005, A383009."@en .
+
+seq:A383004_o_1_20250412T094224 a seq:Text ;
+    cnt:chars """(PARI) iscubefree(n) = {my(f = factor(n)); for(i=1, #f~, if(f[i, 2] > 2, return (0))); 1; }
+list(lim) = for(k = 1, lim, if(iscubefree(k), print1(valuation(k, 2), ", ")));"""@en .
+
+seq:A383004_t_1_20250412T094224 a seq:Text ;
+    cnt:chars "cubeFreeQ[n_] := AllTrue[FactorInteger[n][[;; , 2]], # < 3 &]; IntegerExponent[Select[Range[200], cubeFreeQ], 2]"@en .
+

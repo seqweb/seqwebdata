@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:36.157115Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 954}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200822 a seq:Sequence ;
+    rdfs:label "A200822"@en ;
+    seq:hasTextList ( seq:A200822_I_1_20210607T011250 seq:A200822_N_1_20210607T011250 seq:A200822_C_1_20210607T011250 seq:A200822_H_1_20210607T011250 seq:A200822_e_1_20210607T011250 seq:A200822_t_1_20210607T011250 seq:A200822_Y_1_20210607T011250 seq:A200822_K_1_20210607T011250 seq:A200822_O_1_20210607T011250 seq:A200822_A_1_20210607T011250 seq:A200822_V_1_20210607T011250 ) .
+
+seq:A200822_A_1_20210607T011250 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 23 2011"@en .
+
+seq:A200822_C_1_20210607T011250 a seq:Text ;
+    cnt:chars """The corresponding indices k are 1, 2, 34, 107, 1568, 1933, 3551, 6793, ... (see A200821).
+The generalization of this sequence is possible with the primes of the form  (b^n +- k)*b^n +- 1.
+For k = 107, a(4) has 65 digits;
+for k = 1568, a(5) has 945 digits;
+for k = 1933, a(6) has 1164 digits;
+for k = 3551, a(7) has 2138 digits;
+for k = 6793, a(8) has 4090 digits."""@en .
+
+seq:A200822_H_1_20210607T011250 a seq:Text ;
+    cnt:chars "Henri Lifchitz, <a href=\"http://www.primenumbers.net/Henri/us/NouvP1us.htm\">New forms of primes</a>"@en .
+
+seq:A200822_I_1_20210607T011250 a seq:Text ;
+    cnt:chars "#23 Jun 07 2021 01:12:50"@en .
+
+seq:A200822_K_1_20210607T011250 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200822_N_1_20210607T011250 a seq:Text ;
+    cnt:chars "Primes of the form (2^k + k)*2^k - 1."@en .
+
+seq:A200822_O_1_20210607T011250 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200822_V_1_20210607T011250 a seq:Text ;
+    cnt:chars "5,23,295147905763468378111,26328072917139296674479506920934969822344499680020176660678574079"@en .
+
+seq:A200822_Y_1_20210607T011250 a seq:Text ;
+    cnt:chars "Cf. A200816, A200817, A200818, A200819, A200821, A200823, A200832."@en .
+
+seq:A200822_e_1_20210607T011250 a seq:Text ;
+    cnt:chars "23 is in the sequence because, for k=2, (2^2 + 2)*2^2 - 1 = 23 is prime."@en .
+
+seq:A200822_t_1_20210607T011250 a seq:Text ;
+    cnt:chars """a={}; Do[p=(2^n + n)*2^n-1; If[PrimeQ[p], AppendTo[a, p]], {n, 10^3}]; Print[a]
+Select[Table[(2^n+n)2^n-1,{n,200}],PrimeQ] (* _Harvey P. Dale_, Dec 18 2015 *)"""@en .
+

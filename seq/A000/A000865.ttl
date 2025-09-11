@@ -1,0 +1,39 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.558714Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 483}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000865 a seq:Sequence ;
+    rdfs:label "A000865"@en ;
+    seq:hasTextList ( seq:A000865_I_1_20231211T141609 seq:A000865_N_1_20231211T141609 seq:A000865_H_1_20231211T141609 seq:A000865_t_1_20231211T141609 seq:A000865_Y_1_20231211T141609 seq:A000865_K_1_20231211T141609 seq:A000865_O_1_20231211T141609 seq:A000865_A_1_20231211T141609 seq:A000865_V_1_20231211T141609 ) .
+
+seq:A000865_A_1_20231211T141609 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000865_H_1_20231211T141609 a seq:Text ;
+    cnt:chars "John Cerkan, <a href=\"/A000865/b000865.txt\">Table of n, a(n) for n = 1..10000</a>"@en .
+
+seq:A000865_I_1_20231211T141609 a seq:Text ;
+    cnt:chars "#23 Dec 11 2023 14:16:09"@en .
+
+seq:A000865_K_1_20231211T141609 a seq:Text ;
+    cnt:chars "word,nonn"@en .
+
+seq:A000865_N_1_20231211T141609 a seq:Text ;
+    cnt:chars "Numbers beginning with letter 'o' in English."@en .
+
+seq:A000865_O_1_20231211T141609 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000865_V_1_20231211T141609 a seq:Text ;
+    cnt:chars "1,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135"@en .
+
+seq:A000865_Y_1_20231211T141609 a seq:Text ;
+    cnt:chars """Subsequence of A000852.
+Subsequence of A131835."""@en .
+
+seq:A000865_t_1_20231211T141609 a seq:Text ;
+    cnt:chars "Select[Range[1000],First[Characters[IntegerName[#,\"Words\"]]]==\"o\"&] (* _James C. McMahon_, Dec 11 2023 *)"@en .
+

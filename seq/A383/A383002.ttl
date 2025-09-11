@@ -1,0 +1,35 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.583334Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 35, "entities": 9, "chars": 291}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383002 a seq:Sequence ;
+    rdfs:label "A383002"@en ;
+    seq:hasTextList ( seq:A383002_I_1_20250502T121141 seq:A383002_N_1_20250502T121141 seq:A383002_C_1_20250502T121141 seq:A383002_Y_1_20250502T121141 seq:A383002_K_1_20250502T121141 seq:A383002_O_1_20250502T121141 seq:A383002_A_1_20250502T121141 seq:A383002_V_1_20250502T121141 ) .
+
+seq:A383002_A_1_20250502T121141 a seq:Text ;
+    cnt:chars "_Pontus von Brömssen_, Apr 12 2025"@en .
+
+seq:A383002_C_1_20250502T121141 a seq:Text ;
+    cnt:chars "a(n) is the number of occurrences of n in A230697."@en .
+
+seq:A383002_I_1_20250502T121141 a seq:Text ;
+    cnt:chars "#10 May 02 2025 12:11:41"@en .
+
+seq:A383002_K_1_20250502T121141 a seq:Text ;
+    cnt:chars "nonn,hard,more,changed"@en .
+
+seq:A383002_N_1_20250502T121141 a seq:Text ;
+    cnt:chars "Number of integers with a shortest addition-multiplication chain of length n."@en .
+
+seq:A383002_O_1_20250502T121141 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383002_V_1_20250502T121141 a seq:Text ;
+    cnt:chars "1,1,2,5,16,63,331,2239,19909,225615,3167570"@en .
+
+seq:A383002_Y_1_20250502T121141 a seq:Text ;
+    cnt:chars "Cf. A003065, A230697, A383001."@en .
+

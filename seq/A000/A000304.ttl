@@ -1,0 +1,59 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.225590Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 59, "entities": 15, "chars": 1523}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000304 a seq:Sequence ;
+    rdfs:label "A000304"@en ;
+    seq:hasTextList ( seq:A000304_I_1_20250105T195131 seq:A000304_N_1_20250105T195131 seq:A000304_C_1_20250105T195131 seq:A000304_H_1_20250105T195131 seq:A000304_F_1_20250105T195131 seq:A000304_p_1_20250105T195131 seq:A000304_t_1_20250105T195131 seq:A000304_o_1_20250105T195131 seq:A000304_Y_1_20250105T195131 seq:A000304_K_1_20250105T195131 seq:A000304_O_1_20250105T195131 seq:A000304_A_1_20250105T195131 seq:A000304_E_1_20250105T195131 seq:A000304_V_1_20250105T195131 ) .
+
+seq:A000304_A_1_20250105T195131 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000304_C_1_20250105T195131 a seq:Text ;
+    cnt:chars "A038500(a(n)) = A010098(n-2); for n > 2: A006519(a(n)) = A000301(n-3); A001222(a(n)) = A000045(n-1). - _Reinhard Zumkeller_, Jul 06 2014"@en .
+
+seq:A000304_E_1_20250105T195131 a seq:Text ;
+    cnt:chars "More terms from _Vladimir Joseph Stephan Orlovsky_, Feb 17 2010"@en .
+
+seq:A000304_F_1_20250105T195131 a seq:Text ;
+    cnt:chars """For n>=4, a(n) = 2^A000045(n-3)*3^A000045(n-2). - _Benoit Cloitre_, Sep 26 2003
+For n > 2: a(n) = A000301(n-3) * A010098(n-2). - _Reinhard Zumkeller_, Jul 06 2014"""@en .
+
+seq:A000304_H_1_20250105T195131 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000304/b000304.txt">Table of n, a(n) for n = 2..18</a>
+Peter G. Anderson, <a href="https://web.archive.org/web/2024*/https://www.fq.math.ca/Papers1/55-5/Anderson.pdf">Notes & Extensions for a Remarkable Continued Fraction</a>, Fibonacci Quart. 55 (2017), no. 5, 9-14. Mentions this sequence.
+Sergio Falcon, <a href="http://dx.doi.org/10.1080/0020739031000158362">Fibonacci's multiplicative sequence</a>, Int. J. Math. Edu. Sci. Technol. 34-2 (2003), 310-315. [_Sergio Falcon_, Nov 23 2009]"""@en .
+
+seq:A000304_I_1_20250105T195131 a seq:Text ;
+    cnt:chars "#56 Jan 05 2025 19:51:31"@en .
+
+seq:A000304_K_1_20250105T195131 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000304_N_1_20250105T195131 a seq:Text ;
+    cnt:chars "a(n) = a(n-1)*a(n-2)."@en .
+
+seq:A000304_O_1_20250105T195131 a seq:Text ;
+    cnt:chars "2,1"@en .
+
+seq:A000304_V_1_20250105T195131 a seq:Text ;
+    cnt:chars "2,3,6,18,108,1944,209952,408146688,85691213438976,34974584955819144511488,2997014624388697307377363936018956288,104819342594514896999066634490728502944926883876041385836544"@en .
+
+seq:A000304_Y_1_20250105T195131 a seq:Text ;
+    cnt:chars "Cf. A000045, A000301, A001222, A006519, A010098, A038500, A249406."@en .
+
+seq:A000304_o_1_20250105T195131 a seq:Text ;
+    cnt:chars """(Haskell)
+a000304 n = a000304_list !! (n-2)
+a000304_list = 2 : 3 : zipWith (*) a000304_list (tail a000304_list)
+-- _Reinhard Zumkeller_, Jul 06 2014"""@en .
+
+seq:A000304_p_1_20250105T195131 a seq:Text ;
+    cnt:chars "A000304 := proc(n) option remember; if n <=3 then n else A000304(n-1)*A000304(n-2); fi; end;"@en .
+
+seq:A000304_t_1_20250105T195131 a seq:Text ;
+    cnt:chars "nxt[{a_,b_}]:={b,a*b}; Transpose[NestList[nxt,{2,3},12]][[1]] (* _Harvey P. Dale_, Nov 16 2014 *)"@en .
+

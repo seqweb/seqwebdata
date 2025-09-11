@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:34.726083Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 944}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200141 a seq:Sequence ;
+    rdfs:label "A200141"@en ;
+    seq:hasTextList ( seq:A200141_I_1_20210902T072738 seq:A200141_N_1_20210902T072738 seq:A200141_C_1_20210902T072738 seq:A200141_H_1_20210902T072738 seq:A200141_F_1_20210902T072738 seq:A200141_e_1_20210902T072738 seq:A200141_K_1_20210902T072738 seq:A200141_O_1_20210902T072738 seq:A200141_A_1_20210902T072738 seq:A200141_V_1_20210902T072738 ) .
+
+seq:A200141_A_1_20210902T072738 a seq:Text ;
+    cnt:chars "_Jonathan Vos Post_, Nov 13 2011"@en .
+
+seq:A200141_C_1_20210902T072738 a seq:Text ;
+    cnt:chars "Xi proves a quantitative version of the statement that every nonempty finite subset of N+ is a set of quadratic residues for infinitely many primes of the form [n^c] with 1 <= c <= 243/205."@en .
+
+seq:A200141_F_1_20210902T072738 a seq:Text ;
+    cnt:chars "243/205."@en .
+
+seq:A200141_H_1_20210902T072738 a seq:Text ;
+    cnt:chars """Victor Zhenyu Guo, Jinjiang Li and Min Zhang, <a href="https://arxiv.org/abs/2109.00461">Piatetski-Shapiro primes in the intersection of multiple Beatty sequences</a>, arXiv:2109.00461 [math.NT], 2021.
+Ping Xi, <a href="http://arxiv.org/abs/1111.2641">Quadratic residues and non-residues for infinitely many Piatetski-Shapiro primes</a>, arXiv:1111.2641 [math.NT], 2011-2012."""@en .
+
+seq:A200141_I_1_20210902T072738 a seq:Text ;
+    cnt:chars "#18 Sep 02 2021 07:27:38"@en .
+
+seq:A200141_K_1_20210902T072738 a seq:Text ;
+    cnt:chars "nonn,easy,cons"@en .
+
+seq:A200141_N_1_20210902T072738 a seq:Text ;
+    cnt:chars "Upper bound by J. Rivat and J. Wu on constant arising in Piatetski-Shapiro primes."@en .
+
+seq:A200141_O_1_20210902T072738 a seq:Text ;
+    cnt:chars "1,3"@en .
+
+seq:A200141_V_1_20210902T072738 a seq:Text ;
+    cnt:chars "1,1,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5,3,6,5,8,5"@en .
+
+seq:A200141_e_1_20210902T072738 a seq:Text ;
+    cnt:chars "1.18536585..."@en .
+

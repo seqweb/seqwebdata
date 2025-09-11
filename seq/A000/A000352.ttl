@@ -1,0 +1,69 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.343131Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 63, "entities": 16, "chars": 2356}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000352 a seq:Sequence ;
+    rdfs:label "A000352"@en ;
+    seq:hasTextList ( seq:A000352_I_1_20230208T164007 seq:A000352_N_1_20230208T164007 seq:A000352_D_1_20230208T164007 seq:A000352_H_1_20230208T164007 seq:A000352_F_1_20230208T164007 seq:A000352_e_1_20230208T164007 seq:A000352_p_1_20230208T164007 seq:A000352_t_1_20230208T164007 seq:A000352_o_1_20230208T164007 seq:A000352_Y_1_20230208T164007 seq:A000352_K_1_20230208T164007 seq:A000352_O_1_20230208T164007 seq:A000352_A_1_20230208T164007 seq:A000352_E_1_20230208T164007 seq:A000352_V_1_20230208T164007 ) .
+
+seq:A000352_A_1_20230208T164007 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000352_D_1_20230208T164007 a seq:Text ;
+    cnt:chars """L. Comtet, Advanced Combinatorics, Reidel, 1974, p. 260, #13
+F. N. David, M. G. Kendall and D. E. Barton, Symmetric Function and Allied Tables, Cambridge, 1966, p. 260.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000352_E_1_20230208T164007 a seq:Text ;
+    cnt:chars "Edited by _Emeric Deutsch_, Feb 18 2004"@en .
+
+seq:A000352_F_1_20230208T164007 a seq:Text ;
+    cnt:chars """a(n) = (3^n-4*2^n-2*n+11)/4, n>=4. - _Tim Monahan_, Jul 14 2011
+G.f.: x^4*(5-6*x)/((1-3*x)*(1-2*x)*(1-x)^2).
+Limit_{n->infinity} 4*a(n)/3^n = 1. - _Philippe Deléham_, Feb 22 2004"""@en .
+
+seq:A000352_H_1_20230208T164007 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000352/b000352.txt">Table of n, a(n) for n = 4..400</a>
+E. Rodney Canfield and Herbert S. Wilf, <a href="http://arXiv.org/abs/math.CO/0609704">Counting permutations by their runs up and down</a>, arXiv:math/0609704 [math.CO], 2006.
+Simon Plouffe, <a href="https://arxiv.org/abs/0911.4975">Approximations de séries génératrices et quelques conjectures</a>, Dissertation, Université du Québec à Montréal, 1992; arXiv:0911.4975 [math.NT], 2009.
+Simon Plouffe, <a href="/A000051/a000051_2.pdf">1031 Generating Functions</a>, Appendix to Thesis, Montreal, 1992
+<a href="/index/Rec#order_04">Index entries for linear recurrences with constant coefficients</a>, signature (7,-17,17,-6)."""@en .
+
+seq:A000352_I_1_20230208T164007 a seq:Text ;
+    cnt:chars "M3954 N1629 #65 Feb 08 2023 16:40:07"@en .
+
+seq:A000352_K_1_20230208T164007 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000352_N_1_20230208T164007 a seq:Text ;
+    cnt:chars "One half of the number of permutations of [n] such that the differences have three runs with the same signs."@en .
+
+seq:A000352_O_1_20230208T164007 a seq:Text ;
+    cnt:chars "4,1"@en .
+
+seq:A000352_V_1_20230208T164007 a seq:Text ;
+    cnt:chars "5,29,118,418,1383,4407,13736,42236,128761,390385,1179354,3554454,10696139,32153963,96592972,290041072,870647517,2612991141,7841070590,23527406090,70590606895,211788597919,635399348208,1906265153508,5718929678273,17157057470297"@en .
+
+seq:A000352_Y_1_20230208T164007 a seq:Text ;
+    cnt:chars """a(n) = T(n, 3), where T(n, k) is the array defined in A008970.
+Cf. A000486, A000506."""@en .
+
+seq:A000352_e_1_20230208T164007 a seq:Text ;
+    cnt:chars "a(4)=5 because the permutations of [4] with three sign runs are 1324, 1423, 2143, 2314, 2413 and their reversals."@en .
+
+seq:A000352_o_1_20230208T164007 a seq:Text ;
+    cnt:chars "(PARI) a(n) = (3^n-4*2^n-2*n+11)/4;"@en .
+
+seq:A000352_p_1_20230208T164007 a seq:Text ;
+    cnt:chars """A000352:=-(-5+6*z)/(3*z-1)/(2*z-1)/(z-1)**2; # [Conjectured by _Simon Plouffe_ in his 1992 dissertation.] [correct up to offset]
+# second Maple program:
+a:= n-> (<<0|0|1|2>>. <<7|1|0|0>, <-17|0|1|0>, <17|0|0|1>, <-6|0|0|0>>^n)[1, 4]:
+seq(a(n), n=4..30);  # _Alois P. Heinz_, Aug 26 2008"""@en .
+
+seq:A000352_t_1_20230208T164007 a seq:Text ;
+    cnt:chars "nn = 40; CoefficientList[Series[x^4*(5 - 6*x)/((1 - 3*x)*(1 - 2*x)*(1 - x)^2), {x, 0, nn}], x] (* _T. D. Noe_, Jun 19 2012 *)"@en .
+

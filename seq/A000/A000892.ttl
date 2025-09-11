@@ -1,0 +1,41 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.612912Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 886}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000892 a seq:Sequence ;
+    rdfs:label "A000892"@en ;
+    seq:hasTextList ( seq:A000892_I_1_20170401T010149 seq:A000892_N_1_20170401T010149 seq:A000892_D_1_20170401T010149 seq:A000892_H_1_20170401T010149 seq:A000892_K_1_20170401T010149 seq:A000892_O_1_20170401T010149 seq:A000892_A_1_20170401T010149 seq:A000892_E_1_20170401T010149 seq:A000892_V_1_20170401T010149 ) .
+
+seq:A000892_A_1_20170401T010149 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000892_D_1_20170401T010149 a seq:Text ;
+    cnt:chars """M. A. Harrison, On the number of classes of switching networks, J. Franklin Instit., 276 (1963), 313-327.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000892_E_1_20170401T010149 a seq:Text ;
+    cnt:chars "More terms from _Sean A. Irvine_, Jan 26 2012"@en .
+
+seq:A000892_H_1_20170401T010149 a seq:Text ;
+    cnt:chars """<a href="/index/Sw#switching">Index entries for sequences related to switching networks</a>
+M. A. Harrison, <a href="http://hdl.handle.net/2027.42/5406">On the number of classes of (n,k) switching networks</a>, University of Michigan (1962)."""@en .
+
+seq:A000892_I_1_20170401T010149 a seq:Text ;
+    cnt:chars "M1815 N0719 #24 Apr 01 2017 01:01:49"@en .
+
+seq:A000892_K_1_20170401T010149 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000892_N_1_20170401T010149 a seq:Text ;
+    cnt:chars "Number of switching networks with GL(n,2) acting on the domain and AG(2,2) acting on the range."@en .
+
+seq:A000892_O_1_20170401T010149 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000892_V_1_20170401T010149 a seq:Text ;
+    cnt:chars "2,7,60,13733,77443340533,703340569806668663530742581,29445655130242047875797696478261941465296049517922025033117465"@en .
+

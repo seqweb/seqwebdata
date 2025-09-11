@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.910863Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 916}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200071 a seq:Sequence ;
+    rdfs:label "A200071"@en ;
+    seq:hasTextList ( seq:A200071_I_1_20230630T035435 seq:A200071_N_1_20230630T035435 seq:A200071_H_1_20230630T035435 seq:A200071_e_1_20230630T035435 seq:A200071_t_1_20230630T035435 seq:A200071_Y_1_20230630T035435 seq:A200071_K_1_20230630T035435 seq:A200071_O_1_20230630T035435 seq:A200071_A_1_20230630T035435 seq:A200071_V_1_20230630T035435 ) .
+
+seq:A200071_A_1_20230630T035435 a seq:Text ;
+    cnt:chars "_Michel Lagneau_, Nov 13 2011"@en .
+
+seq:A200071_H_1_20230630T035435 a seq:Text ;
+    cnt:chars "Amiram Eldar, <a href=\"/A200071/b200071.txt\">Table of n, a(n) for n = 1..500</a>"@en .
+
+seq:A200071_I_1_20230630T035435 a seq:Text ;
+    cnt:chars "#21 Jun 30 2023 03:54:35"@en .
+
+seq:A200071_K_1_20230630T035435 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200071_N_1_20230630T035435 a seq:Text ;
+    cnt:chars "Numbers n such that the sum of the prime distinct divisors of n^2+1 equals 2 times the difference between the largest and the smallest prime divisor."@en .
+
+seq:A200071_O_1_20230630T035435 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200071_V_1_20230630T035435 a seq:Text ;
+    cnt:chars "447,2042,4942,8673,17232,18321,38232,52953,54468,54974,55174,57229,66567,71132,83071,101499,113667,121206,133047,173932,297907,325286,430353,447131,656079,702969,842151,937313,1061846,1173886,1613346,1721094,1754679,1759310"@en .
+
+seq:A200071_Y_1_20230630T035435 a seq:Text ;
+    cnt:chars "Cf. A200070."@en .
+
+seq:A200071_e_1_20230630T035435 a seq:Text ;
+    cnt:chars "447 is a term because the distinct prime divisors of 447^2 + 1 are 2, 5, 13, 29, 53 and their sum, 2 + 5 + 13 + 29 + 53 = 102, equals 2*(53 - 2)."@en .
+
+seq:A200071_t_1_20230630T035435 a seq:Text ;
+    cnt:chars """Select[Range[1800000],Plus@@(pl=First/@FactorInteger[#^2+1])/2==pl[[-1]]-pl[[1]]&]
+spddQ[n_]:=Module[{fi=FactorInteger[n^2+1][[All,1]]},Total[fi] == 2*(Last[ fi]-First[fi])]; Select[Range[176*10^4],spddQ] (* _Harvey P. Dale_, Jan 12 2019 *)"""@en .
+

@@ -1,0 +1,54 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.239743Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 1687}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000310 a seq:Sequence ;
+    rdfs:label "A000310"@en ;
+    seq:hasTextList ( seq:A000310_I_1_20220212T033806 seq:A000310_N_1_20220212T033806 seq:A000310_D_1_20220212T033806 seq:A000310_H_1_20220212T033806 seq:A000310_F_1_20220212T033806 seq:A000310_t_1_20220212T033806 seq:A000310_o_1_20220212T033806 seq:A000310_Y_1_20220212T033806 seq:A000310_K_1_20220212T033806 seq:A000310_O_1_20220212T033806 seq:A000310_A_1_20220212T033806 seq:A000310_V_1_20220212T033806 ) .
+
+seq:A000310_A_1_20220212T033806 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000310_D_1_20220212T033806 a seq:Text ;
+    cnt:chars """J. Ginsburg, Iterated exponentials, Scripta Math., 11 (1945), 340-353.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000310_F_1_20220212T033806 a seq:Text ;
+    cnt:chars "E.g.f.: -log(1+log(1+log(1+log(1-x))))."@en .
+
+seq:A000310_H_1_20220212T033806 a seq:Text ;
+    cnt:chars """T. D. Noe, <a href="/A000310/b000310.txt">Table of n, a(n) for n=1..100</a>
+P. J. Cameron, <a href="http://www.cs.uwaterloo.ca/journals/JIS/VOL3/groups.html">Sequences realized by oligomorphic permutation groups</a>, J. Integ. Seqs. Vol. 3 (2000), #00.1.5.
+Jekuthiel Ginsburg, <a href="/A000405/a000405.pdf">Iterated exponentials</a>, Scripta Math., 11 (1945), 340-353. [Annotated scanned copy]
+INRIA Algorithms Project, <a href="http://ecs.inria.fr/services/structure?nbr=300">Encyclopedia of Combinatorial Structures 300</a>"""@en .
+
+seq:A000310_I_1_20220212T033806 a seq:Text ;
+    cnt:chars "M3612 N1464 #37 Feb 12 2022 03:38:06"@en .
+
+seq:A000310_K_1_20220212T033806 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A000310_N_1_20220212T033806 a seq:Text ;
+    cnt:chars "Coefficients of iterated exponentials."@en .
+
+seq:A000310_O_1_20220212T033806 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A000310_V_1_20220212T033806 a seq:Text ;
+    cnt:chars "1,4,26,234,2696,37919,630521,12111114,264051201,6445170229,174183891471,5164718385337,166737090160871,5822980248613990,218756388226681557,8797723991458469015,377159237609540937788,17170729962232112834302,827382365085791968518198,42070004707327023844695198"@en .
+
+seq:A000310_Y_1_20220212T033806 a seq:Text ;
+    cnt:chars "a(n) = |A039816(n, 1)| (first column of triangle). Cf. A003713, A000268, A000359, A000406, A001765."@en .
+
+seq:A000310_o_1_20220212T033806 a seq:Text ;
+    cnt:chars """(PARI) T(n, k) = if(k==1, (n-1)!, sum(j=1, n, abs(stirling(n, j, 1))*T(j, k-1)));
+a(n) = T(n, 4); \\\\ _Seiichi Manyama_, Feb 11 2022
+(PARI) my(x='x+O('x^40)); Vec(serlaplace(-log(1+log(1+log(1+log(1-x)))))); \\\\ _Michel Marcus_, Feb 11 2022"""@en .
+
+seq:A000310_t_1_20220212T033806 a seq:Text ;
+    cnt:chars "max = 20; CoefficientList[-Log[1 + Log[1 + Log[1 + Log[1 - x]]]]/x + O[x]^max, x]*Range[max]! (* _Jean-François Alcover_, Feb 07 2016 *)"@en .
+

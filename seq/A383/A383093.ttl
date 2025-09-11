@@ -1,0 +1,70 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:24:08.780041Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 2641}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A383093 a seq:Sequence ;
+    rdfs:label "A383093"@en ;
+    seq:hasTextList ( seq:A383093_I_1_20250504T100057 seq:A383093_N_1_20250504T100057 seq:A383093_F_1_20250504T100057 seq:A383093_e_1_20250504T100057 seq:A383093_t_1_20250504T100057 seq:A383093_Y_1_20250504T100057 seq:A383093_K_1_20250504T100057 seq:A383093_O_1_20250504T100057 seq:A383093_A_1_20250504T100057 seq:A383093_E_1_20250504T100057 seq:A383093_V_1_20250504T100057 ) .
+
+seq:A383093_A_1_20250504T100057 a seq:Text ;
+    cnt:chars "_Gus Wiseman_, Apr 22 2025"@en .
+
+seq:A383093_E_1_20250504T100057 a seq:Text ;
+    cnt:chars "More terms from _Jakub Buczak_, May 03 2025"@en .
+
+seq:A383093_F_1_20250504T100057 a seq:Text ;
+    cnt:chars """Multiset systems of this type have MM-numbers A383309 = A326534 /\\ A355743.
+Conjecture: We have Sum_{d|n} a(d) = A323774(n), so this is the Moebius transform of A323774."""@en .
+
+seq:A383093_I_1_20250504T100057 a seq:Text ;
+    cnt:chars "#13 May 04 2025 10:00:57"@en .
+
+seq:A383093_K_1_20250504T100057 a seq:Text ;
+    cnt:chars "nonn,new"@en .
+
+seq:A383093_N_1_20250504T100057 a seq:Text ;
+    cnt:chars "Number of integer partitions of n that can be partitioned into constant blocks with a common sum."@en .
+
+seq:A383093_O_1_20250504T100057 a seq:Text ;
+    cnt:chars "0,3"@en .
+
+seq:A383093_V_1_20250504T100057 a seq:Text ;
+    cnt:chars "1,1,2,2,4,2,7,2,9,5,9,2,23,2,11,10,24,2,33,2,36,12,15,2,87,7,17,17,53,2,96,2,79,16,21,14,196,2,23,18,154,2,166,2,99,54,27,2,431,9,85,22,128,2,303,18,261,24,33,2,771,2,35,73,331,20,422,2,198,28,216,2,1369"@en .
+
+seq:A383093_Y_1_20250504T100057 a seq:Text ;
+    cnt:chars """Twice-partitions of this type (constant with common) are counted by A279789.
+Multiset partitions of this type are ranked by A383309.
+The complement is counted by A381993, ranks A381871.
+For sets we have the complement of A381994, see A381719, A382080.
+Normal multiset partitions of this type are counted by A382203, sets A381718.
+For distinct instead of equal block-sums we have A382427.
+These partitions are ranked by A383014, nonzeros of A381995.
+A000041 counts integer partitions, strict A000009.
+A000688 counts factorizations into prime powers, see A381455, A381453.
+A001055 counts factorizations, strict A045778, see A317141, A300383, A265947.
+A050361 counts factorizations into distinct prime powers, see A381715.
+A323774 counts partitions into constant blocks with a common sum
+Constant blocks with distinct sums: A381635, A381636, A381717.
+Permutation with equal run-sums: A383096, A383098, A383100, A383110
+Cf. A006171, A047966, A279784, A295935, A323774, A326534, A353864, A355743, A381716, A382076, A382204."""@en .
+
+seq:A383093_e_1_20250504T100057 a seq:Text ;
+    cnt:chars """The partition (4,4,2,2,2,2,1,1,1,1,1,1,1,1) has two partitions into constant blocks with a common sum: {{4,4},{2,2,2,2},{1,1,1,1,1,1,1,1}} and {{4},{4},{2,2},{2,2},{1,1,1,1},{1,1,1,1}}, so is counted under a(24).
+The a(1) = 1 through a(8) = 9 partitions:
+  (1)  (2)   (3)    (4)     (5)      (6)       (7)        (8)
+       (11)  (111)  (22)    (11111)  (33)      (1111111)  (44)
+                    (211)            (222)                (422)
+                    (1111)           (2211)               (2222)
+                                     (3111)               (22211)
+                                     (21111)              (41111)
+                                     (111111)             (221111)
+                                                          (2111111)
+                                                          (11111111)"""@en .
+
+seq:A383093_t_1_20250504T100057 a seq:Text ;
+    cnt:chars """mce[y_]:=Table[ConstantArray[y[[1]],#]&/@ptn,{ptn,IntegerPartitions[Length[y]]}];
+Table[Length[Select[IntegerPartitions[n],Length[Select[Join@@@Tuples[mce/@Split[#]],SameQ@@Total/@#&]]>0&]],{n,0,30}]"""@en .
+

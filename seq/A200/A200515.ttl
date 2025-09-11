@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.483142Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1161}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200515 a seq:Sequence ;
+    rdfs:label "A200515"@en ;
+    seq:hasTextList ( seq:A200515_I_1_20160103T043651 seq:A200515_N_1_20160103T043651 seq:A200515_C_1_20160103T043651 seq:A200515_F_1_20160103T043651 seq:A200515_e_1_20160103T043651 seq:A200515_o_1_20160103T043651 seq:A200515_Y_1_20160103T043651 seq:A200515_K_1_20160103T043651 seq:A200515_O_1_20160103T043651 seq:A200515_A_1_20160103T043651 seq:A200515_V_1_20160103T043651 ) .
+
+seq:A200515_A_1_20160103T043651 a seq:Text ;
+    cnt:chars "_M. F. Hasler_, Nov 18 2011"@en .
+
+seq:A200515_C_1_20160103T043651 a seq:Text ;
+    cnt:chars "To prove that an integer n is in A051207, it is sufficient to find integers x,y such that y^2 - 5^x = n. In that case, a(n)=0. To prove that n is *not* in A051207, it is sufficient to find a modulus m for which the (finite) set of all possible values of 5^x and y^2 (mod m) allows us to deduce that y^2 - 5^x can never equal n. The present sequence lists the smallest such m>0, if it exists."@en .
+
+seq:A200515_F_1_20160103T043651 a seq:Text ;
+    cnt:chars """A200515(A051207(k))=0 for all k in N.
+A200515(1+4k)=A200515(2+4k)=4 for all k>=0."""@en .
+
+seq:A200515_I_1_20160103T043651 a seq:Text ;
+    cnt:chars "#11 Jan 03 2016 04:36:51"@en .
+
+seq:A200515_K_1_20160103T043651 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200515_N_1_20160103T043651 a seq:Text ;
+    cnt:chars "Least m>0 such that n = y^2 - 5^x (mod m) has no solution, or 0 if no such m exists."@en .
+
+seq:A200515_O_1_20160103T043651 a seq:Text ;
+    cnt:chars "0,2"@en .
+
+seq:A200515_V_1_20160103T043651 a seq:Text ;
+    cnt:chars "0,4,4,0,0,4,4,5,0,4,4,0,5,4,4,0,24,4,4,0,0,4,4,35,0,4,4,5,15,4,4,0,5,4,4,0,24,4,4,0,24,4,4,15,0,4,4,5,0,4,4,0,5,4,4,39,0,4,4,0,24,4,4,0,24,4,4,5,35,4,4,0,5,4,4,0,0,4,4,63,0,4,4"@en .
+
+seq:A200515_Y_1_20160103T043651 a seq:Text ;
+    cnt:chars "Cf. A051204-A051221, A200505-A200520."@en .
+
+seq:A200515_e_1_20160103T043651 a seq:Text ;
+    cnt:chars "See A200512 for motivation and detailed examples."@en .
+
+seq:A200515_o_1_20160103T043651 a seq:Text ;
+    cnt:chars "(PARI) A200515(n,b=5,p=3)={ my( x=0, qr, bx, seen ); for( m=3,9e9, while( x^p < m, issquare(b^x+n) & return(0); x++); qr=vecsort(vector(m,y,y^2-n)%m,,8); seen=0; bx=1; until( bittest(seen+=1<<bx, bx=bx*b%m), for(i=1,#qr, qr[i]<bx & next; qr[i]>bx & break; next(3))); return(m))}"@en .
+

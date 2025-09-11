@@ -1,0 +1,43 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:13.295827Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 878}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000761 a seq:Sequence ;
+    rdfs:label "A000761"@en ;
+    seq:hasTextList ( seq:A000761_I_1_20211219T094439 seq:A000761_N_1_20211219T094439 seq:A000761_D_1_20211219T094439 seq:A000761_H_1_20211219T094439 seq:A000761_Y_1_20211219T094439 seq:A000761_K_1_20211219T094439 seq:A000761_O_1_20211219T094439 seq:A000761_A_1_20211219T094439 seq:A000761_E_1_20211219T094439 seq:A000761_V_1_20211219T094439 ) .
+
+seq:A000761_A_1_20211219T094439 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000761_D_1_20211219T094439 a seq:Text ;
+    cnt:chars """N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000761_E_1_20211219T094439 a seq:Text ;
+    cnt:chars """Edited and extended by _Joseph Myers_, Jul 07 2013
+a(17)-a(22) from _Bert Dobbelaere_, Jan 06 2019"""@en .
+
+seq:A000761_H_1_20211219T094439 a seq:Text ;
+    cnt:chars "J. L. Martin, <a href=\"http://dx.doi.org/10.1017/S0305004100036240\">The exact enumeration of self-avoiding walks on a lattice</a>, Proc. Camb. Phil. Soc., 58 (1962), 92-101."@en .
+
+seq:A000761_I_1_20211219T094439 a seq:Text ;
+    cnt:chars "M4852 N2074 #26 Dec 19 2021 09:44:39"@en .
+
+seq:A000761_K_1_20211219T094439 a seq:Text ;
+    cnt:chars "nonn,walk,more"@en .
+
+seq:A000761_N_1_20211219T094439 a seq:Text ;
+    cnt:chars "Number of n-step self-avoiding walks on cubic lattice ending at point with x=2."@en .
+
+seq:A000761_O_1_20211219T094439 a seq:Text ;
+    cnt:chars "2,2"@en .
+
+seq:A000761_V_1_20211219T094439 a seq:Text ;
+    cnt:chars "1,12,84,468,2332,11068,51472,237832,1095384,5040568,23168528,106496816,489379904,2250000884,10345888480,47604198576,219096141188,1009071461380,4648802248764,21431064157200,98828123716260"@en .
+
+seq:A000761_Y_1_20211219T094439 a seq:Text ;
+    cnt:chars "Cf. A000759, A000760, A000762, A001412, A227338."@en .
+

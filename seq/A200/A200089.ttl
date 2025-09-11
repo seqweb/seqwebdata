@@ -1,0 +1,42 @@
+# {"metadata": "v1.0", "at": "2025-09-11T09:19:13.947073Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 752}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200089 a seq:Sequence ;
+    rdfs:label "A200089"@en ;
+    seq:hasTextList ( seq:A200089_I_1_20250216T083316 seq:A200089_N_1_20250216T083316 seq:A200089_H_1_20250216T083316 seq:A200089_F_1_20250216T083316 seq:A200089_t_1_20250216T083316 seq:A200089_Y_1_20250216T083316 seq:A200089_K_1_20250216T083316 seq:A200089_O_1_20250216T083316 seq:A200089_A_1_20250216T083316 seq:A200089_V_1_20250216T083316 ) .
+
+seq:A200089_A_1_20250216T083316 a seq:Text ;
+    cnt:chars "_Arkadiusz Wesolowski_, Nov 17 2011"@en .
+
+seq:A200089_F_1_20250216T083316 a seq:Text ;
+    cnt:chars "Sum_{n=1..inf} 1/(A000041(n))^2 = 1.438692943288226443928253696...."@en .
+
+seq:A200089_H_1_20250216T083316 a seq:Text ;
+    cnt:chars """Vaclav Kotesovec, <a href="/A200089/b200089.txt">Table of n, a(n) for n = 1..2000</a>
+Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/PartitionFunctionP.html">Partition Function P</a>"""@en .
+
+seq:A200089_I_1_20250216T083316 a seq:Text ;
+    cnt:chars "#31 Feb 16 2025 08:33:16"@en .
+
+seq:A200089_K_1_20250216T083316 a seq:Text ;
+    cnt:chars "cons,nonn"@en .
+
+seq:A200089_N_1_20250216T083316 a seq:Text ;
+    cnt:chars "Decimal expansion of sum of reciprocals of squares of partition numbers."@en .
+
+seq:A200089_O_1_20250216T083316 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200089_V_1_20250216T083316 a seq:Text ;
+    cnt:chars "1,4,3,8,6,9,2,9,4,3,2,8,8,2,2,6,4,4,3,9,2,8,2,5,3,6,9,6,2,0,3,7,4,9,1,4,2,8,5,1,7,2,3,1,9,3,7,9,6,1,0,8,4,4,0,4,3,6,3,4,1,6,9,7,3,2,3,4,4,5,6,2,6,6,2,8,4,1,1,4,1,2,4,8,2,0,5,7,1,7,3,8,1,6,7,0,8,8,3,1,3,8,5,2,7"@en .
+
+seq:A200089_Y_1_20250216T083316 a seq:Text ;
+    cnt:chars "Cf. A001255."@en .
+
+seq:A200089_t_1_20250216T083316 a seq:Text ;
+    cnt:chars "RealDigits[N[Sum[1/PartitionsP[i]^2, {i, 2632}], 105]][[1]] (* _Arkadiusz Wesolowski_, Jan 29 2012 *)"@en .
+

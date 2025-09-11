@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:12:12.964291Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 47, "entities": 12, "chars": 1897}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000619 a seq:Sequence ;
+    rdfs:label "A000619"@en ;
+    seq:hasTextList ( seq:A000619_I_1_20231027T035504 seq:A000619_N_1_20231027T035504 seq:A000619_D_1_20231027T035504 seq:A000619_H_1_20231027T035504 seq:A000619_F_1_20231027T035504 seq:A000619_Y_1_20231027T035504 seq:A000619_K_1_20231027T035504 seq:A000619_O_1_20231027T035504 seq:A000619_A_1_20231027T035504 seq:A000619_E_1_20231027T035504 seq:A000619_V_1_20231027T035504 ) .
+
+seq:A000619_A_1_20231027T035504 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000619_D_1_20231027T035504 a seq:Text ;
+    cnt:chars """S. Muroga, Threshold Logic and Its Applications. Wiley, NY, 1971, p. 38, Table 2.3.2. - Row 15.
+S. Muroga, T. Tsuboi and C. R. Baugh, Enumeration of threshold functions of eight variables, IEEE Trans. Computers, 19 (1970), 818-825.
+N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
+N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence)."""@en .
+
+seq:A000619_E_1_20231027T035504 a seq:Text ;
+    cnt:chars "a(9) added by _Xavier Molinero_, Oct 06 2021"@en .
+
+seq:A000619_F_1_20231027T035504 a seq:Text ;
+    cnt:chars "a(n) = A000617(n) - A000617(n-1). - Alastair D. King, Oct 26, 2023."@en .
+
+seq:A000619_H_1_20231027T035504 a seq:Text ;
+    cnt:chars """Eiichi Goto and Hidetosi Takahasi, <a href="/A000371/a000371_1.pdf">Some Theorems Useful in Threshold Logic for Enumerating Boolean Functions</a>, in Proceedings International Federation for Information Processing (IFIP) Congress, 1962, pp. 747-752. [Annotated scans of certain pages]
+Vadim M. Kartak, Artem V. Ripatti, Guntram Scheithauer, and Sascha Kurz, <a href="https://doi.org/10.1016/j.dam.2015.02.020">Minimal proper non-IRUP instances of the one-dimensional cutting stock problem</a>, Discrete Applied Mathematics 2015, 187, 120-129. (has the last known term as of 2021, a(9)=990331318)
+S. Muroga, <a href="/A000371/a000371.pdf">Threshold Logic and Its Applications</a>, Wiley, NY, 1971 [Annotated scans of a few pages]
+Saburo Muroga, Iwao Toda, and Satoru Takasu, <a href="/A002079/a002079.pdf">Theory of majority decision elements</a>, Journal of the Franklin Institute 271.5 (1961): 376-418. [Annotated scans of pages 413 and 414 only]
+S. Muroga, T. Tsuboi and C. R. Baugh, <a href="/A002077/a002077.pdf">Enumeration of threshold functions of eight variables</a>, IEEE Trans. Computers, 19 (1970), 818-825. [Annotated scanned copy]"""@en .
+
+seq:A000619_I_1_20231027T035504 a seq:Text ;
+    cnt:chars "M0121 N0048 #47 Oct 27 2023 03:55:04"@en .
+
+seq:A000619_K_1_20231027T035504 a seq:Text ;
+    cnt:chars "nonn,more"@en .
+
+seq:A000619_N_1_20231027T035504 a seq:Text ;
+    cnt:chars "NP-equivalence classes of threshold functions of exactly n variables."@en .
+
+seq:A000619_O_1_20231027T035504 a seq:Text ;
+    cnt:chars "0,1"@en .
+
+seq:A000619_V_1_20231027T035504 a seq:Text ;
+    cnt:chars "2,1,2,5,17,92,994,28262,2700791,990331318"@en .
+
+seq:A000619_Y_1_20231027T035504 a seq:Text ;
+    cnt:chars "Cf. A000617."@en .
+

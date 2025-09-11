@@ -1,0 +1,51 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.652671Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 51, "entities": 13, "chars": 865}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200601 a seq:Sequence ;
+    rdfs:label "A200601"@en ;
+    seq:hasTextList ( seq:A200601_I_1_20250207T164407 seq:A200601_N_1_20250207T164407 seq:A200601_C_1_20250207T164407 seq:A200601_H_1_20250207T164407 seq:A200601_e_1_20250207T164407 seq:A200601_t_1_20250207T164407 seq:A200601_o_1_20250207T164407 seq:A200601_Y_1_20250207T164407 seq:A200601_K_1_20250207T164407 seq:A200601_O_1_20250207T164407 seq:A200601_A_1_20250207T164407 seq:A200601_V_1_20250207T164407 ) .
+
+seq:A200601_A_1_20250207T164407 a seq:Text ;
+    cnt:chars "_Clark Kimberling_, Nov 19 2011"@en .
+
+seq:A200601_C_1_20250207T164407 a seq:Text ;
+    cnt:chars "See A200338 for a guide to related sequences. The Mathematica program includes a graph."@en .
+
+seq:A200601_H_1_20250207T164407 a seq:Text ;
+    cnt:chars "Iain Fox, <a href=\"/A200601/b200601.txt\">Table of n, a(n) for n = 1..20000</a>"@en .
+
+seq:A200601_I_1_20250207T164407 a seq:Text ;
+    cnt:chars "#12 Feb 07 2025 16:44:07"@en .
+
+seq:A200601_K_1_20250207T164407 a seq:Text ;
+    cnt:chars "nonn,cons"@en .
+
+seq:A200601_N_1_20250207T164407 a seq:Text ;
+    cnt:chars "Decimal expansion of least x > 0 satisfying 4*x^2 - x + 2 = tan(x)."@en .
+
+seq:A200601_O_1_20250207T164407 a seq:Text ;
+    cnt:chars "1,2"@en .
+
+seq:A200601_V_1_20250207T164407 a seq:Text ;
+    cnt:chars "1,4,6,1,0,8,1,7,4,3,4,8,8,1,8,9,4,1,5,2,6,5,5,8,1,2,2,8,9,5,8,0,8,2,0,8,8,0,2,7,4,7,9,8,7,8,0,1,7,0,9,4,7,4,2,4,0,0,2,2,8,4,6,8,3,0,1,8,6,2,1,2,3,6,0,8,9,1,7,0,7,8,5,8,6,4,1,9,9,7,3,7,3,9,4,9,7,2,8"@en .
+
+seq:A200601_Y_1_20250207T164407 a seq:Text ;
+    cnt:chars "Cf. A200338."@en .
+
+seq:A200601_e_1_20250207T164407 a seq:Text ;
+    cnt:chars "x=1.461081743488189415265581228958082088027479878..."@en .
+
+seq:A200601_o_1_20250207T164407 a seq:Text ;
+    cnt:chars "(PARI) solve(x=1, 1.5, 4*x^2 - x + 2 - tan(x)) \\\\ _Iain Fox_, Mar 07 2018"@en .
+
+seq:A200601_t_1_20250207T164407 a seq:Text ;
+    cnt:chars """a = 4; b = -1; c = 2;
+f[x_] := a*x^2 + b*x + c; g[x_] := Tan[x]
+Plot[{f[x], g[x]}, {x, -.1, Pi/2}, {AxesOrigin -> {0, 0}}]
+r = x /. FindRoot[f[x] == g[x], {x, 1.4, 1.5}, WorkingPrecision -> 110]
+RealDigits[r]    (* A200601 *)"""@en .
+

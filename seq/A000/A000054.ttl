@@ -1,0 +1,40 @@
+# {"metadata": "v1.0", "at": "2025-09-11T08:08:50.308279Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 732}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A000054 a seq:Sequence ;
+    rdfs:label "A000054"@en ;
+    seq:hasTextList ( seq:A000054_I_1_20230109T222451 seq:A000054_N_1_20230109T222451 seq:A000054_C_1_20230109T222451 seq:A000054_H_1_20230109T222451 seq:A000054_Y_1_20230109T222451 seq:A000054_K_1_20230109T222451 seq:A000054_O_1_20230109T222451 seq:A000054_A_1_20230109T222451 seq:A000054_V_1_20230109T222451 ) .
+
+seq:A000054_A_1_20230109T222451 a seq:Text ;
+    cnt:chars "_N. J. A. Sloane_"@en .
+
+seq:A000054_C_1_20230109T222451 a seq:Text ;
+    cnt:chars """These are the numbered stops for the A train, as of February 2000.
+The Dyckman Street station used to be called Dyckman Street--200th Street, though there was never a 200th Street. - _Charles R Greathouse IV_, Nov 26 2018"""@en .
+
+seq:A000054_H_1_20230109T222451 a seq:Text ;
+    cnt:chars """Brady Haran and N. J. A. Sloane, <a href="https://www.youtube.com/watch?v=ydn7s9-3GRc">Subway Numbers (extra bit)</a> (2018), Numberphile video
+Metropolitan Transportation Authority, <a href="http://web.mta.info/nyct/service/aline.htm">Map, schedule, etc.</a>"""@en .
+
+seq:A000054_I_1_20230109T222451 a seq:Text ;
+    cnt:chars "#27 Jan 09 2023 22:24:51"@en .
+
+seq:A000054_K_1_20230109T222451 a seq:Text ;
+    cnt:chars "nonn,fini,full"@en .
+
+seq:A000054_N_1_20230109T222451 a seq:Text ;
+    cnt:chars "Local stops on New York City A line subway."@en .
+
+seq:A000054_O_1_20230109T222451 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A000054_V_1_20230109T222451 a seq:Text ;
+    cnt:chars "4,14,23,34,42,50,59,72,81,86,96,103,110,116,125,135,145,155,163,168,175,181,190,200,207"@en .
+
+seq:A000054_Y_1_20230109T222451 a seq:Text ;
+    cnt:chars "Cf. A000053, A001049, A007826, A011554, A208359, A208360."@en .
+

@@ -1,0 +1,45 @@
+# {"metadata": "v1.0", "at": "2025-09-11T11:19:35.772858Z", "by": "app.fab.make_range.main>make_range>make_one>run_pipeline>get_metadata", "triples": 39, "entities": 10, "chars": 1303}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A200656 a seq:Sequence ;
+    rdfs:label "A200656"@en ;
+    seq:hasTextList ( seq:A200656_I_1_20210510T043723 seq:A200656_N_1_20210510T043723 seq:A200656_C_1_20210510T043723 seq:A200656_H_1_20210510T043723 seq:A200656_Y_1_20210510T043723 seq:A200656_K_1_20210510T043723 seq:A200656_O_1_20210510T043723 seq:A200656_A_1_20210510T043723 seq:A200656_V_1_20210510T043723 ) .
+
+seq:A200656_A_1_20210510T043723 a seq:Text ;
+    cnt:chars "_Artur Jasinski_, Nov 20 2011"@en .
+
+seq:A200656_C_1_20210510T043723 a seq:Text ;
+    cnt:chars """Definition: Extremal points on the Mordell elliptic curve x^3 - y^2 = d are points (x,y) such that x^3 - round(sqrt(x^3))^2 = d. For values d for successive x independent of the extensions see A077119.
+For y values see A200657.
+For d values see A200658.
+Definition: Secondary terms occur when there exist integers k such that A200656 is divisible by k^2, A200657 is divisible by k^3 and A200658 is divisible by k^6.
+Terms free of such k are primary terms; see A201047. Secondary terms are, e.g., a(6)=a(2)*2^2, a(7)=a(3)*2^2, a(17)=a(10)*2^2, a(18)=a(11)*2^2, a(19)=a(12)*2^2, a(21)=a(10)*3^2.
+For successive secondary terms, see A201048.
+A200216 is a subsequence of this sequence."""@en .
+
+seq:A200656_H_1_20210510T043723 a seq:Text ;
+    cnt:chars "Peter J. C. Moses and Artur Jasinski, <a href=\"/A200656/b200656.txt\">Complete list of extremal points on Mordell curves x^3 - y^2 = d with quadratic extensions in range x from 1 to 10^9</a>"@en .
+
+seq:A200656_I_1_20210510T043723 a seq:Text ;
+    cnt:chars "#44 May 10 2021 04:37:23"@en .
+
+seq:A200656_K_1_20210510T043723 a seq:Text ;
+    cnt:chars "nonn"@en .
+
+seq:A200656_N_1_20210510T043723 a seq:Text ;
+    cnt:chars "Successive values x such that the Mordell elliptic curve x^3 - y^2 = d has extremal points with quadratic extension over the rationals."@en .
+
+seq:A200656_O_1_20210510T043723 a seq:Text ;
+    cnt:chars "1,1"@en .
+
+seq:A200656_V_1_20210510T043723 a seq:Text ;
+    cnt:chars "1942,2878,3862,6100,8380,11512,15448,18694,31228,93844,111382,117118,129910,143950,186145,210025,375376,445528,468472,575800,844596,1002438,1054062,1193740,1248412,1326025,1388545"@en .
+
+seq:A200656_Y_1_20210510T043723 a seq:Text ;
+    cnt:chars """Cf. A200216, A201047.
+Cf. A077119, A200657, A200658."""@en .
+
