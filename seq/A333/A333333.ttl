@@ -1,0 +1,52 @@
+# {"metadata": "v1.0", "at": "2025-09-21T17:19:03.538369Z", "by": "app.fab.make_one.main>make_one>run_pipeline>get_metadata", "triples": 43, "entities": 11, "chars": 1139}
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix oeis: <http://www.oeis.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seq: <http://www.seqweb.org/> .
+
+oeis:A333333 a seq:Sequence ;
+    rdfs:label "A333333"@en ;
+    seq:hasTextList ( seq:A333333_I_1_20230629T095139 seq:A333333_N_1_20230629T095139 seq:A333333_H_1_20230629T095139 seq:A333333_F_1_20230629T095139 seq:A333333_e_1_20230629T095139 seq:A333333_Y_1_20230629T095139 seq:A333333_K_1_20230629T095139 seq:A333333_O_1_20230629T095139 seq:A333333_A_1_20230629T095139 seq:A333333_V_1_20230629T095139 ) .
+
+seq:A333333_A_1_20230629T095139 a seq:Text ;
+    cnt:chars "_Peter Kagey_, Mar 15 2020"@en .
+
+seq:A333333_F_1_20230629T095139 a seq:Text ;
+    cnt:chars """T(n,k) = T(n-1,k) for k < n.
+T(n,0) = T(n,1) = T(n,2) = T(n,A001787(n)-1) = T(n,A001787(n)) = 1.
+A222192(n) = Sum_{k=0..n*2^(n-1)} T(n,k) - Sum_{k=0..(n-1)*2^(n-2)} T(n-1,k) for n >= 2. - _Peter Kagey_, Jun 19 2023"""@en .
+
+seq:A333333_H_1_20230629T095139 a seq:Text ;
+    cnt:chars """Code Golf Stack Exchange, <a href="https://codegolf.stackexchange.com/q/201054/53884">Counting polyominoes on (hyper-)cubes</a>
+Peter Kagey, <a href="/A333333/a333333.pdf">Examples of T(3,3) through T(3,8)</a>.
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Hypercube">Hypercube</a>
+Wikipedia, <a href="https://en.wikipedia.org/wiki/Polystick">Polystick</a>"""@en .
+
+seq:A333333_I_1_20230629T095139 a seq:Text ;
+    cnt:chars "#49 Jun 29 2023 09:51:39"@en .
+
+seq:A333333_K_1_20230629T095139 a seq:Text ;
+    cnt:chars "nonn,more,tabf"@en .
+
+seq:A333333_N_1_20230629T095139 a seq:Text ;
+    cnt:chars "Irregular triangle: T(n,k) gives the number of k-polysticks on edges of the n-cube up to isometries of the n-cube, with 0 <= k <= A001787(n)."@en .
+
+seq:A333333_O_1_20230629T095139 a seq:Text ;
+    cnt:chars "1,11"@en .
+
+seq:A333333_V_1_20230629T095139 a seq:Text ;
+    cnt:chars "1,1,1,1,1,1,1,1,1,1,3,4,9,14,19,16,9,4,1,1,1,1,1,3,7,21,72,269,994,3615"@en .
+
+seq:A333333_Y_1_20230629T095139 a seq:Text ;
+    cnt:chars "Cf. A001787, A222192."@en .
+
+seq:A333333_e_1_20230629T095139 a seq:Text ;
+    cnt:chars """Table begins:
+n\\k| 0  1  2  3  4   5   6    7    8     9 10 11 12 ...
+---+---------------------------------------------------
+  1| 1, 1;
+  2| 1, 1, 1, 1, 1;
+  3| 1, 1, 1, 3, 4,  9, 14,  19,  16,    9, 4, 1, 1;
+  4| 1, 1, 1, 3, 7, 21, 72, 269, 994, 3615, ..."""@en .
+

@@ -1,4 +1,4 @@
-# {"metadata": "v1.0", "at": "2025-09-11T10:33:56.427333Z", "by": "app.fab.make_list.main>make_list>make_one>run_pipeline>get_metadata", "triples": 67, "entities": 17, "chars": 17445}
+# {"metadata": "v1.0", "at": "2025-09-29T15:43:02.552073Z", "by": "app.fab.make_one.main>make_one>run_pipeline>get_metadata", "triples": 82, "entities": 17, "chars": 17463}
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix oeis: <http://www.oeis.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,12 +7,28 @@
 
 oeis:A000002 a seq:Sequence ;
     rdfs:label "A000002"@en ;
-    seq:hasTextList ( seq:A000002_I_1_20250216T083218 seq:A000002_N_1_20250216T083218 seq:A000002_C_1_20250216T083218 seq:A000002_D_1_20250216T083218 seq:A000002_H_1_20250216T083218 seq:A000002_F_1_20250216T083218 seq:A000002_e_1_20250216T083218 seq:A000002_p_1_20250216T083218 seq:A000002_t_1_20250216T083218 seq:A000002_o_1_20250216T083218 seq:A000002_Y_1_20250216T083218 seq:A000002_K_1_20250216T083218 seq:A000002_O_1_20250216T083218 seq:A000002_A_1_20250216T083218 seq:A000002_E_1_20250216T083218 seq:A000002_V_1_20250216T083218 ) .
+    seq:hasTextList ( seq:A000002_t_1_20250216T083218 ),
+        ( seq:A000002_N_1_20250216T083218 ),
+        ( seq:A000002_C_1_20250216T083218 ),
+        ( seq:A000002_p_1_20250216T083218 ),
+        ( seq:A000002_D_1_20250216T083218 ),
+        ( seq:A000002_F_1_20250216T083218 ),
+        ( seq:A000002_Y_1_20250216T083218 ),
+        ( seq:A000002_O_1_20250216T083218 ),
+        ( seq:A000002_A_1_20250216T083218 ),
+        ( seq:A000002_K_1_20250216T083218 ),
+        ( seq:A000002_E_1_20250216T083218 ),
+        ( seq:A000002_H_1_20250216T083218 ),
+        ( seq:A000002_V_1_20250216T083218 ),
+        ( seq:A000002_I_1_20250216T083218 ),
+        ( seq:A000002_o_1_20250216T083218 ),
+        ( seq:A000002_e_1_20250216T083218 ) .
 
-seq:A000002_A_1_20250216T083218 a seq:Text ;
-    cnt:chars "_N. J. A. Sloane_"@en .
+seq:A000002_A_1_20250216T083218 a seq:AuthorSection ;
+    cnt:chars """_N. J. A. Sloane_
+"""@en .
 
-seq:A000002_C_1_20250216T083218 a seq:Text ;
+seq:A000002_C_1_20250216T083218 a seq:CommentSection ;
     cnt:chars """Historical note: the sequence might be better called the Oldenburger-Kolakoski sequence, since it was discussed by Rufus Oldenburger in 1939; see links. - _Clark Kimberling_, Dec 06 2012.  However, to avoid confusion, this sequence will be known in the OEIS as the Kolakoski sequence. It is undesirable to have some entries refer to the Oldenburger-Kolakoski sequence and others to the Kolakoski sequence. - _N. J. A. Sloane_, Nov 22 2017
 It is an unsolved problem to show that the density of 1's is equal to 1/2.
 A weaker problem is to construct a combinatorial bijection between the set of positions of 1's and the set of positions of 2's. - _Gus Wiseman_, Mar 01 2016
@@ -36,9 +52,10 @@ A 2-block substitution beta maps a word w(1)...w(2n) to the word
     beta(w(1)w(2))...beta(w(2n-1)w(2n)).
 If the word has odd length, then the last letter is ignored.
 It was noted by me in 1979 in the Bordeaux seminar on number theory that (a(n+1)) is fixed point of the 2-block substitution 11 -> 21, 12 -> 211, 21 -> 221,  22 -> 2211. (End)
-Named after the American artist and recreational mathematician William George Kolakoski (1944-1997). - _Amiram Eldar_, Jun 17 2021"""@en .
+Named after the American artist and recreational mathematician William George Kolakoski (1944-1997). - _Amiram Eldar_, Jun 17 2021
+"""@en .
 
-seq:A000002_D_1_20250216T083218 a seq:Text ;
+seq:A000002_D_1_20250216T083218 a seq:ReferenceSection ;
     cnt:chars """Jean-Paul Allouche and Jeffrey Shallit, Automatic Sequences, Cambridge Univ. Press, 2003, p. 337.
 Éric Angelini, "Jeux de suites", in Dossier Pour La Science, pp. 32-35, Volume 59 (Jeux math'), April/June 2008, Paris.
 F. M. Dekking, What Is the Long Range Order in the Kolakoski Sequence?, in The mathematics of long-range aperiodic order (Waterloo, ON, 1995), 115-125, NATO Adv. Sci. Inst. Ser. C Math. Phys. Sci., 489, Kluwer Acad. Publ., Dordrecht, 1997. Math. Rev. 98g:11022.
@@ -47,12 +64,14 @@ J. C. Lagarias, Number Theory and Dynamical Systems, pp. 35-72 of S. A. Burr, ed
 Michel Rigo, Formal Languages, Automata and Numeration Systems, 2 vols., Wiley, 2014. Mentions this sequence - see "List of Sequences" in Vol. 2.
 N. J. A. Sloane, A Handbook of Integer Sequences, Academic Press, 1973 (includes this sequence).
 N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).
-Ilan Vardi, Computational Recreations in Mathematica. Addison-Wesley, Redwood City, CA, 1991, p. 233."""@en .
+Ilan Vardi, Computational Recreations in Mathematica. Addison-Wesley, Redwood City, CA, 1991, p. 233.
+"""@en .
 
-seq:A000002_E_1_20250216T083218 a seq:Text ;
-    cnt:chars "Minor edits to example and PARI code made by _M. F. Hasler_, May 07 2014"@en .
+seq:A000002_E_1_20250216T083218 a seq:ExtensionSection ;
+    cnt:chars """Minor edits to example and PARI code made by _M. F. Hasler_, May 07 2014
+"""@en .
 
-seq:A000002_F_1_20250216T083218 a seq:Text ;
+seq:A000002_F_1_20250216T083218 a seq:FormulaSection ;
     cnt:chars """These two formulas define completely the sequence: a(1)=1, a(2)=2, a(a(1) + a(2) + ... + a(k)) = (3 + (-1)^k)/2 and a(a(1) + a(2) + ... + a(k) + 1) = (3 - (-1)^k)/2. - _Benoit Cloitre_, Oct 06 2003
 a(n+2)*a(n+1)*a(n)/2 = a(n+2) + a(n+1) + a(n) - 3 (this formula doesn't define the sequence, it is just a consequence of the definition). - _Benoit Cloitre_, Nov 17 2003
 a(n+1) = 3 - a(n) + (a(n) - a(n-1))*(a(b(n)) - 1), where b(n) is the sequence A156253. - Jean-Marc Fedou and _Gabriele Fici_, Mar 18 2010
@@ -60,9 +79,10 @@ a(n) = (3 + (-1)^A156253(n))/2. - _Benoit Cloitre_, Sep 17 2013
 Conjectures from _Boštjan Gec_, Oct 07 2024: (Start)
 a(n)*(a(n-1) + a(n-2) - 3) + a(n-1)*a(n-2) + 7 = 3*a(n-1) + 3*a(n-2).
 a(n)*(a(n-1) + a(n-2) - 3) = a(n-3)*(a(n-1) + a(n-2) - 3). (End)
-Comment from _Kevin Ryde_, Oct 07 2024: The above formulas are true: The parts identify when terms are same or different and they hold for any sequence of 1's and 2's with run lengths 1 or 2."""@en .
+Comment from _Kevin Ryde_, Oct 07 2024: The above formulas are true: The parts identify when terms are same or different and they hold for any sequence of 1's and 2's with run lengths 1 or 2.
+"""@en .
 
-seq:A000002_H_1_20250216T083218 a seq:Text ;
+seq:A000002_H_1_20250216T083218 a seq:LinkSection ;
     cnt:chars """N. J. A. Sloane, <a href="/A000002/b000002.txt">Table of n, a(n) for n = 1..10502</a>
 Jean-Paul Allouche, Michael Baake, Julien Cassaigne and David Damanik, <a href="https://arxiv.org/abs/math/0106121">Palindrome complexity</a>, arXiv:math/0106121 [math.CO], 2001; <a href="https://doi.org/10.1016/S0304-3975(01)00212-2">Theoretical Computer Science</a>, Vol. 292 (2003), pp. 9-31.
 Michael Baake and Bernd Sing, <a href="https://arxiv.org/abs/math/0206098">Kolakoski-(3,1) is a (deformed) model set</a>, arXiv:math/0206098 [math.MG], 2002-2003.
@@ -104,24 +124,32 @@ Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/Ko
 Wikipedia, <a href="https://en.wikipedia.org/wiki/Kolakoski_sequence">Kolakoski sequence</a>.
 Gus Wiseman, <a href="https://imgur.com/MqRlpnm">Kolakoski fractal animation for n=40000</a>.
 Ed Wynn, <a href="/A000002/a000002.spl.txt">Program to generate A000002 in Shakespeare Programming Language</a>.
-<a href="/index/Cor#core">Index entries for "core" sequences</a>"""@en .
+<a href="/index/Cor#core">Index entries for "core" sequences</a>
+"""@en .
 
-seq:A000002_I_1_20250216T083218 a seq:Text ;
-    cnt:chars "M0190 N0070 #390 Feb 16 2025 08:32:18"@en .
+seq:A000002_I_1_20250216T083218 a seq:IdentificationSection ;
+    cnt:chars """M0190 N0070 #390 Feb 16 2025 08:32:18
+"""@en .
 
-seq:A000002_K_1_20250216T083218 a seq:Text ;
-    cnt:chars "nonn,core,easy,nice"@en .
+seq:A000002_K_1_20250216T083218 a seq:KeywordsSection ;
+    cnt:chars """nonn,core,easy,nice
+"""@en .
 
-seq:A000002_N_1_20250216T083218 a seq:Text ;
-    cnt:chars "Kolakoski sequence: a(n) is length of n-th run; a(1) = 1; sequence consists just of 1's and 2's."@en .
+seq:A000002_N_1_20250216T083218 a seq:NameSection ;
+    cnt:chars """Kolakoski sequence: a(n) is length of n-th run; a(1) = 1; sequence consists just of 1's and 2's.
+"""@en .
 
-seq:A000002_O_1_20250216T083218 a seq:Text ;
-    cnt:chars "1,2"@en .
+seq:A000002_O_1_20250216T083218 a seq:OffsetSection ;
+    cnt:chars """1,2
+"""@en .
 
-seq:A000002_V_1_20250216T083218 a seq:Text ;
-    cnt:chars "1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2,1,1,2,1,1,2,1,2,2,1,2,2,1,1,2,1,2,2,1,2,1,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,1,2,2,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2"@en .
+seq:A000002_V_1_20250216T083218 a seq:SequenceValuesSection ;
+    cnt:chars """1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2,1,1,2,1,1,2,1,
+2,2,1,2,2,1,1,2,1,2,2,1,2,1,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,1,2,2,1,1,
+2,1,1,2,1,2,2,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2
+"""@en .
 
-seq:A000002_Y_1_20250216T083218 a seq:Text ;
+seq:A000002_Y_1_20250216T083218 a seq:CrossReferenceSection ;
     cnt:chars """Cf. A001083, A006928, A042942, A069864, A010060, A078929, A171899, A054353 (partial sums), A074286, A216345, A294447.
 Cf. A054354, bisections: A100428, A100429.
 Cf. A013947, A156077, A234322 (positions, running total and percentage of 1's).
@@ -130,12 +158,14 @@ Cf. A049705, A088569 (are either subsequences of A000002? - _Jon Perry_, Oct 30 
 Kolakoski-type sequences using other seeds than (1,2):
 A078880 (2,1), A064353 (1,3), A071820 (2,3), A074804 (3,2), A071907 (1,4), A071928 (2,4), A071942 (3,4), A074803 (4,2), A079729 (1,2,3), A079730 (1,2,3,4).
 Other self-describing: A001462 (Golomb sequence, see also references therein), A005041, A100144.
-Cf. A088568 (partial sums of [3 - 2 * a(n)])."""@en .
+Cf. A088568 (partial sums of [3 - 2 * a(n)]).
+"""@en .
 
-seq:A000002_e_1_20250216T083218 a seq:Text ;
-    cnt:chars "Start with a(1) = 1. By definition of the sequence, this says that the first run has length 1, so it must be a single 1, and a(2) = 2. Thus, the second run (which starts with this 2) must have length 2, so the third term must be also be a(3) = 2, and the fourth term can't be a 2, so must be a(4) = 1. Since a(3) = 2, the third run must have length 2, so we deduce a(5) = 1, a(6) = 2, and so on. The correction I made was to change a(4) to a(5) and a(5) to a(6). - _Labos Elemer_, corrected by _Graeme McRae_"@en .
+seq:A000002_e_1_20250216T083218 a seq:ExampleSection ;
+    cnt:chars """Start with a(1) = 1. By definition of the sequence, this says that the first run has length 1, so it must be a single 1, and a(2) = 2. Thus, the second run (which starts with this 2) must have length 2, so the third term must be also be a(3) = 2, and the fourth term can't be a 2, so must be a(4) = 1. Since a(3) = 2, the third run must have length 2, so we deduce a(5) = 1, a(6) = 2, and so on. The correction I made was to change a(4) to a(5) and a(5) to a(6). - _Labos Elemer_, corrected by _Graeme McRae_
+"""@en .
 
-seq:A000002_o_1_20250216T083218 a seq:Text ;
+seq:A000002_o_1_20250216T083218 a seq:OtherProgramSection ;
     cnt:chars """(PARI) my(a=[1,2,2]); for(n=3,80, for(i=1,a[n],a=concat(a,2-n%2))); a
 (PARI) {a(n) = local(an=[1, 2, 2], m=3); if( n<1, 0, while( #an < n, an = concat( an, vector(an[m], i, 2-m%2)); m++); an[n])};
 (Haskell) a = 1:2: drop 2 (concat . zipWith replicate a . cycle $ [1,2]) -- _John Tromp_, Apr 09 2011
@@ -149,9 +179,10 @@ def Kolakoski():
         x ^= f
         y = (y+1) | (f & (x>>1))
 K = Kolakoski()
-print([next(K) for _ in range(100)]) # _David Eppstein_, Oct 15 2016"""@en .
+print([next(K) for _ in range(100)]) # _David Eppstein_, Oct 15 2016
+"""@en .
 
-seq:A000002_p_1_20250216T083218 a seq:Text ;
+seq:A000002_p_1_20250216T083218 a seq:MapleProgramSection ;
     cnt:chars """M := 100; s := [ 1,2,2 ]; for n from 3 to M do for i from 1 to s[ n ] do s := [ op(s),1+((n-1)mod 2) ]; od: od: s; A000002 := n->s[n];
 # alternative implementation based on the Cloitre formula:
 A000002 := proc(n)
@@ -171,11 +202,13 @@ A000002 := proc(n)
             end if;
         end do:
     end if;
-end proc: # _R. J. Mathar_, Nov 15 2014"""@en .
+end proc: # _R. J. Mathar_, Nov 15 2014
+"""@en .
 
-seq:A000002_t_1_20250216T083218 a seq:Text ;
+seq:A000002_t_1_20250216T083218 a seq:MathematicaProgramSection ;
     cnt:chars """a[steps_] := Module[{a = {1, 2, 2}}, Do[a = Append[a, 1 + Mod[(n - 1), 2]], {n, 3, steps}, {i, a[[n]]}]; a]
 a[ n_] := If[ n < 3, Max[ 0, n], Module[ {an = {1, 2, 2}, m = 3}, While[ Length[ an] < n, an = Join[ an, Table[ Mod[m, 2, 1], { an[[ m]]} ]]; m++]; an[[n]]]] (* _Michael Somos_, Jul 11 2011 *)
 n=8; Prepend[ Nest[ Flatten[ Partition[#, 2] /. {{2, 2} -> {2, 2, 1, 1}, {2, 1} -> {2, 2, 1}, {1, 2} -> {2, 1, 1}, {1, 1} -> {2, 1}}] &, {2, 2}, n], 1] (* _Birkas Gyorgy_, Jul 10 2012 *)
-KolakoskiSeq[n_Integer] := Block[{a = {1, 2, 2}}, Fold[Join[#1, ConstantArray[Mod[#2, 2] + 1, #1[[#2]]]] &, a, Range[3, n]]]; KolakoskiSeq[999] (* _Mikk Heidemaa_, Nov 01 2024 *)"""@en .
+KolakoskiSeq[n_Integer] := Block[{a = {1, 2, 2}}, Fold[Join[#1, ConstantArray[Mod[#2, 2] + 1, #1[[#2]]]] &, a, Range[3, n]]]; KolakoskiSeq[999] (* _Mikk Heidemaa_, Nov 01 2024 *)
+"""@en .
 
